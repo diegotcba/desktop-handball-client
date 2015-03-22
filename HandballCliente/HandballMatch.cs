@@ -37,6 +37,7 @@ namespace HandballCliente
         public String templateScoreboard { get; set; }
         public String templateResult { get; set; }
         public String templateLowerThird { get; set; }
+        public String templatePositions { get; set; }
 
         public String imageLogoBroadcast { get; set; }
         public String imageCredits { get; set; }
@@ -50,6 +51,7 @@ namespace HandballCliente
         public List<Player> team1Players { get; set; }
         public List<Player> team2Players { get; set; }
         public String recordingFileName { get; set; }
+        public List<Position> positions { get; set; }
 
         public bool autoHideIntro { get; set; }
         public int autoHideIntroSeconds { get; set; }
@@ -66,6 +68,10 @@ namespace HandballCliente
         public bool autoHideLowerThird { get; set; }
         public int autoHideLowerThirdSeconds { get; set; }
 
+        public bool autoHidePositions { get; set; }
+        public int autoHidePositionsSeconds { get; set; }
+
+
         private HandballMatch()
         {
             NewMatch();
@@ -78,6 +84,7 @@ namespace HandballCliente
             speedImageCredits = 3;
             team1Players = new List<Player>();
             team2Players = new List<Player>();
+            positions = new List<Position>();
 
             autoHideIntro = false;
             autoHideIntroSeconds = 1;
@@ -91,6 +98,8 @@ namespace HandballCliente
             autoHideResultSeconds = 1;
             autoHideLowerThird = false;
             autoHideLowerThirdSeconds = 1;
+            autoHidePositions = false;
+            autoHidePositionsSeconds = 1;
         }
 
         public static HandballMatch getInstance()

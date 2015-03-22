@@ -95,6 +95,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label36 = new System.Windows.Forms.Label();
             this.nudSegundosSeparacionEquipoLocalVisitante = new System.Windows.Forms.NumericUpDown();
             this.label23 = new System.Windows.Forms.Label();
             this.nudSegundosOcultarEquipoLocalVisitante = new System.Windows.Forms.NumericUpDown();
@@ -248,7 +249,43 @@
             this.tmrResult = new System.Windows.Forms.Timer(this.components);
             this.tmrTeams = new System.Windows.Forms.Timer(this.components);
             this.tmrInBetweenTeams = new System.Windows.Forms.Timer(this.components);
-            this.label36 = new System.Windows.Forms.Label();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.stsEstado = new System.Windows.Forms.StatusStrip();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.cmbTemplatePositions = new System.Windows.Forms.ComboBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.lvwPositions = new System.Windows.Forms.ListView();
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.nudAutoHidePositionsSeconds = new System.Windows.Forms.NumericUpDown();
+            this.chkAutoHidePositions = new System.Windows.Forms.CheckBox();
+            this.btnHidePositions = new System.Windows.Forms.Button();
+            this.btnShowPositions = new System.Windows.Forms.Button();
+            this.tmrPositions = new System.Windows.Forms.Timer(this.components);
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.cmbPlayersFontSize = new System.Windows.Forms.ComboBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.cmbPlayersFontLineSpacing = new System.Windows.Forms.ComboBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.cmbPlayersFontLetterSpacing = new System.Windows.Forms.ComboBox();
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.txtPositionsSubtitle = new System.Windows.Forms.TextBox();
+            this.txtPositionsTitle = new System.Windows.Forms.TextBox();
+            this.btnClearTable = new System.Windows.Forms.Button();
+            this.btnLoadPositionTable = new System.Windows.Forms.Button();
+            this.btnEditPosition = new System.Windows.Forms.Button();
+            this.btnRemovePosition = new System.Windows.Forms.Button();
+            this.btnAddPosition = new System.Windows.Forms.Button();
             this.mstMenues.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -291,6 +328,10 @@
             this.groupBox17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkImageScrollingSpeed)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            this.groupBox18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHidePositionsSeconds)).BeginInit();
+            this.groupBox19.SuspendLayout();
             this.SuspendLayout();
             // 
             // mstMenues
@@ -407,13 +448,14 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.tabPage8);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Location = new System.Drawing.Point(12, 126);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(748, 349);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -433,13 +475,15 @@
             // 
             this.groupBox10.Location = new System.Drawing.Point(421, 115);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(313, 173);
+            this.groupBox10.Size = new System.Drawing.Size(313, 202);
             this.groupBox10.TabIndex = 3;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Colores";
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.cmbTemplatePositions);
+            this.groupBox3.Controls.Add(this.label37);
             this.groupBox3.Controls.Add(this.btnLockUnlock);
             this.groupBox3.Controls.Add(this.btnUpdateTemplates);
             this.groupBox3.Controls.Add(this.cmbTemplateLowerThird);
@@ -454,7 +498,7 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Location = new System.Drawing.Point(6, 115);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(409, 173);
+            this.groupBox3.Size = new System.Drawing.Size(409, 202);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Plantillas (Templates)";
@@ -835,7 +879,7 @@
             this.cmbLogoLocal.FormattingEnabled = true;
             this.cmbLogoLocal.Location = new System.Drawing.Point(428, 16);
             this.cmbLogoLocal.Name = "cmbLogoLocal";
-            this.cmbLogoLocal.Size = new System.Drawing.Size(208, 21);
+            this.cmbLogoLocal.Size = new System.Drawing.Size(281, 21);
             this.cmbLogoLocal.TabIndex = 9;
             // 
             // cmbLogoVisitante
@@ -844,7 +888,7 @@
             this.cmbLogoVisitante.FormattingEnabled = true;
             this.cmbLogoVisitante.Location = new System.Drawing.Point(428, 42);
             this.cmbLogoVisitante.Name = "cmbLogoVisitante";
-            this.cmbLogoVisitante.Size = new System.Drawing.Size(208, 21);
+            this.cmbLogoVisitante.Size = new System.Drawing.Size(281, 21);
             this.cmbLogoVisitante.TabIndex = 8;
             // 
             // label13
@@ -899,6 +943,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.groupBox19);
             this.tabPage3.Controls.Add(this.groupBox9);
             this.tabPage3.Controls.Add(this.groupBox8);
             this.tabPage3.Controls.Add(this.groupBox7);
@@ -919,14 +964,23 @@
             this.groupBox9.Controls.Add(this.btnMostrarEquipoLocalVisitante);
             this.groupBox9.Location = new System.Drawing.Point(7, 244);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(727, 71);
+            this.groupBox9.Size = new System.Drawing.Size(361, 73);
             this.groupBox9.TabIndex = 2;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Presentacion de Equipos (Local/Visitante)";
             // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(122, 34);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(53, 13);
+            this.label36.TabIndex = 29;
+            this.label36.Text = "Duracion:";
+            // 
             // nudSegundosSeparacionEquipoLocalVisitante
             // 
-            this.nudSegundosSeparacionEquipoLocalVisitante.Location = new System.Drawing.Point(559, 33);
+            this.nudSegundosSeparacionEquipoLocalVisitante.Location = new System.Drawing.Point(300, 33);
             this.nudSegundosSeparacionEquipoLocalVisitante.Maximum = new decimal(new int[] {
             10,
             0,
@@ -950,7 +1004,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(479, 34);
+            this.label23.Location = new System.Drawing.Point(230, 34);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(64, 13);
             this.label23.TabIndex = 27;
@@ -958,7 +1012,7 @@
             // 
             // nudSegundosOcultarEquipoLocalVisitante
             // 
-            this.nudSegundosOcultarEquipoLocalVisitante.Location = new System.Drawing.Point(393, 33);
+            this.nudSegundosOcultarEquipoLocalVisitante.Location = new System.Drawing.Point(181, 33);
             this.nudSegundosOcultarEquipoLocalVisitante.Maximum = new decimal(new int[] {
             10,
             0,
@@ -970,7 +1024,7 @@
             0,
             0});
             this.nudSegundosOcultarEquipoLocalVisitante.Name = "nudSegundosOcultarEquipoLocalVisitante";
-            this.nudSegundosOcultarEquipoLocalVisitante.Size = new System.Drawing.Size(40, 20);
+            this.nudSegundosOcultarEquipoLocalVisitante.Size = new System.Drawing.Size(36, 20);
             this.nudSegundosOcultarEquipoLocalVisitante.TabIndex = 26;
             this.nudSegundosOcultarEquipoLocalVisitante.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudSegundosOcultarEquipoLocalVisitante.Value = new decimal(new int[] {
@@ -981,11 +1035,11 @@
             // 
             // btnMostrarEquipoLocalVisitante
             // 
-            this.btnMostrarEquipoLocalVisitante.Location = new System.Drawing.Point(118, 26);
+            this.btnMostrarEquipoLocalVisitante.Location = new System.Drawing.Point(19, 27);
             this.btnMostrarEquipoLocalVisitante.Name = "btnMostrarEquipoLocalVisitante";
-            this.btnMostrarEquipoLocalVisitante.Size = new System.Drawing.Size(131, 29);
+            this.btnMostrarEquipoLocalVisitante.Size = new System.Drawing.Size(91, 29);
             this.btnMostrarEquipoLocalVisitante.TabIndex = 24;
-            this.btnMostrarEquipoLocalVisitante.Text = "Mostrar/Ocultar ()";
+            this.btnMostrarEquipoLocalVisitante.Text = "Mostrar/Ocultar";
             this.btnMostrarEquipoLocalVisitante.UseVisualStyleBackColor = true;
             this.btnMostrarEquipoLocalVisitante.Click += new System.EventHandler(this.btnMostrarEquipoLocalVisitante_Click);
             // 
@@ -2564,21 +2618,378 @@
             // 
             this.tmrInBetweenTeams.Tick += new System.EventHandler(this.tmrInBetweenTeams_Tick);
             // 
-            // label36
+            // tabPage8
             // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(313, 34);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(53, 13);
-            this.label36.TabIndex = 29;
-            this.label36.Text = "Duracion:";
+            this.tabPage8.Controls.Add(this.groupBox18);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(740, 323);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "Posiciones";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // stsEstado
+            // 
+            this.stsEstado.Location = new System.Drawing.Point(0, 480);
+            this.stsEstado.Name = "stsEstado";
+            this.stsEstado.Size = new System.Drawing.Size(770, 22);
+            this.stsEstado.SizingGrip = false;
+            this.stsEstado.TabIndex = 3;
+            this.stsEstado.Text = "statusStrip1";
+            // 
+            // groupBox18
+            // 
+            this.groupBox18.Controls.Add(this.btnClearTable);
+            this.groupBox18.Controls.Add(this.btnLoadPositionTable);
+            this.groupBox18.Controls.Add(this.btnEditPosition);
+            this.groupBox18.Controls.Add(this.btnRemovePosition);
+            this.groupBox18.Controls.Add(this.btnAddPosition);
+            this.groupBox18.Controls.Add(this.label41);
+            this.groupBox18.Controls.Add(this.label42);
+            this.groupBox18.Controls.Add(this.txtPositionsSubtitle);
+            this.groupBox18.Controls.Add(this.txtPositionsTitle);
+            this.groupBox18.Controls.Add(this.nudAutoHidePositionsSeconds);
+            this.groupBox18.Controls.Add(this.chkAutoHidePositions);
+            this.groupBox18.Controls.Add(this.btnHidePositions);
+            this.groupBox18.Controls.Add(this.btnShowPositions);
+            this.groupBox18.Controls.Add(this.lvwPositions);
+            this.groupBox18.Location = new System.Drawing.Point(3, 3);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(734, 317);
+            this.groupBox18.TabIndex = 0;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "groupBox18";
+            // 
+            // cmbTemplatePositions
+            // 
+            this.cmbTemplatePositions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTemplatePositions.FormattingEnabled = true;
+            this.cmbTemplatePositions.Location = new System.Drawing.Point(78, 155);
+            this.cmbTemplatePositions.Name = "cmbTemplatePositions";
+            this.cmbTemplatePositions.Size = new System.Drawing.Size(215, 21);
+            this.cmbTemplatePositions.TabIndex = 15;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(7, 158);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(61, 13);
+            this.label37.TabIndex = 14;
+            this.label37.Text = "Posiciones:";
+            // 
+            // lvwPositions
+            // 
+            this.lvwPositions.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader12,
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15,
+            this.columnHeader16,
+            this.columnHeader17,
+            this.columnHeader18,
+            this.columnHeader19,
+            this.columnHeader20,
+            this.columnHeader21});
+            this.lvwPositions.FullRowSelect = true;
+            this.lvwPositions.GridLines = true;
+            this.lvwPositions.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvwPositions.HideSelection = false;
+            this.lvwPositions.Location = new System.Drawing.Point(14, 19);
+            this.lvwPositions.MultiSelect = false;
+            this.lvwPositions.Name = "lvwPositions";
+            this.lvwPositions.Size = new System.Drawing.Size(345, 292);
+            this.lvwPositions.TabIndex = 7;
+            this.lvwPositions.UseCompatibleStateImageBehavior = false;
+            this.lvwPositions.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "#";
+            this.columnHeader12.Width = 20;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Equipo";
+            this.columnHeader13.Width = 120;
+            // 
+            // nudAutoHidePositionsSeconds
+            // 
+            this.nudAutoHidePositionsSeconds.Location = new System.Drawing.Point(639, 136);
+            this.nudAutoHidePositionsSeconds.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.nudAutoHidePositionsSeconds.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudAutoHidePositionsSeconds.Name = "nudAutoHidePositionsSeconds";
+            this.nudAutoHidePositionsSeconds.Size = new System.Drawing.Size(40, 20);
+            this.nudAutoHidePositionsSeconds.TabIndex = 55;
+            this.nudAutoHidePositionsSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudAutoHidePositionsSeconds.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // chkAutoHidePositions
+            // 
+            this.chkAutoHidePositions.AutoSize = true;
+            this.chkAutoHidePositions.Location = new System.Drawing.Point(548, 136);
+            this.chkAutoHidePositions.Name = "chkAutoHidePositions";
+            this.chkAutoHidePositions.Size = new System.Drawing.Size(85, 17);
+            this.chkAutoHidePositions.TabIndex = 54;
+            this.chkAutoHidePositions.Text = "Auto Ocultar";
+            this.chkAutoHidePositions.UseVisualStyleBackColor = true;
+            // 
+            // btnHidePositions
+            // 
+            this.btnHidePositions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHidePositions.Location = new System.Drawing.Point(469, 181);
+            this.btnHidePositions.Name = "btnHidePositions";
+            this.btnHidePositions.Size = new System.Drawing.Size(73, 38);
+            this.btnHidePositions.TabIndex = 53;
+            this.btnHidePositions.Text = "Parar";
+            this.btnHidePositions.UseVisualStyleBackColor = true;
+            this.btnHidePositions.Click += new System.EventHandler(this.btnHidePositions_Click);
+            // 
+            // btnShowPositions
+            // 
+            this.btnShowPositions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowPositions.Location = new System.Drawing.Point(469, 123);
+            this.btnShowPositions.Name = "btnShowPositions";
+            this.btnShowPositions.Size = new System.Drawing.Size(73, 38);
+            this.btnShowPositions.TabIndex = 52;
+            this.btnShowPositions.Text = "Iniciar";
+            this.btnShowPositions.UseVisualStyleBackColor = true;
+            this.btnShowPositions.Click += new System.EventHandler(this.btnShowPositions_Click);
+            // 
+            // tmrPositions
+            // 
+            this.tmrPositions.Tick += new System.EventHandler(this.tmrPositions_Tick);
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.label40);
+            this.groupBox19.Controls.Add(this.cmbPlayersFontLetterSpacing);
+            this.groupBox19.Controls.Add(this.label39);
+            this.groupBox19.Controls.Add(this.cmbPlayersFontLineSpacing);
+            this.groupBox19.Controls.Add(this.label38);
+            this.groupBox19.Controls.Add(this.cmbPlayersFontSize);
+            this.groupBox19.Location = new System.Drawing.Point(374, 244);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(361, 73);
+            this.groupBox19.TabIndex = 3;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "Estilo Texto";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(6, 27);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(30, 13);
+            this.label38.TabIndex = 49;
+            this.label38.Text = "Size:";
+            // 
+            // cmbPlayersFontSize
+            // 
+            this.cmbPlayersFontSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPlayersFontSize.FormattingEnabled = true;
+            this.cmbPlayersFontSize.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.cmbPlayersFontSize.Location = new System.Drawing.Point(42, 24);
+            this.cmbPlayersFontSize.Name = "cmbPlayersFontSize";
+            this.cmbPlayersFontSize.Size = new System.Drawing.Size(37, 21);
+            this.cmbPlayersFontSize.TabIndex = 48;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(97, 29);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(72, 13);
+            this.label39.TabIndex = 51;
+            this.label39.Text = "Line Spacing:";
+            // 
+            // cmbPlayersFontLineSpacing
+            // 
+            this.cmbPlayersFontLineSpacing.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPlayersFontLineSpacing.FormattingEnabled = true;
+            this.cmbPlayersFontLineSpacing.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.cmbPlayersFontLineSpacing.Location = new System.Drawing.Point(175, 24);
+            this.cmbPlayersFontLineSpacing.Name = "cmbPlayersFontLineSpacing";
+            this.cmbPlayersFontLineSpacing.Size = new System.Drawing.Size(37, 21);
+            this.cmbPlayersFontLineSpacing.TabIndex = 50;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(231, 29);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(79, 13);
+            this.label40.TabIndex = 53;
+            this.label40.Text = "Letter Spacing:";
+            // 
+            // cmbPlayersFontLetterSpacing
+            // 
+            this.cmbPlayersFontLetterSpacing.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPlayersFontLetterSpacing.FormattingEnabled = true;
+            this.cmbPlayersFontLetterSpacing.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.cmbPlayersFontLetterSpacing.Location = new System.Drawing.Point(316, 26);
+            this.cmbPlayersFontLetterSpacing.Name = "cmbPlayersFontLetterSpacing";
+            this.cmbPlayersFontLetterSpacing.Size = new System.Drawing.Size(37, 21);
+            this.cmbPlayersFontLetterSpacing.TabIndex = 52;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Pts";
+            this.columnHeader14.Width = 30;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "PJ";
+            this.columnHeader15.Width = 30;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "PG";
+            this.columnHeader16.Width = 30;
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "PE";
+            this.columnHeader17.Width = 30;
+            // 
+            // columnHeader18
+            // 
+            this.columnHeader18.Text = "PP";
+            this.columnHeader18.Width = 30;
+            // 
+            // columnHeader19
+            // 
+            this.columnHeader19.Text = "GF";
+            this.columnHeader19.Width = 30;
+            // 
+            // columnHeader20
+            // 
+            this.columnHeader20.Text = "GC";
+            this.columnHeader20.Width = 30;
+            // 
+            // columnHeader21
+            // 
+            this.columnHeader21.Text = "Dif";
+            this.columnHeader21.Width = 30;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(416, 80);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(51, 13);
+            this.label41.TabIndex = 59;
+            this.label41.Text = "Subtitulo:";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(416, 54);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(36, 13);
+            this.label42.TabIndex = 58;
+            this.label42.Text = "Titulo:";
+            // 
+            // txtPositionsSubtitle
+            // 
+            this.txtPositionsSubtitle.Location = new System.Drawing.Point(479, 77);
+            this.txtPositionsSubtitle.Name = "txtPositionsSubtitle";
+            this.txtPositionsSubtitle.Size = new System.Drawing.Size(249, 20);
+            this.txtPositionsSubtitle.TabIndex = 57;
+            // 
+            // txtPositionsTitle
+            // 
+            this.txtPositionsTitle.Location = new System.Drawing.Point(479, 51);
+            this.txtPositionsTitle.Name = "txtPositionsTitle";
+            this.txtPositionsTitle.Size = new System.Drawing.Size(249, 20);
+            this.txtPositionsTitle.TabIndex = 56;
+            // 
+            // btnClearTable
+            // 
+            this.btnClearTable.Location = new System.Drawing.Point(365, 196);
+            this.btnClearTable.Name = "btnClearTable";
+            this.btnClearTable.Size = new System.Drawing.Size(30, 23);
+            this.btnClearTable.TabIndex = 64;
+            this.btnClearTable.Text = "C";
+            this.btnClearTable.UseVisualStyleBackColor = true;
+            this.btnClearTable.Click += new System.EventHandler(this.btnClearTable_Click);
+            // 
+            // btnLoadPositionTable
+            // 
+            this.btnLoadPositionTable.Location = new System.Drawing.Point(365, 167);
+            this.btnLoadPositionTable.Name = "btnLoadPositionTable";
+            this.btnLoadPositionTable.Size = new System.Drawing.Size(30, 23);
+            this.btnLoadPositionTable.TabIndex = 63;
+            this.btnLoadPositionTable.Text = "L";
+            this.btnLoadPositionTable.UseVisualStyleBackColor = true;
+            // 
+            // btnEditPosition
+            // 
+            this.btnEditPosition.Location = new System.Drawing.Point(365, 138);
+            this.btnEditPosition.Name = "btnEditPosition";
+            this.btnEditPosition.Size = new System.Drawing.Size(30, 23);
+            this.btnEditPosition.TabIndex = 62;
+            this.btnEditPosition.Text = "M";
+            this.btnEditPosition.UseVisualStyleBackColor = true;
+            this.btnEditPosition.Click += new System.EventHandler(this.btnEditPosition_Click);
+            // 
+            // btnRemovePosition
+            // 
+            this.btnRemovePosition.Location = new System.Drawing.Point(365, 109);
+            this.btnRemovePosition.Name = "btnRemovePosition";
+            this.btnRemovePosition.Size = new System.Drawing.Size(30, 23);
+            this.btnRemovePosition.TabIndex = 61;
+            this.btnRemovePosition.Text = "-";
+            this.btnRemovePosition.UseVisualStyleBackColor = true;
+            this.btnRemovePosition.Click += new System.EventHandler(this.btnRemovePosition_Click);
+            // 
+            // btnAddPosition
+            // 
+            this.btnAddPosition.Location = new System.Drawing.Point(365, 80);
+            this.btnAddPosition.Name = "btnAddPosition";
+            this.btnAddPosition.Size = new System.Drawing.Size(30, 23);
+            this.btnAddPosition.TabIndex = 60;
+            this.btnAddPosition.Text = "+";
+            this.btnAddPosition.UseVisualStyleBackColor = true;
+            this.btnAddPosition.Click += new System.EventHandler(this.btnAddPosition_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(770, 480);
+            this.ClientSize = new System.Drawing.Size(770, 502);
+            this.Controls.Add(this.stsEstado);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.mstMenues);
@@ -2649,6 +3060,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.trkImageScrollingSpeed)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.tabPage8.ResumeLayout(false);
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHidePositionsSeconds)).EndInit();
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2875,6 +3292,43 @@
         private System.Windows.Forms.Timer tmrTeams;
         private System.Windows.Forms.Timer tmrInBetweenTeams;
         private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.StatusStrip stsEstado;
+        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.ComboBox cmbTemplatePositions;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.ListView lvwPositions;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.NumericUpDown nudAutoHidePositionsSeconds;
+        private System.Windows.Forms.CheckBox chkAutoHidePositions;
+        private System.Windows.Forms.Button btnHidePositions;
+        private System.Windows.Forms.Button btnShowPositions;
+        private System.Windows.Forms.Timer tmrPositions;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.ComboBox cmbPlayersFontLetterSpacing;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.ComboBox cmbPlayersFontLineSpacing;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.ComboBox cmbPlayersFontSize;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.ColumnHeader columnHeader19;
+        private System.Windows.Forms.ColumnHeader columnHeader20;
+        private System.Windows.Forms.ColumnHeader columnHeader21;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox txtPositionsSubtitle;
+        private System.Windows.Forms.TextBox txtPositionsTitle;
+        private System.Windows.Forms.Button btnClearTable;
+        private System.Windows.Forms.Button btnLoadPositionTable;
+        private System.Windows.Forms.Button btnEditPosition;
+        private System.Windows.Forms.Button btnRemovePosition;
+        private System.Windows.Forms.Button btnAddPosition;
     }
 }
 

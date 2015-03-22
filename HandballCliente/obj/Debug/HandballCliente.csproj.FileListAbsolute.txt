@@ -14,3 +14,4 @@ C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballClien
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballCliente.ConfigLayers.resources
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballCliente.ConfigRecording.resources
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballCliente.csprojResolveAssemblyReference.cache
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballCliente.Posicion.resources

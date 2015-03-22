@@ -27,7 +27,6 @@ namespace HandballCliente
             action = a;
             nudNumero.Value = decimal.Parse(n);
             txtNombreCompleto.Text = nc;
-
         }
 
         private void Jugador_Load(object sender, EventArgs e)

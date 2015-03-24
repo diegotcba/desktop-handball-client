@@ -39,6 +39,8 @@ namespace HandballCliente
         private const int layerResult = 20;
         private const int layerLowerThird = 25;
         private const int layerPositions = 30;
+        private const int layerTwitter = 35;
+
         private const int layerVideo = 1;
         private const int layerLogo = 99;
         private const int layerImageScrolling = 90;
@@ -87,6 +89,7 @@ namespace HandballCliente
             cmbTemplateResultado.Items.Clear();
             cmbTemplateScoreboard.Items.Clear();
             cmbTemplatePositions.Items.Clear();
+            cmbTemplateTwitter.Items.Clear();
         }
 
         private void clearPresentation()
@@ -213,6 +216,7 @@ namespace HandballCliente
                 fillCombosTemplate(cmbTemplateScoreboard, templates);
                 fillCombosTemplate(cmbTemplateLowerThird, templates);
                 fillCombosTemplate(cmbTemplatePositions, templates);
+                fillCombosTemplate(cmbTemplateTwitter, templates);
             }
         }
 
@@ -274,6 +278,7 @@ namespace HandballCliente
             cmbTemplateResultado.Enabled = !cmbTemplateResultado.Enabled;
             cmbTemplateScoreboard.Enabled = !cmbTemplateScoreboard.Enabled;
             cmbTemplatePositions.Enabled = !cmbTemplatePositions.Enabled;
+            cmbTemplateTwitter.Enabled = !cmbTemplateTwitter.Enabled;
         }
 
         private bool checkDataScoreboard()
@@ -324,8 +329,6 @@ namespace HandballCliente
         {
             casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerScoreboard.ToString()));
         }
-
-
 
         private void showHideScoreboard()
         {
@@ -610,13 +613,10 @@ namespace HandballCliente
 
                     Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + ((radTeam1List.Checked) ? cmbLogoLocal.Text.ToLower() : cmbLogoVisitante.Text.ToLower()) + ".png");
 
-                    //templateLowerThird.Fields.Add(new TemplateField("f0", txtLTTitulo.Text));
-                    //templateLowerThird.Fields.Add(new TemplateField("f1", txtLTSubtitulo.Text));
                     templateLowerThird.Fields.Add(new TemplateField("teamPlayer", txtLTTitulo.Text));
                     templateLowerThird.Fields.Add(new TemplateField("teamName", txtLTSubtitulo.Text));
                     templateLowerThird.Fields.Add(new TemplateField("teamLogo", logoPath.AbsoluteUri));
 
-                    //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
                     ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateLowerThird.TemplateDataText(), cmbTemplateLowerThird.Text, layerLowerThird.ToString()));
                     System.Diagnostics.Debug.WriteLine(ri.Message);
                     btnMostrarOcultarPresentacion.Tag = "1";
@@ -692,6 +692,7 @@ namespace HandballCliente
 
                     Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoFederacion.Text.ToLower() + ".png");
 
+                    templatePositions.Fields.Add(new TemplateField("logo", logoPath.AbsoluteUri));
                     templatePositions.Fields.Add(new TemplateField("title", txtPositionsTitle.Text));
                     templatePositions.Fields.Add(new TemplateField("subtitle", txtPositionsSubtitle.Text));
                     templatePositions.Fields.Add(new TemplateField("line01", "#;Equipo;Pts;PJ;PG;PE;PP;GF;GC;Dif"));
@@ -740,6 +741,48 @@ namespace HandballCliente
                 {
                     tmrPositions.Stop();
                     tmrPositions.Enabled = false;
+                }
+            }
+        }
+
+        private void startTwitter()
+        {
+            if (cmbTemplateTwitter.Text != "")
+            {
+                if (casparServer.Connected)
+                {
+                    Template templateTwitter = new Template();
+
+                    templateTwitter.Fields.Add(new TemplateField("hashtag", txtTwitterHashtag.Text));
+                    templateTwitter.Fields.Add(new TemplateField("fullname", txtTwitterFullName.Text));
+                    templateTwitter.Fields.Add(new TemplateField("username", txtTwitterUserName.Text));
+                    templateTwitter.Fields.Add(new TemplateField("message", txtTwitterMessage.Text));
+
+                    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateTwitter.TemplateDataText(), cmbTemplateTwitter.Text, layerTwitter.ToString()));
+
+                    if (chkAutoHideTwitter.Checked)
+                    {
+                        tmrTwitter.Interval = ((int)nudAutoHideTwitterSeconds.Value) * 1000;
+                        tmrTwitter.Enabled = true;
+                        tmrTwitter.Start();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Faltan definir algunos datos para iniciar (template)", this.Text);
+            }
+        }
+
+        private void stopTwitter()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerTwitter.ToString()));
+                if (chkAutoHideTwitter.Checked)
+                {
+                    tmrTwitter.Stop();
+                    tmrTwitter.Enabled = false;
                 }
             }
         }
@@ -983,6 +1026,7 @@ namespace HandballCliente
             HandballMatch.getInstance().templateResult = cmbTemplateResultado.Text;
             HandballMatch.getInstance().templateLowerThird = cmbTemplateLowerThird.Text;
             HandballMatch.getInstance().templatePositions = cmbTemplatePositions.Text;
+            HandballMatch.getInstance().templateTwitter = cmbTemplateTwitter.Text;
 
             HandballMatch.getInstance().imageLogoBroadcast = cmbLogoTransmision.Text;
             HandballMatch.getInstance().imageCredits = cmbImageScrolling.Text;
@@ -994,6 +1038,8 @@ namespace HandballCliente
             HandballMatch.getInstance().team1Coach = txtEntrenadorLocal.Text;
             HandballMatch.getInstance().team2Coach = txtEntrenadorVisitante.Text;
             HandballMatch.getInstance().recordingFileName = txtArchivoGrabacion.Text;
+            HandballMatch.getInstance().positionsTitle = txtPositionsTitle.Text;
+            HandballMatch.getInstance().positionsSubtitle = txtPositionsSubtitle.Text;
 
             HandballMatch.getInstance().autoHideIntro = chkAutoOcultarPresentacion.Checked;
             HandballMatch.getInstance().autoHideIntroSeconds = ((int)nudSegundosAutoOcultarPresentacion.Value);
@@ -1012,6 +1058,9 @@ namespace HandballCliente
 
             HandballMatch.getInstance().autoHidePositions = chkAutoHidePositions.Checked;
             HandballMatch.getInstance().autoHidePositionsSeconds = ((int)nudAutoHidePositionsSeconds.Value);
+
+            HandballMatch.getInstance().autoHideTwitter = chkAutoHideTwitter.Checked;
+            HandballMatch.getInstance().autoHideTwitterSeconds = ((int)nudAutoHideTwitterSeconds.Value);
         }
 
         private void getMatchValues()
@@ -1036,6 +1085,7 @@ namespace HandballCliente
             cmbTemplateResultado.Text = HandballMatch.getInstance().templateResult;
             cmbTemplateLowerThird.Text = HandballMatch.getInstance().templateLowerThird;
             cmbTemplatePositions.Text = HandballMatch.getInstance().templatePositions;
+            cmbTemplateTwitter.Text = HandballMatch.getInstance().templateTwitter;
 
             cmbLogoTransmision.Text = HandballMatch.getInstance().imageLogoBroadcast;
             cmbImageScrolling.Text = HandballMatch.getInstance().imageCredits;
@@ -1047,6 +1097,8 @@ namespace HandballCliente
             txtEntrenadorLocal.Text = HandballMatch.getInstance().team1Coach;
             txtEntrenadorVisitante.Text = HandballMatch.getInstance().team2Coach;
             txtArchivoGrabacion.Text = HandballMatch.getInstance().recordingFileName;
+            txtPositionsTitle.Text = HandballMatch.getInstance().positionsTitle;
+            txtPositionsSubtitle.Text = HandballMatch.getInstance().positionsSubtitle;
 
             FillTeamPlayers(lvwEquipoLocal, HandballMatch.getInstance().team1Players);
             FillTeamPlayers(lvwEquipoVisitante, HandballMatch.getInstance().team2Players);
@@ -1069,6 +1121,9 @@ namespace HandballCliente
 
             chkAutoHidePositions.Checked = HandballMatch.getInstance().autoHidePositions;
             nudAutoHidePositionsSeconds.Value = HandballMatch.getInstance().autoHidePositionsSeconds;
+
+            chkAutoHideTwitter.Checked = HandballMatch.getInstance().autoHideTwitter;
+            nudAutoHideTwitterSeconds.Value = HandballMatch.getInstance().autoHideTwitterSeconds;
         }
 
         private void saveFile()
@@ -1433,6 +1488,10 @@ namespace HandballCliente
             {
                 this.tabControl1.SelectedIndex = 6;
             }
+            else if (e.KeyCode == Keys.F9)
+            {
+                this.tabControl1.SelectedIndex = 7;
+            }
         }
 
         private void tmrLT_Tick(object sender, EventArgs e)
@@ -1658,6 +1717,21 @@ namespace HandballCliente
         private void btnClearTable_Click(object sender, EventArgs e)
         {
             clearPositionTable();
+        }
+
+        private void tmrTwitter_Tick(object sender, EventArgs e)
+        {
+            stopTwitter();
+        }
+
+        private void btnStartTwitter_Click(object sender, EventArgs e)
+        {
+            startTwitter();
+        }
+
+        private void btnStopTwitter_Click(object sender, EventArgs e)
+        {
+            stopTwitter();
         }
     }
 }

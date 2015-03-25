@@ -48,6 +48,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cmbTemplateTwitter = new System.Windows.Forms.ComboBox();
+            this.label43 = new System.Windows.Forms.Label();
             this.cmbTemplatePositions = new System.Windows.Forms.ComboBox();
             this.label37 = new System.Windows.Forms.Label();
             this.btnLockUnlock = new System.Windows.Forms.Button();
@@ -255,6 +257,19 @@
             this.lvwVideoFiles = new System.Windows.Forms.ListView();
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.txtTwitterHashtag = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.txtTwitterMessage = new System.Windows.Forms.TextBox();
+            this.txtTwitterFullName = new System.Windows.Forms.TextBox();
+            this.txtTwitterUserName = new System.Windows.Forms.TextBox();
+            this.nudAutoHideTwitterSeconds = new System.Windows.Forms.NumericUpDown();
+            this.chkAutoHideTwitter = new System.Windows.Forms.CheckBox();
+            this.btnStopTwitter = new System.Windows.Forms.Button();
+            this.btnStartTwitter = new System.Windows.Forms.Button();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.btnGetLogoFiles = new System.Windows.Forms.Button();
             this.btnStopLogo = new System.Windows.Forms.Button();
@@ -286,21 +301,6 @@
             this.tmrInBetweenTeams = new System.Windows.Forms.Timer(this.components);
             this.stsEstado = new System.Windows.Forms.StatusStrip();
             this.tmrPositions = new System.Windows.Forms.Timer(this.components);
-            this.cmbTemplateTwitter = new System.Windows.Forms.ComboBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.nudAutoHideTwitterSeconds = new System.Windows.Forms.NumericUpDown();
-            this.chkAutoHideTwitter = new System.Windows.Forms.CheckBox();
-            this.btnStopTwitter = new System.Windows.Forms.Button();
-            this.btnStartTwitter = new System.Windows.Forms.Button();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.txtTwitterMessage = new System.Windows.Forms.TextBox();
-            this.txtTwitterFullName = new System.Windows.Forms.TextBox();
-            this.txtTwitterUserName = new System.Windows.Forms.TextBox();
-            this.label47 = new System.Windows.Forms.Label();
-            this.txtTwitterHashtag = new System.Windows.Forms.TextBox();
             this.tmrTwitter = new System.Windows.Forms.Timer(this.components);
             this.mstMenues.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -344,12 +344,12 @@
             this.groupBox11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkVolume)).BeginInit();
             this.tabPage7.SuspendLayout();
+            this.groupBox20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideTwitterSeconds)).BeginInit();
             this.groupBox15.SuspendLayout();
             this.groupBox17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkImageScrollingSpeed)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.groupBox20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideTwitterSeconds)).BeginInit();
             this.SuspendLayout();
             // 
             // mstMenues
@@ -523,6 +523,24 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Plantillas (Templates)";
             // 
+            // cmbTemplateTwitter
+            // 
+            this.cmbTemplateTwitter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTemplateTwitter.FormattingEnabled = true;
+            this.cmbTemplateTwitter.Location = new System.Drawing.Point(78, 182);
+            this.cmbTemplateTwitter.Name = "cmbTemplateTwitter";
+            this.cmbTemplateTwitter.Size = new System.Drawing.Size(215, 21);
+            this.cmbTemplateTwitter.TabIndex = 13;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(8, 185);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(42, 13);
+            this.label43.TabIndex = 16;
+            this.label43.Text = "Twitter:";
+            // 
             // cmbTemplatePositions
             // 
             this.cmbTemplatePositions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -530,7 +548,7 @@
             this.cmbTemplatePositions.Location = new System.Drawing.Point(78, 155);
             this.cmbTemplatePositions.Name = "cmbTemplatePositions";
             this.cmbTemplatePositions.Size = new System.Drawing.Size(215, 21);
-            this.cmbTemplatePositions.TabIndex = 15;
+            this.cmbTemplatePositions.TabIndex = 12;
             // 
             // label37
             // 
@@ -546,7 +564,7 @@
             this.btnLockUnlock.Location = new System.Drawing.Point(316, 116);
             this.btnLockUnlock.Name = "btnLockUnlock";
             this.btnLockUnlock.Size = new System.Drawing.Size(74, 43);
-            this.btnLockUnlock.TabIndex = 13;
+            this.btnLockUnlock.TabIndex = 15;
             this.btnLockUnlock.Text = "Bloquear";
             this.btnLockUnlock.UseVisualStyleBackColor = true;
             this.btnLockUnlock.Click += new System.EventHandler(this.btnLockUnlock_Click);
@@ -556,7 +574,7 @@
             this.btnUpdateTemplates.Location = new System.Drawing.Point(316, 62);
             this.btnUpdateTemplates.Name = "btnUpdateTemplates";
             this.btnUpdateTemplates.Size = new System.Drawing.Size(74, 43);
-            this.btnUpdateTemplates.TabIndex = 12;
+            this.btnUpdateTemplates.TabIndex = 14;
             this.btnUpdateTemplates.Text = "Actualizar\r\nDisponibles";
             this.btnUpdateTemplates.UseVisualStyleBackColor = true;
             this.btnUpdateTemplates.Click += new System.EventHandler(this.btnUpdateTemplates_Click);
@@ -769,7 +787,7 @@
             0});
             this.nudSegundosAutoOcultarPresentacion.Name = "nudSegundosAutoOcultarPresentacion";
             this.nudSegundosAutoOcultarPresentacion.Size = new System.Drawing.Size(40, 20);
-            this.nudSegundosAutoOcultarPresentacion.TabIndex = 20;
+            this.nudSegundosAutoOcultarPresentacion.TabIndex = 15;
             this.nudSegundosAutoOcultarPresentacion.Value = new decimal(new int[] {
             1,
             0,
@@ -782,7 +800,7 @@
             this.chkAutoOcultarPresentacion.Location = new System.Drawing.Point(533, 127);
             this.chkAutoOcultarPresentacion.Name = "chkAutoOcultarPresentacion";
             this.chkAutoOcultarPresentacion.Size = new System.Drawing.Size(85, 17);
-            this.chkAutoOcultarPresentacion.TabIndex = 19;
+            this.chkAutoOcultarPresentacion.TabIndex = 14;
             this.chkAutoOcultarPresentacion.Text = "Auto Ocultar";
             this.chkAutoOcultarPresentacion.UseVisualStyleBackColor = true;
             // 
@@ -791,7 +809,7 @@
             this.btnMostrarOcultarPresentacion.Location = new System.Drawing.Point(533, 65);
             this.btnMostrarOcultarPresentacion.Name = "btnMostrarOcultarPresentacion";
             this.btnMostrarOcultarPresentacion.Size = new System.Drawing.Size(131, 43);
-            this.btnMostrarOcultarPresentacion.TabIndex = 18;
+            this.btnMostrarOcultarPresentacion.TabIndex = 13;
             this.btnMostrarOcultarPresentacion.Text = "Mostrar/Ocultar ()";
             this.btnMostrarOcultarPresentacion.UseVisualStyleBackColor = true;
             this.btnMostrarOcultarPresentacion.Click += new System.EventHandler(this.btnMostrarOcultarPresentacion_Click);
@@ -857,42 +875,42 @@
             this.cmbLogoFederacion.Location = new System.Drawing.Point(77, 118);
             this.cmbLogoFederacion.Name = "cmbLogoFederacion";
             this.cmbLogoFederacion.Size = new System.Drawing.Size(214, 21);
-            this.cmbLogoFederacion.TabIndex = 11;
+            this.cmbLogoFederacion.TabIndex = 10;
             // 
             // txtLugar
             // 
             this.txtLugar.Location = new System.Drawing.Point(77, 194);
             this.txtLugar.Name = "txtLugar";
             this.txtLugar.Size = new System.Drawing.Size(344, 20);
-            this.txtLugar.TabIndex = 10;
+            this.txtLugar.TabIndex = 12;
             // 
             // txtCampeonato
             // 
             this.txtCampeonato.Location = new System.Drawing.Point(77, 168);
             this.txtCampeonato.Name = "txtCampeonato";
             this.txtCampeonato.Size = new System.Drawing.Size(344, 20);
-            this.txtCampeonato.TabIndex = 9;
+            this.txtCampeonato.TabIndex = 11;
             // 
             // txtFederacion
             // 
             this.txtFederacion.Location = new System.Drawing.Point(77, 92);
             this.txtFederacion.Name = "txtFederacion";
             this.txtFederacion.Size = new System.Drawing.Size(344, 20);
-            this.txtFederacion.TabIndex = 8;
+            this.txtFederacion.TabIndex = 9;
             // 
             // txtSubtitulo
             // 
             this.txtSubtitulo.Location = new System.Drawing.Point(77, 45);
             this.txtSubtitulo.Name = "txtSubtitulo";
             this.txtSubtitulo.Size = new System.Drawing.Size(344, 20);
-            this.txtSubtitulo.TabIndex = 7;
+            this.txtSubtitulo.TabIndex = 8;
             // 
             // txtTitulo
             // 
             this.txtTitulo.Location = new System.Drawing.Point(77, 19);
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(344, 20);
-            this.txtTitulo.TabIndex = 6;
+            this.txtTitulo.TabIndex = 7;
             // 
             // groupBox4
             // 
@@ -918,7 +936,7 @@
             this.cmbLogoLocal.Location = new System.Drawing.Point(428, 16);
             this.cmbLogoLocal.Name = "cmbLogoLocal";
             this.cmbLogoLocal.Size = new System.Drawing.Size(281, 21);
-            this.cmbLogoLocal.TabIndex = 9;
+            this.cmbLogoLocal.TabIndex = 5;
             // 
             // cmbLogoVisitante
             // 
@@ -927,7 +945,7 @@
             this.cmbLogoVisitante.Location = new System.Drawing.Point(428, 42);
             this.cmbLogoVisitante.Name = "cmbLogoVisitante";
             this.cmbLogoVisitante.Size = new System.Drawing.Size(281, 21);
-            this.cmbLogoVisitante.TabIndex = 8;
+            this.cmbLogoVisitante.TabIndex = 6;
             // 
             // label13
             // 
@@ -952,14 +970,14 @@
             this.txtNombreVisitante.Location = new System.Drawing.Point(62, 43);
             this.txtNombreVisitante.Name = "txtNombreVisitante";
             this.txtNombreVisitante.Size = new System.Drawing.Size(280, 20);
-            this.txtNombreVisitante.TabIndex = 5;
+            this.txtNombreVisitante.TabIndex = 4;
             // 
             // txtNombreLocal
             // 
             this.txtNombreLocal.Location = new System.Drawing.Point(62, 17);
             this.txtNombreLocal.Name = "txtNombreLocal";
             this.txtNombreLocal.Size = new System.Drawing.Size(280, 20);
-            this.txtNombreLocal.TabIndex = 4;
+            this.txtNombreLocal.TabIndex = 3;
             // 
             // label12
             // 
@@ -1031,7 +1049,7 @@
             this.cmbPlayersFontLetterSpacing.Location = new System.Drawing.Point(316, 26);
             this.cmbPlayersFontLetterSpacing.Name = "cmbPlayersFontLetterSpacing";
             this.cmbPlayersFontLetterSpacing.Size = new System.Drawing.Size(37, 21);
-            this.cmbPlayersFontLetterSpacing.TabIndex = 52;
+            this.cmbPlayersFontLetterSpacing.TabIndex = 28;
             // 
             // label39
             // 
@@ -1056,7 +1074,7 @@
             this.cmbPlayersFontLineSpacing.Location = new System.Drawing.Point(175, 24);
             this.cmbPlayersFontLineSpacing.Name = "cmbPlayersFontLineSpacing";
             this.cmbPlayersFontLineSpacing.Size = new System.Drawing.Size(37, 21);
-            this.cmbPlayersFontLineSpacing.TabIndex = 50;
+            this.cmbPlayersFontLineSpacing.TabIndex = 27;
             // 
             // label38
             // 
@@ -1081,7 +1099,7 @@
             this.cmbPlayersFontSize.Location = new System.Drawing.Point(42, 24);
             this.cmbPlayersFontSize.Name = "cmbPlayersFontSize";
             this.cmbPlayersFontSize.Size = new System.Drawing.Size(37, 21);
-            this.cmbPlayersFontSize.TabIndex = 48;
+            this.cmbPlayersFontSize.TabIndex = 26;
             // 
             // groupBox9
             // 
@@ -1121,7 +1139,7 @@
             0});
             this.nudSegundosSeparacionEquipoLocalVisitante.Name = "nudSegundosSeparacionEquipoLocalVisitante";
             this.nudSegundosSeparacionEquipoLocalVisitante.Size = new System.Drawing.Size(41, 20);
-            this.nudSegundosSeparacionEquipoLocalVisitante.TabIndex = 28;
+            this.nudSegundosSeparacionEquipoLocalVisitante.TabIndex = 25;
             this.nudSegundosSeparacionEquipoLocalVisitante.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudSegundosSeparacionEquipoLocalVisitante.Value = new decimal(new int[] {
             1,
@@ -1153,7 +1171,7 @@
             0});
             this.nudSegundosOcultarEquipoLocalVisitante.Name = "nudSegundosOcultarEquipoLocalVisitante";
             this.nudSegundosOcultarEquipoLocalVisitante.Size = new System.Drawing.Size(36, 20);
-            this.nudSegundosOcultarEquipoLocalVisitante.TabIndex = 26;
+            this.nudSegundosOcultarEquipoLocalVisitante.TabIndex = 24;
             this.nudSegundosOcultarEquipoLocalVisitante.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudSegundosOcultarEquipoLocalVisitante.Value = new decimal(new int[] {
             1,
@@ -1166,7 +1184,7 @@
             this.btnMostrarEquipoLocalVisitante.Location = new System.Drawing.Point(19, 27);
             this.btnMostrarEquipoLocalVisitante.Name = "btnMostrarEquipoLocalVisitante";
             this.btnMostrarEquipoLocalVisitante.Size = new System.Drawing.Size(91, 29);
-            this.btnMostrarEquipoLocalVisitante.TabIndex = 24;
+            this.btnMostrarEquipoLocalVisitante.TabIndex = 23;
             this.btnMostrarEquipoLocalVisitante.Text = "Mostrar/Ocultar";
             this.btnMostrarEquipoLocalVisitante.UseVisualStyleBackColor = true;
             this.btnMostrarEquipoLocalVisitante.Click += new System.EventHandler(this.btnMostrarEquipoLocalVisitante_Click);
@@ -1207,7 +1225,7 @@
             0});
             this.nudSegundosOcultarEquipoVisitante.Name = "nudSegundosOcultarEquipoVisitante";
             this.nudSegundosOcultarEquipoVisitante.Size = new System.Drawing.Size(40, 20);
-            this.nudSegundosOcultarEquipoVisitante.TabIndex = 23;
+            this.nudSegundosOcultarEquipoVisitante.TabIndex = 22;
             this.nudSegundosOcultarEquipoVisitante.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudSegundosOcultarEquipoVisitante.Value = new decimal(new int[] {
             1,
@@ -1221,7 +1239,7 @@
             this.chkAutoOcultarEquipoVisitante.Location = new System.Drawing.Point(269, 126);
             this.chkAutoOcultarEquipoVisitante.Name = "chkAutoOcultarEquipoVisitante";
             this.chkAutoOcultarEquipoVisitante.Size = new System.Drawing.Size(85, 17);
-            this.chkAutoOcultarEquipoVisitante.TabIndex = 22;
+            this.chkAutoOcultarEquipoVisitante.TabIndex = 21;
             this.chkAutoOcultarEquipoVisitante.Text = "Auto Ocultar";
             this.chkAutoOcultarEquipoVisitante.UseVisualStyleBackColor = true;
             // 
@@ -1230,7 +1248,7 @@
             this.btnMostrarEquipoVisitante.Location = new System.Drawing.Point(277, 55);
             this.btnMostrarEquipoVisitante.Name = "btnMostrarEquipoVisitante";
             this.btnMostrarEquipoVisitante.Size = new System.Drawing.Size(61, 56);
-            this.btnMostrarEquipoVisitante.TabIndex = 21;
+            this.btnMostrarEquipoVisitante.TabIndex = 20;
             this.btnMostrarEquipoVisitante.Text = "Mostrar/Ocultar ()";
             this.btnMostrarEquipoVisitante.UseVisualStyleBackColor = true;
             this.btnMostrarEquipoVisitante.Click += new System.EventHandler(this.btnMostrarEquipoVisitante_Click);
@@ -1240,7 +1258,7 @@
             this.btnLimpiarEquipoVisitante.Location = new System.Drawing.Point(219, 142);
             this.btnLimpiarEquipoVisitante.Name = "btnLimpiarEquipoVisitante";
             this.btnLimpiarEquipoVisitante.Size = new System.Drawing.Size(30, 23);
-            this.btnLimpiarEquipoVisitante.TabIndex = 11;
+            this.btnLimpiarEquipoVisitante.TabIndex = 18;
             this.btnLimpiarEquipoVisitante.Text = "C";
             this.btnLimpiarEquipoVisitante.UseVisualStyleBackColor = true;
             this.btnLimpiarEquipoVisitante.Click += new System.EventHandler(this.btnLimpiarEquipoVisitante_Click);
@@ -1250,7 +1268,7 @@
             this.btnCargarJugadoresVisitantes.Location = new System.Drawing.Point(219, 113);
             this.btnCargarJugadoresVisitantes.Name = "btnCargarJugadoresVisitantes";
             this.btnCargarJugadoresVisitantes.Size = new System.Drawing.Size(30, 23);
-            this.btnCargarJugadoresVisitantes.TabIndex = 10;
+            this.btnCargarJugadoresVisitantes.TabIndex = 17;
             this.btnCargarJugadoresVisitantes.Text = "L";
             this.btnCargarJugadoresVisitantes.UseVisualStyleBackColor = true;
             // 
@@ -1259,7 +1277,7 @@
             this.btnModificarJugadorVisitante.Location = new System.Drawing.Point(219, 84);
             this.btnModificarJugadorVisitante.Name = "btnModificarJugadorVisitante";
             this.btnModificarJugadorVisitante.Size = new System.Drawing.Size(30, 23);
-            this.btnModificarJugadorVisitante.TabIndex = 9;
+            this.btnModificarJugadorVisitante.TabIndex = 16;
             this.btnModificarJugadorVisitante.Text = "M";
             this.btnModificarJugadorVisitante.UseVisualStyleBackColor = true;
             this.btnModificarJugadorVisitante.Click += new System.EventHandler(this.btnModificarJugadorVisitante_Click);
@@ -1269,7 +1287,7 @@
             this.btnQuitarJugadorVisitante.Location = new System.Drawing.Point(219, 55);
             this.btnQuitarJugadorVisitante.Name = "btnQuitarJugadorVisitante";
             this.btnQuitarJugadorVisitante.Size = new System.Drawing.Size(30, 23);
-            this.btnQuitarJugadorVisitante.TabIndex = 8;
+            this.btnQuitarJugadorVisitante.TabIndex = 15;
             this.btnQuitarJugadorVisitante.Text = "-";
             this.btnQuitarJugadorVisitante.UseVisualStyleBackColor = true;
             this.btnQuitarJugadorVisitante.Click += new System.EventHandler(this.btnQuitarJugadorVisitante_Click);
@@ -1279,7 +1297,7 @@
             this.btnAgregarJugadorVisitante.Location = new System.Drawing.Point(219, 26);
             this.btnAgregarJugadorVisitante.Name = "btnAgregarJugadorVisitante";
             this.btnAgregarJugadorVisitante.Size = new System.Drawing.Size(30, 23);
-            this.btnAgregarJugadorVisitante.TabIndex = 7;
+            this.btnAgregarJugadorVisitante.TabIndex = 14;
             this.btnAgregarJugadorVisitante.Text = "+";
             this.btnAgregarJugadorVisitante.UseVisualStyleBackColor = true;
             this.btnAgregarJugadorVisitante.Click += new System.EventHandler(this.btnAgregarJugadorVisitante_Click);
@@ -1297,7 +1315,7 @@
             this.lvwEquipoVisitante.MultiSelect = false;
             this.lvwEquipoVisitante.Name = "lvwEquipoVisitante";
             this.lvwEquipoVisitante.Size = new System.Drawing.Size(206, 151);
-            this.lvwEquipoVisitante.TabIndex = 6;
+            this.lvwEquipoVisitante.TabIndex = 13;
             this.lvwEquipoVisitante.UseCompatibleStateImageBehavior = false;
             this.lvwEquipoVisitante.View = System.Windows.Forms.View.Details;
             // 
@@ -1325,7 +1343,7 @@
             this.txtEntrenadorVisitante.Location = new System.Drawing.Point(6, 196);
             this.txtEntrenadorVisitante.Name = "txtEntrenadorVisitante";
             this.txtEntrenadorVisitante.Size = new System.Drawing.Size(207, 20);
-            this.txtEntrenadorVisitante.TabIndex = 4;
+            this.txtEntrenadorVisitante.TabIndex = 19;
             // 
             // shapeContainer2
             // 
@@ -1382,7 +1400,7 @@
             0});
             this.nudSegundosOcultarEquipoLocal.Name = "nudSegundosOcultarEquipoLocal";
             this.nudSegundosOcultarEquipoLocal.Size = new System.Drawing.Size(40, 20);
-            this.nudSegundosOcultarEquipoLocal.TabIndex = 23;
+            this.nudSegundosOcultarEquipoLocal.TabIndex = 12;
             this.nudSegundosOcultarEquipoLocal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudSegundosOcultarEquipoLocal.Value = new decimal(new int[] {
             1,
@@ -1396,7 +1414,7 @@
             this.chkAutoOcultarEquipoLocal.Location = new System.Drawing.Point(269, 126);
             this.chkAutoOcultarEquipoLocal.Name = "chkAutoOcultarEquipoLocal";
             this.chkAutoOcultarEquipoLocal.Size = new System.Drawing.Size(85, 17);
-            this.chkAutoOcultarEquipoLocal.TabIndex = 22;
+            this.chkAutoOcultarEquipoLocal.TabIndex = 11;
             this.chkAutoOcultarEquipoLocal.Text = "Auto Ocultar";
             this.chkAutoOcultarEquipoLocal.UseVisualStyleBackColor = true;
             // 
@@ -1405,7 +1423,7 @@
             this.btnMostrarEquipoLocal.Location = new System.Drawing.Point(277, 55);
             this.btnMostrarEquipoLocal.Name = "btnMostrarEquipoLocal";
             this.btnMostrarEquipoLocal.Size = new System.Drawing.Size(61, 56);
-            this.btnMostrarEquipoLocal.TabIndex = 21;
+            this.btnMostrarEquipoLocal.TabIndex = 10;
             this.btnMostrarEquipoLocal.Text = "Mostrar/Ocultar ()";
             this.btnMostrarEquipoLocal.UseVisualStyleBackColor = true;
             this.btnMostrarEquipoLocal.Click += new System.EventHandler(this.btnMostrarEquipoLocal_Click);
@@ -1415,7 +1433,7 @@
             this.btnLimpiarEquipoLocal.Location = new System.Drawing.Point(219, 142);
             this.btnLimpiarEquipoLocal.Name = "btnLimpiarEquipoLocal";
             this.btnLimpiarEquipoLocal.Size = new System.Drawing.Size(30, 23);
-            this.btnLimpiarEquipoLocal.TabIndex = 11;
+            this.btnLimpiarEquipoLocal.TabIndex = 8;
             this.btnLimpiarEquipoLocal.Text = "C";
             this.btnLimpiarEquipoLocal.UseVisualStyleBackColor = true;
             this.btnLimpiarEquipoLocal.Click += new System.EventHandler(this.btnLimpiarEquipoLocal_Click);
@@ -1425,7 +1443,7 @@
             this.btnCargarJugadoresLocales.Location = new System.Drawing.Point(219, 113);
             this.btnCargarJugadoresLocales.Name = "btnCargarJugadoresLocales";
             this.btnCargarJugadoresLocales.Size = new System.Drawing.Size(30, 23);
-            this.btnCargarJugadoresLocales.TabIndex = 10;
+            this.btnCargarJugadoresLocales.TabIndex = 7;
             this.btnCargarJugadoresLocales.Text = "L";
             this.btnCargarJugadoresLocales.UseVisualStyleBackColor = true;
             this.btnCargarJugadoresLocales.Click += new System.EventHandler(this.btnCargarJugadoresLocales_Click);
@@ -1435,7 +1453,7 @@
             this.btnModificarJugadorLocal.Location = new System.Drawing.Point(219, 84);
             this.btnModificarJugadorLocal.Name = "btnModificarJugadorLocal";
             this.btnModificarJugadorLocal.Size = new System.Drawing.Size(30, 23);
-            this.btnModificarJugadorLocal.TabIndex = 9;
+            this.btnModificarJugadorLocal.TabIndex = 6;
             this.btnModificarJugadorLocal.Text = "M";
             this.btnModificarJugadorLocal.UseVisualStyleBackColor = true;
             this.btnModificarJugadorLocal.Click += new System.EventHandler(this.btnModificarJugadorLocal_Click);
@@ -1445,7 +1463,7 @@
             this.btnQuitarJugadorLocal.Location = new System.Drawing.Point(219, 55);
             this.btnQuitarJugadorLocal.Name = "btnQuitarJugadorLocal";
             this.btnQuitarJugadorLocal.Size = new System.Drawing.Size(30, 23);
-            this.btnQuitarJugadorLocal.TabIndex = 8;
+            this.btnQuitarJugadorLocal.TabIndex = 5;
             this.btnQuitarJugadorLocal.Text = "-";
             this.btnQuitarJugadorLocal.UseVisualStyleBackColor = true;
             this.btnQuitarJugadorLocal.Click += new System.EventHandler(this.btnQuitarJugadorLocal_Click);
@@ -1455,7 +1473,7 @@
             this.btnAgregarJugadorLocal.Location = new System.Drawing.Point(219, 26);
             this.btnAgregarJugadorLocal.Name = "btnAgregarJugadorLocal";
             this.btnAgregarJugadorLocal.Size = new System.Drawing.Size(30, 23);
-            this.btnAgregarJugadorLocal.TabIndex = 7;
+            this.btnAgregarJugadorLocal.TabIndex = 4;
             this.btnAgregarJugadorLocal.Text = "+";
             this.btnAgregarJugadorLocal.UseVisualStyleBackColor = true;
             this.btnAgregarJugadorLocal.Click += new System.EventHandler(this.btnAgregarJugadorLocal_Click);
@@ -1473,7 +1491,7 @@
             this.lvwEquipoLocal.MultiSelect = false;
             this.lvwEquipoLocal.Name = "lvwEquipoLocal";
             this.lvwEquipoLocal.Size = new System.Drawing.Size(206, 151);
-            this.lvwEquipoLocal.TabIndex = 6;
+            this.lvwEquipoLocal.TabIndex = 3;
             this.lvwEquipoLocal.UseCompatibleStateImageBehavior = false;
             this.lvwEquipoLocal.View = System.Windows.Forms.View.Details;
             // 
@@ -1501,7 +1519,7 @@
             this.txtEntrenadorLocal.Location = new System.Drawing.Point(6, 196);
             this.txtEntrenadorLocal.Name = "txtEntrenadorLocal";
             this.txtEntrenadorLocal.Size = new System.Drawing.Size(207, 20);
-            this.txtEntrenadorLocal.TabIndex = 4;
+            this.txtEntrenadorLocal.TabIndex = 9;
             // 
             // shapeContainer1
             // 
@@ -1595,7 +1613,7 @@
             0});
             this.nudSeconsAutoHideResult.Name = "nudSeconsAutoHideResult";
             this.nudSeconsAutoHideResult.Size = new System.Drawing.Size(40, 20);
-            this.nudSeconsAutoHideResult.TabIndex = 63;
+            this.nudSeconsAutoHideResult.TabIndex = 19;
             this.nudSeconsAutoHideResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudSeconsAutoHideResult.Value = new decimal(new int[] {
             1,
@@ -1609,17 +1627,17 @@
             this.chkAutoHideResult.Location = new System.Drawing.Point(121, 273);
             this.chkAutoHideResult.Name = "chkAutoHideResult";
             this.chkAutoHideResult.Size = new System.Drawing.Size(85, 17);
-            this.chkAutoHideResult.TabIndex = 62;
+            this.chkAutoHideResult.TabIndex = 18;
             this.chkAutoHideResult.Text = "Auto Ocultar";
             this.chkAutoHideResult.UseVisualStyleBackColor = true;
             // 
             // chkOcultarScoreboardAlFinalizar
             // 
             this.chkOcultarScoreboardAlFinalizar.AutoSize = true;
-            this.chkOcultarScoreboardAlFinalizar.Location = new System.Drawing.Point(246, 186);
+            this.chkOcultarScoreboardAlFinalizar.Location = new System.Drawing.Point(243, 117);
             this.chkOcultarScoreboardAlFinalizar.Name = "chkOcultarScoreboardAlFinalizar";
             this.chkOcultarScoreboardAlFinalizar.Size = new System.Drawing.Size(111, 17);
-            this.chkOcultarScoreboardAlFinalizar.TabIndex = 60;
+            this.chkOcultarScoreboardAlFinalizar.TabIndex = 9;
             this.chkOcultarScoreboardAlFinalizar.Text = "Ocultar al terminar";
             this.chkOcultarScoreboardAlFinalizar.UseVisualStyleBackColor = true;
             // 
@@ -1633,7 +1651,7 @@
             0});
             this.nudSegundosTiempo.Name = "nudSegundosTiempo";
             this.nudSegundosTiempo.Size = new System.Drawing.Size(37, 20);
-            this.nudSegundosTiempo.TabIndex = 59;
+            this.nudSegundosTiempo.TabIndex = 14;
             this.nudSegundosTiempo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // nudMinutosTiempo
@@ -1646,7 +1664,7 @@
             0});
             this.nudMinutosTiempo.Name = "nudMinutosTiempo";
             this.nudMinutosTiempo.Size = new System.Drawing.Size(40, 20);
-            this.nudMinutosTiempo.TabIndex = 58;
+            this.nudMinutosTiempo.TabIndex = 13;
             this.nudMinutosTiempo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // nudSegundosExclusion
@@ -1659,7 +1677,7 @@
             0});
             this.nudSegundosExclusion.Name = "nudSegundosExclusion";
             this.nudSegundosExclusion.Size = new System.Drawing.Size(37, 20);
-            this.nudSegundosExclusion.TabIndex = 57;
+            this.nudSegundosExclusion.TabIndex = 16;
             this.nudSegundosExclusion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // nudMinutosExclusion
@@ -1672,7 +1690,7 @@
             0});
             this.nudMinutosExclusion.Name = "nudMinutosExclusion";
             this.nudMinutosExclusion.Size = new System.Drawing.Size(40, 20);
-            this.nudMinutosExclusion.TabIndex = 56;
+            this.nudMinutosExclusion.TabIndex = 15;
             this.nudMinutosExclusion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnMostrarResultado
@@ -1681,7 +1699,7 @@
             this.btnMostrarResultado.Location = new System.Drawing.Point(11, 260);
             this.btnMostrarResultado.Name = "btnMostrarResultado";
             this.btnMostrarResultado.Size = new System.Drawing.Size(99, 40);
-            this.btnMostrarResultado.TabIndex = 55;
+            this.btnMostrarResultado.TabIndex = 17;
             this.btnMostrarResultado.Text = "Mostrar Resultado";
             this.btnMostrarResultado.UseVisualStyleBackColor = true;
             this.btnMostrarResultado.Click += new System.EventHandler(this.btnMostrarResultado_Click);
@@ -1689,10 +1707,10 @@
             // btnMostrarOcultarScoreboard
             // 
             this.btnMostrarOcultarScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarOcultarScoreboard.Location = new System.Drawing.Point(263, 104);
+            this.btnMostrarOcultarScoreboard.Location = new System.Drawing.Point(262, 60);
             this.btnMostrarOcultarScoreboard.Name = "btnMostrarOcultarScoreboard";
-            this.btnMostrarOcultarScoreboard.Size = new System.Drawing.Size(80, 70);
-            this.btnMostrarOcultarScoreboard.TabIndex = 54;
+            this.btnMostrarOcultarScoreboard.Size = new System.Drawing.Size(80, 51);
+            this.btnMostrarOcultarScoreboard.TabIndex = 8;
             this.btnMostrarOcultarScoreboard.Text = "Mostrar/Ocultar";
             this.btnMostrarOcultarScoreboard.UseVisualStyleBackColor = true;
             this.btnMostrarOcultarScoreboard.Click += new System.EventHandler(this.btnMostrarOcultarScoreboard_Click);
@@ -1703,7 +1721,7 @@
             this.btnIniciarReloj.Location = new System.Drawing.Point(6, 134);
             this.btnIniciarReloj.Name = "btnIniciarReloj";
             this.btnIniciarReloj.Size = new System.Drawing.Size(69, 29);
-            this.btnIniciarReloj.TabIndex = 53;
+            this.btnIniciarReloj.TabIndex = 10;
             this.btnIniciarReloj.Text = "Iniciar";
             this.btnIniciarReloj.UseVisualStyleBackColor = true;
             this.btnIniciarReloj.Click += new System.EventHandler(this.btnIniciarReloj_Click);
@@ -1714,7 +1732,7 @@
             this.btnReiniciarReloj.Location = new System.Drawing.Point(156, 134);
             this.btnReiniciarReloj.Name = "btnReiniciarReloj";
             this.btnReiniciarReloj.Size = new System.Drawing.Size(69, 29);
-            this.btnReiniciarReloj.TabIndex = 52;
+            this.btnReiniciarReloj.TabIndex = 12;
             this.btnReiniciarReloj.Text = "Reiniciar";
             this.btnReiniciarReloj.UseVisualStyleBackColor = true;
             this.btnReiniciarReloj.Click += new System.EventHandler(this.btnReiniciarReloj_Click);
@@ -1725,7 +1743,7 @@
             this.btnPausarReloj.Location = new System.Drawing.Point(81, 134);
             this.btnPausarReloj.Name = "btnPausarReloj";
             this.btnPausarReloj.Size = new System.Drawing.Size(69, 29);
-            this.btnPausarReloj.TabIndex = 51;
+            this.btnPausarReloj.TabIndex = 11;
             this.btnPausarReloj.Text = "Timeout";
             this.btnPausarReloj.UseVisualStyleBackColor = true;
             this.btnPausarReloj.Click += new System.EventHandler(this.btnPausarReloj_Click);
@@ -1780,7 +1798,7 @@
             this.cmbTiempo.Location = new System.Drawing.Point(57, 76);
             this.cmbTiempo.Name = "cmbTiempo";
             this.cmbTiempo.Size = new System.Drawing.Size(37, 21);
-            this.cmbTiempo.TabIndex = 46;
+            this.cmbTiempo.TabIndex = 5;
             // 
             // nudSegundosReloj
             // 
@@ -1792,7 +1810,7 @@
             0});
             this.nudSegundosReloj.Name = "nudSegundosReloj";
             this.nudSegundosReloj.Size = new System.Drawing.Size(37, 20);
-            this.nudSegundosReloj.TabIndex = 45;
+            this.nudSegundosReloj.TabIndex = 7;
             this.nudSegundosReloj.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // nudMinutosReloj
@@ -1805,7 +1823,7 @@
             0});
             this.nudMinutosReloj.Name = "nudMinutosReloj";
             this.nudMinutosReloj.Size = new System.Drawing.Size(40, 20);
-            this.nudMinutosReloj.TabIndex = 44;
+            this.nudMinutosReloj.TabIndex = 6;
             this.nudMinutosReloj.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnParaGraficoScoreboard
@@ -1814,7 +1832,7 @@
             this.btnParaGraficoScoreboard.Location = new System.Drawing.Point(121, 19);
             this.btnParaGraficoScoreboard.Name = "btnParaGraficoScoreboard";
             this.btnParaGraficoScoreboard.Size = new System.Drawing.Size(104, 40);
-            this.btnParaGraficoScoreboard.TabIndex = 43;
+            this.btnParaGraficoScoreboard.TabIndex = 4;
             this.btnParaGraficoScoreboard.Text = "Parar Grafico";
             this.btnParaGraficoScoreboard.UseVisualStyleBackColor = true;
             this.btnParaGraficoScoreboard.Click += new System.EventHandler(this.btnParaGraficoScoreboard_Click);
@@ -1825,35 +1843,35 @@
             this.btnIniciarGraficoScoreboard.Location = new System.Drawing.Point(6, 19);
             this.btnIniciarGraficoScoreboard.Name = "btnIniciarGraficoScoreboard";
             this.btnIniciarGraficoScoreboard.Size = new System.Drawing.Size(104, 40);
-            this.btnIniciarGraficoScoreboard.TabIndex = 42;
+            this.btnIniciarGraficoScoreboard.TabIndex = 3;
             this.btnIniciarGraficoScoreboard.Text = "Iniciar Grafico";
             this.btnIniciarGraficoScoreboard.UseVisualStyleBackColor = true;
             this.btnIniciarGraficoScoreboard.Click += new System.EventHandler(this.btnIniciarGraficoScoreboard_Click);
             // 
             // btnLimpiarExclusionesVisitante
             // 
-            this.btnLimpiarExclusionesVisitante.Location = new System.Drawing.Point(586, 209);
+            this.btnLimpiarExclusionesVisitante.Location = new System.Drawing.Point(586, 241);
             this.btnLimpiarExclusionesVisitante.Name = "btnLimpiarExclusionesVisitante";
             this.btnLimpiarExclusionesVisitante.Size = new System.Drawing.Size(30, 23);
-            this.btnLimpiarExclusionesVisitante.TabIndex = 41;
+            this.btnLimpiarExclusionesVisitante.TabIndex = 35;
             this.btnLimpiarExclusionesVisitante.Text = "C";
             this.btnLimpiarExclusionesVisitante.UseVisualStyleBackColor = true;
             // 
             // btnQuitarExclusionVisitante
             // 
-            this.btnQuitarExclusionVisitante.Location = new System.Drawing.Point(586, 180);
+            this.btnQuitarExclusionVisitante.Location = new System.Drawing.Point(586, 212);
             this.btnQuitarExclusionVisitante.Name = "btnQuitarExclusionVisitante";
             this.btnQuitarExclusionVisitante.Size = new System.Drawing.Size(30, 23);
-            this.btnQuitarExclusionVisitante.TabIndex = 38;
+            this.btnQuitarExclusionVisitante.TabIndex = 34;
             this.btnQuitarExclusionVisitante.Text = "-";
             this.btnQuitarExclusionVisitante.UseVisualStyleBackColor = true;
             // 
             // btnAgregarExclusionVisitante
             // 
-            this.btnAgregarExclusionVisitante.Location = new System.Drawing.Point(586, 151);
+            this.btnAgregarExclusionVisitante.Location = new System.Drawing.Point(586, 183);
             this.btnAgregarExclusionVisitante.Name = "btnAgregarExclusionVisitante";
             this.btnAgregarExclusionVisitante.Size = new System.Drawing.Size(30, 23);
-            this.btnAgregarExclusionVisitante.TabIndex = 37;
+            this.btnAgregarExclusionVisitante.TabIndex = 33;
             this.btnAgregarExclusionVisitante.Text = "+";
             this.btnAgregarExclusionVisitante.UseVisualStyleBackColor = true;
             // 
@@ -1888,7 +1906,7 @@
             this.btnExclusionVisitante.Location = new System.Drawing.Point(622, 103);
             this.btnExclusionVisitante.Name = "btnExclusionVisitante";
             this.btnExclusionVisitante.Size = new System.Drawing.Size(99, 42);
-            this.btnExclusionVisitante.TabIndex = 35;
+            this.btnExclusionVisitante.TabIndex = 27;
             this.btnExclusionVisitante.Text = "Exclusion 2\'";
             this.btnExclusionVisitante.UseVisualStyleBackColor = true;
             // 
@@ -1898,23 +1916,23 @@
             this.btn1GolVisitante.Location = new System.Drawing.Point(622, 57);
             this.btn1GolVisitante.Name = "btn1GolVisitante";
             this.btn1GolVisitante.Size = new System.Drawing.Size(99, 40);
-            this.btn1GolVisitante.TabIndex = 34;
+            this.btn1GolVisitante.TabIndex = 25;
             this.btn1GolVisitante.Text = "+1";
             this.btn1GolVisitante.UseVisualStyleBackColor = true;
             this.btn1GolVisitante.Click += new System.EventHandler(this.btn1GolVisitante_Click);
             // 
             // btnLimpiarExclusionesLocal
             // 
-            this.btnLimpiarExclusionesLocal.Location = new System.Drawing.Point(502, 209);
+            this.btnLimpiarExclusionesLocal.Location = new System.Drawing.Point(502, 241);
             this.btnLimpiarExclusionesLocal.Name = "btnLimpiarExclusionesLocal";
             this.btnLimpiarExclusionesLocal.Size = new System.Drawing.Size(30, 23);
-            this.btnLimpiarExclusionesLocal.TabIndex = 33;
+            this.btnLimpiarExclusionesLocal.TabIndex = 32;
             this.btnLimpiarExclusionesLocal.Text = "C";
             this.btnLimpiarExclusionesLocal.UseVisualStyleBackColor = true;
             // 
             // btnQuitarExclusionLocal
             // 
-            this.btnQuitarExclusionLocal.Location = new System.Drawing.Point(502, 180);
+            this.btnQuitarExclusionLocal.Location = new System.Drawing.Point(502, 212);
             this.btnQuitarExclusionLocal.Name = "btnQuitarExclusionLocal";
             this.btnQuitarExclusionLocal.Size = new System.Drawing.Size(30, 23);
             this.btnQuitarExclusionLocal.TabIndex = 30;
@@ -1923,7 +1941,7 @@
             // 
             // btnAgregarExclusionLocal
             // 
-            this.btnAgregarExclusionLocal.Location = new System.Drawing.Point(502, 151);
+            this.btnAgregarExclusionLocal.Location = new System.Drawing.Point(502, 183);
             this.btnAgregarExclusionLocal.Name = "btnAgregarExclusionLocal";
             this.btnAgregarExclusionLocal.Size = new System.Drawing.Size(30, 23);
             this.btnAgregarExclusionLocal.TabIndex = 29;
@@ -1961,7 +1979,7 @@
             this.btnExclusionLocal.Location = new System.Drawing.Point(397, 103);
             this.btnExclusionLocal.Name = "btnExclusionLocal";
             this.btnExclusionLocal.Size = new System.Drawing.Size(99, 42);
-            this.btnExclusionLocal.TabIndex = 27;
+            this.btnExclusionLocal.TabIndex = 26;
             this.btnExclusionLocal.Text = "Exclusion 2\'";
             this.btnExclusionLocal.UseVisualStyleBackColor = true;
             // 
@@ -1971,7 +1989,7 @@
             this.btn1GolLocal.Location = new System.Drawing.Point(397, 57);
             this.btn1GolLocal.Name = "btn1GolLocal";
             this.btn1GolLocal.Size = new System.Drawing.Size(99, 40);
-            this.btn1GolLocal.TabIndex = 26;
+            this.btn1GolLocal.TabIndex = 24;
             this.btn1GolLocal.Text = "+1";
             this.btn1GolLocal.UseVisualStyleBackColor = true;
             this.btn1GolLocal.Click += new System.EventHandler(this.btn1GolLocal_Click);
@@ -1986,7 +2004,7 @@
             0});
             this.nudScoreVisitante.Name = "nudScoreVisitante";
             this.nudScoreVisitante.Size = new System.Drawing.Size(44, 20);
-            this.nudScoreVisitante.TabIndex = 25;
+            this.nudScoreVisitante.TabIndex = 22;
             this.nudScoreVisitante.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudScoreVisitante.ValueChanged += new System.EventHandler(this.nudScoreVisitante_ValueChanged);
             // 
@@ -2000,7 +2018,7 @@
             0});
             this.nudScoreLocal.Name = "nudScoreLocal";
             this.nudScoreLocal.Size = new System.Drawing.Size(46, 20);
-            this.nudScoreLocal.TabIndex = 24;
+            this.nudScoreLocal.TabIndex = 21;
             this.nudScoreLocal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudScoreLocal.ValueChanged += new System.EventHandler(this.nudScoreLocal_ValueChanged);
             // 
@@ -2009,14 +2027,14 @@
             this.txtNombreScoreVisitante.Location = new System.Drawing.Point(621, 14);
             this.txtNombreScoreVisitante.Name = "txtNombreScoreVisitante";
             this.txtNombreScoreVisitante.Size = new System.Drawing.Size(100, 20);
-            this.txtNombreScoreVisitante.TabIndex = 1;
+            this.txtNombreScoreVisitante.TabIndex = 23;
             // 
             // txtNombreScoreLocal
             // 
             this.txtNombreScoreLocal.Location = new System.Drawing.Point(396, 14);
             this.txtNombreScoreLocal.Name = "txtNombreScoreLocal";
             this.txtNombreScoreLocal.Size = new System.Drawing.Size(100, 20);
-            this.txtNombreScoreLocal.TabIndex = 0;
+            this.txtNombreScoreLocal.TabIndex = 20;
             // 
             // shapeContainer3
             // 
@@ -2066,7 +2084,7 @@
             this.radTeam2List.Location = new System.Drawing.Point(168, 19);
             this.radTeam2List.Name = "radTeam2List";
             this.radTeam2List.Size = new System.Drawing.Size(65, 17);
-            this.radTeam2List.TabIndex = 9;
+            this.radTeam2List.TabIndex = 10;
             this.radTeam2List.TabStop = true;
             this.radTeam2List.Text = "Visitante";
             this.radTeam2List.UseVisualStyleBackColor = true;
@@ -2078,7 +2096,7 @@
             this.radTeam1List.Location = new System.Drawing.Point(40, 19);
             this.radTeam1List.Name = "radTeam1List";
             this.radTeam1List.Size = new System.Drawing.Size(51, 17);
-            this.radTeam1List.TabIndex = 8;
+            this.radTeam1List.TabIndex = 9;
             this.radTeam1List.TabStop = true;
             this.radTeam1List.Text = "Local";
             this.radTeam1List.UseVisualStyleBackColor = true;
@@ -2097,7 +2115,7 @@
             this.lvwJugadores.MultiSelect = false;
             this.lvwJugadores.Name = "lvwJugadores";
             this.lvwJugadores.Size = new System.Drawing.Size(253, 252);
-            this.lvwJugadores.TabIndex = 7;
+            this.lvwJugadores.TabIndex = 11;
             this.lvwJugadores.UseCompatibleStateImageBehavior = false;
             this.lvwJugadores.View = System.Windows.Forms.View.Details;
             this.lvwJugadores.DoubleClick += new System.EventHandler(this.lvwJugadores_DoubleClick);
@@ -2144,7 +2162,7 @@
             0});
             this.nudSegundosAutoOcultarLT.Name = "nudSegundosAutoOcultarLT";
             this.nudSegundosAutoOcultarLT.Size = new System.Drawing.Size(40, 20);
-            this.nudSegundosAutoOcultarLT.TabIndex = 51;
+            this.nudSegundosAutoOcultarLT.TabIndex = 7;
             this.nudSegundosAutoOcultarLT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudSegundosAutoOcultarLT.Value = new decimal(new int[] {
             3,
@@ -2158,7 +2176,7 @@
             this.chkAutoOcultarLT.Location = new System.Drawing.Point(128, 118);
             this.chkAutoOcultarLT.Name = "chkAutoOcultarLT";
             this.chkAutoOcultarLT.Size = new System.Drawing.Size(85, 17);
-            this.chkAutoOcultarLT.TabIndex = 50;
+            this.chkAutoOcultarLT.TabIndex = 6;
             this.chkAutoOcultarLT.Text = "Auto Ocultar";
             this.chkAutoOcultarLT.UseVisualStyleBackColor = true;
             // 
@@ -2185,14 +2203,14 @@
             this.txtLTSubtitulo.Location = new System.Drawing.Point(78, 62);
             this.txtLTSubtitulo.Name = "txtLTSubtitulo";
             this.txtLTSubtitulo.Size = new System.Drawing.Size(336, 20);
-            this.txtLTSubtitulo.TabIndex = 47;
+            this.txtLTSubtitulo.TabIndex = 4;
             // 
             // txtLTTitulo
             // 
             this.txtLTTitulo.Location = new System.Drawing.Point(78, 36);
             this.txtLTTitulo.Name = "txtLTTitulo";
             this.txtLTTitulo.Size = new System.Drawing.Size(336, 20);
-            this.txtLTTitulo.TabIndex = 46;
+            this.txtLTTitulo.TabIndex = 3;
             // 
             // btnPararLT
             // 
@@ -2200,7 +2218,7 @@
             this.btnPararLT.Location = new System.Drawing.Point(310, 105);
             this.btnPararLT.Name = "btnPararLT";
             this.btnPararLT.Size = new System.Drawing.Size(104, 40);
-            this.btnPararLT.TabIndex = 45;
+            this.btnPararLT.TabIndex = 8;
             this.btnPararLT.Text = "Parar";
             this.btnPararLT.UseVisualStyleBackColor = true;
             this.btnPararLT.Click += new System.EventHandler(this.btnPararLT_Click);
@@ -2211,7 +2229,7 @@
             this.btnIniciarLT.Location = new System.Drawing.Point(18, 105);
             this.btnIniciarLT.Name = "btnIniciarLT";
             this.btnIniciarLT.Size = new System.Drawing.Size(104, 40);
-            this.btnIniciarLT.TabIndex = 44;
+            this.btnIniciarLT.TabIndex = 5;
             this.btnIniciarLT.Text = "Iniciar";
             this.btnIniciarLT.UseVisualStyleBackColor = true;
             this.btnIniciarLT.Click += new System.EventHandler(this.btnIniciarLT_Click);
@@ -2254,7 +2272,7 @@
             this.btnClearTable.Location = new System.Drawing.Point(365, 196);
             this.btnClearTable.Name = "btnClearTable";
             this.btnClearTable.Size = new System.Drawing.Size(30, 23);
-            this.btnClearTable.TabIndex = 64;
+            this.btnClearTable.TabIndex = 8;
             this.btnClearTable.Text = "C";
             this.btnClearTable.UseVisualStyleBackColor = true;
             this.btnClearTable.Click += new System.EventHandler(this.btnClearTable_Click);
@@ -2264,7 +2282,7 @@
             this.btnLoadPositionTable.Location = new System.Drawing.Point(365, 167);
             this.btnLoadPositionTable.Name = "btnLoadPositionTable";
             this.btnLoadPositionTable.Size = new System.Drawing.Size(30, 23);
-            this.btnLoadPositionTable.TabIndex = 63;
+            this.btnLoadPositionTable.TabIndex = 7;
             this.btnLoadPositionTable.Text = "L";
             this.btnLoadPositionTable.UseVisualStyleBackColor = true;
             // 
@@ -2273,7 +2291,7 @@
             this.btnEditPosition.Location = new System.Drawing.Point(365, 138);
             this.btnEditPosition.Name = "btnEditPosition";
             this.btnEditPosition.Size = new System.Drawing.Size(30, 23);
-            this.btnEditPosition.TabIndex = 62;
+            this.btnEditPosition.TabIndex = 6;
             this.btnEditPosition.Text = "M";
             this.btnEditPosition.UseVisualStyleBackColor = true;
             this.btnEditPosition.Click += new System.EventHandler(this.btnEditPosition_Click);
@@ -2283,7 +2301,7 @@
             this.btnRemovePosition.Location = new System.Drawing.Point(365, 109);
             this.btnRemovePosition.Name = "btnRemovePosition";
             this.btnRemovePosition.Size = new System.Drawing.Size(30, 23);
-            this.btnRemovePosition.TabIndex = 61;
+            this.btnRemovePosition.TabIndex = 5;
             this.btnRemovePosition.Text = "-";
             this.btnRemovePosition.UseVisualStyleBackColor = true;
             this.btnRemovePosition.Click += new System.EventHandler(this.btnRemovePosition_Click);
@@ -2293,7 +2311,7 @@
             this.btnAddPosition.Location = new System.Drawing.Point(365, 80);
             this.btnAddPosition.Name = "btnAddPosition";
             this.btnAddPosition.Size = new System.Drawing.Size(30, 23);
-            this.btnAddPosition.TabIndex = 60;
+            this.btnAddPosition.TabIndex = 4;
             this.btnAddPosition.Text = "+";
             this.btnAddPosition.UseVisualStyleBackColor = true;
             this.btnAddPosition.Click += new System.EventHandler(this.btnAddPosition_Click);
@@ -2321,14 +2339,14 @@
             this.txtPositionsSubtitle.Location = new System.Drawing.Point(479, 77);
             this.txtPositionsSubtitle.Name = "txtPositionsSubtitle";
             this.txtPositionsSubtitle.Size = new System.Drawing.Size(249, 20);
-            this.txtPositionsSubtitle.TabIndex = 57;
+            this.txtPositionsSubtitle.TabIndex = 10;
             // 
             // txtPositionsTitle
             // 
             this.txtPositionsTitle.Location = new System.Drawing.Point(479, 51);
             this.txtPositionsTitle.Name = "txtPositionsTitle";
             this.txtPositionsTitle.Size = new System.Drawing.Size(249, 20);
-            this.txtPositionsTitle.TabIndex = 56;
+            this.txtPositionsTitle.TabIndex = 9;
             // 
             // nudAutoHidePositionsSeconds
             // 
@@ -2345,7 +2363,7 @@
             0});
             this.nudAutoHidePositionsSeconds.Name = "nudAutoHidePositionsSeconds";
             this.nudAutoHidePositionsSeconds.Size = new System.Drawing.Size(40, 20);
-            this.nudAutoHidePositionsSeconds.TabIndex = 55;
+            this.nudAutoHidePositionsSeconds.TabIndex = 13;
             this.nudAutoHidePositionsSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudAutoHidePositionsSeconds.Value = new decimal(new int[] {
             3,
@@ -2359,7 +2377,7 @@
             this.chkAutoHidePositions.Location = new System.Drawing.Point(548, 136);
             this.chkAutoHidePositions.Name = "chkAutoHidePositions";
             this.chkAutoHidePositions.Size = new System.Drawing.Size(85, 17);
-            this.chkAutoHidePositions.TabIndex = 54;
+            this.chkAutoHidePositions.TabIndex = 12;
             this.chkAutoHidePositions.Text = "Auto Ocultar";
             this.chkAutoHidePositions.UseVisualStyleBackColor = true;
             // 
@@ -2369,7 +2387,7 @@
             this.btnHidePositions.Location = new System.Drawing.Point(469, 181);
             this.btnHidePositions.Name = "btnHidePositions";
             this.btnHidePositions.Size = new System.Drawing.Size(73, 38);
-            this.btnHidePositions.TabIndex = 53;
+            this.btnHidePositions.TabIndex = 14;
             this.btnHidePositions.Text = "Parar";
             this.btnHidePositions.UseVisualStyleBackColor = true;
             this.btnHidePositions.Click += new System.EventHandler(this.btnHidePositions_Click);
@@ -2380,7 +2398,7 @@
             this.btnShowPositions.Location = new System.Drawing.Point(469, 123);
             this.btnShowPositions.Name = "btnShowPositions";
             this.btnShowPositions.Size = new System.Drawing.Size(73, 38);
-            this.btnShowPositions.TabIndex = 52;
+            this.btnShowPositions.TabIndex = 11;
             this.btnShowPositions.Text = "Iniciar";
             this.btnShowPositions.UseVisualStyleBackColor = true;
             this.btnShowPositions.Click += new System.EventHandler(this.btnShowPositions_Click);
@@ -2406,7 +2424,7 @@
             this.lvwPositions.MultiSelect = false;
             this.lvwPositions.Name = "lvwPositions";
             this.lvwPositions.Size = new System.Drawing.Size(345, 292);
-            this.lvwPositions.TabIndex = 7;
+            this.lvwPositions.TabIndex = 3;
             this.lvwPositions.UseCompatibleStateImageBehavior = false;
             this.lvwPositions.View = System.Windows.Forms.View.Details;
             // 
@@ -2493,7 +2511,7 @@
             this.btnConfigRecording.Location = new System.Drawing.Point(185, 67);
             this.btnConfigRecording.Name = "btnConfigRecording";
             this.btnConfigRecording.Size = new System.Drawing.Size(77, 40);
-            this.btnConfigRecording.TabIndex = 48;
+            this.btnConfigRecording.TabIndex = 20;
             this.btnConfigRecording.Text = "Config";
             this.btnConfigRecording.UseVisualStyleBackColor = true;
             this.btnConfigRecording.Click += new System.EventHandler(this.btnConfigRecording_Click);
@@ -2512,7 +2530,7 @@
             this.txtArchivoGrabacion.Location = new System.Drawing.Point(68, 26);
             this.txtArchivoGrabacion.Name = "txtArchivoGrabacion";
             this.txtArchivoGrabacion.Size = new System.Drawing.Size(183, 20);
-            this.txtArchivoGrabacion.TabIndex = 46;
+            this.txtArchivoGrabacion.TabIndex = 17;
             // 
             // btnStopRecording
             // 
@@ -2520,7 +2538,7 @@
             this.btnStopRecording.Location = new System.Drawing.Point(102, 67);
             this.btnStopRecording.Name = "btnStopRecording";
             this.btnStopRecording.Size = new System.Drawing.Size(77, 40);
-            this.btnStopRecording.TabIndex = 45;
+            this.btnStopRecording.TabIndex = 19;
             this.btnStopRecording.Text = "Detener";
             this.btnStopRecording.UseVisualStyleBackColor = true;
             this.btnStopRecording.Click += new System.EventHandler(this.btnStopRecording_Click);
@@ -2531,7 +2549,7 @@
             this.btnStartRecording.Location = new System.Drawing.Point(19, 67);
             this.btnStartRecording.Name = "btnStartRecording";
             this.btnStartRecording.Size = new System.Drawing.Size(77, 40);
-            this.btnStartRecording.TabIndex = 44;
+            this.btnStartRecording.TabIndex = 18;
             this.btnStartRecording.Text = "Grabar";
             this.btnStartRecording.UseVisualStyleBackColor = true;
             this.btnStartRecording.Click += new System.EventHandler(this.btnStartRecording_Click);
@@ -2558,7 +2576,7 @@
             this.checkBox1.Location = new System.Drawing.Point(79, 122);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(50, 17);
-            this.checkBox1.TabIndex = 55;
+            this.checkBox1.TabIndex = 14;
             this.checkBox1.Text = "Loop";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -2567,7 +2585,7 @@
             this.button2.Location = new System.Drawing.Point(148, 123);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(74, 27);
-            this.button2.TabIndex = 54;
+            this.button2.TabIndex = 16;
             this.button2.Text = "STOP";
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -2576,7 +2594,7 @@
             this.button3.Location = new System.Drawing.Point(148, 89);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(74, 27);
-            this.button3.TabIndex = 53;
+            this.button3.TabIndex = 15;
             this.button3.Text = "PAUSE";
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -2585,7 +2603,7 @@
             this.button4.Location = new System.Drawing.Point(68, 89);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(74, 27);
-            this.button4.TabIndex = 52;
+            this.button4.TabIndex = 13;
             this.button4.Text = "PLAY";
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -2594,7 +2612,7 @@
             this.button1.Location = new System.Drawing.Point(222, 38);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(65, 21);
-            this.button1.TabIndex = 51;
+            this.button1.TabIndex = 12;
             this.button1.Text = "Actualizar";
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -2605,7 +2623,7 @@
             this.comboBox1.Location = new System.Drawing.Point(61, 38);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(155, 21);
-            this.comboBox1.TabIndex = 50;
+            this.comboBox1.TabIndex = 11;
             // 
             // label35
             // 
@@ -2639,7 +2657,7 @@
             this.btnMute.Location = new System.Drawing.Point(376, 274);
             this.btnMute.Name = "btnMute";
             this.btnMute.Size = new System.Drawing.Size(47, 22);
-            this.btnMute.TabIndex = 54;
+            this.btnMute.TabIndex = 10;
             this.btnMute.Text = "Mute";
             this.btnMute.UseVisualStyleBackColor = true;
             this.btnMute.Click += new System.EventHandler(this.btnMute_Click);
@@ -2660,7 +2678,7 @@
             this.trkVolume.Name = "trkVolume";
             this.trkVolume.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.trkVolume.Size = new System.Drawing.Size(45, 81);
-            this.trkVolume.TabIndex = 52;
+            this.trkVolume.TabIndex = 9;
             this.trkVolume.Scroll += new System.EventHandler(this.trkVolume_Scroll);
             this.trkVolume.ValueChanged += new System.EventHandler(this.trkVolume_ValueChanged);
             // 
@@ -2670,7 +2688,7 @@
             this.chkLoopVideoFile.Location = new System.Drawing.Point(360, 99);
             this.chkLoopVideoFile.Name = "chkLoopVideoFile";
             this.chkLoopVideoFile.Size = new System.Drawing.Size(50, 17);
-            this.chkLoopVideoFile.TabIndex = 51;
+            this.chkLoopVideoFile.TabIndex = 6;
             this.chkLoopVideoFile.Text = "Loop";
             this.chkLoopVideoFile.UseVisualStyleBackColor = true;
             // 
@@ -2679,7 +2697,7 @@
             this.btnStopVideo.Location = new System.Drawing.Point(349, 156);
             this.btnStopVideo.Name = "btnStopVideo";
             this.btnStopVideo.Size = new System.Drawing.Size(74, 27);
-            this.btnStopVideo.TabIndex = 16;
+            this.btnStopVideo.TabIndex = 8;
             this.btnStopVideo.Text = "STOP";
             this.btnStopVideo.UseVisualStyleBackColor = true;
             this.btnStopVideo.Click += new System.EventHandler(this.btnStopVideo_Click);
@@ -2689,7 +2707,7 @@
             this.btnPauseVideo.Location = new System.Drawing.Point(349, 122);
             this.btnPauseVideo.Name = "btnPauseVideo";
             this.btnPauseVideo.Size = new System.Drawing.Size(74, 27);
-            this.btnPauseVideo.TabIndex = 15;
+            this.btnPauseVideo.TabIndex = 7;
             this.btnPauseVideo.Text = "PAUSE";
             this.btnPauseVideo.UseVisualStyleBackColor = true;
             this.btnPauseVideo.Click += new System.EventHandler(this.btnPauseVideo_Click);
@@ -2699,7 +2717,7 @@
             this.btnPlayVideo.Location = new System.Drawing.Point(349, 66);
             this.btnPlayVideo.Name = "btnPlayVideo";
             this.btnPlayVideo.Size = new System.Drawing.Size(74, 27);
-            this.btnPlayVideo.TabIndex = 14;
+            this.btnPlayVideo.TabIndex = 5;
             this.btnPlayVideo.Text = "PLAY";
             this.btnPlayVideo.UseVisualStyleBackColor = true;
             this.btnPlayVideo.Click += new System.EventHandler(this.btnPlayVideo_Click);
@@ -2709,7 +2727,7 @@
             this.btnGetVideoFiles.Location = new System.Drawing.Point(349, 19);
             this.btnGetVideoFiles.Name = "btnGetVideoFiles";
             this.btnGetVideoFiles.Size = new System.Drawing.Size(74, 27);
-            this.btnGetVideoFiles.TabIndex = 13;
+            this.btnGetVideoFiles.TabIndex = 4;
             this.btnGetVideoFiles.Text = "Actualizar";
             this.btnGetVideoFiles.UseVisualStyleBackColor = true;
             this.btnGetVideoFiles.Click += new System.EventHandler(this.btnGetVideoFiles_Click);
@@ -2726,7 +2744,7 @@
             this.lvwVideoFiles.MultiSelect = false;
             this.lvwVideoFiles.Name = "lvwVideoFiles";
             this.lvwVideoFiles.Size = new System.Drawing.Size(332, 277);
-            this.lvwVideoFiles.TabIndex = 7;
+            this.lvwVideoFiles.TabIndex = 3;
             this.lvwVideoFiles.UseCompatibleStateImageBehavior = false;
             this.lvwVideoFiles.View = System.Windows.Forms.View.Details;
             // 
@@ -2748,6 +2766,149 @@
             this.tabPage7.Text = "Otros (F9)";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
+            // groupBox20
+            // 
+            this.groupBox20.Controls.Add(this.label47);
+            this.groupBox20.Controls.Add(this.txtTwitterHashtag);
+            this.groupBox20.Controls.Add(this.label44);
+            this.groupBox20.Controls.Add(this.label45);
+            this.groupBox20.Controls.Add(this.label46);
+            this.groupBox20.Controls.Add(this.txtTwitterMessage);
+            this.groupBox20.Controls.Add(this.txtTwitterFullName);
+            this.groupBox20.Controls.Add(this.txtTwitterUserName);
+            this.groupBox20.Controls.Add(this.nudAutoHideTwitterSeconds);
+            this.groupBox20.Controls.Add(this.chkAutoHideTwitter);
+            this.groupBox20.Controls.Add(this.btnStopTwitter);
+            this.groupBox20.Controls.Add(this.btnStartTwitter);
+            this.groupBox20.Location = new System.Drawing.Point(6, 177);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Size = new System.Drawing.Size(728, 140);
+            this.groupBox20.TabIndex = 5;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "Twitter";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(14, 23);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(50, 13);
+            this.label47.TabIndex = 63;
+            this.label47.Text = "Hashtag:";
+            // 
+            // txtTwitterHashtag
+            // 
+            this.txtTwitterHashtag.Location = new System.Drawing.Point(84, 20);
+            this.txtTwitterHashtag.Name = "txtTwitterHashtag";
+            this.txtTwitterHashtag.Size = new System.Drawing.Size(141, 20);
+            this.txtTwitterHashtag.TabIndex = 12;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(14, 75);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(50, 13);
+            this.label44.TabIndex = 61;
+            this.label44.Text = "Mensaje:";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(14, 49);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(52, 13);
+            this.label45.TabIndex = 60;
+            this.label45.Text = "Fullname:";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(239, 23);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(58, 13);
+            this.label46.TabIndex = 59;
+            this.label46.Text = "Username:";
+            // 
+            // txtTwitterMessage
+            // 
+            this.txtTwitterMessage.Location = new System.Drawing.Point(84, 72);
+            this.txtTwitterMessage.MaxLength = 145;
+            this.txtTwitterMessage.Multiline = true;
+            this.txtTwitterMessage.Name = "txtTwitterMessage";
+            this.txtTwitterMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtTwitterMessage.Size = new System.Drawing.Size(360, 58);
+            this.txtTwitterMessage.TabIndex = 15;
+            // 
+            // txtTwitterFullName
+            // 
+            this.txtTwitterFullName.Location = new System.Drawing.Point(84, 46);
+            this.txtTwitterFullName.Name = "txtTwitterFullName";
+            this.txtTwitterFullName.Size = new System.Drawing.Size(360, 20);
+            this.txtTwitterFullName.TabIndex = 14;
+            // 
+            // txtTwitterUserName
+            // 
+            this.txtTwitterUserName.Location = new System.Drawing.Point(303, 20);
+            this.txtTwitterUserName.Name = "txtTwitterUserName";
+            this.txtTwitterUserName.Size = new System.Drawing.Size(141, 20);
+            this.txtTwitterUserName.TabIndex = 13;
+            // 
+            // nudAutoHideTwitterSeconds
+            // 
+            this.nudAutoHideTwitterSeconds.Location = new System.Drawing.Point(663, 67);
+            this.nudAutoHideTwitterSeconds.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.nudAutoHideTwitterSeconds.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudAutoHideTwitterSeconds.Name = "nudAutoHideTwitterSeconds";
+            this.nudAutoHideTwitterSeconds.Size = new System.Drawing.Size(40, 20);
+            this.nudAutoHideTwitterSeconds.TabIndex = 18;
+            this.nudAutoHideTwitterSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudAutoHideTwitterSeconds.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // chkAutoHideTwitter
+            // 
+            this.chkAutoHideTwitter.AutoSize = true;
+            this.chkAutoHideTwitter.Location = new System.Drawing.Point(572, 67);
+            this.chkAutoHideTwitter.Name = "chkAutoHideTwitter";
+            this.chkAutoHideTwitter.Size = new System.Drawing.Size(85, 17);
+            this.chkAutoHideTwitter.TabIndex = 17;
+            this.chkAutoHideTwitter.Text = "Auto Ocultar";
+            this.chkAutoHideTwitter.UseVisualStyleBackColor = true;
+            // 
+            // btnStopTwitter
+            // 
+            this.btnStopTwitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopTwitter.Location = new System.Drawing.Point(581, 90);
+            this.btnStopTwitter.Name = "btnStopTwitter";
+            this.btnStopTwitter.Size = new System.Drawing.Size(104, 40);
+            this.btnStopTwitter.TabIndex = 19;
+            this.btnStopTwitter.Text = "Parar";
+            this.btnStopTwitter.UseVisualStyleBackColor = true;
+            this.btnStopTwitter.Click += new System.EventHandler(this.btnStopTwitter_Click);
+            // 
+            // btnStartTwitter
+            // 
+            this.btnStartTwitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartTwitter.Location = new System.Drawing.Point(581, 19);
+            this.btnStartTwitter.Name = "btnStartTwitter";
+            this.btnStartTwitter.Size = new System.Drawing.Size(104, 40);
+            this.btnStartTwitter.TabIndex = 16;
+            this.btnStartTwitter.Text = "Iniciar";
+            this.btnStartTwitter.UseVisualStyleBackColor = true;
+            this.btnStartTwitter.Click += new System.EventHandler(this.btnStartTwitter_Click);
+            // 
             // groupBox15
             // 
             this.groupBox15.Controls.Add(this.btnGetLogoFiles);
@@ -2767,7 +2928,7 @@
             this.btnGetLogoFiles.Location = new System.Drawing.Point(272, 30);
             this.btnGetLogoFiles.Name = "btnGetLogoFiles";
             this.btnGetLogoFiles.Size = new System.Drawing.Size(71, 21);
-            this.btnGetLogoFiles.TabIndex = 48;
+            this.btnGetLogoFiles.TabIndex = 4;
             this.btnGetLogoFiles.Text = "Actualizar";
             this.btnGetLogoFiles.UseVisualStyleBackColor = true;
             // 
@@ -2777,7 +2938,7 @@
             this.btnStopLogo.Location = new System.Drawing.Point(178, 68);
             this.btnStopLogo.Name = "btnStopLogo";
             this.btnStopLogo.Size = new System.Drawing.Size(104, 40);
-            this.btnStopLogo.TabIndex = 47;
+            this.btnStopLogo.TabIndex = 6;
             this.btnStopLogo.Text = "Parar Grafico";
             this.btnStopLogo.UseVisualStyleBackColor = true;
             this.btnStopLogo.Click += new System.EventHandler(this.btnStopLogo_Click);
@@ -2788,7 +2949,7 @@
             this.btnStartLogo.Location = new System.Drawing.Point(63, 68);
             this.btnStartLogo.Name = "btnStartLogo";
             this.btnStartLogo.Size = new System.Drawing.Size(104, 40);
-            this.btnStartLogo.TabIndex = 46;
+            this.btnStartLogo.TabIndex = 5;
             this.btnStartLogo.Text = "Iniciar Grafico";
             this.btnStartLogo.UseVisualStyleBackColor = true;
             this.btnStartLogo.Click += new System.EventHandler(this.btnStartLogo_Click);
@@ -2800,7 +2961,7 @@
             this.cmbLogoTransmision.Location = new System.Drawing.Point(62, 30);
             this.cmbLogoTransmision.Name = "cmbLogoTransmision";
             this.cmbLogoTransmision.Size = new System.Drawing.Size(204, 21);
-            this.cmbLogoTransmision.TabIndex = 11;
+            this.cmbLogoTransmision.TabIndex = 3;
             // 
             // label31
             // 
@@ -2844,7 +3005,7 @@
             this.trkImageScrollingSpeed.Name = "trkImageScrollingSpeed";
             this.trkImageScrollingSpeed.Size = new System.Drawing.Size(203, 45);
             this.trkImageScrollingSpeed.SmallChange = 2;
-            this.trkImageScrollingSpeed.TabIndex = 54;
+            this.trkImageScrollingSpeed.TabIndex = 9;
             this.trkImageScrollingSpeed.TickFrequency = 2;
             this.trkImageScrollingSpeed.Value = 1;
             // 
@@ -2853,7 +3014,7 @@
             this.btnRefreshImageScrolling.Location = new System.Drawing.Point(294, 18);
             this.btnRefreshImageScrolling.Name = "btnRefreshImageScrolling";
             this.btnRefreshImageScrolling.Size = new System.Drawing.Size(68, 21);
-            this.btnRefreshImageScrolling.TabIndex = 48;
+            this.btnRefreshImageScrolling.TabIndex = 8;
             this.btnRefreshImageScrolling.Text = "Actualizar";
             this.btnRefreshImageScrolling.UseVisualStyleBackColor = true;
             this.btnRefreshImageScrolling.Click += new System.EventHandler(this.btnRefreshImageScrolling_Click);
@@ -2864,7 +3025,7 @@
             this.btnStopImageScrolling.Location = new System.Drawing.Point(188, 113);
             this.btnStopImageScrolling.Name = "btnStopImageScrolling";
             this.btnStopImageScrolling.Size = new System.Drawing.Size(104, 40);
-            this.btnStopImageScrolling.TabIndex = 47;
+            this.btnStopImageScrolling.TabIndex = 11;
             this.btnStopImageScrolling.Text = "Parar Grafico";
             this.btnStopImageScrolling.UseVisualStyleBackColor = true;
             this.btnStopImageScrolling.Click += new System.EventHandler(this.btnStopImageScrolling_Click);
@@ -2875,7 +3036,7 @@
             this.btnStartImageScrolling.Location = new System.Drawing.Point(78, 113);
             this.btnStartImageScrolling.Name = "btnStartImageScrolling";
             this.btnStartImageScrolling.Size = new System.Drawing.Size(104, 40);
-            this.btnStartImageScrolling.TabIndex = 46;
+            this.btnStartImageScrolling.TabIndex = 10;
             this.btnStartImageScrolling.Text = "Iniciar Grafico";
             this.btnStartImageScrolling.UseVisualStyleBackColor = true;
             this.btnStartImageScrolling.Click += new System.EventHandler(this.btnStartImageScrolling_Click);
@@ -2887,7 +3048,7 @@
             this.cmbImageScrolling.Location = new System.Drawing.Point(63, 19);
             this.cmbImageScrolling.Name = "cmbImageScrolling";
             this.cmbImageScrolling.Size = new System.Drawing.Size(225, 21);
-            this.cmbImageScrolling.TabIndex = 11;
+            this.cmbImageScrolling.TabIndex = 7;
             // 
             // label33
             // 
@@ -3004,167 +3165,6 @@
             // 
             this.tmrPositions.Tick += new System.EventHandler(this.tmrPositions_Tick);
             // 
-            // cmbTemplateTwitter
-            // 
-            this.cmbTemplateTwitter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTemplateTwitter.FormattingEnabled = true;
-            this.cmbTemplateTwitter.Location = new System.Drawing.Point(78, 182);
-            this.cmbTemplateTwitter.Name = "cmbTemplateTwitter";
-            this.cmbTemplateTwitter.Size = new System.Drawing.Size(215, 21);
-            this.cmbTemplateTwitter.TabIndex = 17;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(8, 185);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(42, 13);
-            this.label43.TabIndex = 16;
-            this.label43.Text = "Twitter:";
-            // 
-            // groupBox20
-            // 
-            this.groupBox20.Controls.Add(this.label47);
-            this.groupBox20.Controls.Add(this.txtTwitterHashtag);
-            this.groupBox20.Controls.Add(this.label44);
-            this.groupBox20.Controls.Add(this.label45);
-            this.groupBox20.Controls.Add(this.label46);
-            this.groupBox20.Controls.Add(this.txtTwitterMessage);
-            this.groupBox20.Controls.Add(this.txtTwitterFullName);
-            this.groupBox20.Controls.Add(this.txtTwitterUserName);
-            this.groupBox20.Controls.Add(this.nudAutoHideTwitterSeconds);
-            this.groupBox20.Controls.Add(this.chkAutoHideTwitter);
-            this.groupBox20.Controls.Add(this.btnStopTwitter);
-            this.groupBox20.Controls.Add(this.btnStartTwitter);
-            this.groupBox20.Location = new System.Drawing.Point(6, 177);
-            this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Size = new System.Drawing.Size(728, 140);
-            this.groupBox20.TabIndex = 5;
-            this.groupBox20.TabStop = false;
-            this.groupBox20.Text = "Twitter";
-            // 
-            // nudAutoHideTwitterSeconds
-            // 
-            this.nudAutoHideTwitterSeconds.Location = new System.Drawing.Point(663, 67);
-            this.nudAutoHideTwitterSeconds.Maximum = new decimal(new int[] {
-            60,
-            0,
-            0,
-            0});
-            this.nudAutoHideTwitterSeconds.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudAutoHideTwitterSeconds.Name = "nudAutoHideTwitterSeconds";
-            this.nudAutoHideTwitterSeconds.Size = new System.Drawing.Size(40, 20);
-            this.nudAutoHideTwitterSeconds.TabIndex = 55;
-            this.nudAutoHideTwitterSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudAutoHideTwitterSeconds.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            // 
-            // chkAutoHideTwitter
-            // 
-            this.chkAutoHideTwitter.AutoSize = true;
-            this.chkAutoHideTwitter.Location = new System.Drawing.Point(572, 67);
-            this.chkAutoHideTwitter.Name = "chkAutoHideTwitter";
-            this.chkAutoHideTwitter.Size = new System.Drawing.Size(85, 17);
-            this.chkAutoHideTwitter.TabIndex = 54;
-            this.chkAutoHideTwitter.Text = "Auto Ocultar";
-            this.chkAutoHideTwitter.UseVisualStyleBackColor = true;
-            // 
-            // btnStopTwitter
-            // 
-            this.btnStopTwitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStopTwitter.Location = new System.Drawing.Point(581, 90);
-            this.btnStopTwitter.Name = "btnStopTwitter";
-            this.btnStopTwitter.Size = new System.Drawing.Size(104, 40);
-            this.btnStopTwitter.TabIndex = 53;
-            this.btnStopTwitter.Text = "Parar";
-            this.btnStopTwitter.UseVisualStyleBackColor = true;
-            this.btnStopTwitter.Click += new System.EventHandler(this.btnStopTwitter_Click);
-            // 
-            // btnStartTwitter
-            // 
-            this.btnStartTwitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartTwitter.Location = new System.Drawing.Point(581, 19);
-            this.btnStartTwitter.Name = "btnStartTwitter";
-            this.btnStartTwitter.Size = new System.Drawing.Size(104, 40);
-            this.btnStartTwitter.TabIndex = 52;
-            this.btnStartTwitter.Text = "Iniciar";
-            this.btnStartTwitter.UseVisualStyleBackColor = true;
-            this.btnStartTwitter.Click += new System.EventHandler(this.btnStartTwitter_Click);
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(14, 75);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(50, 13);
-            this.label44.TabIndex = 61;
-            this.label44.Text = "Mensaje:";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(14, 49);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(52, 13);
-            this.label45.TabIndex = 60;
-            this.label45.Text = "Fullname:";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(239, 23);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(58, 13);
-            this.label46.TabIndex = 59;
-            this.label46.Text = "Username:";
-            // 
-            // txtTwitterMessage
-            // 
-            this.txtTwitterMessage.Location = new System.Drawing.Point(84, 72);
-            this.txtTwitterMessage.MaxLength = 145;
-            this.txtTwitterMessage.Multiline = true;
-            this.txtTwitterMessage.Name = "txtTwitterMessage";
-            this.txtTwitterMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtTwitterMessage.Size = new System.Drawing.Size(360, 58);
-            this.txtTwitterMessage.TabIndex = 58;
-            // 
-            // txtTwitterFullName
-            // 
-            this.txtTwitterFullName.Location = new System.Drawing.Point(84, 46);
-            this.txtTwitterFullName.Name = "txtTwitterFullName";
-            this.txtTwitterFullName.Size = new System.Drawing.Size(360, 20);
-            this.txtTwitterFullName.TabIndex = 57;
-            // 
-            // txtTwitterUserName
-            // 
-            this.txtTwitterUserName.Location = new System.Drawing.Point(303, 20);
-            this.txtTwitterUserName.Name = "txtTwitterUserName";
-            this.txtTwitterUserName.Size = new System.Drawing.Size(141, 20);
-            this.txtTwitterUserName.TabIndex = 56;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(14, 23);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(50, 13);
-            this.label47.TabIndex = 63;
-            this.label47.Text = "Hashtag:";
-            // 
-            // txtTwitterHashtag
-            // 
-            this.txtTwitterHashtag.Location = new System.Drawing.Point(84, 20);
-            this.txtTwitterHashtag.Name = "txtTwitterHashtag";
-            this.txtTwitterHashtag.Size = new System.Drawing.Size(141, 20);
-            this.txtTwitterHashtag.TabIndex = 62;
-            // 
             // tmrTwitter
             // 
             this.tmrTwitter.Tick += new System.EventHandler(this.tmrTwitter_Tick);
@@ -3245,6 +3245,9 @@
             this.groupBox11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkVolume)).EndInit();
             this.tabPage7.ResumeLayout(false);
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideTwitterSeconds)).EndInit();
             this.groupBox15.ResumeLayout(false);
             this.groupBox15.PerformLayout();
             this.groupBox17.ResumeLayout(false);
@@ -3252,9 +3255,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.trkImageScrollingSpeed)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox20.ResumeLayout(false);
-            this.groupBox20.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideTwitterSeconds)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

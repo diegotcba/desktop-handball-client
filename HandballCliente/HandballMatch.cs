@@ -55,6 +55,18 @@ namespace HandballCliente
         public List<Position> positions { get; set; }
         public String positionsTitle { get; set; }
         public String positionsSubtitle { get; set; }
+        public String twitterHashtag { get; set; }
+        public String twitterUsername { get; set; }
+        public String twitterFullname { get; set; }
+        public String twitterMessage { get; set; }
+        public String scoreHalf { get; set; }
+        public int scoreClockMinutes { get; set; }
+        public int scoreClockSeconds { get; set; }
+        public bool scoreAutoHideOnFinished { get; set; }
+        public int scoreClockMatchMinutes { get; set; }
+        public int scoreClockMatchSeconds { get; set; }
+        public int scoreClockExclutionMinutes { get; set; }
+        public int scoreClockExclutionSeconds { get; set; }
 
         public bool autoHideIntro { get; set; }
         public int autoHideIntroSeconds { get; set; }

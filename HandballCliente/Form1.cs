@@ -1040,6 +1040,19 @@ namespace HandballCliente
             HandballMatch.getInstance().recordingFileName = txtArchivoGrabacion.Text;
             HandballMatch.getInstance().positionsTitle = txtPositionsTitle.Text;
             HandballMatch.getInstance().positionsSubtitle = txtPositionsSubtitle.Text;
+            HandballMatch.getInstance().twitterHashtag = txtTwitterHashtag.Text;
+            HandballMatch.getInstance().twitterUsername = txtTwitterUserName.Text;
+            HandballMatch.getInstance().twitterFullname = txtTwitterFullName.Text;
+            HandballMatch.getInstance().twitterMessage = txtTwitterMessage.Text;
+
+            HandballMatch.getInstance().scoreHalf = cmbTiempo.Text;
+            HandballMatch.getInstance().scoreClockMinutes = (int)nudMinutosReloj.Value;
+            HandballMatch.getInstance().scoreClockSeconds = (int)nudSegundosReloj.Value;
+            HandballMatch.getInstance().scoreClockMatchMinutes = (int)nudMinutosTiempo.Value;
+            HandballMatch.getInstance().scoreClockMatchSeconds = (int)nudSegundosTiempo.Value;
+            HandballMatch.getInstance().scoreAutoHideOnFinished = chkOcultarScoreboardAlFinalizar.Checked;
+            HandballMatch.getInstance().scoreClockExclutionMinutes = (int)nudMinutosExclusion.Value;
+            HandballMatch.getInstance().scoreClockExclutionSeconds = (int)nudSegundosExclusion.Value;
 
             HandballMatch.getInstance().autoHideIntro = chkAutoOcultarPresentacion.Checked;
             HandballMatch.getInstance().autoHideIntroSeconds = ((int)nudSegundosAutoOcultarPresentacion.Value);
@@ -1099,6 +1112,19 @@ namespace HandballCliente
             txtArchivoGrabacion.Text = HandballMatch.getInstance().recordingFileName;
             txtPositionsTitle.Text = HandballMatch.getInstance().positionsTitle;
             txtPositionsSubtitle.Text = HandballMatch.getInstance().positionsSubtitle;
+            txtTwitterHashtag.Text = HandballMatch.getInstance().twitterHashtag;
+            txtTwitterUserName.Text = HandballMatch.getInstance().twitterUsername;
+            txtTwitterFullName.Text = HandballMatch.getInstance().twitterFullname;
+            txtTwitterMessage.Text = HandballMatch.getInstance().twitterMessage;
+
+            cmbTiempo.Text = HandballMatch.getInstance().scoreHalf;
+            nudMinutosReloj.Value = HandballMatch.getInstance().scoreClockMinutes;
+            nudSegundosReloj.Value = HandballMatch.getInstance().scoreClockSeconds;
+            chkOcultarScoreboardAlFinalizar.Checked = HandballMatch.getInstance().scoreAutoHideOnFinished;
+            nudMinutosTiempo.Value = HandballMatch.getInstance().scoreClockMatchMinutes;
+            nudSegundosTiempo.Value = HandballMatch.getInstance().scoreClockMatchSeconds;
+            nudMinutosExclusion.Value = HandballMatch.getInstance().scoreClockExclutionMinutes;
+            nudSegundosExclusion.Value = HandballMatch.getInstance().scoreClockExclutionSeconds;
 
             FillTeamPlayers(lvwEquipoLocal, HandballMatch.getInstance().team1Players);
             FillTeamPlayers(lvwEquipoVisitante, HandballMatch.getInstance().team2Players);

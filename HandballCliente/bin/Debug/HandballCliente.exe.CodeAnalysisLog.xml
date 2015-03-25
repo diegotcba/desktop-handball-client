@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 11.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="11.0">
+ <Targets>
+  <Target Name="C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\bin\Debug\HandballCliente.exe">
+   <Modules>
+    <Module Name="handballcliente.exe">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="CasparCG" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2015-03-25 00:13:49Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implemente IDisposable en 'CasparCG' porque crea miembros de los tipos IDisposable siguientes: 'Socket'. Si ya se había distribuido 'CasparCG', agregar nuevos miembros que implementen IDisposable en este tipo se considera un cambio rotundo para los consumidores existentes.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#_Caspar" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2015-03-25 00:13:49Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">El campo 'CasparCG._Caspar' es un miembro de tipo 'CasparCG', que es serializable, pero no es de tipo 'Socket', que no es serializable. Agregue NonSerializedAttribute a 'CasparCG._Caspar'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#_ServerPaths" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235" Status="Active" Created="2015-03-25 00:13:49Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error">El campo 'CasparCG._ServerPaths' es un miembro de tipo 'CasparCG', que es serializable, pero no es de tipo 'CasparCG.Paths', que no es serializable. Agregue NonSerializedAttribute a 'CasparCG._ServerPaths'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Grab(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Proporcionar argumentos correctos a los métodos de formato" Category="Microsoft.Usage" CheckId="CA2241" Status="Active" Created="2015-03-25 00:13:49Z" FixCategory="DependsOnFix">
+             <Issue Name="UnexpectedFormatStringCharacter" Certainty="75" Level="Warning" Path="c:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\CasparCG" File="CasparCG.cs" Line="437">El método 'CasparCG.Grab(Integer, Integer)' llama a 'String.Format(String, Object, Object)' con una cadena de formato que contiene un carácter inesperado '"}"' en el índice '14'. La cadena de formato proporcionada es: '"REMOVE {0}-{1}} IMAGE"'</Issue>
+             <Issue Name="UnexpectedFormatStringCharacter" Certainty="75" Level="Warning" Path="c:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\CasparCG" File="CasparCG.cs" Line="429">El método 'CasparCG.Grab(Integer, Integer)' llama a 'String.Format(String, Object, Object, Object)' con una cadena de formato que contiene un carácter inesperado '"}"' en el índice '11'. La cadena de formato proporcionada es: '"ADD {0}-{1}} IMAGE ~GRAB_{2:00000}"'</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="TargaFile" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#SaveAsTarga(System.String,System.Drawing.Bitmap)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="No usar Dispose varias veces en objetos" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2015-03-25 00:13:49Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="c:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\CasparCG" File="TargaFile.cs" Line="122">El objeto 'FS' admite Dispose más de una vez en el método 'TargaFile.SaveAsTarga(String, Bitmap)'. Para evitar generar una excepción System.ObjectDisposedException, no debe llamar a Dispose más de una vez en un objeto.: Lines: 122, 124</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="HandballCliente">
+       <Types>
+        <Type Name="Form1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#SetWindowPos(System.IntPtr,System.IntPtr,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2015-03-25 00:13:49Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalWarning">Puesto que es un método P/Invoke, se debe definir 'Form1.SetWindowPos(IntPtr, IntPtr, Integer, Integer, Integer, Integer, UInteger)' en una clase con el nombre NativeMethods, SafeNativeMethods o UnsafeNativeMethods.</Issue>
+            </Message>
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2015-03-25 00:13:49Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="CriticalError">Cambie la accesibilidad del elemento P/Invoke 'Form1.SetWindowPos(IntPtr, IntPtr, Integer, Integer, Integer, Integer, UInteger)' para que no esté visible desde fuera del ensamblado.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="MarkAllNonSerializableFields" Category="Microsoft.Usage" CheckId="CA2235">
+   <Name>Marcar todos los campos no serializables</Name>
+   <Description>Los campos que no se puedan serializar directamente deben tener NonSerializedAttribute. Los tipos que tengan SerializableAttribute no deben tener campos de tipos que no tengan SerializableAttribute a menos que los campos estén marcados como NonSerializedAttribute.</Description>
+   <Resolution Name="Default">El campo {0} es un miembro de tipo {1}, que es serializable, pero no es de tipo {2}, que no es serializable. Agregue NonSerializedAttribute a {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182349(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="11.0.0.0" />
+  </Rule>
+  <Rule TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060">
+   <Name>Mueva P/Invokes a la clase NativeMethods</Name>
+   <Description>Este tipo contiene miembros con el atributo DllImport. Los miembros con el atributo DllImport deben estar contenidos en clases denominadas NativeMethods, SafeNativeMethods o UnsafeNativeMethods.</Description>
+   <Resolution Name="Default">Puesto que es un método P/Invoke, se debe definir {0} en una clase con el nombre NativeMethods, SafeNativeMethods o UnsafeNativeMethods.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182161(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalWarning</MessageLevel>
+   <File Name="designrules.dll" Version="11.0.0.0" />
+  </Rule>
+  <Rule TypeName="No usar Dispose varias veces en objetos" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>No usar Dispose varias veces en objetos</Name>
+   <Description>Un método Dispose correctamente implementado se puede llamar varias veces sin producir ninguna excepción. Sin embargo, esto no está garantizado y, para evitar generar una excepción System.ObjectDisposedException, no debe llamar al método Dispose más de una vez en un objeto.</Description>
+   <Resolution Name="Default">El objeto {0} admite Dispose más de una vez en el método {1}. Para evitar generar una excepción System.ObjectDisposedException, no debe llamar a Dispose más de una vez en un objeto.: Lines: 122, 124</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="11.0.0.0" />
+  </Rule>
+  <Rule TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401">
+   <Name>Los elementos P/Invoke no deben estar visibles</Name>
+   <Description>La capa de interoperabilidad no debe ser pública. No debe aplicar el atributo DllImport en miembros accesibles públicamente (public o protected).</Description>
+   <Resolution Name="Default">Cambie la accesibilidad del elemento P/Invoke {0} para que no esté visible desde fuera del ensamblado.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182209(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">CriticalError</MessageLevel>
+   <File Name="interoperabilityrules.dll" Version="11.0.0.0" />
+  </Rule>
+  <Rule TypeName="Proporcionar argumentos correctos a los métodos de formato" Category="Microsoft.Usage" CheckId="CA2241">
+   <Name>Proporcionar argumentos correctos a los métodos de formato</Name>
+   <Description>Proporcione el número correcto de argumentos a las llamadas a String.Format.</Description>
+   <Resolution Name="UnexpectedFormatStringCharacter">El método {0} llama a {1} con una cadena de formato que contiene un carácter inesperado '{2}' en el índice '{3}'. La cadena de formato proporcionada es: '{4}'</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182361(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="11.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+   <Name>Los tipos que poseen campos descartables deben ser descartables</Name>
+   <Description>Los tipos que declaran miembros descartables también deben implementar IDisposable. Si el tipo no posee ningún recurso no administrado, no implementar un finalizador.</Description>
+   <Resolution Name="DependsOnFix">Implemente IDisposable en {0} porque crea miembros de los tipos IDisposable siguientes: {1}. Si ya se había distribuido {0}, agregar nuevos miembros que implementen IDisposable en este tipo se considera un cambio rotundo para los consumidores existentes.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182172(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="11.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Categoría</String>
+  <String Key="Certainty">Certeza</String>
+  <String Key="CollapseAll">Contraer todo</String>
+  <String Key="CheckId">Comprobar id.</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">errores</String>
+  <String Key="ExpandAll">Expandir todo</String>
+  <String Key="Help">Ayuda</String>
+  <String Key="Line">Línea</String>
+  <String Key="Messages">mensajes</String>
+  <String Key="LocationNotStoredInPdb">[Ubicación no almacenada en Pdb]</String>
+  <String Key="Project">Proyecto</String>
+  <String Key="Resolution">Resolución</String>
+  <String Key="Rule">Regla</String>
+  <String Key="RuleFile">Archivo de regla</String>
+  <String Key="RuleDescription">Descripción de la regla</String>
+  <String Key="Source">Origen</String>
+  <String Key="Status">Estado</String>
+  <String Key="Target">Círculos concéntricos</String>
+  <String Key="Warning">Advertencia</String>
+  <String Key="Warnings">advertencias</String>
+  <String Key="ReportTitle">Informe de análisis del código</String>
+ </Localized>
+</FxCopReport>

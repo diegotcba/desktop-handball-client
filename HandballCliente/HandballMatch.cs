@@ -39,6 +39,8 @@ namespace HandballCliente
         public String templateLowerThird { get; set; }
         public String templatePositions { get; set; }
         public String templateTwitter { get; set; }
+        public String templateVolleyScoreboard { get; set; }
+        public String templateVolleyResult { get; set; }
 
         public String imageLogoBroadcast { get; set; }
         public String imageCredits { get; set; }
@@ -89,6 +91,10 @@ namespace HandballCliente
         public bool autoHideTwitter { get; set; }
         public int autoHideTwitterSeconds { get; set; }
 
+        public bool autoUpdateVolleyScoreboard { get; set; }
+        public bool autoHideVolleyResult { get; set; }
+        public int autoHideVolleyResultSeconds { get; set; }
+
         private HandballMatch()
         {
             NewMatch();
@@ -119,6 +125,9 @@ namespace HandballCliente
             autoHidePositionsSeconds = 1;
             autoHideTwitter = false;
             autoHideTwitterSeconds = 1;
+            autoUpdateVolleyScoreboard = false;
+            autoHideVolleyResult = false;
+            autoHideVolleyResultSeconds = 1;
         }
 
         public static HandballMatch getInstance()

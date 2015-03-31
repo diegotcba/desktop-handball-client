@@ -41,6 +41,9 @@ namespace HandballCliente
         private const int layerPositions = 30;
         private const int layerTwitter = 35;
 
+        private const int layerVolleyScoreboard = 40;
+        private const int layerVolleyResult = 45;
+
         private const int layerVideo = 1;
         private const int layerLogo = 99;
         private const int layerImageScrolling = 90;
@@ -90,6 +93,7 @@ namespace HandballCliente
             cmbTemplateScoreboard.Items.Clear();
             cmbTemplatePositions.Items.Clear();
             cmbTemplateTwitter.Items.Clear();
+            cmbTemplateVolleyScoreboard.Items.Clear();
         }
 
         private void clearPresentation()
@@ -217,6 +221,8 @@ namespace HandballCliente
                 fillCombosTemplate(cmbTemplateLowerThird, templates);
                 fillCombosTemplate(cmbTemplatePositions, templates);
                 fillCombosTemplate(cmbTemplateTwitter, templates);
+                fillCombosTemplate(cmbTemplateVolleyScoreboard, templates);
+                fillCombosTemplate(cmbTemplateVolleyResult,templates);
             }
         }
 
@@ -787,6 +793,224 @@ namespace HandballCliente
             }
         }
 
+        private void startVolleyScoreboard()
+        {
+            if (cmbTemplateVolleyScoreboard.Text != "")
+            {
+                if (casparServer.Connected)
+                {
+                    Template templateVolleyScoreboard = new Template();
+                    Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoLocal.Text.ToLower() + ".png");
+                    Uri logo2Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoVisitante.Text.ToLower() + ".png");
+
+                    templateVolleyScoreboard.Fields.Add(new TemplateField("f0", txtVolleyHomeTeam.Text));
+                    templateVolleyScoreboard.Fields.Add(new TemplateField("f1", txtVolleyGuestTeam.Text));
+                    templateVolleyScoreboard.Fields.Add(new TemplateField("f2", nudVolleyHomeSets.Value.ToString()));
+                    templateVolleyScoreboard.Fields.Add(new TemplateField("f3", nudVolleyGuestSets.Value.ToString()));
+                    templateVolleyScoreboard.Fields.Add(new TemplateField("f4", nudVolleyHome1SetPoints.Value.ToString()));
+                    templateVolleyScoreboard.Fields.Add(new TemplateField("f5", nudVolleyGuest1SetPoints.Value.ToString()));
+                    templateVolleyScoreboard.Fields.Add(new TemplateField("pass", (radVolleyHomeServe.Checked) ? "1" : "2"));
+                    templateVolleyScoreboard.Fields.Add(new TemplateField("flag1", logo1Path.ToString()));
+                    templateVolleyScoreboard.Fields.Add(new TemplateField("flag2", logo2Path.ToString()));
+
+                    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateVolleyScoreboard.TemplateDataText(), cmbTemplateVolleyScoreboard.Text, layerVolleyScoreboard.ToString()));
+
+                    //if (chkAutoHideVolleyScoreboard.Checked)
+                    //{
+                    //    tmrTwitter.Interval = ((int)nudAutoHideVolleyScoreboardSeconds.Value) * 1000;
+                    //    tmrTwitter.Enabled = true;
+                    //    tmrTwitter.Start();
+                    //}
+                }
+            }
+            else
+            {
+                MessageBox.Show("Faltan definir algunos datos para iniciar (template)", this.Text);
+            }
+        }
+
+        private void stopVolleyScoreboard()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerVolleyScoreboard.ToString()));
+                //if (chkAutoHideVolleyScoreboard.Checked)
+                //{
+                //    tmrTwitter.Stop();
+                //    tmrTwitter.Enabled = false;
+                //}
+            }
+        }
+
+        private void updateVolleyScoreboard()
+        {
+            if (casparServer.Connected)
+            {
+                Template templateVolleyScoreboard = new Template();
+                Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoLocal.Text.ToLower() + ".png");
+                Uri logo2Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoVisitante.Text.ToLower() + ".png");
+
+                templateVolleyScoreboard.Fields.Add(new TemplateField("f0", txtVolleyHomeTeam.Text));
+                templateVolleyScoreboard.Fields.Add(new TemplateField("f1", txtVolleyGuestTeam.Text));
+                templateVolleyScoreboard.Fields.Add(new TemplateField("f2", nudVolleyHomeSets.Value.ToString()));
+                templateVolleyScoreboard.Fields.Add(new TemplateField("f3", nudVolleyGuestSets.Value.ToString()));
+                templateVolleyScoreboard.Fields.Add(new TemplateField("f4", getVolleySetScore(1).Value.ToString()));
+                templateVolleyScoreboard.Fields.Add(new TemplateField("f5", getVolleySetScore(2).Value.ToString()));
+                templateVolleyScoreboard.Fields.Add(new TemplateField("pass", (radVolleyHomeServe.Checked) ? "1" : "2"));
+                templateVolleyScoreboard.Fields.Add(new TemplateField("flag1", logo1Path.ToString()));
+                templateVolleyScoreboard.Fields.Add(new TemplateField("flag2", logo2Path.ToString()));
+
+                //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
+                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateVolleyScoreboard.TemplateDataText(), layerVolleyScoreboard.ToString()));
+                System.Diagnostics.Debug.WriteLine(ri.Message);
+            }
+        }
+
+        private void addVolleyGamePoint(Button SourceButton)
+        {
+            getVolleySetScore((SourceButton.Name.Contains("Home") ? 1 : 2)).Value++;
+
+            if (SourceButton.Name.Contains("Home"))
+            {
+                radVolleyHomeServe.Checked = true;
+            }
+            else
+            {
+                radVolleyGuestServe.Checked = true;
+            }
+
+            evaluateVolleySetEnd();
+
+            watchVolleyGame();
+        }
+
+        private void watchVolleyGame()
+        {
+            if (chkAutoUpdateVolleyScoreboard.Checked)
+            {
+                updateVolleyScoreboard();
+            }
+        }
+
+        private void evaluateVolleySetEnd()
+        {
+            NumericUpDown scoreHome = getVolleySetScore(1);
+            NumericUpDown scoreGuest = getVolleySetScore(2);
+            NumericUpDown aux=new NumericUpDown();
+
+            if (scoreHome.Value >= 24 && (scoreHome.Value - scoreGuest.Value) >= 2)
+            {
+                nudVolleyHomeSets.Value++;
+                evaluateVolleyMatchEnd();
+            }
+            else if (scoreGuest.Value >= 24 && (scoreGuest.Value - scoreHome.Value) >= 2)
+            {
+                nudVolleyGuestSets.Value++;
+                evaluateVolleyMatchEnd();
+            }
+        }
+
+        private void evaluateVolleyMatchEnd()
+        {
+            int currentSet = int.Parse(getVolleyCurrentSet());
+
+            if (currentSet <= 5)
+            {
+                ((RadioButton)groupBox21.Controls.Find("radVolley" + (currentSet + 1).ToString() + "Set", false)[0]).Checked = true;
+            }
+        }
+
+        private int getVolleySetPoints(int team)
+        {
+            return (int)getVolleySetScore(team).Value;
+        }
+
+        private NumericUpDown getVolleySetScore(int team)
+        {
+            String teamText = (team==1) ? "Home" : "Guest";
+            return (NumericUpDown)groupBox21.Controls.Find("nudVolley" + teamText + getVolleyCurrentSet() + "SetPoints", false)[0];
+        }
+
+        private String getVolleyCurrentSet()
+        {
+            String aux = getVolleyCurrentSetRadioButton().Name;
+            return aux.Substring(9, 1);
+        }
+
+        private RadioButton getVolleyCurrentSetRadioButton()
+        {
+            RadioButton aux=new RadioButton();
+
+            foreach (Control item in groupBox21.Controls)
+	        {
+                if (item.GetType() == typeof(RadioButton))
+                {
+                    if (((RadioButton)item).Checked && item.Name.Contains("radVolley") && item.Name.Contains("Set"))
+                    {
+                        aux = (RadioButton)item;
+                    }
+                }
+	        }
+
+            return aux;
+        }
+
+        private void startVolleyResult()
+        {
+            if (cmbTemplateVolleyResult.Text != "")
+            {
+                if (casparServer.Connected)
+                {
+                    Template templateVolleyResult = new Template();
+                    Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoLocal.Text.ToLower() + ".png");
+                    Uri logo2Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoVisitante.Text.ToLower() + ".png");
+
+                    templateVolleyResult.Fields.Add(new TemplateField("f0", txtVolleyHomeTeam.Text));
+                    templateVolleyResult.Fields.Add(new TemplateField("f1", txtVolleyGuestTeam.Text));
+                    templateVolleyResult.Fields.Add(new TemplateField("f2", nudVolleyHome1SetPoints.Value.ToString()));
+                    templateVolleyResult.Fields.Add(new TemplateField("f3", nudVolleyGuest1SetPoints.Value.ToString()));
+                    templateVolleyResult.Fields.Add(new TemplateField("f4", nudVolleyHome2SetPoints.Value.ToString()));
+                    templateVolleyResult.Fields.Add(new TemplateField("f5", nudVolleyGuest2SetPoints.Value.ToString()));
+                    templateVolleyResult.Fields.Add(new TemplateField("f6", nudVolleyHome3SetPoints.Value.ToString()));
+                    templateVolleyResult.Fields.Add(new TemplateField("f7", nudVolleyGuest3SetPoints.Value.ToString()));
+                    templateVolleyResult.Fields.Add(new TemplateField("f8", nudVolleyHome4SetPoints.Value.ToString()));
+                    templateVolleyResult.Fields.Add(new TemplateField("f9", nudVolleyGuest4SetPoints.Value.ToString()));
+                    templateVolleyResult.Fields.Add(new TemplateField("f10", nudVolleyHome5SetPoints.Value.ToString()));
+                    templateVolleyResult.Fields.Add(new TemplateField("f11", nudVolleyGuest5SetPoints.Value.ToString()));
+                    templateVolleyResult.Fields.Add(new TemplateField("f12", nudVolleyHomeSets.Value.ToString()));
+                    templateVolleyResult.Fields.Add(new TemplateField("f13", nudVolleyGuestSets.Value.ToString()));
+                    templateVolleyResult.Fields.Add(new TemplateField("flag1", logo1Path.ToString()));
+                    templateVolleyResult.Fields.Add(new TemplateField("flag2", logo2Path.ToString()));
+
+                    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateVolleyResult.TemplateDataText(), cmbTemplateVolleyResult.Text, layerVolleyResult.ToString()));
+
+                    if (chkAutoHideVolleyResult.Checked)
+                    {
+                        tmrVolleyResult.Interval = ((int)nudAutoHideVolleyResultSeconds.Value) * 1000;
+                        tmrVolleyResult.Enabled = true;
+                        tmrVolleyResult.Start();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Faltan definir algunos datos para iniciar (template)", this.Text);
+            }
+        }
+
+        private void stopVolleyResult()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerVolleyResult.ToString()));
+                if (chkAutoHideVolleyResult.Checked)
+                {
+                    tmrVolleyResult.Stop();
+                    tmrVolleyResult.Enabled = false;
+                }
+            }
+        }
+
         private void startRecording()
         {
             if (casparServer.Connected)
@@ -831,7 +1055,7 @@ namespace HandballCliente
         {
             if (casparServer.Connected)
             {
-                if (lvwVideoFiles.SelectedItems != null)
+                if (lvwVideoFiles.SelectedItems.Count != 0)
                 {
                     casparServer.Execute(String.Format("PLAY 1-{3} {0}{1}{0} {2}", (char)0x22, lvwVideoFiles.SelectedItems[0].SubItems[0].Text, (chkLoopVideoFile.Checked ? "LOOP" : ""), layerVideo.ToString()));
                 }
@@ -1027,6 +1251,8 @@ namespace HandballCliente
             HandballMatch.getInstance().templateLowerThird = cmbTemplateLowerThird.Text;
             HandballMatch.getInstance().templatePositions = cmbTemplatePositions.Text;
             HandballMatch.getInstance().templateTwitter = cmbTemplateTwitter.Text;
+            HandballMatch.getInstance().templateVolleyScoreboard = cmbTemplateVolleyScoreboard.Text;
+            HandballMatch.getInstance().templateVolleyResult = cmbTemplateVolleyResult.Text;
 
             HandballMatch.getInstance().imageLogoBroadcast = cmbLogoTransmision.Text;
             HandballMatch.getInstance().imageCredits = cmbImageScrolling.Text;
@@ -1074,6 +1300,10 @@ namespace HandballCliente
 
             HandballMatch.getInstance().autoHideTwitter = chkAutoHideTwitter.Checked;
             HandballMatch.getInstance().autoHideTwitterSeconds = ((int)nudAutoHideTwitterSeconds.Value);
+
+            HandballMatch.getInstance().autoUpdateVolleyScoreboard = chkAutoUpdateVolleyScoreboard.Checked;
+            HandballMatch.getInstance().autoHideVolleyResult = chkAutoHideVolleyResult.Checked;
+            HandballMatch.getInstance().autoHideVolleyResultSeconds = ((int)nudAutoHideVolleyResultSeconds.Value);
         }
 
         private void getMatchValues()
@@ -1099,6 +1329,8 @@ namespace HandballCliente
             cmbTemplateLowerThird.Text = HandballMatch.getInstance().templateLowerThird;
             cmbTemplatePositions.Text = HandballMatch.getInstance().templatePositions;
             cmbTemplateTwitter.Text = HandballMatch.getInstance().templateTwitter;
+            cmbTemplateVolleyScoreboard.Text = HandballMatch.getInstance().templateVolleyScoreboard;
+            cmbTemplateVolleyResult.Text = HandballMatch.getInstance().templateVolleyResult;
 
             cmbLogoTransmision.Text = HandballMatch.getInstance().imageLogoBroadcast;
             cmbImageScrolling.Text = HandballMatch.getInstance().imageCredits;
@@ -1116,6 +1348,8 @@ namespace HandballCliente
             txtTwitterUserName.Text = HandballMatch.getInstance().twitterUsername;
             txtTwitterFullName.Text = HandballMatch.getInstance().twitterFullname;
             txtTwitterMessage.Text = HandballMatch.getInstance().twitterMessage;
+            txtVolleyHomeTeam.Text = HandballMatch.getInstance().team1Name;
+            txtVolleyGuestTeam.Text = HandballMatch.getInstance().team2Name;
 
             cmbTiempo.Text = HandballMatch.getInstance().scoreHalf;
             nudMinutosReloj.Value = HandballMatch.getInstance().scoreClockMinutes;
@@ -1150,6 +1384,10 @@ namespace HandballCliente
 
             chkAutoHideTwitter.Checked = HandballMatch.getInstance().autoHideTwitter;
             nudAutoHideTwitterSeconds.Value = HandballMatch.getInstance().autoHideTwitterSeconds;
+
+            chkAutoUpdateVolleyScoreboard.Checked = HandballMatch.getInstance().autoUpdateVolleyScoreboard;
+            chkAutoHideVolleyResult.Checked = HandballMatch.getInstance().autoHideVolleyResult;
+            nudAutoHideVolleyResultSeconds.Value = HandballMatch.getInstance().autoHideVolleyResultSeconds;
         }
 
         private void saveFile()
@@ -1758,6 +1996,51 @@ namespace HandballCliente
         private void btnStopTwitter_Click(object sender, EventArgs e)
         {
             stopTwitter();
+        }
+
+        private void btnStartVolleyScoreboard_Click(object sender, EventArgs e)
+        {
+            startVolleyScoreboard();
+        }
+
+        private void btnStopVolleyScoreboard_Click(object sender, EventArgs e)
+        {
+            stopVolleyScoreboard();
+        }
+
+        private void btnUpdateVolleyScoreboard_Click(object sender, EventArgs e)
+        {
+            updateVolleyScoreboard();
+        }
+
+        private void nudVolleyHome1SetPoints_ValueChanged(object sender, EventArgs e)
+        {
+            watchVolleyGame();
+        }
+
+        private void btnVolleyHomeAddPoint_Click(object sender, EventArgs e)
+        {
+            addVolleyGamePoint(btnVolleyHomeAddPoint);
+        }
+
+        private void btnVolleyGuestAddPoint_Click(object sender, EventArgs e)
+        {
+            addVolleyGamePoint(btnVolleyGuestAddPoint);
+        }
+
+        private void btnStartVolleyResult_Click(object sender, EventArgs e)
+        {
+            startVolleyResult();
+        }
+
+        private void btnStopVolleyResult_Click(object sender, EventArgs e)
+        {
+            stopVolleyResult();
+        }
+
+        private void tmrVolleyResult_Tick(object sender, EventArgs e)
+        {
+            stopVolleyResult();
         }
     }
 }

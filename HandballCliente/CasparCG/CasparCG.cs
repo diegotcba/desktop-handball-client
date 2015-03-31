@@ -121,6 +121,7 @@ public class CasparCG
         if (_ServerPaths == null)
         {
             string s = Execute("INFO PATHS").Data;
+            //byte[] b = Encoding.UTF8.GetBytes(Strings.Left(s, Strings.InStrRev(s, ">")));
             byte[] b = Encoding.UTF8.GetBytes(Strings.Left(s, Strings.InStrRev(s, ">")));
             XmlSerializer ser = new XmlSerializer(typeof(Paths));
             _ServerPaths = (Paths)ser.Deserialize(new System.IO.MemoryStream(b));

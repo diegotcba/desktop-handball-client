@@ -181,6 +181,7 @@ namespace HandballCliente
                     getServerTemplates();
                     getServerImageFiles();
                     getServerVideoFiles();
+                    getServerAudioFiles();
                 }
                 else
                 {
@@ -259,11 +260,7 @@ namespace HandballCliente
             if (casparServer.Connected)
             {
                 List<String> medias = casparServer.GetMediaClipsNames(CasparCG.MediaTypes.Audio);
-                lvwVideoFiles.Items.Clear();
-                foreach (String item in medias)
-                {
-                    lvwVideoFiles.Items.Add(item);
-                }
+                fillCombosTemplate(cmbAudioFiles, medias);
             }
         }
 
@@ -1092,6 +1089,33 @@ namespace HandballCliente
             {
                 trkVolume.Value = 0;
                 setVolume();
+            }
+        }
+
+        private void startAudio()
+        {
+            if (casparServer.Connected)
+            {
+                if (cmbAudioFiles.Text != "")
+                {
+                    casparServer.Execute(String.Format("PLAY 1-0 {0}{1}{0} CHANNEL_LAYOUT STEREO", (char)0x22, cmbAudioFiles.Text, (chkLoopAudioFile.Checked ? "LOOP" : "")));
+                }
+            }
+        }
+
+        private void stopAudio()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("STOP 1-0"));
+            }
+        }
+
+        private void pauseAudio()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("PAUSE 1-0"));
             }
         }
 
@@ -2041,6 +2065,26 @@ namespace HandballCliente
         private void tmrVolleyResult_Tick(object sender, EventArgs e)
         {
             stopVolleyResult();
+        }
+
+        private void btnPlayAudio_Click(object sender, EventArgs e)
+        {
+            startAudio();
+        }
+
+        private void btnPauseAudio_Click(object sender, EventArgs e)
+        {
+            pauseAudio();
+        }
+
+        private void btnStopAudio_Click(object sender, EventArgs e)
+        {
+            stopAudio();
+        }
+
+        private void btnRefreshAudioFiles_Click(object sender, EventArgs e)
+        {
+            getServerAudioFiles();
         }
     }
 }

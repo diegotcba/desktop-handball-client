@@ -135,6 +135,7 @@ namespace HandballCliente
             trkImageScrollingSpeed.Value = 1;
 
             fillCombosTeamTextStyle();
+            fillComboWebcam();
         }
 
         private void fillCombosTeamTextStyle()
@@ -164,6 +165,13 @@ namespace HandballCliente
             cmbPlayersFontLetterSpacing.Items.Add("5");
             cmbPlayersFontLetterSpacing.Items.Add("10");
             cmbPlayersFontLetterSpacing.Items.Add("20");
+        }
+
+        private void fillComboWebcam()
+        {
+            cmbWebcam.Items.Clear();
+            cmbWebcam.Items.Add("Logitech HD Webcam C270");
+            cmbWebcam.Items.Add("WebCam SC-0311139N");
         }
 
         private void setTopMost(bool stateTopMost)
@@ -1116,6 +1124,25 @@ namespace HandballCliente
             if (casparServer.Connected)
             {
                 casparServer.Execute(String.Format("PAUSE 1-0"));
+            }
+        }
+
+        private void startWebcam()
+        {
+            if (casparServer.Connected)
+            {
+                if (cmbWebcam.Text != "")
+                {
+                    casparServer.Execute(String.Format("PLAY 1-{2} {0}dshow://video={1}{0}", (char)0x22, cmbWebcam.Text, layerVideo.ToString()));
+                }
+            }
+        }
+
+        private void stopWebcam()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("STOP 1-{0}", layerVideo.ToString()));
             }
         }
 
@@ -2085,6 +2112,16 @@ namespace HandballCliente
         private void btnRefreshAudioFiles_Click(object sender, EventArgs e)
         {
             getServerAudioFiles();
+        }
+
+        private void btnStartWebcam_Click(object sender, EventArgs e)
+        {
+            startWebcam();
+        }
+
+        private void btnStopWebcam_Click(object sender, EventArgs e)
+        {
+            stopWebcam();
         }
     }
 }

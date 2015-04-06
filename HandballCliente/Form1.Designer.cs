@@ -347,9 +347,19 @@
             this.tmrPositions = new System.Windows.Forms.Timer(this.components);
             this.tmrTwitter = new System.Windows.Forms.Timer(this.components);
             this.tmrVolleyResult = new System.Windows.Forms.Timer(this.components);
+            this.txtWebcamOptions = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btnStopWebcam = new System.Windows.Forms.Button();
+            this.btnStartWebcam = new System.Windows.Forms.Button();
+            this.chkAutoShowOnClockStart = new System.Windows.Forms.CheckBox();
+            this.cmbWebcam = new System.Windows.Forms.ComboBox();
+            this.label54 = new System.Windows.Forms.Label();
             this.mstMenues.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -413,6 +423,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest5SetPoints)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome5SetPoints)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // mstMenues
@@ -555,6 +566,14 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.cmbWebcam);
+            this.groupBox10.Controls.Add(this.label54);
+            this.groupBox10.Controls.Add(this.numericUpDown1);
+            this.groupBox10.Controls.Add(this.checkBox1);
+            this.groupBox10.Controls.Add(this.btnStopWebcam);
+            this.groupBox10.Controls.Add(this.btnStartWebcam);
+            this.groupBox10.Controls.Add(this.txtWebcamOptions);
+            this.groupBox10.Controls.Add(this.label53);
             this.groupBox10.Location = new System.Drawing.Point(421, 94);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(313, 223);
@@ -1617,6 +1636,7 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.chkAutoShowOnClockStart);
             this.groupBox6.Controls.Add(this.nudSeconsAutoHideResult);
             this.groupBox6.Controls.Add(this.chkAutoHideResult);
             this.groupBox6.Controls.Add(this.chkOcultarScoreboardAlFinalizar);
@@ -3780,6 +3800,105 @@
             // 
             this.tmrVolleyResult.Tick += new System.EventHandler(this.tmrVolleyResult_Tick);
             // 
+            // txtWebcamOptions
+            // 
+            this.txtWebcamOptions.Location = new System.Drawing.Point(58, 33);
+            this.txtWebcamOptions.Name = "txtWebcamOptions";
+            this.txtWebcamOptions.Size = new System.Drawing.Size(248, 20);
+            this.txtWebcamOptions.TabIndex = 5;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(16, 36);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(30, 13);
+            this.label53.TabIndex = 4;
+            this.label53.Text = "Play:";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(212, 149);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(40, 20);
+            this.numericUpDown1.TabIndex = 37;
+            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(121, 149);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(85, 17);
+            this.checkBox1.TabIndex = 36;
+            this.checkBox1.Text = "Auto Ocultar";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // btnStopWebcam
+            // 
+            this.btnStopWebcam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopWebcam.Location = new System.Drawing.Point(121, 175);
+            this.btnStopWebcam.Name = "btnStopWebcam";
+            this.btnStopWebcam.Size = new System.Drawing.Size(73, 38);
+            this.btnStopWebcam.TabIndex = 38;
+            this.btnStopWebcam.Text = "Parar";
+            this.btnStopWebcam.UseVisualStyleBackColor = true;
+            this.btnStopWebcam.Click += new System.EventHandler(this.btnStopWebcam_Click);
+            // 
+            // btnStartWebcam
+            // 
+            this.btnStartWebcam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartWebcam.Location = new System.Drawing.Point(121, 101);
+            this.btnStartWebcam.Name = "btnStartWebcam";
+            this.btnStartWebcam.Size = new System.Drawing.Size(73, 38);
+            this.btnStartWebcam.TabIndex = 35;
+            this.btnStartWebcam.Text = "Iniciar";
+            this.btnStartWebcam.UseVisualStyleBackColor = true;
+            this.btnStartWebcam.Click += new System.EventHandler(this.btnStartWebcam_Click);
+            // 
+            // chkAutoShowOnClockStart
+            // 
+            this.chkAutoShowOnClockStart.AutoSize = true;
+            this.chkAutoShowOnClockStart.Location = new System.Drawing.Point(243, 140);
+            this.chkAutoShowOnClockStart.Name = "chkAutoShowOnClockStart";
+            this.chkAutoShowOnClockStart.Size = new System.Drawing.Size(103, 17);
+            this.chkAutoShowOnClockStart.TabIndex = 62;
+            this.chkAutoShowOnClockStart.Text = "Mostrar al Iniciar";
+            this.chkAutoShowOnClockStart.UseVisualStyleBackColor = true;
+            // 
+            // cmbWebcam
+            // 
+            this.cmbWebcam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbWebcam.FormattingEnabled = true;
+            this.cmbWebcam.Location = new System.Drawing.Point(87, 59);
+            this.cmbWebcam.Name = "cmbWebcam";
+            this.cmbWebcam.Size = new System.Drawing.Size(215, 21);
+            this.cmbWebcam.TabIndex = 40;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(16, 62);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(53, 13);
+            this.label54.TabIndex = 39;
+            this.label54.Text = "Webcam:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3802,6 +3921,8 @@
             this.mstMenues.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -3887,6 +4008,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome5SetPoints)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4211,6 +4333,15 @@
         private System.Windows.Forms.ComboBox cmbTemplateVolleyScoreboard;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Timer tmrVolleyResult;
+        private System.Windows.Forms.TextBox txtWebcamOptions;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button btnStopWebcam;
+        private System.Windows.Forms.Button btnStartWebcam;
+        private System.Windows.Forms.CheckBox chkAutoShowOnClockStart;
+        private System.Windows.Forms.ComboBox cmbWebcam;
+        private System.Windows.Forms.Label label54;
     }
 }
 

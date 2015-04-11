@@ -47,6 +47,14 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.cmbWebcam = new System.Windows.Forms.ComboBox();
+            this.label54 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btnStopWebcam = new System.Windows.Forms.Button();
+            this.btnStartWebcam = new System.Windows.Forms.Button();
+            this.txtWebcamOptions = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cmbTemplateTwitter = new System.Windows.Forms.ComboBox();
             this.label43 = new System.Windows.Forms.Label();
@@ -55,10 +63,10 @@
             this.btnLockUnlock = new System.Windows.Forms.Button();
             this.btnUpdateTemplates = new System.Windows.Forms.Button();
             this.cmbTemplateLowerThird = new System.Windows.Forms.ComboBox();
-            this.cmbTemplateResultado = new System.Windows.Forms.ComboBox();
+            this.cmbTemplateResult = new System.Windows.Forms.ComboBox();
             this.cmbTemplateScoreboard = new System.Windows.Forms.ComboBox();
-            this.cmbTemplateEquipos = new System.Windows.Forms.ComboBox();
-            this.cmbTemplatePresentacion = new System.Windows.Forms.ComboBox();
+            this.cmbTemplateTeam = new System.Windows.Forms.ComboBox();
+            this.cmbTemplateIntro = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -66,35 +74,35 @@
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnClearChannel = new System.Windows.Forms.Button();
-            this.btnConexion = new System.Windows.Forms.Button();
-            this.txtPuertoServidor = new System.Windows.Forms.TextBox();
+            this.btnConnectDisconnect = new System.Windows.Forms.Button();
+            this.txtServerPort = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtDireccionServidor = new System.Windows.Forms.TextBox();
+            this.txtServerAddress = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.nudSegundosAutoOcultarPresentacion = new System.Windows.Forms.NumericUpDown();
-            this.chkAutoOcultarPresentacion = new System.Windows.Forms.CheckBox();
-            this.btnMostrarOcultarPresentacion = new System.Windows.Forms.Button();
+            this.nudAutoHideIntroSeconds = new System.Windows.Forms.NumericUpDown();
+            this.chkAutoHideIntro = new System.Windows.Forms.CheckBox();
+            this.btnShowHideIntro = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.cmbLogoFederacion = new System.Windows.Forms.ComboBox();
-            this.txtLugar = new System.Windows.Forms.TextBox();
-            this.txtCampeonato = new System.Windows.Forms.TextBox();
-            this.txtFederacion = new System.Windows.Forms.TextBox();
-            this.txtSubtitulo = new System.Windows.Forms.TextBox();
-            this.txtTitulo = new System.Windows.Forms.TextBox();
+            this.cmbFederationLogo = new System.Windows.Forms.ComboBox();
+            this.txtEventLocation = new System.Windows.Forms.TextBox();
+            this.txtEventLeague = new System.Windows.Forms.TextBox();
+            this.txtEventFederation = new System.Windows.Forms.TextBox();
+            this.txtIntroSubtitle = new System.Windows.Forms.TextBox();
+            this.txtIntroTitle = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.cmbLogoLocal = new System.Windows.Forms.ComboBox();
-            this.cmbLogoVisitante = new System.Windows.Forms.ComboBox();
+            this.cmbHomeTeamLogo = new System.Windows.Forms.ComboBox();
+            this.cmbGuestTeamLogo = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtNombreVisitante = new System.Windows.Forms.TextBox();
-            this.txtNombreLocal = new System.Windows.Forms.TextBox();
+            this.txtGuestTeamName = new System.Windows.Forms.TextBox();
+            this.txtHomeTeamName = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -107,107 +115,108 @@
             this.cmbPlayersFontSize = new System.Windows.Forms.ComboBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.nudSegundosSeparacionEquipoLocalVisitante = new System.Windows.Forms.NumericUpDown();
+            this.nudSeparationTeamsSeconds = new System.Windows.Forms.NumericUpDown();
             this.label23 = new System.Windows.Forms.Label();
-            this.nudSegundosOcultarEquipoLocalVisitante = new System.Windows.Forms.NumericUpDown();
-            this.btnMostrarEquipoLocalVisitante = new System.Windows.Forms.Button();
+            this.nudTeamsShowSeconds = new System.Windows.Forms.NumericUpDown();
+            this.btnShowHomeAndGuestTeam = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.nudSegundosOcultarEquipoVisitante = new System.Windows.Forms.NumericUpDown();
-            this.chkAutoOcultarEquipoVisitante = new System.Windows.Forms.CheckBox();
-            this.btnMostrarEquipoVisitante = new System.Windows.Forms.Button();
-            this.btnLimpiarEquipoVisitante = new System.Windows.Forms.Button();
-            this.btnCargarJugadoresVisitantes = new System.Windows.Forms.Button();
-            this.btnModificarJugadorVisitante = new System.Windows.Forms.Button();
-            this.btnQuitarJugadorVisitante = new System.Windows.Forms.Button();
-            this.btnAgregarJugadorVisitante = new System.Windows.Forms.Button();
-            this.lvwEquipoVisitante = new System.Windows.Forms.ListView();
+            this.nudHideGuestTeamSeconds = new System.Windows.Forms.NumericUpDown();
+            this.chkAutoHideGuestTeam = new System.Windows.Forms.CheckBox();
+            this.btnShowHideGuestTeam = new System.Windows.Forms.Button();
+            this.btnClearGuestTeamPlayers = new System.Windows.Forms.Button();
+            this.btnLoadGuestTeamPlayers = new System.Windows.Forms.Button();
+            this.btnEditGuestTeamPlayer = new System.Windows.Forms.Button();
+            this.btnRemoveGuestTeamPlayer = new System.Windows.Forms.Button();
+            this.btnAddGuestTeamPlayer = new System.Windows.Forms.Button();
+            this.lvwGuestTeamPlayers = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label22 = new System.Windows.Forms.Label();
-            this.txtEntrenadorVisitante = new System.Windows.Forms.TextBox();
+            this.txtGuestTeamPlayers = new System.Windows.Forms.TextBox();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.nudSegundosOcultarEquipoLocal = new System.Windows.Forms.NumericUpDown();
-            this.chkAutoOcultarEquipoLocal = new System.Windows.Forms.CheckBox();
-            this.btnMostrarEquipoLocal = new System.Windows.Forms.Button();
-            this.btnLimpiarEquipoLocal = new System.Windows.Forms.Button();
-            this.btnCargarJugadoresLocales = new System.Windows.Forms.Button();
-            this.btnModificarJugadorLocal = new System.Windows.Forms.Button();
-            this.btnQuitarJugadorLocal = new System.Windows.Forms.Button();
-            this.btnAgregarJugadorLocal = new System.Windows.Forms.Button();
-            this.lvwEquipoLocal = new System.Windows.Forms.ListView();
+            this.nudHideHomeTeamSeconds = new System.Windows.Forms.NumericUpDown();
+            this.chkAutoHideHomeTeam = new System.Windows.Forms.CheckBox();
+            this.btnShowHideHomeTeam = new System.Windows.Forms.Button();
+            this.btnClearHomeTeamPlayers = new System.Windows.Forms.Button();
+            this.btnLoadHomeTeamPlayers = new System.Windows.Forms.Button();
+            this.btnEditHomeTeamPlayer = new System.Windows.Forms.Button();
+            this.btnRemoveHomeTeamPlayer = new System.Windows.Forms.Button();
+            this.btnAddHomeTeamPlayer = new System.Windows.Forms.Button();
+            this.lvwHomeTeamPlayers = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label21 = new System.Windows.Forms.Label();
-            this.txtEntrenadorLocal = new System.Windows.Forms.TextBox();
+            this.txtHomeTeamCoach = new System.Windows.Forms.TextBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.nudSeconsAutoHideResult = new System.Windows.Forms.NumericUpDown();
+            this.chkAutoShowOnClockStart = new System.Windows.Forms.CheckBox();
+            this.nudAutoHideResultSeconds = new System.Windows.Forms.NumericUpDown();
             this.chkAutoHideResult = new System.Windows.Forms.CheckBox();
-            this.chkOcultarScoreboardAlFinalizar = new System.Windows.Forms.CheckBox();
-            this.nudSegundosTiempo = new System.Windows.Forms.NumericUpDown();
-            this.nudMinutosTiempo = new System.Windows.Forms.NumericUpDown();
-            this.nudSegundosExclusion = new System.Windows.Forms.NumericUpDown();
-            this.nudMinutosExclusion = new System.Windows.Forms.NumericUpDown();
-            this.btnMostrarResultado = new System.Windows.Forms.Button();
-            this.btnMostrarOcultarScoreboard = new System.Windows.Forms.Button();
-            this.btnIniciarReloj = new System.Windows.Forms.Button();
-            this.btnReiniciarReloj = new System.Windows.Forms.Button();
-            this.btnPausarReloj = new System.Windows.Forms.Button();
+            this.chkAutoHideOnClockEnd = new System.Windows.Forms.CheckBox();
+            this.nudClockLengthSeconds = new System.Windows.Forms.NumericUpDown();
+            this.nudClockLengthMinutes = new System.Windows.Forms.NumericUpDown();
+            this.nudExclutionLengthSeconds = new System.Windows.Forms.NumericUpDown();
+            this.nudExclutionLengthMinutes = new System.Windows.Forms.NumericUpDown();
+            this.btnShowHideResult = new System.Windows.Forms.Button();
+            this.btnShowHideScoreboard = new System.Windows.Forms.Button();
+            this.btnStartClock = new System.Windows.Forms.Button();
+            this.btnResetClock = new System.Windows.Forms.Button();
+            this.btnStopClock = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.cmbTiempo = new System.Windows.Forms.ComboBox();
-            this.nudSegundosReloj = new System.Windows.Forms.NumericUpDown();
-            this.nudMinutosReloj = new System.Windows.Forms.NumericUpDown();
-            this.btnParaGraficoScoreboard = new System.Windows.Forms.Button();
-            this.btnIniciarGraficoScoreboard = new System.Windows.Forms.Button();
-            this.btnLimpiarExclusionesVisitante = new System.Windows.Forms.Button();
-            this.btnQuitarExclusionVisitante = new System.Windows.Forms.Button();
-            this.btnAgregarExclusionVisitante = new System.Windows.Forms.Button();
-            this.lvwExclusionesVisitante = new System.Windows.Forms.ListView();
+            this.cmbHalf = new System.Windows.Forms.ComboBox();
+            this.nudClockSeconds = new System.Windows.Forms.NumericUpDown();
+            this.nudClockMinutes = new System.Windows.Forms.NumericUpDown();
+            this.btnStopScoreboard = new System.Windows.Forms.Button();
+            this.btnStartScoreboard = new System.Windows.Forms.Button();
+            this.btnClearGuestTeamExclution = new System.Windows.Forms.Button();
+            this.btnRemoveGuestTeamExclution = new System.Windows.Forms.Button();
+            this.btnAddGuestTeamExclution = new System.Windows.Forms.Button();
+            this.lvwGuestTeamExclution = new System.Windows.Forms.ListView();
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnExclusionVisitante = new System.Windows.Forms.Button();
-            this.btn1GolVisitante = new System.Windows.Forms.Button();
-            this.btnLimpiarExclusionesLocal = new System.Windows.Forms.Button();
-            this.btnQuitarExclusionLocal = new System.Windows.Forms.Button();
-            this.btnAgregarExclusionLocal = new System.Windows.Forms.Button();
-            this.lvwExclusionesLocal = new System.Windows.Forms.ListView();
+            this.btnGuestTeamExclution = new System.Windows.Forms.Button();
+            this.btnAddOneToGuestTeamScore = new System.Windows.Forms.Button();
+            this.btnClearHomeTeamExclution = new System.Windows.Forms.Button();
+            this.btnRemoveHomeTeamExclution = new System.Windows.Forms.Button();
+            this.btnAddHomeTeamExclution = new System.Windows.Forms.Button();
+            this.lvwHomeTeamExclutions = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnExclusionLocal = new System.Windows.Forms.Button();
-            this.btn1GolLocal = new System.Windows.Forms.Button();
-            this.nudScoreVisitante = new System.Windows.Forms.NumericUpDown();
-            this.nudScoreLocal = new System.Windows.Forms.NumericUpDown();
+            this.btnHomeTeamExclution = new System.Windows.Forms.Button();
+            this.btnAddOneToHomeTeamScore = new System.Windows.Forms.Button();
+            this.nudGuestTeamScore = new System.Windows.Forms.NumericUpDown();
+            this.nudHomeTeamScore = new System.Windows.Forms.NumericUpDown();
             this.txtNombreScoreVisitante = new System.Windows.Forms.TextBox();
             this.txtNombreScoreLocal = new System.Windows.Forms.TextBox();
             this.shapeContainer3 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.radTeam2List = new System.Windows.Forms.RadioButton();
-            this.radTeam1List = new System.Windows.Forms.RadioButton();
-            this.lvwJugadores = new System.Windows.Forms.ListView();
+            this.radGuestTeamPlayers = new System.Windows.Forms.RadioButton();
+            this.radHomeTeamPlayers = new System.Windows.Forms.RadioButton();
+            this.lvwTeamPlayers = new System.Windows.Forms.ListView();
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.nudSegundosAutoOcultarLT = new System.Windows.Forms.NumericUpDown();
-            this.chkAutoOcultarLT = new System.Windows.Forms.CheckBox();
+            this.nudAutoHideLTSeconds = new System.Windows.Forms.NumericUpDown();
+            this.chkAutoHideLT = new System.Windows.Forms.CheckBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.txtLTSubtitulo = new System.Windows.Forms.TextBox();
-            this.txtLTTitulo = new System.Windows.Forms.TextBox();
-            this.btnPararLT = new System.Windows.Forms.Button();
-            this.btnIniciarLT = new System.Windows.Forms.Button();
+            this.txtLTSubtitle = new System.Windows.Forms.TextBox();
+            this.txtLTTitle = new System.Windows.Forms.TextBox();
+            this.btnStopLT = new System.Windows.Forms.Button();
+            this.btnStartLT = new System.Windows.Forms.Button();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.btnClearTable = new System.Windows.Forms.Button();
-            this.btnLoadPositionTable = new System.Windows.Forms.Button();
+            this.btnClearPositions = new System.Windows.Forms.Button();
+            this.btnLoadPositions = new System.Windows.Forms.Button();
             this.btnEditPosition = new System.Windows.Forms.Button();
             this.btnRemovePosition = new System.Windows.Forms.Button();
             this.btnAddPosition = new System.Windows.Forms.Button();
@@ -234,7 +243,7 @@
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.btnConfigRecording = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
-            this.txtArchivoGrabacion = new System.Windows.Forms.TextBox();
+            this.txtRecordingFileName = new System.Windows.Forms.TextBox();
             this.btnStopRecording = new System.Windows.Forms.Button();
             this.btnStartRecording = new System.Windows.Forms.Button();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
@@ -246,14 +255,14 @@
             this.cmbAudioFiles = new System.Windows.Forms.ComboBox();
             this.label35 = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.btnMute = new System.Windows.Forms.Button();
+            this.btnMuteVolume = new System.Windows.Forms.Button();
             this.label32 = new System.Windows.Forms.Label();
             this.trkVolume = new System.Windows.Forms.TrackBar();
             this.chkLoopVideoFile = new System.Windows.Forms.CheckBox();
             this.btnStopVideo = new System.Windows.Forms.Button();
             this.btnPauseVideo = new System.Windows.Forms.Button();
             this.btnPlayVideo = new System.Windows.Forms.Button();
-            this.btnGetVideoFiles = new System.Windows.Forms.Button();
+            this.btnRefreshVideoFiles = new System.Windows.Forms.Button();
             this.lvwVideoFiles = new System.Windows.Forms.ListView();
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage7 = new System.Windows.Forms.TabPage();
@@ -271,10 +280,10 @@
             this.btnStopTwitter = new System.Windows.Forms.Button();
             this.btnStartTwitter = new System.Windows.Forms.Button();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.btnGetLogoFiles = new System.Windows.Forms.Button();
-            this.btnStopLogo = new System.Windows.Forms.Button();
-            this.btnStartLogo = new System.Windows.Forms.Button();
-            this.cmbLogoTransmision = new System.Windows.Forms.ComboBox();
+            this.btnRefreshLogoFiles = new System.Windows.Forms.Button();
+            this.btnStopBroadcastLogo = new System.Windows.Forms.Button();
+            this.btnStartBroadcastLogo = new System.Windows.Forms.Button();
+            this.cmbBroadcastLogo = new System.Windows.Forms.ComboBox();
             this.label31 = new System.Windows.Forms.Label();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -293,6 +302,10 @@
             this.btnStopVolleyResult = new System.Windows.Forms.Button();
             this.btnStartVolleyResult = new System.Windows.Forms.Button();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.nudVolleyPointsPerSet = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleySetsPerMatch = new System.Windows.Forms.NumericUpDown();
             this.cmbTemplateVolleyScoreboard = new System.Windows.Forms.ComboBox();
             this.label52 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -329,9 +342,9 @@
             this.txtVolleyGuestTeam = new System.Windows.Forms.TextBox();
             this.txtVolleyHomeTeam = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtEventDescription = new System.Windows.Forms.TextBox();
+            this.dtpEventDate = new System.Windows.Forms.DateTimePicker();
+            this.txtEventName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -343,53 +356,45 @@
             this.tmrResult = new System.Windows.Forms.Timer(this.components);
             this.tmrTeams = new System.Windows.Forms.Timer(this.components);
             this.tmrInBetweenTeams = new System.Windows.Forms.Timer(this.components);
-            this.stsEstado = new System.Windows.Forms.StatusStrip();
+            this.stsStatus = new System.Windows.Forms.StatusStrip();
             this.tmrPositions = new System.Windows.Forms.Timer(this.components);
             this.tmrTwitter = new System.Windows.Forms.Timer(this.components);
             this.tmrVolleyResult = new System.Windows.Forms.Timer(this.components);
-            this.txtWebcamOptions = new System.Windows.Forms.TextBox();
-            this.label53 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.btnStopWebcam = new System.Windows.Forms.Button();
-            this.btnStartWebcam = new System.Windows.Forms.Button();
-            this.chkAutoShowOnClockStart = new System.Windows.Forms.CheckBox();
-            this.cmbWebcam = new System.Windows.Forms.ComboBox();
-            this.label54 = new System.Windows.Forms.Label();
             this.mstMenues.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSegundosAutoOcultarPresentacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideIntroSeconds)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox19.SuspendLayout();
             this.groupBox9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSegundosSeparacionEquipoLocalVisitante)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSegundosOcultarEquipoLocalVisitante)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSeparationTeamsSeconds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTeamsShowSeconds)).BeginInit();
             this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSegundosOcultarEquipoVisitante)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHideGuestTeamSeconds)).BeginInit();
             this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSegundosOcultarEquipoLocal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHideHomeTeamSeconds)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSeconsAutoHideResult)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSegundosTiempo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMinutosTiempo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSegundosExclusion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMinutosExclusion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSegundosReloj)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMinutosReloj)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudScoreVisitante)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudScoreLocal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideResultSeconds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudClockLengthSeconds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudClockLengthMinutes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExclutionLengthSeconds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExclutionLengthMinutes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudClockSeconds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudClockMinutes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGuestTeamScore)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHomeTeamScore)).BeginInit();
             this.tabPage6.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.groupBox14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSegundosAutoOcultarLT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideLTSeconds)).BeginInit();
             this.tabPage8.SuspendLayout();
             this.groupBox18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAutoHidePositionsSeconds)).BeginInit();
@@ -408,6 +413,8 @@
             this.groupBox22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideVolleyResultSeconds)).BeginInit();
             this.groupBox21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyPointsPerSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleySetsPerMatch)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideVolleyScoreboardSeconds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuestSets)).BeginInit();
@@ -423,7 +430,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest5SetPoints)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome5SetPoints)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // mstMenues
@@ -581,6 +587,95 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Colores";
             // 
+            // cmbWebcam
+            // 
+            this.cmbWebcam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbWebcam.FormattingEnabled = true;
+            this.cmbWebcam.Location = new System.Drawing.Point(87, 59);
+            this.cmbWebcam.Name = "cmbWebcam";
+            this.cmbWebcam.Size = new System.Drawing.Size(215, 21);
+            this.cmbWebcam.TabIndex = 40;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(16, 62);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(53, 13);
+            this.label54.TabIndex = 39;
+            this.label54.Text = "Webcam:";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(212, 149);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(40, 20);
+            this.numericUpDown1.TabIndex = 37;
+            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(121, 149);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(85, 17);
+            this.checkBox1.TabIndex = 36;
+            this.checkBox1.Text = "Auto Ocultar";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // btnStopWebcam
+            // 
+            this.btnStopWebcam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopWebcam.Location = new System.Drawing.Point(121, 175);
+            this.btnStopWebcam.Name = "btnStopWebcam";
+            this.btnStopWebcam.Size = new System.Drawing.Size(73, 38);
+            this.btnStopWebcam.TabIndex = 38;
+            this.btnStopWebcam.Text = "Parar";
+            this.btnStopWebcam.UseVisualStyleBackColor = true;
+            this.btnStopWebcam.Click += new System.EventHandler(this.btnStopWebcam_Click);
+            // 
+            // btnStartWebcam
+            // 
+            this.btnStartWebcam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartWebcam.Location = new System.Drawing.Point(121, 101);
+            this.btnStartWebcam.Name = "btnStartWebcam";
+            this.btnStartWebcam.Size = new System.Drawing.Size(73, 38);
+            this.btnStartWebcam.TabIndex = 35;
+            this.btnStartWebcam.Text = "Iniciar";
+            this.btnStartWebcam.UseVisualStyleBackColor = true;
+            this.btnStartWebcam.Click += new System.EventHandler(this.btnStartWebcam_Click);
+            // 
+            // txtWebcamOptions
+            // 
+            this.txtWebcamOptions.Location = new System.Drawing.Point(58, 33);
+            this.txtWebcamOptions.Name = "txtWebcamOptions";
+            this.txtWebcamOptions.Size = new System.Drawing.Size(248, 20);
+            this.txtWebcamOptions.TabIndex = 5;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(16, 36);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(30, 13);
+            this.label53.TabIndex = 4;
+            this.label53.Text = "Play:";
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.cmbTemplateTwitter);
@@ -590,10 +685,10 @@
             this.groupBox3.Controls.Add(this.btnLockUnlock);
             this.groupBox3.Controls.Add(this.btnUpdateTemplates);
             this.groupBox3.Controls.Add(this.cmbTemplateLowerThird);
-            this.groupBox3.Controls.Add(this.cmbTemplateResultado);
+            this.groupBox3.Controls.Add(this.cmbTemplateResult);
             this.groupBox3.Controls.Add(this.cmbTemplateScoreboard);
-            this.groupBox3.Controls.Add(this.cmbTemplateEquipos);
-            this.groupBox3.Controls.Add(this.cmbTemplatePresentacion);
+            this.groupBox3.Controls.Add(this.cmbTemplateTeam);
+            this.groupBox3.Controls.Add(this.cmbTemplateIntro);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label8);
@@ -671,14 +766,14 @@
             this.cmbTemplateLowerThird.Size = new System.Drawing.Size(215, 21);
             this.cmbTemplateLowerThird.TabIndex = 11;
             // 
-            // cmbTemplateResultado
+            // cmbTemplateResult
             // 
-            this.cmbTemplateResultado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTemplateResultado.FormattingEnabled = true;
-            this.cmbTemplateResultado.Location = new System.Drawing.Point(78, 101);
-            this.cmbTemplateResultado.Name = "cmbTemplateResultado";
-            this.cmbTemplateResultado.Size = new System.Drawing.Size(215, 21);
-            this.cmbTemplateResultado.TabIndex = 10;
+            this.cmbTemplateResult.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTemplateResult.FormattingEnabled = true;
+            this.cmbTemplateResult.Location = new System.Drawing.Point(78, 101);
+            this.cmbTemplateResult.Name = "cmbTemplateResult";
+            this.cmbTemplateResult.Size = new System.Drawing.Size(215, 21);
+            this.cmbTemplateResult.TabIndex = 10;
             // 
             // cmbTemplateScoreboard
             // 
@@ -689,23 +784,23 @@
             this.cmbTemplateScoreboard.Size = new System.Drawing.Size(215, 21);
             this.cmbTemplateScoreboard.TabIndex = 9;
             // 
-            // cmbTemplateEquipos
+            // cmbTemplateTeam
             // 
-            this.cmbTemplateEquipos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTemplateEquipos.FormattingEnabled = true;
-            this.cmbTemplateEquipos.Location = new System.Drawing.Point(78, 47);
-            this.cmbTemplateEquipos.Name = "cmbTemplateEquipos";
-            this.cmbTemplateEquipos.Size = new System.Drawing.Size(215, 21);
-            this.cmbTemplateEquipos.TabIndex = 8;
+            this.cmbTemplateTeam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTemplateTeam.FormattingEnabled = true;
+            this.cmbTemplateTeam.Location = new System.Drawing.Point(78, 47);
+            this.cmbTemplateTeam.Name = "cmbTemplateTeam";
+            this.cmbTemplateTeam.Size = new System.Drawing.Size(215, 21);
+            this.cmbTemplateTeam.TabIndex = 8;
             // 
-            // cmbTemplatePresentacion
+            // cmbTemplateIntro
             // 
-            this.cmbTemplatePresentacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTemplatePresentacion.FormattingEnabled = true;
-            this.cmbTemplatePresentacion.Location = new System.Drawing.Point(78, 20);
-            this.cmbTemplatePresentacion.Name = "cmbTemplatePresentacion";
-            this.cmbTemplatePresentacion.Size = new System.Drawing.Size(215, 21);
-            this.cmbTemplatePresentacion.TabIndex = 7;
+            this.cmbTemplateIntro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTemplateIntro.FormattingEnabled = true;
+            this.cmbTemplateIntro.Location = new System.Drawing.Point(78, 20);
+            this.cmbTemplateIntro.Name = "cmbTemplateIntro";
+            this.cmbTemplateIntro.Size = new System.Drawing.Size(215, 21);
+            this.cmbTemplateIntro.TabIndex = 7;
             // 
             // label10
             // 
@@ -755,11 +850,11 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnClearChannel);
-            this.groupBox1.Controls.Add(this.btnConexion);
-            this.groupBox1.Controls.Add(this.txtPuertoServidor);
+            this.groupBox1.Controls.Add(this.btnConnectDisconnect);
+            this.groupBox1.Controls.Add(this.txtServerPort);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtDireccionServidor);
+            this.groupBox1.Controls.Add(this.txtServerAddress);
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(728, 84);
@@ -777,22 +872,22 @@
             this.btnClearChannel.UseVisualStyleBackColor = true;
             this.btnClearChannel.Click += new System.EventHandler(this.btnClearChannel_Click);
             // 
-            // btnConexion
+            // btnConnectDisconnect
             // 
-            this.btnConexion.Location = new System.Drawing.Point(276, 23);
-            this.btnConexion.Name = "btnConexion";
-            this.btnConexion.Size = new System.Drawing.Size(92, 41);
-            this.btnConexion.TabIndex = 4;
-            this.btnConexion.Text = "Conectar";
-            this.btnConexion.UseVisualStyleBackColor = true;
-            this.btnConexion.Click += new System.EventHandler(this.btnConexion_Click);
+            this.btnConnectDisconnect.Location = new System.Drawing.Point(276, 23);
+            this.btnConnectDisconnect.Name = "btnConnectDisconnect";
+            this.btnConnectDisconnect.Size = new System.Drawing.Size(92, 41);
+            this.btnConnectDisconnect.TabIndex = 4;
+            this.btnConnectDisconnect.Text = "Conectar";
+            this.btnConnectDisconnect.UseVisualStyleBackColor = true;
+            this.btnConnectDisconnect.Click += new System.EventHandler(this.btnConexion_Click);
             // 
-            // txtPuertoServidor
+            // txtServerPort
             // 
-            this.txtPuertoServidor.Location = new System.Drawing.Point(77, 44);
-            this.txtPuertoServidor.Name = "txtPuertoServidor";
-            this.txtPuertoServidor.Size = new System.Drawing.Size(63, 20);
-            this.txtPuertoServidor.TabIndex = 3;
+            this.txtServerPort.Location = new System.Drawing.Point(77, 44);
+            this.txtServerPort.Name = "txtServerPort";
+            this.txtServerPort.Size = new System.Drawing.Size(63, 20);
+            this.txtServerPort.TabIndex = 3;
             // 
             // label2
             // 
@@ -812,12 +907,12 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Direccion:";
             // 
-            // txtDireccionServidor
+            // txtServerAddress
             // 
-            this.txtDireccionServidor.Location = new System.Drawing.Point(77, 20);
-            this.txtDireccionServidor.Name = "txtDireccionServidor";
-            this.txtDireccionServidor.Size = new System.Drawing.Size(146, 20);
-            this.txtDireccionServidor.TabIndex = 0;
+            this.txtServerAddress.Location = new System.Drawing.Point(77, 20);
+            this.txtServerAddress.Name = "txtServerAddress";
+            this.txtServerAddress.Size = new System.Drawing.Size(146, 20);
+            this.txtServerAddress.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -833,21 +928,21 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.nudSegundosAutoOcultarPresentacion);
-            this.groupBox5.Controls.Add(this.chkAutoOcultarPresentacion);
-            this.groupBox5.Controls.Add(this.btnMostrarOcultarPresentacion);
+            this.groupBox5.Controls.Add(this.nudAutoHideIntroSeconds);
+            this.groupBox5.Controls.Add(this.chkAutoHideIntro);
+            this.groupBox5.Controls.Add(this.btnShowHideIntro);
             this.groupBox5.Controls.Add(this.label20);
             this.groupBox5.Controls.Add(this.label19);
             this.groupBox5.Controls.Add(this.label18);
             this.groupBox5.Controls.Add(this.label17);
             this.groupBox5.Controls.Add(this.label16);
             this.groupBox5.Controls.Add(this.label15);
-            this.groupBox5.Controls.Add(this.cmbLogoFederacion);
-            this.groupBox5.Controls.Add(this.txtLugar);
-            this.groupBox5.Controls.Add(this.txtCampeonato);
-            this.groupBox5.Controls.Add(this.txtFederacion);
-            this.groupBox5.Controls.Add(this.txtSubtitulo);
-            this.groupBox5.Controls.Add(this.txtTitulo);
+            this.groupBox5.Controls.Add(this.cmbFederationLogo);
+            this.groupBox5.Controls.Add(this.txtEventLocation);
+            this.groupBox5.Controls.Add(this.txtEventLeague);
+            this.groupBox5.Controls.Add(this.txtEventFederation);
+            this.groupBox5.Controls.Add(this.txtIntroSubtitle);
+            this.groupBox5.Controls.Add(this.txtIntroTitle);
             this.groupBox5.Location = new System.Drawing.Point(7, 97);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(727, 220);
@@ -855,47 +950,47 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Presentacion";
             // 
-            // nudSegundosAutoOcultarPresentacion
+            // nudAutoHideIntroSeconds
             // 
-            this.nudSegundosAutoOcultarPresentacion.Location = new System.Drawing.Point(624, 127);
-            this.nudSegundosAutoOcultarPresentacion.Maximum = new decimal(new int[] {
+            this.nudAutoHideIntroSeconds.Location = new System.Drawing.Point(624, 127);
+            this.nudAutoHideIntroSeconds.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.nudSegundosAutoOcultarPresentacion.Minimum = new decimal(new int[] {
+            this.nudAutoHideIntroSeconds.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.nudSegundosAutoOcultarPresentacion.Name = "nudSegundosAutoOcultarPresentacion";
-            this.nudSegundosAutoOcultarPresentacion.Size = new System.Drawing.Size(40, 20);
-            this.nudSegundosAutoOcultarPresentacion.TabIndex = 15;
-            this.nudSegundosAutoOcultarPresentacion.Value = new decimal(new int[] {
+            this.nudAutoHideIntroSeconds.Name = "nudAutoHideIntroSeconds";
+            this.nudAutoHideIntroSeconds.Size = new System.Drawing.Size(40, 20);
+            this.nudAutoHideIntroSeconds.TabIndex = 15;
+            this.nudAutoHideIntroSeconds.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // chkAutoOcultarPresentacion
+            // chkAutoHideIntro
             // 
-            this.chkAutoOcultarPresentacion.AutoSize = true;
-            this.chkAutoOcultarPresentacion.Location = new System.Drawing.Point(533, 127);
-            this.chkAutoOcultarPresentacion.Name = "chkAutoOcultarPresentacion";
-            this.chkAutoOcultarPresentacion.Size = new System.Drawing.Size(85, 17);
-            this.chkAutoOcultarPresentacion.TabIndex = 14;
-            this.chkAutoOcultarPresentacion.Text = "Auto Ocultar";
-            this.chkAutoOcultarPresentacion.UseVisualStyleBackColor = true;
+            this.chkAutoHideIntro.AutoSize = true;
+            this.chkAutoHideIntro.Location = new System.Drawing.Point(533, 127);
+            this.chkAutoHideIntro.Name = "chkAutoHideIntro";
+            this.chkAutoHideIntro.Size = new System.Drawing.Size(85, 17);
+            this.chkAutoHideIntro.TabIndex = 14;
+            this.chkAutoHideIntro.Text = "Auto Ocultar";
+            this.chkAutoHideIntro.UseVisualStyleBackColor = true;
             // 
-            // btnMostrarOcultarPresentacion
+            // btnShowHideIntro
             // 
-            this.btnMostrarOcultarPresentacion.Location = new System.Drawing.Point(533, 65);
-            this.btnMostrarOcultarPresentacion.Name = "btnMostrarOcultarPresentacion";
-            this.btnMostrarOcultarPresentacion.Size = new System.Drawing.Size(131, 43);
-            this.btnMostrarOcultarPresentacion.TabIndex = 13;
-            this.btnMostrarOcultarPresentacion.Text = "Mostrar/Ocultar ()";
-            this.btnMostrarOcultarPresentacion.UseVisualStyleBackColor = true;
-            this.btnMostrarOcultarPresentacion.Click += new System.EventHandler(this.btnMostrarOcultarPresentacion_Click);
+            this.btnShowHideIntro.Location = new System.Drawing.Point(533, 65);
+            this.btnShowHideIntro.Name = "btnShowHideIntro";
+            this.btnShowHideIntro.Size = new System.Drawing.Size(131, 43);
+            this.btnShowHideIntro.TabIndex = 13;
+            this.btnShowHideIntro.Text = "Mostrar/Ocultar ()";
+            this.btnShowHideIntro.UseVisualStyleBackColor = true;
+            this.btnShowHideIntro.Click += new System.EventHandler(this.btnMostrarOcultarPresentacion_Click);
             // 
             // label20
             // 
@@ -951,58 +1046,58 @@
             this.label15.TabIndex = 12;
             this.label15.Text = "Titulo:";
             // 
-            // cmbLogoFederacion
+            // cmbFederationLogo
             // 
-            this.cmbLogoFederacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLogoFederacion.FormattingEnabled = true;
-            this.cmbLogoFederacion.Location = new System.Drawing.Point(77, 118);
-            this.cmbLogoFederacion.Name = "cmbLogoFederacion";
-            this.cmbLogoFederacion.Size = new System.Drawing.Size(214, 21);
-            this.cmbLogoFederacion.TabIndex = 10;
+            this.cmbFederationLogo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFederationLogo.FormattingEnabled = true;
+            this.cmbFederationLogo.Location = new System.Drawing.Point(77, 118);
+            this.cmbFederationLogo.Name = "cmbFederationLogo";
+            this.cmbFederationLogo.Size = new System.Drawing.Size(214, 21);
+            this.cmbFederationLogo.TabIndex = 10;
             // 
-            // txtLugar
+            // txtEventLocation
             // 
-            this.txtLugar.Location = new System.Drawing.Point(77, 194);
-            this.txtLugar.Name = "txtLugar";
-            this.txtLugar.Size = new System.Drawing.Size(344, 20);
-            this.txtLugar.TabIndex = 12;
+            this.txtEventLocation.Location = new System.Drawing.Point(77, 194);
+            this.txtEventLocation.Name = "txtEventLocation";
+            this.txtEventLocation.Size = new System.Drawing.Size(344, 20);
+            this.txtEventLocation.TabIndex = 12;
             // 
-            // txtCampeonato
+            // txtEventLeague
             // 
-            this.txtCampeonato.Location = new System.Drawing.Point(77, 168);
-            this.txtCampeonato.Name = "txtCampeonato";
-            this.txtCampeonato.Size = new System.Drawing.Size(344, 20);
-            this.txtCampeonato.TabIndex = 11;
+            this.txtEventLeague.Location = new System.Drawing.Point(77, 168);
+            this.txtEventLeague.Name = "txtEventLeague";
+            this.txtEventLeague.Size = new System.Drawing.Size(344, 20);
+            this.txtEventLeague.TabIndex = 11;
             // 
-            // txtFederacion
+            // txtEventFederation
             // 
-            this.txtFederacion.Location = new System.Drawing.Point(77, 92);
-            this.txtFederacion.Name = "txtFederacion";
-            this.txtFederacion.Size = new System.Drawing.Size(344, 20);
-            this.txtFederacion.TabIndex = 9;
+            this.txtEventFederation.Location = new System.Drawing.Point(77, 92);
+            this.txtEventFederation.Name = "txtEventFederation";
+            this.txtEventFederation.Size = new System.Drawing.Size(344, 20);
+            this.txtEventFederation.TabIndex = 9;
             // 
-            // txtSubtitulo
+            // txtIntroSubtitle
             // 
-            this.txtSubtitulo.Location = new System.Drawing.Point(77, 45);
-            this.txtSubtitulo.Name = "txtSubtitulo";
-            this.txtSubtitulo.Size = new System.Drawing.Size(344, 20);
-            this.txtSubtitulo.TabIndex = 8;
+            this.txtIntroSubtitle.Location = new System.Drawing.Point(77, 45);
+            this.txtIntroSubtitle.Name = "txtIntroSubtitle";
+            this.txtIntroSubtitle.Size = new System.Drawing.Size(344, 20);
+            this.txtIntroSubtitle.TabIndex = 8;
             // 
-            // txtTitulo
+            // txtIntroTitle
             // 
-            this.txtTitulo.Location = new System.Drawing.Point(77, 19);
-            this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(344, 20);
-            this.txtTitulo.TabIndex = 7;
+            this.txtIntroTitle.Location = new System.Drawing.Point(77, 19);
+            this.txtIntroTitle.Name = "txtIntroTitle";
+            this.txtIntroTitle.Size = new System.Drawing.Size(344, 20);
+            this.txtIntroTitle.TabIndex = 7;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.cmbLogoLocal);
-            this.groupBox4.Controls.Add(this.cmbLogoVisitante);
+            this.groupBox4.Controls.Add(this.cmbHomeTeamLogo);
+            this.groupBox4.Controls.Add(this.cmbGuestTeamLogo);
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.label14);
-            this.groupBox4.Controls.Add(this.txtNombreVisitante);
-            this.groupBox4.Controls.Add(this.txtNombreLocal);
+            this.groupBox4.Controls.Add(this.txtGuestTeamName);
+            this.groupBox4.Controls.Add(this.txtHomeTeamName);
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Location = new System.Drawing.Point(7, 6);
@@ -1012,23 +1107,23 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Equipos";
             // 
-            // cmbLogoLocal
+            // cmbHomeTeamLogo
             // 
-            this.cmbLogoLocal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLogoLocal.FormattingEnabled = true;
-            this.cmbLogoLocal.Location = new System.Drawing.Point(428, 16);
-            this.cmbLogoLocal.Name = "cmbLogoLocal";
-            this.cmbLogoLocal.Size = new System.Drawing.Size(281, 21);
-            this.cmbLogoLocal.TabIndex = 5;
+            this.cmbHomeTeamLogo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbHomeTeamLogo.FormattingEnabled = true;
+            this.cmbHomeTeamLogo.Location = new System.Drawing.Point(428, 16);
+            this.cmbHomeTeamLogo.Name = "cmbHomeTeamLogo";
+            this.cmbHomeTeamLogo.Size = new System.Drawing.Size(281, 21);
+            this.cmbHomeTeamLogo.TabIndex = 5;
             // 
-            // cmbLogoVisitante
+            // cmbGuestTeamLogo
             // 
-            this.cmbLogoVisitante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLogoVisitante.FormattingEnabled = true;
-            this.cmbLogoVisitante.Location = new System.Drawing.Point(428, 42);
-            this.cmbLogoVisitante.Name = "cmbLogoVisitante";
-            this.cmbLogoVisitante.Size = new System.Drawing.Size(281, 21);
-            this.cmbLogoVisitante.TabIndex = 6;
+            this.cmbGuestTeamLogo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGuestTeamLogo.FormattingEnabled = true;
+            this.cmbGuestTeamLogo.Location = new System.Drawing.Point(428, 42);
+            this.cmbGuestTeamLogo.Name = "cmbGuestTeamLogo";
+            this.cmbGuestTeamLogo.Size = new System.Drawing.Size(281, 21);
+            this.cmbGuestTeamLogo.TabIndex = 6;
             // 
             // label13
             // 
@@ -1048,19 +1143,19 @@
             this.label14.TabIndex = 6;
             this.label14.Text = "Logo:";
             // 
-            // txtNombreVisitante
+            // txtGuestTeamName
             // 
-            this.txtNombreVisitante.Location = new System.Drawing.Point(62, 43);
-            this.txtNombreVisitante.Name = "txtNombreVisitante";
-            this.txtNombreVisitante.Size = new System.Drawing.Size(280, 20);
-            this.txtNombreVisitante.TabIndex = 4;
+            this.txtGuestTeamName.Location = new System.Drawing.Point(62, 43);
+            this.txtGuestTeamName.Name = "txtGuestTeamName";
+            this.txtGuestTeamName.Size = new System.Drawing.Size(280, 20);
+            this.txtGuestTeamName.TabIndex = 4;
             // 
-            // txtNombreLocal
+            // txtHomeTeamName
             // 
-            this.txtNombreLocal.Location = new System.Drawing.Point(62, 17);
-            this.txtNombreLocal.Name = "txtNombreLocal";
-            this.txtNombreLocal.Size = new System.Drawing.Size(280, 20);
-            this.txtNombreLocal.TabIndex = 3;
+            this.txtHomeTeamName.Location = new System.Drawing.Point(62, 17);
+            this.txtHomeTeamName.Name = "txtHomeTeamName";
+            this.txtHomeTeamName.Size = new System.Drawing.Size(280, 20);
+            this.txtHomeTeamName.TabIndex = 3;
             // 
             // label12
             // 
@@ -1187,10 +1282,10 @@
             // groupBox9
             // 
             this.groupBox9.Controls.Add(this.label36);
-            this.groupBox9.Controls.Add(this.nudSegundosSeparacionEquipoLocalVisitante);
+            this.groupBox9.Controls.Add(this.nudSeparationTeamsSeconds);
             this.groupBox9.Controls.Add(this.label23);
-            this.groupBox9.Controls.Add(this.nudSegundosOcultarEquipoLocalVisitante);
-            this.groupBox9.Controls.Add(this.btnMostrarEquipoLocalVisitante);
+            this.groupBox9.Controls.Add(this.nudTeamsShowSeconds);
+            this.groupBox9.Controls.Add(this.btnShowHomeAndGuestTeam);
             this.groupBox9.Location = new System.Drawing.Point(7, 244);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(361, 73);
@@ -1207,24 +1302,24 @@
             this.label36.TabIndex = 29;
             this.label36.Text = "Duracion:";
             // 
-            // nudSegundosSeparacionEquipoLocalVisitante
+            // nudSeparationTeamsSeconds
             // 
-            this.nudSegundosSeparacionEquipoLocalVisitante.Location = new System.Drawing.Point(300, 33);
-            this.nudSegundosSeparacionEquipoLocalVisitante.Maximum = new decimal(new int[] {
+            this.nudSeparationTeamsSeconds.Location = new System.Drawing.Point(300, 33);
+            this.nudSeparationTeamsSeconds.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.nudSegundosSeparacionEquipoLocalVisitante.Minimum = new decimal(new int[] {
+            this.nudSeparationTeamsSeconds.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.nudSegundosSeparacionEquipoLocalVisitante.Name = "nudSegundosSeparacionEquipoLocalVisitante";
-            this.nudSegundosSeparacionEquipoLocalVisitante.Size = new System.Drawing.Size(41, 20);
-            this.nudSegundosSeparacionEquipoLocalVisitante.TabIndex = 25;
-            this.nudSegundosSeparacionEquipoLocalVisitante.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudSegundosSeparacionEquipoLocalVisitante.Value = new decimal(new int[] {
+            this.nudSeparationTeamsSeconds.Name = "nudSeparationTeamsSeconds";
+            this.nudSeparationTeamsSeconds.Size = new System.Drawing.Size(41, 20);
+            this.nudSeparationTeamsSeconds.TabIndex = 25;
+            this.nudSeparationTeamsSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudSeparationTeamsSeconds.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -1239,52 +1334,52 @@
             this.label23.TabIndex = 27;
             this.label23.Text = "Separacion:";
             // 
-            // nudSegundosOcultarEquipoLocalVisitante
+            // nudTeamsShowSeconds
             // 
-            this.nudSegundosOcultarEquipoLocalVisitante.Location = new System.Drawing.Point(181, 33);
-            this.nudSegundosOcultarEquipoLocalVisitante.Maximum = new decimal(new int[] {
+            this.nudTeamsShowSeconds.Location = new System.Drawing.Point(181, 33);
+            this.nudTeamsShowSeconds.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.nudSegundosOcultarEquipoLocalVisitante.Minimum = new decimal(new int[] {
+            this.nudTeamsShowSeconds.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.nudSegundosOcultarEquipoLocalVisitante.Name = "nudSegundosOcultarEquipoLocalVisitante";
-            this.nudSegundosOcultarEquipoLocalVisitante.Size = new System.Drawing.Size(36, 20);
-            this.nudSegundosOcultarEquipoLocalVisitante.TabIndex = 24;
-            this.nudSegundosOcultarEquipoLocalVisitante.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudSegundosOcultarEquipoLocalVisitante.Value = new decimal(new int[] {
+            this.nudTeamsShowSeconds.Name = "nudTeamsShowSeconds";
+            this.nudTeamsShowSeconds.Size = new System.Drawing.Size(36, 20);
+            this.nudTeamsShowSeconds.TabIndex = 24;
+            this.nudTeamsShowSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudTeamsShowSeconds.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // btnMostrarEquipoLocalVisitante
+            // btnShowHomeAndGuestTeam
             // 
-            this.btnMostrarEquipoLocalVisitante.Location = new System.Drawing.Point(19, 27);
-            this.btnMostrarEquipoLocalVisitante.Name = "btnMostrarEquipoLocalVisitante";
-            this.btnMostrarEquipoLocalVisitante.Size = new System.Drawing.Size(91, 29);
-            this.btnMostrarEquipoLocalVisitante.TabIndex = 23;
-            this.btnMostrarEquipoLocalVisitante.Text = "Mostrar/Ocultar";
-            this.btnMostrarEquipoLocalVisitante.UseVisualStyleBackColor = true;
-            this.btnMostrarEquipoLocalVisitante.Click += new System.EventHandler(this.btnMostrarEquipoLocalVisitante_Click);
+            this.btnShowHomeAndGuestTeam.Location = new System.Drawing.Point(19, 27);
+            this.btnShowHomeAndGuestTeam.Name = "btnShowHomeAndGuestTeam";
+            this.btnShowHomeAndGuestTeam.Size = new System.Drawing.Size(91, 29);
+            this.btnShowHomeAndGuestTeam.TabIndex = 23;
+            this.btnShowHomeAndGuestTeam.Text = "Mostrar/Ocultar";
+            this.btnShowHomeAndGuestTeam.UseVisualStyleBackColor = true;
+            this.btnShowHomeAndGuestTeam.Click += new System.EventHandler(this.btnMostrarEquipoLocalVisitante_Click);
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.nudSegundosOcultarEquipoVisitante);
-            this.groupBox8.Controls.Add(this.chkAutoOcultarEquipoVisitante);
-            this.groupBox8.Controls.Add(this.btnMostrarEquipoVisitante);
-            this.groupBox8.Controls.Add(this.btnLimpiarEquipoVisitante);
-            this.groupBox8.Controls.Add(this.btnCargarJugadoresVisitantes);
-            this.groupBox8.Controls.Add(this.btnModificarJugadorVisitante);
-            this.groupBox8.Controls.Add(this.btnQuitarJugadorVisitante);
-            this.groupBox8.Controls.Add(this.btnAgregarJugadorVisitante);
-            this.groupBox8.Controls.Add(this.lvwEquipoVisitante);
+            this.groupBox8.Controls.Add(this.nudHideGuestTeamSeconds);
+            this.groupBox8.Controls.Add(this.chkAutoHideGuestTeam);
+            this.groupBox8.Controls.Add(this.btnShowHideGuestTeam);
+            this.groupBox8.Controls.Add(this.btnClearGuestTeamPlayers);
+            this.groupBox8.Controls.Add(this.btnLoadGuestTeamPlayers);
+            this.groupBox8.Controls.Add(this.btnEditGuestTeamPlayer);
+            this.groupBox8.Controls.Add(this.btnRemoveGuestTeamPlayer);
+            this.groupBox8.Controls.Add(this.btnAddGuestTeamPlayer);
+            this.groupBox8.Controls.Add(this.lvwGuestTeamPlayers);
             this.groupBox8.Controls.Add(this.label22);
-            this.groupBox8.Controls.Add(this.txtEntrenadorVisitante);
+            this.groupBox8.Controls.Add(this.txtGuestTeamPlayers);
             this.groupBox8.Controls.Add(this.shapeContainer2);
             this.groupBox8.Location = new System.Drawing.Point(374, 6);
             this.groupBox8.Name = "groupBox8";
@@ -1293,114 +1388,114 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Equipo Visitante";
             // 
-            // nudSegundosOcultarEquipoVisitante
+            // nudHideGuestTeamSeconds
             // 
-            this.nudSegundosOcultarEquipoVisitante.Location = new System.Drawing.Point(298, 149);
-            this.nudSegundosOcultarEquipoVisitante.Maximum = new decimal(new int[] {
+            this.nudHideGuestTeamSeconds.Location = new System.Drawing.Point(298, 149);
+            this.nudHideGuestTeamSeconds.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.nudSegundosOcultarEquipoVisitante.Minimum = new decimal(new int[] {
+            this.nudHideGuestTeamSeconds.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.nudSegundosOcultarEquipoVisitante.Name = "nudSegundosOcultarEquipoVisitante";
-            this.nudSegundosOcultarEquipoVisitante.Size = new System.Drawing.Size(40, 20);
-            this.nudSegundosOcultarEquipoVisitante.TabIndex = 22;
-            this.nudSegundosOcultarEquipoVisitante.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudSegundosOcultarEquipoVisitante.Value = new decimal(new int[] {
+            this.nudHideGuestTeamSeconds.Name = "nudHideGuestTeamSeconds";
+            this.nudHideGuestTeamSeconds.Size = new System.Drawing.Size(40, 20);
+            this.nudHideGuestTeamSeconds.TabIndex = 22;
+            this.nudHideGuestTeamSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudHideGuestTeamSeconds.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // chkAutoOcultarEquipoVisitante
+            // chkAutoHideGuestTeam
             // 
-            this.chkAutoOcultarEquipoVisitante.AutoSize = true;
-            this.chkAutoOcultarEquipoVisitante.Location = new System.Drawing.Point(269, 126);
-            this.chkAutoOcultarEquipoVisitante.Name = "chkAutoOcultarEquipoVisitante";
-            this.chkAutoOcultarEquipoVisitante.Size = new System.Drawing.Size(85, 17);
-            this.chkAutoOcultarEquipoVisitante.TabIndex = 21;
-            this.chkAutoOcultarEquipoVisitante.Text = "Auto Ocultar";
-            this.chkAutoOcultarEquipoVisitante.UseVisualStyleBackColor = true;
+            this.chkAutoHideGuestTeam.AutoSize = true;
+            this.chkAutoHideGuestTeam.Location = new System.Drawing.Point(269, 126);
+            this.chkAutoHideGuestTeam.Name = "chkAutoHideGuestTeam";
+            this.chkAutoHideGuestTeam.Size = new System.Drawing.Size(85, 17);
+            this.chkAutoHideGuestTeam.TabIndex = 21;
+            this.chkAutoHideGuestTeam.Text = "Auto Ocultar";
+            this.chkAutoHideGuestTeam.UseVisualStyleBackColor = true;
             // 
-            // btnMostrarEquipoVisitante
+            // btnShowHideGuestTeam
             // 
-            this.btnMostrarEquipoVisitante.Location = new System.Drawing.Point(277, 55);
-            this.btnMostrarEquipoVisitante.Name = "btnMostrarEquipoVisitante";
-            this.btnMostrarEquipoVisitante.Size = new System.Drawing.Size(61, 56);
-            this.btnMostrarEquipoVisitante.TabIndex = 20;
-            this.btnMostrarEquipoVisitante.Text = "Mostrar/Ocultar ()";
-            this.btnMostrarEquipoVisitante.UseVisualStyleBackColor = true;
-            this.btnMostrarEquipoVisitante.Click += new System.EventHandler(this.btnMostrarEquipoVisitante_Click);
+            this.btnShowHideGuestTeam.Location = new System.Drawing.Point(277, 55);
+            this.btnShowHideGuestTeam.Name = "btnShowHideGuestTeam";
+            this.btnShowHideGuestTeam.Size = new System.Drawing.Size(61, 56);
+            this.btnShowHideGuestTeam.TabIndex = 20;
+            this.btnShowHideGuestTeam.Text = "Mostrar/Ocultar ()";
+            this.btnShowHideGuestTeam.UseVisualStyleBackColor = true;
+            this.btnShowHideGuestTeam.Click += new System.EventHandler(this.btnMostrarEquipoVisitante_Click);
             // 
-            // btnLimpiarEquipoVisitante
+            // btnClearGuestTeamPlayers
             // 
-            this.btnLimpiarEquipoVisitante.Location = new System.Drawing.Point(219, 142);
-            this.btnLimpiarEquipoVisitante.Name = "btnLimpiarEquipoVisitante";
-            this.btnLimpiarEquipoVisitante.Size = new System.Drawing.Size(30, 23);
-            this.btnLimpiarEquipoVisitante.TabIndex = 18;
-            this.btnLimpiarEquipoVisitante.Text = "C";
-            this.btnLimpiarEquipoVisitante.UseVisualStyleBackColor = true;
-            this.btnLimpiarEquipoVisitante.Click += new System.EventHandler(this.btnLimpiarEquipoVisitante_Click);
+            this.btnClearGuestTeamPlayers.Location = new System.Drawing.Point(219, 142);
+            this.btnClearGuestTeamPlayers.Name = "btnClearGuestTeamPlayers";
+            this.btnClearGuestTeamPlayers.Size = new System.Drawing.Size(30, 23);
+            this.btnClearGuestTeamPlayers.TabIndex = 18;
+            this.btnClearGuestTeamPlayers.Text = "C";
+            this.btnClearGuestTeamPlayers.UseVisualStyleBackColor = true;
+            this.btnClearGuestTeamPlayers.Click += new System.EventHandler(this.btnLimpiarEquipoVisitante_Click);
             // 
-            // btnCargarJugadoresVisitantes
+            // btnLoadGuestTeamPlayers
             // 
-            this.btnCargarJugadoresVisitantes.Location = new System.Drawing.Point(219, 113);
-            this.btnCargarJugadoresVisitantes.Name = "btnCargarJugadoresVisitantes";
-            this.btnCargarJugadoresVisitantes.Size = new System.Drawing.Size(30, 23);
-            this.btnCargarJugadoresVisitantes.TabIndex = 17;
-            this.btnCargarJugadoresVisitantes.Text = "L";
-            this.btnCargarJugadoresVisitantes.UseVisualStyleBackColor = true;
+            this.btnLoadGuestTeamPlayers.Location = new System.Drawing.Point(219, 113);
+            this.btnLoadGuestTeamPlayers.Name = "btnLoadGuestTeamPlayers";
+            this.btnLoadGuestTeamPlayers.Size = new System.Drawing.Size(30, 23);
+            this.btnLoadGuestTeamPlayers.TabIndex = 17;
+            this.btnLoadGuestTeamPlayers.Text = "L";
+            this.btnLoadGuestTeamPlayers.UseVisualStyleBackColor = true;
             // 
-            // btnModificarJugadorVisitante
+            // btnEditGuestTeamPlayer
             // 
-            this.btnModificarJugadorVisitante.Location = new System.Drawing.Point(219, 84);
-            this.btnModificarJugadorVisitante.Name = "btnModificarJugadorVisitante";
-            this.btnModificarJugadorVisitante.Size = new System.Drawing.Size(30, 23);
-            this.btnModificarJugadorVisitante.TabIndex = 16;
-            this.btnModificarJugadorVisitante.Text = "M";
-            this.btnModificarJugadorVisitante.UseVisualStyleBackColor = true;
-            this.btnModificarJugadorVisitante.Click += new System.EventHandler(this.btnModificarJugadorVisitante_Click);
+            this.btnEditGuestTeamPlayer.Location = new System.Drawing.Point(219, 84);
+            this.btnEditGuestTeamPlayer.Name = "btnEditGuestTeamPlayer";
+            this.btnEditGuestTeamPlayer.Size = new System.Drawing.Size(30, 23);
+            this.btnEditGuestTeamPlayer.TabIndex = 16;
+            this.btnEditGuestTeamPlayer.Text = "M";
+            this.btnEditGuestTeamPlayer.UseVisualStyleBackColor = true;
+            this.btnEditGuestTeamPlayer.Click += new System.EventHandler(this.btnModificarJugadorVisitante_Click);
             // 
-            // btnQuitarJugadorVisitante
+            // btnRemoveGuestTeamPlayer
             // 
-            this.btnQuitarJugadorVisitante.Location = new System.Drawing.Point(219, 55);
-            this.btnQuitarJugadorVisitante.Name = "btnQuitarJugadorVisitante";
-            this.btnQuitarJugadorVisitante.Size = new System.Drawing.Size(30, 23);
-            this.btnQuitarJugadorVisitante.TabIndex = 15;
-            this.btnQuitarJugadorVisitante.Text = "-";
-            this.btnQuitarJugadorVisitante.UseVisualStyleBackColor = true;
-            this.btnQuitarJugadorVisitante.Click += new System.EventHandler(this.btnQuitarJugadorVisitante_Click);
+            this.btnRemoveGuestTeamPlayer.Location = new System.Drawing.Point(219, 55);
+            this.btnRemoveGuestTeamPlayer.Name = "btnRemoveGuestTeamPlayer";
+            this.btnRemoveGuestTeamPlayer.Size = new System.Drawing.Size(30, 23);
+            this.btnRemoveGuestTeamPlayer.TabIndex = 15;
+            this.btnRemoveGuestTeamPlayer.Text = "-";
+            this.btnRemoveGuestTeamPlayer.UseVisualStyleBackColor = true;
+            this.btnRemoveGuestTeamPlayer.Click += new System.EventHandler(this.btnQuitarJugadorVisitante_Click);
             // 
-            // btnAgregarJugadorVisitante
+            // btnAddGuestTeamPlayer
             // 
-            this.btnAgregarJugadorVisitante.Location = new System.Drawing.Point(219, 26);
-            this.btnAgregarJugadorVisitante.Name = "btnAgregarJugadorVisitante";
-            this.btnAgregarJugadorVisitante.Size = new System.Drawing.Size(30, 23);
-            this.btnAgregarJugadorVisitante.TabIndex = 14;
-            this.btnAgregarJugadorVisitante.Text = "+";
-            this.btnAgregarJugadorVisitante.UseVisualStyleBackColor = true;
-            this.btnAgregarJugadorVisitante.Click += new System.EventHandler(this.btnAgregarJugadorVisitante_Click);
+            this.btnAddGuestTeamPlayer.Location = new System.Drawing.Point(219, 26);
+            this.btnAddGuestTeamPlayer.Name = "btnAddGuestTeamPlayer";
+            this.btnAddGuestTeamPlayer.Size = new System.Drawing.Size(30, 23);
+            this.btnAddGuestTeamPlayer.TabIndex = 14;
+            this.btnAddGuestTeamPlayer.Text = "+";
+            this.btnAddGuestTeamPlayer.UseVisualStyleBackColor = true;
+            this.btnAddGuestTeamPlayer.Click += new System.EventHandler(this.btnAgregarJugadorVisitante_Click);
             // 
-            // lvwEquipoVisitante
+            // lvwGuestTeamPlayers
             // 
-            this.lvwEquipoVisitante.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvwGuestTeamPlayers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader3,
             this.columnHeader4});
-            this.lvwEquipoVisitante.FullRowSelect = true;
-            this.lvwEquipoVisitante.GridLines = true;
-            this.lvwEquipoVisitante.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lvwEquipoVisitante.HideSelection = false;
-            this.lvwEquipoVisitante.Location = new System.Drawing.Point(7, 20);
-            this.lvwEquipoVisitante.MultiSelect = false;
-            this.lvwEquipoVisitante.Name = "lvwEquipoVisitante";
-            this.lvwEquipoVisitante.Size = new System.Drawing.Size(206, 151);
-            this.lvwEquipoVisitante.TabIndex = 13;
-            this.lvwEquipoVisitante.UseCompatibleStateImageBehavior = false;
-            this.lvwEquipoVisitante.View = System.Windows.Forms.View.Details;
+            this.lvwGuestTeamPlayers.FullRowSelect = true;
+            this.lvwGuestTeamPlayers.GridLines = true;
+            this.lvwGuestTeamPlayers.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvwGuestTeamPlayers.HideSelection = false;
+            this.lvwGuestTeamPlayers.Location = new System.Drawing.Point(7, 20);
+            this.lvwGuestTeamPlayers.MultiSelect = false;
+            this.lvwGuestTeamPlayers.Name = "lvwGuestTeamPlayers";
+            this.lvwGuestTeamPlayers.Size = new System.Drawing.Size(206, 151);
+            this.lvwGuestTeamPlayers.TabIndex = 13;
+            this.lvwGuestTeamPlayers.UseCompatibleStateImageBehavior = false;
+            this.lvwGuestTeamPlayers.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader3
             // 
@@ -1421,12 +1516,12 @@
             this.label22.TabIndex = 5;
             this.label22.Text = "Entrenador:";
             // 
-            // txtEntrenadorVisitante
+            // txtGuestTeamPlayers
             // 
-            this.txtEntrenadorVisitante.Location = new System.Drawing.Point(6, 196);
-            this.txtEntrenadorVisitante.Name = "txtEntrenadorVisitante";
-            this.txtEntrenadorVisitante.Size = new System.Drawing.Size(207, 20);
-            this.txtEntrenadorVisitante.TabIndex = 19;
+            this.txtGuestTeamPlayers.Location = new System.Drawing.Point(6, 196);
+            this.txtGuestTeamPlayers.Name = "txtGuestTeamPlayers";
+            this.txtGuestTeamPlayers.Size = new System.Drawing.Size(207, 20);
+            this.txtGuestTeamPlayers.TabIndex = 19;
             // 
             // shapeContainer2
             // 
@@ -1449,17 +1544,17 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.nudSegundosOcultarEquipoLocal);
-            this.groupBox7.Controls.Add(this.chkAutoOcultarEquipoLocal);
-            this.groupBox7.Controls.Add(this.btnMostrarEquipoLocal);
-            this.groupBox7.Controls.Add(this.btnLimpiarEquipoLocal);
-            this.groupBox7.Controls.Add(this.btnCargarJugadoresLocales);
-            this.groupBox7.Controls.Add(this.btnModificarJugadorLocal);
-            this.groupBox7.Controls.Add(this.btnQuitarJugadorLocal);
-            this.groupBox7.Controls.Add(this.btnAgregarJugadorLocal);
-            this.groupBox7.Controls.Add(this.lvwEquipoLocal);
+            this.groupBox7.Controls.Add(this.nudHideHomeTeamSeconds);
+            this.groupBox7.Controls.Add(this.chkAutoHideHomeTeam);
+            this.groupBox7.Controls.Add(this.btnShowHideHomeTeam);
+            this.groupBox7.Controls.Add(this.btnClearHomeTeamPlayers);
+            this.groupBox7.Controls.Add(this.btnLoadHomeTeamPlayers);
+            this.groupBox7.Controls.Add(this.btnEditHomeTeamPlayer);
+            this.groupBox7.Controls.Add(this.btnRemoveHomeTeamPlayer);
+            this.groupBox7.Controls.Add(this.btnAddHomeTeamPlayer);
+            this.groupBox7.Controls.Add(this.lvwHomeTeamPlayers);
             this.groupBox7.Controls.Add(this.label21);
-            this.groupBox7.Controls.Add(this.txtEntrenadorLocal);
+            this.groupBox7.Controls.Add(this.txtHomeTeamCoach);
             this.groupBox7.Controls.Add(this.shapeContainer1);
             this.groupBox7.Location = new System.Drawing.Point(7, 6);
             this.groupBox7.Name = "groupBox7";
@@ -1468,115 +1563,115 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Equipo Local";
             // 
-            // nudSegundosOcultarEquipoLocal
+            // nudHideHomeTeamSeconds
             // 
-            this.nudSegundosOcultarEquipoLocal.Location = new System.Drawing.Point(298, 149);
-            this.nudSegundosOcultarEquipoLocal.Maximum = new decimal(new int[] {
+            this.nudHideHomeTeamSeconds.Location = new System.Drawing.Point(298, 149);
+            this.nudHideHomeTeamSeconds.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.nudSegundosOcultarEquipoLocal.Minimum = new decimal(new int[] {
+            this.nudHideHomeTeamSeconds.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.nudSegundosOcultarEquipoLocal.Name = "nudSegundosOcultarEquipoLocal";
-            this.nudSegundosOcultarEquipoLocal.Size = new System.Drawing.Size(40, 20);
-            this.nudSegundosOcultarEquipoLocal.TabIndex = 12;
-            this.nudSegundosOcultarEquipoLocal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudSegundosOcultarEquipoLocal.Value = new decimal(new int[] {
+            this.nudHideHomeTeamSeconds.Name = "nudHideHomeTeamSeconds";
+            this.nudHideHomeTeamSeconds.Size = new System.Drawing.Size(40, 20);
+            this.nudHideHomeTeamSeconds.TabIndex = 12;
+            this.nudHideHomeTeamSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudHideHomeTeamSeconds.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // chkAutoOcultarEquipoLocal
+            // chkAutoHideHomeTeam
             // 
-            this.chkAutoOcultarEquipoLocal.AutoSize = true;
-            this.chkAutoOcultarEquipoLocal.Location = new System.Drawing.Point(269, 126);
-            this.chkAutoOcultarEquipoLocal.Name = "chkAutoOcultarEquipoLocal";
-            this.chkAutoOcultarEquipoLocal.Size = new System.Drawing.Size(85, 17);
-            this.chkAutoOcultarEquipoLocal.TabIndex = 11;
-            this.chkAutoOcultarEquipoLocal.Text = "Auto Ocultar";
-            this.chkAutoOcultarEquipoLocal.UseVisualStyleBackColor = true;
+            this.chkAutoHideHomeTeam.AutoSize = true;
+            this.chkAutoHideHomeTeam.Location = new System.Drawing.Point(269, 126);
+            this.chkAutoHideHomeTeam.Name = "chkAutoHideHomeTeam";
+            this.chkAutoHideHomeTeam.Size = new System.Drawing.Size(85, 17);
+            this.chkAutoHideHomeTeam.TabIndex = 11;
+            this.chkAutoHideHomeTeam.Text = "Auto Ocultar";
+            this.chkAutoHideHomeTeam.UseVisualStyleBackColor = true;
             // 
-            // btnMostrarEquipoLocal
+            // btnShowHideHomeTeam
             // 
-            this.btnMostrarEquipoLocal.Location = new System.Drawing.Point(277, 55);
-            this.btnMostrarEquipoLocal.Name = "btnMostrarEquipoLocal";
-            this.btnMostrarEquipoLocal.Size = new System.Drawing.Size(61, 56);
-            this.btnMostrarEquipoLocal.TabIndex = 10;
-            this.btnMostrarEquipoLocal.Text = "Mostrar/Ocultar ()";
-            this.btnMostrarEquipoLocal.UseVisualStyleBackColor = true;
-            this.btnMostrarEquipoLocal.Click += new System.EventHandler(this.btnMostrarEquipoLocal_Click);
+            this.btnShowHideHomeTeam.Location = new System.Drawing.Point(277, 55);
+            this.btnShowHideHomeTeam.Name = "btnShowHideHomeTeam";
+            this.btnShowHideHomeTeam.Size = new System.Drawing.Size(61, 56);
+            this.btnShowHideHomeTeam.TabIndex = 10;
+            this.btnShowHideHomeTeam.Text = "Mostrar/Ocultar ()";
+            this.btnShowHideHomeTeam.UseVisualStyleBackColor = true;
+            this.btnShowHideHomeTeam.Click += new System.EventHandler(this.btnMostrarEquipoLocal_Click);
             // 
-            // btnLimpiarEquipoLocal
+            // btnClearHomeTeamPlayers
             // 
-            this.btnLimpiarEquipoLocal.Location = new System.Drawing.Point(219, 142);
-            this.btnLimpiarEquipoLocal.Name = "btnLimpiarEquipoLocal";
-            this.btnLimpiarEquipoLocal.Size = new System.Drawing.Size(30, 23);
-            this.btnLimpiarEquipoLocal.TabIndex = 8;
-            this.btnLimpiarEquipoLocal.Text = "C";
-            this.btnLimpiarEquipoLocal.UseVisualStyleBackColor = true;
-            this.btnLimpiarEquipoLocal.Click += new System.EventHandler(this.btnLimpiarEquipoLocal_Click);
+            this.btnClearHomeTeamPlayers.Location = new System.Drawing.Point(219, 142);
+            this.btnClearHomeTeamPlayers.Name = "btnClearHomeTeamPlayers";
+            this.btnClearHomeTeamPlayers.Size = new System.Drawing.Size(30, 23);
+            this.btnClearHomeTeamPlayers.TabIndex = 8;
+            this.btnClearHomeTeamPlayers.Text = "C";
+            this.btnClearHomeTeamPlayers.UseVisualStyleBackColor = true;
+            this.btnClearHomeTeamPlayers.Click += new System.EventHandler(this.btnLimpiarEquipoLocal_Click);
             // 
-            // btnCargarJugadoresLocales
+            // btnLoadHomeTeamPlayers
             // 
-            this.btnCargarJugadoresLocales.Location = new System.Drawing.Point(219, 113);
-            this.btnCargarJugadoresLocales.Name = "btnCargarJugadoresLocales";
-            this.btnCargarJugadoresLocales.Size = new System.Drawing.Size(30, 23);
-            this.btnCargarJugadoresLocales.TabIndex = 7;
-            this.btnCargarJugadoresLocales.Text = "L";
-            this.btnCargarJugadoresLocales.UseVisualStyleBackColor = true;
-            this.btnCargarJugadoresLocales.Click += new System.EventHandler(this.btnCargarJugadoresLocales_Click);
+            this.btnLoadHomeTeamPlayers.Location = new System.Drawing.Point(219, 113);
+            this.btnLoadHomeTeamPlayers.Name = "btnLoadHomeTeamPlayers";
+            this.btnLoadHomeTeamPlayers.Size = new System.Drawing.Size(30, 23);
+            this.btnLoadHomeTeamPlayers.TabIndex = 7;
+            this.btnLoadHomeTeamPlayers.Text = "L";
+            this.btnLoadHomeTeamPlayers.UseVisualStyleBackColor = true;
+            this.btnLoadHomeTeamPlayers.Click += new System.EventHandler(this.btnCargarJugadoresLocales_Click);
             // 
-            // btnModificarJugadorLocal
+            // btnEditHomeTeamPlayer
             // 
-            this.btnModificarJugadorLocal.Location = new System.Drawing.Point(219, 84);
-            this.btnModificarJugadorLocal.Name = "btnModificarJugadorLocal";
-            this.btnModificarJugadorLocal.Size = new System.Drawing.Size(30, 23);
-            this.btnModificarJugadorLocal.TabIndex = 6;
-            this.btnModificarJugadorLocal.Text = "M";
-            this.btnModificarJugadorLocal.UseVisualStyleBackColor = true;
-            this.btnModificarJugadorLocal.Click += new System.EventHandler(this.btnModificarJugadorLocal_Click);
+            this.btnEditHomeTeamPlayer.Location = new System.Drawing.Point(219, 84);
+            this.btnEditHomeTeamPlayer.Name = "btnEditHomeTeamPlayer";
+            this.btnEditHomeTeamPlayer.Size = new System.Drawing.Size(30, 23);
+            this.btnEditHomeTeamPlayer.TabIndex = 6;
+            this.btnEditHomeTeamPlayer.Text = "M";
+            this.btnEditHomeTeamPlayer.UseVisualStyleBackColor = true;
+            this.btnEditHomeTeamPlayer.Click += new System.EventHandler(this.btnModificarJugadorLocal_Click);
             // 
-            // btnQuitarJugadorLocal
+            // btnRemoveHomeTeamPlayer
             // 
-            this.btnQuitarJugadorLocal.Location = new System.Drawing.Point(219, 55);
-            this.btnQuitarJugadorLocal.Name = "btnQuitarJugadorLocal";
-            this.btnQuitarJugadorLocal.Size = new System.Drawing.Size(30, 23);
-            this.btnQuitarJugadorLocal.TabIndex = 5;
-            this.btnQuitarJugadorLocal.Text = "-";
-            this.btnQuitarJugadorLocal.UseVisualStyleBackColor = true;
-            this.btnQuitarJugadorLocal.Click += new System.EventHandler(this.btnQuitarJugadorLocal_Click);
+            this.btnRemoveHomeTeamPlayer.Location = new System.Drawing.Point(219, 55);
+            this.btnRemoveHomeTeamPlayer.Name = "btnRemoveHomeTeamPlayer";
+            this.btnRemoveHomeTeamPlayer.Size = new System.Drawing.Size(30, 23);
+            this.btnRemoveHomeTeamPlayer.TabIndex = 5;
+            this.btnRemoveHomeTeamPlayer.Text = "-";
+            this.btnRemoveHomeTeamPlayer.UseVisualStyleBackColor = true;
+            this.btnRemoveHomeTeamPlayer.Click += new System.EventHandler(this.btnQuitarJugadorLocal_Click);
             // 
-            // btnAgregarJugadorLocal
+            // btnAddHomeTeamPlayer
             // 
-            this.btnAgregarJugadorLocal.Location = new System.Drawing.Point(219, 26);
-            this.btnAgregarJugadorLocal.Name = "btnAgregarJugadorLocal";
-            this.btnAgregarJugadorLocal.Size = new System.Drawing.Size(30, 23);
-            this.btnAgregarJugadorLocal.TabIndex = 4;
-            this.btnAgregarJugadorLocal.Text = "+";
-            this.btnAgregarJugadorLocal.UseVisualStyleBackColor = true;
-            this.btnAgregarJugadorLocal.Click += new System.EventHandler(this.btnAgregarJugadorLocal_Click);
+            this.btnAddHomeTeamPlayer.Location = new System.Drawing.Point(219, 26);
+            this.btnAddHomeTeamPlayer.Name = "btnAddHomeTeamPlayer";
+            this.btnAddHomeTeamPlayer.Size = new System.Drawing.Size(30, 23);
+            this.btnAddHomeTeamPlayer.TabIndex = 4;
+            this.btnAddHomeTeamPlayer.Text = "+";
+            this.btnAddHomeTeamPlayer.UseVisualStyleBackColor = true;
+            this.btnAddHomeTeamPlayer.Click += new System.EventHandler(this.btnAgregarJugadorLocal_Click);
             // 
-            // lvwEquipoLocal
+            // lvwHomeTeamPlayers
             // 
-            this.lvwEquipoLocal.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvwHomeTeamPlayers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.lvwEquipoLocal.FullRowSelect = true;
-            this.lvwEquipoLocal.GridLines = true;
-            this.lvwEquipoLocal.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lvwEquipoLocal.HideSelection = false;
-            this.lvwEquipoLocal.Location = new System.Drawing.Point(7, 20);
-            this.lvwEquipoLocal.MultiSelect = false;
-            this.lvwEquipoLocal.Name = "lvwEquipoLocal";
-            this.lvwEquipoLocal.Size = new System.Drawing.Size(206, 151);
-            this.lvwEquipoLocal.TabIndex = 3;
-            this.lvwEquipoLocal.UseCompatibleStateImageBehavior = false;
-            this.lvwEquipoLocal.View = System.Windows.Forms.View.Details;
+            this.lvwHomeTeamPlayers.FullRowSelect = true;
+            this.lvwHomeTeamPlayers.GridLines = true;
+            this.lvwHomeTeamPlayers.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvwHomeTeamPlayers.HideSelection = false;
+            this.lvwHomeTeamPlayers.Location = new System.Drawing.Point(7, 20);
+            this.lvwHomeTeamPlayers.MultiSelect = false;
+            this.lvwHomeTeamPlayers.Name = "lvwHomeTeamPlayers";
+            this.lvwHomeTeamPlayers.Size = new System.Drawing.Size(206, 151);
+            this.lvwHomeTeamPlayers.TabIndex = 3;
+            this.lvwHomeTeamPlayers.UseCompatibleStateImageBehavior = false;
+            this.lvwHomeTeamPlayers.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -1597,12 +1692,12 @@
             this.label21.TabIndex = 5;
             this.label21.Text = "Entrenador:";
             // 
-            // txtEntrenadorLocal
+            // txtHomeTeamCoach
             // 
-            this.txtEntrenadorLocal.Location = new System.Drawing.Point(6, 196);
-            this.txtEntrenadorLocal.Name = "txtEntrenadorLocal";
-            this.txtEntrenadorLocal.Size = new System.Drawing.Size(207, 20);
-            this.txtEntrenadorLocal.TabIndex = 9;
+            this.txtHomeTeamCoach.Location = new System.Drawing.Point(6, 196);
+            this.txtHomeTeamCoach.Name = "txtHomeTeamCoach";
+            this.txtHomeTeamCoach.Size = new System.Drawing.Size(207, 20);
+            this.txtHomeTeamCoach.TabIndex = 9;
             // 
             // shapeContainer1
             // 
@@ -1637,41 +1732,41 @@
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.chkAutoShowOnClockStart);
-            this.groupBox6.Controls.Add(this.nudSeconsAutoHideResult);
+            this.groupBox6.Controls.Add(this.nudAutoHideResultSeconds);
             this.groupBox6.Controls.Add(this.chkAutoHideResult);
-            this.groupBox6.Controls.Add(this.chkOcultarScoreboardAlFinalizar);
-            this.groupBox6.Controls.Add(this.nudSegundosTiempo);
-            this.groupBox6.Controls.Add(this.nudMinutosTiempo);
-            this.groupBox6.Controls.Add(this.nudSegundosExclusion);
-            this.groupBox6.Controls.Add(this.nudMinutosExclusion);
-            this.groupBox6.Controls.Add(this.btnMostrarResultado);
-            this.groupBox6.Controls.Add(this.btnMostrarOcultarScoreboard);
-            this.groupBox6.Controls.Add(this.btnIniciarReloj);
-            this.groupBox6.Controls.Add(this.btnReiniciarReloj);
-            this.groupBox6.Controls.Add(this.btnPausarReloj);
+            this.groupBox6.Controls.Add(this.chkAutoHideOnClockEnd);
+            this.groupBox6.Controls.Add(this.nudClockLengthSeconds);
+            this.groupBox6.Controls.Add(this.nudClockLengthMinutes);
+            this.groupBox6.Controls.Add(this.nudExclutionLengthSeconds);
+            this.groupBox6.Controls.Add(this.nudExclutionLengthMinutes);
+            this.groupBox6.Controls.Add(this.btnShowHideResult);
+            this.groupBox6.Controls.Add(this.btnShowHideScoreboard);
+            this.groupBox6.Controls.Add(this.btnStartClock);
+            this.groupBox6.Controls.Add(this.btnResetClock);
+            this.groupBox6.Controls.Add(this.btnStopClock);
             this.groupBox6.Controls.Add(this.label27);
             this.groupBox6.Controls.Add(this.label26);
             this.groupBox6.Controls.Add(this.label25);
             this.groupBox6.Controls.Add(this.label24);
-            this.groupBox6.Controls.Add(this.cmbTiempo);
-            this.groupBox6.Controls.Add(this.nudSegundosReloj);
-            this.groupBox6.Controls.Add(this.nudMinutosReloj);
-            this.groupBox6.Controls.Add(this.btnParaGraficoScoreboard);
-            this.groupBox6.Controls.Add(this.btnIniciarGraficoScoreboard);
-            this.groupBox6.Controls.Add(this.btnLimpiarExclusionesVisitante);
-            this.groupBox6.Controls.Add(this.btnQuitarExclusionVisitante);
-            this.groupBox6.Controls.Add(this.btnAgregarExclusionVisitante);
-            this.groupBox6.Controls.Add(this.lvwExclusionesVisitante);
-            this.groupBox6.Controls.Add(this.btnExclusionVisitante);
-            this.groupBox6.Controls.Add(this.btn1GolVisitante);
-            this.groupBox6.Controls.Add(this.btnLimpiarExclusionesLocal);
-            this.groupBox6.Controls.Add(this.btnQuitarExclusionLocal);
-            this.groupBox6.Controls.Add(this.btnAgregarExclusionLocal);
-            this.groupBox6.Controls.Add(this.lvwExclusionesLocal);
-            this.groupBox6.Controls.Add(this.btnExclusionLocal);
-            this.groupBox6.Controls.Add(this.btn1GolLocal);
-            this.groupBox6.Controls.Add(this.nudScoreVisitante);
-            this.groupBox6.Controls.Add(this.nudScoreLocal);
+            this.groupBox6.Controls.Add(this.cmbHalf);
+            this.groupBox6.Controls.Add(this.nudClockSeconds);
+            this.groupBox6.Controls.Add(this.nudClockMinutes);
+            this.groupBox6.Controls.Add(this.btnStopScoreboard);
+            this.groupBox6.Controls.Add(this.btnStartScoreboard);
+            this.groupBox6.Controls.Add(this.btnClearGuestTeamExclution);
+            this.groupBox6.Controls.Add(this.btnRemoveGuestTeamExclution);
+            this.groupBox6.Controls.Add(this.btnAddGuestTeamExclution);
+            this.groupBox6.Controls.Add(this.lvwGuestTeamExclution);
+            this.groupBox6.Controls.Add(this.btnGuestTeamExclution);
+            this.groupBox6.Controls.Add(this.btnAddOneToGuestTeamScore);
+            this.groupBox6.Controls.Add(this.btnClearHomeTeamExclution);
+            this.groupBox6.Controls.Add(this.btnRemoveHomeTeamExclution);
+            this.groupBox6.Controls.Add(this.btnAddHomeTeamExclution);
+            this.groupBox6.Controls.Add(this.lvwHomeTeamExclutions);
+            this.groupBox6.Controls.Add(this.btnHomeTeamExclution);
+            this.groupBox6.Controls.Add(this.btnAddOneToHomeTeamScore);
+            this.groupBox6.Controls.Add(this.nudGuestTeamScore);
+            this.groupBox6.Controls.Add(this.nudHomeTeamScore);
             this.groupBox6.Controls.Add(this.txtNombreScoreVisitante);
             this.groupBox6.Controls.Add(this.txtNombreScoreLocal);
             this.groupBox6.Controls.Add(this.shapeContainer3);
@@ -1682,24 +1777,34 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Scoreboard";
             // 
-            // nudSeconsAutoHideResult
+            // chkAutoShowOnClockStart
             // 
-            this.nudSeconsAutoHideResult.Location = new System.Drawing.Point(225, 272);
-            this.nudSeconsAutoHideResult.Maximum = new decimal(new int[] {
+            this.chkAutoShowOnClockStart.AutoSize = true;
+            this.chkAutoShowOnClockStart.Location = new System.Drawing.Point(243, 140);
+            this.chkAutoShowOnClockStart.Name = "chkAutoShowOnClockStart";
+            this.chkAutoShowOnClockStart.Size = new System.Drawing.Size(103, 17);
+            this.chkAutoShowOnClockStart.TabIndex = 62;
+            this.chkAutoShowOnClockStart.Text = "Mostrar al Iniciar";
+            this.chkAutoShowOnClockStart.UseVisualStyleBackColor = true;
+            // 
+            // nudAutoHideResultSeconds
+            // 
+            this.nudAutoHideResultSeconds.Location = new System.Drawing.Point(225, 272);
+            this.nudAutoHideResultSeconds.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.nudSeconsAutoHideResult.Minimum = new decimal(new int[] {
+            this.nudAutoHideResultSeconds.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.nudSeconsAutoHideResult.Name = "nudSeconsAutoHideResult";
-            this.nudSeconsAutoHideResult.Size = new System.Drawing.Size(40, 20);
-            this.nudSeconsAutoHideResult.TabIndex = 19;
-            this.nudSeconsAutoHideResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudSeconsAutoHideResult.Value = new decimal(new int[] {
+            this.nudAutoHideResultSeconds.Name = "nudAutoHideResultSeconds";
+            this.nudAutoHideResultSeconds.Size = new System.Drawing.Size(40, 20);
+            this.nudAutoHideResultSeconds.TabIndex = 19;
+            this.nudAutoHideResultSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudAutoHideResultSeconds.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -1715,122 +1820,122 @@
             this.chkAutoHideResult.Text = "Auto Ocultar";
             this.chkAutoHideResult.UseVisualStyleBackColor = true;
             // 
-            // chkOcultarScoreboardAlFinalizar
+            // chkAutoHideOnClockEnd
             // 
-            this.chkOcultarScoreboardAlFinalizar.AutoSize = true;
-            this.chkOcultarScoreboardAlFinalizar.Location = new System.Drawing.Point(243, 117);
-            this.chkOcultarScoreboardAlFinalizar.Name = "chkOcultarScoreboardAlFinalizar";
-            this.chkOcultarScoreboardAlFinalizar.Size = new System.Drawing.Size(111, 17);
-            this.chkOcultarScoreboardAlFinalizar.TabIndex = 9;
-            this.chkOcultarScoreboardAlFinalizar.Text = "Ocultar al terminar";
-            this.chkOcultarScoreboardAlFinalizar.UseVisualStyleBackColor = true;
+            this.chkAutoHideOnClockEnd.AutoSize = true;
+            this.chkAutoHideOnClockEnd.Location = new System.Drawing.Point(243, 117);
+            this.chkAutoHideOnClockEnd.Name = "chkAutoHideOnClockEnd";
+            this.chkAutoHideOnClockEnd.Size = new System.Drawing.Size(111, 17);
+            this.chkAutoHideOnClockEnd.TabIndex = 9;
+            this.chkAutoHideOnClockEnd.Text = "Ocultar al terminar";
+            this.chkAutoHideOnClockEnd.UseVisualStyleBackColor = true;
             // 
-            // nudSegundosTiempo
+            // nudClockLengthSeconds
             // 
-            this.nudSegundosTiempo.Location = new System.Drawing.Point(159, 183);
-            this.nudSegundosTiempo.Maximum = new decimal(new int[] {
+            this.nudClockLengthSeconds.Location = new System.Drawing.Point(159, 183);
+            this.nudClockLengthSeconds.Maximum = new decimal(new int[] {
             59,
             0,
             0,
             0});
-            this.nudSegundosTiempo.Name = "nudSegundosTiempo";
-            this.nudSegundosTiempo.Size = new System.Drawing.Size(37, 20);
-            this.nudSegundosTiempo.TabIndex = 14;
-            this.nudSegundosTiempo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudClockLengthSeconds.Name = "nudClockLengthSeconds";
+            this.nudClockLengthSeconds.Size = new System.Drawing.Size(37, 20);
+            this.nudClockLengthSeconds.TabIndex = 14;
+            this.nudClockLengthSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // nudMinutosTiempo
+            // nudClockLengthMinutes
             // 
-            this.nudMinutosTiempo.Location = new System.Drawing.Point(113, 183);
-            this.nudMinutosTiempo.Maximum = new decimal(new int[] {
+            this.nudClockLengthMinutes.Location = new System.Drawing.Point(113, 183);
+            this.nudClockLengthMinutes.Maximum = new decimal(new int[] {
             120,
             0,
             0,
             0});
-            this.nudMinutosTiempo.Name = "nudMinutosTiempo";
-            this.nudMinutosTiempo.Size = new System.Drawing.Size(40, 20);
-            this.nudMinutosTiempo.TabIndex = 13;
-            this.nudMinutosTiempo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudClockLengthMinutes.Name = "nudClockLengthMinutes";
+            this.nudClockLengthMinutes.Size = new System.Drawing.Size(40, 20);
+            this.nudClockLengthMinutes.TabIndex = 13;
+            this.nudClockLengthMinutes.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // nudSegundosExclusion
+            // nudExclutionLengthSeconds
             // 
-            this.nudSegundosExclusion.Location = new System.Drawing.Point(159, 207);
-            this.nudSegundosExclusion.Maximum = new decimal(new int[] {
+            this.nudExclutionLengthSeconds.Location = new System.Drawing.Point(159, 207);
+            this.nudExclutionLengthSeconds.Maximum = new decimal(new int[] {
             59,
             0,
             0,
             0});
-            this.nudSegundosExclusion.Name = "nudSegundosExclusion";
-            this.nudSegundosExclusion.Size = new System.Drawing.Size(37, 20);
-            this.nudSegundosExclusion.TabIndex = 16;
-            this.nudSegundosExclusion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudExclutionLengthSeconds.Name = "nudExclutionLengthSeconds";
+            this.nudExclutionLengthSeconds.Size = new System.Drawing.Size(37, 20);
+            this.nudExclutionLengthSeconds.TabIndex = 16;
+            this.nudExclutionLengthSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // nudMinutosExclusion
+            // nudExclutionLengthMinutes
             // 
-            this.nudMinutosExclusion.Location = new System.Drawing.Point(113, 207);
-            this.nudMinutosExclusion.Maximum = new decimal(new int[] {
+            this.nudExclutionLengthMinutes.Location = new System.Drawing.Point(113, 207);
+            this.nudExclutionLengthMinutes.Maximum = new decimal(new int[] {
             120,
             0,
             0,
             0});
-            this.nudMinutosExclusion.Name = "nudMinutosExclusion";
-            this.nudMinutosExclusion.Size = new System.Drawing.Size(40, 20);
-            this.nudMinutosExclusion.TabIndex = 15;
-            this.nudMinutosExclusion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudExclutionLengthMinutes.Name = "nudExclutionLengthMinutes";
+            this.nudExclutionLengthMinutes.Size = new System.Drawing.Size(40, 20);
+            this.nudExclutionLengthMinutes.TabIndex = 15;
+            this.nudExclutionLengthMinutes.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // btnMostrarResultado
+            // btnShowHideResult
             // 
-            this.btnMostrarResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarResultado.Location = new System.Drawing.Point(11, 260);
-            this.btnMostrarResultado.Name = "btnMostrarResultado";
-            this.btnMostrarResultado.Size = new System.Drawing.Size(99, 40);
-            this.btnMostrarResultado.TabIndex = 17;
-            this.btnMostrarResultado.Text = "Mostrar Resultado";
-            this.btnMostrarResultado.UseVisualStyleBackColor = true;
-            this.btnMostrarResultado.Click += new System.EventHandler(this.btnMostrarResultado_Click);
+            this.btnShowHideResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowHideResult.Location = new System.Drawing.Point(11, 260);
+            this.btnShowHideResult.Name = "btnShowHideResult";
+            this.btnShowHideResult.Size = new System.Drawing.Size(99, 40);
+            this.btnShowHideResult.TabIndex = 17;
+            this.btnShowHideResult.Text = "Mostrar Resultado";
+            this.btnShowHideResult.UseVisualStyleBackColor = true;
+            this.btnShowHideResult.Click += new System.EventHandler(this.btnMostrarResultado_Click);
             // 
-            // btnMostrarOcultarScoreboard
+            // btnShowHideScoreboard
             // 
-            this.btnMostrarOcultarScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarOcultarScoreboard.Location = new System.Drawing.Point(262, 60);
-            this.btnMostrarOcultarScoreboard.Name = "btnMostrarOcultarScoreboard";
-            this.btnMostrarOcultarScoreboard.Size = new System.Drawing.Size(80, 51);
-            this.btnMostrarOcultarScoreboard.TabIndex = 8;
-            this.btnMostrarOcultarScoreboard.Text = "Mostrar/Ocultar";
-            this.btnMostrarOcultarScoreboard.UseVisualStyleBackColor = true;
-            this.btnMostrarOcultarScoreboard.Click += new System.EventHandler(this.btnMostrarOcultarScoreboard_Click);
+            this.btnShowHideScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowHideScoreboard.Location = new System.Drawing.Point(262, 60);
+            this.btnShowHideScoreboard.Name = "btnShowHideScoreboard";
+            this.btnShowHideScoreboard.Size = new System.Drawing.Size(80, 51);
+            this.btnShowHideScoreboard.TabIndex = 8;
+            this.btnShowHideScoreboard.Text = "Mostrar/Ocultar";
+            this.btnShowHideScoreboard.UseVisualStyleBackColor = true;
+            this.btnShowHideScoreboard.Click += new System.EventHandler(this.btnMostrarOcultarScoreboard_Click);
             // 
-            // btnIniciarReloj
+            // btnStartClock
             // 
-            this.btnIniciarReloj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciarReloj.Location = new System.Drawing.Point(6, 134);
-            this.btnIniciarReloj.Name = "btnIniciarReloj";
-            this.btnIniciarReloj.Size = new System.Drawing.Size(69, 29);
-            this.btnIniciarReloj.TabIndex = 10;
-            this.btnIniciarReloj.Text = "Iniciar";
-            this.btnIniciarReloj.UseVisualStyleBackColor = true;
-            this.btnIniciarReloj.Click += new System.EventHandler(this.btnIniciarReloj_Click);
+            this.btnStartClock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartClock.Location = new System.Drawing.Point(6, 134);
+            this.btnStartClock.Name = "btnStartClock";
+            this.btnStartClock.Size = new System.Drawing.Size(69, 29);
+            this.btnStartClock.TabIndex = 10;
+            this.btnStartClock.Text = "Iniciar";
+            this.btnStartClock.UseVisualStyleBackColor = true;
+            this.btnStartClock.Click += new System.EventHandler(this.btnIniciarReloj_Click);
             // 
-            // btnReiniciarReloj
+            // btnResetClock
             // 
-            this.btnReiniciarReloj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReiniciarReloj.Location = new System.Drawing.Point(156, 134);
-            this.btnReiniciarReloj.Name = "btnReiniciarReloj";
-            this.btnReiniciarReloj.Size = new System.Drawing.Size(69, 29);
-            this.btnReiniciarReloj.TabIndex = 12;
-            this.btnReiniciarReloj.Text = "Reiniciar";
-            this.btnReiniciarReloj.UseVisualStyleBackColor = true;
-            this.btnReiniciarReloj.Click += new System.EventHandler(this.btnReiniciarReloj_Click);
+            this.btnResetClock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResetClock.Location = new System.Drawing.Point(156, 134);
+            this.btnResetClock.Name = "btnResetClock";
+            this.btnResetClock.Size = new System.Drawing.Size(69, 29);
+            this.btnResetClock.TabIndex = 12;
+            this.btnResetClock.Text = "Reiniciar";
+            this.btnResetClock.UseVisualStyleBackColor = true;
+            this.btnResetClock.Click += new System.EventHandler(this.btnReiniciarReloj_Click);
             // 
-            // btnPausarReloj
+            // btnStopClock
             // 
-            this.btnPausarReloj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPausarReloj.Location = new System.Drawing.Point(81, 134);
-            this.btnPausarReloj.Name = "btnPausarReloj";
-            this.btnPausarReloj.Size = new System.Drawing.Size(69, 29);
-            this.btnPausarReloj.TabIndex = 11;
-            this.btnPausarReloj.Text = "Timeout";
-            this.btnPausarReloj.UseVisualStyleBackColor = true;
-            this.btnPausarReloj.Click += new System.EventHandler(this.btnPausarReloj_Click);
+            this.btnStopClock.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopClock.Location = new System.Drawing.Point(81, 134);
+            this.btnStopClock.Name = "btnStopClock";
+            this.btnStopClock.Size = new System.Drawing.Size(69, 29);
+            this.btnStopClock.TabIndex = 11;
+            this.btnStopClock.Text = "Timeout";
+            this.btnStopClock.UseVisualStyleBackColor = true;
+            this.btnStopClock.Click += new System.EventHandler(this.btnPausarReloj_Click);
             // 
             // label27
             // 
@@ -1868,112 +1973,112 @@
             this.label24.TabIndex = 47;
             this.label24.Text = "Tiempo:";
             // 
-            // cmbTiempo
+            // cmbHalf
             // 
-            this.cmbTiempo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTiempo.FormattingEnabled = true;
-            this.cmbTiempo.Items.AddRange(new object[] {
+            this.cmbHalf.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbHalf.FormattingEnabled = true;
+            this.cmbHalf.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4",
             "5",
             "6"});
-            this.cmbTiempo.Location = new System.Drawing.Point(57, 76);
-            this.cmbTiempo.Name = "cmbTiempo";
-            this.cmbTiempo.Size = new System.Drawing.Size(37, 21);
-            this.cmbTiempo.TabIndex = 5;
+            this.cmbHalf.Location = new System.Drawing.Point(57, 76);
+            this.cmbHalf.Name = "cmbHalf";
+            this.cmbHalf.Size = new System.Drawing.Size(37, 21);
+            this.cmbHalf.TabIndex = 5;
             // 
-            // nudSegundosReloj
+            // nudClockSeconds
             // 
-            this.nudSegundosReloj.Location = new System.Drawing.Point(103, 103);
-            this.nudSegundosReloj.Maximum = new decimal(new int[] {
+            this.nudClockSeconds.Location = new System.Drawing.Point(103, 103);
+            this.nudClockSeconds.Maximum = new decimal(new int[] {
             59,
             0,
             0,
             0});
-            this.nudSegundosReloj.Name = "nudSegundosReloj";
-            this.nudSegundosReloj.Size = new System.Drawing.Size(37, 20);
-            this.nudSegundosReloj.TabIndex = 7;
-            this.nudSegundosReloj.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudClockSeconds.Name = "nudClockSeconds";
+            this.nudClockSeconds.Size = new System.Drawing.Size(37, 20);
+            this.nudClockSeconds.TabIndex = 7;
+            this.nudClockSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // nudMinutosReloj
+            // nudClockMinutes
             // 
-            this.nudMinutosReloj.Location = new System.Drawing.Point(57, 103);
-            this.nudMinutosReloj.Maximum = new decimal(new int[] {
+            this.nudClockMinutes.Location = new System.Drawing.Point(57, 103);
+            this.nudClockMinutes.Maximum = new decimal(new int[] {
             120,
             0,
             0,
             0});
-            this.nudMinutosReloj.Name = "nudMinutosReloj";
-            this.nudMinutosReloj.Size = new System.Drawing.Size(40, 20);
-            this.nudMinutosReloj.TabIndex = 6;
-            this.nudMinutosReloj.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudClockMinutes.Name = "nudClockMinutes";
+            this.nudClockMinutes.Size = new System.Drawing.Size(40, 20);
+            this.nudClockMinutes.TabIndex = 6;
+            this.nudClockMinutes.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // btnParaGraficoScoreboard
+            // btnStopScoreboard
             // 
-            this.btnParaGraficoScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnParaGraficoScoreboard.Location = new System.Drawing.Point(121, 19);
-            this.btnParaGraficoScoreboard.Name = "btnParaGraficoScoreboard";
-            this.btnParaGraficoScoreboard.Size = new System.Drawing.Size(104, 40);
-            this.btnParaGraficoScoreboard.TabIndex = 4;
-            this.btnParaGraficoScoreboard.Text = "Parar Grafico";
-            this.btnParaGraficoScoreboard.UseVisualStyleBackColor = true;
-            this.btnParaGraficoScoreboard.Click += new System.EventHandler(this.btnParaGraficoScoreboard_Click);
+            this.btnStopScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopScoreboard.Location = new System.Drawing.Point(121, 19);
+            this.btnStopScoreboard.Name = "btnStopScoreboard";
+            this.btnStopScoreboard.Size = new System.Drawing.Size(104, 40);
+            this.btnStopScoreboard.TabIndex = 4;
+            this.btnStopScoreboard.Text = "Parar Grafico";
+            this.btnStopScoreboard.UseVisualStyleBackColor = true;
+            this.btnStopScoreboard.Click += new System.EventHandler(this.btnParaGraficoScoreboard_Click);
             // 
-            // btnIniciarGraficoScoreboard
+            // btnStartScoreboard
             // 
-            this.btnIniciarGraficoScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciarGraficoScoreboard.Location = new System.Drawing.Point(6, 19);
-            this.btnIniciarGraficoScoreboard.Name = "btnIniciarGraficoScoreboard";
-            this.btnIniciarGraficoScoreboard.Size = new System.Drawing.Size(104, 40);
-            this.btnIniciarGraficoScoreboard.TabIndex = 3;
-            this.btnIniciarGraficoScoreboard.Text = "Iniciar Grafico";
-            this.btnIniciarGraficoScoreboard.UseVisualStyleBackColor = true;
-            this.btnIniciarGraficoScoreboard.Click += new System.EventHandler(this.btnIniciarGraficoScoreboard_Click);
+            this.btnStartScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartScoreboard.Location = new System.Drawing.Point(6, 19);
+            this.btnStartScoreboard.Name = "btnStartScoreboard";
+            this.btnStartScoreboard.Size = new System.Drawing.Size(104, 40);
+            this.btnStartScoreboard.TabIndex = 3;
+            this.btnStartScoreboard.Text = "Iniciar Grafico";
+            this.btnStartScoreboard.UseVisualStyleBackColor = true;
+            this.btnStartScoreboard.Click += new System.EventHandler(this.btnIniciarGraficoScoreboard_Click);
             // 
-            // btnLimpiarExclusionesVisitante
+            // btnClearGuestTeamExclution
             // 
-            this.btnLimpiarExclusionesVisitante.Location = new System.Drawing.Point(586, 241);
-            this.btnLimpiarExclusionesVisitante.Name = "btnLimpiarExclusionesVisitante";
-            this.btnLimpiarExclusionesVisitante.Size = new System.Drawing.Size(30, 23);
-            this.btnLimpiarExclusionesVisitante.TabIndex = 35;
-            this.btnLimpiarExclusionesVisitante.Text = "C";
-            this.btnLimpiarExclusionesVisitante.UseVisualStyleBackColor = true;
+            this.btnClearGuestTeamExclution.Location = new System.Drawing.Point(586, 241);
+            this.btnClearGuestTeamExclution.Name = "btnClearGuestTeamExclution";
+            this.btnClearGuestTeamExclution.Size = new System.Drawing.Size(30, 23);
+            this.btnClearGuestTeamExclution.TabIndex = 35;
+            this.btnClearGuestTeamExclution.Text = "C";
+            this.btnClearGuestTeamExclution.UseVisualStyleBackColor = true;
             // 
-            // btnQuitarExclusionVisitante
+            // btnRemoveGuestTeamExclution
             // 
-            this.btnQuitarExclusionVisitante.Location = new System.Drawing.Point(586, 212);
-            this.btnQuitarExclusionVisitante.Name = "btnQuitarExclusionVisitante";
-            this.btnQuitarExclusionVisitante.Size = new System.Drawing.Size(30, 23);
-            this.btnQuitarExclusionVisitante.TabIndex = 34;
-            this.btnQuitarExclusionVisitante.Text = "-";
-            this.btnQuitarExclusionVisitante.UseVisualStyleBackColor = true;
+            this.btnRemoveGuestTeamExclution.Location = new System.Drawing.Point(586, 212);
+            this.btnRemoveGuestTeamExclution.Name = "btnRemoveGuestTeamExclution";
+            this.btnRemoveGuestTeamExclution.Size = new System.Drawing.Size(30, 23);
+            this.btnRemoveGuestTeamExclution.TabIndex = 34;
+            this.btnRemoveGuestTeamExclution.Text = "-";
+            this.btnRemoveGuestTeamExclution.UseVisualStyleBackColor = true;
             // 
-            // btnAgregarExclusionVisitante
+            // btnAddGuestTeamExclution
             // 
-            this.btnAgregarExclusionVisitante.Location = new System.Drawing.Point(586, 183);
-            this.btnAgregarExclusionVisitante.Name = "btnAgregarExclusionVisitante";
-            this.btnAgregarExclusionVisitante.Size = new System.Drawing.Size(30, 23);
-            this.btnAgregarExclusionVisitante.TabIndex = 33;
-            this.btnAgregarExclusionVisitante.Text = "+";
-            this.btnAgregarExclusionVisitante.UseVisualStyleBackColor = true;
+            this.btnAddGuestTeamExclution.Location = new System.Drawing.Point(586, 183);
+            this.btnAddGuestTeamExclution.Name = "btnAddGuestTeamExclution";
+            this.btnAddGuestTeamExclution.Size = new System.Drawing.Size(30, 23);
+            this.btnAddGuestTeamExclution.TabIndex = 33;
+            this.btnAddGuestTeamExclution.Text = "+";
+            this.btnAddGuestTeamExclution.UseVisualStyleBackColor = true;
             // 
-            // lvwExclusionesVisitante
+            // lvwGuestTeamExclution
             // 
-            this.lvwExclusionesVisitante.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvwGuestTeamExclution.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader7,
             this.columnHeader8});
-            this.lvwExclusionesVisitante.FullRowSelect = true;
-            this.lvwExclusionesVisitante.GridLines = true;
-            this.lvwExclusionesVisitante.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lvwExclusionesVisitante.Location = new System.Drawing.Point(622, 151);
-            this.lvwExclusionesVisitante.MultiSelect = false;
-            this.lvwExclusionesVisitante.Name = "lvwExclusionesVisitante";
-            this.lvwExclusionesVisitante.Size = new System.Drawing.Size(99, 151);
-            this.lvwExclusionesVisitante.TabIndex = 36;
-            this.lvwExclusionesVisitante.UseCompatibleStateImageBehavior = false;
-            this.lvwExclusionesVisitante.View = System.Windows.Forms.View.Details;
+            this.lvwGuestTeamExclution.FullRowSelect = true;
+            this.lvwGuestTeamExclution.GridLines = true;
+            this.lvwGuestTeamExclution.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvwGuestTeamExclution.Location = new System.Drawing.Point(622, 151);
+            this.lvwGuestTeamExclution.MultiSelect = false;
+            this.lvwGuestTeamExclution.Name = "lvwGuestTeamExclution";
+            this.lvwGuestTeamExclution.Size = new System.Drawing.Size(99, 151);
+            this.lvwGuestTeamExclution.TabIndex = 36;
+            this.lvwGuestTeamExclution.UseCompatibleStateImageBehavior = false;
+            this.lvwGuestTeamExclution.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader7
             // 
@@ -1984,69 +2089,69 @@
             // 
             this.columnHeader8.Text = "Reloj";
             // 
-            // btnExclusionVisitante
+            // btnGuestTeamExclution
             // 
-            this.btnExclusionVisitante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExclusionVisitante.Location = new System.Drawing.Point(622, 103);
-            this.btnExclusionVisitante.Name = "btnExclusionVisitante";
-            this.btnExclusionVisitante.Size = new System.Drawing.Size(99, 42);
-            this.btnExclusionVisitante.TabIndex = 27;
-            this.btnExclusionVisitante.Text = "Exclusion 2\'";
-            this.btnExclusionVisitante.UseVisualStyleBackColor = true;
+            this.btnGuestTeamExclution.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuestTeamExclution.Location = new System.Drawing.Point(622, 103);
+            this.btnGuestTeamExclution.Name = "btnGuestTeamExclution";
+            this.btnGuestTeamExclution.Size = new System.Drawing.Size(99, 42);
+            this.btnGuestTeamExclution.TabIndex = 27;
+            this.btnGuestTeamExclution.Text = "Exclusion 2\'";
+            this.btnGuestTeamExclution.UseVisualStyleBackColor = true;
             // 
-            // btn1GolVisitante
+            // btnAddOneToGuestTeamScore
             // 
-            this.btn1GolVisitante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn1GolVisitante.Location = new System.Drawing.Point(622, 57);
-            this.btn1GolVisitante.Name = "btn1GolVisitante";
-            this.btn1GolVisitante.Size = new System.Drawing.Size(99, 40);
-            this.btn1GolVisitante.TabIndex = 25;
-            this.btn1GolVisitante.Text = "+1";
-            this.btn1GolVisitante.UseVisualStyleBackColor = true;
-            this.btn1GolVisitante.Click += new System.EventHandler(this.btn1GolVisitante_Click);
+            this.btnAddOneToGuestTeamScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddOneToGuestTeamScore.Location = new System.Drawing.Point(622, 57);
+            this.btnAddOneToGuestTeamScore.Name = "btnAddOneToGuestTeamScore";
+            this.btnAddOneToGuestTeamScore.Size = new System.Drawing.Size(99, 40);
+            this.btnAddOneToGuestTeamScore.TabIndex = 25;
+            this.btnAddOneToGuestTeamScore.Text = "+1";
+            this.btnAddOneToGuestTeamScore.UseVisualStyleBackColor = true;
+            this.btnAddOneToGuestTeamScore.Click += new System.EventHandler(this.btn1GolVisitante_Click);
             // 
-            // btnLimpiarExclusionesLocal
+            // btnClearHomeTeamExclution
             // 
-            this.btnLimpiarExclusionesLocal.Location = new System.Drawing.Point(502, 241);
-            this.btnLimpiarExclusionesLocal.Name = "btnLimpiarExclusionesLocal";
-            this.btnLimpiarExclusionesLocal.Size = new System.Drawing.Size(30, 23);
-            this.btnLimpiarExclusionesLocal.TabIndex = 32;
-            this.btnLimpiarExclusionesLocal.Text = "C";
-            this.btnLimpiarExclusionesLocal.UseVisualStyleBackColor = true;
+            this.btnClearHomeTeamExclution.Location = new System.Drawing.Point(502, 241);
+            this.btnClearHomeTeamExclution.Name = "btnClearHomeTeamExclution";
+            this.btnClearHomeTeamExclution.Size = new System.Drawing.Size(30, 23);
+            this.btnClearHomeTeamExclution.TabIndex = 32;
+            this.btnClearHomeTeamExclution.Text = "C";
+            this.btnClearHomeTeamExclution.UseVisualStyleBackColor = true;
             // 
-            // btnQuitarExclusionLocal
+            // btnRemoveHomeTeamExclution
             // 
-            this.btnQuitarExclusionLocal.Location = new System.Drawing.Point(502, 212);
-            this.btnQuitarExclusionLocal.Name = "btnQuitarExclusionLocal";
-            this.btnQuitarExclusionLocal.Size = new System.Drawing.Size(30, 23);
-            this.btnQuitarExclusionLocal.TabIndex = 30;
-            this.btnQuitarExclusionLocal.Text = "-";
-            this.btnQuitarExclusionLocal.UseVisualStyleBackColor = true;
+            this.btnRemoveHomeTeamExclution.Location = new System.Drawing.Point(502, 212);
+            this.btnRemoveHomeTeamExclution.Name = "btnRemoveHomeTeamExclution";
+            this.btnRemoveHomeTeamExclution.Size = new System.Drawing.Size(30, 23);
+            this.btnRemoveHomeTeamExclution.TabIndex = 30;
+            this.btnRemoveHomeTeamExclution.Text = "-";
+            this.btnRemoveHomeTeamExclution.UseVisualStyleBackColor = true;
             // 
-            // btnAgregarExclusionLocal
+            // btnAddHomeTeamExclution
             // 
-            this.btnAgregarExclusionLocal.Location = new System.Drawing.Point(502, 183);
-            this.btnAgregarExclusionLocal.Name = "btnAgregarExclusionLocal";
-            this.btnAgregarExclusionLocal.Size = new System.Drawing.Size(30, 23);
-            this.btnAgregarExclusionLocal.TabIndex = 29;
-            this.btnAgregarExclusionLocal.Text = "+";
-            this.btnAgregarExclusionLocal.UseVisualStyleBackColor = true;
+            this.btnAddHomeTeamExclution.Location = new System.Drawing.Point(502, 183);
+            this.btnAddHomeTeamExclution.Name = "btnAddHomeTeamExclution";
+            this.btnAddHomeTeamExclution.Size = new System.Drawing.Size(30, 23);
+            this.btnAddHomeTeamExclution.TabIndex = 29;
+            this.btnAddHomeTeamExclution.Text = "+";
+            this.btnAddHomeTeamExclution.UseVisualStyleBackColor = true;
             // 
-            // lvwExclusionesLocal
+            // lvwHomeTeamExclutions
             // 
-            this.lvwExclusionesLocal.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvwHomeTeamExclutions.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5,
             this.columnHeader6});
-            this.lvwExclusionesLocal.FullRowSelect = true;
-            this.lvwExclusionesLocal.GridLines = true;
-            this.lvwExclusionesLocal.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lvwExclusionesLocal.Location = new System.Drawing.Point(397, 151);
-            this.lvwExclusionesLocal.MultiSelect = false;
-            this.lvwExclusionesLocal.Name = "lvwExclusionesLocal";
-            this.lvwExclusionesLocal.Size = new System.Drawing.Size(99, 151);
-            this.lvwExclusionesLocal.TabIndex = 28;
-            this.lvwExclusionesLocal.UseCompatibleStateImageBehavior = false;
-            this.lvwExclusionesLocal.View = System.Windows.Forms.View.Details;
+            this.lvwHomeTeamExclutions.FullRowSelect = true;
+            this.lvwHomeTeamExclutions.GridLines = true;
+            this.lvwHomeTeamExclutions.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvwHomeTeamExclutions.Location = new System.Drawing.Point(397, 151);
+            this.lvwHomeTeamExclutions.MultiSelect = false;
+            this.lvwHomeTeamExclutions.Name = "lvwHomeTeamExclutions";
+            this.lvwHomeTeamExclutions.Size = new System.Drawing.Size(99, 151);
+            this.lvwHomeTeamExclutions.TabIndex = 28;
+            this.lvwHomeTeamExclutions.UseCompatibleStateImageBehavior = false;
+            this.lvwHomeTeamExclutions.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader5
             // 
@@ -2057,54 +2162,54 @@
             // 
             this.columnHeader6.Text = "Reloj";
             // 
-            // btnExclusionLocal
+            // btnHomeTeamExclution
             // 
-            this.btnExclusionLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExclusionLocal.Location = new System.Drawing.Point(397, 103);
-            this.btnExclusionLocal.Name = "btnExclusionLocal";
-            this.btnExclusionLocal.Size = new System.Drawing.Size(99, 42);
-            this.btnExclusionLocal.TabIndex = 26;
-            this.btnExclusionLocal.Text = "Exclusion 2\'";
-            this.btnExclusionLocal.UseVisualStyleBackColor = true;
+            this.btnHomeTeamExclution.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHomeTeamExclution.Location = new System.Drawing.Point(397, 103);
+            this.btnHomeTeamExclution.Name = "btnHomeTeamExclution";
+            this.btnHomeTeamExclution.Size = new System.Drawing.Size(99, 42);
+            this.btnHomeTeamExclution.TabIndex = 26;
+            this.btnHomeTeamExclution.Text = "Exclusion 2\'";
+            this.btnHomeTeamExclution.UseVisualStyleBackColor = true;
             // 
-            // btn1GolLocal
+            // btnAddOneToHomeTeamScore
             // 
-            this.btn1GolLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn1GolLocal.Location = new System.Drawing.Point(397, 57);
-            this.btn1GolLocal.Name = "btn1GolLocal";
-            this.btn1GolLocal.Size = new System.Drawing.Size(99, 40);
-            this.btn1GolLocal.TabIndex = 24;
-            this.btn1GolLocal.Text = "+1";
-            this.btn1GolLocal.UseVisualStyleBackColor = true;
-            this.btn1GolLocal.Click += new System.EventHandler(this.btn1GolLocal_Click);
+            this.btnAddOneToHomeTeamScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddOneToHomeTeamScore.Location = new System.Drawing.Point(397, 57);
+            this.btnAddOneToHomeTeamScore.Name = "btnAddOneToHomeTeamScore";
+            this.btnAddOneToHomeTeamScore.Size = new System.Drawing.Size(99, 40);
+            this.btnAddOneToHomeTeamScore.TabIndex = 24;
+            this.btnAddOneToHomeTeamScore.Text = "+1";
+            this.btnAddOneToHomeTeamScore.UseVisualStyleBackColor = true;
+            this.btnAddOneToHomeTeamScore.Click += new System.EventHandler(this.btn1GolLocal_Click);
             // 
-            // nudScoreVisitante
+            // nudGuestTeamScore
             // 
-            this.nudScoreVisitante.Location = new System.Drawing.Point(571, 15);
-            this.nudScoreVisitante.Maximum = new decimal(new int[] {
+            this.nudGuestTeamScore.Location = new System.Drawing.Point(571, 15);
+            this.nudGuestTeamScore.Maximum = new decimal(new int[] {
             99,
             0,
             0,
             0});
-            this.nudScoreVisitante.Name = "nudScoreVisitante";
-            this.nudScoreVisitante.Size = new System.Drawing.Size(44, 20);
-            this.nudScoreVisitante.TabIndex = 22;
-            this.nudScoreVisitante.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudScoreVisitante.ValueChanged += new System.EventHandler(this.nudScoreVisitante_ValueChanged);
+            this.nudGuestTeamScore.Name = "nudGuestTeamScore";
+            this.nudGuestTeamScore.Size = new System.Drawing.Size(44, 20);
+            this.nudGuestTeamScore.TabIndex = 22;
+            this.nudGuestTeamScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudGuestTeamScore.ValueChanged += new System.EventHandler(this.nudScoreVisitante_ValueChanged);
             // 
-            // nudScoreLocal
+            // nudHomeTeamScore
             // 
-            this.nudScoreLocal.Location = new System.Drawing.Point(502, 15);
-            this.nudScoreLocal.Maximum = new decimal(new int[] {
+            this.nudHomeTeamScore.Location = new System.Drawing.Point(502, 15);
+            this.nudHomeTeamScore.Maximum = new decimal(new int[] {
             99,
             0,
             0,
             0});
-            this.nudScoreLocal.Name = "nudScoreLocal";
-            this.nudScoreLocal.Size = new System.Drawing.Size(44, 20);
-            this.nudScoreLocal.TabIndex = 21;
-            this.nudScoreLocal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudScoreLocal.ValueChanged += new System.EventHandler(this.nudScoreLocal_ValueChanged);
+            this.nudHomeTeamScore.Name = "nudHomeTeamScore";
+            this.nudHomeTeamScore.Size = new System.Drawing.Size(44, 20);
+            this.nudHomeTeamScore.TabIndex = 21;
+            this.nudHomeTeamScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudHomeTeamScore.ValueChanged += new System.EventHandler(this.nudScoreLocal_ValueChanged);
             // 
             // txtNombreScoreVisitante
             // 
@@ -2152,9 +2257,9 @@
             // 
             // groupBox13
             // 
-            this.groupBox13.Controls.Add(this.radTeam2List);
-            this.groupBox13.Controls.Add(this.radTeam1List);
-            this.groupBox13.Controls.Add(this.lvwJugadores);
+            this.groupBox13.Controls.Add(this.radGuestTeamPlayers);
+            this.groupBox13.Controls.Add(this.radHomeTeamPlayers);
+            this.groupBox13.Controls.Add(this.lvwTeamPlayers);
             this.groupBox13.Location = new System.Drawing.Point(441, 6);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(293, 310);
@@ -2162,47 +2267,47 @@
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Jugadores";
             // 
-            // radTeam2List
+            // radGuestTeamPlayers
             // 
-            this.radTeam2List.AutoSize = true;
-            this.radTeam2List.Location = new System.Drawing.Point(168, 19);
-            this.radTeam2List.Name = "radTeam2List";
-            this.radTeam2List.Size = new System.Drawing.Size(65, 17);
-            this.radTeam2List.TabIndex = 10;
-            this.radTeam2List.TabStop = true;
-            this.radTeam2List.Text = "Visitante";
-            this.radTeam2List.UseVisualStyleBackColor = true;
-            this.radTeam2List.CheckedChanged += new System.EventHandler(this.radTeam2List_CheckedChanged);
+            this.radGuestTeamPlayers.AutoSize = true;
+            this.radGuestTeamPlayers.Location = new System.Drawing.Point(168, 19);
+            this.radGuestTeamPlayers.Name = "radGuestTeamPlayers";
+            this.radGuestTeamPlayers.Size = new System.Drawing.Size(65, 17);
+            this.radGuestTeamPlayers.TabIndex = 10;
+            this.radGuestTeamPlayers.TabStop = true;
+            this.radGuestTeamPlayers.Text = "Visitante";
+            this.radGuestTeamPlayers.UseVisualStyleBackColor = true;
+            this.radGuestTeamPlayers.CheckedChanged += new System.EventHandler(this.radTeam2List_CheckedChanged);
             // 
-            // radTeam1List
+            // radHomeTeamPlayers
             // 
-            this.radTeam1List.AutoSize = true;
-            this.radTeam1List.Location = new System.Drawing.Point(40, 19);
-            this.radTeam1List.Name = "radTeam1List";
-            this.radTeam1List.Size = new System.Drawing.Size(51, 17);
-            this.radTeam1List.TabIndex = 9;
-            this.radTeam1List.TabStop = true;
-            this.radTeam1List.Text = "Local";
-            this.radTeam1List.UseVisualStyleBackColor = true;
-            this.radTeam1List.CheckedChanged += new System.EventHandler(this.radTeam1List_CheckedChanged);
+            this.radHomeTeamPlayers.AutoSize = true;
+            this.radHomeTeamPlayers.Location = new System.Drawing.Point(40, 19);
+            this.radHomeTeamPlayers.Name = "radHomeTeamPlayers";
+            this.radHomeTeamPlayers.Size = new System.Drawing.Size(51, 17);
+            this.radHomeTeamPlayers.TabIndex = 9;
+            this.radHomeTeamPlayers.TabStop = true;
+            this.radHomeTeamPlayers.Text = "Local";
+            this.radHomeTeamPlayers.UseVisualStyleBackColor = true;
+            this.radHomeTeamPlayers.CheckedChanged += new System.EventHandler(this.radTeam1List_CheckedChanged);
             // 
-            // lvwJugadores
+            // lvwTeamPlayers
             // 
-            this.lvwJugadores.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvwTeamPlayers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader9,
             this.columnHeader11});
-            this.lvwJugadores.FullRowSelect = true;
-            this.lvwJugadores.GridLines = true;
-            this.lvwJugadores.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lvwJugadores.HideSelection = false;
-            this.lvwJugadores.Location = new System.Drawing.Point(22, 42);
-            this.lvwJugadores.MultiSelect = false;
-            this.lvwJugadores.Name = "lvwJugadores";
-            this.lvwJugadores.Size = new System.Drawing.Size(253, 252);
-            this.lvwJugadores.TabIndex = 11;
-            this.lvwJugadores.UseCompatibleStateImageBehavior = false;
-            this.lvwJugadores.View = System.Windows.Forms.View.Details;
-            this.lvwJugadores.DoubleClick += new System.EventHandler(this.lvwJugadores_DoubleClick);
+            this.lvwTeamPlayers.FullRowSelect = true;
+            this.lvwTeamPlayers.GridLines = true;
+            this.lvwTeamPlayers.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvwTeamPlayers.HideSelection = false;
+            this.lvwTeamPlayers.Location = new System.Drawing.Point(22, 42);
+            this.lvwTeamPlayers.MultiSelect = false;
+            this.lvwTeamPlayers.Name = "lvwTeamPlayers";
+            this.lvwTeamPlayers.Size = new System.Drawing.Size(253, 252);
+            this.lvwTeamPlayers.TabIndex = 11;
+            this.lvwTeamPlayers.UseCompatibleStateImageBehavior = false;
+            this.lvwTeamPlayers.View = System.Windows.Forms.View.Details;
+            this.lvwTeamPlayers.DoubleClick += new System.EventHandler(this.lvwJugadores_DoubleClick);
             // 
             // columnHeader9
             // 
@@ -2216,14 +2321,14 @@
             // 
             // groupBox14
             // 
-            this.groupBox14.Controls.Add(this.nudSegundosAutoOcultarLT);
-            this.groupBox14.Controls.Add(this.chkAutoOcultarLT);
+            this.groupBox14.Controls.Add(this.nudAutoHideLTSeconds);
+            this.groupBox14.Controls.Add(this.chkAutoHideLT);
             this.groupBox14.Controls.Add(this.label28);
             this.groupBox14.Controls.Add(this.label29);
-            this.groupBox14.Controls.Add(this.txtLTSubtitulo);
-            this.groupBox14.Controls.Add(this.txtLTTitulo);
-            this.groupBox14.Controls.Add(this.btnPararLT);
-            this.groupBox14.Controls.Add(this.btnIniciarLT);
+            this.groupBox14.Controls.Add(this.txtLTSubtitle);
+            this.groupBox14.Controls.Add(this.txtLTTitle);
+            this.groupBox14.Controls.Add(this.btnStopLT);
+            this.groupBox14.Controls.Add(this.btnStartLT);
             this.groupBox14.Location = new System.Drawing.Point(6, 6);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(429, 310);
@@ -2231,38 +2336,38 @@
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "LowerThird";
             // 
-            // nudSegundosAutoOcultarLT
+            // nudAutoHideLTSeconds
             // 
-            this.nudSegundosAutoOcultarLT.Location = new System.Drawing.Point(219, 118);
-            this.nudSegundosAutoOcultarLT.Maximum = new decimal(new int[] {
+            this.nudAutoHideLTSeconds.Location = new System.Drawing.Point(219, 118);
+            this.nudAutoHideLTSeconds.Maximum = new decimal(new int[] {
             60,
             0,
             0,
             0});
-            this.nudSegundosAutoOcultarLT.Minimum = new decimal(new int[] {
+            this.nudAutoHideLTSeconds.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.nudSegundosAutoOcultarLT.Name = "nudSegundosAutoOcultarLT";
-            this.nudSegundosAutoOcultarLT.Size = new System.Drawing.Size(40, 20);
-            this.nudSegundosAutoOcultarLT.TabIndex = 7;
-            this.nudSegundosAutoOcultarLT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudSegundosAutoOcultarLT.Value = new decimal(new int[] {
+            this.nudAutoHideLTSeconds.Name = "nudAutoHideLTSeconds";
+            this.nudAutoHideLTSeconds.Size = new System.Drawing.Size(40, 20);
+            this.nudAutoHideLTSeconds.TabIndex = 7;
+            this.nudAutoHideLTSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudAutoHideLTSeconds.Value = new decimal(new int[] {
             3,
             0,
             0,
             0});
             // 
-            // chkAutoOcultarLT
+            // chkAutoHideLT
             // 
-            this.chkAutoOcultarLT.AutoSize = true;
-            this.chkAutoOcultarLT.Location = new System.Drawing.Point(128, 118);
-            this.chkAutoOcultarLT.Name = "chkAutoOcultarLT";
-            this.chkAutoOcultarLT.Size = new System.Drawing.Size(85, 17);
-            this.chkAutoOcultarLT.TabIndex = 6;
-            this.chkAutoOcultarLT.Text = "Auto Ocultar";
-            this.chkAutoOcultarLT.UseVisualStyleBackColor = true;
+            this.chkAutoHideLT.AutoSize = true;
+            this.chkAutoHideLT.Location = new System.Drawing.Point(128, 118);
+            this.chkAutoHideLT.Name = "chkAutoHideLT";
+            this.chkAutoHideLT.Size = new System.Drawing.Size(85, 17);
+            this.chkAutoHideLT.TabIndex = 6;
+            this.chkAutoHideLT.Text = "Auto Ocultar";
+            this.chkAutoHideLT.UseVisualStyleBackColor = true;
             // 
             // label28
             // 
@@ -2282,41 +2387,41 @@
             this.label29.TabIndex = 48;
             this.label29.Text = "Titulo:";
             // 
-            // txtLTSubtitulo
+            // txtLTSubtitle
             // 
-            this.txtLTSubtitulo.Location = new System.Drawing.Point(78, 62);
-            this.txtLTSubtitulo.Name = "txtLTSubtitulo";
-            this.txtLTSubtitulo.Size = new System.Drawing.Size(336, 20);
-            this.txtLTSubtitulo.TabIndex = 4;
+            this.txtLTSubtitle.Location = new System.Drawing.Point(78, 62);
+            this.txtLTSubtitle.Name = "txtLTSubtitle";
+            this.txtLTSubtitle.Size = new System.Drawing.Size(336, 20);
+            this.txtLTSubtitle.TabIndex = 4;
             // 
-            // txtLTTitulo
+            // txtLTTitle
             // 
-            this.txtLTTitulo.Location = new System.Drawing.Point(78, 36);
-            this.txtLTTitulo.Name = "txtLTTitulo";
-            this.txtLTTitulo.Size = new System.Drawing.Size(336, 20);
-            this.txtLTTitulo.TabIndex = 3;
+            this.txtLTTitle.Location = new System.Drawing.Point(78, 36);
+            this.txtLTTitle.Name = "txtLTTitle";
+            this.txtLTTitle.Size = new System.Drawing.Size(336, 20);
+            this.txtLTTitle.TabIndex = 3;
             // 
-            // btnPararLT
+            // btnStopLT
             // 
-            this.btnPararLT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPararLT.Location = new System.Drawing.Point(310, 105);
-            this.btnPararLT.Name = "btnPararLT";
-            this.btnPararLT.Size = new System.Drawing.Size(104, 40);
-            this.btnPararLT.TabIndex = 8;
-            this.btnPararLT.Text = "Parar";
-            this.btnPararLT.UseVisualStyleBackColor = true;
-            this.btnPararLT.Click += new System.EventHandler(this.btnPararLT_Click);
+            this.btnStopLT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopLT.Location = new System.Drawing.Point(310, 105);
+            this.btnStopLT.Name = "btnStopLT";
+            this.btnStopLT.Size = new System.Drawing.Size(104, 40);
+            this.btnStopLT.TabIndex = 8;
+            this.btnStopLT.Text = "Parar";
+            this.btnStopLT.UseVisualStyleBackColor = true;
+            this.btnStopLT.Click += new System.EventHandler(this.btnPararLT_Click);
             // 
-            // btnIniciarLT
+            // btnStartLT
             // 
-            this.btnIniciarLT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciarLT.Location = new System.Drawing.Point(18, 105);
-            this.btnIniciarLT.Name = "btnIniciarLT";
-            this.btnIniciarLT.Size = new System.Drawing.Size(104, 40);
-            this.btnIniciarLT.TabIndex = 5;
-            this.btnIniciarLT.Text = "Iniciar";
-            this.btnIniciarLT.UseVisualStyleBackColor = true;
-            this.btnIniciarLT.Click += new System.EventHandler(this.btnIniciarLT_Click);
+            this.btnStartLT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartLT.Location = new System.Drawing.Point(18, 105);
+            this.btnStartLT.Name = "btnStartLT";
+            this.btnStartLT.Size = new System.Drawing.Size(104, 40);
+            this.btnStartLT.TabIndex = 5;
+            this.btnStartLT.Text = "Iniciar";
+            this.btnStartLT.UseVisualStyleBackColor = true;
+            this.btnStartLT.Click += new System.EventHandler(this.btnIniciarLT_Click);
             // 
             // tabPage8
             // 
@@ -2330,8 +2435,8 @@
             // 
             // groupBox18
             // 
-            this.groupBox18.Controls.Add(this.btnClearTable);
-            this.groupBox18.Controls.Add(this.btnLoadPositionTable);
+            this.groupBox18.Controls.Add(this.btnClearPositions);
+            this.groupBox18.Controls.Add(this.btnLoadPositions);
             this.groupBox18.Controls.Add(this.btnEditPosition);
             this.groupBox18.Controls.Add(this.btnRemovePosition);
             this.groupBox18.Controls.Add(this.btnAddPosition);
@@ -2351,24 +2456,24 @@
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Tabla Equipos";
             // 
-            // btnClearTable
+            // btnClearPositions
             // 
-            this.btnClearTable.Location = new System.Drawing.Point(365, 196);
-            this.btnClearTable.Name = "btnClearTable";
-            this.btnClearTable.Size = new System.Drawing.Size(30, 23);
-            this.btnClearTable.TabIndex = 8;
-            this.btnClearTable.Text = "C";
-            this.btnClearTable.UseVisualStyleBackColor = true;
-            this.btnClearTable.Click += new System.EventHandler(this.btnClearTable_Click);
+            this.btnClearPositions.Location = new System.Drawing.Point(365, 196);
+            this.btnClearPositions.Name = "btnClearPositions";
+            this.btnClearPositions.Size = new System.Drawing.Size(30, 23);
+            this.btnClearPositions.TabIndex = 8;
+            this.btnClearPositions.Text = "C";
+            this.btnClearPositions.UseVisualStyleBackColor = true;
+            this.btnClearPositions.Click += new System.EventHandler(this.btnClearTable_Click);
             // 
-            // btnLoadPositionTable
+            // btnLoadPositions
             // 
-            this.btnLoadPositionTable.Location = new System.Drawing.Point(365, 167);
-            this.btnLoadPositionTable.Name = "btnLoadPositionTable";
-            this.btnLoadPositionTable.Size = new System.Drawing.Size(30, 23);
-            this.btnLoadPositionTable.TabIndex = 7;
-            this.btnLoadPositionTable.Text = "L";
-            this.btnLoadPositionTable.UseVisualStyleBackColor = true;
+            this.btnLoadPositions.Location = new System.Drawing.Point(365, 167);
+            this.btnLoadPositions.Name = "btnLoadPositions";
+            this.btnLoadPositions.Size = new System.Drawing.Size(30, 23);
+            this.btnLoadPositions.TabIndex = 7;
+            this.btnLoadPositions.Text = "L";
+            this.btnLoadPositions.UseVisualStyleBackColor = true;
             // 
             // btnEditPosition
             // 
@@ -2579,7 +2684,7 @@
             // 
             this.groupBox12.Controls.Add(this.btnConfigRecording);
             this.groupBox12.Controls.Add(this.label30);
-            this.groupBox12.Controls.Add(this.txtArchivoGrabacion);
+            this.groupBox12.Controls.Add(this.txtRecordingFileName);
             this.groupBox12.Controls.Add(this.btnStopRecording);
             this.groupBox12.Controls.Add(this.btnStartRecording);
             this.groupBox12.Location = new System.Drawing.Point(441, 186);
@@ -2609,12 +2714,12 @@
             this.label30.TabIndex = 47;
             this.label30.Text = "Archivo:";
             // 
-            // txtArchivoGrabacion
+            // txtRecordingFileName
             // 
-            this.txtArchivoGrabacion.Location = new System.Drawing.Point(68, 26);
-            this.txtArchivoGrabacion.Name = "txtArchivoGrabacion";
-            this.txtArchivoGrabacion.Size = new System.Drawing.Size(183, 20);
-            this.txtArchivoGrabacion.TabIndex = 17;
+            this.txtRecordingFileName.Location = new System.Drawing.Point(68, 26);
+            this.txtRecordingFileName.Name = "txtRecordingFileName";
+            this.txtRecordingFileName.Size = new System.Drawing.Size(183, 20);
+            this.txtRecordingFileName.TabIndex = 17;
             // 
             // btnStopRecording
             // 
@@ -2724,14 +2829,14 @@
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.btnMute);
+            this.groupBox11.Controls.Add(this.btnMuteVolume);
             this.groupBox11.Controls.Add(this.label32);
             this.groupBox11.Controls.Add(this.trkVolume);
             this.groupBox11.Controls.Add(this.chkLoopVideoFile);
             this.groupBox11.Controls.Add(this.btnStopVideo);
             this.groupBox11.Controls.Add(this.btnPauseVideo);
             this.groupBox11.Controls.Add(this.btnPlayVideo);
-            this.groupBox11.Controls.Add(this.btnGetVideoFiles);
+            this.groupBox11.Controls.Add(this.btnRefreshVideoFiles);
             this.groupBox11.Controls.Add(this.lvwVideoFiles);
             this.groupBox11.Location = new System.Drawing.Point(6, 7);
             this.groupBox11.Name = "groupBox11";
@@ -2740,15 +2845,15 @@
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Lista Reproduccion";
             // 
-            // btnMute
+            // btnMuteVolume
             // 
-            this.btnMute.Location = new System.Drawing.Point(376, 274);
-            this.btnMute.Name = "btnMute";
-            this.btnMute.Size = new System.Drawing.Size(47, 22);
-            this.btnMute.TabIndex = 10;
-            this.btnMute.Text = "Mute";
-            this.btnMute.UseVisualStyleBackColor = true;
-            this.btnMute.Click += new System.EventHandler(this.btnMute_Click);
+            this.btnMuteVolume.Location = new System.Drawing.Point(376, 274);
+            this.btnMuteVolume.Name = "btnMuteVolume";
+            this.btnMuteVolume.Size = new System.Drawing.Size(47, 22);
+            this.btnMuteVolume.TabIndex = 10;
+            this.btnMuteVolume.Text = "Mute";
+            this.btnMuteVolume.UseVisualStyleBackColor = true;
+            this.btnMuteVolume.Click += new System.EventHandler(this.btnMute_Click);
             // 
             // label32
             // 
@@ -2810,15 +2915,15 @@
             this.btnPlayVideo.UseVisualStyleBackColor = true;
             this.btnPlayVideo.Click += new System.EventHandler(this.btnPlayVideo_Click);
             // 
-            // btnGetVideoFiles
+            // btnRefreshVideoFiles
             // 
-            this.btnGetVideoFiles.Location = new System.Drawing.Point(349, 19);
-            this.btnGetVideoFiles.Name = "btnGetVideoFiles";
-            this.btnGetVideoFiles.Size = new System.Drawing.Size(74, 27);
-            this.btnGetVideoFiles.TabIndex = 4;
-            this.btnGetVideoFiles.Text = "Actualizar";
-            this.btnGetVideoFiles.UseVisualStyleBackColor = true;
-            this.btnGetVideoFiles.Click += new System.EventHandler(this.btnGetVideoFiles_Click);
+            this.btnRefreshVideoFiles.Location = new System.Drawing.Point(349, 19);
+            this.btnRefreshVideoFiles.Name = "btnRefreshVideoFiles";
+            this.btnRefreshVideoFiles.Size = new System.Drawing.Size(74, 27);
+            this.btnRefreshVideoFiles.TabIndex = 4;
+            this.btnRefreshVideoFiles.Text = "Actualizar";
+            this.btnRefreshVideoFiles.UseVisualStyleBackColor = true;
+            this.btnRefreshVideoFiles.Click += new System.EventHandler(this.btnGetVideoFiles_Click);
             // 
             // lvwVideoFiles
             // 
@@ -2999,10 +3104,10 @@
             // 
             // groupBox15
             // 
-            this.groupBox15.Controls.Add(this.btnGetLogoFiles);
-            this.groupBox15.Controls.Add(this.btnStopLogo);
-            this.groupBox15.Controls.Add(this.btnStartLogo);
-            this.groupBox15.Controls.Add(this.cmbLogoTransmision);
+            this.groupBox15.Controls.Add(this.btnRefreshLogoFiles);
+            this.groupBox15.Controls.Add(this.btnStopBroadcastLogo);
+            this.groupBox15.Controls.Add(this.btnStartBroadcastLogo);
+            this.groupBox15.Controls.Add(this.cmbBroadcastLogo);
             this.groupBox15.Controls.Add(this.label31);
             this.groupBox15.Location = new System.Drawing.Point(6, 6);
             this.groupBox15.Name = "groupBox15";
@@ -3011,45 +3116,45 @@
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Logo";
             // 
-            // btnGetLogoFiles
+            // btnRefreshLogoFiles
             // 
-            this.btnGetLogoFiles.Location = new System.Drawing.Point(272, 30);
-            this.btnGetLogoFiles.Name = "btnGetLogoFiles";
-            this.btnGetLogoFiles.Size = new System.Drawing.Size(71, 21);
-            this.btnGetLogoFiles.TabIndex = 4;
-            this.btnGetLogoFiles.Text = "Actualizar";
-            this.btnGetLogoFiles.UseVisualStyleBackColor = true;
+            this.btnRefreshLogoFiles.Location = new System.Drawing.Point(272, 30);
+            this.btnRefreshLogoFiles.Name = "btnRefreshLogoFiles";
+            this.btnRefreshLogoFiles.Size = new System.Drawing.Size(71, 21);
+            this.btnRefreshLogoFiles.TabIndex = 4;
+            this.btnRefreshLogoFiles.Text = "Actualizar";
+            this.btnRefreshLogoFiles.UseVisualStyleBackColor = true;
             // 
-            // btnStopLogo
+            // btnStopBroadcastLogo
             // 
-            this.btnStopLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStopLogo.Location = new System.Drawing.Point(178, 68);
-            this.btnStopLogo.Name = "btnStopLogo";
-            this.btnStopLogo.Size = new System.Drawing.Size(104, 40);
-            this.btnStopLogo.TabIndex = 6;
-            this.btnStopLogo.Text = "Parar Grafico";
-            this.btnStopLogo.UseVisualStyleBackColor = true;
-            this.btnStopLogo.Click += new System.EventHandler(this.btnStopLogo_Click);
+            this.btnStopBroadcastLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopBroadcastLogo.Location = new System.Drawing.Point(178, 68);
+            this.btnStopBroadcastLogo.Name = "btnStopBroadcastLogo";
+            this.btnStopBroadcastLogo.Size = new System.Drawing.Size(104, 40);
+            this.btnStopBroadcastLogo.TabIndex = 6;
+            this.btnStopBroadcastLogo.Text = "Parar Grafico";
+            this.btnStopBroadcastLogo.UseVisualStyleBackColor = true;
+            this.btnStopBroadcastLogo.Click += new System.EventHandler(this.btnStopLogo_Click);
             // 
-            // btnStartLogo
+            // btnStartBroadcastLogo
             // 
-            this.btnStartLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartLogo.Location = new System.Drawing.Point(63, 68);
-            this.btnStartLogo.Name = "btnStartLogo";
-            this.btnStartLogo.Size = new System.Drawing.Size(104, 40);
-            this.btnStartLogo.TabIndex = 5;
-            this.btnStartLogo.Text = "Iniciar Grafico";
-            this.btnStartLogo.UseVisualStyleBackColor = true;
-            this.btnStartLogo.Click += new System.EventHandler(this.btnStartLogo_Click);
+            this.btnStartBroadcastLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartBroadcastLogo.Location = new System.Drawing.Point(63, 68);
+            this.btnStartBroadcastLogo.Name = "btnStartBroadcastLogo";
+            this.btnStartBroadcastLogo.Size = new System.Drawing.Size(104, 40);
+            this.btnStartBroadcastLogo.TabIndex = 5;
+            this.btnStartBroadcastLogo.Text = "Iniciar Grafico";
+            this.btnStartBroadcastLogo.UseVisualStyleBackColor = true;
+            this.btnStartBroadcastLogo.Click += new System.EventHandler(this.btnStartLogo_Click);
             // 
-            // cmbLogoTransmision
+            // cmbBroadcastLogo
             // 
-            this.cmbLogoTransmision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLogoTransmision.FormattingEnabled = true;
-            this.cmbLogoTransmision.Location = new System.Drawing.Point(62, 30);
-            this.cmbLogoTransmision.Name = "cmbLogoTransmision";
-            this.cmbLogoTransmision.Size = new System.Drawing.Size(204, 21);
-            this.cmbLogoTransmision.TabIndex = 3;
+            this.cmbBroadcastLogo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBroadcastLogo.FormattingEnabled = true;
+            this.cmbBroadcastLogo.Location = new System.Drawing.Point(62, 30);
+            this.cmbBroadcastLogo.Name = "cmbBroadcastLogo";
+            this.cmbBroadcastLogo.Size = new System.Drawing.Size(204, 21);
+            this.cmbBroadcastLogo.TabIndex = 3;
             // 
             // label31
             // 
@@ -3167,9 +3272,9 @@
             this.groupBox22.Controls.Add(this.chkAutoHideVolleyResult);
             this.groupBox22.Controls.Add(this.btnStopVolleyResult);
             this.groupBox22.Controls.Add(this.btnStartVolleyResult);
-            this.groupBox22.Location = new System.Drawing.Point(7, 217);
+            this.groupBox22.Location = new System.Drawing.Point(7, 229);
             this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Size = new System.Drawing.Size(727, 100);
+            this.groupBox22.Size = new System.Drawing.Size(727, 88);
             this.groupBox22.TabIndex = 1;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "Resultado";
@@ -3249,6 +3354,10 @@
             // 
             // groupBox21
             // 
+            this.groupBox21.Controls.Add(this.label56);
+            this.groupBox21.Controls.Add(this.label55);
+            this.groupBox21.Controls.Add(this.nudVolleyPointsPerSet);
+            this.groupBox21.Controls.Add(this.nudVolleySetsPerMatch);
             this.groupBox21.Controls.Add(this.cmbTemplateVolleyScoreboard);
             this.groupBox21.Controls.Add(this.label52);
             this.groupBox21.Controls.Add(this.panel1);
@@ -3284,10 +3393,74 @@
             this.groupBox21.Controls.Add(this.txtVolleyHomeTeam);
             this.groupBox21.Location = new System.Drawing.Point(6, 6);
             this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Size = new System.Drawing.Size(728, 204);
+            this.groupBox21.Size = new System.Drawing.Size(728, 217);
             this.groupBox21.TabIndex = 0;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "Scoreboard";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(355, 170);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(66, 13);
+            this.label56.TabIndex = 69;
+            this.label56.Text = "Sets/Match:";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(497, 171);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(69, 13);
+            this.label55.TabIndex = 68;
+            this.label55.Text = "Puntos/Sets:";
+            // 
+            // nudVolleyPointsPerSet
+            // 
+            this.nudVolleyPointsPerSet.Location = new System.Drawing.Point(572, 168);
+            this.nudVolleyPointsPerSet.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.nudVolleyPointsPerSet.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudVolleyPointsPerSet.Name = "nudVolleyPointsPerSet";
+            this.nudVolleyPointsPerSet.Size = new System.Drawing.Size(46, 20);
+            this.nudVolleyPointsPerSet.TabIndex = 67;
+            this.nudVolleyPointsPerSet.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudVolleyPointsPerSet.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // nudVolleySetsPerMatch
+            // 
+            this.nudVolleySetsPerMatch.Location = new System.Drawing.Point(426, 168);
+            this.nudVolleySetsPerMatch.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nudVolleySetsPerMatch.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudVolleySetsPerMatch.Name = "nudVolleySetsPerMatch";
+            this.nudVolleySetsPerMatch.Size = new System.Drawing.Size(46, 20);
+            this.nudVolleySetsPerMatch.TabIndex = 66;
+            this.nudVolleySetsPerMatch.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudVolleySetsPerMatch.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // cmbTemplateVolleyScoreboard
             // 
@@ -3688,9 +3861,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtDescripcion);
-            this.groupBox2.Controls.Add(this.dtpFecha);
-            this.groupBox2.Controls.Add(this.txtNombre);
+            this.groupBox2.Controls.Add(this.txtEventDescription);
+            this.groupBox2.Controls.Add(this.dtpEventDate);
+            this.groupBox2.Controls.Add(this.txtEventName);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
@@ -3701,28 +3874,28 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Evento";
             // 
-            // txtDescripcion
+            // txtEventDescription
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(87, 43);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(376, 42);
-            this.txtDescripcion.TabIndex = 2;
+            this.txtEventDescription.Location = new System.Drawing.Point(87, 43);
+            this.txtEventDescription.Multiline = true;
+            this.txtEventDescription.Name = "txtEventDescription";
+            this.txtEventDescription.Size = new System.Drawing.Size(376, 42);
+            this.txtEventDescription.TabIndex = 2;
             // 
-            // dtpFecha
+            // dtpEventDate
             // 
-            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(625, 20);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(105, 20);
-            this.dtpFecha.TabIndex = 1;
+            this.dtpEventDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpEventDate.Location = new System.Drawing.Point(625, 20);
+            this.dtpEventDate.Name = "dtpEventDate";
+            this.dtpEventDate.Size = new System.Drawing.Size(105, 20);
+            this.dtpEventDate.TabIndex = 1;
             // 
-            // txtNombre
+            // txtEventName
             // 
-            this.txtNombre.Location = new System.Drawing.Point(87, 20);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(376, 20);
-            this.txtNombre.TabIndex = 0;
+            this.txtEventName.Location = new System.Drawing.Point(87, 20);
+            this.txtEventName.Name = "txtEventName";
+            this.txtEventName.Size = new System.Drawing.Size(376, 20);
+            this.txtEventName.TabIndex = 0;
             // 
             // label5
             // 
@@ -3779,14 +3952,14 @@
             // 
             this.tmrInBetweenTeams.Tick += new System.EventHandler(this.tmrInBetweenTeams_Tick);
             // 
-            // stsEstado
+            // stsStatus
             // 
-            this.stsEstado.Location = new System.Drawing.Point(0, 480);
-            this.stsEstado.Name = "stsEstado";
-            this.stsEstado.Size = new System.Drawing.Size(770, 22);
-            this.stsEstado.SizingGrip = false;
-            this.stsEstado.TabIndex = 3;
-            this.stsEstado.Text = "statusStrip1";
+            this.stsStatus.Location = new System.Drawing.Point(0, 480);
+            this.stsStatus.Name = "stsStatus";
+            this.stsStatus.Size = new System.Drawing.Size(770, 22);
+            this.stsStatus.SizingGrip = false;
+            this.stsStatus.TabIndex = 3;
+            this.stsStatus.Text = "statusStrip1";
             // 
             // tmrPositions
             // 
@@ -3800,112 +3973,13 @@
             // 
             this.tmrVolleyResult.Tick += new System.EventHandler(this.tmrVolleyResult_Tick);
             // 
-            // txtWebcamOptions
-            // 
-            this.txtWebcamOptions.Location = new System.Drawing.Point(58, 33);
-            this.txtWebcamOptions.Name = "txtWebcamOptions";
-            this.txtWebcamOptions.Size = new System.Drawing.Size(248, 20);
-            this.txtWebcamOptions.TabIndex = 5;
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(16, 36);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(30, 13);
-            this.label53.TabIndex = 4;
-            this.label53.Text = "Play:";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(212, 149);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            60,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(40, 20);
-            this.numericUpDown1.TabIndex = 37;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(121, 149);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(85, 17);
-            this.checkBox1.TabIndex = 36;
-            this.checkBox1.Text = "Auto Ocultar";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // btnStopWebcam
-            // 
-            this.btnStopWebcam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStopWebcam.Location = new System.Drawing.Point(121, 175);
-            this.btnStopWebcam.Name = "btnStopWebcam";
-            this.btnStopWebcam.Size = new System.Drawing.Size(73, 38);
-            this.btnStopWebcam.TabIndex = 38;
-            this.btnStopWebcam.Text = "Parar";
-            this.btnStopWebcam.UseVisualStyleBackColor = true;
-            this.btnStopWebcam.Click += new System.EventHandler(this.btnStopWebcam_Click);
-            // 
-            // btnStartWebcam
-            // 
-            this.btnStartWebcam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartWebcam.Location = new System.Drawing.Point(121, 101);
-            this.btnStartWebcam.Name = "btnStartWebcam";
-            this.btnStartWebcam.Size = new System.Drawing.Size(73, 38);
-            this.btnStartWebcam.TabIndex = 35;
-            this.btnStartWebcam.Text = "Iniciar";
-            this.btnStartWebcam.UseVisualStyleBackColor = true;
-            this.btnStartWebcam.Click += new System.EventHandler(this.btnStartWebcam_Click);
-            // 
-            // chkAutoShowOnClockStart
-            // 
-            this.chkAutoShowOnClockStart.AutoSize = true;
-            this.chkAutoShowOnClockStart.Location = new System.Drawing.Point(243, 140);
-            this.chkAutoShowOnClockStart.Name = "chkAutoShowOnClockStart";
-            this.chkAutoShowOnClockStart.Size = new System.Drawing.Size(103, 17);
-            this.chkAutoShowOnClockStart.TabIndex = 62;
-            this.chkAutoShowOnClockStart.Text = "Mostrar al Iniciar";
-            this.chkAutoShowOnClockStart.UseVisualStyleBackColor = true;
-            // 
-            // cmbWebcam
-            // 
-            this.cmbWebcam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbWebcam.FormattingEnabled = true;
-            this.cmbWebcam.Location = new System.Drawing.Point(87, 59);
-            this.cmbWebcam.Name = "cmbWebcam";
-            this.cmbWebcam.Size = new System.Drawing.Size(215, 21);
-            this.cmbWebcam.TabIndex = 40;
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(16, 62);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(53, 13);
-            this.label54.TabIndex = 39;
-            this.label54.Text = "Webcam:";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(770, 502);
-            this.Controls.Add(this.stsEstado);
+            this.Controls.Add(this.stsStatus);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.mstMenues);
@@ -3923,6 +3997,7 @@
             this.tabPage1.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -3930,7 +4005,7 @@
             this.tabPage2.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSegundosAutoOcultarPresentacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideIntroSeconds)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.tabPage3.ResumeLayout(false);
@@ -3938,32 +4013,32 @@
             this.groupBox19.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSegundosSeparacionEquipoLocalVisitante)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSegundosOcultarEquipoLocalVisitante)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSeparationTeamsSeconds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTeamsShowSeconds)).EndInit();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSegundosOcultarEquipoVisitante)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHideGuestTeamSeconds)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSegundosOcultarEquipoLocal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHideHomeTeamSeconds)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSeconsAutoHideResult)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSegundosTiempo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMinutosTiempo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSegundosExclusion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMinutosExclusion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSegundosReloj)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMinutosReloj)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudScoreVisitante)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudScoreLocal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideResultSeconds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudClockLengthSeconds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudClockLengthMinutes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExclutionLengthSeconds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExclutionLengthMinutes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudClockSeconds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudClockMinutes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGuestTeamScore)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHomeTeamScore)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
             this.groupBox14.ResumeLayout(false);
             this.groupBox14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSegundosAutoOcultarLT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideLTSeconds)).EndInit();
             this.tabPage8.ResumeLayout(false);
             this.groupBox18.ResumeLayout(false);
             this.groupBox18.PerformLayout();
@@ -3991,6 +4066,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideVolleyResultSeconds)).EndInit();
             this.groupBox21.ResumeLayout(false);
             this.groupBox21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyPointsPerSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleySetsPerMatch)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideVolleyScoreboardSeconds)).EndInit();
@@ -4008,7 +4085,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome5SetPoints)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4031,23 +4107,23 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem mnuSalir;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtPuertoServidor;
+        private System.Windows.Forms.TextBox txtServerPort;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtDireccionServidor;
+        private System.Windows.Forms.TextBox txtServerAddress;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.DateTimePicker dtpFecha;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtEventDescription;
+        private System.Windows.Forms.DateTimePicker dtpEventDate;
+        private System.Windows.Forms.TextBox txtEventName;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox cmbTemplateLowerThird;
-        private System.Windows.Forms.ComboBox cmbTemplateResultado;
+        private System.Windows.Forms.ComboBox cmbTemplateResult;
         private System.Windows.Forms.ComboBox cmbTemplateScoreboard;
-        private System.Windows.Forms.ComboBox cmbTemplateEquipos;
-        private System.Windows.Forms.ComboBox cmbTemplatePresentacion;
+        private System.Windows.Forms.ComboBox cmbTemplateTeam;
+        private System.Windows.Forms.ComboBox cmbTemplateIntro;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -4056,12 +4132,12 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtNombreVisitante;
-        private System.Windows.Forms.TextBox txtNombreLocal;
+        private System.Windows.Forms.TextBox txtGuestTeamName;
+        private System.Windows.Forms.TextBox txtHomeTeamName;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cmbLogoLocal;
-        private System.Windows.Forms.ComboBox cmbLogoVisitante;
+        private System.Windows.Forms.ComboBox cmbHomeTeamLogo;
+        private System.Windows.Forms.ComboBox cmbGuestTeamLogo;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
@@ -4069,94 +4145,94 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox cmbLogoFederacion;
-        private System.Windows.Forms.TextBox txtLugar;
-        private System.Windows.Forms.TextBox txtCampeonato;
-        private System.Windows.Forms.TextBox txtFederacion;
-        private System.Windows.Forms.TextBox txtSubtitulo;
-        private System.Windows.Forms.TextBox txtTitulo;
-        private System.Windows.Forms.CheckBox chkAutoOcultarPresentacion;
-        private System.Windows.Forms.Button btnMostrarOcultarPresentacion;
-        private System.Windows.Forms.NumericUpDown nudSegundosAutoOcultarPresentacion;
+        private System.Windows.Forms.ComboBox cmbFederationLogo;
+        private System.Windows.Forms.TextBox txtEventLocation;
+        private System.Windows.Forms.TextBox txtEventLeague;
+        private System.Windows.Forms.TextBox txtEventFederation;
+        private System.Windows.Forms.TextBox txtIntroSubtitle;
+        private System.Windows.Forms.TextBox txtIntroTitle;
+        private System.Windows.Forms.CheckBox chkAutoHideIntro;
+        private System.Windows.Forms.Button btnShowHideIntro;
+        private System.Windows.Forms.NumericUpDown nudAutoHideIntroSeconds;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.Button btnConexion;
+        private System.Windows.Forms.Button btnConnectDisconnect;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox txtEntrenadorLocal;
-        private System.Windows.Forms.ListView lvwEquipoLocal;
-        private System.Windows.Forms.Button btnLimpiarEquipoLocal;
-        private System.Windows.Forms.Button btnCargarJugadoresLocales;
-        private System.Windows.Forms.Button btnModificarJugadorLocal;
-        private System.Windows.Forms.Button btnQuitarJugadorLocal;
-        private System.Windows.Forms.Button btnAgregarJugadorLocal;
+        private System.Windows.Forms.TextBox txtHomeTeamCoach;
+        private System.Windows.Forms.ListView lvwHomeTeamPlayers;
+        private System.Windows.Forms.Button btnClearHomeTeamPlayers;
+        private System.Windows.Forms.Button btnLoadHomeTeamPlayers;
+        private System.Windows.Forms.Button btnEditHomeTeamPlayer;
+        private System.Windows.Forms.Button btnRemoveHomeTeamPlayer;
+        private System.Windows.Forms.Button btnAddHomeTeamPlayer;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.NumericUpDown nudSegundosOcultarEquipoLocal;
-        private System.Windows.Forms.CheckBox chkAutoOcultarEquipoLocal;
-        private System.Windows.Forms.Button btnMostrarEquipoLocal;
+        private System.Windows.Forms.NumericUpDown nudHideHomeTeamSeconds;
+        private System.Windows.Forms.CheckBox chkAutoHideHomeTeam;
+        private System.Windows.Forms.Button btnShowHideHomeTeam;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.NumericUpDown nudSegundosOcultarEquipoVisitante;
-        private System.Windows.Forms.CheckBox chkAutoOcultarEquipoVisitante;
-        private System.Windows.Forms.Button btnMostrarEquipoVisitante;
-        private System.Windows.Forms.Button btnLimpiarEquipoVisitante;
-        private System.Windows.Forms.Button btnCargarJugadoresVisitantes;
-        private System.Windows.Forms.Button btnModificarJugadorVisitante;
-        private System.Windows.Forms.Button btnQuitarJugadorVisitante;
-        private System.Windows.Forms.Button btnAgregarJugadorVisitante;
-        private System.Windows.Forms.ListView lvwEquipoVisitante;
+        private System.Windows.Forms.NumericUpDown nudHideGuestTeamSeconds;
+        private System.Windows.Forms.CheckBox chkAutoHideGuestTeam;
+        private System.Windows.Forms.Button btnShowHideGuestTeam;
+        private System.Windows.Forms.Button btnClearGuestTeamPlayers;
+        private System.Windows.Forms.Button btnLoadGuestTeamPlayers;
+        private System.Windows.Forms.Button btnEditGuestTeamPlayer;
+        private System.Windows.Forms.Button btnRemoveGuestTeamPlayer;
+        private System.Windows.Forms.Button btnAddGuestTeamPlayer;
+        private System.Windows.Forms.ListView lvwGuestTeamPlayers;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox txtEntrenadorVisitante;
+        private System.Windows.Forms.TextBox txtGuestTeamPlayers;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.NumericUpDown nudSegundosSeparacionEquipoLocalVisitante;
+        private System.Windows.Forms.NumericUpDown nudSeparationTeamsSeconds;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.NumericUpDown nudSegundosOcultarEquipoLocalVisitante;
-        private System.Windows.Forms.Button btnMostrarEquipoLocalVisitante;
-        private System.Windows.Forms.Button btnLimpiarExclusionesLocal;
-        private System.Windows.Forms.Button btnQuitarExclusionLocal;
-        private System.Windows.Forms.Button btnAgregarExclusionLocal;
-        private System.Windows.Forms.ListView lvwExclusionesLocal;
+        private System.Windows.Forms.NumericUpDown nudTeamsShowSeconds;
+        private System.Windows.Forms.Button btnShowHomeAndGuestTeam;
+        private System.Windows.Forms.Button btnClearHomeTeamExclution;
+        private System.Windows.Forms.Button btnRemoveHomeTeamExclution;
+        private System.Windows.Forms.Button btnAddHomeTeamExclution;
+        private System.Windows.Forms.ListView lvwHomeTeamExclutions;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.Button btnExclusionLocal;
-        private System.Windows.Forms.Button btn1GolLocal;
-        private System.Windows.Forms.NumericUpDown nudScoreVisitante;
-        private System.Windows.Forms.NumericUpDown nudScoreLocal;
+        private System.Windows.Forms.Button btnHomeTeamExclution;
+        private System.Windows.Forms.Button btnAddOneToHomeTeamScore;
+        private System.Windows.Forms.NumericUpDown nudGuestTeamScore;
+        private System.Windows.Forms.NumericUpDown nudHomeTeamScore;
         private System.Windows.Forms.TextBox txtNombreScoreVisitante;
         private System.Windows.Forms.TextBox txtNombreScoreLocal;
-        private System.Windows.Forms.Button btnLimpiarExclusionesVisitante;
-        private System.Windows.Forms.Button btnQuitarExclusionVisitante;
-        private System.Windows.Forms.Button btnAgregarExclusionVisitante;
-        private System.Windows.Forms.ListView lvwExclusionesVisitante;
+        private System.Windows.Forms.Button btnClearGuestTeamExclution;
+        private System.Windows.Forms.Button btnRemoveGuestTeamExclution;
+        private System.Windows.Forms.Button btnAddGuestTeamExclution;
+        private System.Windows.Forms.ListView lvwGuestTeamExclution;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.Button btnExclusionVisitante;
-        private System.Windows.Forms.Button btn1GolVisitante;
-        private System.Windows.Forms.Button btnParaGraficoScoreboard;
-        private System.Windows.Forms.Button btnIniciarGraficoScoreboard;
-        private System.Windows.Forms.Button btnMostrarResultado;
-        private System.Windows.Forms.Button btnMostrarOcultarScoreboard;
-        private System.Windows.Forms.Button btnIniciarReloj;
-        private System.Windows.Forms.Button btnReiniciarReloj;
-        private System.Windows.Forms.Button btnPausarReloj;
+        private System.Windows.Forms.Button btnGuestTeamExclution;
+        private System.Windows.Forms.Button btnAddOneToGuestTeamScore;
+        private System.Windows.Forms.Button btnStopScoreboard;
+        private System.Windows.Forms.Button btnStartScoreboard;
+        private System.Windows.Forms.Button btnShowHideResult;
+        private System.Windows.Forms.Button btnShowHideScoreboard;
+        private System.Windows.Forms.Button btnStartClock;
+        private System.Windows.Forms.Button btnResetClock;
+        private System.Windows.Forms.Button btnStopClock;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.ComboBox cmbTiempo;
-        private System.Windows.Forms.NumericUpDown nudSegundosReloj;
-        private System.Windows.Forms.NumericUpDown nudMinutosReloj;
-        private System.Windows.Forms.NumericUpDown nudSegundosTiempo;
-        private System.Windows.Forms.NumericUpDown nudMinutosTiempo;
-        private System.Windows.Forms.NumericUpDown nudSegundosExclusion;
-        private System.Windows.Forms.NumericUpDown nudMinutosExclusion;
-        private System.Windows.Forms.CheckBox chkOcultarScoreboardAlFinalizar;
+        private System.Windows.Forms.ComboBox cmbHalf;
+        private System.Windows.Forms.NumericUpDown nudClockSeconds;
+        private System.Windows.Forms.NumericUpDown nudClockMinutes;
+        private System.Windows.Forms.NumericUpDown nudClockLengthSeconds;
+        private System.Windows.Forms.NumericUpDown nudClockLengthMinutes;
+        private System.Windows.Forms.NumericUpDown nudExclutionLengthSeconds;
+        private System.Windows.Forms.NumericUpDown nudExclutionLengthMinutes;
+        private System.Windows.Forms.CheckBox chkAutoHideOnClockEnd;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer3;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
         private System.Windows.Forms.GroupBox groupBox10;
@@ -4170,14 +4246,14 @@
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.Button btnPararLT;
-        private System.Windows.Forms.Button btnIniciarLT;
+        private System.Windows.Forms.Button btnStopLT;
+        private System.Windows.Forms.Button btnStartLT;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox txtLTSubtitulo;
-        private System.Windows.Forms.TextBox txtLTTitulo;
-        private System.Windows.Forms.NumericUpDown nudSegundosAutoOcultarLT;
-        private System.Windows.Forms.CheckBox chkAutoOcultarLT;
+        private System.Windows.Forms.TextBox txtLTSubtitle;
+        private System.Windows.Forms.TextBox txtLTTitle;
+        private System.Windows.Forms.NumericUpDown nudAutoHideLTSeconds;
+        private System.Windows.Forms.CheckBox chkAutoHideLT;
         private System.Windows.Forms.Timer tmrLT;
         private System.Windows.Forms.ToolStripMenuItem mnuConfiguracion;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
@@ -4186,16 +4262,16 @@
         private System.Windows.Forms.Button btnStopVideo;
         private System.Windows.Forms.Button btnPauseVideo;
         private System.Windows.Forms.Button btnPlayVideo;
-        private System.Windows.Forms.Button btnGetVideoFiles;
+        private System.Windows.Forms.Button btnRefreshVideoFiles;
         private System.Windows.Forms.CheckBox chkLoopVideoFile;
-        private System.Windows.Forms.RadioButton radTeam2List;
-        private System.Windows.Forms.RadioButton radTeam1List;
-        private System.Windows.Forms.ListView lvwJugadores;
+        private System.Windows.Forms.RadioButton radGuestTeamPlayers;
+        private System.Windows.Forms.RadioButton radHomeTeamPlayers;
+        private System.Windows.Forms.ListView lvwTeamPlayers;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TrackBar trkVolume;
-        private System.Windows.Forms.Button btnMute;
+        private System.Windows.Forms.Button btnMuteVolume;
         private System.Windows.Forms.ToolStripMenuItem mnuOpciones;
         private System.Windows.Forms.ToolStripMenuItem mnuSiempreVisible;
         private System.Windows.Forms.TabPage tabPage7;
@@ -4209,14 +4285,14 @@
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.Button btnConfigRecording;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox txtArchivoGrabacion;
+        private System.Windows.Forms.TextBox txtRecordingFileName;
         private System.Windows.Forms.Button btnStopRecording;
         private System.Windows.Forms.Button btnStartRecording;
         private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.Button btnGetLogoFiles;
-        private System.Windows.Forms.Button btnStopLogo;
-        private System.Windows.Forms.Button btnStartLogo;
-        private System.Windows.Forms.ComboBox cmbLogoTransmision;
+        private System.Windows.Forms.Button btnRefreshLogoFiles;
+        private System.Windows.Forms.Button btnStopBroadcastLogo;
+        private System.Windows.Forms.Button btnStartBroadcastLogo;
+        private System.Windows.Forms.ComboBox cmbBroadcastLogo;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TrackBar trkImageScrollingSpeed;
@@ -4227,7 +4303,7 @@
         private System.Windows.Forms.Button btnStopAudio;
         private System.Windows.Forms.Button btnPauseAudio;
         private System.Windows.Forms.Button btnPlayAudio;
-        private System.Windows.Forms.NumericUpDown nudSeconsAutoHideResult;
+        private System.Windows.Forms.NumericUpDown nudAutoHideResultSeconds;
         private System.Windows.Forms.CheckBox chkAutoHideResult;
         private System.Windows.Forms.Timer tmrTeam1;
         private System.Windows.Forms.Timer tmrTeam2;
@@ -4236,7 +4312,7 @@
         private System.Windows.Forms.Timer tmrInBetweenTeams;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.TabPage tabPage8;
-        private System.Windows.Forms.StatusStrip stsEstado;
+        private System.Windows.Forms.StatusStrip stsStatus;
         private System.Windows.Forms.GroupBox groupBox18;
         private System.Windows.Forms.ComboBox cmbTemplatePositions;
         private System.Windows.Forms.Label label37;
@@ -4267,8 +4343,8 @@
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.TextBox txtPositionsSubtitle;
         private System.Windows.Forms.TextBox txtPositionsTitle;
-        private System.Windows.Forms.Button btnClearTable;
-        private System.Windows.Forms.Button btnLoadPositionTable;
+        private System.Windows.Forms.Button btnClearPositions;
+        private System.Windows.Forms.Button btnLoadPositions;
         private System.Windows.Forms.Button btnEditPosition;
         private System.Windows.Forms.Button btnRemovePosition;
         private System.Windows.Forms.Button btnAddPosition;
@@ -4342,6 +4418,10 @@
         private System.Windows.Forms.CheckBox chkAutoShowOnClockStart;
         private System.Windows.Forms.ComboBox cmbWebcam;
         private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.NumericUpDown nudVolleyPointsPerSet;
+        private System.Windows.Forms.NumericUpDown nudVolleySetsPerMatch;
     }
 }
 

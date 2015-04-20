@@ -70,6 +70,10 @@ namespace HandballCliente
         public int scoreClockExclutionMinutes { get; set; }
         public int scoreClockExclutionSeconds { get; set; }
 
+        public String titleVolleyScoreboard { get; set; }
+        public String websiteVolleyScoreboardResult { get; set; }
+        public bool showVolleyService { get; set; }
+
         public bool autoHideIntro { get; set; }
         public int autoHideIntroSeconds { get; set; }
         public bool autoHideTeam1 { get; set; }

@@ -31,6 +31,7 @@ namespace HandballCliente
         private CasparCG casparServer = new CasparCG();
         private Color ColorFondo;
         private String fileName = "";
+        private Color ColorRecording;
 
 
         private const int layerPresentation = 5;
@@ -168,6 +169,15 @@ namespace HandballCliente
             cmbPlayersFontLetterSpacing.Items.Add("5");
             cmbPlayersFontLetterSpacing.Items.Add("10");
             cmbPlayersFontLetterSpacing.Items.Add("20");
+
+            cmbVolleyScoreboardFontSize.Items.Clear();
+            cmbVolleyScoreboardFontSize.Items.Add("12");
+            cmbVolleyScoreboardFontSize.Items.Add("14");
+            cmbVolleyScoreboardFontSize.Items.Add("16");
+            cmbVolleyScoreboardFontSize.Items.Add("18");
+            cmbVolleyScoreboardFontSize.Items.Add("20");
+            cmbVolleyScoreboardFontSize.Items.Add("22");
+            cmbVolleyScoreboardFontSize.Items.Add("24");
         }
 
         private void fillComboWebcam()
@@ -175,6 +185,13 @@ namespace HandballCliente
             cmbWebcam.Items.Clear();
             cmbWebcam.Items.Add("Logitech HD Webcam C270");
             cmbWebcam.Items.Add("WebCam SC-0311139N");
+
+            cmbWebcamResolution.Items.Clear();
+            cmbWebcamResolution.Items.Add("640x480");
+            cmbWebcamResolution.Items.Add("800x600");
+            cmbWebcamResolution.Items.Add("1024x576");
+            cmbWebcamResolution.Items.Add("1280x720");
+
         }
 
         private void setTopMost(bool stateTopMost)
@@ -420,13 +437,15 @@ namespace HandballCliente
                     Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
                     Uri logo2Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
 
-                    templateIntro.Fields.Add(new TemplateField("team1Name", txtHomeTeamName.Text));
-                    templateIntro.Fields.Add(new TemplateField("team2Name", txtGuestTeamName.Text));
+                    templateIntro.Fields.Add(new TemplateField("team1Name", txtHomeTeamName.Text.Split(',')[0].ToUpper() + "\n" + txtHomeTeamName.Text.Split(',')[1]));
+                    templateIntro.Fields.Add(new TemplateField("team2Name", txtGuestTeamName.Text.Split(',')[0].ToUpper() + "\n" + txtGuestTeamName.Text.Split(',')[1]));
                     templateIntro.Fields.Add(new TemplateField("infoLeague", txtEventLeague.Text));
                     templateIntro.Fields.Add(new TemplateField("infoDate", txtIntroTitle.Text));
                     templateIntro.Fields.Add(new TemplateField("infoLocation", txtEventLocation.Text));
                     templateIntro.Fields.Add(new TemplateField("team1Logo", logo1Path.ToString()));
                     templateIntro.Fields.Add(new TemplateField("team2Logo", logo2Path.ToString()));
+                    templateIntro.Fields.Add(new TemplateField("website", txtVolleyWebsite.Text));
+
 
                     //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
                     ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateIntro.TemplateDataText(), cmbTemplateIntro.Text, layerPresentation.ToString()));
@@ -813,8 +832,9 @@ namespace HandballCliente
                 if (casparServer.Connected)
                 {
                     Template templateVolleyScoreboard = new Template();
-                    Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
-                    Uri logo2Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
+                    //Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
+                    //Uri logo2Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
+                    Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
 
                     templateVolleyScoreboard.Fields.Add(new TemplateField("f0", txtVolleyHomeTeam.Text));
                     templateVolleyScoreboard.Fields.Add(new TemplateField("f1", txtVolleyGuestTeam.Text));
@@ -822,9 +842,19 @@ namespace HandballCliente
                     templateVolleyScoreboard.Fields.Add(new TemplateField("f3", nudVolleyGuestSets.Value.ToString()));
                     templateVolleyScoreboard.Fields.Add(new TemplateField("f4", nudVolleyHome1SetPoints.Value.ToString()));
                     templateVolleyScoreboard.Fields.Add(new TemplateField("f5", nudVolleyGuest1SetPoints.Value.ToString()));
-                    templateVolleyScoreboard.Fields.Add(new TemplateField("pass", (radVolleyHomeServe.Checked) ? "1" : "2"));
+                    templateVolleyScoreboard.Fields.Add(new TemplateField("f6", txtVolleyTitle.Text));
+                    templateVolleyScoreboard.Fields.Add(new TemplateField("f7", txtVolleyWebsite.Text));
+                    if (chkVolleyShowService.Checked)
+                    {
+                        templateVolleyScoreboard.Fields.Add(new TemplateField("pass", (radVolleyHomeServe.Checked) ? "1" : "2"));
+                    }
+                    else
+                    {
+                        templateVolleyScoreboard.Fields.Add(new TemplateField("pass", "0"));
+                    }
                     templateVolleyScoreboard.Fields.Add(new TemplateField("flag1", logo1Path.ToString()));
-                    templateVolleyScoreboard.Fields.Add(new TemplateField("flag2", logo2Path.ToString()));
+                    //templateVolleyScoreboard.Fields.Add(new TemplateField("flag2", logo2Path.ToString()));
+                    templateVolleyScoreboard.Fields.Add(new TemplateField("fontsize", cmbVolleyScoreboardFontSize.Text));
 
                     ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateVolleyScoreboard.TemplateDataText(), cmbTemplateVolleyScoreboard.Text, layerVolleyScoreboard.ToString()));
 
@@ -860,8 +890,10 @@ namespace HandballCliente
             if (casparServer.Connected)
             {
                 Template templateVolleyScoreboard = new Template();
-                Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
-                Uri logo2Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
+                //Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
+                //Uri logo2Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
+                Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+
 
                 templateVolleyScoreboard.Fields.Add(new TemplateField("f0", txtVolleyHomeTeam.Text));
                 templateVolleyScoreboard.Fields.Add(new TemplateField("f1", txtVolleyGuestTeam.Text));
@@ -869,9 +901,18 @@ namespace HandballCliente
                 templateVolleyScoreboard.Fields.Add(new TemplateField("f3", nudVolleyGuestSets.Value.ToString()));
                 templateVolleyScoreboard.Fields.Add(new TemplateField("f4", getVolleySetScore(1).Value.ToString()));
                 templateVolleyScoreboard.Fields.Add(new TemplateField("f5", getVolleySetScore(2).Value.ToString()));
-                templateVolleyScoreboard.Fields.Add(new TemplateField("pass", (radVolleyHomeServe.Checked) ? "1" : "2"));
+                templateVolleyScoreboard.Fields.Add(new TemplateField("f6", txtVolleyTitle.Text));
+                templateVolleyScoreboard.Fields.Add(new TemplateField("f7", txtVolleyWebsite.Text));
+                if (chkVolleyShowService.Checked)
+                {
+                    templateVolleyScoreboard.Fields.Add(new TemplateField("pass", (radVolleyHomeServe.Checked) ? "1" : "2"));
+                }
+                else
+                {
+                    templateVolleyScoreboard.Fields.Add(new TemplateField("pass", "0"));
+                }
                 templateVolleyScoreboard.Fields.Add(new TemplateField("flag1", logo1Path.ToString()));
-                templateVolleyScoreboard.Fields.Add(new TemplateField("flag2", logo2Path.ToString()));
+                //templateVolleyScoreboard.Fields.Add(new TemplateField("flag2", logo2Path.ToString()));
 
                 //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
                 ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateVolleyScoreboard.TemplateDataText(), layerVolleyScoreboard.ToString()));
@@ -977,8 +1018,9 @@ namespace HandballCliente
                 if (casparServer.Connected)
                 {
                     Template templateVolleyResult = new Template();
-                    Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
-                    Uri logo2Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
+                    //Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
+                    //Uri logo2Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
+                    Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
 
                     templateVolleyResult.Fields.Add(new TemplateField("f0", txtVolleyHomeTeam.Text));
                     templateVolleyResult.Fields.Add(new TemplateField("f1", txtVolleyGuestTeam.Text));
@@ -994,8 +1036,10 @@ namespace HandballCliente
                     templateVolleyResult.Fields.Add(new TemplateField("f11", nudVolleyGuest5SetPoints.Value.ToString()));
                     templateVolleyResult.Fields.Add(new TemplateField("f12", nudVolleyHomeSets.Value.ToString()));
                     templateVolleyResult.Fields.Add(new TemplateField("f13", nudVolleyGuestSets.Value.ToString()));
+                    templateVolleyResult.Fields.Add(new TemplateField("f14", txtVolleyTitle.Text));
+                    templateVolleyResult.Fields.Add(new TemplateField("f15", txtVolleyWebsite.Text));
                     templateVolleyResult.Fields.Add(new TemplateField("flag1", logo1Path.ToString()));
-                    templateVolleyResult.Fields.Add(new TemplateField("flag2", logo2Path.ToString()));
+                    //templateVolleyResult.Fields.Add(new TemplateField("flag2", logo2Path.ToString()));
 
                     ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateVolleyResult.TemplateDataText(), cmbTemplateVolleyResult.Text, layerVolleyResult.ToString()));
 
@@ -1035,6 +1079,8 @@ namespace HandballCliente
                     //String aux=String.Format("ADD 1 FILE {0}-{1}-{2}.mov -vcodec libx264 [-preset ultrafast -tune fastdecode -crf 5]","REC",txtArchivoGrabacion.Text,DateTime.Now.ToString("ddMM-HHmm"));
                     String aux = String.Format("ADD 1 FILE {0}-{1}-{2}.mp4 -vcodec libx264 -preset ultrafast -tune fastdecode -crf {3}", "REC", txtRecordingFileName.Text, DateTime.Now.ToString("ddMMHHmm"), HandballMatch.getInstance().recordingCRF);
                     casparServer.Execute(aux);
+                    ColorRecording = btnStartRecording.BackColor;
+                    btnStartRecording.BackColor = Color.Red;
                 }
             }
         }
@@ -1044,6 +1090,7 @@ namespace HandballCliente
             if (casparServer.Connected)
             {
                 casparServer.Execute("REMOVE 1 FILE");
+                btnStartRecording.BackColor = ColorRecording;
             }
         }
 
@@ -1141,9 +1188,9 @@ namespace HandballCliente
         {
             if (casparServer.Connected)
             {
-                if (cmbWebcam.Text != "")
+                if (cmbWebcam.Text != "" && cmbWebcamResolution.Text != "")
                 {
-                    casparServer.Execute(String.Format("PLAY 1-{2} {0}dshow://video={1}{0}", (char)0x22, cmbWebcam.Text, layerVideo.ToString()));
+                    casparServer.Execute(String.Format("PLAY 1-{2} {0}dshow://video={1}{0} {0}-video_size {3} -framerate 30{0}", (char)0x22, cmbWebcam.Text, layerVideo.ToString(),cmbWebcamResolution.Text));
                 }
             }
         }
@@ -1299,8 +1346,10 @@ namespace HandballCliente
             HandballMatch.getInstance().leagueName = txtEventLeague.Text;
             HandballMatch.getInstance().location = txtEventLocation.Text;
             HandballMatch.getInstance().eventTitle = txtIntroTitle.Text;
-            HandballMatch.getInstance().team1ScoreName = txtNombreScoreLocal.Text;
-            HandballMatch.getInstance().team2ScoreName = txtNombreScoreVisitante.Text;
+            //HandballMatch.getInstance().team1ScoreName = txtNombreScoreLocal.Text;
+            //HandballMatch.getInstance().team2ScoreName = txtNombreScoreVisitante.Text;
+            HandballMatch.getInstance().team1ScoreName = txtVolleyHomeTeam.Text;
+            HandballMatch.getInstance().team2ScoreName = txtVolleyGuestTeam.Text;
 
             HandballMatch.getInstance().serverAddress = txtServerAddress.Text;
             HandballMatch.getInstance().serverPort = txtServerPort.Text;
@@ -1341,6 +1390,10 @@ namespace HandballCliente
             HandballMatch.getInstance().scoreClockExclutionMinutes = (int)nudExclutionLengthMinutes.Value;
             HandballMatch.getInstance().scoreClockExclutionSeconds = (int)nudExclutionLengthSeconds.Value;
 
+            HandballMatch.getInstance().titleVolleyScoreboard = txtVolleyTitle.Text;
+            HandballMatch.getInstance().websiteVolleyScoreboardResult = txtVolleyWebsite.Text;
+            HandballMatch.getInstance().showVolleyService = chkVolleyShowService.Checked;
+
             HandballMatch.getInstance().autoHideIntro = chkAutoHideIntro.Checked;
             HandballMatch.getInstance().autoHideIntroSeconds = ((int)nudAutoHideIntroSeconds.Value);
             HandballMatch.getInstance().autoHideTeam1 = chkAutoHideIntro.Checked;
@@ -1379,6 +1432,8 @@ namespace HandballCliente
             txtIntroTitle.Text = HandballMatch.getInstance().eventTitle;
             txtNombreScoreLocal.Text = HandballMatch.getInstance().team1ScoreName;
             txtNombreScoreVisitante.Text = HandballMatch.getInstance().team2ScoreName;
+            txtVolleyHomeTeam.Text = HandballMatch.getInstance().team1ScoreName;
+            txtVolleyGuestTeam.Text = HandballMatch.getInstance().team2ScoreName;
 
             txtServerAddress.Text = HandballMatch.getInstance().serverAddress;
             txtServerPort.Text = HandballMatch.getInstance().serverPort;
@@ -1420,6 +1475,10 @@ namespace HandballCliente
             nudClockLengthSeconds.Value = HandballMatch.getInstance().scoreClockMatchSeconds;
             nudExclutionLengthMinutes.Value = HandballMatch.getInstance().scoreClockExclutionMinutes;
             nudExclutionLengthSeconds.Value = HandballMatch.getInstance().scoreClockExclutionSeconds;
+
+            txtVolleyTitle.Text = HandballMatch.getInstance().titleVolleyScoreboard;
+            txtVolleyWebsite.Text = HandballMatch.getInstance().websiteVolleyScoreboardResult;
+            chkVolleyShowService.Checked = HandballMatch.getInstance().showVolleyService;
 
             FillTeamPlayers(lvwHomeTeamPlayers, HandballMatch.getInstance().team1Players);
             FillTeamPlayers(lvwGuestTeamPlayers, HandballMatch.getInstance().team2Players);
@@ -2132,6 +2191,61 @@ namespace HandballCliente
         private void btnStopWebcam_Click(object sender, EventArgs e)
         {
             stopWebcam();
+        }
+
+        private void nudVolleyGuest1SetPoints_ValueChanged(object sender, EventArgs e)
+        {
+            watchVolleyGame();
+        }
+
+        private void nudVolleyHome2SetPoints_ValueChanged(object sender, EventArgs e)
+        {
+            watchVolleyGame();
+        }
+
+        private void nudVolleyGuest2SetPoints_ValueChanged(object sender, EventArgs e)
+        {
+            watchVolleyGame();
+        }
+
+        private void nudVolleyHome3SetPoints_ValueChanged(object sender, EventArgs e)
+        {
+            watchVolleyGame();
+        }
+
+        private void nudVolleyGuest3SetPoints_ValueChanged(object sender, EventArgs e)
+        {
+            watchVolleyGame();
+        }
+
+        private void nudVolleyHome4SetPoints_ValueChanged(object sender, EventArgs e)
+        {
+            watchVolleyGame();
+        }
+
+        private void nudVolleyGuest4SetPoints_ValueChanged(object sender, EventArgs e)
+        {
+            watchVolleyGame();
+        }
+
+        private void nudVolleyHome5SetPoints_ValueChanged(object sender, EventArgs e)
+        {
+            watchVolleyGame();
+        }
+
+        private void nudVolleyGuest5SetPoints_ValueChanged(object sender, EventArgs e)
+        {
+            watchVolleyGame();
+        }
+
+        private void nudVolleyHomeSets_ValueChanged(object sender, EventArgs e)
+        {
+            watchVolleyGame();
+        }
+
+        private void nudVolleyGuestSets_ValueChanged(object sender, EventArgs e)
+        {
+            watchVolleyGame();
         }
     }
 }

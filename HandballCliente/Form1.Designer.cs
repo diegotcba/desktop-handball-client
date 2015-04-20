@@ -47,6 +47,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.cmbWebcamResolution = new System.Windows.Forms.ComboBox();
+            this.label59 = new System.Windows.Forms.Label();
             this.cmbWebcam = new System.Windows.Forms.ComboBox();
             this.label54 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -302,6 +304,11 @@
             this.btnStopVolleyResult = new System.Windows.Forms.Button();
             this.btnStartVolleyResult = new System.Windows.Forms.Button();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.chkVolleyShowService = new System.Windows.Forms.CheckBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.txtVolleyWebsite = new System.Windows.Forms.TextBox();
+            this.label57 = new System.Windows.Forms.Label();
+            this.txtVolleyTitle = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.nudVolleyPointsPerSet = new System.Windows.Forms.NumericUpDown();
@@ -360,6 +367,8 @@
             this.tmrPositions = new System.Windows.Forms.Timer(this.components);
             this.tmrTwitter = new System.Windows.Forms.Timer(this.components);
             this.tmrVolleyResult = new System.Windows.Forms.Timer(this.components);
+            this.label60 = new System.Windows.Forms.Label();
+            this.cmbVolleyScoreboardFontSize = new System.Windows.Forms.ComboBox();
             this.mstMenues.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -572,6 +581,8 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.cmbWebcamResolution);
+            this.groupBox10.Controls.Add(this.label59);
             this.groupBox10.Controls.Add(this.cmbWebcam);
             this.groupBox10.Controls.Add(this.label54);
             this.groupBox10.Controls.Add(this.numericUpDown1);
@@ -586,6 +597,24 @@
             this.groupBox10.TabIndex = 3;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Colores";
+            // 
+            // cmbWebcamResolution
+            // 
+            this.cmbWebcamResolution.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbWebcamResolution.FormattingEnabled = true;
+            this.cmbWebcamResolution.Location = new System.Drawing.Point(87, 86);
+            this.cmbWebcamResolution.Name = "cmbWebcamResolution";
+            this.cmbWebcamResolution.Size = new System.Drawing.Size(215, 21);
+            this.cmbWebcamResolution.TabIndex = 42;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(16, 89);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(63, 13);
+            this.label59.TabIndex = 41;
+            this.label59.Text = "Resolucion:";
             // 
             // cmbWebcam
             // 
@@ -607,7 +636,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(212, 149);
+            this.numericUpDown1.Location = new System.Drawing.Point(178, 147);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             60,
             0,
@@ -631,7 +660,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(121, 149);
+            this.checkBox1.Location = new System.Drawing.Point(87, 147);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(85, 17);
             this.checkBox1.TabIndex = 36;
@@ -641,7 +670,7 @@
             // btnStopWebcam
             // 
             this.btnStopWebcam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStopWebcam.Location = new System.Drawing.Point(121, 175);
+            this.btnStopWebcam.Location = new System.Drawing.Point(233, 138);
             this.btnStopWebcam.Name = "btnStopWebcam";
             this.btnStopWebcam.Size = new System.Drawing.Size(73, 38);
             this.btnStopWebcam.TabIndex = 38;
@@ -652,7 +681,7 @@
             // btnStartWebcam
             // 
             this.btnStartWebcam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartWebcam.Location = new System.Drawing.Point(121, 101);
+            this.btnStartWebcam.Location = new System.Drawing.Point(6, 136);
             this.btnStartWebcam.Name = "btnStartWebcam";
             this.btnStartWebcam.Size = new System.Drawing.Size(73, 38);
             this.btnStartWebcam.TabIndex = 35;
@@ -3272,9 +3301,9 @@
             this.groupBox22.Controls.Add(this.chkAutoHideVolleyResult);
             this.groupBox22.Controls.Add(this.btnStopVolleyResult);
             this.groupBox22.Controls.Add(this.btnStartVolleyResult);
-            this.groupBox22.Location = new System.Drawing.Point(7, 229);
+            this.groupBox22.Location = new System.Drawing.Point(7, 248);
             this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Size = new System.Drawing.Size(727, 88);
+            this.groupBox22.Size = new System.Drawing.Size(727, 69);
             this.groupBox22.TabIndex = 1;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "Resultado";
@@ -3283,7 +3312,7 @@
             // 
             this.cmbTemplateVolleyResult.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTemplateVolleyResult.FormattingEnabled = true;
-            this.cmbTemplateVolleyResult.Location = new System.Drawing.Point(89, 42);
+            this.cmbTemplateVolleyResult.Location = new System.Drawing.Point(71, 26);
             this.cmbTemplateVolleyResult.Name = "cmbTemplateVolleyResult";
             this.cmbTemplateVolleyResult.Size = new System.Drawing.Size(215, 21);
             this.cmbTemplateVolleyResult.TabIndex = 30;
@@ -3291,7 +3320,7 @@
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(19, 45);
+            this.label51.Location = new System.Drawing.Point(19, 29);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(54, 13);
             this.label51.TabIndex = 63;
@@ -3299,7 +3328,7 @@
             // 
             // nudAutoHideVolleyResultSeconds
             // 
-            this.nudAutoHideVolleyResultSeconds.Location = new System.Drawing.Point(566, 46);
+            this.nudAutoHideVolleyResultSeconds.Location = new System.Drawing.Point(566, 30);
             this.nudAutoHideVolleyResultSeconds.Maximum = new decimal(new int[] {
             60,
             0,
@@ -3323,7 +3352,7 @@
             // chkAutoHideVolleyResult
             // 
             this.chkAutoHideVolleyResult.AutoSize = true;
-            this.chkAutoHideVolleyResult.Location = new System.Drawing.Point(475, 46);
+            this.chkAutoHideVolleyResult.Location = new System.Drawing.Point(475, 30);
             this.chkAutoHideVolleyResult.Name = "chkAutoHideVolleyResult";
             this.chkAutoHideVolleyResult.Size = new System.Drawing.Size(85, 17);
             this.chkAutoHideVolleyResult.TabIndex = 32;
@@ -3333,7 +3362,7 @@
             // btnStopVolleyResult
             // 
             this.btnStopVolleyResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStopVolleyResult.Location = new System.Drawing.Point(624, 35);
+            this.btnStopVolleyResult.Location = new System.Drawing.Point(624, 19);
             this.btnStopVolleyResult.Name = "btnStopVolleyResult";
             this.btnStopVolleyResult.Size = new System.Drawing.Size(73, 38);
             this.btnStopVolleyResult.TabIndex = 34;
@@ -3344,7 +3373,7 @@
             // btnStartVolleyResult
             // 
             this.btnStartVolleyResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartVolleyResult.Location = new System.Drawing.Point(393, 35);
+            this.btnStartVolleyResult.Location = new System.Drawing.Point(393, 19);
             this.btnStartVolleyResult.Name = "btnStartVolleyResult";
             this.btnStartVolleyResult.Size = new System.Drawing.Size(73, 38);
             this.btnStartVolleyResult.TabIndex = 31;
@@ -3354,6 +3383,13 @@
             // 
             // groupBox21
             // 
+            this.groupBox21.Controls.Add(this.label60);
+            this.groupBox21.Controls.Add(this.cmbVolleyScoreboardFontSize);
+            this.groupBox21.Controls.Add(this.chkVolleyShowService);
+            this.groupBox21.Controls.Add(this.label58);
+            this.groupBox21.Controls.Add(this.txtVolleyWebsite);
+            this.groupBox21.Controls.Add(this.label57);
+            this.groupBox21.Controls.Add(this.txtVolleyTitle);
             this.groupBox21.Controls.Add(this.label56);
             this.groupBox21.Controls.Add(this.label55);
             this.groupBox21.Controls.Add(this.nudVolleyPointsPerSet);
@@ -3393,15 +3429,57 @@
             this.groupBox21.Controls.Add(this.txtVolleyHomeTeam);
             this.groupBox21.Location = new System.Drawing.Point(6, 6);
             this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Size = new System.Drawing.Size(728, 217);
+            this.groupBox21.Size = new System.Drawing.Size(728, 236);
             this.groupBox21.TabIndex = 0;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "Scoreboard";
             // 
+            // chkVolleyShowService
+            // 
+            this.chkVolleyShowService.AutoSize = true;
+            this.chkVolleyShowService.Location = new System.Drawing.Point(615, 193);
+            this.chkVolleyShowService.Name = "chkVolleyShowService";
+            this.chkVolleyShowService.Size = new System.Drawing.Size(102, 17);
+            this.chkVolleyShowService.TabIndex = 74;
+            this.chkVolleyShowService.Text = "Mostrar Servicio";
+            this.chkVolleyShowService.UseVisualStyleBackColor = true;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(469, 21);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(49, 13);
+            this.label58.TabIndex = 73;
+            this.label58.Text = "Website:";
+            // 
+            // txtVolleyWebsite
+            // 
+            this.txtVolleyWebsite.Location = new System.Drawing.Point(520, 18);
+            this.txtVolleyWebsite.Name = "txtVolleyWebsite";
+            this.txtVolleyWebsite.Size = new System.Drawing.Size(159, 20);
+            this.txtVolleyWebsite.TabIndex = 72;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(13, 21);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(53, 13);
+            this.label57.TabIndex = 71;
+            this.label57.Text = "Instancia:";
+            // 
+            // txtVolleyTitle
+            // 
+            this.txtVolleyTitle.Location = new System.Drawing.Point(72, 19);
+            this.txtVolleyTitle.Name = "txtVolleyTitle";
+            this.txtVolleyTitle.Size = new System.Drawing.Size(376, 20);
+            this.txtVolleyTitle.TabIndex = 70;
+            // 
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(355, 170);
+            this.label56.Location = new System.Drawing.Point(345, 194);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(66, 13);
             this.label56.TabIndex = 69;
@@ -3410,7 +3488,7 @@
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(497, 171);
+            this.label55.Location = new System.Drawing.Point(478, 195);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(69, 13);
             this.label55.TabIndex = 68;
@@ -3418,7 +3496,7 @@
             // 
             // nudVolleyPointsPerSet
             // 
-            this.nudVolleyPointsPerSet.Location = new System.Drawing.Point(572, 168);
+            this.nudVolleyPointsPerSet.Location = new System.Drawing.Point(553, 192);
             this.nudVolleyPointsPerSet.Maximum = new decimal(new int[] {
             99,
             0,
@@ -3441,7 +3519,7 @@
             // 
             // nudVolleySetsPerMatch
             // 
-            this.nudVolleySetsPerMatch.Location = new System.Drawing.Point(426, 168);
+            this.nudVolleySetsPerMatch.Location = new System.Drawing.Point(416, 192);
             this.nudVolleySetsPerMatch.Maximum = new decimal(new int[] {
             5,
             0,
@@ -3466,15 +3544,15 @@
             // 
             this.cmbTemplateVolleyScoreboard.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTemplateVolleyScoreboard.FormattingEnabled = true;
-            this.cmbTemplateVolleyScoreboard.Location = new System.Drawing.Point(90, 165);
+            this.cmbTemplateVolleyScoreboard.Location = new System.Drawing.Point(65, 191);
             this.cmbTemplateVolleyScoreboard.Name = "cmbTemplateVolleyScoreboard";
-            this.cmbTemplateVolleyScoreboard.Size = new System.Drawing.Size(215, 21);
+            this.cmbTemplateVolleyScoreboard.Size = new System.Drawing.Size(195, 21);
             this.cmbTemplateVolleyScoreboard.TabIndex = 29;
             // 
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(20, 168);
+            this.label52.Location = new System.Drawing.Point(13, 194);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(54, 13);
             this.label52.TabIndex = 65;
@@ -3484,7 +3562,7 @@
             // 
             this.panel1.Controls.Add(this.radVolleyGuestServe);
             this.panel1.Controls.Add(this.radVolleyHomeServe);
-            this.panel1.Location = new System.Drawing.Point(533, 49);
+            this.panel1.Location = new System.Drawing.Point(533, 75);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(77, 42);
             this.panel1.TabIndex = 58;
@@ -3513,7 +3591,7 @@
             // 
             // nudAutoHideVolleyScoreboardSeconds
             // 
-            this.nudAutoHideVolleyScoreboardSeconds.Location = new System.Drawing.Point(478, 122);
+            this.nudAutoHideVolleyScoreboardSeconds.Location = new System.Drawing.Point(478, 148);
             this.nudAutoHideVolleyScoreboardSeconds.Maximum = new decimal(new int[] {
             60,
             0,
@@ -3537,7 +3615,7 @@
             // chkAutoHideVolleyScoreboard
             // 
             this.chkAutoHideVolleyScoreboard.AutoSize = true;
-            this.chkAutoHideVolleyScoreboard.Location = new System.Drawing.Point(387, 122);
+            this.chkAutoHideVolleyScoreboard.Location = new System.Drawing.Point(387, 148);
             this.chkAutoHideVolleyScoreboard.Name = "chkAutoHideVolleyScoreboard";
             this.chkAutoHideVolleyScoreboard.Size = new System.Drawing.Size(85, 17);
             this.chkAutoHideVolleyScoreboard.TabIndex = 26;
@@ -3547,7 +3625,7 @@
             // btnStopVolleyScoreboard
             // 
             this.btnStopVolleyScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStopVolleyScoreboard.Location = new System.Drawing.Point(536, 111);
+            this.btnStopVolleyScoreboard.Location = new System.Drawing.Point(536, 137);
             this.btnStopVolleyScoreboard.Name = "btnStopVolleyScoreboard";
             this.btnStopVolleyScoreboard.Size = new System.Drawing.Size(73, 38);
             this.btnStopVolleyScoreboard.TabIndex = 28;
@@ -3558,7 +3636,7 @@
             // btnStartVolleyScoreboard
             // 
             this.btnStartVolleyScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartVolleyScoreboard.Location = new System.Drawing.Point(305, 111);
+            this.btnStartVolleyScoreboard.Location = new System.Drawing.Point(305, 137);
             this.btnStartVolleyScoreboard.Name = "btnStartVolleyScoreboard";
             this.btnStartVolleyScoreboard.Size = new System.Drawing.Size(73, 38);
             this.btnStartVolleyScoreboard.TabIndex = 25;
@@ -3569,7 +3647,7 @@
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(13, 48);
+            this.label50.Location = new System.Drawing.Point(13, 74);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(36, 13);
             this.label50.TabIndex = 53;
@@ -3578,7 +3656,7 @@
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(13, 75);
+            this.label49.Location = new System.Drawing.Point(13, 101);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(50, 13);
             this.label49.TabIndex = 52;
@@ -3587,7 +3665,7 @@
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(488, 26);
+            this.label48.Location = new System.Drawing.Point(488, 52);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(28, 13);
             this.label48.TabIndex = 51;
@@ -3596,7 +3674,7 @@
             // radVolley2Set
             // 
             this.radVolley2Set.AutoSize = true;
-            this.radVolley2Set.Location = new System.Drawing.Point(254, 22);
+            this.radVolley2Set.Location = new System.Drawing.Point(254, 48);
             this.radVolley2Set.Name = "radVolley2Set";
             this.radVolley2Set.Size = new System.Drawing.Size(38, 17);
             this.radVolley2Set.TabIndex = 5;
@@ -3606,7 +3684,7 @@
             // radVolley3Set
             // 
             this.radVolley3Set.AutoSize = true;
-            this.radVolley3Set.Location = new System.Drawing.Point(306, 24);
+            this.radVolley3Set.Location = new System.Drawing.Point(306, 50);
             this.radVolley3Set.Name = "radVolley3Set";
             this.radVolley3Set.Size = new System.Drawing.Size(38, 17);
             this.radVolley3Set.TabIndex = 8;
@@ -3616,7 +3694,7 @@
             // radVolley4Set
             // 
             this.radVolley4Set.AutoSize = true;
-            this.radVolley4Set.Location = new System.Drawing.Point(358, 24);
+            this.radVolley4Set.Location = new System.Drawing.Point(358, 50);
             this.radVolley4Set.Name = "radVolley4Set";
             this.radVolley4Set.Size = new System.Drawing.Size(38, 17);
             this.radVolley4Set.TabIndex = 11;
@@ -3626,7 +3704,7 @@
             // radVolley5Set
             // 
             this.radVolley5Set.AutoSize = true;
-            this.radVolley5Set.Location = new System.Drawing.Point(410, 24);
+            this.radVolley5Set.Location = new System.Drawing.Point(410, 50);
             this.radVolley5Set.Name = "radVolley5Set";
             this.radVolley5Set.Size = new System.Drawing.Size(38, 17);
             this.radVolley5Set.TabIndex = 14;
@@ -3637,7 +3715,7 @@
             // 
             this.radVolley1Set.AutoSize = true;
             this.radVolley1Set.Checked = true;
-            this.radVolley1Set.Location = new System.Drawing.Point(202, 22);
+            this.radVolley1Set.Location = new System.Drawing.Point(202, 48);
             this.radVolley1Set.Name = "radVolley1Set";
             this.radVolley1Set.Size = new System.Drawing.Size(38, 17);
             this.radVolley1Set.TabIndex = 2;
@@ -3647,7 +3725,7 @@
             // 
             // nudVolleyGuestSets
             // 
-            this.nudVolleyGuestSets.Location = new System.Drawing.Point(481, 72);
+            this.nudVolleyGuestSets.Location = new System.Drawing.Point(481, 98);
             this.nudVolleyGuestSets.Maximum = new decimal(new int[] {
             99,
             0,
@@ -3657,10 +3735,11 @@
             this.nudVolleyGuestSets.Size = new System.Drawing.Size(46, 20);
             this.nudVolleyGuestSets.TabIndex = 18;
             this.nudVolleyGuestSets.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudVolleyGuestSets.ValueChanged += new System.EventHandler(this.nudVolleyGuestSets_ValueChanged);
             // 
             // nudVolleyHomeSets
             // 
-            this.nudVolleyHomeSets.Location = new System.Drawing.Point(481, 46);
+            this.nudVolleyHomeSets.Location = new System.Drawing.Point(481, 72);
             this.nudVolleyHomeSets.Maximum = new decimal(new int[] {
             99,
             0,
@@ -3670,10 +3749,11 @@
             this.nudVolleyHomeSets.Size = new System.Drawing.Size(46, 20);
             this.nudVolleyHomeSets.TabIndex = 17;
             this.nudVolleyHomeSets.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudVolleyHomeSets.ValueChanged += new System.EventHandler(this.nudVolleyHomeSets_ValueChanged);
             // 
             // nudVolleyGuest4SetPoints
             // 
-            this.nudVolleyGuest4SetPoints.Location = new System.Drawing.Point(350, 72);
+            this.nudVolleyGuest4SetPoints.Location = new System.Drawing.Point(350, 98);
             this.nudVolleyGuest4SetPoints.Maximum = new decimal(new int[] {
             99,
             0,
@@ -3683,10 +3763,11 @@
             this.nudVolleyGuest4SetPoints.Size = new System.Drawing.Size(46, 20);
             this.nudVolleyGuest4SetPoints.TabIndex = 13;
             this.nudVolleyGuest4SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudVolleyGuest4SetPoints.ValueChanged += new System.EventHandler(this.nudVolleyGuest4SetPoints_ValueChanged);
             // 
             // nudVolleyHome4SetPoints
             // 
-            this.nudVolleyHome4SetPoints.Location = new System.Drawing.Point(350, 46);
+            this.nudVolleyHome4SetPoints.Location = new System.Drawing.Point(350, 72);
             this.nudVolleyHome4SetPoints.Maximum = new decimal(new int[] {
             99,
             0,
@@ -3696,10 +3777,11 @@
             this.nudVolleyHome4SetPoints.Size = new System.Drawing.Size(46, 20);
             this.nudVolleyHome4SetPoints.TabIndex = 12;
             this.nudVolleyHome4SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudVolleyHome4SetPoints.ValueChanged += new System.EventHandler(this.nudVolleyHome4SetPoints_ValueChanged);
             // 
             // nudVolleyGuest3SetPoints
             // 
-            this.nudVolleyGuest3SetPoints.Location = new System.Drawing.Point(298, 72);
+            this.nudVolleyGuest3SetPoints.Location = new System.Drawing.Point(298, 98);
             this.nudVolleyGuest3SetPoints.Maximum = new decimal(new int[] {
             99,
             0,
@@ -3709,10 +3791,11 @@
             this.nudVolleyGuest3SetPoints.Size = new System.Drawing.Size(46, 20);
             this.nudVolleyGuest3SetPoints.TabIndex = 10;
             this.nudVolleyGuest3SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudVolleyGuest3SetPoints.ValueChanged += new System.EventHandler(this.nudVolleyGuest3SetPoints_ValueChanged);
             // 
             // nudVolleyHome3SetPoints
             // 
-            this.nudVolleyHome3SetPoints.Location = new System.Drawing.Point(298, 46);
+            this.nudVolleyHome3SetPoints.Location = new System.Drawing.Point(298, 72);
             this.nudVolleyHome3SetPoints.Maximum = new decimal(new int[] {
             99,
             0,
@@ -3722,10 +3805,11 @@
             this.nudVolleyHome3SetPoints.Size = new System.Drawing.Size(46, 20);
             this.nudVolleyHome3SetPoints.TabIndex = 9;
             this.nudVolleyHome3SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudVolleyHome3SetPoints.ValueChanged += new System.EventHandler(this.nudVolleyHome3SetPoints_ValueChanged);
             // 
             // nudVolleyGuest2SetPoints
             // 
-            this.nudVolleyGuest2SetPoints.Location = new System.Drawing.Point(246, 71);
+            this.nudVolleyGuest2SetPoints.Location = new System.Drawing.Point(246, 97);
             this.nudVolleyGuest2SetPoints.Maximum = new decimal(new int[] {
             99,
             0,
@@ -3735,10 +3819,11 @@
             this.nudVolleyGuest2SetPoints.Size = new System.Drawing.Size(46, 20);
             this.nudVolleyGuest2SetPoints.TabIndex = 7;
             this.nudVolleyGuest2SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudVolleyGuest2SetPoints.ValueChanged += new System.EventHandler(this.nudVolleyGuest2SetPoints_ValueChanged);
             // 
             // nudVolleyHome2SetPoints
             // 
-            this.nudVolleyHome2SetPoints.Location = new System.Drawing.Point(246, 45);
+            this.nudVolleyHome2SetPoints.Location = new System.Drawing.Point(246, 71);
             this.nudVolleyHome2SetPoints.Maximum = new decimal(new int[] {
             99,
             0,
@@ -3748,10 +3833,11 @@
             this.nudVolleyHome2SetPoints.Size = new System.Drawing.Size(46, 20);
             this.nudVolleyHome2SetPoints.TabIndex = 6;
             this.nudVolleyHome2SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudVolleyHome2SetPoints.ValueChanged += new System.EventHandler(this.nudVolleyHome2SetPoints_ValueChanged);
             // 
             // nudVolleyGuest1SetPoints
             // 
-            this.nudVolleyGuest1SetPoints.Location = new System.Drawing.Point(194, 71);
+            this.nudVolleyGuest1SetPoints.Location = new System.Drawing.Point(194, 97);
             this.nudVolleyGuest1SetPoints.Maximum = new decimal(new int[] {
             99,
             0,
@@ -3761,10 +3847,11 @@
             this.nudVolleyGuest1SetPoints.Size = new System.Drawing.Size(46, 20);
             this.nudVolleyGuest1SetPoints.TabIndex = 4;
             this.nudVolleyGuest1SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudVolleyGuest1SetPoints.ValueChanged += new System.EventHandler(this.nudVolleyGuest1SetPoints_ValueChanged);
             // 
             // nudVolleyHome1SetPoints
             // 
-            this.nudVolleyHome1SetPoints.Location = new System.Drawing.Point(194, 45);
+            this.nudVolleyHome1SetPoints.Location = new System.Drawing.Point(194, 71);
             this.nudVolleyHome1SetPoints.Maximum = new decimal(new int[] {
             99,
             0,
@@ -3779,7 +3866,7 @@
             // btnUpdateVolleyScoreboard
             // 
             this.btnUpdateVolleyScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateVolleyScoreboard.Location = new System.Drawing.Point(122, 111);
+            this.btnUpdateVolleyScoreboard.Location = new System.Drawing.Point(122, 137);
             this.btnUpdateVolleyScoreboard.Name = "btnUpdateVolleyScoreboard";
             this.btnUpdateVolleyScoreboard.Size = new System.Drawing.Size(106, 37);
             this.btnUpdateVolleyScoreboard.TabIndex = 24;
@@ -3790,7 +3877,7 @@
             // chkAutoUpdateVolleyScoreboard
             // 
             this.chkAutoUpdateVolleyScoreboard.AutoSize = true;
-            this.chkAutoUpdateVolleyScoreboard.Location = new System.Drawing.Point(16, 122);
+            this.chkAutoUpdateVolleyScoreboard.Location = new System.Drawing.Point(16, 148);
             this.chkAutoUpdateVolleyScoreboard.Name = "chkAutoUpdateVolleyScoreboard";
             this.chkAutoUpdateVolleyScoreboard.Size = new System.Drawing.Size(97, 17);
             this.chkAutoUpdateVolleyScoreboard.TabIndex = 23;
@@ -3800,7 +3887,7 @@
             // btnVolleyHomeAddPoint
             // 
             this.btnVolleyHomeAddPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolleyHomeAddPoint.Location = new System.Drawing.Point(616, 36);
+            this.btnVolleyHomeAddPoint.Location = new System.Drawing.Point(616, 62);
             this.btnVolleyHomeAddPoint.Name = "btnVolleyHomeAddPoint";
             this.btnVolleyHomeAddPoint.Size = new System.Drawing.Size(63, 29);
             this.btnVolleyHomeAddPoint.TabIndex = 21;
@@ -3811,7 +3898,7 @@
             // btnVolleyGuestAddPoint
             // 
             this.btnVolleyGuestAddPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolleyGuestAddPoint.Location = new System.Drawing.Point(616, 72);
+            this.btnVolleyGuestAddPoint.Location = new System.Drawing.Point(616, 98);
             this.btnVolleyGuestAddPoint.Name = "btnVolleyGuestAddPoint";
             this.btnVolleyGuestAddPoint.Size = new System.Drawing.Size(63, 29);
             this.btnVolleyGuestAddPoint.TabIndex = 22;
@@ -3821,7 +3908,7 @@
             // 
             // nudVolleyGuest5SetPoints
             // 
-            this.nudVolleyGuest5SetPoints.Location = new System.Drawing.Point(402, 72);
+            this.nudVolleyGuest5SetPoints.Location = new System.Drawing.Point(402, 98);
             this.nudVolleyGuest5SetPoints.Maximum = new decimal(new int[] {
             99,
             0,
@@ -3831,10 +3918,11 @@
             this.nudVolleyGuest5SetPoints.Size = new System.Drawing.Size(46, 20);
             this.nudVolleyGuest5SetPoints.TabIndex = 16;
             this.nudVolleyGuest5SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudVolleyGuest5SetPoints.ValueChanged += new System.EventHandler(this.nudVolleyGuest5SetPoints_ValueChanged);
             // 
             // nudVolleyHome5SetPoints
             // 
-            this.nudVolleyHome5SetPoints.Location = new System.Drawing.Point(402, 46);
+            this.nudVolleyHome5SetPoints.Location = new System.Drawing.Point(402, 72);
             this.nudVolleyHome5SetPoints.Maximum = new decimal(new int[] {
             99,
             0,
@@ -3844,17 +3932,18 @@
             this.nudVolleyHome5SetPoints.Size = new System.Drawing.Size(46, 20);
             this.nudVolleyHome5SetPoints.TabIndex = 15;
             this.nudVolleyHome5SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudVolleyHome5SetPoints.ValueChanged += new System.EventHandler(this.nudVolleyHome5SetPoints_ValueChanged);
             // 
             // txtVolleyGuestTeam
             // 
-            this.txtVolleyGuestTeam.Location = new System.Drawing.Point(65, 72);
+            this.txtVolleyGuestTeam.Location = new System.Drawing.Point(65, 98);
             this.txtVolleyGuestTeam.Name = "txtVolleyGuestTeam";
             this.txtVolleyGuestTeam.Size = new System.Drawing.Size(113, 20);
             this.txtVolleyGuestTeam.TabIndex = 1;
             // 
             // txtVolleyHomeTeam
             // 
-            this.txtVolleyHomeTeam.Location = new System.Drawing.Point(65, 46);
+            this.txtVolleyHomeTeam.Location = new System.Drawing.Point(65, 72);
             this.txtVolleyHomeTeam.Name = "txtVolleyHomeTeam";
             this.txtVolleyHomeTeam.Size = new System.Drawing.Size(113, 20);
             this.txtVolleyHomeTeam.TabIndex = 0;
@@ -3972,6 +4061,31 @@
             // tmrVolleyResult
             // 
             this.tmrVolleyResult.Tick += new System.EventHandler(this.tmrVolleyResult_Tick);
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(266, 195);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(30, 13);
+            this.label60.TabIndex = 76;
+            this.label60.Text = "Size:";
+            // 
+            // cmbVolleyScoreboardFontSize
+            // 
+            this.cmbVolleyScoreboardFontSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVolleyScoreboardFontSize.FormattingEnabled = true;
+            this.cmbVolleyScoreboardFontSize.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.cmbVolleyScoreboardFontSize.Location = new System.Drawing.Point(302, 192);
+            this.cmbVolleyScoreboardFontSize.Name = "cmbVolleyScoreboardFontSize";
+            this.cmbVolleyScoreboardFontSize.Size = new System.Drawing.Size(37, 21);
+            this.cmbVolleyScoreboardFontSize.TabIndex = 75;
             // 
             // Form1
             // 
@@ -4422,6 +4536,15 @@
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.NumericUpDown nudVolleyPointsPerSet;
         private System.Windows.Forms.NumericUpDown nudVolleySetsPerMatch;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.TextBox txtVolleyTitle;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.TextBox txtVolleyWebsite;
+        private System.Windows.Forms.CheckBox chkVolleyShowService;
+        private System.Windows.Forms.ComboBox cmbWebcamResolution;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.ComboBox cmbVolleyScoreboardFontSize;
     }
 }
 

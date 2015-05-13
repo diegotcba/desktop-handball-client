@@ -836,8 +836,8 @@ namespace HandballCliente
                     //Uri logo2Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
                     Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
 
-                    templateVolleyScoreboard.Fields.Add(new TemplateField("f0", txtVolleyHomeTeam.Text));
-                    templateVolleyScoreboard.Fields.Add(new TemplateField("f1", txtVolleyGuestTeam.Text));
+                    templateVolleyScoreboard.Fields.Add(new TemplateField("team1", txtVolleyHomeTeam.Text));
+                    templateVolleyScoreboard.Fields.Add(new TemplateField("team2", txtVolleyGuestTeam.Text));
                     templateVolleyScoreboard.Fields.Add(new TemplateField("f2", nudVolleyHomeSets.Value.ToString()));
                     templateVolleyScoreboard.Fields.Add(new TemplateField("f3", nudVolleyGuestSets.Value.ToString()));
                     templateVolleyScoreboard.Fields.Add(new TemplateField("f4", nudVolleyHome1SetPoints.Value.ToString()));
@@ -895,8 +895,8 @@ namespace HandballCliente
                 Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
 
 
-                templateVolleyScoreboard.Fields.Add(new TemplateField("f0", txtVolleyHomeTeam.Text));
-                templateVolleyScoreboard.Fields.Add(new TemplateField("f1", txtVolleyGuestTeam.Text));
+                templateVolleyScoreboard.Fields.Add(new TemplateField("team1", txtVolleyHomeTeam.Text));
+                templateVolleyScoreboard.Fields.Add(new TemplateField("team2", txtVolleyGuestTeam.Text));
                 templateVolleyScoreboard.Fields.Add(new TemplateField("f2", nudVolleyHomeSets.Value.ToString()));
                 templateVolleyScoreboard.Fields.Add(new TemplateField("f3", nudVolleyGuestSets.Value.ToString()));
                 templateVolleyScoreboard.Fields.Add(new TemplateField("f4", getVolleySetScore(1).Value.ToString()));
@@ -913,6 +913,7 @@ namespace HandballCliente
                 }
                 templateVolleyScoreboard.Fields.Add(new TemplateField("flag1", logo1Path.ToString()));
                 //templateVolleyScoreboard.Fields.Add(new TemplateField("flag2", logo2Path.ToString()));
+                templateVolleyScoreboard.Fields.Add(new TemplateField("fontsize", cmbVolleyScoreboardFontSize.Text));
 
                 //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
                 ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateVolleyScoreboard.TemplateDataText(), layerVolleyScoreboard.ToString()));

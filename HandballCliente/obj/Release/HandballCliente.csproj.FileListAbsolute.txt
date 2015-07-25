@@ -1,0 +1,17 @@
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\bin\Release\HandballCliente.exe.config
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\bin\Release\HandballCliente.exe.manifest
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\bin\Release\HandballCliente.application
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\bin\Release\HandballCliente.exe
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\bin\Release\HandballCliente.pdb
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Release\HandballCliente.ConfigLayers.resources
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Release\HandballCliente.ConfigRecording.resources
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Release\HandballCliente.Form1.resources
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Release\HandballCliente.Jugador.resources
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Release\HandballCliente.Posicion.resources
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Release\HandballCliente.Properties.Resources.resources
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Release\HandballCliente.csproj.GenerateResource.Cache
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Release\HandballCliente.exe.manifest
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Release\HandballCliente.application
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Release\HandballCliente.exe
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Release\HandballCliente.pdb
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Release\HandballCliente.csprojResolveAssemblyReference.cache

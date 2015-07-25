@@ -95,6 +95,10 @@ namespace HandballCliente
             cmbTemplatePositions.Items.Clear();
             cmbTemplateTwitter.Items.Clear();
             cmbTemplateVolleyScoreboard.Items.Clear();
+            cmbTemplateVolleyResult.Items.Clear();
+            cmbTemplateCountdown.Items.Clear();
+            cmbTemplateDynamicLogo.Items.Clear();
+            cmbLogoFile.Items.Clear();
         }
 
         private void clearPresentation()
@@ -132,14 +136,20 @@ namespace HandballCliente
             btnShowHideResult.Tag = "0";
             lockUnlockTemplates();
             radHomeTeamPlayers.Checked = true;
+
             trkVolume.Value = 10;
             trkImageScrollingSpeed.Value = 1;
 
             fillCombosTeamTextStyle();
             fillComboWebcam();
 
+            radVolleyHomeServe.Checked = true;
+            radVolleyHomeServe.Tag = 1;
+            radVolleyGuestServe.Tag = 0;
+            cmbVolleyScoreboardFontSize.Text = "14";
             nudVolleySetsPerMatch.Value = 5;
             nudVolleyPointsPerSet.Value = 11;
+            nudVolleyServicesPerPlayer.Value = 2;
         }
 
         private void fillCombosTeamTextStyle()
@@ -191,7 +201,6 @@ namespace HandballCliente
             cmbWebcamResolution.Items.Add("800x600");
             cmbWebcamResolution.Items.Add("1024x576");
             cmbWebcamResolution.Items.Add("1280x720");
-
         }
 
         private void setTopMost(bool stateTopMost)
@@ -205,6 +214,8 @@ namespace HandballCliente
             {
                 if (!casparServer.Connected)
                 {
+                    casparServer.ServerAdress = txtServerAddress.Text;
+                    casparServer.Port = Convert.ToInt32(txtServerPort.Text);
                     casparServer.Connect();
                     getServerTemplates();
                     getServerImageFiles();
@@ -252,6 +263,8 @@ namespace HandballCliente
                 fillCombosTemplate(cmbTemplateTwitter, templates);
                 fillCombosTemplate(cmbTemplateVolleyScoreboard, templates);
                 fillCombosTemplate(cmbTemplateVolleyResult,templates);
+                fillCombosTemplate(cmbTemplateCountdown, templates);
+                fillCombosTemplate(cmbTemplateDynamicLogo, templates);
             }
         }
 
@@ -267,6 +280,7 @@ namespace HandballCliente
                 fillCombosTemplate(cmbGuestTeamLogo, medias);
                 fillCombosTemplate(cmbBroadcastLogo, medias);
                 fillCombosTemplate(cmbImageScrolling, medias);
+                fillCombosTemplate(cmbLogoFile, medias);
             }
         }
 
@@ -423,6 +437,79 @@ namespace HandballCliente
                 //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
                 ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateUpdateScore.TemplateDataText(), layerScoreboard.ToString()));
                 System.Diagnostics.Debug.WriteLine(ri.Message);
+            }
+        }
+
+        private void showCountdown()
+        {
+            if (casparServer.Connected)
+            {
+                Template templateCountdown = new Template();
+                //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+
+                templateCountdown.Fields.Add(new TemplateField("countdownNumber", nudGameshowCounterSeconds.Value.ToString()));
+                //templateCountdown.Fields.Add(new TemplateField("team2Name", txtNombreScoreVisitante.Text));
+                //templateCountdown.Fields.Add(new TemplateField("team1Score", nudHomeTeamScore.Value.ToString()));
+                //templateCountdown.Fields.Add(new TemplateField("team2Score", nudGuestTeamScore.Value.ToString()));
+                //templateCountdown.Fields.Add(new TemplateField("gameTime", nudClockMinutes.Value.ToString() + ":" + nudClockSeconds.Value.ToString()));
+                //templateCountdown.Fields.Add(new TemplateField("halfNum", cmbHalf.Text));
+                //templateCountdown.Fields.Add(new TemplateField("logoScoreboard", logoPath.ToString()));
+
+                //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
+                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateCountdown.TemplateDataText(), cmbTemplateCountdown.Text, layerScoreboard.ToString()));
+                txtLogMessages.Text += "\n" + ri.Message;
+                //System.Diagnostics.Debug.WriteLine(ri.Message);
+            }
+        }
+
+        private void hideCountdown()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerScoreboard.ToString()));
+            }
+        }
+
+        private void startCountdown()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "countdownStartStop", layerScoreboard.ToString()));
+            }
+        }
+
+        private void stopCountdown()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "countdownStartStop", layerScoreboard.ToString()));
+            }
+        }
+
+        private void startDynamicLogo()
+        {
+            if (casparServer.Connected)
+            {
+                Template templateDynamicLogo = new Template();
+                Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+
+                templateDynamicLogo.Fields.Add(new TemplateField("positionX", nudDynamicLogoPosX.Value.ToString()));
+                templateDynamicLogo.Fields.Add(new TemplateField("positionY", nudDynamicLogoPosY.Value.ToString()));
+                templateDynamicLogo.Fields.Add(new TemplateField("logoWidth", nudDynamicLogoWidth.Value.ToString()));
+                templateDynamicLogo.Fields.Add(new TemplateField("logoHeight", nudDynamicLogoHeight.Value.ToString()));
+                templateDynamicLogo.Fields.Add(new TemplateField("logoFile", logoPath.ToString()));
+
+                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateDynamicLogo.TemplateDataText(), cmbTemplateDynamicLogo.Text, layerLogo.ToString()));
+                txtLogMessages.Text += "\n" + ri.Message;
+                //System.Diagnostics.Debug.WriteLine(ri.Message);
+            }
+        }
+
+        private void stopDynamicLogo()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerLogo.ToString()));
             }
         }
 
@@ -857,13 +944,6 @@ namespace HandballCliente
                     templateVolleyScoreboard.Fields.Add(new TemplateField("fontsize", cmbVolleyScoreboardFontSize.Text));
 
                     ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateVolleyScoreboard.TemplateDataText(), cmbTemplateVolleyScoreboard.Text, layerVolleyScoreboard.ToString()));
-
-                    //if (chkAutoHideVolleyScoreboard.Checked)
-                    //{
-                    //    tmrTwitter.Interval = ((int)nudAutoHideVolleyScoreboardSeconds.Value) * 1000;
-                    //    tmrTwitter.Enabled = true;
-                    //    tmrTwitter.Start();
-                    //}
                 }
             }
             else
@@ -877,11 +957,6 @@ namespace HandballCliente
             if (casparServer.Connected)
             {
                 casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerVolleyScoreboard.ToString()));
-                //if (chkAutoHideVolleyScoreboard.Checked)
-                //{
-                //    tmrTwitter.Stop();
-                //    tmrTwitter.Enabled = false;
-                //}
             }
         }
 
@@ -925,18 +1000,54 @@ namespace HandballCliente
         {
             getVolleySetScore((SourceButton.Name.Contains("Home") ? 1 : 2)).Value++;
 
-            if (SourceButton.Name.Contains("Home"))
-            {
-                radVolleyHomeServe.Checked = true;
-            }
-            else
-            {
-                radVolleyGuestServe.Checked = true;
-            }
+            evaluateVolleyService();
+
+            //if (SourceButton.Name.Contains("Home"))
+            //{
+            //    radVolleyHomeServe.Checked = true;
+            //}
+            //else
+            //{
+            //    radVolleyGuestServe.Checked = true;
+            //}
 
             evaluateVolleySetEnd();
 
             watchVolleyGame();
+        }
+
+        private void evaluateVolleyService()
+        {
+            RadioButton radioChecked = new RadioButton();
+            RadioButton radionNotChecked = new RadioButton();
+
+            if (radVolleyHomeServe.Checked)
+            {
+                radioChecked = radVolleyHomeServe;
+                radionNotChecked = radVolleyGuestServe;
+            }
+            else
+            {
+                radioChecked = radVolleyGuestServe;
+                radionNotChecked = radVolleyHomeServe;
+            }
+
+            if (((int)radioChecked.Tag) >= ((int)nudVolleyServicesPerPlayer.Value))
+            {
+                radioChecked.Checked = false;
+                radioChecked.Tag = 0;
+                radioChecked.Text = "Servicio";
+                radionNotChecked.Checked = true;
+                radionNotChecked.Tag = 1;
+                radionNotChecked.Text = "Servicio [" + (int)radionNotChecked.Tag + "]";
+            }
+            else
+            {
+                radioChecked.Tag = ((int)radioChecked.Tag) + 1;
+                radioChecked.Text = "Servicio [" + (int)radioChecked.Tag + "]";
+                radionNotChecked.Tag = 0;
+            }
+
         }
 
         private void watchVolleyGame()
@@ -1164,7 +1275,8 @@ namespace HandballCliente
             {
                 if (cmbAudioFiles.Text != "")
                 {
-                    casparServer.Execute(String.Format("PLAY 1-0 {0}{1}{0} CHANNEL_LAYOUT STEREO", (char)0x22, cmbAudioFiles.Text, (chkLoopAudioFile.Checked ? "LOOP" : "")));
+                    //casparServer.Execute(String.Format("PLAY 1 {0}{1}{0} CHANNEL_LAYOUT STEREO", (char)0x22, cmbAudioFiles.Text, (chkLoopAudioFile.Checked ? "LOOP" : "")));
+                    casparServer.Execute(String.Format("PLAY 1 {0}{1}{0} {2}", (char)0x22, cmbAudioFiles.Text, (chkLoopAudioFile.Checked ? "LOOP" : "")));
                 }
             }
         }
@@ -1173,7 +1285,7 @@ namespace HandballCliente
         {
             if (casparServer.Connected)
             {
-                casparServer.Execute(String.Format("STOP 1-0"));
+                casparServer.Execute(String.Format("STOP 1"));
             }
         }
 
@@ -1181,7 +1293,7 @@ namespace HandballCliente
         {
             if (casparServer.Connected)
             {
-                casparServer.Execute(String.Format("PAUSE 1-0"));
+                casparServer.Execute(String.Format("PAUSE 1"));
             }
         }
 
@@ -1191,7 +1303,8 @@ namespace HandballCliente
             {
                 if (cmbWebcam.Text != "" && cmbWebcamResolution.Text != "")
                 {
-                    casparServer.Execute(String.Format("PLAY 1-{2} {0}dshow://video={1}{0} {0}-video_size {3} -framerate 30{0}", (char)0x22, cmbWebcam.Text, layerVideo.ToString(),cmbWebcamResolution.Text));
+                    //casparServer.Execute(String.Format("PLAY 1-{2} {0}dshow://video={1}{0} {0}-video_size {3} -framerate 30{0}", (char)0x22, cmbWebcam.Text, layerVideo.ToString(),cmbWebcamResolution.Text));
+                    casparServer.Execute(String.Format("PLAY 1-{2} {0}dshow://video={1}{0} {0}-video_size {3} -framerate 30{0}", (char)0x22, cmbWebcam.Text, layerVideo.ToString(), cmbWebcamResolution.Text));
                 }
             }
         }
@@ -1374,6 +1487,9 @@ namespace HandballCliente
             HandballMatch.getInstance().leagueLogo = cmbFederationLogo.Text;
             HandballMatch.getInstance().team1Coach = txtHomeTeamCoach.Text;
             HandballMatch.getInstance().team2Coach = txtGuestTeamPlayers.Text;
+            HandballMatch.getInstance().teamPlayerFontSize = int.Parse(cmbPlayersFontSize.Text);
+            HandballMatch.getInstance().teamPlayerLineSpacing = int.Parse(cmbPlayersFontLineSpacing.Text);
+            HandballMatch.getInstance().teamPlayerLetterSpacing = int.Parse(cmbPlayersFontLetterSpacing.Text);
             HandballMatch.getInstance().recordingFileName = txtRecordingFileName.Text;
             HandballMatch.getInstance().positionsTitle = txtPositionsTitle.Text;
             HandballMatch.getInstance().positionsSubtitle = txtPositionsSubtitle.Text;
@@ -1387,7 +1503,7 @@ namespace HandballCliente
             HandballMatch.getInstance().scoreClockSeconds = (int)nudClockSeconds.Value;
             HandballMatch.getInstance().scoreClockMatchMinutes = (int)nudClockLengthMinutes.Value;
             HandballMatch.getInstance().scoreClockMatchSeconds = (int)nudClockLengthSeconds.Value;
-            HandballMatch.getInstance().scoreAutoHideOnFinished = chkAutoHideOnClockEnd.Checked;
+            HandballMatch.getInstance().scoreAutoHideOnClockFinished = chkAutoHideOnClockEnd.Checked;
             HandballMatch.getInstance().scoreClockExclutionMinutes = (int)nudExclutionLengthMinutes.Value;
             HandballMatch.getInstance().scoreClockExclutionSeconds = (int)nudExclutionLengthSeconds.Value;
 
@@ -1458,6 +1574,9 @@ namespace HandballCliente
             cmbFederationLogo.Text = HandballMatch.getInstance().leagueLogo;
             txtHomeTeamCoach.Text = HandballMatch.getInstance().team1Coach;
             txtGuestTeamPlayers.Text = HandballMatch.getInstance().team2Coach;
+            cmbPlayersFontSize.Text = HandballMatch.getInstance().teamPlayerFontSize.ToString();
+            cmbPlayersFontLineSpacing.Text = HandballMatch.getInstance().teamPlayerLineSpacing.ToString();
+            cmbPlayersFontLetterSpacing.Text = HandballMatch.getInstance().teamPlayerLetterSpacing.ToString();
             txtRecordingFileName.Text = HandballMatch.getInstance().recordingFileName;
             txtPositionsTitle.Text = HandballMatch.getInstance().positionsTitle;
             txtPositionsSubtitle.Text = HandballMatch.getInstance().positionsSubtitle;
@@ -1471,7 +1590,7 @@ namespace HandballCliente
             cmbHalf.Text = HandballMatch.getInstance().scoreHalf;
             nudClockMinutes.Value = HandballMatch.getInstance().scoreClockMinutes;
             nudClockSeconds.Value = HandballMatch.getInstance().scoreClockSeconds;
-            chkAutoHideOnClockEnd.Checked = HandballMatch.getInstance().scoreAutoHideOnFinished;
+            chkAutoHideOnClockEnd.Checked = HandballMatch.getInstance().scoreAutoHideOnClockFinished;
             nudClockLengthMinutes.Value = HandballMatch.getInstance().scoreClockMatchMinutes;
             nudClockLengthSeconds.Value = HandballMatch.getInstance().scoreClockMatchSeconds;
             nudExclutionLengthMinutes.Value = HandballMatch.getInstance().scoreClockExclutionMinutes;
@@ -2247,6 +2366,46 @@ namespace HandballCliente
         private void nudVolleyGuestSets_ValueChanged(object sender, EventArgs e)
         {
             watchVolleyGame();
+        }
+
+        private void radVolleyHomeServe_CheckedChanged(object sender, EventArgs e)
+        {
+            watchVolleyGame();
+        }
+
+        private void radVolleyGuestServe_CheckedChanged(object sender, EventArgs e)
+        {
+            watchVolleyGame();
+        }
+
+        private void btnShowCountdown_Click(object sender, EventArgs e)
+        {
+            showCountdown();
+        }
+
+        private void btnHideCountdown_Click(object sender, EventArgs e)
+        {
+            hideCountdown();
+        }
+
+        private void btnStartCountdown_Click(object sender, EventArgs e)
+        {
+            startCountdown();
+        }
+
+        private void btnStopCountdown_Click(object sender, EventArgs e)
+        {
+            stopCountdown();
+        }
+
+        private void btnStartDynamicLogo_Click(object sender, EventArgs e)
+        {
+            startDynamicLogo();
+        }
+
+        private void btnStopDynamicLogo_Click(object sender, EventArgs e)
+        {
+            stopDynamicLogo();
         }
     }
 }

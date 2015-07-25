@@ -47,14 +47,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HandballCliente.exe" size="188416">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HandballCliente.exe" size="195584">
       <assemblyIdentity name="HandballCliente" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>VTLxx23abhXlqRGIXPcKkuCBK6+fMg+SOGYZA6KYJlA=</dsig:DigestValue>
+        <dsig:DigestValue>iyWB9L4YemLZ1X4d2kE21cyIni8Nfw4j30r0LrrrsUk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

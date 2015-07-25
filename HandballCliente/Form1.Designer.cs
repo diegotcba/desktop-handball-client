@@ -51,8 +51,8 @@
             this.label59 = new System.Windows.Forms.Label();
             this.cmbWebcam = new System.Windows.Forms.ComboBox();
             this.label54 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.nudAutoHideWebcamSeconds = new System.Windows.Forms.NumericUpDown();
+            this.chkAutoHideWebcam = new System.Windows.Forms.CheckBox();
             this.btnStopWebcam = new System.Windows.Forms.Button();
             this.btnStartWebcam = new System.Windows.Forms.Button();
             this.txtWebcamOptions = new System.Windows.Forms.TextBox();
@@ -304,6 +304,10 @@
             this.btnStopVolleyResult = new System.Windows.Forms.Button();
             this.btnStartVolleyResult = new System.Windows.Forms.Button();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.nudVolleyServicesPerPlayer = new System.Windows.Forms.NumericUpDown();
+            this.label60 = new System.Windows.Forms.Label();
+            this.cmbVolleyScoreboardFontSize = new System.Windows.Forms.ComboBox();
             this.chkVolleyShowService = new System.Windows.Forms.CheckBox();
             this.label58 = new System.Windows.Forms.Label();
             this.txtVolleyWebsite = new System.Windows.Forms.TextBox();
@@ -348,6 +352,24 @@
             this.nudVolleyHome5SetPoints = new System.Windows.Forms.NumericUpDown();
             this.txtVolleyGuestTeam = new System.Windows.Forms.TextBox();
             this.txtVolleyHomeTeam = new System.Windows.Forms.TextBox();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.groupBox25 = new System.Windows.Forms.GroupBox();
+            this.cmbTemplateCountdown = new System.Windows.Forms.ComboBox();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.btnStopCountdown = new System.Windows.Forms.Button();
+            this.btnStartCountdown = new System.Windows.Forms.Button();
+            this.label63 = new System.Windows.Forms.Label();
+            this.nudGameshowCounterSeconds = new System.Windows.Forms.NumericUpDown();
+            this.chkAutoHideFinishedCountdown = new System.Windows.Forms.CheckBox();
+            this.btnHideCountdown = new System.Windows.Forms.Button();
+            this.btnShowCountdown = new System.Windows.Forms.Button();
+            this.groupBox24 = new System.Windows.Forms.GroupBox();
+            this.txtLogMessages = new System.Windows.Forms.TextBox();
+            this.groupBox23 = new System.Windows.Forms.GroupBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtEventDescription = new System.Windows.Forms.TextBox();
             this.dtpEventDate = new System.Windows.Forms.DateTimePicker();
@@ -367,13 +389,27 @@
             this.tmrPositions = new System.Windows.Forms.Timer(this.components);
             this.tmrTwitter = new System.Windows.Forms.Timer(this.components);
             this.tmrVolleyResult = new System.Windows.Forms.Timer(this.components);
-            this.label60 = new System.Windows.Forms.Label();
-            this.cmbVolleyScoreboardFontSize = new System.Windows.Forms.ComboBox();
+            this.groupBox26 = new System.Windows.Forms.GroupBox();
+            this.cmbTemplateDynamicLogo = new System.Windows.Forms.ComboBox();
+            this.label66 = new System.Windows.Forms.Label();
+            this.btnStopDynamicLogo = new System.Windows.Forms.Button();
+            this.btnStartDynamicLogo = new System.Windows.Forms.Button();
+            this.label68 = new System.Windows.Forms.Label();
+            this.nudDynamicLogoPosX = new System.Windows.Forms.NumericUpDown();
+            this.chkAutoHideDynamicLogo = new System.Windows.Forms.CheckBox();
+            this.label69 = new System.Windows.Forms.Label();
+            this.nudDynamicLogoWidth = new System.Windows.Forms.NumericUpDown();
+            this.label70 = new System.Windows.Forms.Label();
+            this.nudDynamicLogoPosY = new System.Windows.Forms.NumericUpDown();
+            this.label71 = new System.Windows.Forms.Label();
+            this.nudDynamicLogoHeight = new System.Windows.Forms.NumericUpDown();
+            this.cmbLogoFile = new System.Windows.Forms.ComboBox();
+            this.label72 = new System.Windows.Forms.Label();
             this.mstMenues.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideWebcamSeconds)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -422,6 +458,7 @@
             this.groupBox22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideVolleyResultSeconds)).BeginInit();
             this.groupBox21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyServicesPerPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleyPointsPerSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleySetsPerMatch)).BeginInit();
             this.panel1.SuspendLayout();
@@ -438,7 +475,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome1SetPoints)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest5SetPoints)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome5SetPoints)).BeginInit();
+            this.tabPage10.SuspendLayout();
+            this.groupBox25.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGameshowCounterSeconds)).BeginInit();
+            this.groupBox24.SuspendLayout();
+            this.groupBox23.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox26.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoPosX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoWidth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoPosY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoHeight)).BeginInit();
             this.SuspendLayout();
             // 
             // mstMenues
@@ -559,6 +606,7 @@
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage9);
+            this.tabControl1.Controls.Add(this.tabPage10);
             this.tabControl1.Location = new System.Drawing.Point(12, 126);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -585,8 +633,8 @@
             this.groupBox10.Controls.Add(this.label59);
             this.groupBox10.Controls.Add(this.cmbWebcam);
             this.groupBox10.Controls.Add(this.label54);
-            this.groupBox10.Controls.Add(this.numericUpDown1);
-            this.groupBox10.Controls.Add(this.checkBox1);
+            this.groupBox10.Controls.Add(this.nudAutoHideWebcamSeconds);
+            this.groupBox10.Controls.Add(this.chkAutoHideWebcam);
             this.groupBox10.Controls.Add(this.btnStopWebcam);
             this.groupBox10.Controls.Add(this.btnStartWebcam);
             this.groupBox10.Controls.Add(this.txtWebcamOptions);
@@ -596,7 +644,7 @@
             this.groupBox10.Size = new System.Drawing.Size(313, 223);
             this.groupBox10.TabIndex = 3;
             this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Colores";
+            this.groupBox10.Text = "Input:";
             // 
             // cmbWebcamResolution
             // 
@@ -634,38 +682,38 @@
             this.label54.TabIndex = 39;
             this.label54.Text = "Webcam:";
             // 
-            // numericUpDown1
+            // nudAutoHideWebcamSeconds
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(178, 147);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.nudAutoHideWebcamSeconds.Location = new System.Drawing.Point(178, 147);
+            this.nudAutoHideWebcamSeconds.Maximum = new decimal(new int[] {
             60,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.nudAutoHideWebcamSeconds.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(40, 20);
-            this.numericUpDown1.TabIndex = 37;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.nudAutoHideWebcamSeconds.Name = "nudAutoHideWebcamSeconds";
+            this.nudAutoHideWebcamSeconds.Size = new System.Drawing.Size(40, 20);
+            this.nudAutoHideWebcamSeconds.TabIndex = 37;
+            this.nudAutoHideWebcamSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudAutoHideWebcamSeconds.Value = new decimal(new int[] {
             3,
             0,
             0,
             0});
             // 
-            // checkBox1
+            // chkAutoHideWebcam
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(87, 147);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(85, 17);
-            this.checkBox1.TabIndex = 36;
-            this.checkBox1.Text = "Auto Ocultar";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkAutoHideWebcam.AutoSize = true;
+            this.chkAutoHideWebcam.Location = new System.Drawing.Point(87, 147);
+            this.chkAutoHideWebcam.Name = "chkAutoHideWebcam";
+            this.chkAutoHideWebcam.Size = new System.Drawing.Size(85, 17);
+            this.chkAutoHideWebcam.TabIndex = 36;
+            this.chkAutoHideWebcam.Text = "Auto Ocultar";
+            this.chkAutoHideWebcam.UseVisualStyleBackColor = true;
             // 
             // btnStopWebcam
             // 
@@ -3383,6 +3431,8 @@
             // 
             // groupBox21
             // 
+            this.groupBox21.Controls.Add(this.label62);
+            this.groupBox21.Controls.Add(this.nudVolleyServicesPerPlayer);
             this.groupBox21.Controls.Add(this.label60);
             this.groupBox21.Controls.Add(this.cmbVolleyScoreboardFontSize);
             this.groupBox21.Controls.Add(this.chkVolleyShowService);
@@ -3434,10 +3484,67 @@
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "Scoreboard";
             // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(593, 195);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(81, 13);
+            this.label62.TabIndex = 78;
+            this.label62.Text = "Cant. Servicios:";
+            // 
+            // nudVolleyServicesPerPlayer
+            // 
+            this.nudVolleyServicesPerPlayer.Location = new System.Drawing.Point(680, 192);
+            this.nudVolleyServicesPerPlayer.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.nudVolleyServicesPerPlayer.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudVolleyServicesPerPlayer.Name = "nudVolleyServicesPerPlayer";
+            this.nudVolleyServicesPerPlayer.Size = new System.Drawing.Size(30, 20);
+            this.nudVolleyServicesPerPlayer.TabIndex = 77;
+            this.nudVolleyServicesPerPlayer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudVolleyServicesPerPlayer.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(266, 195);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(30, 13);
+            this.label60.TabIndex = 76;
+            this.label60.Text = "Size:";
+            // 
+            // cmbVolleyScoreboardFontSize
+            // 
+            this.cmbVolleyScoreboardFontSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVolleyScoreboardFontSize.FormattingEnabled = true;
+            this.cmbVolleyScoreboardFontSize.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.cmbVolleyScoreboardFontSize.Location = new System.Drawing.Point(302, 192);
+            this.cmbVolleyScoreboardFontSize.Name = "cmbVolleyScoreboardFontSize";
+            this.cmbVolleyScoreboardFontSize.Size = new System.Drawing.Size(37, 21);
+            this.cmbVolleyScoreboardFontSize.TabIndex = 75;
+            // 
             // chkVolleyShowService
             // 
             this.chkVolleyShowService.AutoSize = true;
-            this.chkVolleyShowService.Location = new System.Drawing.Point(615, 193);
+            this.chkVolleyShowService.Location = new System.Drawing.Point(596, 149);
             this.chkVolleyShowService.Name = "chkVolleyShowService";
             this.chkVolleyShowService.Size = new System.Drawing.Size(102, 17);
             this.chkVolleyShowService.TabIndex = 74;
@@ -3488,7 +3595,7 @@
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(478, 195);
+            this.label55.Location = new System.Drawing.Point(469, 195);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(69, 13);
             this.label55.TabIndex = 68;
@@ -3496,7 +3603,7 @@
             // 
             // nudVolleyPointsPerSet
             // 
-            this.nudVolleyPointsPerSet.Location = new System.Drawing.Point(553, 192);
+            this.nudVolleyPointsPerSet.Location = new System.Drawing.Point(544, 192);
             this.nudVolleyPointsPerSet.Maximum = new decimal(new int[] {
             99,
             0,
@@ -3508,7 +3615,7 @@
             0,
             0});
             this.nudVolleyPointsPerSet.Name = "nudVolleyPointsPerSet";
-            this.nudVolleyPointsPerSet.Size = new System.Drawing.Size(46, 20);
+            this.nudVolleyPointsPerSet.Size = new System.Drawing.Size(36, 20);
             this.nudVolleyPointsPerSet.TabIndex = 67;
             this.nudVolleyPointsPerSet.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudVolleyPointsPerSet.Value = new decimal(new int[] {
@@ -3531,7 +3638,7 @@
             0,
             0});
             this.nudVolleySetsPerMatch.Name = "nudVolleySetsPerMatch";
-            this.nudVolleySetsPerMatch.Size = new System.Drawing.Size(46, 20);
+            this.nudVolleySetsPerMatch.Size = new System.Drawing.Size(38, 20);
             this.nudVolleySetsPerMatch.TabIndex = 66;
             this.nudVolleySetsPerMatch.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudVolleySetsPerMatch.Value = new decimal(new int[] {
@@ -3576,6 +3683,7 @@
             this.radVolleyGuestServe.TabIndex = 20;
             this.radVolleyGuestServe.Text = "Servicio";
             this.radVolleyGuestServe.UseVisualStyleBackColor = true;
+            this.radVolleyGuestServe.CheckedChanged += new System.EventHandler(this.radVolleyGuestServe_CheckedChanged);
             // 
             // radVolleyHomeServe
             // 
@@ -3588,10 +3696,11 @@
             this.radVolleyHomeServe.TabStop = true;
             this.radVolleyHomeServe.Text = "Servicio";
             this.radVolleyHomeServe.UseVisualStyleBackColor = true;
+            this.radVolleyHomeServe.CheckedChanged += new System.EventHandler(this.radVolleyHomeServe_CheckedChanged);
             // 
             // nudAutoHideVolleyScoreboardSeconds
             // 
-            this.nudAutoHideVolleyScoreboardSeconds.Location = new System.Drawing.Point(478, 148);
+            this.nudAutoHideVolleyScoreboardSeconds.Location = new System.Drawing.Point(444, 148);
             this.nudAutoHideVolleyScoreboardSeconds.Maximum = new decimal(new int[] {
             60,
             0,
@@ -3615,7 +3724,7 @@
             // chkAutoHideVolleyScoreboard
             // 
             this.chkAutoHideVolleyScoreboard.AutoSize = true;
-            this.chkAutoHideVolleyScoreboard.Location = new System.Drawing.Point(387, 148);
+            this.chkAutoHideVolleyScoreboard.Location = new System.Drawing.Point(353, 148);
             this.chkAutoHideVolleyScoreboard.Name = "chkAutoHideVolleyScoreboard";
             this.chkAutoHideVolleyScoreboard.Size = new System.Drawing.Size(85, 17);
             this.chkAutoHideVolleyScoreboard.TabIndex = 26;
@@ -3625,7 +3734,7 @@
             // btnStopVolleyScoreboard
             // 
             this.btnStopVolleyScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStopVolleyScoreboard.Location = new System.Drawing.Point(536, 137);
+            this.btnStopVolleyScoreboard.Location = new System.Drawing.Point(502, 137);
             this.btnStopVolleyScoreboard.Name = "btnStopVolleyScoreboard";
             this.btnStopVolleyScoreboard.Size = new System.Drawing.Size(73, 38);
             this.btnStopVolleyScoreboard.TabIndex = 28;
@@ -3636,7 +3745,7 @@
             // btnStartVolleyScoreboard
             // 
             this.btnStartVolleyScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartVolleyScoreboard.Location = new System.Drawing.Point(305, 137);
+            this.btnStartVolleyScoreboard.Location = new System.Drawing.Point(271, 137);
             this.btnStartVolleyScoreboard.Name = "btnStartVolleyScoreboard";
             this.btnStartVolleyScoreboard.Size = new System.Drawing.Size(73, 38);
             this.btnStartVolleyScoreboard.TabIndex = 25;
@@ -3948,6 +4057,206 @@
             this.txtVolleyHomeTeam.Size = new System.Drawing.Size(113, 20);
             this.txtVolleyHomeTeam.TabIndex = 0;
             // 
+            // tabPage10
+            // 
+            this.tabPage10.Controls.Add(this.groupBox26);
+            this.tabPage10.Controls.Add(this.groupBox25);
+            this.tabPage10.Controls.Add(this.groupBox24);
+            this.tabPage10.Controls.Add(this.groupBox23);
+            this.tabPage10.Location = new System.Drawing.Point(4, 22);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Size = new System.Drawing.Size(740, 323);
+            this.tabPage10.TabIndex = 9;
+            this.tabPage10.Text = "Extras";
+            this.tabPage10.UseVisualStyleBackColor = true;
+            // 
+            // groupBox25
+            // 
+            this.groupBox25.Controls.Add(this.cmbTemplateCountdown);
+            this.groupBox25.Controls.Add(this.label65);
+            this.groupBox25.Controls.Add(this.label64);
+            this.groupBox25.Controls.Add(this.btnStopCountdown);
+            this.groupBox25.Controls.Add(this.btnStartCountdown);
+            this.groupBox25.Controls.Add(this.label63);
+            this.groupBox25.Controls.Add(this.nudGameshowCounterSeconds);
+            this.groupBox25.Controls.Add(this.chkAutoHideFinishedCountdown);
+            this.groupBox25.Controls.Add(this.btnHideCountdown);
+            this.groupBox25.Controls.Add(this.btnShowCountdown);
+            this.groupBox25.Location = new System.Drawing.Point(331, 4);
+            this.groupBox25.Name = "groupBox25";
+            this.groupBox25.Size = new System.Drawing.Size(406, 147);
+            this.groupBox25.TabIndex = 2;
+            this.groupBox25.TabStop = false;
+            this.groupBox25.Text = "Gameshow Countdown";
+            // 
+            // cmbTemplateCountdown
+            // 
+            this.cmbTemplateCountdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTemplateCountdown.FormattingEnabled = true;
+            this.cmbTemplateCountdown.Location = new System.Drawing.Point(80, 29);
+            this.cmbTemplateCountdown.Name = "cmbTemplateCountdown";
+            this.cmbTemplateCountdown.Size = new System.Drawing.Size(316, 21);
+            this.cmbTemplateCountdown.TabIndex = 78;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(20, 32);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(54, 13);
+            this.label65.TabIndex = 79;
+            this.label65.Text = "Template:";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(20, 110);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(64, 13);
+            this.label64.TabIndex = 77;
+            this.label64.Text = "Countdown:";
+            // 
+            // btnStopCountdown
+            // 
+            this.btnStopCountdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopCountdown.Location = new System.Drawing.Point(323, 102);
+            this.btnStopCountdown.Name = "btnStopCountdown";
+            this.btnStopCountdown.Size = new System.Drawing.Size(73, 30);
+            this.btnStopCountdown.TabIndex = 76;
+            this.btnStopCountdown.Text = "Parar";
+            this.btnStopCountdown.UseVisualStyleBackColor = true;
+            this.btnStopCountdown.Click += new System.EventHandler(this.btnStopCountdown_Click);
+            // 
+            // btnStartCountdown
+            // 
+            this.btnStartCountdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartCountdown.Location = new System.Drawing.Point(146, 101);
+            this.btnStartCountdown.Name = "btnStartCountdown";
+            this.btnStartCountdown.Size = new System.Drawing.Size(73, 30);
+            this.btnStartCountdown.TabIndex = 75;
+            this.btnStartCountdown.Text = "Iniciar";
+            this.btnStartCountdown.UseVisualStyleBackColor = true;
+            this.btnStartCountdown.Click += new System.EventHandler(this.btnStartCountdown_Click);
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(20, 74);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(47, 13);
+            this.label63.TabIndex = 74;
+            this.label63.Text = "Counter:";
+            // 
+            // nudGameshowCounterSeconds
+            // 
+            this.nudGameshowCounterSeconds.Location = new System.Drawing.Point(73, 72);
+            this.nudGameshowCounterSeconds.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.nudGameshowCounterSeconds.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudGameshowCounterSeconds.Name = "nudGameshowCounterSeconds";
+            this.nudGameshowCounterSeconds.Size = new System.Drawing.Size(40, 20);
+            this.nudGameshowCounterSeconds.TabIndex = 17;
+            this.nudGameshowCounterSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudGameshowCounterSeconds.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // chkAutoHideFinishedCountdown
+            // 
+            this.chkAutoHideFinishedCountdown.AutoSize = true;
+            this.chkAutoHideFinishedCountdown.Location = new System.Drawing.Point(225, 110);
+            this.chkAutoHideFinishedCountdown.Name = "chkAutoHideFinishedCountdown";
+            this.chkAutoHideFinishedCountdown.Size = new System.Drawing.Size(85, 17);
+            this.chkAutoHideFinishedCountdown.TabIndex = 16;
+            this.chkAutoHideFinishedCountdown.Text = "Auto Ocultar";
+            this.chkAutoHideFinishedCountdown.UseVisualStyleBackColor = true;
+            // 
+            // btnHideCountdown
+            // 
+            this.btnHideCountdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHideCountdown.Location = new System.Drawing.Point(274, 65);
+            this.btnHideCountdown.Name = "btnHideCountdown";
+            this.btnHideCountdown.Size = new System.Drawing.Size(73, 31);
+            this.btnHideCountdown.TabIndex = 18;
+            this.btnHideCountdown.Text = "Ocultar";
+            this.btnHideCountdown.UseVisualStyleBackColor = true;
+            this.btnHideCountdown.Click += new System.EventHandler(this.btnHideCountdown_Click);
+            // 
+            // btnShowCountdown
+            // 
+            this.btnShowCountdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowCountdown.Location = new System.Drawing.Point(195, 65);
+            this.btnShowCountdown.Name = "btnShowCountdown";
+            this.btnShowCountdown.Size = new System.Drawing.Size(73, 31);
+            this.btnShowCountdown.TabIndex = 15;
+            this.btnShowCountdown.Text = "Mostrar";
+            this.btnShowCountdown.UseVisualStyleBackColor = true;
+            this.btnShowCountdown.Click += new System.EventHandler(this.btnShowCountdown_Click);
+            // 
+            // groupBox24
+            // 
+            this.groupBox24.Controls.Add(this.txtLogMessages);
+            this.groupBox24.Location = new System.Drawing.Point(3, 132);
+            this.groupBox24.Name = "groupBox24";
+            this.groupBox24.Size = new System.Drawing.Size(321, 188);
+            this.groupBox24.TabIndex = 1;
+            this.groupBox24.TabStop = false;
+            this.groupBox24.Text = "Log servidor";
+            // 
+            // txtLogMessages
+            // 
+            this.txtLogMessages.Location = new System.Drawing.Point(7, 20);
+            this.txtLogMessages.Multiline = true;
+            this.txtLogMessages.Name = "txtLogMessages";
+            this.txtLogMessages.Size = new System.Drawing.Size(308, 156);
+            this.txtLogMessages.TabIndex = 0;
+            // 
+            // groupBox23
+            // 
+            this.groupBox23.Controls.Add(this.label61);
+            this.groupBox23.Controls.Add(this.button1);
+            this.groupBox23.Controls.Add(this.textBox2);
+            this.groupBox23.Location = new System.Drawing.Point(3, 3);
+            this.groupBox23.Name = "groupBox23";
+            this.groupBox23.Size = new System.Drawing.Size(321, 82);
+            this.groupBox23.TabIndex = 0;
+            this.groupBox23.TabStop = false;
+            this.groupBox23.Text = "Consola";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(14, 20);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(63, 13);
+            this.label61.TabIndex = 15;
+            this.label61.Text = "Commando:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(135, 46);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(74, 27);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Ejecutar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(81, 20);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(225, 20);
+            this.textBox2.TabIndex = 0;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtEventDescription);
@@ -4062,30 +4371,225 @@
             // 
             this.tmrVolleyResult.Tick += new System.EventHandler(this.tmrVolleyResult_Tick);
             // 
-            // label60
+            // groupBox26
             // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(266, 195);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(30, 13);
-            this.label60.TabIndex = 76;
-            this.label60.Text = "Size:";
+            this.groupBox26.Controls.Add(this.cmbLogoFile);
+            this.groupBox26.Controls.Add(this.label72);
+            this.groupBox26.Controls.Add(this.label71);
+            this.groupBox26.Controls.Add(this.nudDynamicLogoHeight);
+            this.groupBox26.Controls.Add(this.label70);
+            this.groupBox26.Controls.Add(this.nudDynamicLogoPosY);
+            this.groupBox26.Controls.Add(this.label69);
+            this.groupBox26.Controls.Add(this.nudDynamicLogoWidth);
+            this.groupBox26.Controls.Add(this.cmbTemplateDynamicLogo);
+            this.groupBox26.Controls.Add(this.label66);
+            this.groupBox26.Controls.Add(this.btnStopDynamicLogo);
+            this.groupBox26.Controls.Add(this.btnStartDynamicLogo);
+            this.groupBox26.Controls.Add(this.label68);
+            this.groupBox26.Controls.Add(this.nudDynamicLogoPosX);
+            this.groupBox26.Controls.Add(this.chkAutoHideDynamicLogo);
+            this.groupBox26.Location = new System.Drawing.Point(331, 157);
+            this.groupBox26.Name = "groupBox26";
+            this.groupBox26.Size = new System.Drawing.Size(406, 163);
+            this.groupBox26.TabIndex = 3;
+            this.groupBox26.TabStop = false;
+            this.groupBox26.Text = "Dynamic Logo";
             // 
-            // cmbVolleyScoreboardFontSize
+            // cmbTemplateDynamicLogo
             // 
-            this.cmbVolleyScoreboardFontSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbVolleyScoreboardFontSize.FormattingEnabled = true;
-            this.cmbVolleyScoreboardFontSize.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
-            this.cmbVolleyScoreboardFontSize.Location = new System.Drawing.Point(302, 192);
-            this.cmbVolleyScoreboardFontSize.Name = "cmbVolleyScoreboardFontSize";
-            this.cmbVolleyScoreboardFontSize.Size = new System.Drawing.Size(37, 21);
-            this.cmbVolleyScoreboardFontSize.TabIndex = 75;
+            this.cmbTemplateDynamicLogo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTemplateDynamicLogo.FormattingEnabled = true;
+            this.cmbTemplateDynamicLogo.Location = new System.Drawing.Point(80, 19);
+            this.cmbTemplateDynamicLogo.Name = "cmbTemplateDynamicLogo";
+            this.cmbTemplateDynamicLogo.Size = new System.Drawing.Size(316, 21);
+            this.cmbTemplateDynamicLogo.TabIndex = 78;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(20, 22);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(54, 13);
+            this.label66.TabIndex = 79;
+            this.label66.Text = "Template:";
+            // 
+            // btnStopDynamicLogo
+            // 
+            this.btnStopDynamicLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopDynamicLogo.Location = new System.Drawing.Point(323, 124);
+            this.btnStopDynamicLogo.Name = "btnStopDynamicLogo";
+            this.btnStopDynamicLogo.Size = new System.Drawing.Size(73, 30);
+            this.btnStopDynamicLogo.TabIndex = 76;
+            this.btnStopDynamicLogo.Text = "Parar";
+            this.btnStopDynamicLogo.UseVisualStyleBackColor = true;
+            this.btnStopDynamicLogo.Click += new System.EventHandler(this.btnStopDynamicLogo_Click);
+            // 
+            // btnStartDynamicLogo
+            // 
+            this.btnStartDynamicLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartDynamicLogo.Location = new System.Drawing.Point(146, 123);
+            this.btnStartDynamicLogo.Name = "btnStartDynamicLogo";
+            this.btnStartDynamicLogo.Size = new System.Drawing.Size(73, 30);
+            this.btnStartDynamicLogo.TabIndex = 75;
+            this.btnStartDynamicLogo.Text = "Iniciar";
+            this.btnStartDynamicLogo.UseVisualStyleBackColor = true;
+            this.btnStartDynamicLogo.Click += new System.EventHandler(this.btnStartDynamicLogo_Click);
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(20, 74);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(38, 13);
+            this.label68.TabIndex = 74;
+            this.label68.Text = "Pos X:";
+            // 
+            // nudDynamicLogoPosX
+            // 
+            this.nudDynamicLogoPosX.Location = new System.Drawing.Point(80, 72);
+            this.nudDynamicLogoPosX.Maximum = new decimal(new int[] {
+            1920,
+            0,
+            0,
+            0});
+            this.nudDynamicLogoPosX.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudDynamicLogoPosX.Name = "nudDynamicLogoPosX";
+            this.nudDynamicLogoPosX.Size = new System.Drawing.Size(59, 20);
+            this.nudDynamicLogoPosX.TabIndex = 17;
+            this.nudDynamicLogoPosX.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudDynamicLogoPosX.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // chkAutoHideDynamicLogo
+            // 
+            this.chkAutoHideDynamicLogo.AutoSize = true;
+            this.chkAutoHideDynamicLogo.Location = new System.Drawing.Point(225, 132);
+            this.chkAutoHideDynamicLogo.Name = "chkAutoHideDynamicLogo";
+            this.chkAutoHideDynamicLogo.Size = new System.Drawing.Size(85, 17);
+            this.chkAutoHideDynamicLogo.TabIndex = 16;
+            this.chkAutoHideDynamicLogo.Text = "Auto Ocultar";
+            this.chkAutoHideDynamicLogo.UseVisualStyleBackColor = true;
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(20, 100);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(38, 13);
+            this.label69.TabIndex = 81;
+            this.label69.Text = "Width:";
+            // 
+            // nudDynamicLogoWidth
+            // 
+            this.nudDynamicLogoWidth.Location = new System.Drawing.Point(80, 98);
+            this.nudDynamicLogoWidth.Maximum = new decimal(new int[] {
+            1920,
+            0,
+            0,
+            0});
+            this.nudDynamicLogoWidth.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudDynamicLogoWidth.Name = "nudDynamicLogoWidth";
+            this.nudDynamicLogoWidth.Size = new System.Drawing.Size(59, 20);
+            this.nudDynamicLogoWidth.TabIndex = 80;
+            this.nudDynamicLogoWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudDynamicLogoWidth.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Location = new System.Drawing.Point(161, 74);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(38, 13);
+            this.label70.TabIndex = 83;
+            this.label70.Text = "Pos Y:";
+            // 
+            // nudDynamicLogoPosY
+            // 
+            this.nudDynamicLogoPosY.Location = new System.Drawing.Point(217, 71);
+            this.nudDynamicLogoPosY.Maximum = new decimal(new int[] {
+            1080,
+            0,
+            0,
+            0});
+            this.nudDynamicLogoPosY.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudDynamicLogoPosY.Name = "nudDynamicLogoPosY";
+            this.nudDynamicLogoPosY.Size = new System.Drawing.Size(60, 20);
+            this.nudDynamicLogoPosY.TabIndex = 82;
+            this.nudDynamicLogoPosY.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudDynamicLogoPosY.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(161, 100);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(41, 13);
+            this.label71.TabIndex = 85;
+            this.label71.Text = "Height:";
+            // 
+            // nudDynamicLogoHeight
+            // 
+            this.nudDynamicLogoHeight.Location = new System.Drawing.Point(217, 96);
+            this.nudDynamicLogoHeight.Maximum = new decimal(new int[] {
+            1080,
+            0,
+            0,
+            0});
+            this.nudDynamicLogoHeight.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudDynamicLogoHeight.Name = "nudDynamicLogoHeight";
+            this.nudDynamicLogoHeight.Size = new System.Drawing.Size(60, 20);
+            this.nudDynamicLogoHeight.TabIndex = 84;
+            this.nudDynamicLogoHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudDynamicLogoHeight.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // cmbLogoFile
+            // 
+            this.cmbLogoFile.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLogoFile.FormattingEnabled = true;
+            this.cmbLogoFile.Location = new System.Drawing.Point(80, 45);
+            this.cmbLogoFile.Name = "cmbLogoFile";
+            this.cmbLogoFile.Size = new System.Drawing.Size(316, 21);
+            this.cmbLogoFile.TabIndex = 86;
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Location = new System.Drawing.Point(20, 48);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(53, 13);
+            this.label72.TabIndex = 87;
+            this.label72.Text = "Logo File:";
             // 
             // Form1
             // 
@@ -4111,7 +4615,7 @@
             this.tabPage1.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideWebcamSeconds)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -4180,6 +4684,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideVolleyResultSeconds)).EndInit();
             this.groupBox21.ResumeLayout(false);
             this.groupBox21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyServicesPerPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleyPointsPerSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleySetsPerMatch)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -4197,8 +4702,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome1SetPoints)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest5SetPoints)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome5SetPoints)).EndInit();
+            this.tabPage10.ResumeLayout(false);
+            this.groupBox25.ResumeLayout(false);
+            this.groupBox25.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGameshowCounterSeconds)).EndInit();
+            this.groupBox24.ResumeLayout(false);
+            this.groupBox24.PerformLayout();
+            this.groupBox23.ResumeLayout(false);
+            this.groupBox23.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox26.ResumeLayout(false);
+            this.groupBox26.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoPosX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoWidth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoPosY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoHeight)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4525,8 +5044,8 @@
         private System.Windows.Forms.Timer tmrVolleyResult;
         private System.Windows.Forms.TextBox txtWebcamOptions;
         private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.NumericUpDown nudAutoHideWebcamSeconds;
+        private System.Windows.Forms.CheckBox chkAutoHideWebcam;
         private System.Windows.Forms.Button btnStopWebcam;
         private System.Windows.Forms.Button btnStartWebcam;
         private System.Windows.Forms.CheckBox chkAutoShowOnClockStart;
@@ -4545,6 +5064,42 @@
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.ComboBox cmbVolleyScoreboardFontSize;
+        private System.Windows.Forms.TabPage tabPage10;
+        private System.Windows.Forms.GroupBox groupBox24;
+        private System.Windows.Forms.GroupBox groupBox23;
+        private System.Windows.Forms.TextBox txtLogMessages;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.NumericUpDown nudVolleyServicesPerPlayer;
+        private System.Windows.Forms.GroupBox groupBox25;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.NumericUpDown nudGameshowCounterSeconds;
+        private System.Windows.Forms.CheckBox chkAutoHideFinishedCountdown;
+        private System.Windows.Forms.Button btnHideCountdown;
+        private System.Windows.Forms.Button btnShowCountdown;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Button btnStopCountdown;
+        private System.Windows.Forms.Button btnStartCountdown;
+        private System.Windows.Forms.ComboBox cmbTemplateCountdown;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.GroupBox groupBox26;
+        private System.Windows.Forms.ComboBox cmbTemplateDynamicLogo;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Button btnStopDynamicLogo;
+        private System.Windows.Forms.Button btnStartDynamicLogo;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.NumericUpDown nudDynamicLogoPosX;
+        private System.Windows.Forms.CheckBox chkAutoHideDynamicLogo;
+        private System.Windows.Forms.ComboBox cmbLogoFile;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.NumericUpDown nudDynamicLogoHeight;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.NumericUpDown nudDynamicLogoPosY;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.NumericUpDown nudDynamicLogoWidth;
     }
 }
 

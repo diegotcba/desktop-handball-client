@@ -96,7 +96,8 @@ namespace HandballCliente
             cmbTemplateTwitter.Items.Clear();
             cmbTemplateVolleyScoreboard.Items.Clear();
             cmbTemplateVolleyResult.Items.Clear();
-            cmbTemplateCountdown.Items.Clear();
+            cmbTemplateGameshowCountdown.Items.Clear();
+            cmbTemplateGameshowQuestions.Items.Clear();
             cmbTemplateDynamicLogo.Items.Clear();
             cmbLogoFile.Items.Clear();
         }
@@ -188,6 +189,45 @@ namespace HandballCliente
             cmbVolleyScoreboardFontSize.Items.Add("20");
             cmbVolleyScoreboardFontSize.Items.Add("22");
             cmbVolleyScoreboardFontSize.Items.Add("24");
+
+            cmbGameshowCorrectAnswer.Items.Clear();
+            cmbGameshowCorrectAnswer.Items.Add("1");
+            cmbGameshowCorrectAnswer.Items.Add("2");
+            cmbGameshowCorrectAnswer.Items.Add("3");
+            cmbGameshowCorrectAnswer.Items.Add("4");
+
+            cmbGameshowPlayerAnswer.Items.Clear();
+            cmbGameshowPlayerAnswer.Items.Add("1");
+            cmbGameshowPlayerAnswer.Items.Add("2");
+            cmbGameshowPlayerAnswer.Items.Add("3");
+            cmbGameshowPlayerAnswer.Items.Add("4");
+
+        }
+
+        private void fillListQuestions()
+        {
+            List<Question> tmpquestions = new List<Question>();
+            Question question = new Question();
+            question.question = "¿De que color era el caballo blanco de San Martin?";
+            List<Answer> tmpanswers = new List<Answer>();
+            Answer answer = new Answer();
+            answer.answer = "Rojo";
+            tmpanswers.Add(answer);
+            answer = new Answer();
+            answer.answer = "Marron";
+            tmpanswers.Add(answer);
+            answer = new Answer();
+            answer.answer = "Blanco";
+            tmpanswers.Add(answer);
+            answer = new Answer();
+            answer.answer = "Negro";
+            tmpanswers.Add(answer);
+            question.answers = tmpanswers;
+            question.correctAnswer = 3;
+            tmpquestions.Add(question);
+
+            HandballMatch.getInstance().gameshowQuestions = tmpquestions;
+            FillGameshowQuestions(lvwGameshowQuestions, HandballMatch.getInstance().gameshowQuestions);
         }
 
         private void fillComboWebcam()
@@ -263,8 +303,9 @@ namespace HandballCliente
                 fillCombosTemplate(cmbTemplateTwitter, templates);
                 fillCombosTemplate(cmbTemplateVolleyScoreboard, templates);
                 fillCombosTemplate(cmbTemplateVolleyResult,templates);
-                fillCombosTemplate(cmbTemplateCountdown, templates);
+                fillCombosTemplate(cmbTemplateGameshowCountdown, templates);
                 fillCombosTemplate(cmbTemplateDynamicLogo, templates);
+                fillCombosTemplate(cmbTemplateGameshowQuestions, templates);
             }
         }
 
@@ -448,15 +489,11 @@ namespace HandballCliente
                 //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
 
                 templateCountdown.Fields.Add(new TemplateField("countdownNumber", nudGameshowCounterSeconds.Value.ToString()));
-                //templateCountdown.Fields.Add(new TemplateField("team2Name", txtNombreScoreVisitante.Text));
-                //templateCountdown.Fields.Add(new TemplateField("team1Score", nudHomeTeamScore.Value.ToString()));
-                //templateCountdown.Fields.Add(new TemplateField("team2Score", nudGuestTeamScore.Value.ToString()));
-                //templateCountdown.Fields.Add(new TemplateField("gameTime", nudClockMinutes.Value.ToString() + ":" + nudClockSeconds.Value.ToString()));
-                //templateCountdown.Fields.Add(new TemplateField("halfNum", cmbHalf.Text));
+                templateCountdown.Fields.Add(new TemplateField("countdownMilisecondsRefresh", nudGameshowRefreshMiliseconds.Value.ToString()));
                 //templateCountdown.Fields.Add(new TemplateField("logoScoreboard", logoPath.ToString()));
 
                 //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
-                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateCountdown.TemplateDataText(), cmbTemplateCountdown.Text, layerScoreboard.ToString()));
+                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateCountdown.TemplateDataText(), cmbTemplateGameshowCountdown.Text, layerScoreboard.ToString()));
                 txtLogMessages.Text += "\n" + ri.Message;
                 //System.Diagnostics.Debug.WriteLine(ri.Message);
             }
@@ -510,6 +547,55 @@ namespace HandballCliente
             if (casparServer.Connected)
             {
                 casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerLogo.ToString()));
+            }
+        }
+
+        private void startGameshowQuestions()
+        {
+            if (casparServer.Connected)
+            {
+                if (casparServer.Connected)
+                {
+                    Template templateCountdown = new Template();
+                    //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+
+                    templateCountdown.Fields.Add(new TemplateField("questionText", txtGameshowQuestion.Text));
+                    templateCountdown.Fields.Add(new TemplateField("answer1Text", lvwGameshowQuestionAnswers.Items[0].SubItems[1].Text));
+                    templateCountdown.Fields.Add(new TemplateField("answer2Text", lvwGameshowQuestionAnswers.Items[1].SubItems[1].Text));
+                    templateCountdown.Fields.Add(new TemplateField("answer3Text", lvwGameshowQuestionAnswers.Items[2].SubItems[1].Text));
+                    templateCountdown.Fields.Add(new TemplateField("answer4Text", lvwGameshowQuestionAnswers.Items[3].SubItems[1].Text));
+                    templateCountdown.Fields.Add(new TemplateField("correctAnswer", cmbGameshowCorrectAnswer.Text));
+                    templateCountdown.Fields.Add(new TemplateField("playerAnswer", cmbGameshowPlayerAnswer.Text));
+
+                    //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
+                    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateCountdown.TemplateDataText(), cmbTemplateGameshowQuestions.Text, layerPresentation.ToString()));
+                    txtLogMessages.Text += "\n" + ri.Message;
+                    //System.Diagnostics.Debug.WriteLine(ri.Message);
+                }
+            }
+        }
+
+        private void stopGameshowQuestions()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerPresentation.ToString()));
+            }
+        }
+
+        private void showGameshowPlayerAnswer()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "showPlayerAnswer", layerPresentation.ToString()));
+            }
+        }
+
+        private void showGameshowCorrectAnswer()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "showCorrectAnswer", layerPresentation.ToString()));
             }
         }
 
@@ -1603,6 +1689,7 @@ namespace HandballCliente
             FillTeamPlayers(lvwHomeTeamPlayers, HandballMatch.getInstance().team1Players);
             FillTeamPlayers(lvwGuestTeamPlayers, HandballMatch.getInstance().team2Players);
             FillPositionTable();
+            FillGameshowQuestions(lvwGameshowQuestions, HandballMatch.getInstance().gameshowQuestions);
             
             chkAutoHideIntro.Checked = HandballMatch.getInstance().autoHideIntro;
             nudAutoHideIntroSeconds.Value = HandballMatch.getInstance().autoHideIntroSeconds;
@@ -1838,6 +1925,47 @@ namespace HandballCliente
             f1.ShowDialog(this);
         }
 
+        private void FillGameshowQuestions(ListView lvw, List<Question> questions)
+        {
+            string[] arr;
+            lvw.Items.Clear();
+            int j = 1;
+            foreach (Question item in questions)
+            {
+                arr = new string[2];
+                arr[0] = j.ToString();
+                arr[1] = item.question;
+                lvw.Items.Add(new ListViewItem(arr));
+                j++;
+            }
+        }
+
+        private void getGameshowQuestion()
+        {
+            if (lvwGameshowQuestions.SelectedItems != null)
+            {
+                txtGameshowQuestion.Text = lvwGameshowQuestions.SelectedItems[0].SubItems[1].Text;
+                Question aux = HandballMatch.getInstance().gameshowQuestions.Find(element => element.question == lvwGameshowQuestions.SelectedItems[0].SubItems[1].Text);
+                cmbGameshowCorrectAnswer.Text = aux.correctAnswer.ToString();
+                FillGameshowAnswers(lvwGameshowQuestionAnswers, aux.answers);
+            }
+        }
+
+        private void FillGameshowAnswers(ListView lvw, List<Answer> answers)
+        {
+            string[] arr;
+            lvw.Items.Clear();
+            int j = 1;
+            foreach (Answer item in answers)
+            {
+                arr = new string[2];
+                arr[0] = j.ToString();
+                arr[1] = item.answer;
+                lvw.Items.Add(new ListViewItem(arr));
+                j++;
+            }
+        }
+
         # region eventos
         private void mnuSalir_Click(object sender, EventArgs e)
         {
@@ -1889,8 +2017,6 @@ namespace HandballCliente
         {
             removePlayerTeam2();
         }
-
-        # endregion
 
         private void btnConexion_Click(object sender, EventArgs e)
         {
@@ -2407,5 +2533,38 @@ namespace HandballCliente
         {
             stopDynamicLogo();
         }
+
+
+        private void btnShowGameshowQuestions_Click(object sender, EventArgs e)
+        {
+            startGameshowQuestions();
+        }
+
+        private void btnHideGameshowQuestions_Click(object sender, EventArgs e)
+        {
+            stopGameshowQuestions();
+        }
+
+        private void btnShowPlayerAnswer_Click(object sender, EventArgs e)
+        {
+            showGameshowPlayerAnswer();
+        }
+
+        private void btnShowCorrectAnswer_Click(object sender, EventArgs e)
+        {
+            showGameshowCorrectAnswer();
+        }
+        # endregion
+
+        private void btnLoadGameshowQuestions_Click(object sender, EventArgs e)
+        {
+            fillListQuestions();
+        }
+
+        private void lvwGameshowQuestions_DoubleClick(object sender, EventArgs e)
+        {
+            getGameshowQuestion();
+        }
+
     }
 }

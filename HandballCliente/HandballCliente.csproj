@@ -68,6 +68,9 @@
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.105.2.1\lib\net45\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -80,6 +83,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Answer.cs" />
     <Compile Include="CasparCG\CasparCG.cs" />
     <Compile Include="ConfigLayers.cs">
       <SubType>Form</SubType>
@@ -120,6 +124,7 @@
     <Compile Include="CasparCG\TargaFile.cs" />
     <Compile Include="CasparCG\Template.cs" />
     <Compile Include="CasparCG\TemplateField.cs" />
+    <Compile Include="Question.cs" />
     <EmbeddedResource Include="ConfigLayers.resx">
       <DependentUpon>ConfigLayers.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +150,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="HandballCliente_ClaveTemporal.pfx" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

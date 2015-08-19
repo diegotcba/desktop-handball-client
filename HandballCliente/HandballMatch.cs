@@ -111,6 +111,9 @@ namespace HandballCliente
         public bool autoHideVolleyResult { get; set; }
         public int autoHideVolleyResultSeconds { get; set; }
 
+        //GAMESHOW
+        public List<Question> gameshowQuestions { get; set; }
+
         private HandballMatch()
         {
             NewMatch();
@@ -124,6 +127,7 @@ namespace HandballCliente
             team1Players = new List<Player>();
             team2Players = new List<Player>();
             positions = new List<Position>();
+            gameshowQuestions = new List<Question>();
 
             autoHideIntro = false;
             autoHideIntroSeconds = 1;

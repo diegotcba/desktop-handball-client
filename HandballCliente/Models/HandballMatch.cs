@@ -9,6 +9,7 @@ using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
 using System.Data;
+using HandballCliente.Models;
 
 
 namespace HandballCliente
@@ -114,6 +115,15 @@ namespace HandballCliente
         //GAMESHOW
         public List<Question> gameshowQuestions { get; set; }
 
+        //ELECTIONS
+        public List<Election> electionResults { get; set; }
+
+        //WEATHERFORECAST
+        public List<PronosticoCiudad> weatherForecast { get; set; }
+
+        //TWITTER
+        public List<Tweets> tweets { get; set; }
+
         private HandballMatch()
         {
             NewMatch();
@@ -128,6 +138,7 @@ namespace HandballCliente
             team2Players = new List<Player>();
             positions = new List<Position>();
             gameshowQuestions = new List<Question>();
+            weatherForecast = new List<PronosticoCiudad>();
 
             autoHideIntro = false;
             autoHideIntroSeconds = 1;

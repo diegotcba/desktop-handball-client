@@ -12,5 +12,9 @@ namespace HandballCliente
         public String answer { get; set; }
 
         public Answer() { }
+        public Answer(String a)
+        {
+            this.answer = a;
+        }
     }
 }

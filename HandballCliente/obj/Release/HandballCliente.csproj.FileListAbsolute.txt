@@ -15,3 +15,5 @@ C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Release\HandballCli
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Release\HandballCliente.exe
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Release\HandballCliente.pdb
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Release\HandballCliente.csprojResolveAssemblyReference.cache
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\bin\Release\RestSharp.dll
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\bin\Release\RestSharp.xml

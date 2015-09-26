@@ -9,6 +9,7 @@ namespace HandballCliente
     [Serializable()]
     public class Question
     {
+        public int id { get; set; }
         public String question { get; set; }
         public List<Answer> answers { get; set; }
         public int correctAnswer { get; set; }

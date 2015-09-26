@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using RestSharp;
+using HandballCliente.Models;
+using RestSharp.Deserializers;
+using System.Net;
 
 
 namespace HandballCliente
@@ -99,7 +103,9 @@ namespace HandballCliente
             cmbTemplateGameshowCountdown.Items.Clear();
             cmbTemplateGameshowQuestions.Items.Clear();
             cmbTemplateDynamicLogo.Items.Clear();
+            cmbTemplateElectionsTop3.Items.Clear();
             cmbLogoFile.Items.Clear();
+            cmbTemplateWeatherForecast.Items.Clear();
         }
 
         private void clearPresentation()
@@ -151,6 +157,10 @@ namespace HandballCliente
             nudVolleySetsPerMatch.Value = 5;
             nudVolleyPointsPerSet.Value = 11;
             nudVolleyServicesPerPlayer.Value = 2;
+
+            txtWeatherForecastWS.Text = "http://localhost:3000";
+            txtElectionsTop3WS.Text = "http://localhost:3000";
+            txtTwitterWS.Text = "http://localhost:3000";
         }
 
         private void fillCombosTeamTextStyle()
@@ -201,13 +211,13 @@ namespace HandballCliente
             cmbGameshowPlayerAnswer.Items.Add("2");
             cmbGameshowPlayerAnswer.Items.Add("3");
             cmbGameshowPlayerAnswer.Items.Add("4");
-
         }
 
         private void fillListQuestions()
         {
             List<Question> tmpquestions = new List<Question>();
             Question question = new Question();
+            question.id = 1;
             question.question = "¿De que color era el caballo blanco de San Martin?";
             List<Answer> tmpanswers = new List<Answer>();
             Answer answer = new Answer();
@@ -306,6 +316,8 @@ namespace HandballCliente
                 fillCombosTemplate(cmbTemplateGameshowCountdown, templates);
                 fillCombosTemplate(cmbTemplateDynamicLogo, templates);
                 fillCombosTemplate(cmbTemplateGameshowQuestions, templates);
+                fillCombosTemplate(cmbTemplateElectionsTop3, templates);
+                fillCombosTemplate(cmbTemplateWeatherForecast, templates);
             }
         }
 
@@ -322,6 +334,7 @@ namespace HandballCliente
                 fillCombosTemplate(cmbBroadcastLogo, medias);
                 fillCombosTemplate(cmbImageScrolling, medias);
                 fillCombosTemplate(cmbLogoFile, medias);
+                fillCombosTemplate(cmbElectionsC1Picture, medias);
             }
         }
 
@@ -481,6 +494,121 @@ namespace HandballCliente
             }
         }
 
+        private void startDynamicLogo()
+        {
+            if (casparServer.Connected)
+            {
+                Template templateDynamicLogo = new Template();
+                Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+
+                templateDynamicLogo.Fields.Add(new TemplateField("positionX", nudDynamicLogoPosX.Value.ToString()));
+                templateDynamicLogo.Fields.Add(new TemplateField("positionY", nudDynamicLogoPosY.Value.ToString()));
+                templateDynamicLogo.Fields.Add(new TemplateField("logoWidth", nudDynamicLogoWidth.Value.ToString()));
+                templateDynamicLogo.Fields.Add(new TemplateField("logoHeight", nudDynamicLogoHeight.Value.ToString()));
+                templateDynamicLogo.Fields.Add(new TemplateField("logoFile", logoPath.ToString()));
+
+                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateDynamicLogo.TemplateDataText(), cmbTemplateDynamicLogo.Text, layerLogo.ToString()));
+                txtLogMessages.Text += "\n" + ri.Message;
+                //System.Diagnostics.Debug.WriteLine(ri.Message);
+            }
+        }
+
+        private void stopDynamicLogo()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerLogo.ToString()));
+            }
+        }
+
+        private void startTop3()
+        {
+            if (casparServer.Connected)
+            {
+                Template templateDynamicLogo = new Template();
+                //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbElectionsC1Picture.Text.ToLower() + ".png");
+                Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbElectionsC1Picture.Text.ToLower() + ".png");
+
+                templateDynamicLogo.Fields.Add(new TemplateField("info", "TOTAL DE MESAS ESCRUTADAS:"));
+                templateDynamicLogo.Fields.Add(new TemplateField("total", "66"));
+
+                //templateDynamicLogo.Fields.Add(new TemplateField("c1Position", "1"));
+                //templateDynamicLogo.Fields.Add(new TemplateField("c1Name", "SCIOLI"));
+                //templateDynamicLogo.Fields.Add(new TemplateField("c1Percentage", "34"));
+                //templateDynamicLogo.Fields.Add(new TemplateField("c1Picture", logoPath.ToString()));
+
+                //templateDynamicLogo.Fields.Add(new TemplateField("c2Position", "2"));
+                //templateDynamicLogo.Fields.Add(new TemplateField("c2Name", "MACRI"));
+                //templateDynamicLogo.Fields.Add(new TemplateField("c2Percentage", "30"));
+                //templateDynamicLogo.Fields.Add(new TemplateField("c2Picture", logoPath.ToString()));
+
+                //templateDynamicLogo.Fields.Add(new TemplateField("c3Position", "3"));
+                //templateDynamicLogo.Fields.Add(new TemplateField("c3Name", "MASSA"));
+                //templateDynamicLogo.Fields.Add(new TemplateField("c3Percentage", "12.5"));
+                //templateDynamicLogo.Fields.Add(new TemplateField("c3Picture", logoPath.ToString()));
+
+                templateDynamicLogo.Fields.Add(new TemplateField("c1Position", "1"));
+                templateDynamicLogo.Fields.Add(new TemplateField("c1Name", HandballMatch.getInstance().electionResults[0].name));
+                templateDynamicLogo.Fields.Add(new TemplateField("c1Percentage", HandballMatch.getInstance().electionResults[0].percentage.ToString()));
+                templateDynamicLogo.Fields.Add(new TemplateField("c1PictureBase64", HandballMatch.getInstance().electionResults[0].pictureBase64));
+                //templateDynamicLogo.Fields.Add(new TemplateField("c1Picture", logoPath.ToString()));
+
+                templateDynamicLogo.Fields.Add(new TemplateField("c2Position", "2"));
+                templateDynamicLogo.Fields.Add(new TemplateField("c2Name", HandballMatch.getInstance().electionResults[1].name));
+                templateDynamicLogo.Fields.Add(new TemplateField("c2Percentage", HandballMatch.getInstance().electionResults[1].percentage.ToString()));
+                templateDynamicLogo.Fields.Add(new TemplateField("c2PictureBase64", HandballMatch.getInstance().electionResults[1].pictureBase64));
+                //templateDynamicLogo.Fields.Add(new TemplateField("c2Picture", logoPath.ToString()));
+
+                templateDynamicLogo.Fields.Add(new TemplateField("c3Position", "3"));
+                templateDynamicLogo.Fields.Add(new TemplateField("c3Name", HandballMatch.getInstance().electionResults[2].name));
+                templateDynamicLogo.Fields.Add(new TemplateField("c3Percentage", HandballMatch.getInstance().electionResults[2].percentage.ToString()));
+                templateDynamicLogo.Fields.Add(new TemplateField("c3PictureBase64", HandballMatch.getInstance().electionResults[2].pictureBase64));
+                //templateDynamicLogo.Fields.Add(new TemplateField("c3Picture", logoPath.ToString()));
+
+
+                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateDynamicLogo.TemplateDataText(), cmbTemplateElectionsTop3.Text, layerLogo.ToString()));
+                txtLogMessages.Text += "\n" + ri.Message;
+                //System.Diagnostics.Debug.WriteLine(ri.Message);
+            }
+        }
+
+        private void stopTop3()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerLogo.ToString()));
+            }
+        }
+
+        private void showGameplay()
+        {
+
+        }
+
+        private void hideGameplay()
+        {
+
+        }
+
+        private void playGameplay()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("PLAY 1-{0} AMB LENGTH 150", layerVideo.ToString()));
+                casparServer.Execute(String.Format("VERSION", layerVideo.ToString()));
+                casparServer.Execute(String.Format("LOADBG 1-{0} AMB LOOP SEEK 150 LENGTH 1", layerVideo.ToString()));
+            }
+        }
+
+        private void stopGameplay()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("PLAY 1-{0} AMB SEEK 151", layerVideo.ToString()));
+                //casparServer.Execute(String.Format("PLAY 1-{0}", layerVideo.ToString()));
+            }
+        }
+
         private void showCountdown()
         {
             if (casparServer.Connected)
@@ -520,33 +648,6 @@ namespace HandballCliente
             if (casparServer.Connected)
             {
                 casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "countdownStartStop", layerScoreboard.ToString()));
-            }
-        }
-
-        private void startDynamicLogo()
-        {
-            if (casparServer.Connected)
-            {
-                Template templateDynamicLogo = new Template();
-                Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoFile.Text.ToLower() + ".png");
-
-                templateDynamicLogo.Fields.Add(new TemplateField("positionX", nudDynamicLogoPosX.Value.ToString()));
-                templateDynamicLogo.Fields.Add(new TemplateField("positionY", nudDynamicLogoPosY.Value.ToString()));
-                templateDynamicLogo.Fields.Add(new TemplateField("logoWidth", nudDynamicLogoWidth.Value.ToString()));
-                templateDynamicLogo.Fields.Add(new TemplateField("logoHeight", nudDynamicLogoHeight.Value.ToString()));
-                templateDynamicLogo.Fields.Add(new TemplateField("logoFile", logoPath.ToString()));
-
-                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateDynamicLogo.TemplateDataText(), cmbTemplateDynamicLogo.Text, layerLogo.ToString()));
-                txtLogMessages.Text += "\n" + ri.Message;
-                //System.Diagnostics.Debug.WriteLine(ri.Message);
-            }
-        }
-
-        private void stopDynamicLogo()
-        {
-            if (casparServer.Connected)
-            {
-                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerLogo.ToString()));
             }
         }
 
@@ -596,6 +697,45 @@ namespace HandballCliente
             if (casparServer.Connected)
             {
                 casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "showCorrectAnswer", layerPresentation.ToString()));
+            }
+        }
+
+        private void startWeatherForecast()
+        {
+            if (casparServer.Connected)
+            {
+                if (casparServer.Connected)
+                {
+                    Template templateCountdown = new Template();
+                    //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+
+                    if (HandballMatch.getInstance().weatherForecast.Count >= 1)
+                    {
+                        String xmlCity1 = Utils.Base64Encode(Utils.ConvertXML(HandballMatch.getInstance().weatherForecast[0]));
+                        String xmlCity2 = Utils.ConvertXML(HandballMatch.getInstance().weatherForecast[0]);
+                        String xmlCity3 = Utils.ConvertXML(HandballMatch.getInstance().weatherForecast[0]);
+
+                        //templateCountdown.Fields.Add(new TemplateField("questionText", txtGameshowQuestion.Text));
+                        templateCountdown.Fields.Add(new TemplateField("city1", xmlCity1));
+                        templateCountdown.Fields.Add(new TemplateField("city2", Utils.Base64Encode(xmlCity2)));
+                        templateCountdown.Fields.Add(new TemplateField("city3", Utils.Base64Encode(xmlCity3)));
+                        templateCountdown.Fields.Add(new TemplateField("startDelay", nudWeatherForecastStartDelaySeconds.Value.ToString()));
+                        templateCountdown.Fields.Add(new TemplateField("pauseLength", nudWeatherForecastPauseSeconds.Value.ToString()));
+                    }
+
+                    //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
+                    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateCountdown.TemplateDataText(), cmbTemplateWeatherForecast.Text, layerPresentation.ToString()));
+                    txtLogMessages.Text += "\n" + ri.Message;
+                    //System.Diagnostics.Debug.WriteLine(ri.Message);
+                }
+            }
+        }
+
+        private void stopWeatherForecast()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerPresentation.ToString()));
             }
         }
 
@@ -1088,15 +1228,6 @@ namespace HandballCliente
 
             evaluateVolleyService();
 
-            //if (SourceButton.Name.Contains("Home"))
-            //{
-            //    radVolleyHomeServe.Checked = true;
-            //}
-            //else
-            //{
-            //    radVolleyGuestServe.Checked = true;
-            //}
-
             evaluateVolleySetEnd();
 
             watchVolleyGame();
@@ -1449,6 +1580,47 @@ namespace HandballCliente
             }
         }
 
+        public void actionQuestion(int action, Question q)
+        {
+            if (action == 1)
+            {
+                addQuestion(q);
+            }
+            else
+            {
+                updateQuestion(q);
+            }
+        }
+
+        private void addQuestion(Question q)
+        {
+            if (!HandballMatch.getInstance().gameshowQuestions.Exists(element => element.id == q.id))
+            {
+                HandballMatch.getInstance().gameshowQuestions.Add(q);
+                FillGameshowQuestions(lvwGameshowQuestions, HandballMatch.getInstance().gameshowQuestions);
+            }
+        }
+
+        private void updateQuestion(Question q)
+        {
+            if (HandballMatch.getInstance().gameshowQuestions.Exists(element => element.id == q.id))
+            {
+                HandballMatch.getInstance().gameshowQuestions.Find(element => element.id == q.id).id = q.id;
+                HandballMatch.getInstance().gameshowQuestions.Find(element => element.id == q.id).question = q.question;
+                HandballMatch.getInstance().gameshowQuestions.Find(element => element.id == q.id).answers = q.answers;
+                HandballMatch.getInstance().gameshowQuestions.Find(element => element.id == q.id).correctAnswer = q.correctAnswer;
+                FillGameshowQuestions(lvwGameshowQuestions, HandballMatch.getInstance().gameshowQuestions);
+            }
+        }
+
+        private void clearQuestionInfo()
+        {
+            lvwGameshowQuestionAnswers.Items.Clear();
+            txtGameshowQuestion.Text = "";
+            cmbGameshowCorrectAnswer.SelectedIndex = -1;
+            cmbGameshowPlayerAnswer.SelectedIndex = -1;
+        }
+
         public void AgregarJugador(ListView lvw, int nro, string nombrecompleto)
         {
             if (lvw.SelectedItems != null)
@@ -1517,6 +1689,191 @@ namespace HandballCliente
                 HandballMatch.getInstance().team2Players.Clear();
                 FillTeamPlayers(lvwGuestTeamPlayers, HandballMatch.getInstance().team2Players);
             }
+        }
+
+        private void getWeatherForecastStates()
+        {
+            String endpoint;
+            endpoint = txtWeatherForecastWS.Text;
+
+            var client = new RestClient(endpoint);
+
+            var request = new RestRequest("/provincias/", Method.GET);
+
+            var response = client.Execute(request);
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                JsonDeserializer deserial = new JsonDeserializer();
+
+                List<Provincia> prov = deserial.Deserialize<List<Provincia>>(response);
+
+                cmbWeatherStates.Items.Clear();
+
+                cmbWeatherStates.DisplayMember = "nombre";
+                cmbWeatherStates.ValueMember = "id";
+                cmbWeatherStates.DataSource = prov;
+            }
+        }
+
+        private void getWeatherForecastStateCities()
+        {
+            String endpoint;
+            endpoint = txtWeatherForecastWS.Text;
+
+            var client = new RestClient(endpoint);
+
+            var request = new RestRequest("/provincias/{id}/ciudades", Method.GET);
+            request.AddUrlSegment("id", ((Provincia)cmbWeatherStates.SelectedItem).id.ToString());
+
+            var response = client.Execute(request);
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                JsonDeserializer deserial = new JsonDeserializer();
+
+                List<City> cities = deserial.Deserialize<List<City>>(response);
+
+                lvwCities.Items.Clear();
+                foreach (var c in cities)
+                {
+                    string[] arr = new string[2];
+                    arr[0] = c.id.ToString();
+                    arr[1] = c.nombre;
+                    lvwCities.Items.Add(new ListViewItem(arr));
+                }
+            }
+        }
+
+        private void getWeatherForecastCityForecast()
+        {
+            String endpoint;
+            endpoint = txtWeatherForecastWS.Text;
+
+            var client = new RestClient(endpoint);
+
+            var request = new RestRequest("/pronosticos/", Method.GET);
+            //request.AddUrlSegment("id", ((Provincia)cmbWeatherStates.SelectedItem).id.ToString());
+
+            var response = client.Execute(request);
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                JsonDeserializer deserial = new JsonDeserializer();
+
+                List<PronosticoCiudad> forecast = deserial.Deserialize<List<PronosticoCiudad>>(response);
+
+                HandballMatch.getInstance().weatherForecast = forecast;
+
+                //lvwCities.Items.Clear();
+                //foreach (var c in cities)
+                //{
+                //    string[] arr = new string[2];
+                //    arr[0] = c.id.ToString();
+                //    arr[1] = c.nombre;
+                //    lvwCities.Items.Add(new ListViewItem(arr));
+                //}
+            }
+        }
+
+        private void fillTwitterList()
+        {
+            getTweets();
+            lvwTwitterList.Items.Clear();
+            List<Tweets> results = HandballMatch.getInstance().tweets;
+            int i = 0;
+
+            foreach (Tweets item in results)
+            {
+                i++;
+                string[] arr = new string[3];
+                arr[0] = item.id.ToString();
+                arr[1] = item.hashtag;
+                arr[2] = item.username;
+                lvwTwitterList.Items.Add(new ListViewItem(arr));
+            }
+        }
+
+        private void getTweets()
+        {
+            String endpoint;
+            endpoint = txtTwitterWS.Text;
+
+            var client = new RestClient(endpoint);
+
+            var request = new RestRequest("/tweets/", Method.GET);
+
+            var response = client.Execute(request);
+
+            List<Tweets> tweetsSorted = new List<Tweets>();
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                JsonDeserializer deserial = new JsonDeserializer();
+
+                List<Tweets> tweets = deserial.Deserialize<List<Tweets>>(response);
+
+                tweetsSorted = tweets.OrderBy(e => e.id).ToList();
+            }
+
+            HandballMatch.getInstance().tweets = tweetsSorted;
+        }
+
+        private void selectTweet()
+        {
+            if (lvwTwitterList.SelectedItems != null)
+            {
+                Tweets aux = HandballMatch.getInstance().tweets.Find(element => element.id == int.Parse(lvwTwitterList.SelectedItems[0].Text));
+                lblTwitterId.Text = aux.id.ToString();
+                txtTwitterHashtag.Text = aux.hashtag;
+                txtTwitterUserName.Text = aux.username;
+                txtTwitterFullName.Text = aux.fullname;
+                txtTwitterMessage.Text = aux.mensaje;
+            }
+        }
+
+        private void fillElectionsResults()
+        {
+            getElectionsResultsOrdered();
+
+            lvwElectionsTop3Results.Items.Clear();
+            List<Election> results = HandballMatch.getInstance().electionResults;
+            int i = 0;
+
+            foreach (Election item in results)
+            {
+                i++;
+                string[] arr = new string[3];
+                arr[0] = i.ToString();
+                arr[1] = item.name;
+                arr[2] = item.percentage.ToString() + "%";
+                lvwElectionsTop3Results.Items.Add(new ListViewItem(arr));
+            }
+        }
+
+        private void getElectionsResultsOrdered()
+        {
+            String endpoint;
+            endpoint = txtElectionsTop3WS.Text;
+
+            var client = new RestClient(endpoint);
+
+            var request = new RestRequest("/elections/", Method.GET);
+
+            var response = client.Execute(request);
+
+            List<Election> electionsSorted = new List<Election>();
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                JsonDeserializer deserial = new JsonDeserializer();
+
+                List<Election> elections = deserial.Deserialize<List<Election>>(response);
+
+                electionsSorted = elections.OrderByDescending(e => e.percentage).ToList();
+            }
+
+            HandballMatch.getInstance().electionResults = electionsSorted;
         }
 
         private void openFile()
@@ -1814,6 +2171,31 @@ namespace HandballCliente
             f1.ShowDialog(this);
         }
 
+        private void newGameshowQuestion()
+        {
+            Pregunta q1 = new Pregunta(this, 1, (HandballMatch.getInstance().gameshowQuestions.Count + 1).ToString());
+            q1.ShowDialog(this);
+        }
+
+        private void editGameshowQuestion()
+        {
+            if (lvwGameshowQuestions.SelectedItems != null)
+            {
+                Question aux = HandballMatch.getInstance().gameshowQuestions.Find(element => element.id == int.Parse(lvwGameshowQuestions.SelectedItems[0].Text));
+                Pregunta f1 = new Pregunta(this, 2, aux.id.ToString(), aux.question, aux.answers, aux.correctAnswer);
+                f1.ShowDialog(this);
+            }
+        }
+
+        private void deleteGameshowQuestion()
+        {
+            if (lvwGameshowQuestions.SelectedItems != null)
+            {
+                HandballMatch.getInstance().gameshowQuestions.Remove(HandballMatch.getInstance().gameshowQuestions.Find(element => element.id == int.Parse(lvwGameshowQuestions.SelectedItems[0].Text)));
+                FillGameshowQuestions(lvwGameshowQuestions, HandballMatch.getInstance().gameshowQuestions);
+            }
+        }
+
         private void addPlayerTeam2()
         {
             Jugador f1 = new Jugador(this, 3, getNextPlayerNumber(HandballMatch.getInstance().team2Players).ToString());
@@ -1929,11 +2311,12 @@ namespace HandballCliente
         {
             string[] arr;
             lvw.Items.Clear();
+            clearQuestionInfo();
             int j = 1;
             foreach (Question item in questions)
             {
                 arr = new string[2];
-                arr[0] = j.ToString();
+                arr[0] = item.id.ToString();
                 arr[1] = item.question;
                 lvw.Items.Add(new ListViewItem(arr));
                 j++;
@@ -1945,7 +2328,7 @@ namespace HandballCliente
             if (lvwGameshowQuestions.SelectedItems != null)
             {
                 txtGameshowQuestion.Text = lvwGameshowQuestions.SelectedItems[0].SubItems[1].Text;
-                Question aux = HandballMatch.getInstance().gameshowQuestions.Find(element => element.question == lvwGameshowQuestions.SelectedItems[0].SubItems[1].Text);
+                Question aux = HandballMatch.getInstance().gameshowQuestions.Find(element => element.id == int.Parse(lvwGameshowQuestions.SelectedItems[0].Text));
                 cmbGameshowCorrectAnswer.Text = aux.correctAnswer.ToString();
                 FillGameshowAnswers(lvwGameshowQuestionAnswers, aux.answers);
             }
@@ -2090,37 +2473,71 @@ namespace HandballCliente
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.F2)
+            switch (e.KeyCode)
             {
-                this.tabControl1.SelectedIndex = 0;
-            }
-            else if (e.KeyCode == Keys.F3)
-            {
-                this.tabControl1.SelectedIndex = 1;
-            }
-            else if (e.KeyCode == Keys.F4)
-            {
-                this.tabControl1.SelectedIndex = 2;
-            }
-            else if (e.KeyCode == Keys.F5)
-            {
-                this.tabControl1.SelectedIndex = 3;
-            }
-            else if (e.KeyCode == Keys.F6)
-            {
-                this.tabControl1.SelectedIndex = 4;
-            }
-            else if (e.KeyCode == Keys.F7)
-            {
-                this.tabControl1.SelectedIndex = 5;
-            }
-            else if (e.KeyCode == Keys.F8)
-            {
-                this.tabControl1.SelectedIndex = 6;
-            }
-            else if (e.KeyCode == Keys.F9)
-            {
-                this.tabControl1.SelectedIndex = 7;
+                case Keys.F1:
+                    break;
+                case Keys.F10:
+                    this.tabControl1.SelectedIndex = 8;
+                    break;
+                case Keys.F11:
+                    this.tabControl1.SelectedIndex = 9;
+                    break;
+                case Keys.F12:
+                    this.tabControl1.SelectedIndex = 10;
+                    break;
+                case Keys.F13:
+                    break;
+                case Keys.F14:
+                    break;
+                case Keys.F15:
+                    break;
+                case Keys.F16:
+                    break;
+                case Keys.F17:
+                    break;
+                case Keys.F18:
+                    break;
+                case Keys.F19:
+                    break;
+                case Keys.F2:
+                    this.tabControl1.SelectedIndex = 0;
+                    break;
+                case Keys.F20:
+                    break;
+                case Keys.F21:
+                    break;
+                case Keys.F22:
+                    break;
+                case Keys.F23:
+                    break;
+                case Keys.F24:
+                    break;
+                case Keys.F3:
+                    this.tabControl1.SelectedIndex = 1;
+                    break;
+                case Keys.F4:
+                    this.tabControl1.SelectedIndex = 2;
+                    break;
+                case Keys.F5:
+                    this.tabControl1.SelectedIndex = 3;
+                    break;
+                case Keys.F6:
+                    this.tabControl1.SelectedIndex = 4;
+                    break;
+                case Keys.F7:
+                    this.tabControl1.SelectedIndex = 5;
+                    break;
+                case Keys.F8:
+                    this.tabControl1.SelectedIndex = 6;
+                    break;
+                case Keys.F9:
+                    this.tabControl1.SelectedIndex = 7;
+                    break;
+                case Keys.Help:
+                    break;
+                default:
+                    break;
             }
         }
 
@@ -2354,16 +2771,6 @@ namespace HandballCliente
             stopTwitter();
         }
 
-        private void btnStartTwitter_Click(object sender, EventArgs e)
-        {
-            startTwitter();
-        }
-
-        private void btnStopTwitter_Click(object sender, EventArgs e)
-        {
-            stopTwitter();
-        }
-
         private void btnStartVolleyScoreboard_Click(object sender, EventArgs e)
         {
             startVolleyScoreboard();
@@ -2554,7 +2961,6 @@ namespace HandballCliente
         {
             showGameshowCorrectAnswer();
         }
-        # endregion
 
         private void btnLoadGameshowQuestions_Click(object sender, EventArgs e)
         {
@@ -2566,5 +2972,95 @@ namespace HandballCliente
             getGameshowQuestion();
         }
 
+        private void btnStartTop3_Click(object sender, EventArgs e)
+        {
+            startTop3();
+        }
+
+        private void btnStopTop3_Click(object sender, EventArgs e)
+        {
+            stopTop3();
+        }
+
+        private void btnAddGameshowQuestion_Click(object sender, EventArgs e)
+        {
+            newGameshowQuestion();
+        }
+
+        private void btnEditGameshowQuestion_Click(object sender, EventArgs e)
+        {
+            editGameshowQuestion();
+        }
+
+        private void btnRemoveGameshowQuestion_Click(object sender, EventArgs e)
+        {
+            deleteGameshowQuestion();
+        }
+        # endregion
+
+        private void btnWeatherForecastCallWS_Click(object sender, EventArgs e)
+        {
+            getWeatherForecastStates();
+        }
+
+        private void cmbWeatherStates_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            getWeatherForecastStateCities();
+        }
+
+        private void btnElectionsTop3CallWS_Click(object sender, EventArgs e)
+        {
+            fillElectionsResults();
+        }
+
+        private void btnStartWeatherForecast_Click(object sender, EventArgs e)
+        {
+            startWeatherForecast();
+        }
+
+        private void btnStopWeatherForecast_Click(object sender, EventArgs e)
+        {
+            stopWeatherForecast();
+        }
+
+        private void lvwCities_DoubleClick(object sender, EventArgs e)
+        {
+            getWeatherForecastCityForecast();
+        }
+
+        private void lvwVideoFiles_DoubleClick(object sender, EventArgs e)
+        {
+            playMedia();
+        }
+
+        private void btnTwitterWSCall_Click(object sender, EventArgs e)
+        {
+            fillTwitterList();
+        }
+
+        private void lvwTwitterList_DoubleClick(object sender, EventArgs e)
+        {
+            selectTweet();
+        }
+
+        private void btnStartTwitter_Click(object sender, EventArgs e)
+        {
+            startTwitter();
+        }
+
+        private void btnStopTwitter_Click(object sender, EventArgs e)
+        {
+            stopTwitter();
+        }
+
+        private void btnGameplayPlay_Click(object sender, EventArgs e)
+        {
+            playGameplay();
+        }
+
+        private void btnGameplayStop_Click(object sender, EventArgs e)
+        {
+            stopGameplay();
+        }
     }
 }

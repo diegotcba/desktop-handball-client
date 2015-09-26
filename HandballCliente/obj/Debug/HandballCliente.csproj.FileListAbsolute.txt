@@ -14,4 +14,6 @@ C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballClien
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballCliente.application
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballCliente.exe
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballCliente.pdb
-C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballCliente.csprojResolveAssemblyReference.cache
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\bin\Debug\RestSharp.dll
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\bin\Debug\RestSharp.xml
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballCliente.Pregunta.resources

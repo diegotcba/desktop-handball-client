@@ -712,13 +712,13 @@ namespace HandballCliente
                     if (HandballMatch.getInstance().weatherForecast.Count >= 1)
                     {
                         String xmlCity1 = Utils.Base64Encode(Utils.ConvertXML(HandballMatch.getInstance().weatherForecast[0]));
-                        String xmlCity2 = Utils.ConvertXML(HandballMatch.getInstance().weatherForecast[0]);
-                        String xmlCity3 = Utils.ConvertXML(HandballMatch.getInstance().weatherForecast[0]);
+                        String xmlCity2 = Utils.Base64Encode(Utils.ConvertXML(HandballMatch.getInstance().weatherForecast[1]));
+                        String xmlCity3 = Utils.Base64Encode(Utils.ConvertXML(HandballMatch.getInstance().weatherForecast[2]));
 
                         //templateCountdown.Fields.Add(new TemplateField("questionText", txtGameshowQuestion.Text));
                         templateCountdown.Fields.Add(new TemplateField("city1", xmlCity1));
-                        templateCountdown.Fields.Add(new TemplateField("city2", Utils.Base64Encode(xmlCity2)));
-                        templateCountdown.Fields.Add(new TemplateField("city3", Utils.Base64Encode(xmlCity3)));
+                        templateCountdown.Fields.Add(new TemplateField("city2", xmlCity2));
+                        templateCountdown.Fields.Add(new TemplateField("city3", xmlCity3));
                         templateCountdown.Fields.Add(new TemplateField("startDelay", nudWeatherForecastStartDelaySeconds.Value.ToString()));
                         templateCountdown.Fields.Add(new TemplateField("pauseLength", nudWeatherForecastPauseSeconds.Value.ToString()));
                     }
@@ -1765,14 +1765,14 @@ namespace HandballCliente
 
                 HandballMatch.getInstance().weatherForecast = forecast;
 
-                //lvwCities.Items.Clear();
-                //foreach (var c in cities)
-                //{
-                //    string[] arr = new string[2];
-                //    arr[0] = c.id.ToString();
-                //    arr[1] = c.nombre;
-                //    lvwCities.Items.Add(new ListViewItem(arr));
-                //}
+                lvwForecastPlaylist.Items.Clear();
+                foreach (PronosticoCiudad c in HandballMatch.getInstance().weatherForecast)
+                {
+                    string[] arr = new string[2];
+                    arr[0] = c.id.ToString();
+                    arr[1] = c.ciudad;
+                    lvwForecastPlaylist.Items.Add(new ListViewItem(arr));
+                }
             }
         }
 

@@ -82,6 +82,167 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtServerAddress = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabSports = new System.Windows.Forms.TabControl();
+            this.tabPage17 = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.nudAutoHideIntroSeconds = new System.Windows.Forms.NumericUpDown();
+            this.chkAutoHideIntro = new System.Windows.Forms.CheckBox();
+            this.btnShowHideIntro = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.cmbFederationLogo = new System.Windows.Forms.ComboBox();
+            this.txtEventLocation = new System.Windows.Forms.TextBox();
+            this.txtEventLeague = new System.Windows.Forms.TextBox();
+            this.txtEventFederation = new System.Windows.Forms.TextBox();
+            this.txtIntroSubtitle = new System.Windows.Forms.TextBox();
+            this.txtIntroTitle = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.cmbHomeTeamLogo = new System.Windows.Forms.ComboBox();
+            this.cmbGuestTeamLogo = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtGuestTeamName = new System.Windows.Forms.TextBox();
+            this.txtHomeTeamName = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tabPage18 = new System.Windows.Forms.TabPage();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.cmbPlayersFontLetterSpacing = new System.Windows.Forms.ComboBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.cmbPlayersFontLineSpacing = new System.Windows.Forms.ComboBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.cmbPlayersFontSize = new System.Windows.Forms.ComboBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.nudSeparationTeamsSeconds = new System.Windows.Forms.NumericUpDown();
+            this.label23 = new System.Windows.Forms.Label();
+            this.nudTeamsShowSeconds = new System.Windows.Forms.NumericUpDown();
+            this.btnShowHomeAndGuestTeam = new System.Windows.Forms.Button();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.nudHideGuestTeamSeconds = new System.Windows.Forms.NumericUpDown();
+            this.chkAutoHideGuestTeam = new System.Windows.Forms.CheckBox();
+            this.btnShowHideGuestTeam = new System.Windows.Forms.Button();
+            this.btnClearGuestTeamPlayers = new System.Windows.Forms.Button();
+            this.btnLoadGuestTeamPlayers = new System.Windows.Forms.Button();
+            this.btnEditGuestTeamPlayer = new System.Windows.Forms.Button();
+            this.btnRemoveGuestTeamPlayer = new System.Windows.Forms.Button();
+            this.btnAddGuestTeamPlayer = new System.Windows.Forms.Button();
+            this.lvwGuestTeamPlayers = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtGuestTeamPlayers = new System.Windows.Forms.TextBox();
+            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.nudHideHomeTeamSeconds = new System.Windows.Forms.NumericUpDown();
+            this.chkAutoHideHomeTeam = new System.Windows.Forms.CheckBox();
+            this.btnShowHideHomeTeam = new System.Windows.Forms.Button();
+            this.btnClearHomeTeamPlayers = new System.Windows.Forms.Button();
+            this.btnLoadHomeTeamPlayers = new System.Windows.Forms.Button();
+            this.btnEditHomeTeamPlayer = new System.Windows.Forms.Button();
+            this.btnRemoveHomeTeamPlayer = new System.Windows.Forms.Button();
+            this.btnAddHomeTeamPlayer = new System.Windows.Forms.Button();
+            this.lvwHomeTeamPlayers = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtHomeTeamCoach = new System.Windows.Forms.TextBox();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.tabPage19 = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.chkAutoShowOnClockStart = new System.Windows.Forms.CheckBox();
+            this.nudAutoHideResultSeconds = new System.Windows.Forms.NumericUpDown();
+            this.chkAutoHideResult = new System.Windows.Forms.CheckBox();
+            this.chkAutoHideOnClockEnd = new System.Windows.Forms.CheckBox();
+            this.nudClockLengthSeconds = new System.Windows.Forms.NumericUpDown();
+            this.nudClockLengthMinutes = new System.Windows.Forms.NumericUpDown();
+            this.nudExclutionLengthSeconds = new System.Windows.Forms.NumericUpDown();
+            this.nudExclutionLengthMinutes = new System.Windows.Forms.NumericUpDown();
+            this.btnShowHideResult = new System.Windows.Forms.Button();
+            this.btnShowHideScoreboard = new System.Windows.Forms.Button();
+            this.btnStartClock = new System.Windows.Forms.Button();
+            this.btnResetClock = new System.Windows.Forms.Button();
+            this.btnStopClock = new System.Windows.Forms.Button();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.cmbHalf = new System.Windows.Forms.ComboBox();
+            this.nudClockSeconds = new System.Windows.Forms.NumericUpDown();
+            this.nudClockMinutes = new System.Windows.Forms.NumericUpDown();
+            this.btnStopScoreboard = new System.Windows.Forms.Button();
+            this.btnStartScoreboard = new System.Windows.Forms.Button();
+            this.btnClearGuestTeamExclution = new System.Windows.Forms.Button();
+            this.btnRemoveGuestTeamExclution = new System.Windows.Forms.Button();
+            this.btnAddGuestTeamExclution = new System.Windows.Forms.Button();
+            this.lvwGuestTeamExclution = new System.Windows.Forms.ListView();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnGuestTeamExclution = new System.Windows.Forms.Button();
+            this.btnAddOneToGuestTeamScore = new System.Windows.Forms.Button();
+            this.btnClearHomeTeamExclution = new System.Windows.Forms.Button();
+            this.btnRemoveHomeTeamExclution = new System.Windows.Forms.Button();
+            this.btnAddHomeTeamExclution = new System.Windows.Forms.Button();
+            this.lvwHomeTeamExclutions = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnHomeTeamExclution = new System.Windows.Forms.Button();
+            this.btnAddOneToHomeTeamScore = new System.Windows.Forms.Button();
+            this.nudGuestTeamScore = new System.Windows.Forms.NumericUpDown();
+            this.nudHomeTeamScore = new System.Windows.Forms.NumericUpDown();
+            this.txtNombreScoreVisitante = new System.Windows.Forms.TextBox();
+            this.txtNombreScoreLocal = new System.Windows.Forms.TextBox();
+            this.shapeContainer3 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.tabPage20 = new System.Windows.Forms.TabPage();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.radGuestTeamPlayers = new System.Windows.Forms.RadioButton();
+            this.radHomeTeamPlayers = new System.Windows.Forms.RadioButton();
+            this.lvwTeamPlayers = new System.Windows.Forms.ListView();
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.nudAutoHideLTSeconds = new System.Windows.Forms.NumericUpDown();
+            this.chkAutoHideLT = new System.Windows.Forms.CheckBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txtLTSubtitle = new System.Windows.Forms.TextBox();
+            this.txtLTTitle = new System.Windows.Forms.TextBox();
+            this.btnStopLT = new System.Windows.Forms.Button();
+            this.btnStartLT = new System.Windows.Forms.Button();
+            this.tabPage21 = new System.Windows.Forms.TabPage();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.btnClearPositions = new System.Windows.Forms.Button();
+            this.btnLoadPositions = new System.Windows.Forms.Button();
+            this.btnEditPosition = new System.Windows.Forms.Button();
+            this.btnRemovePosition = new System.Windows.Forms.Button();
+            this.btnAddPosition = new System.Windows.Forms.Button();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.txtPositionsSubtitle = new System.Windows.Forms.TextBox();
+            this.txtPositionsTitle = new System.Windows.Forms.TextBox();
+            this.nudAutoHidePositionsSeconds = new System.Windows.Forms.NumericUpDown();
+            this.chkAutoHidePositions = new System.Windows.Forms.CheckBox();
+            this.btnHidePositions = new System.Windows.Forms.Button();
+            this.btnShowPositions = new System.Windows.Forms.Button();
+            this.lvwPositions = new System.Windows.Forms.ListView();
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.btnConfigRecording = new System.Windows.Forms.Button();
@@ -124,6 +285,65 @@
             this.cmbImageScrolling = new System.Windows.Forms.ComboBox();
             this.label33 = new System.Windows.Forms.Label();
             this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.tabVolleyball = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.cmbTemplateVolleyResult = new System.Windows.Forms.ComboBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.nudAutoHideVolleyResultSeconds = new System.Windows.Forms.NumericUpDown();
+            this.chkAutoHideVolleyResult = new System.Windows.Forms.CheckBox();
+            this.btnStopVolleyResult = new System.Windows.Forms.Button();
+            this.btnStartVolleyResult = new System.Windows.Forms.Button();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.nudVolleyServicesPerPlayer = new System.Windows.Forms.NumericUpDown();
+            this.label60 = new System.Windows.Forms.Label();
+            this.cmbVolleyScoreboardFontSize = new System.Windows.Forms.ComboBox();
+            this.chkVolleyShowService = new System.Windows.Forms.CheckBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.txtVolleyWebsite = new System.Windows.Forms.TextBox();
+            this.label57 = new System.Windows.Forms.Label();
+            this.txtVolleyTitle = new System.Windows.Forms.TextBox();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.nudVolleyPointsPerSet = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleySetsPerMatch = new System.Windows.Forms.NumericUpDown();
+            this.cmbTemplateVolleyScoreboard = new System.Windows.Forms.ComboBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.radVolleyGuestServe = new System.Windows.Forms.RadioButton();
+            this.radVolleyHomeServe = new System.Windows.Forms.RadioButton();
+            this.nudAutoHideVolleyScoreboardSeconds = new System.Windows.Forms.NumericUpDown();
+            this.chkAutoHideVolleyScoreboard = new System.Windows.Forms.CheckBox();
+            this.btnStopVolleyScoreboard = new System.Windows.Forms.Button();
+            this.btnStartVolleyScoreboard = new System.Windows.Forms.Button();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.radVolley2Set = new System.Windows.Forms.RadioButton();
+            this.radVolley3Set = new System.Windows.Forms.RadioButton();
+            this.radVolley4Set = new System.Windows.Forms.RadioButton();
+            this.radVolley5Set = new System.Windows.Forms.RadioButton();
+            this.radVolley1Set = new System.Windows.Forms.RadioButton();
+            this.nudVolleyGuestSets = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleyHomeSets = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleyGuest4SetPoints = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleyHome4SetPoints = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleyGuest3SetPoints = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleyHome3SetPoints = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleyGuest2SetPoints = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleyHome2SetPoints = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleyGuest1SetPoints = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleyHome1SetPoints = new System.Windows.Forms.NumericUpDown();
+            this.btnUpdateVolleyScoreboard = new System.Windows.Forms.Button();
+            this.chkAutoUpdateVolleyScoreboard = new System.Windows.Forms.CheckBox();
+            this.btnVolleyHomeAddPoint = new System.Windows.Forms.Button();
+            this.btnVolleyGuestAddPoint = new System.Windows.Forms.Button();
+            this.nudVolleyGuest5SetPoints = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleyHome5SetPoints = new System.Windows.Forms.NumericUpDown();
+            this.txtVolleyGuestTeam = new System.Windows.Forms.TextBox();
+            this.txtVolleyHomeTeam = new System.Windows.Forms.TextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.groupBox26 = new System.Windows.Forms.GroupBox();
             this.cmbLogoFile = new System.Windows.Forms.ComboBox();
@@ -148,7 +368,72 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.tabGameshow = new System.Windows.Forms.TabControl();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.groupBox27 = new System.Windows.Forms.GroupBox();
+            this.cmbTemplateGameshowCountdown = new System.Windows.Forms.ComboBox();
+            this.label65 = new System.Windows.Forms.Label();
+            this.nudGameshowRefreshMiliseconds = new System.Windows.Forms.NumericUpDown();
+            this.label64 = new System.Windows.Forms.Label();
+            this.btnStopCountdown = new System.Windows.Forms.Button();
+            this.btnStartCountdown = new System.Windows.Forms.Button();
+            this.label63 = new System.Windows.Forms.Label();
+            this.nudGameshowCounterSeconds = new System.Windows.Forms.NumericUpDown();
+            this.chkAutoHideFinishedCountdown = new System.Windows.Forms.CheckBox();
+            this.btnHideCountdown = new System.Windows.Forms.Button();
+            this.btnShowCountdown = new System.Windows.Forms.Button();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.groupBox25 = new System.Windows.Forms.GroupBox();
+            this.cmbTemplateGameshowQuestions = new System.Windows.Forms.ComboBox();
+            this.label73 = new System.Windows.Forms.Label();
+            this.btnShowCorrectAnswer = new System.Windows.Forms.Button();
+            this.btnShowPlayerAnswer = new System.Windows.Forms.Button();
+            this.label76 = new System.Windows.Forms.Label();
+            this.cmbGameshowPlayerAnswer = new System.Windows.Forms.ComboBox();
+            this.label75 = new System.Windows.Forms.Label();
+            this.cmbGameshowCorrectAnswer = new System.Windows.Forms.ComboBox();
+            this.label74 = new System.Windows.Forms.Label();
+            this.btnHideGameshowQuestions = new System.Windows.Forms.Button();
+            this.btnShowGameshowQuestions = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.lvwGameshowQuestionAnswers = new System.Windows.Forms.ListView();
+            this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label67 = new System.Windows.Forms.Label();
+            this.txtGameshowQuestion = new System.Windows.Forms.TextBox();
+            this.btnClearGameshowQuestions = new System.Windows.Forms.Button();
+            this.btnLoadGameshowQuestions = new System.Windows.Forms.Button();
+            this.btnEditGameshowQuestion = new System.Windows.Forms.Button();
+            this.btnRemoveGameshowQuestion = new System.Windows.Forms.Button();
+            this.btnAddGameshowQuestion = new System.Windows.Forms.Button();
+            this.lvwGameshowQuestions = new System.Windows.Forms.ListView();
+            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage12 = new System.Windows.Forms.TabPage();
+            this.tabElections = new System.Windows.Forms.TabControl();
+            this.tabPage22 = new System.Windows.Forms.TabPage();
+            this.groupBox29 = new System.Windows.Forms.GroupBox();
+            this.btnElectionsTop3CallWS = new System.Windows.Forms.Button();
+            this.label78 = new System.Windows.Forms.Label();
+            this.txtElectionsTop3WS = new System.Windows.Forms.TextBox();
+            this.label79 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.lvwElectionsTop3Results = new System.Windows.Forms.ListView();
+            this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cmbElectionsC1Picture = new System.Windows.Forms.ComboBox();
+            this.label77 = new System.Windows.Forms.Label();
+            this.cmbTemplateElectionsTop3 = new System.Windows.Forms.ComboBox();
+            this.label81 = new System.Windows.Forms.Label();
+            this.btnStopTop3 = new System.Windows.Forms.Button();
+            this.btnStartTop3 = new System.Windows.Forms.Button();
+            this.chkAutoHideTop3 = new System.Windows.Forms.CheckBox();
+            this.tabPage23 = new System.Windows.Forms.TabPage();
             this.tabPage13 = new System.Windows.Forms.TabPage();
             this.groupBox30 = new System.Windows.Forms.GroupBox();
             this.label87 = new System.Windows.Forms.Label();
@@ -207,6 +492,39 @@
             this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader34 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader35 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.groupBox34 = new System.Windows.Forms.GroupBox();
+            this.cmbTemplateGameplay = new System.Windows.Forms.ComboBox();
+            this.label89 = new System.Windows.Forms.Label();
+            this.btnStopGameplay = new System.Windows.Forms.Button();
+            this.btnStartGameplay = new System.Windows.Forms.Button();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.groupBox33 = new System.Windows.Forms.GroupBox();
+            this.chkGameplayAutoHideDrawings = new System.Windows.Forms.CheckBox();
+            this.btnGameplayStop = new System.Windows.Forms.Button();
+            this.btnGameplayPlay = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.lvwGameplayPlaylist = new System.Windows.Forms.ListView();
+            this.columnHeader36 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader37 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.groupBox31 = new System.Windows.Forms.GroupBox();
+            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.picGameplayWhiteboard = new System.Windows.Forms.PictureBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.tabPage16 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtEventDescription = new System.Windows.Forms.TextBox();
             this.dtpEventDate = new System.Windows.Forms.DateTimePicker();
@@ -226,324 +544,6 @@
             this.tmrPositions = new System.Windows.Forms.Timer(this.components);
             this.tmrTwitter = new System.Windows.Forms.Timer(this.components);
             this.tmrVolleyResult = new System.Windows.Forms.Timer(this.components);
-            this.tabPage15 = new System.Windows.Forms.TabPage();
-            this.groupBox31 = new System.Windows.Forms.GroupBox();
-            this.tabPage16 = new System.Windows.Forms.TabPage();
-            this.groupBox33 = new System.Windows.Forms.GroupBox();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.lvwGameplayPlaylist = new System.Windows.Forms.ListView();
-            this.columnHeader36 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader37 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.groupBox34 = new System.Windows.Forms.GroupBox();
-            this.btnStopGameplay = new System.Windows.Forms.Button();
-            this.btnStartGameplay = new System.Windows.Forms.Button();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.cmbTemplateGameplay = new System.Windows.Forms.ComboBox();
-            this.label89 = new System.Windows.Forms.Label();
-            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnGameplayStop = new System.Windows.Forms.Button();
-            this.btnGameplayPlay = new System.Windows.Forms.Button();
-            this.chkGameplayAutoHideDrawings = new System.Windows.Forms.CheckBox();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
-            this.picGameplayWhiteboard = new System.Windows.Forms.PictureBox();
-            this.tabSports = new System.Windows.Forms.TabControl();
-            this.tabPage17 = new System.Windows.Forms.TabPage();
-            this.tabPage18 = new System.Windows.Forms.TabPage();
-            this.tabPage19 = new System.Windows.Forms.TabPage();
-            this.tabPage20 = new System.Windows.Forms.TabPage();
-            this.tabPage21 = new System.Windows.Forms.TabPage();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.nudAutoHideIntroSeconds = new System.Windows.Forms.NumericUpDown();
-            this.chkAutoHideIntro = new System.Windows.Forms.CheckBox();
-            this.btnShowHideIntro = new System.Windows.Forms.Button();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.cmbFederationLogo = new System.Windows.Forms.ComboBox();
-            this.txtEventLocation = new System.Windows.Forms.TextBox();
-            this.txtEventLeague = new System.Windows.Forms.TextBox();
-            this.txtEventFederation = new System.Windows.Forms.TextBox();
-            this.txtIntroSubtitle = new System.Windows.Forms.TextBox();
-            this.txtIntroTitle = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.cmbHomeTeamLogo = new System.Windows.Forms.ComboBox();
-            this.cmbGuestTeamLogo = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtGuestTeamName = new System.Windows.Forms.TextBox();
-            this.txtHomeTeamName = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.cmbPlayersFontLetterSpacing = new System.Windows.Forms.ComboBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.cmbPlayersFontLineSpacing = new System.Windows.Forms.ComboBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.cmbPlayersFontSize = new System.Windows.Forms.ComboBox();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.nudSeparationTeamsSeconds = new System.Windows.Forms.NumericUpDown();
-            this.label23 = new System.Windows.Forms.Label();
-            this.nudTeamsShowSeconds = new System.Windows.Forms.NumericUpDown();
-            this.btnShowHomeAndGuestTeam = new System.Windows.Forms.Button();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.nudHideGuestTeamSeconds = new System.Windows.Forms.NumericUpDown();
-            this.chkAutoHideGuestTeam = new System.Windows.Forms.CheckBox();
-            this.btnShowHideGuestTeam = new System.Windows.Forms.Button();
-            this.btnClearGuestTeamPlayers = new System.Windows.Forms.Button();
-            this.btnLoadGuestTeamPlayers = new System.Windows.Forms.Button();
-            this.btnEditGuestTeamPlayer = new System.Windows.Forms.Button();
-            this.btnRemoveGuestTeamPlayer = new System.Windows.Forms.Button();
-            this.btnAddGuestTeamPlayer = new System.Windows.Forms.Button();
-            this.lvwGuestTeamPlayers = new System.Windows.Forms.ListView();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label22 = new System.Windows.Forms.Label();
-            this.txtGuestTeamPlayers = new System.Windows.Forms.TextBox();
-            this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.nudHideHomeTeamSeconds = new System.Windows.Forms.NumericUpDown();
-            this.chkAutoHideHomeTeam = new System.Windows.Forms.CheckBox();
-            this.btnShowHideHomeTeam = new System.Windows.Forms.Button();
-            this.btnClearHomeTeamPlayers = new System.Windows.Forms.Button();
-            this.btnLoadHomeTeamPlayers = new System.Windows.Forms.Button();
-            this.btnEditHomeTeamPlayer = new System.Windows.Forms.Button();
-            this.btnRemoveHomeTeamPlayer = new System.Windows.Forms.Button();
-            this.btnAddHomeTeamPlayer = new System.Windows.Forms.Button();
-            this.lvwHomeTeamPlayers = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label21 = new System.Windows.Forms.Label();
-            this.txtHomeTeamCoach = new System.Windows.Forms.TextBox();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.chkAutoShowOnClockStart = new System.Windows.Forms.CheckBox();
-            this.nudAutoHideResultSeconds = new System.Windows.Forms.NumericUpDown();
-            this.chkAutoHideResult = new System.Windows.Forms.CheckBox();
-            this.chkAutoHideOnClockEnd = new System.Windows.Forms.CheckBox();
-            this.nudClockLengthSeconds = new System.Windows.Forms.NumericUpDown();
-            this.nudClockLengthMinutes = new System.Windows.Forms.NumericUpDown();
-            this.nudExclutionLengthSeconds = new System.Windows.Forms.NumericUpDown();
-            this.nudExclutionLengthMinutes = new System.Windows.Forms.NumericUpDown();
-            this.btnShowHideResult = new System.Windows.Forms.Button();
-            this.btnShowHideScoreboard = new System.Windows.Forms.Button();
-            this.btnStartClock = new System.Windows.Forms.Button();
-            this.btnResetClock = new System.Windows.Forms.Button();
-            this.btnStopClock = new System.Windows.Forms.Button();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.cmbHalf = new System.Windows.Forms.ComboBox();
-            this.nudClockSeconds = new System.Windows.Forms.NumericUpDown();
-            this.nudClockMinutes = new System.Windows.Forms.NumericUpDown();
-            this.btnStopScoreboard = new System.Windows.Forms.Button();
-            this.btnStartScoreboard = new System.Windows.Forms.Button();
-            this.btnClearGuestTeamExclution = new System.Windows.Forms.Button();
-            this.btnRemoveGuestTeamExclution = new System.Windows.Forms.Button();
-            this.btnAddGuestTeamExclution = new System.Windows.Forms.Button();
-            this.lvwGuestTeamExclution = new System.Windows.Forms.ListView();
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnGuestTeamExclution = new System.Windows.Forms.Button();
-            this.btnAddOneToGuestTeamScore = new System.Windows.Forms.Button();
-            this.btnClearHomeTeamExclution = new System.Windows.Forms.Button();
-            this.btnRemoveHomeTeamExclution = new System.Windows.Forms.Button();
-            this.btnAddHomeTeamExclution = new System.Windows.Forms.Button();
-            this.lvwHomeTeamExclutions = new System.Windows.Forms.ListView();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnHomeTeamExclution = new System.Windows.Forms.Button();
-            this.btnAddOneToHomeTeamScore = new System.Windows.Forms.Button();
-            this.nudGuestTeamScore = new System.Windows.Forms.NumericUpDown();
-            this.nudHomeTeamScore = new System.Windows.Forms.NumericUpDown();
-            this.txtNombreScoreVisitante = new System.Windows.Forms.TextBox();
-            this.txtNombreScoreLocal = new System.Windows.Forms.TextBox();
-            this.shapeContainer3 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.radGuestTeamPlayers = new System.Windows.Forms.RadioButton();
-            this.radHomeTeamPlayers = new System.Windows.Forms.RadioButton();
-            this.lvwTeamPlayers = new System.Windows.Forms.ListView();
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.nudAutoHideLTSeconds = new System.Windows.Forms.NumericUpDown();
-            this.chkAutoHideLT = new System.Windows.Forms.CheckBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.txtLTSubtitle = new System.Windows.Forms.TextBox();
-            this.txtLTTitle = new System.Windows.Forms.TextBox();
-            this.btnStopLT = new System.Windows.Forms.Button();
-            this.btnStartLT = new System.Windows.Forms.Button();
-            this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.btnClearPositions = new System.Windows.Forms.Button();
-            this.btnLoadPositions = new System.Windows.Forms.Button();
-            this.btnEditPosition = new System.Windows.Forms.Button();
-            this.btnRemovePosition = new System.Windows.Forms.Button();
-            this.btnAddPosition = new System.Windows.Forms.Button();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.txtPositionsSubtitle = new System.Windows.Forms.TextBox();
-            this.txtPositionsTitle = new System.Windows.Forms.TextBox();
-            this.nudAutoHidePositionsSeconds = new System.Windows.Forms.NumericUpDown();
-            this.chkAutoHidePositions = new System.Windows.Forms.CheckBox();
-            this.btnHidePositions = new System.Windows.Forms.Button();
-            this.btnShowPositions = new System.Windows.Forms.Button();
-            this.lvwPositions = new System.Windows.Forms.ListView();
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tabVolleyball = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.groupBox22 = new System.Windows.Forms.GroupBox();
-            this.cmbTemplateVolleyResult = new System.Windows.Forms.ComboBox();
-            this.label51 = new System.Windows.Forms.Label();
-            this.nudAutoHideVolleyResultSeconds = new System.Windows.Forms.NumericUpDown();
-            this.chkAutoHideVolleyResult = new System.Windows.Forms.CheckBox();
-            this.btnStopVolleyResult = new System.Windows.Forms.Button();
-            this.btnStartVolleyResult = new System.Windows.Forms.Button();
-            this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.label62 = new System.Windows.Forms.Label();
-            this.nudVolleyServicesPerPlayer = new System.Windows.Forms.NumericUpDown();
-            this.label60 = new System.Windows.Forms.Label();
-            this.cmbVolleyScoreboardFontSize = new System.Windows.Forms.ComboBox();
-            this.chkVolleyShowService = new System.Windows.Forms.CheckBox();
-            this.label58 = new System.Windows.Forms.Label();
-            this.txtVolleyWebsite = new System.Windows.Forms.TextBox();
-            this.label57 = new System.Windows.Forms.Label();
-            this.txtVolleyTitle = new System.Windows.Forms.TextBox();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.nudVolleyPointsPerSet = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleySetsPerMatch = new System.Windows.Forms.NumericUpDown();
-            this.cmbTemplateVolleyScoreboard = new System.Windows.Forms.ComboBox();
-            this.label52 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.radVolleyGuestServe = new System.Windows.Forms.RadioButton();
-            this.radVolleyHomeServe = new System.Windows.Forms.RadioButton();
-            this.nudAutoHideVolleyScoreboardSeconds = new System.Windows.Forms.NumericUpDown();
-            this.chkAutoHideVolleyScoreboard = new System.Windows.Forms.CheckBox();
-            this.btnStopVolleyScoreboard = new System.Windows.Forms.Button();
-            this.btnStartVolleyScoreboard = new System.Windows.Forms.Button();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.radVolley2Set = new System.Windows.Forms.RadioButton();
-            this.radVolley3Set = new System.Windows.Forms.RadioButton();
-            this.radVolley4Set = new System.Windows.Forms.RadioButton();
-            this.radVolley5Set = new System.Windows.Forms.RadioButton();
-            this.radVolley1Set = new System.Windows.Forms.RadioButton();
-            this.nudVolleyGuestSets = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleyHomeSets = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleyGuest4SetPoints = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleyHome4SetPoints = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleyGuest3SetPoints = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleyHome3SetPoints = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleyGuest2SetPoints = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleyHome2SetPoints = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleyGuest1SetPoints = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleyHome1SetPoints = new System.Windows.Forms.NumericUpDown();
-            this.btnUpdateVolleyScoreboard = new System.Windows.Forms.Button();
-            this.chkAutoUpdateVolleyScoreboard = new System.Windows.Forms.CheckBox();
-            this.btnVolleyHomeAddPoint = new System.Windows.Forms.Button();
-            this.btnVolleyGuestAddPoint = new System.Windows.Forms.Button();
-            this.nudVolleyGuest5SetPoints = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleyHome5SetPoints = new System.Windows.Forms.NumericUpDown();
-            this.txtVolleyGuestTeam = new System.Windows.Forms.TextBox();
-            this.txtVolleyHomeTeam = new System.Windows.Forms.TextBox();
-            this.tabGameshow = new System.Windows.Forms.TabControl();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.groupBox27 = new System.Windows.Forms.GroupBox();
-            this.nudGameshowRefreshMiliseconds = new System.Windows.Forms.NumericUpDown();
-            this.label64 = new System.Windows.Forms.Label();
-            this.btnStopCountdown = new System.Windows.Forms.Button();
-            this.btnStartCountdown = new System.Windows.Forms.Button();
-            this.label63 = new System.Windows.Forms.Label();
-            this.nudGameshowCounterSeconds = new System.Windows.Forms.NumericUpDown();
-            this.chkAutoHideFinishedCountdown = new System.Windows.Forms.CheckBox();
-            this.btnHideCountdown = new System.Windows.Forms.Button();
-            this.btnShowCountdown = new System.Windows.Forms.Button();
-            this.groupBox25 = new System.Windows.Forms.GroupBox();
-            this.btnShowCorrectAnswer = new System.Windows.Forms.Button();
-            this.btnShowPlayerAnswer = new System.Windows.Forms.Button();
-            this.label76 = new System.Windows.Forms.Label();
-            this.cmbGameshowPlayerAnswer = new System.Windows.Forms.ComboBox();
-            this.label75 = new System.Windows.Forms.Label();
-            this.cmbGameshowCorrectAnswer = new System.Windows.Forms.ComboBox();
-            this.label74 = new System.Windows.Forms.Label();
-            this.btnHideGameshowQuestions = new System.Windows.Forms.Button();
-            this.btnShowGameshowQuestions = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.lvwGameshowQuestionAnswers = new System.Windows.Forms.ListView();
-            this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label67 = new System.Windows.Forms.Label();
-            this.txtGameshowQuestion = new System.Windows.Forms.TextBox();
-            this.btnClearGameshowQuestions = new System.Windows.Forms.Button();
-            this.btnLoadGameshowQuestions = new System.Windows.Forms.Button();
-            this.btnEditGameshowQuestion = new System.Windows.Forms.Button();
-            this.btnRemoveGameshowQuestion = new System.Windows.Forms.Button();
-            this.btnAddGameshowQuestion = new System.Windows.Forms.Button();
-            this.lvwGameshowQuestions = new System.Windows.Forms.ListView();
-            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cmbTemplateGameshowQuestions = new System.Windows.Forms.ComboBox();
-            this.label73 = new System.Windows.Forms.Label();
-            this.cmbTemplateGameshowCountdown = new System.Windows.Forms.ComboBox();
-            this.label65 = new System.Windows.Forms.Label();
-            this.tabElections = new System.Windows.Forms.TabControl();
-            this.tabPage22 = new System.Windows.Forms.TabPage();
-            this.tabPage23 = new System.Windows.Forms.TabPage();
-            this.groupBox29 = new System.Windows.Forms.GroupBox();
-            this.btnElectionsTop3CallWS = new System.Windows.Forms.Button();
-            this.label78 = new System.Windows.Forms.Label();
-            this.txtElectionsTop3WS = new System.Windows.Forms.TextBox();
-            this.label79 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.lvwElectionsTop3Results = new System.Windows.Forms.ListView();
-            this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cmbElectionsC1Picture = new System.Windows.Forms.ComboBox();
-            this.label77 = new System.Windows.Forms.Label();
-            this.cmbTemplateElectionsTop3 = new System.Windows.Forms.ComboBox();
-            this.label81 = new System.Windows.Forms.Label();
-            this.btnStopTop3 = new System.Windows.Forms.Button();
-            this.btnStartTop3 = new System.Windows.Forms.Button();
-            this.chkAutoHideTop3 = new System.Windows.Forms.CheckBox();
             this.mstMenues.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -552,53 +552,12 @@
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.groupBox12.SuspendLayout();
-            this.groupBox16.SuspendLayout();
-            this.groupBox11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trkVolume)).BeginInit();
-            this.tabPage7.SuspendLayout();
-            this.groupBox15.SuspendLayout();
-            this.groupBox17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trkImageScrollingSpeed)).BeginInit();
-            this.tabPage9.SuspendLayout();
-            this.tabPage10.SuspendLayout();
-            this.groupBox26.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoHeight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoPosY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoWidth)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoPosX)).BeginInit();
-            this.groupBox24.SuspendLayout();
-            this.groupBox23.SuspendLayout();
-            this.tabPage11.SuspendLayout();
-            this.tabPage12.SuspendLayout();
-            this.tabPage13.SuspendLayout();
-            this.groupBox30.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudWeatherForecastPauseSeconds)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudWeatherForecastStartDelaySeconds)).BeginInit();
-            this.tabPage14.SuspendLayout();
-            this.groupBox20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideTwitterSeconds)).BeginInit();
-            this.groupBox32.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.tabPage15.SuspendLayout();
-            this.groupBox31.SuspendLayout();
-            this.groupBox33.SuspendLayout();
-            this.groupBox34.SuspendLayout();
-            this.toolStripContainer1.ContentPanel.SuspendLayout();
-            this.toolStripContainer1.RightToolStripPanel.SuspendLayout();
-            this.toolStripContainer1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picGameplayWhiteboard)).BeginInit();
             this.tabSports.SuspendLayout();
             this.tabPage17.SuspendLayout();
-            this.tabPage18.SuspendLayout();
-            this.tabPage19.SuspendLayout();
-            this.tabPage20.SuspendLayout();
-            this.tabPage21.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideIntroSeconds)).BeginInit();
             this.groupBox4.SuspendLayout();
+            this.tabPage18.SuspendLayout();
             this.groupBox19.SuspendLayout();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSeparationTeamsSeconds)).BeginInit();
@@ -607,6 +566,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudHideGuestTeamSeconds)).BeginInit();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHideHomeTeamSeconds)).BeginInit();
+            this.tabPage19.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideResultSeconds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudClockLengthSeconds)).BeginInit();
@@ -617,11 +577,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudClockMinutes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudGuestTeamScore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHomeTeamScore)).BeginInit();
+            this.tabPage20.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.groupBox14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideLTSeconds)).BeginInit();
+            this.tabPage21.SuspendLayout();
             this.groupBox18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAutoHidePositionsSeconds)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox16.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trkVolume)).BeginInit();
+            this.tabPage7.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            this.groupBox17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trkImageScrollingSpeed)).BeginInit();
+            this.tabPage9.SuspendLayout();
             this.tabVolleyball.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox22.SuspendLayout();
@@ -644,16 +616,44 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome1SetPoints)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest5SetPoints)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome5SetPoints)).BeginInit();
+            this.tabPage10.SuspendLayout();
+            this.groupBox26.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoHeight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoPosY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoWidth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoPosX)).BeginInit();
+            this.groupBox24.SuspendLayout();
+            this.groupBox23.SuspendLayout();
+            this.tabPage11.SuspendLayout();
             this.tabGameshow.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            this.tabPage8.SuspendLayout();
             this.groupBox27.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudGameshowRefreshMiliseconds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudGameshowCounterSeconds)).BeginInit();
+            this.tabPage8.SuspendLayout();
             this.groupBox25.SuspendLayout();
+            this.tabPage12.SuspendLayout();
             this.tabElections.SuspendLayout();
             this.tabPage22.SuspendLayout();
             this.groupBox29.SuspendLayout();
+            this.tabPage13.SuspendLayout();
+            this.groupBox30.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudWeatherForecastPauseSeconds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudWeatherForecastStartDelaySeconds)).BeginInit();
+            this.tabPage14.SuspendLayout();
+            this.groupBox20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideTwitterSeconds)).BeginInit();
+            this.groupBox32.SuspendLayout();
+            this.tabPage15.SuspendLayout();
+            this.groupBox34.SuspendLayout();
+            this.groupBox33.SuspendLayout();
+            this.groupBox31.SuspendLayout();
+            this.toolStripContainer1.ContentPanel.SuspendLayout();
+            this.toolStripContainer1.RightToolStripPanel.SuspendLayout();
+            this.toolStripContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picGameplayWhiteboard)).BeginInit();
+            this.toolStrip1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // mstMenues
@@ -1172,1830 +1172,6 @@
             this.tabPage2.Text = "Sports  (F3)";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.groupBox12);
-            this.tabPage5.Controls.Add(this.groupBox16);
-            this.tabPage5.Controls.Add(this.groupBox11);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(822, 323);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Multimedia (F4)";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // groupBox12
-            // 
-            this.groupBox12.Controls.Add(this.btnConfigRecording);
-            this.groupBox12.Controls.Add(this.label30);
-            this.groupBox12.Controls.Add(this.txtRecordingFileName);
-            this.groupBox12.Controls.Add(this.btnStopRecording);
-            this.groupBox12.Controls.Add(this.btnStartRecording);
-            this.groupBox12.Location = new System.Drawing.Point(441, 186);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(293, 131);
-            this.groupBox12.TabIndex = 4;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Grabacion";
-            // 
-            // btnConfigRecording
-            // 
-            this.btnConfigRecording.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfigRecording.Location = new System.Drawing.Point(185, 67);
-            this.btnConfigRecording.Name = "btnConfigRecording";
-            this.btnConfigRecording.Size = new System.Drawing.Size(77, 40);
-            this.btnConfigRecording.TabIndex = 20;
-            this.btnConfigRecording.Text = "Config";
-            this.btnConfigRecording.UseVisualStyleBackColor = true;
-            this.btnConfigRecording.Click += new System.EventHandler(this.btnConfigRecording_Click);
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(16, 27);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(46, 13);
-            this.label30.TabIndex = 47;
-            this.label30.Text = "Archivo:";
-            // 
-            // txtRecordingFileName
-            // 
-            this.txtRecordingFileName.Location = new System.Drawing.Point(68, 26);
-            this.txtRecordingFileName.Name = "txtRecordingFileName";
-            this.txtRecordingFileName.Size = new System.Drawing.Size(183, 20);
-            this.txtRecordingFileName.TabIndex = 17;
-            // 
-            // btnStopRecording
-            // 
-            this.btnStopRecording.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStopRecording.Location = new System.Drawing.Point(102, 67);
-            this.btnStopRecording.Name = "btnStopRecording";
-            this.btnStopRecording.Size = new System.Drawing.Size(77, 40);
-            this.btnStopRecording.TabIndex = 19;
-            this.btnStopRecording.Text = "Detener";
-            this.btnStopRecording.UseVisualStyleBackColor = true;
-            this.btnStopRecording.Click += new System.EventHandler(this.btnStopRecording_Click);
-            // 
-            // btnStartRecording
-            // 
-            this.btnStartRecording.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartRecording.Location = new System.Drawing.Point(19, 67);
-            this.btnStartRecording.Name = "btnStartRecording";
-            this.btnStartRecording.Size = new System.Drawing.Size(77, 40);
-            this.btnStartRecording.TabIndex = 18;
-            this.btnStartRecording.Text = "Grabar";
-            this.btnStartRecording.UseVisualStyleBackColor = true;
-            this.btnStartRecording.Click += new System.EventHandler(this.btnStartRecording_Click);
-            // 
-            // groupBox16
-            // 
-            this.groupBox16.Controls.Add(this.chkLoopAudioFile);
-            this.groupBox16.Controls.Add(this.btnStopAudio);
-            this.groupBox16.Controls.Add(this.btnPauseAudio);
-            this.groupBox16.Controls.Add(this.btnPlayAudio);
-            this.groupBox16.Controls.Add(this.btnRefreshAudioFiles);
-            this.groupBox16.Controls.Add(this.cmbAudioFiles);
-            this.groupBox16.Controls.Add(this.label35);
-            this.groupBox16.Location = new System.Drawing.Point(441, 7);
-            this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(293, 173);
-            this.groupBox16.TabIndex = 3;
-            this.groupBox16.TabStop = false;
-            this.groupBox16.Text = "Audio";
-            // 
-            // chkLoopAudioFile
-            // 
-            this.chkLoopAudioFile.AutoSize = true;
-            this.chkLoopAudioFile.Location = new System.Drawing.Point(79, 122);
-            this.chkLoopAudioFile.Name = "chkLoopAudioFile";
-            this.chkLoopAudioFile.Size = new System.Drawing.Size(50, 17);
-            this.chkLoopAudioFile.TabIndex = 14;
-            this.chkLoopAudioFile.Text = "Loop";
-            this.chkLoopAudioFile.UseVisualStyleBackColor = true;
-            // 
-            // btnStopAudio
-            // 
-            this.btnStopAudio.Location = new System.Drawing.Point(148, 123);
-            this.btnStopAudio.Name = "btnStopAudio";
-            this.btnStopAudio.Size = new System.Drawing.Size(74, 27);
-            this.btnStopAudio.TabIndex = 16;
-            this.btnStopAudio.Text = "STOP";
-            this.btnStopAudio.UseVisualStyleBackColor = true;
-            this.btnStopAudio.Click += new System.EventHandler(this.btnStopAudio_Click);
-            // 
-            // btnPauseAudio
-            // 
-            this.btnPauseAudio.Location = new System.Drawing.Point(148, 89);
-            this.btnPauseAudio.Name = "btnPauseAudio";
-            this.btnPauseAudio.Size = new System.Drawing.Size(74, 27);
-            this.btnPauseAudio.TabIndex = 15;
-            this.btnPauseAudio.Text = "PAUSE";
-            this.btnPauseAudio.UseVisualStyleBackColor = true;
-            this.btnPauseAudio.Click += new System.EventHandler(this.btnPauseAudio_Click);
-            // 
-            // btnPlayAudio
-            // 
-            this.btnPlayAudio.Location = new System.Drawing.Point(68, 89);
-            this.btnPlayAudio.Name = "btnPlayAudio";
-            this.btnPlayAudio.Size = new System.Drawing.Size(74, 27);
-            this.btnPlayAudio.TabIndex = 13;
-            this.btnPlayAudio.Text = "PLAY";
-            this.btnPlayAudio.UseVisualStyleBackColor = true;
-            this.btnPlayAudio.Click += new System.EventHandler(this.btnPlayAudio_Click);
-            // 
-            // btnRefreshAudioFiles
-            // 
-            this.btnRefreshAudioFiles.Location = new System.Drawing.Point(222, 38);
-            this.btnRefreshAudioFiles.Name = "btnRefreshAudioFiles";
-            this.btnRefreshAudioFiles.Size = new System.Drawing.Size(65, 21);
-            this.btnRefreshAudioFiles.TabIndex = 12;
-            this.btnRefreshAudioFiles.Text = "Actualizar";
-            this.btnRefreshAudioFiles.UseVisualStyleBackColor = true;
-            this.btnRefreshAudioFiles.Click += new System.EventHandler(this.btnRefreshAudioFiles_Click);
-            // 
-            // cmbAudioFiles
-            // 
-            this.cmbAudioFiles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAudioFiles.FormattingEnabled = true;
-            this.cmbAudioFiles.Location = new System.Drawing.Point(61, 38);
-            this.cmbAudioFiles.Name = "cmbAudioFiles";
-            this.cmbAudioFiles.Size = new System.Drawing.Size(155, 21);
-            this.cmbAudioFiles.TabIndex = 11;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(9, 41);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(46, 13);
-            this.label35.TabIndex = 49;
-            this.label35.Text = "Archivo:";
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.btnMuteVolume);
-            this.groupBox11.Controls.Add(this.label32);
-            this.groupBox11.Controls.Add(this.trkVolume);
-            this.groupBox11.Controls.Add(this.chkLoopVideoFile);
-            this.groupBox11.Controls.Add(this.btnStopVideo);
-            this.groupBox11.Controls.Add(this.btnPauseVideo);
-            this.groupBox11.Controls.Add(this.btnPlayVideo);
-            this.groupBox11.Controls.Add(this.btnRefreshVideoFiles);
-            this.groupBox11.Controls.Add(this.lvwVideoFiles);
-            this.groupBox11.Location = new System.Drawing.Point(6, 7);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(429, 310);
-            this.groupBox11.TabIndex = 0;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Lista Reproduccion";
-            // 
-            // btnMuteVolume
-            // 
-            this.btnMuteVolume.Location = new System.Drawing.Point(376, 274);
-            this.btnMuteVolume.Name = "btnMuteVolume";
-            this.btnMuteVolume.Size = new System.Drawing.Size(47, 22);
-            this.btnMuteVolume.TabIndex = 10;
-            this.btnMuteVolume.Text = "Mute";
-            this.btnMuteVolume.UseVisualStyleBackColor = true;
-            this.btnMuteVolume.Click += new System.EventHandler(this.btnMute_Click);
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label32.Location = new System.Drawing.Point(357, 188);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(18, 105);
-            this.label32.TabIndex = 53;
-            this.label32.Text = "V\r\no\r\nl\r\nu\r\nm\r\ne\r\nn";
-            // 
-            // trkVolume
-            // 
-            this.trkVolume.Location = new System.Drawing.Point(376, 187);
-            this.trkVolume.Name = "trkVolume";
-            this.trkVolume.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trkVolume.Size = new System.Drawing.Size(45, 81);
-            this.trkVolume.TabIndex = 9;
-            this.trkVolume.Scroll += new System.EventHandler(this.trkVolume_Scroll);
-            this.trkVolume.ValueChanged += new System.EventHandler(this.trkVolume_ValueChanged);
-            // 
-            // chkLoopVideoFile
-            // 
-            this.chkLoopVideoFile.AutoSize = true;
-            this.chkLoopVideoFile.Location = new System.Drawing.Point(360, 99);
-            this.chkLoopVideoFile.Name = "chkLoopVideoFile";
-            this.chkLoopVideoFile.Size = new System.Drawing.Size(50, 17);
-            this.chkLoopVideoFile.TabIndex = 6;
-            this.chkLoopVideoFile.Text = "Loop";
-            this.chkLoopVideoFile.UseVisualStyleBackColor = true;
-            // 
-            // btnStopVideo
-            // 
-            this.btnStopVideo.Location = new System.Drawing.Point(349, 156);
-            this.btnStopVideo.Name = "btnStopVideo";
-            this.btnStopVideo.Size = new System.Drawing.Size(74, 27);
-            this.btnStopVideo.TabIndex = 8;
-            this.btnStopVideo.Text = "STOP";
-            this.btnStopVideo.UseVisualStyleBackColor = true;
-            this.btnStopVideo.Click += new System.EventHandler(this.btnStopVideo_Click);
-            // 
-            // btnPauseVideo
-            // 
-            this.btnPauseVideo.Location = new System.Drawing.Point(349, 122);
-            this.btnPauseVideo.Name = "btnPauseVideo";
-            this.btnPauseVideo.Size = new System.Drawing.Size(74, 27);
-            this.btnPauseVideo.TabIndex = 7;
-            this.btnPauseVideo.Text = "PAUSE";
-            this.btnPauseVideo.UseVisualStyleBackColor = true;
-            this.btnPauseVideo.Click += new System.EventHandler(this.btnPauseVideo_Click);
-            // 
-            // btnPlayVideo
-            // 
-            this.btnPlayVideo.Location = new System.Drawing.Point(349, 66);
-            this.btnPlayVideo.Name = "btnPlayVideo";
-            this.btnPlayVideo.Size = new System.Drawing.Size(74, 27);
-            this.btnPlayVideo.TabIndex = 5;
-            this.btnPlayVideo.Text = "PLAY";
-            this.btnPlayVideo.UseVisualStyleBackColor = true;
-            this.btnPlayVideo.Click += new System.EventHandler(this.btnPlayVideo_Click);
-            // 
-            // btnRefreshVideoFiles
-            // 
-            this.btnRefreshVideoFiles.Location = new System.Drawing.Point(349, 19);
-            this.btnRefreshVideoFiles.Name = "btnRefreshVideoFiles";
-            this.btnRefreshVideoFiles.Size = new System.Drawing.Size(74, 27);
-            this.btnRefreshVideoFiles.TabIndex = 4;
-            this.btnRefreshVideoFiles.Text = "Actualizar";
-            this.btnRefreshVideoFiles.UseVisualStyleBackColor = true;
-            this.btnRefreshVideoFiles.Click += new System.EventHandler(this.btnGetVideoFiles_Click);
-            // 
-            // lvwVideoFiles
-            // 
-            this.lvwVideoFiles.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader10});
-            this.lvwVideoFiles.FullRowSelect = true;
-            this.lvwVideoFiles.GridLines = true;
-            this.lvwVideoFiles.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lvwVideoFiles.HideSelection = false;
-            this.lvwVideoFiles.Location = new System.Drawing.Point(11, 19);
-            this.lvwVideoFiles.MultiSelect = false;
-            this.lvwVideoFiles.Name = "lvwVideoFiles";
-            this.lvwVideoFiles.Size = new System.Drawing.Size(332, 277);
-            this.lvwVideoFiles.TabIndex = 3;
-            this.lvwVideoFiles.UseCompatibleStateImageBehavior = false;
-            this.lvwVideoFiles.View = System.Windows.Forms.View.Details;
-            this.lvwVideoFiles.DoubleClick += new System.EventHandler(this.lvwVideoFiles_DoubleClick);
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Archivo";
-            this.columnHeader10.Width = 308;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Controls.Add(this.groupBox15);
-            this.tabPage7.Controls.Add(this.groupBox17);
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(822, 323);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "Otros (F5)";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // groupBox15
-            // 
-            this.groupBox15.Controls.Add(this.btnRefreshLogoFiles);
-            this.groupBox15.Controls.Add(this.btnStopBroadcastLogo);
-            this.groupBox15.Controls.Add(this.btnStartBroadcastLogo);
-            this.groupBox15.Controls.Add(this.cmbBroadcastLogo);
-            this.groupBox15.Controls.Add(this.label31);
-            this.groupBox15.Location = new System.Drawing.Point(6, 6);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(351, 165);
-            this.groupBox15.TabIndex = 4;
-            this.groupBox15.TabStop = false;
-            this.groupBox15.Text = "Logo";
-            // 
-            // btnRefreshLogoFiles
-            // 
-            this.btnRefreshLogoFiles.Location = new System.Drawing.Point(272, 30);
-            this.btnRefreshLogoFiles.Name = "btnRefreshLogoFiles";
-            this.btnRefreshLogoFiles.Size = new System.Drawing.Size(71, 21);
-            this.btnRefreshLogoFiles.TabIndex = 4;
-            this.btnRefreshLogoFiles.Text = "Actualizar";
-            this.btnRefreshLogoFiles.UseVisualStyleBackColor = true;
-            // 
-            // btnStopBroadcastLogo
-            // 
-            this.btnStopBroadcastLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStopBroadcastLogo.Location = new System.Drawing.Point(178, 68);
-            this.btnStopBroadcastLogo.Name = "btnStopBroadcastLogo";
-            this.btnStopBroadcastLogo.Size = new System.Drawing.Size(104, 40);
-            this.btnStopBroadcastLogo.TabIndex = 6;
-            this.btnStopBroadcastLogo.Text = "Parar Grafico";
-            this.btnStopBroadcastLogo.UseVisualStyleBackColor = true;
-            this.btnStopBroadcastLogo.Click += new System.EventHandler(this.btnStopLogo_Click);
-            // 
-            // btnStartBroadcastLogo
-            // 
-            this.btnStartBroadcastLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartBroadcastLogo.Location = new System.Drawing.Point(63, 68);
-            this.btnStartBroadcastLogo.Name = "btnStartBroadcastLogo";
-            this.btnStartBroadcastLogo.Size = new System.Drawing.Size(104, 40);
-            this.btnStartBroadcastLogo.TabIndex = 5;
-            this.btnStartBroadcastLogo.Text = "Iniciar Grafico";
-            this.btnStartBroadcastLogo.UseVisualStyleBackColor = true;
-            this.btnStartBroadcastLogo.Click += new System.EventHandler(this.btnStartLogo_Click);
-            // 
-            // cmbBroadcastLogo
-            // 
-            this.cmbBroadcastLogo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBroadcastLogo.FormattingEnabled = true;
-            this.cmbBroadcastLogo.Location = new System.Drawing.Point(62, 30);
-            this.cmbBroadcastLogo.Name = "cmbBroadcastLogo";
-            this.cmbBroadcastLogo.Size = new System.Drawing.Size(204, 21);
-            this.cmbBroadcastLogo.TabIndex = 3;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(14, 33);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(46, 13);
-            this.label31.TabIndex = 10;
-            this.label31.Text = "Archivo:";
-            // 
-            // groupBox17
-            // 
-            this.groupBox17.Controls.Add(this.label34);
-            this.groupBox17.Controls.Add(this.trkImageScrollingSpeed);
-            this.groupBox17.Controls.Add(this.btnRefreshImageScrolling);
-            this.groupBox17.Controls.Add(this.btnStopImageScrolling);
-            this.groupBox17.Controls.Add(this.btnStartImageScrolling);
-            this.groupBox17.Controls.Add(this.cmbImageScrolling);
-            this.groupBox17.Controls.Add(this.label33);
-            this.groupBox17.Location = new System.Drawing.Point(363, 6);
-            this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(371, 165);
-            this.groupBox17.TabIndex = 3;
-            this.groupBox17.TabStop = false;
-            this.groupBox17.Text = "Creditos";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(15, 54);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(57, 13);
-            this.label34.TabIndex = 55;
-            this.label34.Text = "Velocidad:";
-            // 
-            // trkImageScrollingSpeed
-            // 
-            this.trkImageScrollingSpeed.Location = new System.Drawing.Point(85, 51);
-            this.trkImageScrollingSpeed.Minimum = 1;
-            this.trkImageScrollingSpeed.Name = "trkImageScrollingSpeed";
-            this.trkImageScrollingSpeed.Size = new System.Drawing.Size(203, 45);
-            this.trkImageScrollingSpeed.SmallChange = 2;
-            this.trkImageScrollingSpeed.TabIndex = 9;
-            this.trkImageScrollingSpeed.TickFrequency = 2;
-            this.trkImageScrollingSpeed.Value = 1;
-            // 
-            // btnRefreshImageScrolling
-            // 
-            this.btnRefreshImageScrolling.Location = new System.Drawing.Point(294, 18);
-            this.btnRefreshImageScrolling.Name = "btnRefreshImageScrolling";
-            this.btnRefreshImageScrolling.Size = new System.Drawing.Size(68, 21);
-            this.btnRefreshImageScrolling.TabIndex = 8;
-            this.btnRefreshImageScrolling.Text = "Actualizar";
-            this.btnRefreshImageScrolling.UseVisualStyleBackColor = true;
-            this.btnRefreshImageScrolling.Click += new System.EventHandler(this.btnRefreshImageScrolling_Click);
-            // 
-            // btnStopImageScrolling
-            // 
-            this.btnStopImageScrolling.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStopImageScrolling.Location = new System.Drawing.Point(188, 113);
-            this.btnStopImageScrolling.Name = "btnStopImageScrolling";
-            this.btnStopImageScrolling.Size = new System.Drawing.Size(104, 40);
-            this.btnStopImageScrolling.TabIndex = 11;
-            this.btnStopImageScrolling.Text = "Parar Grafico";
-            this.btnStopImageScrolling.UseVisualStyleBackColor = true;
-            this.btnStopImageScrolling.Click += new System.EventHandler(this.btnStopImageScrolling_Click);
-            // 
-            // btnStartImageScrolling
-            // 
-            this.btnStartImageScrolling.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartImageScrolling.Location = new System.Drawing.Point(78, 113);
-            this.btnStartImageScrolling.Name = "btnStartImageScrolling";
-            this.btnStartImageScrolling.Size = new System.Drawing.Size(104, 40);
-            this.btnStartImageScrolling.TabIndex = 10;
-            this.btnStartImageScrolling.Text = "Iniciar Grafico";
-            this.btnStartImageScrolling.UseVisualStyleBackColor = true;
-            this.btnStartImageScrolling.Click += new System.EventHandler(this.btnStartImageScrolling_Click);
-            // 
-            // cmbImageScrolling
-            // 
-            this.cmbImageScrolling.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbImageScrolling.FormattingEnabled = true;
-            this.cmbImageScrolling.Location = new System.Drawing.Point(63, 19);
-            this.cmbImageScrolling.Name = "cmbImageScrolling";
-            this.cmbImageScrolling.Size = new System.Drawing.Size(225, 21);
-            this.cmbImageScrolling.TabIndex = 7;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(15, 22);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(46, 13);
-            this.label33.TabIndex = 10;
-            this.label33.Text = "Archivo:";
-            // 
-            // tabPage9
-            // 
-            this.tabPage9.Controls.Add(this.tabVolleyball);
-            this.tabPage9.Location = new System.Drawing.Point(4, 22);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(822, 323);
-            this.tabPage9.TabIndex = 8;
-            this.tabPage9.Text = "Volleyball (F6)";
-            this.tabPage9.UseVisualStyleBackColor = true;
-            // 
-            // tabPage10
-            // 
-            this.tabPage10.Controls.Add(this.groupBox26);
-            this.tabPage10.Controls.Add(this.groupBox24);
-            this.tabPage10.Controls.Add(this.groupBox23);
-            this.tabPage10.Location = new System.Drawing.Point(4, 22);
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(822, 323);
-            this.tabPage10.TabIndex = 9;
-            this.tabPage10.Text = "Extras (F7)";
-            this.tabPage10.UseVisualStyleBackColor = true;
-            // 
-            // groupBox26
-            // 
-            this.groupBox26.Controls.Add(this.cmbLogoFile);
-            this.groupBox26.Controls.Add(this.label72);
-            this.groupBox26.Controls.Add(this.label71);
-            this.groupBox26.Controls.Add(this.nudDynamicLogoHeight);
-            this.groupBox26.Controls.Add(this.label70);
-            this.groupBox26.Controls.Add(this.nudDynamicLogoPosY);
-            this.groupBox26.Controls.Add(this.label69);
-            this.groupBox26.Controls.Add(this.nudDynamicLogoWidth);
-            this.groupBox26.Controls.Add(this.cmbTemplateDynamicLogo);
-            this.groupBox26.Controls.Add(this.label66);
-            this.groupBox26.Controls.Add(this.btnStopDynamicLogo);
-            this.groupBox26.Controls.Add(this.btnStartDynamicLogo);
-            this.groupBox26.Controls.Add(this.label68);
-            this.groupBox26.Controls.Add(this.nudDynamicLogoPosX);
-            this.groupBox26.Controls.Add(this.chkAutoHideDynamicLogo);
-            this.groupBox26.Location = new System.Drawing.Point(331, 157);
-            this.groupBox26.Name = "groupBox26";
-            this.groupBox26.Size = new System.Drawing.Size(406, 163);
-            this.groupBox26.TabIndex = 3;
-            this.groupBox26.TabStop = false;
-            this.groupBox26.Text = "Dynamic Logo";
-            // 
-            // cmbLogoFile
-            // 
-            this.cmbLogoFile.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLogoFile.FormattingEnabled = true;
-            this.cmbLogoFile.Location = new System.Drawing.Point(80, 45);
-            this.cmbLogoFile.Name = "cmbLogoFile";
-            this.cmbLogoFile.Size = new System.Drawing.Size(316, 21);
-            this.cmbLogoFile.TabIndex = 86;
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.Location = new System.Drawing.Point(20, 48);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(53, 13);
-            this.label72.TabIndex = 87;
-            this.label72.Text = "Logo File:";
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(161, 100);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(41, 13);
-            this.label71.TabIndex = 85;
-            this.label71.Text = "Height:";
-            // 
-            // nudDynamicLogoHeight
-            // 
-            this.nudDynamicLogoHeight.Location = new System.Drawing.Point(217, 96);
-            this.nudDynamicLogoHeight.Maximum = new decimal(new int[] {
-            1080,
-            0,
-            0,
-            0});
-            this.nudDynamicLogoHeight.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudDynamicLogoHeight.Name = "nudDynamicLogoHeight";
-            this.nudDynamicLogoHeight.Size = new System.Drawing.Size(60, 20);
-            this.nudDynamicLogoHeight.TabIndex = 84;
-            this.nudDynamicLogoHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudDynamicLogoHeight.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            // 
-            // label70
-            // 
-            this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(161, 74);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(38, 13);
-            this.label70.TabIndex = 83;
-            this.label70.Text = "Pos Y:";
-            // 
-            // nudDynamicLogoPosY
-            // 
-            this.nudDynamicLogoPosY.Location = new System.Drawing.Point(217, 71);
-            this.nudDynamicLogoPosY.Maximum = new decimal(new int[] {
-            1080,
-            0,
-            0,
-            0});
-            this.nudDynamicLogoPosY.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudDynamicLogoPosY.Name = "nudDynamicLogoPosY";
-            this.nudDynamicLogoPosY.Size = new System.Drawing.Size(60, 20);
-            this.nudDynamicLogoPosY.TabIndex = 82;
-            this.nudDynamicLogoPosY.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudDynamicLogoPosY.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(20, 100);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(38, 13);
-            this.label69.TabIndex = 81;
-            this.label69.Text = "Width:";
-            // 
-            // nudDynamicLogoWidth
-            // 
-            this.nudDynamicLogoWidth.Location = new System.Drawing.Point(80, 98);
-            this.nudDynamicLogoWidth.Maximum = new decimal(new int[] {
-            1920,
-            0,
-            0,
-            0});
-            this.nudDynamicLogoWidth.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudDynamicLogoWidth.Name = "nudDynamicLogoWidth";
-            this.nudDynamicLogoWidth.Size = new System.Drawing.Size(59, 20);
-            this.nudDynamicLogoWidth.TabIndex = 80;
-            this.nudDynamicLogoWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudDynamicLogoWidth.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            // 
-            // cmbTemplateDynamicLogo
-            // 
-            this.cmbTemplateDynamicLogo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTemplateDynamicLogo.FormattingEnabled = true;
-            this.cmbTemplateDynamicLogo.Location = new System.Drawing.Point(80, 19);
-            this.cmbTemplateDynamicLogo.Name = "cmbTemplateDynamicLogo";
-            this.cmbTemplateDynamicLogo.Size = new System.Drawing.Size(316, 21);
-            this.cmbTemplateDynamicLogo.TabIndex = 78;
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(20, 22);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(54, 13);
-            this.label66.TabIndex = 79;
-            this.label66.Text = "Template:";
-            // 
-            // btnStopDynamicLogo
-            // 
-            this.btnStopDynamicLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStopDynamicLogo.Location = new System.Drawing.Point(323, 124);
-            this.btnStopDynamicLogo.Name = "btnStopDynamicLogo";
-            this.btnStopDynamicLogo.Size = new System.Drawing.Size(73, 30);
-            this.btnStopDynamicLogo.TabIndex = 76;
-            this.btnStopDynamicLogo.Text = "Parar";
-            this.btnStopDynamicLogo.UseVisualStyleBackColor = true;
-            this.btnStopDynamicLogo.Click += new System.EventHandler(this.btnStopDynamicLogo_Click);
-            // 
-            // btnStartDynamicLogo
-            // 
-            this.btnStartDynamicLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartDynamicLogo.Location = new System.Drawing.Point(146, 123);
-            this.btnStartDynamicLogo.Name = "btnStartDynamicLogo";
-            this.btnStartDynamicLogo.Size = new System.Drawing.Size(73, 30);
-            this.btnStartDynamicLogo.TabIndex = 75;
-            this.btnStartDynamicLogo.Text = "Iniciar";
-            this.btnStartDynamicLogo.UseVisualStyleBackColor = true;
-            this.btnStartDynamicLogo.Click += new System.EventHandler(this.btnStartDynamicLogo_Click);
-            // 
-            // label68
-            // 
-            this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(20, 74);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(38, 13);
-            this.label68.TabIndex = 74;
-            this.label68.Text = "Pos X:";
-            // 
-            // nudDynamicLogoPosX
-            // 
-            this.nudDynamicLogoPosX.Location = new System.Drawing.Point(80, 72);
-            this.nudDynamicLogoPosX.Maximum = new decimal(new int[] {
-            1920,
-            0,
-            0,
-            0});
-            this.nudDynamicLogoPosX.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudDynamicLogoPosX.Name = "nudDynamicLogoPosX";
-            this.nudDynamicLogoPosX.Size = new System.Drawing.Size(59, 20);
-            this.nudDynamicLogoPosX.TabIndex = 17;
-            this.nudDynamicLogoPosX.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudDynamicLogoPosX.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            // 
-            // chkAutoHideDynamicLogo
-            // 
-            this.chkAutoHideDynamicLogo.AutoSize = true;
-            this.chkAutoHideDynamicLogo.Location = new System.Drawing.Point(225, 132);
-            this.chkAutoHideDynamicLogo.Name = "chkAutoHideDynamicLogo";
-            this.chkAutoHideDynamicLogo.Size = new System.Drawing.Size(85, 17);
-            this.chkAutoHideDynamicLogo.TabIndex = 16;
-            this.chkAutoHideDynamicLogo.Text = "Auto Ocultar";
-            this.chkAutoHideDynamicLogo.UseVisualStyleBackColor = true;
-            // 
-            // groupBox24
-            // 
-            this.groupBox24.Controls.Add(this.txtLogMessages);
-            this.groupBox24.Location = new System.Drawing.Point(3, 132);
-            this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(321, 188);
-            this.groupBox24.TabIndex = 1;
-            this.groupBox24.TabStop = false;
-            this.groupBox24.Text = "Log servidor";
-            // 
-            // txtLogMessages
-            // 
-            this.txtLogMessages.Location = new System.Drawing.Point(7, 20);
-            this.txtLogMessages.Multiline = true;
-            this.txtLogMessages.Name = "txtLogMessages";
-            this.txtLogMessages.Size = new System.Drawing.Size(308, 156);
-            this.txtLogMessages.TabIndex = 0;
-            // 
-            // groupBox23
-            // 
-            this.groupBox23.Controls.Add(this.label61);
-            this.groupBox23.Controls.Add(this.button1);
-            this.groupBox23.Controls.Add(this.textBox2);
-            this.groupBox23.Location = new System.Drawing.Point(3, 3);
-            this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Size = new System.Drawing.Size(321, 82);
-            this.groupBox23.TabIndex = 0;
-            this.groupBox23.TabStop = false;
-            this.groupBox23.Text = "Consola";
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(14, 20);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(63, 13);
-            this.label61.TabIndex = 15;
-            this.label61.Text = "Commando:";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(135, 46);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 27);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Ejecutar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(81, 20);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(225, 20);
-            this.textBox2.TabIndex = 0;
-            // 
-            // tabPage11
-            // 
-            this.tabPage11.Controls.Add(this.tabGameshow);
-            this.tabPage11.Location = new System.Drawing.Point(4, 22);
-            this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Size = new System.Drawing.Size(822, 323);
-            this.tabPage11.TabIndex = 10;
-            this.tabPage11.Text = "GameShow (F8)";
-            this.tabPage11.UseVisualStyleBackColor = true;
-            // 
-            // tabPage12
-            // 
-            this.tabPage12.Controls.Add(this.tabElections);
-            this.tabPage12.Location = new System.Drawing.Point(4, 22);
-            this.tabPage12.Name = "tabPage12";
-            this.tabPage12.Size = new System.Drawing.Size(822, 323);
-            this.tabPage12.TabIndex = 11;
-            this.tabPage12.Text = "Elecciones (F9)";
-            this.tabPage12.UseVisualStyleBackColor = true;
-            // 
-            // tabPage13
-            // 
-            this.tabPage13.Controls.Add(this.groupBox30);
-            this.tabPage13.Location = new System.Drawing.Point(4, 22);
-            this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Size = new System.Drawing.Size(822, 323);
-            this.tabPage13.TabIndex = 12;
-            this.tabPage13.Text = "Clima (F10)";
-            this.tabPage13.UseVisualStyleBackColor = true;
-            // 
-            // groupBox30
-            // 
-            this.groupBox30.Controls.Add(this.label87);
-            this.groupBox30.Controls.Add(this.button2);
-            this.groupBox30.Controls.Add(this.button11);
-            this.groupBox30.Controls.Add(this.button12);
-            this.groupBox30.Controls.Add(this.lvwForecastPlaylist);
-            this.groupBox30.Controls.Add(this.nudWeatherForecastPauseSeconds);
-            this.groupBox30.Controls.Add(this.label80);
-            this.groupBox30.Controls.Add(this.label82);
-            this.groupBox30.Controls.Add(this.nudWeatherForecastStartDelaySeconds);
-            this.groupBox30.Controls.Add(this.btnStopWeatherForecast);
-            this.groupBox30.Controls.Add(this.btnStartWeatherForecast);
-            this.groupBox30.Controls.Add(this.checkBox1);
-            this.groupBox30.Controls.Add(this.btnWeatherForecastCallWS);
-            this.groupBox30.Controls.Add(this.cmbWeatherStates);
-            this.groupBox30.Controls.Add(this.label85);
-            this.groupBox30.Controls.Add(this.cmbTemplateWeatherForecast);
-            this.groupBox30.Controls.Add(this.label86);
-            this.groupBox30.Controls.Add(this.label84);
-            this.groupBox30.Controls.Add(this.txtWeatherForecastWS);
-            this.groupBox30.Controls.Add(this.label83);
-            this.groupBox30.Controls.Add(this.btnLoadCities);
-            this.groupBox30.Controls.Add(this.button3);
-            this.groupBox30.Controls.Add(this.button4);
-            this.groupBox30.Controls.Add(this.lvwCities);
-            this.groupBox30.Location = new System.Drawing.Point(3, 3);
-            this.groupBox30.Name = "groupBox30";
-            this.groupBox30.Size = new System.Drawing.Size(734, 317);
-            this.groupBox30.TabIndex = 0;
-            this.groupBox30.TabStop = false;
-            this.groupBox30.Text = "Pronostico extendido";
-            // 
-            // label87
-            // 
-            this.label87.AutoSize = true;
-            this.label87.Location = new System.Drawing.Point(430, 16);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(42, 13);
-            this.label87.TabIndex = 104;
-            this.label87.Text = "Playlist:";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(690, 123);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(30, 20);
-            this.button2.TabIndex = 102;
-            this.button2.Text = "C";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(690, 102);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(30, 20);
-            this.button11.TabIndex = 101;
-            this.button11.Text = "-";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(690, 81);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(30, 20);
-            this.button12.TabIndex = 100;
-            this.button12.Text = "+";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // lvwForecastPlaylist
-            // 
-            this.lvwForecastPlaylist.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader31,
-            this.columnHeader32});
-            this.lvwForecastPlaylist.FullRowSelect = true;
-            this.lvwForecastPlaylist.GridLines = true;
-            this.lvwForecastPlaylist.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lvwForecastPlaylist.HideSelection = false;
-            this.lvwForecastPlaylist.Location = new System.Drawing.Point(433, 31);
-            this.lvwForecastPlaylist.MultiSelect = false;
-            this.lvwForecastPlaylist.Name = "lvwForecastPlaylist";
-            this.lvwForecastPlaylist.Size = new System.Drawing.Size(251, 188);
-            this.lvwForecastPlaylist.TabIndex = 103;
-            this.lvwForecastPlaylist.UseCompatibleStateImageBehavior = false;
-            this.lvwForecastPlaylist.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader31
-            // 
-            this.columnHeader31.Text = "#";
-            this.columnHeader31.Width = 21;
-            // 
-            // columnHeader32
-            // 
-            this.columnHeader32.Text = "Respuesta";
-            this.columnHeader32.Width = 200;
-            // 
-            // nudWeatherForecastPauseSeconds
-            // 
-            this.nudWeatherForecastPauseSeconds.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudWeatherForecastPauseSeconds.Location = new System.Drawing.Point(650, 237);
-            this.nudWeatherForecastPauseSeconds.Minimum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.nudWeatherForecastPauseSeconds.Name = "nudWeatherForecastPauseSeconds";
-            this.nudWeatherForecastPauseSeconds.Size = new System.Drawing.Size(46, 20);
-            this.nudWeatherForecastPauseSeconds.TabIndex = 99;
-            this.nudWeatherForecastPauseSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudWeatherForecastPauseSeconds.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            // 
-            // label80
-            // 
-            this.label80.AutoSize = true;
-            this.label80.Location = new System.Drawing.Point(597, 241);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(40, 13);
-            this.label80.TabIndex = 98;
-            this.label80.Text = "Pause:";
-            // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.Location = new System.Drawing.Point(459, 241);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(37, 13);
-            this.label82.TabIndex = 97;
-            this.label82.Text = "Delay:";
-            // 
-            // nudWeatherForecastStartDelaySeconds
-            // 
-            this.nudWeatherForecastStartDelaySeconds.Location = new System.Drawing.Point(512, 237);
-            this.nudWeatherForecastStartDelaySeconds.Maximum = new decimal(new int[] {
-            60,
-            0,
-            0,
-            0});
-            this.nudWeatherForecastStartDelaySeconds.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudWeatherForecastStartDelaySeconds.Name = "nudWeatherForecastStartDelaySeconds";
-            this.nudWeatherForecastStartDelaySeconds.Size = new System.Drawing.Size(40, 20);
-            this.nudWeatherForecastStartDelaySeconds.TabIndex = 96;
-            this.nudWeatherForecastStartDelaySeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudWeatherForecastStartDelaySeconds.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            // 
-            // btnStopWeatherForecast
-            // 
-            this.btnStopWeatherForecast.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStopWeatherForecast.Location = new System.Drawing.Point(622, 275);
-            this.btnStopWeatherForecast.Name = "btnStopWeatherForecast";
-            this.btnStopWeatherForecast.Size = new System.Drawing.Size(73, 30);
-            this.btnStopWeatherForecast.TabIndex = 95;
-            this.btnStopWeatherForecast.Text = "Parar";
-            this.btnStopWeatherForecast.UseVisualStyleBackColor = true;
-            this.btnStopWeatherForecast.Click += new System.EventHandler(this.btnStopWeatherForecast_Click);
-            // 
-            // btnStartWeatherForecast
-            // 
-            this.btnStartWeatherForecast.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartWeatherForecast.Location = new System.Drawing.Point(445, 274);
-            this.btnStartWeatherForecast.Name = "btnStartWeatherForecast";
-            this.btnStartWeatherForecast.Size = new System.Drawing.Size(73, 30);
-            this.btnStartWeatherForecast.TabIndex = 94;
-            this.btnStartWeatherForecast.Text = "Iniciar";
-            this.btnStartWeatherForecast.UseVisualStyleBackColor = true;
-            this.btnStartWeatherForecast.Click += new System.EventHandler(this.btnStartWeatherForecast_Click);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(524, 283);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(85, 17);
-            this.checkBox1.TabIndex = 93;
-            this.checkBox1.Text = "Auto Ocultar";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // btnWeatherForecastCallWS
-            // 
-            this.btnWeatherForecastCallWS.Location = new System.Drawing.Point(314, 45);
-            this.btnWeatherForecastCallWS.Name = "btnWeatherForecastCallWS";
-            this.btnWeatherForecastCallWS.Size = new System.Drawing.Size(68, 27);
-            this.btnWeatherForecastCallWS.TabIndex = 92;
-            this.btnWeatherForecastCallWS.Text = "Ejecutar";
-            this.btnWeatherForecastCallWS.UseVisualStyleBackColor = true;
-            this.btnWeatherForecastCallWS.Click += new System.EventHandler(this.btnWeatherForecastCallWS_Click);
-            // 
-            // cmbWeatherStates
-            // 
-            this.cmbWeatherStates.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbWeatherStates.FormattingEnabled = true;
-            this.cmbWeatherStates.Location = new System.Drawing.Point(79, 75);
-            this.cmbWeatherStates.Name = "cmbWeatherStates";
-            this.cmbWeatherStates.Size = new System.Drawing.Size(225, 21);
-            this.cmbWeatherStates.TabIndex = 90;
-            this.cmbWeatherStates.SelectedIndexChanged += new System.EventHandler(this.cmbWeatherStates_SelectedIndexChanged);
-            // 
-            // label85
-            // 
-            this.label85.AutoSize = true;
-            this.label85.Location = new System.Drawing.Point(6, 78);
-            this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(59, 13);
-            this.label85.TabIndex = 91;
-            this.label85.Text = "Provincias:";
-            // 
-            // cmbTemplateWeatherForecast
-            // 
-            this.cmbTemplateWeatherForecast.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTemplateWeatherForecast.FormattingEnabled = true;
-            this.cmbTemplateWeatherForecast.Location = new System.Drawing.Point(66, 22);
-            this.cmbTemplateWeatherForecast.Name = "cmbTemplateWeatherForecast";
-            this.cmbTemplateWeatherForecast.Size = new System.Drawing.Size(238, 21);
-            this.cmbTemplateWeatherForecast.TabIndex = 88;
-            // 
-            // label86
-            // 
-            this.label86.AutoSize = true;
-            this.label86.Location = new System.Drawing.Point(6, 25);
-            this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(54, 13);
-            this.label86.TabIndex = 89;
-            this.label86.Text = "Template:";
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.Location = new System.Drawing.Point(6, 49);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(67, 13);
-            this.label84.TabIndex = 77;
-            this.label84.Text = "Webservice:";
-            // 
-            // txtWeatherForecastWS
-            // 
-            this.txtWeatherForecastWS.Location = new System.Drawing.Point(79, 49);
-            this.txtWeatherForecastWS.Name = "txtWeatherForecastWS";
-            this.txtWeatherForecastWS.Size = new System.Drawing.Size(225, 20);
-            this.txtWeatherForecastWS.TabIndex = 76;
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.Location = new System.Drawing.Point(6, 107);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(54, 13);
-            this.label83.TabIndex = 75;
-            this.label83.Text = "Ciudades:";
-            // 
-            // btnLoadCities
-            // 
-            this.btnLoadCities.Location = new System.Drawing.Point(323, 219);
-            this.btnLoadCities.Name = "btnLoadCities";
-            this.btnLoadCities.Size = new System.Drawing.Size(30, 20);
-            this.btnLoadCities.TabIndex = 73;
-            this.btnLoadCities.Text = "C";
-            this.btnLoadCities.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(323, 198);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(30, 20);
-            this.button3.TabIndex = 72;
-            this.button3.Text = "-";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(323, 177);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(30, 20);
-            this.button4.TabIndex = 71;
-            this.button4.Text = "+";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // lvwCities
-            // 
-            this.lvwCities.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader26,
-            this.columnHeader27});
-            this.lvwCities.FullRowSelect = true;
-            this.lvwCities.GridLines = true;
-            this.lvwCities.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lvwCities.HideSelection = false;
-            this.lvwCities.Location = new System.Drawing.Point(9, 123);
-            this.lvwCities.MultiSelect = false;
-            this.lvwCities.Name = "lvwCities";
-            this.lvwCities.Size = new System.Drawing.Size(308, 188);
-            this.lvwCities.TabIndex = 74;
-            this.lvwCities.UseCompatibleStateImageBehavior = false;
-            this.lvwCities.View = System.Windows.Forms.View.Details;
-            this.lvwCities.DoubleClick += new System.EventHandler(this.lvwCities_DoubleClick);
-            // 
-            // columnHeader26
-            // 
-            this.columnHeader26.Text = "#";
-            this.columnHeader26.Width = 21;
-            // 
-            // columnHeader27
-            // 
-            this.columnHeader27.Text = "Respuesta";
-            this.columnHeader27.Width = 260;
-            // 
-            // tabPage14
-            // 
-            this.tabPage14.Controls.Add(this.groupBox20);
-            this.tabPage14.Controls.Add(this.groupBox32);
-            this.tabPage14.Location = new System.Drawing.Point(4, 22);
-            this.tabPage14.Name = "tabPage14";
-            this.tabPage14.Size = new System.Drawing.Size(822, 323);
-            this.tabPage14.TabIndex = 13;
-            this.tabPage14.Text = "Twitter";
-            this.tabPage14.UseVisualStyleBackColor = true;
-            // 
-            // groupBox20
-            // 
-            this.groupBox20.Controls.Add(this.lblTwitterId);
-            this.groupBox20.Controls.Add(this.label88);
-            this.groupBox20.Controls.Add(this.label47);
-            this.groupBox20.Controls.Add(this.txtTwitterHashtag);
-            this.groupBox20.Controls.Add(this.label44);
-            this.groupBox20.Controls.Add(this.label45);
-            this.groupBox20.Controls.Add(this.label46);
-            this.groupBox20.Controls.Add(this.txtTwitterMessage);
-            this.groupBox20.Controls.Add(this.txtTwitterFullName);
-            this.groupBox20.Controls.Add(this.txtTwitterUserName);
-            this.groupBox20.Controls.Add(this.nudAutoHideTwitterSeconds);
-            this.groupBox20.Controls.Add(this.chkAutoHideTwitter);
-            this.groupBox20.Controls.Add(this.btnStopTwitter);
-            this.groupBox20.Controls.Add(this.btnStartTwitter);
-            this.groupBox20.Location = new System.Drawing.Point(378, 4);
-            this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Size = new System.Drawing.Size(359, 316);
-            this.groupBox20.TabIndex = 11;
-            this.groupBox20.TabStop = false;
-            this.groupBox20.Text = "Twitter";
-            // 
-            // lblTwitterId
-            // 
-            this.lblTwitterId.AutoSize = true;
-            this.lblTwitterId.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTwitterId.Location = new System.Drawing.Point(84, 23);
-            this.lblTwitterId.MinimumSize = new System.Drawing.Size(30, 0);
-            this.lblTwitterId.Name = "lblTwitterId";
-            this.lblTwitterId.Size = new System.Drawing.Size(30, 13);
-            this.lblTwitterId.TabIndex = 65;
-            // 
-            // label88
-            // 
-            this.label88.AutoSize = true;
-            this.label88.Location = new System.Drawing.Point(18, 23);
-            this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(21, 13);
-            this.label88.TabIndex = 64;
-            this.label88.Text = "ID:";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(18, 53);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(50, 13);
-            this.label47.TabIndex = 63;
-            this.label47.Text = "Hashtag:";
-            // 
-            // txtTwitterHashtag
-            // 
-            this.txtTwitterHashtag.Location = new System.Drawing.Point(86, 50);
-            this.txtTwitterHashtag.Name = "txtTwitterHashtag";
-            this.txtTwitterHashtag.Size = new System.Drawing.Size(267, 20);
-            this.txtTwitterHashtag.TabIndex = 12;
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(18, 139);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(50, 13);
-            this.label44.TabIndex = 61;
-            this.label44.Text = "Mensaje:";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(18, 113);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(52, 13);
-            this.label45.TabIndex = 60;
-            this.label45.Text = "Fullname:";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(18, 83);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(58, 13);
-            this.label46.TabIndex = 59;
-            this.label46.Text = "Username:";
-            // 
-            // txtTwitterMessage
-            // 
-            this.txtTwitterMessage.Location = new System.Drawing.Point(86, 136);
-            this.txtTwitterMessage.MaxLength = 145;
-            this.txtTwitterMessage.Multiline = true;
-            this.txtTwitterMessage.Name = "txtTwitterMessage";
-            this.txtTwitterMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtTwitterMessage.Size = new System.Drawing.Size(267, 93);
-            this.txtTwitterMessage.TabIndex = 15;
-            // 
-            // txtTwitterFullName
-            // 
-            this.txtTwitterFullName.Location = new System.Drawing.Point(86, 110);
-            this.txtTwitterFullName.Name = "txtTwitterFullName";
-            this.txtTwitterFullName.Size = new System.Drawing.Size(267, 20);
-            this.txtTwitterFullName.TabIndex = 14;
-            // 
-            // txtTwitterUserName
-            // 
-            this.txtTwitterUserName.Location = new System.Drawing.Point(86, 80);
-            this.txtTwitterUserName.Name = "txtTwitterUserName";
-            this.txtTwitterUserName.Size = new System.Drawing.Size(267, 20);
-            this.txtTwitterUserName.TabIndex = 13;
-            // 
-            // nudAutoHideTwitterSeconds
-            // 
-            this.nudAutoHideTwitterSeconds.Location = new System.Drawing.Point(211, 270);
-            this.nudAutoHideTwitterSeconds.Maximum = new decimal(new int[] {
-            60,
-            0,
-            0,
-            0});
-            this.nudAutoHideTwitterSeconds.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudAutoHideTwitterSeconds.Name = "nudAutoHideTwitterSeconds";
-            this.nudAutoHideTwitterSeconds.Size = new System.Drawing.Size(40, 20);
-            this.nudAutoHideTwitterSeconds.TabIndex = 18;
-            this.nudAutoHideTwitterSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudAutoHideTwitterSeconds.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            // 
-            // chkAutoHideTwitter
-            // 
-            this.chkAutoHideTwitter.AutoSize = true;
-            this.chkAutoHideTwitter.Location = new System.Drawing.Point(120, 270);
-            this.chkAutoHideTwitter.Name = "chkAutoHideTwitter";
-            this.chkAutoHideTwitter.Size = new System.Drawing.Size(85, 17);
-            this.chkAutoHideTwitter.TabIndex = 17;
-            this.chkAutoHideTwitter.Text = "Auto Ocultar";
-            this.chkAutoHideTwitter.UseVisualStyleBackColor = true;
-            // 
-            // btnStopTwitter
-            // 
-            this.btnStopTwitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStopTwitter.Location = new System.Drawing.Point(257, 263);
-            this.btnStopTwitter.Name = "btnStopTwitter";
-            this.btnStopTwitter.Size = new System.Drawing.Size(76, 31);
-            this.btnStopTwitter.TabIndex = 19;
-            this.btnStopTwitter.Text = "Parar";
-            this.btnStopTwitter.UseVisualStyleBackColor = true;
-            this.btnStopTwitter.Click += new System.EventHandler(this.btnStopTwitter_Click);
-            // 
-            // btnStartTwitter
-            // 
-            this.btnStartTwitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartTwitter.Location = new System.Drawing.Point(38, 262);
-            this.btnStartTwitter.Name = "btnStartTwitter";
-            this.btnStartTwitter.Size = new System.Drawing.Size(76, 31);
-            this.btnStartTwitter.TabIndex = 16;
-            this.btnStartTwitter.Text = "Iniciar";
-            this.btnStartTwitter.UseVisualStyleBackColor = true;
-            this.btnStartTwitter.Click += new System.EventHandler(this.btnStartTwitter_Click);
-            // 
-            // groupBox32
-            // 
-            this.groupBox32.Controls.Add(this.btnTwitterWSCall);
-            this.groupBox32.Controls.Add(this.label92);
-            this.groupBox32.Controls.Add(this.txtTwitterWS);
-            this.groupBox32.Controls.Add(this.label93);
-            this.groupBox32.Controls.Add(this.button16);
-            this.groupBox32.Controls.Add(this.button17);
-            this.groupBox32.Controls.Add(this.button18);
-            this.groupBox32.Controls.Add(this.lvwTwitterList);
-            this.groupBox32.Location = new System.Drawing.Point(4, 4);
-            this.groupBox32.Name = "groupBox32";
-            this.groupBox32.Size = new System.Drawing.Size(364, 316);
-            this.groupBox32.TabIndex = 7;
-            this.groupBox32.TabStop = false;
-            this.groupBox32.Text = "Twitter";
-            // 
-            // btnTwitterWSCall
-            // 
-            this.btnTwitterWSCall.Location = new System.Drawing.Point(279, 12);
-            this.btnTwitterWSCall.Name = "btnTwitterWSCall";
-            this.btnTwitterWSCall.Size = new System.Drawing.Size(74, 27);
-            this.btnTwitterWSCall.TabIndex = 109;
-            this.btnTwitterWSCall.Text = "Ejecutar";
-            this.btnTwitterWSCall.UseVisualStyleBackColor = true;
-            this.btnTwitterWSCall.Click += new System.EventHandler(this.btnTwitterWSCall_Click);
-            // 
-            // label92
-            // 
-            this.label92.AutoSize = true;
-            this.label92.Location = new System.Drawing.Point(6, 16);
-            this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(67, 13);
-            this.label92.TabIndex = 107;
-            this.label92.Text = "Webservice:";
-            // 
-            // txtTwitterWS
-            // 
-            this.txtTwitterWS.Location = new System.Drawing.Point(79, 16);
-            this.txtTwitterWS.Name = "txtTwitterWS";
-            this.txtTwitterWS.Size = new System.Drawing.Size(194, 20);
-            this.txtTwitterWS.TabIndex = 106;
-            // 
-            // label93
-            // 
-            this.label93.AutoSize = true;
-            this.label93.Location = new System.Drawing.Point(6, 53);
-            this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(45, 13);
-            this.label93.TabIndex = 105;
-            this.label93.Text = "Tweets:";
-            // 
-            // button16
-            // 
-            this.button16.Location = new System.Drawing.Point(323, 127);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(30, 19);
-            this.button16.TabIndex = 103;
-            this.button16.Text = "C";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(323, 106);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(30, 19);
-            this.button17.TabIndex = 102;
-            this.button17.Text = "-";
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.Location = new System.Drawing.Point(323, 85);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(30, 19);
-            this.button18.TabIndex = 101;
-            this.button18.Text = "+";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // lvwTwitterList
-            // 
-            this.lvwTwitterList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader33,
-            this.columnHeader34,
-            this.columnHeader35});
-            this.lvwTwitterList.FullRowSelect = true;
-            this.lvwTwitterList.GridLines = true;
-            this.lvwTwitterList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lvwTwitterList.Location = new System.Drawing.Point(9, 70);
-            this.lvwTwitterList.MultiSelect = false;
-            this.lvwTwitterList.Name = "lvwTwitterList";
-            this.lvwTwitterList.Size = new System.Drawing.Size(308, 240);
-            this.lvwTwitterList.TabIndex = 104;
-            this.lvwTwitterList.UseCompatibleStateImageBehavior = false;
-            this.lvwTwitterList.View = System.Windows.Forms.View.Details;
-            this.lvwTwitterList.DoubleClick += new System.EventHandler(this.lvwTwitterList_DoubleClick);
-            // 
-            // columnHeader33
-            // 
-            this.columnHeader33.Text = "#";
-            this.columnHeader33.Width = 21;
-            // 
-            // columnHeader34
-            // 
-            this.columnHeader34.Text = "Hashtag";
-            this.columnHeader34.Width = 120;
-            // 
-            // columnHeader35
-            // 
-            this.columnHeader35.Text = "User";
-            this.columnHeader35.Width = 120;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txtEventDescription);
-            this.groupBox2.Controls.Add(this.dtpEventDate);
-            this.groupBox2.Controls.Add(this.txtEventName);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(13, 28);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(825, 92);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Evento";
-            // 
-            // txtEventDescription
-            // 
-            this.txtEventDescription.Location = new System.Drawing.Point(87, 43);
-            this.txtEventDescription.Multiline = true;
-            this.txtEventDescription.Name = "txtEventDescription";
-            this.txtEventDescription.Size = new System.Drawing.Size(376, 42);
-            this.txtEventDescription.TabIndex = 2;
-            // 
-            // dtpEventDate
-            // 
-            this.dtpEventDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpEventDate.Location = new System.Drawing.Point(704, 23);
-            this.dtpEventDate.Name = "dtpEventDate";
-            this.dtpEventDate.Size = new System.Drawing.Size(105, 20);
-            this.dtpEventDate.TabIndex = 1;
-            // 
-            // txtEventName
-            // 
-            this.txtEventName.Location = new System.Drawing.Point(87, 20);
-            this.txtEventName.Name = "txtEventName";
-            this.txtEventName.Size = new System.Drawing.Size(376, 20);
-            this.txtEventName.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 43);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Descripcion:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(657, 23);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Fecha:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Nombre:";
-            // 
-            // tmrIntro
-            // 
-            this.tmrIntro.Tick += new System.EventHandler(this.tmrIntro_Tick);
-            // 
-            // tmrLT
-            // 
-            this.tmrLT.Tick += new System.EventHandler(this.tmrLT_Tick);
-            // 
-            // tmrTeam1
-            // 
-            this.tmrTeam1.Tick += new System.EventHandler(this.tmrTeam1_Tick);
-            // 
-            // tmrTeam2
-            // 
-            this.tmrTeam2.Tick += new System.EventHandler(this.tmrTeam2_Tick);
-            // 
-            // tmrResult
-            // 
-            this.tmrResult.Tick += new System.EventHandler(this.tmrResult_Tick);
-            // 
-            // tmrTeams
-            // 
-            this.tmrTeams.Tick += new System.EventHandler(this.tmrTeams_Tick);
-            // 
-            // tmrInBetweenTeams
-            // 
-            this.tmrInBetweenTeams.Tick += new System.EventHandler(this.tmrInBetweenTeams_Tick);
-            // 
-            // stsStatus
-            // 
-            this.stsStatus.Location = new System.Drawing.Point(0, 480);
-            this.stsStatus.Name = "stsStatus";
-            this.stsStatus.Size = new System.Drawing.Size(850, 22);
-            this.stsStatus.SizingGrip = false;
-            this.stsStatus.TabIndex = 3;
-            this.stsStatus.Text = "statusStrip1";
-            // 
-            // tmrPositions
-            // 
-            this.tmrPositions.Tick += new System.EventHandler(this.tmrPositions_Tick);
-            // 
-            // tmrTwitter
-            // 
-            this.tmrTwitter.Tick += new System.EventHandler(this.tmrTwitter_Tick);
-            // 
-            // tmrVolleyResult
-            // 
-            this.tmrVolleyResult.Tick += new System.EventHandler(this.tmrVolleyResult_Tick);
-            // 
-            // tabPage15
-            // 
-            this.tabPage15.Controls.Add(this.groupBox34);
-            this.tabPage15.Controls.Add(this.groupBox33);
-            this.tabPage15.Controls.Add(this.groupBox31);
-            this.tabPage15.Location = new System.Drawing.Point(4, 22);
-            this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Size = new System.Drawing.Size(822, 323);
-            this.tabPage15.TabIndex = 14;
-            this.tabPage15.Text = "Gameplay";
-            this.tabPage15.UseVisualStyleBackColor = true;
-            // 
-            // groupBox31
-            // 
-            this.groupBox31.Controls.Add(this.toolStripContainer1);
-            this.groupBox31.Location = new System.Drawing.Point(4, 4);
-            this.groupBox31.Name = "groupBox31";
-            this.groupBox31.Size = new System.Drawing.Size(418, 246);
-            this.groupBox31.TabIndex = 0;
-            this.groupBox31.TabStop = false;
-            this.groupBox31.Text = "Pizarra";
-            // 
-            // tabPage16
-            // 
-            this.tabPage16.Location = new System.Drawing.Point(4, 22);
-            this.tabPage16.Name = "tabPage16";
-            this.tabPage16.Size = new System.Drawing.Size(822, 323);
-            this.tabPage16.TabIndex = 15;
-            this.tabPage16.Text = "Branding";
-            this.tabPage16.UseVisualStyleBackColor = true;
-            // 
-            // groupBox33
-            // 
-            this.groupBox33.Controls.Add(this.chkGameplayAutoHideDrawings);
-            this.groupBox33.Controls.Add(this.btnGameplayStop);
-            this.groupBox33.Controls.Add(this.btnGameplayPlay);
-            this.groupBox33.Controls.Add(this.button15);
-            this.groupBox33.Controls.Add(this.button19);
-            this.groupBox33.Controls.Add(this.button20);
-            this.groupBox33.Controls.Add(this.button21);
-            this.groupBox33.Controls.Add(this.button22);
-            this.groupBox33.Controls.Add(this.lvwGameplayPlaylist);
-            this.groupBox33.Location = new System.Drawing.Point(428, 4);
-            this.groupBox33.Name = "groupBox33";
-            this.groupBox33.Size = new System.Drawing.Size(309, 246);
-            this.groupBox33.TabIndex = 1;
-            this.groupBox33.TabStop = false;
-            this.groupBox33.Text = "Lista Reproduccion";
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(273, 121);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(30, 19);
-            this.button15.TabIndex = 29;
-            this.button15.Text = "C";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            this.button19.Location = new System.Drawing.Point(273, 100);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(30, 19);
-            this.button19.TabIndex = 28;
-            this.button19.Text = "L";
-            this.button19.UseVisualStyleBackColor = true;
-            // 
-            // button20
-            // 
-            this.button20.Location = new System.Drawing.Point(273, 79);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(30, 19);
-            this.button20.TabIndex = 27;
-            this.button20.Text = "M";
-            this.button20.UseVisualStyleBackColor = true;
-            // 
-            // button21
-            // 
-            this.button21.Location = new System.Drawing.Point(273, 58);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(30, 19);
-            this.button21.TabIndex = 26;
-            this.button21.Text = "-";
-            this.button21.UseVisualStyleBackColor = true;
-            // 
-            // button22
-            // 
-            this.button22.Location = new System.Drawing.Point(273, 37);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(30, 19);
-            this.button22.TabIndex = 25;
-            this.button22.Text = "+";
-            this.button22.UseVisualStyleBackColor = true;
-            // 
-            // lvwGameplayPlaylist
-            // 
-            this.lvwGameplayPlaylist.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader36,
-            this.columnHeader37});
-            this.lvwGameplayPlaylist.FullRowSelect = true;
-            this.lvwGameplayPlaylist.GridLines = true;
-            this.lvwGameplayPlaylist.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lvwGameplayPlaylist.HideSelection = false;
-            this.lvwGameplayPlaylist.Location = new System.Drawing.Point(6, 18);
-            this.lvwGameplayPlaylist.MultiSelect = false;
-            this.lvwGameplayPlaylist.Name = "lvwGameplayPlaylist";
-            this.lvwGameplayPlaylist.Size = new System.Drawing.Size(261, 158);
-            this.lvwGameplayPlaylist.TabIndex = 24;
-            this.lvwGameplayPlaylist.UseCompatibleStateImageBehavior = false;
-            this.lvwGameplayPlaylist.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader36
-            // 
-            this.columnHeader36.Text = "#";
-            this.columnHeader36.Width = 30;
-            // 
-            // columnHeader37
-            // 
-            this.columnHeader37.Text = "Nombre";
-            this.columnHeader37.Width = 208;
-            // 
-            // groupBox34
-            // 
-            this.groupBox34.Controls.Add(this.cmbTemplateGameplay);
-            this.groupBox34.Controls.Add(this.label89);
-            this.groupBox34.Controls.Add(this.btnStopGameplay);
-            this.groupBox34.Controls.Add(this.btnStartGameplay);
-            this.groupBox34.Controls.Add(this.checkBox2);
-            this.groupBox34.Location = new System.Drawing.Point(3, 256);
-            this.groupBox34.Name = "groupBox34";
-            this.groupBox34.Size = new System.Drawing.Size(733, 64);
-            this.groupBox34.TabIndex = 2;
-            this.groupBox34.TabStop = false;
-            // 
-            // btnStopGameplay
-            // 
-            this.btnStopGameplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStopGameplay.Location = new System.Drawing.Point(654, 19);
-            this.btnStopGameplay.Name = "btnStopGameplay";
-            this.btnStopGameplay.Size = new System.Drawing.Size(73, 30);
-            this.btnStopGameplay.TabIndex = 101;
-            this.btnStopGameplay.Text = "Parar";
-            this.btnStopGameplay.UseVisualStyleBackColor = true;
-            // 
-            // btnStartGameplay
-            // 
-            this.btnStartGameplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartGameplay.Location = new System.Drawing.Point(555, 19);
-            this.btnStartGameplay.Name = "btnStartGameplay";
-            this.btnStartGameplay.Size = new System.Drawing.Size(73, 30);
-            this.btnStartGameplay.TabIndex = 100;
-            this.btnStartGameplay.Text = "Iniciar";
-            this.btnStartGameplay.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(430, 27);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(85, 17);
-            this.checkBox2.TabIndex = 99;
-            this.checkBox2.Text = "Auto Ocultar";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // cmbTemplateGameplay
-            // 
-            this.cmbTemplateGameplay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTemplateGameplay.FormattingEnabled = true;
-            this.cmbTemplateGameplay.Location = new System.Drawing.Point(71, 25);
-            this.cmbTemplateGameplay.Name = "cmbTemplateGameplay";
-            this.cmbTemplateGameplay.Size = new System.Drawing.Size(238, 21);
-            this.cmbTemplateGameplay.TabIndex = 102;
-            // 
-            // label89
-            // 
-            this.label89.AutoSize = true;
-            this.label89.Location = new System.Drawing.Point(11, 28);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(54, 13);
-            this.label89.TabIndex = 103;
-            this.label89.Text = "Template:";
-            // 
-            // toolStripContainer1
-            // 
-            // 
-            // toolStripContainer1.ContentPanel
-            // 
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.picGameplayWhiteboard);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(388, 210);
-            this.toolStripContainer1.Location = new System.Drawing.Point(6, 11);
-            this.toolStripContainer1.Name = "toolStripContainer1";
-            // 
-            // toolStripContainer1.RightToolStripPanel
-            // 
-            this.toolStripContainer1.RightToolStripPanel.Controls.Add(this.toolStrip1);
-            this.toolStripContainer1.Size = new System.Drawing.Size(412, 235);
-            this.toolStripContainer1.TabIndex = 0;
-            this.toolStripContainer1.Text = "toolStripContainer1";
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.toolStripButton4,
-            this.toolStripButton5,
-            this.toolStripButton6,
-            this.toolStripSeparator4,
-            this.toolStripButton7,
-            this.toolStripButton8});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 3);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(24, 201);
-            this.toolStrip1.TabIndex = 0;
-            // 
-            // btnGameplayStop
-            // 
-            this.btnGameplayStop.Location = new System.Drawing.Point(86, 213);
-            this.btnGameplayStop.Name = "btnGameplayStop";
-            this.btnGameplayStop.Size = new System.Drawing.Size(74, 27);
-            this.btnGameplayStop.TabIndex = 31;
-            this.btnGameplayStop.Text = "STOP";
-            this.btnGameplayStop.UseVisualStyleBackColor = true;
-            this.btnGameplayStop.Click += new System.EventHandler(this.btnGameplayStop_Click);
-            // 
-            // btnGameplayPlay
-            // 
-            this.btnGameplayPlay.Location = new System.Drawing.Point(6, 213);
-            this.btnGameplayPlay.Name = "btnGameplayPlay";
-            this.btnGameplayPlay.Size = new System.Drawing.Size(74, 27);
-            this.btnGameplayPlay.TabIndex = 30;
-            this.btnGameplayPlay.Text = "PLAY";
-            this.btnGameplayPlay.UseVisualStyleBackColor = true;
-            this.btnGameplayPlay.Click += new System.EventHandler(this.btnGameplayPlay_Click);
-            // 
-            // chkGameplayAutoHideDrawings
-            // 
-            this.chkGameplayAutoHideDrawings.AutoSize = true;
-            this.chkGameplayAutoHideDrawings.Location = new System.Drawing.Point(175, 219);
-            this.chkGameplayAutoHideDrawings.Name = "chkGameplayAutoHideDrawings";
-            this.chkGameplayAutoHideDrawings.Size = new System.Drawing.Size(123, 17);
-            this.chkGameplayAutoHideDrawings.TabIndex = 100;
-            this.chkGameplayAutoHideDrawings.Text = "Auto Ocultar Dibujos";
-            this.chkGameplayAutoHideDrawings.UseVisualStyleBackColor = true;
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.CheckOnClick = true;
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(22, 20);
-            this.toolStripButton1.Text = "toolStripButton1";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(22, 20);
-            this.toolStripButton2.Text = "toolStripButton2";
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(22, 20);
-            this.toolStripButton3.Text = "toolStripButton3";
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(22, 20);
-            this.toolStripButton4.Text = "toolStripButton4";
-            // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(22, 20);
-            this.toolStripButton5.Text = "toolStripButton5";
-            // 
-            // toolStripButton6
-            // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(22, 20);
-            this.toolStripButton6.Text = "toolStripButton6";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(22, 6);
-            // 
-            // toolStripButton7
-            // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(22, 20);
-            this.toolStripButton7.Text = "toolStripButton7";
-            // 
-            // toolStripButton8
-            // 
-            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
-            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(22, 20);
-            this.toolStripButton8.Text = "toolStripButton8";
-            // 
-            // picGameplayWhiteboard
-            // 
-            this.picGameplayWhiteboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picGameplayWhiteboard.Location = new System.Drawing.Point(0, 0);
-            this.picGameplayWhiteboard.Name = "picGameplayWhiteboard";
-            this.picGameplayWhiteboard.Size = new System.Drawing.Size(385, 207);
-            this.picGameplayWhiteboard.TabIndex = 0;
-            this.picGameplayWhiteboard.TabStop = false;
-            // 
             // tabSports
             // 
             this.tabSports.Alignment = System.Windows.Forms.TabAlignment.Left;
@@ -3023,51 +1199,6 @@
             this.tabPage17.TabIndex = 0;
             this.tabPage17.Text = "Evento";
             this.tabPage17.UseVisualStyleBackColor = true;
-            // 
-            // tabPage18
-            // 
-            this.tabPage18.Controls.Add(this.groupBox19);
-            this.tabPage18.Controls.Add(this.groupBox9);
-            this.tabPage18.Controls.Add(this.groupBox8);
-            this.tabPage18.Controls.Add(this.groupBox7);
-            this.tabPage18.Location = new System.Drawing.Point(23, 4);
-            this.tabPage18.Name = "tabPage18";
-            this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage18.Size = new System.Drawing.Size(799, 315);
-            this.tabPage18.TabIndex = 1;
-            this.tabPage18.Text = "Equipos";
-            this.tabPage18.UseVisualStyleBackColor = true;
-            // 
-            // tabPage19
-            // 
-            this.tabPage19.Controls.Add(this.groupBox6);
-            this.tabPage19.Location = new System.Drawing.Point(23, 4);
-            this.tabPage19.Name = "tabPage19";
-            this.tabPage19.Size = new System.Drawing.Size(799, 315);
-            this.tabPage19.TabIndex = 2;
-            this.tabPage19.Text = "Scoreboard";
-            this.tabPage19.UseVisualStyleBackColor = true;
-            // 
-            // tabPage20
-            // 
-            this.tabPage20.Controls.Add(this.groupBox13);
-            this.tabPage20.Controls.Add(this.groupBox14);
-            this.tabPage20.Location = new System.Drawing.Point(23, 4);
-            this.tabPage20.Name = "tabPage20";
-            this.tabPage20.Size = new System.Drawing.Size(799, 315);
-            this.tabPage20.TabIndex = 3;
-            this.tabPage20.Text = "LowerThird";
-            this.tabPage20.UseVisualStyleBackColor = true;
-            // 
-            // tabPage21
-            // 
-            this.tabPage21.Controls.Add(this.groupBox18);
-            this.tabPage21.Location = new System.Drawing.Point(23, 4);
-            this.tabPage21.Name = "tabPage21";
-            this.tabPage21.Size = new System.Drawing.Size(799, 315);
-            this.tabPage21.TabIndex = 4;
-            this.tabPage21.Text = "Posiciones";
-            this.tabPage21.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -3316,6 +1447,20 @@
             this.label11.Size = new System.Drawing.Size(36, 13);
             this.label11.TabIndex = 2;
             this.label11.Text = "Local:";
+            // 
+            // tabPage18
+            // 
+            this.tabPage18.Controls.Add(this.groupBox19);
+            this.tabPage18.Controls.Add(this.groupBox9);
+            this.tabPage18.Controls.Add(this.groupBox8);
+            this.tabPage18.Controls.Add(this.groupBox7);
+            this.tabPage18.Location = new System.Drawing.Point(23, 4);
+            this.tabPage18.Name = "tabPage18";
+            this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage18.Size = new System.Drawing.Size(799, 315);
+            this.tabPage18.TabIndex = 1;
+            this.tabPage18.Text = "Equipos";
+            this.tabPage18.UseVisualStyleBackColor = true;
             // 
             // groupBox19
             // 
@@ -3834,6 +1979,16 @@
             this.lineShape1.Y1 = 4;
             this.lineShape1.Y2 = 197;
             // 
+            // tabPage19
+            // 
+            this.tabPage19.Controls.Add(this.groupBox6);
+            this.tabPage19.Location = new System.Drawing.Point(23, 4);
+            this.tabPage19.Name = "tabPage19";
+            this.tabPage19.Size = new System.Drawing.Size(799, 315);
+            this.tabPage19.TabIndex = 2;
+            this.tabPage19.Text = "Scoreboard";
+            this.tabPage19.UseVisualStyleBackColor = true;
+            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.chkAutoShowOnClockStart);
@@ -4338,6 +2493,17 @@
             this.lineShape3.Y1 = 0;
             this.lineShape3.Y2 = 283;
             // 
+            // tabPage20
+            // 
+            this.tabPage20.Controls.Add(this.groupBox13);
+            this.tabPage20.Controls.Add(this.groupBox14);
+            this.tabPage20.Location = new System.Drawing.Point(23, 4);
+            this.tabPage20.Name = "tabPage20";
+            this.tabPage20.Size = new System.Drawing.Size(799, 315);
+            this.tabPage20.TabIndex = 3;
+            this.tabPage20.Text = "LowerThird";
+            this.tabPage20.UseVisualStyleBackColor = true;
+            // 
             // groupBox13
             // 
             this.groupBox13.Controls.Add(this.radGuestTeamPlayers);
@@ -4500,6 +2666,16 @@
             this.btnStartLT.TabIndex = 5;
             this.btnStartLT.Text = "Iniciar";
             this.btnStartLT.UseVisualStyleBackColor = true;
+            // 
+            // tabPage21
+            // 
+            this.tabPage21.Controls.Add(this.groupBox18);
+            this.tabPage21.Location = new System.Drawing.Point(23, 4);
+            this.tabPage21.Name = "tabPage21";
+            this.tabPage21.Size = new System.Drawing.Size(799, 315);
+            this.tabPage21.TabIndex = 4;
+            this.tabPage21.Text = "Posiciones";
+            this.tabPage21.UseVisualStyleBackColor = true;
             // 
             // groupBox18
             // 
@@ -4729,6 +2905,459 @@
             this.columnHeader21.Text = "Dif";
             this.columnHeader21.Width = 30;
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.groupBox12);
+            this.tabPage5.Controls.Add(this.groupBox16);
+            this.tabPage5.Controls.Add(this.groupBox11);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(822, 323);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Multimedia (F4)";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.btnConfigRecording);
+            this.groupBox12.Controls.Add(this.label30);
+            this.groupBox12.Controls.Add(this.txtRecordingFileName);
+            this.groupBox12.Controls.Add(this.btnStopRecording);
+            this.groupBox12.Controls.Add(this.btnStartRecording);
+            this.groupBox12.Location = new System.Drawing.Point(441, 186);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(293, 131);
+            this.groupBox12.TabIndex = 4;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Grabacion";
+            // 
+            // btnConfigRecording
+            // 
+            this.btnConfigRecording.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfigRecording.Location = new System.Drawing.Point(185, 67);
+            this.btnConfigRecording.Name = "btnConfigRecording";
+            this.btnConfigRecording.Size = new System.Drawing.Size(77, 40);
+            this.btnConfigRecording.TabIndex = 20;
+            this.btnConfigRecording.Text = "Config";
+            this.btnConfigRecording.UseVisualStyleBackColor = true;
+            this.btnConfigRecording.Click += new System.EventHandler(this.btnConfigRecording_Click);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(16, 27);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(46, 13);
+            this.label30.TabIndex = 47;
+            this.label30.Text = "Archivo:";
+            // 
+            // txtRecordingFileName
+            // 
+            this.txtRecordingFileName.Location = new System.Drawing.Point(68, 26);
+            this.txtRecordingFileName.Name = "txtRecordingFileName";
+            this.txtRecordingFileName.Size = new System.Drawing.Size(183, 20);
+            this.txtRecordingFileName.TabIndex = 17;
+            // 
+            // btnStopRecording
+            // 
+            this.btnStopRecording.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopRecording.Location = new System.Drawing.Point(102, 67);
+            this.btnStopRecording.Name = "btnStopRecording";
+            this.btnStopRecording.Size = new System.Drawing.Size(77, 40);
+            this.btnStopRecording.TabIndex = 19;
+            this.btnStopRecording.Text = "Detener";
+            this.btnStopRecording.UseVisualStyleBackColor = true;
+            this.btnStopRecording.Click += new System.EventHandler(this.btnStopRecording_Click);
+            // 
+            // btnStartRecording
+            // 
+            this.btnStartRecording.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartRecording.Location = new System.Drawing.Point(19, 67);
+            this.btnStartRecording.Name = "btnStartRecording";
+            this.btnStartRecording.Size = new System.Drawing.Size(77, 40);
+            this.btnStartRecording.TabIndex = 18;
+            this.btnStartRecording.Text = "Grabar";
+            this.btnStartRecording.UseVisualStyleBackColor = true;
+            this.btnStartRecording.Click += new System.EventHandler(this.btnStartRecording_Click);
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.chkLoopAudioFile);
+            this.groupBox16.Controls.Add(this.btnStopAudio);
+            this.groupBox16.Controls.Add(this.btnPauseAudio);
+            this.groupBox16.Controls.Add(this.btnPlayAudio);
+            this.groupBox16.Controls.Add(this.btnRefreshAudioFiles);
+            this.groupBox16.Controls.Add(this.cmbAudioFiles);
+            this.groupBox16.Controls.Add(this.label35);
+            this.groupBox16.Location = new System.Drawing.Point(441, 7);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(293, 173);
+            this.groupBox16.TabIndex = 3;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "Audio";
+            // 
+            // chkLoopAudioFile
+            // 
+            this.chkLoopAudioFile.AutoSize = true;
+            this.chkLoopAudioFile.Location = new System.Drawing.Point(79, 122);
+            this.chkLoopAudioFile.Name = "chkLoopAudioFile";
+            this.chkLoopAudioFile.Size = new System.Drawing.Size(50, 17);
+            this.chkLoopAudioFile.TabIndex = 14;
+            this.chkLoopAudioFile.Text = "Loop";
+            this.chkLoopAudioFile.UseVisualStyleBackColor = true;
+            // 
+            // btnStopAudio
+            // 
+            this.btnStopAudio.Location = new System.Drawing.Point(148, 123);
+            this.btnStopAudio.Name = "btnStopAudio";
+            this.btnStopAudio.Size = new System.Drawing.Size(74, 27);
+            this.btnStopAudio.TabIndex = 16;
+            this.btnStopAudio.Text = "STOP";
+            this.btnStopAudio.UseVisualStyleBackColor = true;
+            this.btnStopAudio.Click += new System.EventHandler(this.btnStopAudio_Click);
+            // 
+            // btnPauseAudio
+            // 
+            this.btnPauseAudio.Location = new System.Drawing.Point(148, 89);
+            this.btnPauseAudio.Name = "btnPauseAudio";
+            this.btnPauseAudio.Size = new System.Drawing.Size(74, 27);
+            this.btnPauseAudio.TabIndex = 15;
+            this.btnPauseAudio.Text = "PAUSE";
+            this.btnPauseAudio.UseVisualStyleBackColor = true;
+            this.btnPauseAudio.Click += new System.EventHandler(this.btnPauseAudio_Click);
+            // 
+            // btnPlayAudio
+            // 
+            this.btnPlayAudio.Location = new System.Drawing.Point(68, 89);
+            this.btnPlayAudio.Name = "btnPlayAudio";
+            this.btnPlayAudio.Size = new System.Drawing.Size(74, 27);
+            this.btnPlayAudio.TabIndex = 13;
+            this.btnPlayAudio.Text = "PLAY";
+            this.btnPlayAudio.UseVisualStyleBackColor = true;
+            this.btnPlayAudio.Click += new System.EventHandler(this.btnPlayAudio_Click);
+            // 
+            // btnRefreshAudioFiles
+            // 
+            this.btnRefreshAudioFiles.Location = new System.Drawing.Point(222, 38);
+            this.btnRefreshAudioFiles.Name = "btnRefreshAudioFiles";
+            this.btnRefreshAudioFiles.Size = new System.Drawing.Size(65, 21);
+            this.btnRefreshAudioFiles.TabIndex = 12;
+            this.btnRefreshAudioFiles.Text = "Actualizar";
+            this.btnRefreshAudioFiles.UseVisualStyleBackColor = true;
+            this.btnRefreshAudioFiles.Click += new System.EventHandler(this.btnRefreshAudioFiles_Click);
+            // 
+            // cmbAudioFiles
+            // 
+            this.cmbAudioFiles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAudioFiles.FormattingEnabled = true;
+            this.cmbAudioFiles.Location = new System.Drawing.Point(61, 38);
+            this.cmbAudioFiles.Name = "cmbAudioFiles";
+            this.cmbAudioFiles.Size = new System.Drawing.Size(155, 21);
+            this.cmbAudioFiles.TabIndex = 11;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(9, 41);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(46, 13);
+            this.label35.TabIndex = 49;
+            this.label35.Text = "Archivo:";
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.btnMuteVolume);
+            this.groupBox11.Controls.Add(this.label32);
+            this.groupBox11.Controls.Add(this.trkVolume);
+            this.groupBox11.Controls.Add(this.chkLoopVideoFile);
+            this.groupBox11.Controls.Add(this.btnStopVideo);
+            this.groupBox11.Controls.Add(this.btnPauseVideo);
+            this.groupBox11.Controls.Add(this.btnPlayVideo);
+            this.groupBox11.Controls.Add(this.btnRefreshVideoFiles);
+            this.groupBox11.Controls.Add(this.lvwVideoFiles);
+            this.groupBox11.Location = new System.Drawing.Point(6, 7);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(429, 310);
+            this.groupBox11.TabIndex = 0;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Lista Reproduccion";
+            // 
+            // btnMuteVolume
+            // 
+            this.btnMuteVolume.Location = new System.Drawing.Point(376, 274);
+            this.btnMuteVolume.Name = "btnMuteVolume";
+            this.btnMuteVolume.Size = new System.Drawing.Size(47, 22);
+            this.btnMuteVolume.TabIndex = 10;
+            this.btnMuteVolume.Text = "Mute";
+            this.btnMuteVolume.UseVisualStyleBackColor = true;
+            this.btnMuteVolume.Click += new System.EventHandler(this.btnMute_Click);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label32.Location = new System.Drawing.Point(357, 188);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(18, 105);
+            this.label32.TabIndex = 53;
+            this.label32.Text = "V\r\no\r\nl\r\nu\r\nm\r\ne\r\nn";
+            // 
+            // trkVolume
+            // 
+            this.trkVolume.Location = new System.Drawing.Point(376, 187);
+            this.trkVolume.Name = "trkVolume";
+            this.trkVolume.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.trkVolume.Size = new System.Drawing.Size(45, 81);
+            this.trkVolume.TabIndex = 9;
+            this.trkVolume.Scroll += new System.EventHandler(this.trkVolume_Scroll);
+            this.trkVolume.ValueChanged += new System.EventHandler(this.trkVolume_ValueChanged);
+            // 
+            // chkLoopVideoFile
+            // 
+            this.chkLoopVideoFile.AutoSize = true;
+            this.chkLoopVideoFile.Location = new System.Drawing.Point(360, 99);
+            this.chkLoopVideoFile.Name = "chkLoopVideoFile";
+            this.chkLoopVideoFile.Size = new System.Drawing.Size(50, 17);
+            this.chkLoopVideoFile.TabIndex = 6;
+            this.chkLoopVideoFile.Text = "Loop";
+            this.chkLoopVideoFile.UseVisualStyleBackColor = true;
+            // 
+            // btnStopVideo
+            // 
+            this.btnStopVideo.Location = new System.Drawing.Point(349, 156);
+            this.btnStopVideo.Name = "btnStopVideo";
+            this.btnStopVideo.Size = new System.Drawing.Size(74, 27);
+            this.btnStopVideo.TabIndex = 8;
+            this.btnStopVideo.Text = "STOP";
+            this.btnStopVideo.UseVisualStyleBackColor = true;
+            this.btnStopVideo.Click += new System.EventHandler(this.btnStopVideo_Click);
+            // 
+            // btnPauseVideo
+            // 
+            this.btnPauseVideo.Location = new System.Drawing.Point(349, 122);
+            this.btnPauseVideo.Name = "btnPauseVideo";
+            this.btnPauseVideo.Size = new System.Drawing.Size(74, 27);
+            this.btnPauseVideo.TabIndex = 7;
+            this.btnPauseVideo.Text = "PAUSE";
+            this.btnPauseVideo.UseVisualStyleBackColor = true;
+            this.btnPauseVideo.Click += new System.EventHandler(this.btnPauseVideo_Click);
+            // 
+            // btnPlayVideo
+            // 
+            this.btnPlayVideo.Location = new System.Drawing.Point(349, 66);
+            this.btnPlayVideo.Name = "btnPlayVideo";
+            this.btnPlayVideo.Size = new System.Drawing.Size(74, 27);
+            this.btnPlayVideo.TabIndex = 5;
+            this.btnPlayVideo.Text = "PLAY";
+            this.btnPlayVideo.UseVisualStyleBackColor = true;
+            this.btnPlayVideo.Click += new System.EventHandler(this.btnPlayVideo_Click);
+            // 
+            // btnRefreshVideoFiles
+            // 
+            this.btnRefreshVideoFiles.Location = new System.Drawing.Point(349, 19);
+            this.btnRefreshVideoFiles.Name = "btnRefreshVideoFiles";
+            this.btnRefreshVideoFiles.Size = new System.Drawing.Size(74, 27);
+            this.btnRefreshVideoFiles.TabIndex = 4;
+            this.btnRefreshVideoFiles.Text = "Actualizar";
+            this.btnRefreshVideoFiles.UseVisualStyleBackColor = true;
+            this.btnRefreshVideoFiles.Click += new System.EventHandler(this.btnGetVideoFiles_Click);
+            // 
+            // lvwVideoFiles
+            // 
+            this.lvwVideoFiles.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader10});
+            this.lvwVideoFiles.FullRowSelect = true;
+            this.lvwVideoFiles.GridLines = true;
+            this.lvwVideoFiles.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvwVideoFiles.HideSelection = false;
+            this.lvwVideoFiles.Location = new System.Drawing.Point(11, 19);
+            this.lvwVideoFiles.MultiSelect = false;
+            this.lvwVideoFiles.Name = "lvwVideoFiles";
+            this.lvwVideoFiles.Size = new System.Drawing.Size(332, 277);
+            this.lvwVideoFiles.TabIndex = 3;
+            this.lvwVideoFiles.UseCompatibleStateImageBehavior = false;
+            this.lvwVideoFiles.View = System.Windows.Forms.View.Details;
+            this.lvwVideoFiles.DoubleClick += new System.EventHandler(this.lvwVideoFiles_DoubleClick);
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Archivo";
+            this.columnHeader10.Width = 308;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.groupBox15);
+            this.tabPage7.Controls.Add(this.groupBox17);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(822, 323);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Otros (F5)";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.btnRefreshLogoFiles);
+            this.groupBox15.Controls.Add(this.btnStopBroadcastLogo);
+            this.groupBox15.Controls.Add(this.btnStartBroadcastLogo);
+            this.groupBox15.Controls.Add(this.cmbBroadcastLogo);
+            this.groupBox15.Controls.Add(this.label31);
+            this.groupBox15.Location = new System.Drawing.Point(6, 6);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(351, 165);
+            this.groupBox15.TabIndex = 4;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Logo";
+            // 
+            // btnRefreshLogoFiles
+            // 
+            this.btnRefreshLogoFiles.Location = new System.Drawing.Point(272, 30);
+            this.btnRefreshLogoFiles.Name = "btnRefreshLogoFiles";
+            this.btnRefreshLogoFiles.Size = new System.Drawing.Size(71, 21);
+            this.btnRefreshLogoFiles.TabIndex = 4;
+            this.btnRefreshLogoFiles.Text = "Actualizar";
+            this.btnRefreshLogoFiles.UseVisualStyleBackColor = true;
+            // 
+            // btnStopBroadcastLogo
+            // 
+            this.btnStopBroadcastLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopBroadcastLogo.Location = new System.Drawing.Point(178, 68);
+            this.btnStopBroadcastLogo.Name = "btnStopBroadcastLogo";
+            this.btnStopBroadcastLogo.Size = new System.Drawing.Size(104, 40);
+            this.btnStopBroadcastLogo.TabIndex = 6;
+            this.btnStopBroadcastLogo.Text = "Parar Grafico";
+            this.btnStopBroadcastLogo.UseVisualStyleBackColor = true;
+            this.btnStopBroadcastLogo.Click += new System.EventHandler(this.btnStopLogo_Click);
+            // 
+            // btnStartBroadcastLogo
+            // 
+            this.btnStartBroadcastLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartBroadcastLogo.Location = new System.Drawing.Point(63, 68);
+            this.btnStartBroadcastLogo.Name = "btnStartBroadcastLogo";
+            this.btnStartBroadcastLogo.Size = new System.Drawing.Size(104, 40);
+            this.btnStartBroadcastLogo.TabIndex = 5;
+            this.btnStartBroadcastLogo.Text = "Iniciar Grafico";
+            this.btnStartBroadcastLogo.UseVisualStyleBackColor = true;
+            this.btnStartBroadcastLogo.Click += new System.EventHandler(this.btnStartLogo_Click);
+            // 
+            // cmbBroadcastLogo
+            // 
+            this.cmbBroadcastLogo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBroadcastLogo.FormattingEnabled = true;
+            this.cmbBroadcastLogo.Location = new System.Drawing.Point(62, 30);
+            this.cmbBroadcastLogo.Name = "cmbBroadcastLogo";
+            this.cmbBroadcastLogo.Size = new System.Drawing.Size(204, 21);
+            this.cmbBroadcastLogo.TabIndex = 3;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(14, 33);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(46, 13);
+            this.label31.TabIndex = 10;
+            this.label31.Text = "Archivo:";
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.label34);
+            this.groupBox17.Controls.Add(this.trkImageScrollingSpeed);
+            this.groupBox17.Controls.Add(this.btnRefreshImageScrolling);
+            this.groupBox17.Controls.Add(this.btnStopImageScrolling);
+            this.groupBox17.Controls.Add(this.btnStartImageScrolling);
+            this.groupBox17.Controls.Add(this.cmbImageScrolling);
+            this.groupBox17.Controls.Add(this.label33);
+            this.groupBox17.Location = new System.Drawing.Point(363, 6);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(371, 165);
+            this.groupBox17.TabIndex = 3;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "Creditos";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(15, 54);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(57, 13);
+            this.label34.TabIndex = 55;
+            this.label34.Text = "Velocidad:";
+            // 
+            // trkImageScrollingSpeed
+            // 
+            this.trkImageScrollingSpeed.Location = new System.Drawing.Point(85, 51);
+            this.trkImageScrollingSpeed.Minimum = 1;
+            this.trkImageScrollingSpeed.Name = "trkImageScrollingSpeed";
+            this.trkImageScrollingSpeed.Size = new System.Drawing.Size(203, 45);
+            this.trkImageScrollingSpeed.SmallChange = 2;
+            this.trkImageScrollingSpeed.TabIndex = 9;
+            this.trkImageScrollingSpeed.TickFrequency = 2;
+            this.trkImageScrollingSpeed.Value = 1;
+            // 
+            // btnRefreshImageScrolling
+            // 
+            this.btnRefreshImageScrolling.Location = new System.Drawing.Point(294, 18);
+            this.btnRefreshImageScrolling.Name = "btnRefreshImageScrolling";
+            this.btnRefreshImageScrolling.Size = new System.Drawing.Size(68, 21);
+            this.btnRefreshImageScrolling.TabIndex = 8;
+            this.btnRefreshImageScrolling.Text = "Actualizar";
+            this.btnRefreshImageScrolling.UseVisualStyleBackColor = true;
+            this.btnRefreshImageScrolling.Click += new System.EventHandler(this.btnRefreshImageScrolling_Click);
+            // 
+            // btnStopImageScrolling
+            // 
+            this.btnStopImageScrolling.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopImageScrolling.Location = new System.Drawing.Point(188, 113);
+            this.btnStopImageScrolling.Name = "btnStopImageScrolling";
+            this.btnStopImageScrolling.Size = new System.Drawing.Size(104, 40);
+            this.btnStopImageScrolling.TabIndex = 11;
+            this.btnStopImageScrolling.Text = "Parar Grafico";
+            this.btnStopImageScrolling.UseVisualStyleBackColor = true;
+            this.btnStopImageScrolling.Click += new System.EventHandler(this.btnStopImageScrolling_Click);
+            // 
+            // btnStartImageScrolling
+            // 
+            this.btnStartImageScrolling.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartImageScrolling.Location = new System.Drawing.Point(78, 113);
+            this.btnStartImageScrolling.Name = "btnStartImageScrolling";
+            this.btnStartImageScrolling.Size = new System.Drawing.Size(104, 40);
+            this.btnStartImageScrolling.TabIndex = 10;
+            this.btnStartImageScrolling.Text = "Iniciar Grafico";
+            this.btnStartImageScrolling.UseVisualStyleBackColor = true;
+            this.btnStartImageScrolling.Click += new System.EventHandler(this.btnStartImageScrolling_Click);
+            // 
+            // cmbImageScrolling
+            // 
+            this.cmbImageScrolling.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbImageScrolling.FormattingEnabled = true;
+            this.cmbImageScrolling.Location = new System.Drawing.Point(63, 19);
+            this.cmbImageScrolling.Name = "cmbImageScrolling";
+            this.cmbImageScrolling.Size = new System.Drawing.Size(225, 21);
+            this.cmbImageScrolling.TabIndex = 7;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(15, 22);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(46, 13);
+            this.label33.TabIndex = 10;
+            this.label33.Text = "Archivo:";
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.Controls.Add(this.tabVolleyball);
+            this.tabPage9.Location = new System.Drawing.Point(4, 22);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(822, 323);
+            this.tabPage9.TabIndex = 8;
+            this.tabPage9.Text = "Volleyball (F6)";
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
             // tabVolleyball
             // 
             this.tabVolleyball.Alignment = System.Windows.Forms.TabAlignment.Left;
@@ -4752,16 +3381,6 @@
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Scoreboard";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(23, 4);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(795, 315);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "Result";
-            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // groupBox22
             // 
@@ -5458,6 +4077,313 @@
             this.txtVolleyHomeTeam.Size = new System.Drawing.Size(113, 20);
             this.txtVolleyHomeTeam.TabIndex = 0;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(23, 4);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(795, 315);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "Result";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage10
+            // 
+            this.tabPage10.Controls.Add(this.groupBox26);
+            this.tabPage10.Controls.Add(this.groupBox24);
+            this.tabPage10.Controls.Add(this.groupBox23);
+            this.tabPage10.Location = new System.Drawing.Point(4, 22);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Size = new System.Drawing.Size(822, 323);
+            this.tabPage10.TabIndex = 9;
+            this.tabPage10.Text = "Extras (F7)";
+            this.tabPage10.UseVisualStyleBackColor = true;
+            // 
+            // groupBox26
+            // 
+            this.groupBox26.Controls.Add(this.cmbLogoFile);
+            this.groupBox26.Controls.Add(this.label72);
+            this.groupBox26.Controls.Add(this.label71);
+            this.groupBox26.Controls.Add(this.nudDynamicLogoHeight);
+            this.groupBox26.Controls.Add(this.label70);
+            this.groupBox26.Controls.Add(this.nudDynamicLogoPosY);
+            this.groupBox26.Controls.Add(this.label69);
+            this.groupBox26.Controls.Add(this.nudDynamicLogoWidth);
+            this.groupBox26.Controls.Add(this.cmbTemplateDynamicLogo);
+            this.groupBox26.Controls.Add(this.label66);
+            this.groupBox26.Controls.Add(this.btnStopDynamicLogo);
+            this.groupBox26.Controls.Add(this.btnStartDynamicLogo);
+            this.groupBox26.Controls.Add(this.label68);
+            this.groupBox26.Controls.Add(this.nudDynamicLogoPosX);
+            this.groupBox26.Controls.Add(this.chkAutoHideDynamicLogo);
+            this.groupBox26.Location = new System.Drawing.Point(331, 157);
+            this.groupBox26.Name = "groupBox26";
+            this.groupBox26.Size = new System.Drawing.Size(406, 163);
+            this.groupBox26.TabIndex = 3;
+            this.groupBox26.TabStop = false;
+            this.groupBox26.Text = "Dynamic Logo";
+            // 
+            // cmbLogoFile
+            // 
+            this.cmbLogoFile.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLogoFile.FormattingEnabled = true;
+            this.cmbLogoFile.Location = new System.Drawing.Point(80, 45);
+            this.cmbLogoFile.Name = "cmbLogoFile";
+            this.cmbLogoFile.Size = new System.Drawing.Size(316, 21);
+            this.cmbLogoFile.TabIndex = 86;
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Location = new System.Drawing.Point(20, 48);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(53, 13);
+            this.label72.TabIndex = 87;
+            this.label72.Text = "Logo File:";
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(161, 100);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(41, 13);
+            this.label71.TabIndex = 85;
+            this.label71.Text = "Height:";
+            // 
+            // nudDynamicLogoHeight
+            // 
+            this.nudDynamicLogoHeight.Location = new System.Drawing.Point(217, 96);
+            this.nudDynamicLogoHeight.Maximum = new decimal(new int[] {
+            1080,
+            0,
+            0,
+            0});
+            this.nudDynamicLogoHeight.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudDynamicLogoHeight.Name = "nudDynamicLogoHeight";
+            this.nudDynamicLogoHeight.Size = new System.Drawing.Size(60, 20);
+            this.nudDynamicLogoHeight.TabIndex = 84;
+            this.nudDynamicLogoHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudDynamicLogoHeight.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Location = new System.Drawing.Point(161, 74);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(38, 13);
+            this.label70.TabIndex = 83;
+            this.label70.Text = "Pos Y:";
+            // 
+            // nudDynamicLogoPosY
+            // 
+            this.nudDynamicLogoPosY.Location = new System.Drawing.Point(217, 71);
+            this.nudDynamicLogoPosY.Maximum = new decimal(new int[] {
+            1080,
+            0,
+            0,
+            0});
+            this.nudDynamicLogoPosY.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudDynamicLogoPosY.Name = "nudDynamicLogoPosY";
+            this.nudDynamicLogoPosY.Size = new System.Drawing.Size(60, 20);
+            this.nudDynamicLogoPosY.TabIndex = 82;
+            this.nudDynamicLogoPosY.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudDynamicLogoPosY.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(20, 100);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(38, 13);
+            this.label69.TabIndex = 81;
+            this.label69.Text = "Width:";
+            // 
+            // nudDynamicLogoWidth
+            // 
+            this.nudDynamicLogoWidth.Location = new System.Drawing.Point(80, 98);
+            this.nudDynamicLogoWidth.Maximum = new decimal(new int[] {
+            1920,
+            0,
+            0,
+            0});
+            this.nudDynamicLogoWidth.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudDynamicLogoWidth.Name = "nudDynamicLogoWidth";
+            this.nudDynamicLogoWidth.Size = new System.Drawing.Size(59, 20);
+            this.nudDynamicLogoWidth.TabIndex = 80;
+            this.nudDynamicLogoWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudDynamicLogoWidth.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // cmbTemplateDynamicLogo
+            // 
+            this.cmbTemplateDynamicLogo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTemplateDynamicLogo.FormattingEnabled = true;
+            this.cmbTemplateDynamicLogo.Location = new System.Drawing.Point(80, 19);
+            this.cmbTemplateDynamicLogo.Name = "cmbTemplateDynamicLogo";
+            this.cmbTemplateDynamicLogo.Size = new System.Drawing.Size(316, 21);
+            this.cmbTemplateDynamicLogo.TabIndex = 78;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(20, 22);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(54, 13);
+            this.label66.TabIndex = 79;
+            this.label66.Text = "Template:";
+            // 
+            // btnStopDynamicLogo
+            // 
+            this.btnStopDynamicLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopDynamicLogo.Location = new System.Drawing.Point(323, 124);
+            this.btnStopDynamicLogo.Name = "btnStopDynamicLogo";
+            this.btnStopDynamicLogo.Size = new System.Drawing.Size(73, 30);
+            this.btnStopDynamicLogo.TabIndex = 76;
+            this.btnStopDynamicLogo.Text = "Parar";
+            this.btnStopDynamicLogo.UseVisualStyleBackColor = true;
+            this.btnStopDynamicLogo.Click += new System.EventHandler(this.btnStopDynamicLogo_Click);
+            // 
+            // btnStartDynamicLogo
+            // 
+            this.btnStartDynamicLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartDynamicLogo.Location = new System.Drawing.Point(146, 123);
+            this.btnStartDynamicLogo.Name = "btnStartDynamicLogo";
+            this.btnStartDynamicLogo.Size = new System.Drawing.Size(73, 30);
+            this.btnStartDynamicLogo.TabIndex = 75;
+            this.btnStartDynamicLogo.Text = "Iniciar";
+            this.btnStartDynamicLogo.UseVisualStyleBackColor = true;
+            this.btnStartDynamicLogo.Click += new System.EventHandler(this.btnStartDynamicLogo_Click);
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(20, 74);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(38, 13);
+            this.label68.TabIndex = 74;
+            this.label68.Text = "Pos X:";
+            // 
+            // nudDynamicLogoPosX
+            // 
+            this.nudDynamicLogoPosX.Location = new System.Drawing.Point(80, 72);
+            this.nudDynamicLogoPosX.Maximum = new decimal(new int[] {
+            1920,
+            0,
+            0,
+            0});
+            this.nudDynamicLogoPosX.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudDynamicLogoPosX.Name = "nudDynamicLogoPosX";
+            this.nudDynamicLogoPosX.Size = new System.Drawing.Size(59, 20);
+            this.nudDynamicLogoPosX.TabIndex = 17;
+            this.nudDynamicLogoPosX.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudDynamicLogoPosX.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // chkAutoHideDynamicLogo
+            // 
+            this.chkAutoHideDynamicLogo.AutoSize = true;
+            this.chkAutoHideDynamicLogo.Location = new System.Drawing.Point(225, 132);
+            this.chkAutoHideDynamicLogo.Name = "chkAutoHideDynamicLogo";
+            this.chkAutoHideDynamicLogo.Size = new System.Drawing.Size(85, 17);
+            this.chkAutoHideDynamicLogo.TabIndex = 16;
+            this.chkAutoHideDynamicLogo.Text = "Auto Ocultar";
+            this.chkAutoHideDynamicLogo.UseVisualStyleBackColor = true;
+            // 
+            // groupBox24
+            // 
+            this.groupBox24.Controls.Add(this.txtLogMessages);
+            this.groupBox24.Location = new System.Drawing.Point(3, 132);
+            this.groupBox24.Name = "groupBox24";
+            this.groupBox24.Size = new System.Drawing.Size(321, 188);
+            this.groupBox24.TabIndex = 1;
+            this.groupBox24.TabStop = false;
+            this.groupBox24.Text = "Log servidor";
+            // 
+            // txtLogMessages
+            // 
+            this.txtLogMessages.Location = new System.Drawing.Point(7, 20);
+            this.txtLogMessages.Multiline = true;
+            this.txtLogMessages.Name = "txtLogMessages";
+            this.txtLogMessages.Size = new System.Drawing.Size(308, 156);
+            this.txtLogMessages.TabIndex = 0;
+            // 
+            // groupBox23
+            // 
+            this.groupBox23.Controls.Add(this.label61);
+            this.groupBox23.Controls.Add(this.button1);
+            this.groupBox23.Controls.Add(this.textBox2);
+            this.groupBox23.Location = new System.Drawing.Point(3, 3);
+            this.groupBox23.Name = "groupBox23";
+            this.groupBox23.Size = new System.Drawing.Size(321, 82);
+            this.groupBox23.TabIndex = 0;
+            this.groupBox23.TabStop = false;
+            this.groupBox23.Text = "Consola";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(14, 20);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(63, 13);
+            this.label61.TabIndex = 15;
+            this.label61.Text = "Commando:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(135, 46);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(74, 27);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Ejecutar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(81, 20);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(225, 20);
+            this.textBox2.TabIndex = 0;
+            // 
+            // tabPage11
+            // 
+            this.tabPage11.Controls.Add(this.tabGameshow);
+            this.tabPage11.Location = new System.Drawing.Point(4, 22);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Size = new System.Drawing.Size(822, 323);
+            this.tabPage11.TabIndex = 10;
+            this.tabPage11.Text = "GameShow (F8)";
+            this.tabPage11.UseVisualStyleBackColor = true;
+            // 
             // tabGameshow
             // 
             this.tabGameshow.Alignment = System.Windows.Forms.TabAlignment.Left;
@@ -5481,17 +4407,6 @@
             this.tabPage6.Text = "Countdown";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // tabPage8
-            // 
-            this.tabPage8.Controls.Add(this.groupBox25);
-            this.tabPage8.Location = new System.Drawing.Point(23, 4);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(795, 315);
-            this.tabPage8.TabIndex = 1;
-            this.tabPage8.Text = "Questions";
-            this.tabPage8.UseVisualStyleBackColor = true;
-            // 
             // groupBox27
             // 
             this.groupBox27.Controls.Add(this.cmbTemplateGameshowCountdown);
@@ -5511,6 +4426,24 @@
             this.groupBox27.TabIndex = 7;
             this.groupBox27.TabStop = false;
             this.groupBox27.Text = "Countdown";
+            // 
+            // cmbTemplateGameshowCountdown
+            // 
+            this.cmbTemplateGameshowCountdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTemplateGameshowCountdown.FormattingEnabled = true;
+            this.cmbTemplateGameshowCountdown.Location = new System.Drawing.Point(76, 31);
+            this.cmbTemplateGameshowCountdown.Name = "cmbTemplateGameshowCountdown";
+            this.cmbTemplateGameshowCountdown.Size = new System.Drawing.Size(382, 21);
+            this.cmbTemplateGameshowCountdown.TabIndex = 82;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(6, 34);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(54, 13);
+            this.label65.TabIndex = 83;
+            this.label65.Text = "Template:";
             // 
             // nudGameshowRefreshMiliseconds
             // 
@@ -5626,6 +4559,17 @@
             this.btnShowCountdown.Text = "Mostrar";
             this.btnShowCountdown.UseVisualStyleBackColor = true;
             // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.groupBox25);
+            this.tabPage8.Location = new System.Drawing.Point(23, 4);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(795, 315);
+            this.tabPage8.TabIndex = 1;
+            this.tabPage8.Text = "Questions";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
             // groupBox25
             // 
             this.groupBox25.Controls.Add(this.cmbTemplateGameshowQuestions);
@@ -5657,6 +4601,24 @@
             this.groupBox25.TabIndex = 9;
             this.groupBox25.TabStop = false;
             this.groupBox25.Text = "Questions";
+            // 
+            // cmbTemplateGameshowQuestions
+            // 
+            this.cmbTemplateGameshowQuestions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTemplateGameshowQuestions.FormattingEnabled = true;
+            this.cmbTemplateGameshowQuestions.Location = new System.Drawing.Point(76, 38);
+            this.cmbTemplateGameshowQuestions.Name = "cmbTemplateGameshowQuestions";
+            this.cmbTemplateGameshowQuestions.Size = new System.Drawing.Size(376, 21);
+            this.cmbTemplateGameshowQuestions.TabIndex = 84;
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Location = new System.Drawing.Point(6, 41);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(54, 13);
+            this.label73.TabIndex = 85;
+            this.label73.Text = "Template:";
             // 
             // btnShowCorrectAnswer
             // 
@@ -5901,41 +4863,15 @@
             this.columnHeader23.Text = "Nombre";
             this.columnHeader23.Width = 208;
             // 
-            // cmbTemplateGameshowQuestions
+            // tabPage12
             // 
-            this.cmbTemplateGameshowQuestions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTemplateGameshowQuestions.FormattingEnabled = true;
-            this.cmbTemplateGameshowQuestions.Location = new System.Drawing.Point(76, 38);
-            this.cmbTemplateGameshowQuestions.Name = "cmbTemplateGameshowQuestions";
-            this.cmbTemplateGameshowQuestions.Size = new System.Drawing.Size(376, 21);
-            this.cmbTemplateGameshowQuestions.TabIndex = 84;
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.Location = new System.Drawing.Point(6, 41);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(54, 13);
-            this.label73.TabIndex = 85;
-            this.label73.Text = "Template:";
-            // 
-            // cmbTemplateGameshowCountdown
-            // 
-            this.cmbTemplateGameshowCountdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTemplateGameshowCountdown.FormattingEnabled = true;
-            this.cmbTemplateGameshowCountdown.Location = new System.Drawing.Point(76, 31);
-            this.cmbTemplateGameshowCountdown.Name = "cmbTemplateGameshowCountdown";
-            this.cmbTemplateGameshowCountdown.Size = new System.Drawing.Size(382, 21);
-            this.cmbTemplateGameshowCountdown.TabIndex = 82;
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(6, 34);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(54, 13);
-            this.label65.TabIndex = 83;
-            this.label65.Text = "Template:";
+            this.tabPage12.Controls.Add(this.tabElections);
+            this.tabPage12.Location = new System.Drawing.Point(4, 22);
+            this.tabPage12.Name = "tabPage12";
+            this.tabPage12.Size = new System.Drawing.Size(822, 323);
+            this.tabPage12.TabIndex = 11;
+            this.tabPage12.Text = "Elecciones (F9)";
+            this.tabPage12.UseVisualStyleBackColor = true;
             // 
             // tabElections
             // 
@@ -5959,16 +4895,6 @@
             this.tabPage22.TabIndex = 0;
             this.tabPage22.Text = "Top 3";
             this.tabPage22.UseVisualStyleBackColor = true;
-            // 
-            // tabPage23
-            // 
-            this.tabPage23.Location = new System.Drawing.Point(23, 4);
-            this.tabPage23.Name = "tabPage23";
-            this.tabPage23.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage23.Size = new System.Drawing.Size(792, 315);
-            this.tabPage23.TabIndex = 1;
-            this.tabPage23.Text = "Overall";
-            this.tabPage23.UseVisualStyleBackColor = true;
             // 
             // groupBox29
             // 
@@ -6153,6 +5079,1085 @@
             this.chkAutoHideTop3.Text = "Auto Ocultar";
             this.chkAutoHideTop3.UseVisualStyleBackColor = true;
             // 
+            // tabPage23
+            // 
+            this.tabPage23.Location = new System.Drawing.Point(23, 4);
+            this.tabPage23.Name = "tabPage23";
+            this.tabPage23.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage23.Size = new System.Drawing.Size(792, 315);
+            this.tabPage23.TabIndex = 1;
+            this.tabPage23.Text = "Overall";
+            this.tabPage23.UseVisualStyleBackColor = true;
+            // 
+            // tabPage13
+            // 
+            this.tabPage13.Controls.Add(this.groupBox30);
+            this.tabPage13.Location = new System.Drawing.Point(4, 22);
+            this.tabPage13.Name = "tabPage13";
+            this.tabPage13.Size = new System.Drawing.Size(822, 323);
+            this.tabPage13.TabIndex = 12;
+            this.tabPage13.Text = "Clima (F10)";
+            this.tabPage13.UseVisualStyleBackColor = true;
+            // 
+            // groupBox30
+            // 
+            this.groupBox30.Controls.Add(this.label87);
+            this.groupBox30.Controls.Add(this.button2);
+            this.groupBox30.Controls.Add(this.button11);
+            this.groupBox30.Controls.Add(this.button12);
+            this.groupBox30.Controls.Add(this.lvwForecastPlaylist);
+            this.groupBox30.Controls.Add(this.nudWeatherForecastPauseSeconds);
+            this.groupBox30.Controls.Add(this.label80);
+            this.groupBox30.Controls.Add(this.label82);
+            this.groupBox30.Controls.Add(this.nudWeatherForecastStartDelaySeconds);
+            this.groupBox30.Controls.Add(this.btnStopWeatherForecast);
+            this.groupBox30.Controls.Add(this.btnStartWeatherForecast);
+            this.groupBox30.Controls.Add(this.checkBox1);
+            this.groupBox30.Controls.Add(this.btnWeatherForecastCallWS);
+            this.groupBox30.Controls.Add(this.cmbWeatherStates);
+            this.groupBox30.Controls.Add(this.label85);
+            this.groupBox30.Controls.Add(this.cmbTemplateWeatherForecast);
+            this.groupBox30.Controls.Add(this.label86);
+            this.groupBox30.Controls.Add(this.label84);
+            this.groupBox30.Controls.Add(this.txtWeatherForecastWS);
+            this.groupBox30.Controls.Add(this.label83);
+            this.groupBox30.Controls.Add(this.btnLoadCities);
+            this.groupBox30.Controls.Add(this.button3);
+            this.groupBox30.Controls.Add(this.button4);
+            this.groupBox30.Controls.Add(this.lvwCities);
+            this.groupBox30.Location = new System.Drawing.Point(3, 3);
+            this.groupBox30.Name = "groupBox30";
+            this.groupBox30.Size = new System.Drawing.Size(734, 317);
+            this.groupBox30.TabIndex = 0;
+            this.groupBox30.TabStop = false;
+            this.groupBox30.Text = "Pronostico extendido";
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Location = new System.Drawing.Point(430, 16);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(42, 13);
+            this.label87.TabIndex = 104;
+            this.label87.Text = "Playlist:";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(690, 123);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(30, 20);
+            this.button2.TabIndex = 102;
+            this.button2.Text = "C";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(690, 102);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(30, 20);
+            this.button11.TabIndex = 101;
+            this.button11.Text = "-";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(690, 81);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(30, 20);
+            this.button12.TabIndex = 100;
+            this.button12.Text = "+";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // lvwForecastPlaylist
+            // 
+            this.lvwForecastPlaylist.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader31,
+            this.columnHeader32});
+            this.lvwForecastPlaylist.FullRowSelect = true;
+            this.lvwForecastPlaylist.GridLines = true;
+            this.lvwForecastPlaylist.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvwForecastPlaylist.HideSelection = false;
+            this.lvwForecastPlaylist.Location = new System.Drawing.Point(433, 31);
+            this.lvwForecastPlaylist.MultiSelect = false;
+            this.lvwForecastPlaylist.Name = "lvwForecastPlaylist";
+            this.lvwForecastPlaylist.Size = new System.Drawing.Size(251, 188);
+            this.lvwForecastPlaylist.TabIndex = 103;
+            this.lvwForecastPlaylist.UseCompatibleStateImageBehavior = false;
+            this.lvwForecastPlaylist.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader31
+            // 
+            this.columnHeader31.Text = "#";
+            this.columnHeader31.Width = 21;
+            // 
+            // columnHeader32
+            // 
+            this.columnHeader32.Text = "Respuesta";
+            this.columnHeader32.Width = 200;
+            // 
+            // nudWeatherForecastPauseSeconds
+            // 
+            this.nudWeatherForecastPauseSeconds.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nudWeatherForecastPauseSeconds.Location = new System.Drawing.Point(650, 237);
+            this.nudWeatherForecastPauseSeconds.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.nudWeatherForecastPauseSeconds.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nudWeatherForecastPauseSeconds.Name = "nudWeatherForecastPauseSeconds";
+            this.nudWeatherForecastPauseSeconds.Size = new System.Drawing.Size(46, 20);
+            this.nudWeatherForecastPauseSeconds.TabIndex = 99;
+            this.nudWeatherForecastPauseSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudWeatherForecastPauseSeconds.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Location = new System.Drawing.Point(597, 241);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(40, 13);
+            this.label80.TabIndex = 98;
+            this.label80.Text = "Pause:";
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Location = new System.Drawing.Point(459, 241);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(37, 13);
+            this.label82.TabIndex = 97;
+            this.label82.Text = "Delay:";
+            // 
+            // nudWeatherForecastStartDelaySeconds
+            // 
+            this.nudWeatherForecastStartDelaySeconds.Location = new System.Drawing.Point(512, 237);
+            this.nudWeatherForecastStartDelaySeconds.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nudWeatherForecastStartDelaySeconds.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudWeatherForecastStartDelaySeconds.Name = "nudWeatherForecastStartDelaySeconds";
+            this.nudWeatherForecastStartDelaySeconds.Size = new System.Drawing.Size(40, 20);
+            this.nudWeatherForecastStartDelaySeconds.TabIndex = 96;
+            this.nudWeatherForecastStartDelaySeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudWeatherForecastStartDelaySeconds.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // btnStopWeatherForecast
+            // 
+            this.btnStopWeatherForecast.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopWeatherForecast.Location = new System.Drawing.Point(622, 275);
+            this.btnStopWeatherForecast.Name = "btnStopWeatherForecast";
+            this.btnStopWeatherForecast.Size = new System.Drawing.Size(73, 30);
+            this.btnStopWeatherForecast.TabIndex = 95;
+            this.btnStopWeatherForecast.Text = "Parar";
+            this.btnStopWeatherForecast.UseVisualStyleBackColor = true;
+            this.btnStopWeatherForecast.Click += new System.EventHandler(this.btnStopWeatherForecast_Click);
+            // 
+            // btnStartWeatherForecast
+            // 
+            this.btnStartWeatherForecast.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartWeatherForecast.Location = new System.Drawing.Point(445, 274);
+            this.btnStartWeatherForecast.Name = "btnStartWeatherForecast";
+            this.btnStartWeatherForecast.Size = new System.Drawing.Size(73, 30);
+            this.btnStartWeatherForecast.TabIndex = 94;
+            this.btnStartWeatherForecast.Text = "Iniciar";
+            this.btnStartWeatherForecast.UseVisualStyleBackColor = true;
+            this.btnStartWeatherForecast.Click += new System.EventHandler(this.btnStartWeatherForecast_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(524, 283);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(85, 17);
+            this.checkBox1.TabIndex = 93;
+            this.checkBox1.Text = "Auto Ocultar";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // btnWeatherForecastCallWS
+            // 
+            this.btnWeatherForecastCallWS.Location = new System.Drawing.Point(314, 45);
+            this.btnWeatherForecastCallWS.Name = "btnWeatherForecastCallWS";
+            this.btnWeatherForecastCallWS.Size = new System.Drawing.Size(68, 27);
+            this.btnWeatherForecastCallWS.TabIndex = 92;
+            this.btnWeatherForecastCallWS.Text = "Ejecutar";
+            this.btnWeatherForecastCallWS.UseVisualStyleBackColor = true;
+            this.btnWeatherForecastCallWS.Click += new System.EventHandler(this.btnWeatherForecastCallWS_Click);
+            // 
+            // cmbWeatherStates
+            // 
+            this.cmbWeatherStates.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbWeatherStates.FormattingEnabled = true;
+            this.cmbWeatherStates.Location = new System.Drawing.Point(79, 75);
+            this.cmbWeatherStates.Name = "cmbWeatherStates";
+            this.cmbWeatherStates.Size = new System.Drawing.Size(225, 21);
+            this.cmbWeatherStates.TabIndex = 90;
+            this.cmbWeatherStates.SelectedIndexChanged += new System.EventHandler(this.cmbWeatherStates_SelectedIndexChanged);
+            // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.Location = new System.Drawing.Point(6, 78);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(59, 13);
+            this.label85.TabIndex = 91;
+            this.label85.Text = "Provincias:";
+            // 
+            // cmbTemplateWeatherForecast
+            // 
+            this.cmbTemplateWeatherForecast.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTemplateWeatherForecast.FormattingEnabled = true;
+            this.cmbTemplateWeatherForecast.Location = new System.Drawing.Point(66, 22);
+            this.cmbTemplateWeatherForecast.Name = "cmbTemplateWeatherForecast";
+            this.cmbTemplateWeatherForecast.Size = new System.Drawing.Size(238, 21);
+            this.cmbTemplateWeatherForecast.TabIndex = 88;
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Location = new System.Drawing.Point(6, 25);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(54, 13);
+            this.label86.TabIndex = 89;
+            this.label86.Text = "Template:";
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.Location = new System.Drawing.Point(6, 49);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(67, 13);
+            this.label84.TabIndex = 77;
+            this.label84.Text = "Webservice:";
+            // 
+            // txtWeatherForecastWS
+            // 
+            this.txtWeatherForecastWS.Location = new System.Drawing.Point(79, 49);
+            this.txtWeatherForecastWS.Name = "txtWeatherForecastWS";
+            this.txtWeatherForecastWS.Size = new System.Drawing.Size(225, 20);
+            this.txtWeatherForecastWS.TabIndex = 76;
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Location = new System.Drawing.Point(6, 107);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(54, 13);
+            this.label83.TabIndex = 75;
+            this.label83.Text = "Ciudades:";
+            // 
+            // btnLoadCities
+            // 
+            this.btnLoadCities.Location = new System.Drawing.Point(323, 219);
+            this.btnLoadCities.Name = "btnLoadCities";
+            this.btnLoadCities.Size = new System.Drawing.Size(30, 20);
+            this.btnLoadCities.TabIndex = 73;
+            this.btnLoadCities.Text = "C";
+            this.btnLoadCities.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(323, 198);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(30, 20);
+            this.button3.TabIndex = 72;
+            this.button3.Text = "-";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(323, 177);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(30, 20);
+            this.button4.TabIndex = 71;
+            this.button4.Text = "+";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // lvwCities
+            // 
+            this.lvwCities.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader26,
+            this.columnHeader27});
+            this.lvwCities.FullRowSelect = true;
+            this.lvwCities.GridLines = true;
+            this.lvwCities.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvwCities.HideSelection = false;
+            this.lvwCities.Location = new System.Drawing.Point(9, 123);
+            this.lvwCities.MultiSelect = false;
+            this.lvwCities.Name = "lvwCities";
+            this.lvwCities.Size = new System.Drawing.Size(308, 188);
+            this.lvwCities.TabIndex = 74;
+            this.lvwCities.UseCompatibleStateImageBehavior = false;
+            this.lvwCities.View = System.Windows.Forms.View.Details;
+            this.lvwCities.DoubleClick += new System.EventHandler(this.lvwCities_DoubleClick);
+            // 
+            // columnHeader26
+            // 
+            this.columnHeader26.Text = "#";
+            this.columnHeader26.Width = 21;
+            // 
+            // columnHeader27
+            // 
+            this.columnHeader27.Text = "Respuesta";
+            this.columnHeader27.Width = 260;
+            // 
+            // tabPage14
+            // 
+            this.tabPage14.Controls.Add(this.groupBox20);
+            this.tabPage14.Controls.Add(this.groupBox32);
+            this.tabPage14.Location = new System.Drawing.Point(4, 22);
+            this.tabPage14.Name = "tabPage14";
+            this.tabPage14.Size = new System.Drawing.Size(822, 323);
+            this.tabPage14.TabIndex = 13;
+            this.tabPage14.Text = "Twitter";
+            this.tabPage14.UseVisualStyleBackColor = true;
+            // 
+            // groupBox20
+            // 
+            this.groupBox20.Controls.Add(this.lblTwitterId);
+            this.groupBox20.Controls.Add(this.label88);
+            this.groupBox20.Controls.Add(this.label47);
+            this.groupBox20.Controls.Add(this.txtTwitterHashtag);
+            this.groupBox20.Controls.Add(this.label44);
+            this.groupBox20.Controls.Add(this.label45);
+            this.groupBox20.Controls.Add(this.label46);
+            this.groupBox20.Controls.Add(this.txtTwitterMessage);
+            this.groupBox20.Controls.Add(this.txtTwitterFullName);
+            this.groupBox20.Controls.Add(this.txtTwitterUserName);
+            this.groupBox20.Controls.Add(this.nudAutoHideTwitterSeconds);
+            this.groupBox20.Controls.Add(this.chkAutoHideTwitter);
+            this.groupBox20.Controls.Add(this.btnStopTwitter);
+            this.groupBox20.Controls.Add(this.btnStartTwitter);
+            this.groupBox20.Location = new System.Drawing.Point(378, 4);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Size = new System.Drawing.Size(359, 316);
+            this.groupBox20.TabIndex = 11;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "Twitter";
+            // 
+            // lblTwitterId
+            // 
+            this.lblTwitterId.AutoSize = true;
+            this.lblTwitterId.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTwitterId.Location = new System.Drawing.Point(84, 23);
+            this.lblTwitterId.MinimumSize = new System.Drawing.Size(30, 0);
+            this.lblTwitterId.Name = "lblTwitterId";
+            this.lblTwitterId.Size = new System.Drawing.Size(30, 13);
+            this.lblTwitterId.TabIndex = 65;
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Location = new System.Drawing.Point(18, 23);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(21, 13);
+            this.label88.TabIndex = 64;
+            this.label88.Text = "ID:";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(18, 53);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(50, 13);
+            this.label47.TabIndex = 63;
+            this.label47.Text = "Hashtag:";
+            // 
+            // txtTwitterHashtag
+            // 
+            this.txtTwitterHashtag.Location = new System.Drawing.Point(86, 50);
+            this.txtTwitterHashtag.Name = "txtTwitterHashtag";
+            this.txtTwitterHashtag.Size = new System.Drawing.Size(267, 20);
+            this.txtTwitterHashtag.TabIndex = 12;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(18, 139);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(50, 13);
+            this.label44.TabIndex = 61;
+            this.label44.Text = "Mensaje:";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(18, 113);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(52, 13);
+            this.label45.TabIndex = 60;
+            this.label45.Text = "Fullname:";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(18, 83);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(58, 13);
+            this.label46.TabIndex = 59;
+            this.label46.Text = "Username:";
+            // 
+            // txtTwitterMessage
+            // 
+            this.txtTwitterMessage.Location = new System.Drawing.Point(86, 136);
+            this.txtTwitterMessage.MaxLength = 145;
+            this.txtTwitterMessage.Multiline = true;
+            this.txtTwitterMessage.Name = "txtTwitterMessage";
+            this.txtTwitterMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtTwitterMessage.Size = new System.Drawing.Size(267, 93);
+            this.txtTwitterMessage.TabIndex = 15;
+            // 
+            // txtTwitterFullName
+            // 
+            this.txtTwitterFullName.Location = new System.Drawing.Point(86, 110);
+            this.txtTwitterFullName.Name = "txtTwitterFullName";
+            this.txtTwitterFullName.Size = new System.Drawing.Size(267, 20);
+            this.txtTwitterFullName.TabIndex = 14;
+            // 
+            // txtTwitterUserName
+            // 
+            this.txtTwitterUserName.Location = new System.Drawing.Point(86, 80);
+            this.txtTwitterUserName.Name = "txtTwitterUserName";
+            this.txtTwitterUserName.Size = new System.Drawing.Size(267, 20);
+            this.txtTwitterUserName.TabIndex = 13;
+            // 
+            // nudAutoHideTwitterSeconds
+            // 
+            this.nudAutoHideTwitterSeconds.Location = new System.Drawing.Point(211, 270);
+            this.nudAutoHideTwitterSeconds.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.nudAutoHideTwitterSeconds.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudAutoHideTwitterSeconds.Name = "nudAutoHideTwitterSeconds";
+            this.nudAutoHideTwitterSeconds.Size = new System.Drawing.Size(40, 20);
+            this.nudAutoHideTwitterSeconds.TabIndex = 18;
+            this.nudAutoHideTwitterSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudAutoHideTwitterSeconds.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // chkAutoHideTwitter
+            // 
+            this.chkAutoHideTwitter.AutoSize = true;
+            this.chkAutoHideTwitter.Location = new System.Drawing.Point(120, 270);
+            this.chkAutoHideTwitter.Name = "chkAutoHideTwitter";
+            this.chkAutoHideTwitter.Size = new System.Drawing.Size(85, 17);
+            this.chkAutoHideTwitter.TabIndex = 17;
+            this.chkAutoHideTwitter.Text = "Auto Ocultar";
+            this.chkAutoHideTwitter.UseVisualStyleBackColor = true;
+            // 
+            // btnStopTwitter
+            // 
+            this.btnStopTwitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopTwitter.Location = new System.Drawing.Point(257, 263);
+            this.btnStopTwitter.Name = "btnStopTwitter";
+            this.btnStopTwitter.Size = new System.Drawing.Size(76, 31);
+            this.btnStopTwitter.TabIndex = 19;
+            this.btnStopTwitter.Text = "Parar";
+            this.btnStopTwitter.UseVisualStyleBackColor = true;
+            this.btnStopTwitter.Click += new System.EventHandler(this.btnStopTwitter_Click);
+            // 
+            // btnStartTwitter
+            // 
+            this.btnStartTwitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartTwitter.Location = new System.Drawing.Point(38, 262);
+            this.btnStartTwitter.Name = "btnStartTwitter";
+            this.btnStartTwitter.Size = new System.Drawing.Size(76, 31);
+            this.btnStartTwitter.TabIndex = 16;
+            this.btnStartTwitter.Text = "Iniciar";
+            this.btnStartTwitter.UseVisualStyleBackColor = true;
+            this.btnStartTwitter.Click += new System.EventHandler(this.btnStartTwitter_Click);
+            // 
+            // groupBox32
+            // 
+            this.groupBox32.Controls.Add(this.btnTwitterWSCall);
+            this.groupBox32.Controls.Add(this.label92);
+            this.groupBox32.Controls.Add(this.txtTwitterWS);
+            this.groupBox32.Controls.Add(this.label93);
+            this.groupBox32.Controls.Add(this.button16);
+            this.groupBox32.Controls.Add(this.button17);
+            this.groupBox32.Controls.Add(this.button18);
+            this.groupBox32.Controls.Add(this.lvwTwitterList);
+            this.groupBox32.Location = new System.Drawing.Point(4, 4);
+            this.groupBox32.Name = "groupBox32";
+            this.groupBox32.Size = new System.Drawing.Size(364, 316);
+            this.groupBox32.TabIndex = 7;
+            this.groupBox32.TabStop = false;
+            this.groupBox32.Text = "Twitter";
+            // 
+            // btnTwitterWSCall
+            // 
+            this.btnTwitterWSCall.Location = new System.Drawing.Point(279, 12);
+            this.btnTwitterWSCall.Name = "btnTwitterWSCall";
+            this.btnTwitterWSCall.Size = new System.Drawing.Size(74, 27);
+            this.btnTwitterWSCall.TabIndex = 109;
+            this.btnTwitterWSCall.Text = "Ejecutar";
+            this.btnTwitterWSCall.UseVisualStyleBackColor = true;
+            this.btnTwitterWSCall.Click += new System.EventHandler(this.btnTwitterWSCall_Click);
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.Location = new System.Drawing.Point(6, 16);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(67, 13);
+            this.label92.TabIndex = 107;
+            this.label92.Text = "Webservice:";
+            // 
+            // txtTwitterWS
+            // 
+            this.txtTwitterWS.Location = new System.Drawing.Point(79, 16);
+            this.txtTwitterWS.Name = "txtTwitterWS";
+            this.txtTwitterWS.Size = new System.Drawing.Size(194, 20);
+            this.txtTwitterWS.TabIndex = 106;
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.Location = new System.Drawing.Point(6, 53);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(45, 13);
+            this.label93.TabIndex = 105;
+            this.label93.Text = "Tweets:";
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(323, 127);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(30, 19);
+            this.button16.TabIndex = 103;
+            this.button16.Text = "C";
+            this.button16.UseVisualStyleBackColor = true;
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(323, 106);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(30, 19);
+            this.button17.TabIndex = 102;
+            this.button17.Text = "-";
+            this.button17.UseVisualStyleBackColor = true;
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(323, 85);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(30, 19);
+            this.button18.TabIndex = 101;
+            this.button18.Text = "+";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
+            // lvwTwitterList
+            // 
+            this.lvwTwitterList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader33,
+            this.columnHeader34,
+            this.columnHeader35});
+            this.lvwTwitterList.FullRowSelect = true;
+            this.lvwTwitterList.GridLines = true;
+            this.lvwTwitterList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvwTwitterList.Location = new System.Drawing.Point(9, 70);
+            this.lvwTwitterList.MultiSelect = false;
+            this.lvwTwitterList.Name = "lvwTwitterList";
+            this.lvwTwitterList.Size = new System.Drawing.Size(308, 240);
+            this.lvwTwitterList.TabIndex = 104;
+            this.lvwTwitterList.UseCompatibleStateImageBehavior = false;
+            this.lvwTwitterList.View = System.Windows.Forms.View.Details;
+            this.lvwTwitterList.DoubleClick += new System.EventHandler(this.lvwTwitterList_DoubleClick);
+            // 
+            // columnHeader33
+            // 
+            this.columnHeader33.Text = "#";
+            this.columnHeader33.Width = 21;
+            // 
+            // columnHeader34
+            // 
+            this.columnHeader34.Text = "Hashtag";
+            this.columnHeader34.Width = 120;
+            // 
+            // columnHeader35
+            // 
+            this.columnHeader35.Text = "User";
+            this.columnHeader35.Width = 120;
+            // 
+            // tabPage15
+            // 
+            this.tabPage15.Controls.Add(this.groupBox34);
+            this.tabPage15.Controls.Add(this.groupBox33);
+            this.tabPage15.Controls.Add(this.groupBox31);
+            this.tabPage15.Location = new System.Drawing.Point(4, 22);
+            this.tabPage15.Name = "tabPage15";
+            this.tabPage15.Size = new System.Drawing.Size(822, 323);
+            this.tabPage15.TabIndex = 14;
+            this.tabPage15.Text = "Gameplay";
+            this.tabPage15.UseVisualStyleBackColor = true;
+            // 
+            // groupBox34
+            // 
+            this.groupBox34.Controls.Add(this.cmbTemplateGameplay);
+            this.groupBox34.Controls.Add(this.label89);
+            this.groupBox34.Controls.Add(this.btnStopGameplay);
+            this.groupBox34.Controls.Add(this.btnStartGameplay);
+            this.groupBox34.Controls.Add(this.checkBox2);
+            this.groupBox34.Location = new System.Drawing.Point(3, 256);
+            this.groupBox34.Name = "groupBox34";
+            this.groupBox34.Size = new System.Drawing.Size(733, 64);
+            this.groupBox34.TabIndex = 2;
+            this.groupBox34.TabStop = false;
+            // 
+            // cmbTemplateGameplay
+            // 
+            this.cmbTemplateGameplay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTemplateGameplay.FormattingEnabled = true;
+            this.cmbTemplateGameplay.Location = new System.Drawing.Point(71, 25);
+            this.cmbTemplateGameplay.Name = "cmbTemplateGameplay";
+            this.cmbTemplateGameplay.Size = new System.Drawing.Size(238, 21);
+            this.cmbTemplateGameplay.TabIndex = 102;
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Location = new System.Drawing.Point(11, 28);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(54, 13);
+            this.label89.TabIndex = 103;
+            this.label89.Text = "Template:";
+            // 
+            // btnStopGameplay
+            // 
+            this.btnStopGameplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopGameplay.Location = new System.Drawing.Point(654, 19);
+            this.btnStopGameplay.Name = "btnStopGameplay";
+            this.btnStopGameplay.Size = new System.Drawing.Size(73, 30);
+            this.btnStopGameplay.TabIndex = 101;
+            this.btnStopGameplay.Text = "Parar";
+            this.btnStopGameplay.UseVisualStyleBackColor = true;
+            // 
+            // btnStartGameplay
+            // 
+            this.btnStartGameplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartGameplay.Location = new System.Drawing.Point(555, 19);
+            this.btnStartGameplay.Name = "btnStartGameplay";
+            this.btnStartGameplay.Size = new System.Drawing.Size(73, 30);
+            this.btnStartGameplay.TabIndex = 100;
+            this.btnStartGameplay.Text = "Iniciar";
+            this.btnStartGameplay.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(430, 27);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(85, 17);
+            this.checkBox2.TabIndex = 99;
+            this.checkBox2.Text = "Auto Ocultar";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox33
+            // 
+            this.groupBox33.Controls.Add(this.chkGameplayAutoHideDrawings);
+            this.groupBox33.Controls.Add(this.btnGameplayStop);
+            this.groupBox33.Controls.Add(this.btnGameplayPlay);
+            this.groupBox33.Controls.Add(this.button15);
+            this.groupBox33.Controls.Add(this.button19);
+            this.groupBox33.Controls.Add(this.button20);
+            this.groupBox33.Controls.Add(this.button21);
+            this.groupBox33.Controls.Add(this.button22);
+            this.groupBox33.Controls.Add(this.lvwGameplayPlaylist);
+            this.groupBox33.Location = new System.Drawing.Point(428, 4);
+            this.groupBox33.Name = "groupBox33";
+            this.groupBox33.Size = new System.Drawing.Size(309, 246);
+            this.groupBox33.TabIndex = 1;
+            this.groupBox33.TabStop = false;
+            this.groupBox33.Text = "Lista Reproduccion";
+            // 
+            // chkGameplayAutoHideDrawings
+            // 
+            this.chkGameplayAutoHideDrawings.AutoSize = true;
+            this.chkGameplayAutoHideDrawings.Location = new System.Drawing.Point(175, 219);
+            this.chkGameplayAutoHideDrawings.Name = "chkGameplayAutoHideDrawings";
+            this.chkGameplayAutoHideDrawings.Size = new System.Drawing.Size(123, 17);
+            this.chkGameplayAutoHideDrawings.TabIndex = 100;
+            this.chkGameplayAutoHideDrawings.Text = "Auto Ocultar Dibujos";
+            this.chkGameplayAutoHideDrawings.UseVisualStyleBackColor = true;
+            // 
+            // btnGameplayStop
+            // 
+            this.btnGameplayStop.Location = new System.Drawing.Point(86, 213);
+            this.btnGameplayStop.Name = "btnGameplayStop";
+            this.btnGameplayStop.Size = new System.Drawing.Size(74, 27);
+            this.btnGameplayStop.TabIndex = 31;
+            this.btnGameplayStop.Text = "STOP";
+            this.btnGameplayStop.UseVisualStyleBackColor = true;
+            this.btnGameplayStop.Click += new System.EventHandler(this.btnGameplayStop_Click);
+            // 
+            // btnGameplayPlay
+            // 
+            this.btnGameplayPlay.Location = new System.Drawing.Point(6, 213);
+            this.btnGameplayPlay.Name = "btnGameplayPlay";
+            this.btnGameplayPlay.Size = new System.Drawing.Size(74, 27);
+            this.btnGameplayPlay.TabIndex = 30;
+            this.btnGameplayPlay.Text = "PLAY";
+            this.btnGameplayPlay.UseVisualStyleBackColor = true;
+            this.btnGameplayPlay.Click += new System.EventHandler(this.btnGameplayPlay_Click);
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(273, 121);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(30, 19);
+            this.button15.TabIndex = 29;
+            this.button15.Text = "C";
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(273, 100);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(30, 19);
+            this.button19.TabIndex = 28;
+            this.button19.Text = "L";
+            this.button19.UseVisualStyleBackColor = true;
+            // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(273, 79);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(30, 19);
+            this.button20.TabIndex = 27;
+            this.button20.Text = "M";
+            this.button20.UseVisualStyleBackColor = true;
+            // 
+            // button21
+            // 
+            this.button21.Location = new System.Drawing.Point(273, 58);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(30, 19);
+            this.button21.TabIndex = 26;
+            this.button21.Text = "-";
+            this.button21.UseVisualStyleBackColor = true;
+            // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(273, 37);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(30, 19);
+            this.button22.TabIndex = 25;
+            this.button22.Text = "+";
+            this.button22.UseVisualStyleBackColor = true;
+            // 
+            // lvwGameplayPlaylist
+            // 
+            this.lvwGameplayPlaylist.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader36,
+            this.columnHeader37});
+            this.lvwGameplayPlaylist.FullRowSelect = true;
+            this.lvwGameplayPlaylist.GridLines = true;
+            this.lvwGameplayPlaylist.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvwGameplayPlaylist.HideSelection = false;
+            this.lvwGameplayPlaylist.Location = new System.Drawing.Point(6, 18);
+            this.lvwGameplayPlaylist.MultiSelect = false;
+            this.lvwGameplayPlaylist.Name = "lvwGameplayPlaylist";
+            this.lvwGameplayPlaylist.Size = new System.Drawing.Size(261, 158);
+            this.lvwGameplayPlaylist.TabIndex = 24;
+            this.lvwGameplayPlaylist.UseCompatibleStateImageBehavior = false;
+            this.lvwGameplayPlaylist.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader36
+            // 
+            this.columnHeader36.Text = "#";
+            this.columnHeader36.Width = 30;
+            // 
+            // columnHeader37
+            // 
+            this.columnHeader37.Text = "Nombre";
+            this.columnHeader37.Width = 208;
+            // 
+            // groupBox31
+            // 
+            this.groupBox31.Controls.Add(this.toolStripContainer1);
+            this.groupBox31.Location = new System.Drawing.Point(4, 4);
+            this.groupBox31.Name = "groupBox31";
+            this.groupBox31.Size = new System.Drawing.Size(418, 246);
+            this.groupBox31.TabIndex = 0;
+            this.groupBox31.TabStop = false;
+            this.groupBox31.Text = "Pizarra";
+            // 
+            // toolStripContainer1
+            // 
+            // 
+            // toolStripContainer1.ContentPanel
+            // 
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.picGameplayWhiteboard);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(388, 210);
+            this.toolStripContainer1.Location = new System.Drawing.Point(6, 11);
+            this.toolStripContainer1.Name = "toolStripContainer1";
+            // 
+            // toolStripContainer1.RightToolStripPanel
+            // 
+            this.toolStripContainer1.RightToolStripPanel.Controls.Add(this.toolStrip1);
+            this.toolStripContainer1.Size = new System.Drawing.Size(412, 235);
+            this.toolStripContainer1.TabIndex = 0;
+            this.toolStripContainer1.Text = "toolStripContainer1";
+            // 
+            // picGameplayWhiteboard
+            // 
+            this.picGameplayWhiteboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picGameplayWhiteboard.Location = new System.Drawing.Point(0, 0);
+            this.picGameplayWhiteboard.Name = "picGameplayWhiteboard";
+            this.picGameplayWhiteboard.Size = new System.Drawing.Size(385, 207);
+            this.picGameplayWhiteboard.TabIndex = 0;
+            this.picGameplayWhiteboard.TabStop = false;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton3,
+            this.toolStripButton4,
+            this.toolStripButton5,
+            this.toolStripButton6,
+            this.toolStripSeparator4,
+            this.toolStripButton7,
+            this.toolStripButton8});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 3);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(24, 201);
+            this.toolStrip1.TabIndex = 0;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.CheckOnClick = true;
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(22, 20);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(22, 20);
+            this.toolStripButton2.Text = "toolStripButton2";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(22, 20);
+            this.toolStripButton3.Text = "toolStripButton3";
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(22, 20);
+            this.toolStripButton4.Text = "toolStripButton4";
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(22, 20);
+            this.toolStripButton5.Text = "toolStripButton5";
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(22, 20);
+            this.toolStripButton6.Text = "toolStripButton6";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(22, 6);
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(22, 20);
+            this.toolStripButton7.Text = "toolStripButton7";
+            // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.Size = new System.Drawing.Size(22, 20);
+            this.toolStripButton8.Text = "toolStripButton8";
+            // 
+            // tabPage16
+            // 
+            this.tabPage16.Location = new System.Drawing.Point(4, 22);
+            this.tabPage16.Name = "tabPage16";
+            this.tabPage16.Size = new System.Drawing.Size(822, 323);
+            this.tabPage16.TabIndex = 15;
+            this.tabPage16.Text = "Branding";
+            this.tabPage16.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtEventDescription);
+            this.groupBox2.Controls.Add(this.dtpEventDate);
+            this.groupBox2.Controls.Add(this.txtEventName);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Location = new System.Drawing.Point(13, 28);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(825, 92);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Evento";
+            // 
+            // txtEventDescription
+            // 
+            this.txtEventDescription.Location = new System.Drawing.Point(87, 43);
+            this.txtEventDescription.Multiline = true;
+            this.txtEventDescription.Name = "txtEventDescription";
+            this.txtEventDescription.Size = new System.Drawing.Size(376, 42);
+            this.txtEventDescription.TabIndex = 2;
+            // 
+            // dtpEventDate
+            // 
+            this.dtpEventDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpEventDate.Location = new System.Drawing.Point(704, 23);
+            this.dtpEventDate.Name = "dtpEventDate";
+            this.dtpEventDate.Size = new System.Drawing.Size(105, 20);
+            this.dtpEventDate.TabIndex = 1;
+            // 
+            // txtEventName
+            // 
+            this.txtEventName.Location = new System.Drawing.Point(87, 20);
+            this.txtEventName.Name = "txtEventName";
+            this.txtEventName.Size = new System.Drawing.Size(376, 20);
+            this.txtEventName.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(17, 43);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Descripcion:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(657, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Fecha:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Nombre:";
+            // 
+            // tmrIntro
+            // 
+            this.tmrIntro.Tick += new System.EventHandler(this.tmrIntro_Tick);
+            // 
+            // tmrLT
+            // 
+            this.tmrLT.Tick += new System.EventHandler(this.tmrLT_Tick);
+            // 
+            // tmrTeam1
+            // 
+            this.tmrTeam1.Tick += new System.EventHandler(this.tmrTeam1_Tick);
+            // 
+            // tmrTeam2
+            // 
+            this.tmrTeam2.Tick += new System.EventHandler(this.tmrTeam2_Tick);
+            // 
+            // tmrResult
+            // 
+            this.tmrResult.Tick += new System.EventHandler(this.tmrResult_Tick);
+            // 
+            // tmrTeams
+            // 
+            this.tmrTeams.Tick += new System.EventHandler(this.tmrTeams_Tick);
+            // 
+            // tmrInBetweenTeams
+            // 
+            this.tmrInBetweenTeams.Tick += new System.EventHandler(this.tmrInBetweenTeams_Tick);
+            // 
+            // stsStatus
+            // 
+            this.stsStatus.Location = new System.Drawing.Point(0, 480);
+            this.stsStatus.Name = "stsStatus";
+            this.stsStatus.Size = new System.Drawing.Size(850, 22);
+            this.stsStatus.SizingGrip = false;
+            this.stsStatus.TabIndex = 3;
+            this.stsStatus.Text = "statusStrip1";
+            // 
+            // tmrPositions
+            // 
+            this.tmrPositions.Tick += new System.EventHandler(this.tmrPositions_Tick);
+            // 
+            // tmrTwitter
+            // 
+            this.tmrTwitter.Tick += new System.EventHandler(this.tmrTwitter_Tick);
+            // 
+            // tmrVolleyResult
+            // 
+            this.tmrVolleyResult.Tick += new System.EventHandler(this.tmrVolleyResult_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -6183,6 +6188,48 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.tabSports.ResumeLayout(false);
+            this.tabPage17.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideIntroSeconds)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.tabPage18.ResumeLayout(false);
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSeparationTeamsSeconds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTeamsShowSeconds)).EndInit();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHideGuestTeamSeconds)).EndInit();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHideHomeTeamSeconds)).EndInit();
+            this.tabPage19.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideResultSeconds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudClockLengthSeconds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudClockLengthMinutes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExclutionLengthSeconds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudExclutionLengthMinutes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudClockSeconds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudClockMinutes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGuestTeamScore)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHomeTeamScore)).EndInit();
+            this.tabPage20.ResumeLayout(false);
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideLTSeconds)).EndInit();
+            this.tabPage21.ResumeLayout(false);
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHidePositionsSeconds)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
@@ -6198,88 +6245,6 @@
             this.groupBox17.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkImageScrollingSpeed)).EndInit();
             this.tabPage9.ResumeLayout(false);
-            this.tabPage10.ResumeLayout(false);
-            this.groupBox26.ResumeLayout(false);
-            this.groupBox26.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoHeight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoPosY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoWidth)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoPosX)).EndInit();
-            this.groupBox24.ResumeLayout(false);
-            this.groupBox24.PerformLayout();
-            this.groupBox23.ResumeLayout(false);
-            this.groupBox23.PerformLayout();
-            this.tabPage11.ResumeLayout(false);
-            this.tabPage12.ResumeLayout(false);
-            this.tabPage13.ResumeLayout(false);
-            this.groupBox30.ResumeLayout(false);
-            this.groupBox30.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudWeatherForecastPauseSeconds)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudWeatherForecastStartDelaySeconds)).EndInit();
-            this.tabPage14.ResumeLayout(false);
-            this.groupBox20.ResumeLayout(false);
-            this.groupBox20.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideTwitterSeconds)).EndInit();
-            this.groupBox32.ResumeLayout(false);
-            this.groupBox32.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.tabPage15.ResumeLayout(false);
-            this.groupBox31.ResumeLayout(false);
-            this.groupBox33.ResumeLayout(false);
-            this.groupBox33.PerformLayout();
-            this.groupBox34.ResumeLayout(false);
-            this.groupBox34.PerformLayout();
-            this.toolStripContainer1.ContentPanel.ResumeLayout(false);
-            this.toolStripContainer1.RightToolStripPanel.ResumeLayout(false);
-            this.toolStripContainer1.RightToolStripPanel.PerformLayout();
-            this.toolStripContainer1.ResumeLayout(false);
-            this.toolStripContainer1.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picGameplayWhiteboard)).EndInit();
-            this.tabSports.ResumeLayout(false);
-            this.tabPage17.ResumeLayout(false);
-            this.tabPage18.ResumeLayout(false);
-            this.tabPage19.ResumeLayout(false);
-            this.tabPage20.ResumeLayout(false);
-            this.tabPage21.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideIntroSeconds)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox19.ResumeLayout(false);
-            this.groupBox19.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSeparationTeamsSeconds)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudTeamsShowSeconds)).EndInit();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudHideGuestTeamSeconds)).EndInit();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudHideHomeTeamSeconds)).EndInit();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideResultSeconds)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudClockLengthSeconds)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudClockLengthMinutes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudExclutionLengthSeconds)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudExclutionLengthMinutes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudClockSeconds)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudClockMinutes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudGuestTeamScore)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudHomeTeamScore)).EndInit();
-            this.groupBox13.ResumeLayout(false);
-            this.groupBox13.PerformLayout();
-            this.groupBox14.ResumeLayout(false);
-            this.groupBox14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideLTSeconds)).EndInit();
-            this.groupBox18.ResumeLayout(false);
-            this.groupBox18.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHidePositionsSeconds)).EndInit();
             this.tabVolleyball.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.groupBox22.ResumeLayout(false);
@@ -6305,19 +6270,59 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome1SetPoints)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest5SetPoints)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome5SetPoints)).EndInit();
+            this.tabPage10.ResumeLayout(false);
+            this.groupBox26.ResumeLayout(false);
+            this.groupBox26.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoHeight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoPosY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoWidth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDynamicLogoPosX)).EndInit();
+            this.groupBox24.ResumeLayout(false);
+            this.groupBox24.PerformLayout();
+            this.groupBox23.ResumeLayout(false);
+            this.groupBox23.PerformLayout();
+            this.tabPage11.ResumeLayout(false);
             this.tabGameshow.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
-            this.tabPage8.ResumeLayout(false);
             this.groupBox27.ResumeLayout(false);
             this.groupBox27.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudGameshowRefreshMiliseconds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudGameshowCounterSeconds)).EndInit();
+            this.tabPage8.ResumeLayout(false);
             this.groupBox25.ResumeLayout(false);
             this.groupBox25.PerformLayout();
+            this.tabPage12.ResumeLayout(false);
             this.tabElections.ResumeLayout(false);
             this.tabPage22.ResumeLayout(false);
             this.groupBox29.ResumeLayout(false);
             this.groupBox29.PerformLayout();
+            this.tabPage13.ResumeLayout(false);
+            this.groupBox30.ResumeLayout(false);
+            this.groupBox30.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudWeatherForecastPauseSeconds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudWeatherForecastStartDelaySeconds)).EndInit();
+            this.tabPage14.ResumeLayout(false);
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideTwitterSeconds)).EndInit();
+            this.groupBox32.ResumeLayout(false);
+            this.groupBox32.PerformLayout();
+            this.tabPage15.ResumeLayout(false);
+            this.groupBox34.ResumeLayout(false);
+            this.groupBox34.PerformLayout();
+            this.groupBox33.ResumeLayout(false);
+            this.groupBox33.PerformLayout();
+            this.groupBox31.ResumeLayout(false);
+            this.toolStripContainer1.ContentPanel.ResumeLayout(false);
+            this.toolStripContainer1.RightToolStripPanel.ResumeLayout(false);
+            this.toolStripContainer1.RightToolStripPanel.PerformLayout();
+            this.toolStripContainer1.ResumeLayout(false);
+            this.toolStripContainer1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picGameplayWhiteboard)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

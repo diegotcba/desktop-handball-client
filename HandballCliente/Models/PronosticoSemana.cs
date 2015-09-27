@@ -9,6 +9,7 @@ namespace HandballCliente.Models
     public class PronosticoSemana
     {
         public string diaSemana { get; set; }
+        public string diaMes { get; set; }
         public List<PronosticoDiario> pronostico { get; set; }
     }
 }

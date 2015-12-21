@@ -3,8 +3,11 @@ C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\bin\Debug\HandballClien
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\bin\Debug\HandballCliente.application
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\bin\Debug\HandballCliente.exe
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\bin\Debug\HandballCliente.pdb
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\bin\Debug\RestSharp.dll
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\bin\Debug\RestSharp.xml
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballCliente.ConfigLayers.resources
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballCliente.ConfigRecording.resources
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballCliente.Pregunta.resources
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballCliente.Form1.resources
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballCliente.Jugador.resources
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballCliente.Posicion.resources
@@ -14,6 +17,4 @@ C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballClien
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballCliente.application
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballCliente.exe
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballCliente.pdb
-C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\bin\Debug\RestSharp.dll
-C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\bin\Debug\RestSharp.xml
-C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballCliente.Pregunta.resources
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Debug\HandballCliente.csprojResolveAssemblyReference.cache

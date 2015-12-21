@@ -85,16 +85,17 @@
   <ItemGroup>
     <Compile Include="Models\Answer.cs" />
     <Compile Include="CasparCG\CasparCG.cs" />
-    <Compile Include="ConfigLayers.cs">
+    <Compile Include="Models\DynamicInfo.cs" />
+    <Compile Include="Views\ConfigLayers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConfigLayers.Designer.cs">
+    <Compile Include="Views\ConfigLayers.Designer.cs">
       <DependentUpon>ConfigLayers.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConfigRecording.cs">
+    <Compile Include="Views\ConfigRecording.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConfigRecording.Designer.cs">
+    <Compile Include="Views\ConfigRecording.Designer.cs">
       <DependentUpon>ConfigRecording.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\City.cs" />
@@ -105,10 +106,10 @@
     <Compile Include="Models\Provincia.cs" />
     <Compile Include="Models\Tweets.cs" />
     <Compile Include="Models\Utils.cs" />
-    <Compile Include="Pregunta.cs">
+    <Compile Include="Views\Pregunta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pregunta.Designer.cs">
+    <Compile Include="Views\Pregunta.Designer.cs">
       <DependentUpon>Pregunta.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -118,17 +119,17 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\HandballMatch.cs" />
-    <Compile Include="Jugador.cs">
+    <Compile Include="Views\Jugador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Jugador.Designer.cs">
+    <Compile Include="Views\Jugador.Designer.cs">
       <DependentUpon>Jugador.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Player.cs" />
-    <Compile Include="Posicion.cs">
+    <Compile Include="Views\Posicion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Posicion.Designer.cs">
+    <Compile Include="Views\Posicion.Designer.cs">
       <DependentUpon>Posicion.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Position.cs" />
@@ -139,22 +140,22 @@
     <Compile Include="CasparCG\Template.cs" />
     <Compile Include="CasparCG\TemplateField.cs" />
     <Compile Include="Models\Question.cs" />
-    <EmbeddedResource Include="ConfigLayers.resx">
+    <EmbeddedResource Include="Views\ConfigLayers.resx">
       <DependentUpon>ConfigLayers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConfigRecording.resx">
+    <EmbeddedResource Include="Views\ConfigRecording.resx">
       <DependentUpon>ConfigRecording.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pregunta.resx">
+    <EmbeddedResource Include="Views\Pregunta.resx">
       <DependentUpon>Pregunta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Jugador.resx">
+    <EmbeddedResource Include="Views\Jugador.resx">
       <DependentUpon>Jugador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Posicion.resx">
+    <EmbeddedResource Include="Views\Posicion.resx">
       <DependentUpon>Posicion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

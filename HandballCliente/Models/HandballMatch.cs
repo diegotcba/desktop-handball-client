@@ -124,6 +124,9 @@ namespace HandballCliente
         //TWITTER
         public List<Tweets> tweets { get; set; }
 
+        //DYNAMIC INFO
+        public List<DynamicInfo> dynamicInfo { get; set; }
+
         private HandballMatch()
         {
             NewMatch();

@@ -8,11 +8,12 @@ namespace HandballCliente.Models
 {
     public class Tweets
     {
-        public int id { get; set; }
+        public long id { get; set; }
         public string hashtag { get; set; }
-        public string username { get; set; }
-        public string fullname { get; set; }
-        public string mensaje { get; set; }
-        public string avatar { get; set; }
+        public string userName { get; set; }
+        public string fullName { get; set; }
+        public string message { get; set; }
+        public string urlAvatar { get; set; }
+        public bool reTweet { get; set; }
     }
 }

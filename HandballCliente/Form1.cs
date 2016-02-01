@@ -36,7 +36,7 @@ namespace HandballCliente
         private Color ColorFondo;
         private String fileName = "";
         private Color ColorRecording;
-
+        private bool gameplayMouseDown;
 
         private const int layerPresentation = 5;
         private const int layerTeams = 10;
@@ -51,6 +51,7 @@ namespace HandballCliente
         private const int layerDynamicInfo = 50;
         private const int layerTwitterCounter = 55;
 
+        private const int layerBackground = 0;
         private const int layerVideo = 1;
         private const int layerLogo = 99;
         private const int layerImageScrolling = 90;
@@ -65,6 +66,7 @@ namespace HandballCliente
             this.KeyPreview = true;
             this.NewMatch();
             ColorFondo = stsStatus.BackColor;
+            picSolidColor.BackColor = Color.Empty;
         }
 
         private void NewMatch()
@@ -72,7 +74,7 @@ namespace HandballCliente
             Limpiar();
             HandballMatch.getInstance().NewMatch();
             fileName = "";
-            this.Text = String.Format("Handball Cliente - [{0}]", "sin titulo");
+            this.Text = String.Format("nViVo CG Client - [{0}]", "sin titulo");
             setDefaults();
         }
 
@@ -151,6 +153,8 @@ namespace HandballCliente
 
             fillCombosTeamTextStyle();
             fillComboWebcam();
+            fillListSports();
+            setSportsTabPositions();
 
             radVolleyHomeServe.Checked = true;
             radVolleyHomeServe.Tag = 1;
@@ -258,6 +262,59 @@ namespace HandballCliente
             cmbWebcamResolution.Items.Add("1280x720");
         }
 
+        private void fillListSports()
+        {
+            lstSports.Items.Clear();
+            lstSports.Items.Add("General");
+            lstSports.Items.Add("Volleyball");
+            lstSports.Items.Add("Boxeo");
+            lstSports.Items.Add("Basket");
+        }
+
+        private void setSportsTabPositions()
+        {
+            setTabPosition(tabSports, 161, 0);
+            setTabPosition(tabVolleyball, 161, 0);
+            showSportTab(tabSports);
+            lstSports.SelectedIndex = -1;
+            hideAllSportTabs();
+
+        }
+
+        private void selectSportTab()
+        {
+            switch (lstSports.SelectedIndex)
+            {
+                case 0: 
+                    showSportTab(tabSports);
+                    break;
+                case 1: 
+                    showSportTab(tabVolleyball);
+                    break;
+                default:
+                    hideAllSportTabs();
+                    break;
+            }
+        }
+
+        private void setTabPosition(TabControl tab, int left, int top)
+        {
+            tab.Left = left;
+            tab.Top = top;
+        }
+
+        private void showSportTab(System.Windows.Forms.TabControl tab)
+        {
+            hideAllSportTabs();
+            tab.Visible = true;
+        }
+
+        private void hideAllSportTabs()
+        {
+            tabSports.Visible = false;
+            tabVolleyball.Visible = false;
+        }
+
         private void setTopMost(bool stateTopMost)
         {
             SetWindowPos(this.Handle, (stateTopMost) ? HWND_TOPMOST : HWND_NOTOPMOST, 0, 0, 0, 0, TOPMOST_FLAGS);
@@ -276,6 +333,7 @@ namespace HandballCliente
                     getServerImageFiles();
                     getServerVideoFiles();
                     getServerAudioFiles();
+                    getGameplayVideoFiles();
                 }
                 else
                 {
@@ -301,6 +359,12 @@ namespace HandballCliente
             if (casparServer.Connected)
             {
                 casparServer.Execute("CLEAR 1");
+                if (chkWithSolidColor.Checked && !picSolidColor.BackColor.IsEmpty)
+                {
+                    Color color = picSolidColor.BackColor;
+                    String htmlColor = String.Format("#{0:x2}{1:x2}{2:x2}", color.R, color.G, color.B);
+                    casparServer.Execute(String.Format("PLAY 1-{2} {0}{1}{0}", (char)0x22, htmlColor, layerBackground.ToString()));
+                }
             }
         }
 
@@ -327,6 +391,8 @@ namespace HandballCliente
                 fillCombosTemplate(cmbTemplateDynamicInfo, templates);
                 fillCombosTemplate(cmbTemplateAnimatedLogo, templates);
                 fillCombosTemplate(cmbTemplateDynamicNewsTicker, templates);
+                fillCombosTemplate(cmbTemplateGameplay, templates);
+                fillCombosTemplate(cmbTemplateTwitterPoll, templates);
             }
         }
 
@@ -366,6 +432,17 @@ namespace HandballCliente
             {
                 List<String> medias = casparServer.GetMediaClipsNames(CasparCG.MediaTypes.Audio);
                 fillCombosTemplate(cmbAudioFiles, medias);
+            }
+        }
+
+        private void getGameplayVideoFiles()
+        {
+            if (casparServer.Connected)
+            {
+                List<String> medias = casparServer.GetMediaClipsNames(CasparCG.MediaTypes.Movie);
+                List<String> playlist = medias.FindAll(m => m.StartsWith("GAMEPLAY/"));
+                lvwGameplayPlaylist.Items.Clear();
+                playlist.ForEach(i => lvwGameplayPlaylist.Items.Add(i));
             }
         }
 
@@ -624,35 +701,6 @@ namespace HandballCliente
             }
         }
 
-        private void showGameplay()
-        {
-
-        }
-
-        private void hideGameplay()
-        {
-
-        }
-
-        private void playGameplay()
-        {
-            if (casparServer.Connected)
-            {
-                casparServer.Execute(String.Format("PLAY 1-{0} AMB LENGTH 150", layerVideo.ToString()));
-                casparServer.Execute(String.Format("VERSION", layerVideo.ToString()));
-                casparServer.Execute(String.Format("LOADBG 1-{0} AMB LOOP SEEK 150 LENGTH 1", layerVideo.ToString()));
-            }
-        }
-
-        private void stopGameplay()
-        {
-            if (casparServer.Connected)
-            {
-                casparServer.Execute(String.Format("PLAY 1-{0} AMB SEEK 151", layerVideo.ToString()));
-                //casparServer.Execute(String.Format("PLAY 1-{0}", layerVideo.ToString()));
-            }
-        }
-
         private void showCountdown()
         {
             if (casparServer.Connected)
@@ -836,8 +884,11 @@ namespace HandballCliente
                     Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
                     Uri logo2Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
 
-                    templateIntro.Fields.Add(new TemplateField("team1Name", txtHomeTeamName.Text.Split(',')[0].ToUpper() + "\n" + txtHomeTeamName.Text.Split(',')[1]));
-                    templateIntro.Fields.Add(new TemplateField("team2Name", txtGuestTeamName.Text.Split(',')[0].ToUpper() + "\n" + txtGuestTeamName.Text.Split(',')[1]));
+                    string t1 = (txtHomeTeamName.Text.Contains(",") ? txtHomeTeamName.Text.Split(',')[0].ToUpper() + "\n" + txtHomeTeamName.Text.Split(',')[1] : txtHomeTeamName.Text);
+                    string t2 = (txtGuestTeamName.Text.Contains(",") ? txtGuestTeamName.Text.Split(',')[0].ToUpper() + "\n" + txtGuestTeamName.Text.Split(',')[1] : txtGuestTeamName.Text);
+
+                    templateIntro.Fields.Add(new TemplateField("team1Name", t1));
+                    templateIntro.Fields.Add(new TemplateField("team2Name", t2));
                     templateIntro.Fields.Add(new TemplateField("infoLeague", txtEventLeague.Text));
                     templateIntro.Fields.Add(new TemplateField("infoDate", txtIntroTitle.Text));
                     templateIntro.Fields.Add(new TemplateField("infoLocation", txtEventLocation.Text));
@@ -1344,6 +1395,232 @@ namespace HandballCliente
             if (casparServer.Connected)
             {
                 casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "countdownStartStop", layerScoreboard.ToString()));
+            }
+        }
+
+        private void startTwitterPoll()
+        {
+            if (casparServer.Connected)
+            {
+                Template templateTwitter = new Template();
+                //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+
+                templateTwitter.Fields.Add(new TemplateField("pollTitle", txtTwitterPollTitle.Text));
+                templateTwitter.Fields.Add(new TemplateField("pollText", txtTwitterPollText.Text));
+                int index = 0;
+                foreach (ListViewItem item in lvwTwitterPollHashtags.Items)
+                {
+                    index++;
+                    templateTwitter.Fields.Add(new TemplateField("hashtag" + index.ToString(), item.SubItems[1].Text));
+                    templateTwitter.Fields.Add(new TemplateField("percentage" + index.ToString(), item.SubItems[3].Text.Replace(",", ".")));
+
+                }
+                templateTwitter.Fields.Add(new TemplateField("counterAnimated", (chkTwitterPollIsCounterAnimated.Checked ? "true" : "false")));
+                templateTwitter.Fields.Add(new TemplateField("percentageAnimated", (chkTwitterPollIsPercentageAnimated.Checked ? "true" : "false")));
+                //templateDynamicLogo.Fields.Add(new TemplateField("logoFile", logoPath.ToString()));
+
+                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateTwitter.TemplateDataText(), cmbTemplateTwitterPoll.Text, layerTwitterCounter.ToString()));
+                txtLogMessages.Text += "\n" + ri.Message;
+                //System.Diagnostics.Debug.WriteLine(ri.Message);
+            }
+        }
+
+        private void updateTwitterPoll()
+        {
+            if (casparServer.Connected)
+            {
+                Template templateTwitter = new Template();
+                //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+
+                templateTwitter.Fields.Add(new TemplateField("pollTitle", txtTwitterPollTitle.Text));
+                templateTwitter.Fields.Add(new TemplateField("pollText", txtTwitterPollText.Text));
+                int index = 0;
+                foreach (ListViewItem item in lvwTwitterPollHashtags.Items)
+                {
+                    index++;
+                    templateTwitter.Fields.Add(new TemplateField("hashtag" + index.ToString(), item.SubItems[1].Text));
+                    templateTwitter.Fields.Add(new TemplateField("percentage" + index.ToString(), item.SubItems[3].Text.Replace(",",".")));
+                    
+                }
+                templateTwitter.Fields.Add(new TemplateField("counterAnimated", (chkTwitterPollIsCounterAnimated.Checked ? "true" : "false")));
+                templateTwitter.Fields.Add(new TemplateField("percentageAnimated", (chkTwitterPollIsPercentageAnimated.Checked ? "true" : "false")));
+                //templateDynamicLogo.Fields.Add(new TemplateField("logoFile", logoPath.ToString()));
+
+                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateTwitter.TemplateDataText(), layerTwitterCounter.ToString()));
+                txtLogMessages.Text += "\n" + ri.Message;
+                //System.Diagnostics.Debug.WriteLine(ri.Message);
+            }
+        }
+
+        private void stopTwitterPoll()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerTwitterCounter.ToString()));
+            }
+        }
+
+        private void startGameplay()
+        {
+            if (casparServer.Connected)
+            {
+                getImageCanvas();
+
+                Template templateGameplay = new Template();
+                //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+
+                templateGameplay.Fields.Add(new TemplateField("positionX", "0.5"));
+                templateGameplay.Fields.Add(new TemplateField("positionY", "0.5"));
+                templateGameplay.Fields.Add(new TemplateField("pointColor", "0x00ff00"));
+                templateGameplay.Fields.Add(new TemplateField("pointWidth", "10"));
+                templateGameplay.Fields.Add(new TemplateField("pointHeight", "10"));
+                //templateDynamicLogo.Fields.Add(new TemplateField("logoFile", logoPath.ToString()));
+
+                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateGameplay.TemplateDataText(), cmbTemplateGameplay.Text, layerTwitterCounter.ToString()));
+                txtLogMessages.Text += "\n" + ri.Message;
+                casparServer.Execute(String.Format("MIXER 1-{0} CHROMA BLUE 0.10 0.24", layerTwitterCounter.ToString()));
+                //System.Diagnostics.Debug.WriteLine(ri.Message);
+
+                fillImagesCombo();
+            }
+        }
+
+        private void getImageCanvas()
+        {
+            if (casparServer.Connected)
+            {
+                ReturnInfo ri = casparServer.Execute(String.Format("PRINT {0}", layerVideo.ToString()));
+                txtLogMessages.Text += "\n" + ri.Message;
+                //System.Diagnostics.Debug.WriteLine(ri.Message);
+            }
+        }
+
+        private void fillImagesCombo()
+        {
+            List<String> medias = casparServer.GetMediaClipsNames(CasparCG.MediaTypes.Still);
+            List<String> images = medias.FindAll(m => m.StartsWith("2016"));
+            fillCombosTemplate(cmbGameplayImages, images);
+            cmbGameplayImages.SelectedIndex = cmbGameplayImages.Items.Count - 1;
+        }
+
+        private void setImageAsCanvas()
+        {
+            Uri file = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbGameplayImages.Text.ToLower() + ".png");
+
+            picGameplayWhiteboard.SizeMode = PictureBoxSizeMode.StretchImage;
+            picGameplayWhiteboard.Image = Image.FromFile(file.LocalPath);
+        }
+
+        private void updateGameplay(String mouseEvent,double porcX, double porcY)
+        {
+            if (casparServer.Connected)
+            {
+                Template templateGameplay = new Template();
+                //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+
+                    templateGameplay.Fields.Add(new TemplateField("mouseEvent", mouseEvent));
+                    templateGameplay.Fields.Add(new TemplateField("positionX", porcX.ToString().Replace(",", ".")));
+                    templateGameplay.Fields.Add(new TemplateField("positionY", porcY.ToString().Replace(",",".")));
+                    templateGameplay.Fields.Add(new TemplateField("pointColor", "0xff0000"));
+                    templateGameplay.Fields.Add(new TemplateField("pointWidth", "10"));
+                //templateGameplay.Fields.Add(new TemplateField("pointHeight", "10"));
+                //templateDynamicLogo.Fields.Add(new TemplateField("logoFile", logoPath.ToString()));
+
+                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateGameplay.TemplateDataText(), layerTwitterCounter.ToString()));
+                txtLogMessages.Text += "\n" + mouseEvent + ": " + ri.Message;
+                //System.Diagnostics.Debug.WriteLine(ri.Message);
+            }
+        }
+
+        private void callGameplayTool(String toolName)
+        {
+            String command = ""; ;
+            if (casparServer.Connected)
+            {
+                switch (toolName)
+                {
+                    case "Pencil":
+                        command = "setPencilTool";
+                        break;
+                    case "Clear":
+                        command = "ClearBoard";
+                        break;
+                    default:
+                        break;
+                }
+
+                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", command, layerTwitterCounter.ToString()));
+            }
+        }
+
+
+        private void stopGameplay()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerTwitterCounter.ToString()));
+                casparServer.Execute(String.Format("MIXER 1-{0} CHROMA NONE", layerTwitterCounter.ToString()));
+                cleanImageCanvas();
+            }
+        }
+
+        private void cleanImageCanvas()
+        {
+            picGameplayWhiteboard.Image = null;
+        }
+
+        //private void playGameplayVideo()
+        //{
+        //    if (casparServer.Connected)
+        //    {
+        //        casparServer.Execute(String.Format("PLAY 1-{0} AMB LENGTH 150", layerVideo.ToString()));
+        //        casparServer.Execute(String.Format("VERSION", layerVideo.ToString()));
+        //        casparServer.Execute(String.Format("LOADBG 1-{0} AMB LOOP SEEK 150 LENGTH 1", layerVideo.ToString()));
+        //    }
+        //}
+
+        //private void stopGameplayVideo()
+        //{
+        //    if (casparServer.Connected)
+        //    {
+        //        casparServer.Execute(String.Format("PLAY 1-{0} AMB SEEK 151", layerVideo.ToString()));
+        //        //casparServer.Execute(String.Format("PLAY 1-{0}", layerVideo.ToString()));
+        //    }
+        //}
+        
+        private void playGameplayMedia()
+        {
+            if (casparServer.Connected)
+            {
+                if (lvwGameplayPlaylist.SelectedItems.Count != 0)
+                {
+                    muteGameplayVolume();
+                    casparServer.Execute(String.Format("PLAY 1-{3} {0}{1}{0} {2}", (char)0x22, lvwGameplayPlaylist.SelectedItems[0].SubItems[0].Text, (false ? "LOOP" : ""), layerVideo.ToString()));
+                }
+            }
+        }
+
+        private void stopGameplayMedia()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("STOP 1-{0}", layerVideo.ToString()));
+            }
+        }
+
+        private void pauseGameplayMedia()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("PAUSE 1-{0}", layerVideo.ToString()));
+            }
+        }
+
+        private void muteGameplayVolume()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("MIXER 1 MASTERVOLUME {0}", 0));
             }
         }
 
@@ -1985,10 +2262,46 @@ namespace HandballCliente
             }
         }
 
-        private void fillTwitterList()
+        private void loadTwitterList()
+        {
+            mockingTwitterList();
+        }
+
+        private void mockingTwitterList()
+        {
+            List<Tweets> list = new List<Tweets>();
+            Tweets t = new Tweets();
+
+            t.id = 1;
+            t.hashtag = "#LoQueSea";
+            t.fullName = "Juan Perez";
+            t.userName = "JPerez87";
+            t.message = "Gracias por lo que nos dan todos los dias!!! Vamoooooooosss";
+
+            list.Add(t);
+
+            t = new Tweets();
+            t.id = 2;
+            t.hashtag = "#LoQueSea";
+            t.fullName = "Maria Lopez";
+            t.userName = "marylop006";
+            t.message = "Son lo mas. Desde Jujuy damos nuestro apoyo y fuerzas.";
+
+            list.Add(t);
+
+            HandballMatch.getInstance().tweets = list;
+            fillTwitterList();
+        }
+
+        private void retrieveTweetsFromWS()
         {
             this.Cursor = Cursors.WaitCursor;
             getTweets();
+            this.Cursor = Cursors.Default;
+        }
+
+        private void fillTwitterList()
+        {
             lvwTwitterList.Items.Clear();
             List<Tweets> results = HandballMatch.getInstance().tweets;
             int i = 0;
@@ -2002,7 +2315,6 @@ namespace HandballCliente
                 arr[2] = item.userName;
                 lvwTwitterList.Items.Add(new ListViewItem(arr));
             }
-            this.Cursor = Cursors.Default;
         }
 
         private void getTweets()
@@ -2135,9 +2447,44 @@ namespace HandballCliente
             }
         }
 
+        private void loadDynamicInfoList()
+        {
+            mockingDynamicInfoList();
+        }
+
+        private void mockingDynamicInfoList()
+        {
+            List<DynamicInfo> list = new List<DynamicInfo>();
+            DynamicInfo di = new DynamicInfo();
+
+            di.id = 1;
+            di.header = "A CONTINUACION";
+            di.title = "MUNDO D";
+            di.info = "Todas las noticias";
+
+            list.Add(di);
+
+            di = new DynamicInfo();
+            di.id = 2;
+            di.header = "NUEVO CAPITULO";
+            di.title = "TRIBUNA CELESTE";
+            di.info = "";
+            list.Add(di);
+
+
+            HandballMatch.getInstance().dynamicInfo = list;
+            fillDynamicInfoList();
+        }
+
+        private void retrieveDynamicInfoFromWS()
+        {
+            this.Cursor = Cursors.WaitCursor;
+            getDynamicInfo();
+            this.Cursor = Cursors.Default;
+        }
+
         private void fillDynamicInfoList()
         {
-            getDynamicInfo();
             lvwDynamicInfoList.Items.Clear();
             List<DynamicInfo> results = HandballMatch.getInstance().dynamicInfo;
             int i = 0;
@@ -2291,7 +2638,116 @@ namespace HandballCliente
                 }
             }
         }
-        
+
+
+        private void fillTwitterPoll()
+        {
+            if (!chkTwitterPollWSSimulate.Checked)
+            {
+                callGetPollFromTwitterPollWS();
+            }
+            else
+            {
+                if (lvwTwitterPollHashtags.Items.Count == 0) return;
+                simulateGetPoll();
+                if (chkTwitterPollAutoUpdate.Checked)
+                {
+                    updateTwitterPoll();
+                }
+            }
+        }
+
+        private void simulateGetPoll()
+        {
+            int count = 0;
+            int total = 0;
+
+            Random generator = new Random();
+            Random seed = new Random(1357);
+
+            foreach (ListViewItem item in lvwTwitterPollHashtags.Items)
+            {
+                count = generator.Next(0, seed.Next(10,100));
+                int aux = int.Parse(item.SubItems[2].Text) + count;
+                item.SubItems[2].Text = aux.ToString();
+                total += aux;
+            }
+
+            foreach (ListViewItem item in lvwTwitterPollHashtags.Items)
+            {
+                double aux = Math.Round((int.Parse(item.SubItems[2].Text) / (double)total) * 100, 2);
+                item.SubItems[3].Text = aux.ToString();
+            }
+        }
+
+        private void callGetPollFromTwitterPollWS()
+        {
+            String endpoint;
+            endpoint = txtTwitterPollWS.Text;
+
+            var client = new RestClient(endpoint);
+
+            var request = new RestRequest("/stream/count/", Method.GET);
+
+            var response = client.Execute(request);
+
+            int count = 0;
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                count = int.Parse(response.Content.ToString());
+            }
+
+            nudTwitterCounter.Value = count;
+        }
+
+        private void callTwitterPollWS(String action)
+        {
+            String endpoint;
+            endpoint = txtTwitterPollWS.Text;
+
+            var client = new RestClient(endpoint);
+
+            var url = "/stream/" + action + "/" + (action.Equals("start") ? "sdfadsf" : "");
+
+            var request = new RestRequest(url, Method.GET);
+            request.AddHeader("Content-Type", "application/json");
+            request.AddQueryParameter("query", txtTwitterCounterHashtag.Text);
+
+            var response = client.Execute(request);
+
+            if (response.StatusCode == HttpStatusCode.NoContent)
+            {
+                lblTwitterPollStatus.Text = action + " succefully executed!!!";
+            }
+            else
+            {
+                lblTwitterPollStatus.Text = "ERROR: " + response.ErrorMessage;
+            }
+        }
+
+        private void callStatusTwitterPollWS()
+        {
+            String endpoint;
+            endpoint = txtTwitterPollWS.Text;
+
+            RestClient client = new RestClient(endpoint);
+
+            RestRequest request = new RestRequest("/status/", Method.GET);
+            request.AddHeader("Content-Type", "application/json");
+
+            var response = client.Execute(request);
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                lblTwitterPollStatus.Text = response.Content.ToString();
+            }
+            else
+            {
+                lblTwitterPollStatus.Text = "ERROR: " + response.ErrorMessage;
+            }
+        }
+
         private void openFile()
         {
             System.Windows.Forms.OpenFileDialog fdlg = new System.Windows.Forms.OpenFileDialog();
@@ -2306,6 +2762,15 @@ namespace HandballCliente
                 fileName = fdlg.FileName;
                 this.Text = String.Format("Handball Cliente - [{0}]", fdlg.FileName);
                 getMatchValues();
+            }
+        }
+
+        private void selectColor()
+        {
+            ColorDialog cdlg = new ColorDialog();
+            if (cdlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                picSolidColor.BackColor = cdlg.Color;
             }
         }
 
@@ -2610,6 +3075,29 @@ namespace HandballCliente
                 HandballMatch.getInstance().gameshowQuestions.Remove(HandballMatch.getInstance().gameshowQuestions.Find(element => element.id == int.Parse(lvwGameshowQuestions.SelectedItems[0].Text)));
                 FillGameshowQuestions(lvwGameshowQuestions, HandballMatch.getInstance().gameshowQuestions);
             }
+        }
+
+        private void loadGameshowQuestions()
+        {
+            mockingGameshowQuestions();
+        }
+
+        private void mockingGameshowQuestions()
+        {
+            HandballMatch.getInstance().gameshowQuestions.Clear();
+
+            Question q = new Question();
+            q.id = 1;
+            q.question = "¿De que color era el caballo blanco de San Martin?";
+            List<Answer> ans = new List<Answer>();
+            ans.Add(new Answer("Marron"));
+            ans.Add(new Answer("Colorado"));
+            ans.Add(new Answer("Blanco"));
+            ans.Add(new Answer("Negro"));
+            q.answers = ans;
+            q.correctAnswer = 3;
+
+            addQuestion(q);
         }
 
         private void addPlayerTeam2()
@@ -3334,12 +3822,12 @@ namespace HandballCliente
 
         private void btnGameplayPlay_Click(object sender, EventArgs e)
         {
-            playGameplay();
+            playGameplayMedia();
         }
 
         private void btnGameplayStop_Click(object sender, EventArgs e)
         {
-            stopGameplay();
+            stopGameplayMedia();
         }
 
         private void btnStartTwitterCounter_Click(object sender, EventArgs e)
@@ -3517,7 +4005,7 @@ namespace HandballCliente
 
         private void btnDynamicInfoWSCall_Click(object sender, EventArgs e)
         {
-            fillDynamicInfoList();
+            retrieveDynamicInfoFromWS();
         }
 
         private void lvwDynamicInfoList_DoubleClick(object sender, EventArgs e)
@@ -3528,11 +4016,6 @@ namespace HandballCliente
         private void btnTwitterCounterWSCall_Click(object sender, EventArgs e)
         {
             fillTwitterCounter();
-        }
-
-        private void lvwTwitterList_DoubleClick_1(object sender, EventArgs e)
-        {
-            selectTweet();
         }
 
         private void btnAnimatedLogoStart_Click(object sender, EventArgs e)
@@ -3618,6 +4101,214 @@ namespace HandballCliente
             getDynamicNewsWS();
         }
 
+        private void picGameplayWhiteboard_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                gameplayMouseDown = true;
+                showGameplayPointerLocation("DOWN", e.Location);
+            }
+        }
 
+        private void picGameplayWhiteboard_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (gameplayMouseDown)
+            {
+                showGameplayPointerLocation("MOVE", e.Location);
+            }
+        }
+
+        private void showGameplayPointerLocation(String mouseEvent, Point mouseLocation)
+        {
+            int posX, posY;
+            double porcX, porcY;
+
+            posX = mouseLocation.X;
+            posY = mouseLocation.Y;
+
+            if (posX <= picGameplayWhiteboard.Width && posY <= picGameplayWhiteboard.Height)
+            {
+                porcX = Math.Round((posX / (double)picGameplayWhiteboard.Width), 2);
+                porcY = Math.Round((posY / (double)picGameplayWhiteboard.Height), 2);
+                lblGameplayPointerLocation.Text = "X: " + posX + " Y: " + posY + "\n" + "%X : " + porcX + " %Y: " + porcY;
+                updateGameplay(mouseEvent, porcX, porcY);
+            }
+        }
+
+        private void picGameplayWhiteboard_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                gameplayMouseDown = false;
+                showGameplayPointerLocation("UP", e.Location);
+            }
+        }
+
+        private void btnStartGameplay_Click(object sender, EventArgs e)
+        {
+            startGameplay();
+        }
+
+        private void btnStopGameplay_Click(object sender, EventArgs e)
+        {
+            stopGameplay();
+        }
+
+        private void nudTwitterPollWSAutoCallSeg_ValueChanged(object sender, EventArgs e)
+        {
+            tmrTwitterPollWSCall.Interval = (int)(nudTwitterPollWSAutoCallSeg.Value * 1000);
+        }
+
+        private void chkTwitterPollWSAutoCall_CheckedChanged(object sender, EventArgs e)
+        {
+            tmrTwitterPollWSCall.Interval = (int)(nudTwitterPollWSAutoCallSeg.Value * 1000);
+            if (chkTwitterPollWSAutoCall.Checked)
+            {
+                tmrTwitterPollWSCall.Start();
+            }
+            else
+            {
+                tmrTwitterPollWSCall.Stop();
+            }
+        }
+
+        private void tmrTwitterPollWSCall_Tick(object sender, EventArgs e)
+        {
+            fillTwitterPoll();
+        }
+
+        private void btnStartTwitterPoll_Click(object sender, EventArgs e)
+        {
+            startTwitterPoll();
+        }
+
+        private void btnUpdateTwitterPoll_Click(object sender, EventArgs e)
+        {
+            updateTwitterPoll();
+        }
+
+        private void btnStopTwitterPoll_Click(object sender, EventArgs e)
+        {
+            stopTwitterPoll();
+        }
+
+        private void btnTwitterPollHashtagsAdd_Click(object sender, EventArgs e)
+        {
+            mockHashtagTwitterPoll();
+        }
+
+        private void mockHashtagTwitterPoll()
+        {
+            string[] arr;
+            lvwTwitterPollHashtags.Items.Clear();
+
+            arr = new string[4];
+            arr[0] = "1";
+            arr[1] = "#PrimerHashtag";
+            arr[2] = "0";
+            arr[3] = "0";
+            lvwTwitterPollHashtags.Items.Add(new ListViewItem(arr));
+
+            arr = new string[4];
+            arr[0] = "2";
+            arr[1] = "#SegundoHashtag";
+            arr[2] = "0";
+            arr[3] = "0";
+            lvwTwitterPollHashtags.Items.Add(new ListViewItem(arr));
+
+            arr = new string[4];
+            arr[0] = "3";
+            arr[1] = "#TercerHashtag";
+            arr[2] = "0";
+            arr[3] = "0";
+            lvwTwitterPollHashtags.Items.Add(new ListViewItem(arr));
+        }
+
+        private void clearHashtagsTwitterPoll()
+        {
+            lvwTwitterPollHashtags.Items.Clear();
+        }
+
+        private void btnTwitterPollWSCall_Click(object sender, EventArgs e)
+        {
+            fillTwitterPoll();
+        }
+
+        private void btnTwitterPollHashtagsClear_Click(object sender, EventArgs e)
+        {
+            clearHashtagsTwitterPoll();
+        }
+
+        private void btnPencil_CheckedChanged(object sender, EventArgs e)
+        {
+            if (btnPencil.Checked)
+            {
+                callGameplayTool("Pencil");
+            }
+        }
+
+        private void btnToolbarGameplayClear_CheckedChanged(object sender, EventArgs e)
+        {
+            if (btnToolbarGameplayClear.Checked)
+            {
+                callGameplayTool("Clear");
+            }
+        }
+
+        private void lstSports_Click(object sender, EventArgs e)
+        {
+
+            selectSportTab();
+        }
+
+        private void cmbGameplayImages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            setImageAsCanvas();
+        }
+
+        private void btnGameplayRefresh_Click(object sender, EventArgs e)
+        {
+            fillImagesCombo();
+        }
+
+        private void btnConnectDisconnect_Click(object sender, EventArgs e)
+        {
+            connectToCasparCGServer();
+        }
+
+        private void btnTwitterLoadTweets_Click(object sender, EventArgs e)
+        {
+            loadTwitterList();
+        }
+
+        private void btnDynamicInfoLoadInfo_Click(object sender, EventArgs e)
+        {
+            loadDynamicInfoList();
+        }
+
+        private void btnSelectSolidColor_Click(object sender, EventArgs e)
+        {
+            selectColor();
+        }
+
+        private void picSolidColor_BackColorChanged(object sender, EventArgs e)
+        {
+            lblSolidColorHtml.Text = ColorTranslator.ToHtml(Color.FromArgb(Color.Tomato.ToArgb()));
+        }
+
+        private void picSolidColor_DoubleClick(object sender, EventArgs e)
+        {
+            selectColor();
+        }
+
+        private void lvwGameplayPlaylist_DoubleClick(object sender, EventArgs e)
+        {
+            playGameplayMedia();
+        }
+
+        private void btnGameplayPause_Click(object sender, EventArgs e)
+        {
+            pauseGameplayMedia();
+        }
     }
 }

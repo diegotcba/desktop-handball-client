@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandballCliente", "HandballCliente\HandballCliente.csproj", "{DEB634EF-594F-4F72-9306-9020BC054177}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CGClient", "HandballCliente\CGClient.csproj", "{DEB634EF-594F-4F72-9306-9020BC054177}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

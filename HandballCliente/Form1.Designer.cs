@@ -694,6 +694,9 @@
             this.lvwGameplayPlaylist = new System.Windows.Forms.ListView();
             this.columnHeader37 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox31 = new System.Windows.Forms.GroupBox();
+            this.lblGameplayPointerLocation = new System.Windows.Forms.Label();
+            this.btnGameplayRefresh = new System.Windows.Forms.Button();
+            this.cmbGameplayImages = new System.Windows.Forms.ComboBox();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.picGameplayWhiteboard = new System.Windows.Forms.PictureBox();
             this.tlsGamePlay = new System.Windows.Forms.ToolStrip();
@@ -721,18 +724,56 @@
             this.tmrTwitterCounterWSCall = new System.Windows.Forms.Timer(this.components);
             this.tmrTwitterPollWSCall = new System.Windows.Forms.Timer(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblSolidColorHtml = new System.Windows.Forms.Label();
+            this.picSolidColor = new System.Windows.Forms.PictureBox();
+            this.chkWithSolidColor = new System.Windows.Forms.CheckBox();
             this.btnClearChannel = new System.Windows.Forms.Button();
             this.btnConnectDisconnect = new System.Windows.Forms.Button();
             this.txtServerPort = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtServerAddress = new System.Windows.Forms.TextBox();
-            this.chkWithSolidColor = new System.Windows.Forms.CheckBox();
-            this.picSolidColor = new System.Windows.Forms.PictureBox();
-            this.lblSolidColorHtml = new System.Windows.Forms.Label();
-            this.lblGameplayPointerLocation = new System.Windows.Forms.Label();
-            this.btnGameplayRefresh = new System.Windows.Forms.Button();
-            this.cmbGameplayImages = new System.Windows.Forms.ComboBox();
+            this.tabBasket = new System.Windows.Forms.TabControl();
+            this.tabPage35 = new System.Windows.Forms.TabPage();
+            this.groupBox44 = new System.Windows.Forms.GroupBox();
+            this.cmbTemplateBasketScoreboard = new System.Windows.Forms.ComboBox();
+            this.label133 = new System.Windows.Forms.Label();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.nudBasketScoreboardShootTime = new System.Windows.Forms.NumericUpDown();
+            this.btnBasketScoreboardShowHideClocks = new System.Windows.Forms.Button();
+            this.btnBasketScoreboardStartGameTime = new System.Windows.Forms.Button();
+            this.btnBasketScoreboardResetGameTime = new System.Windows.Forms.Button();
+            this.btnBasketScoreboardStopGameTime = new System.Windows.Forms.Button();
+            this.label134 = new System.Windows.Forms.Label();
+            this.label135 = new System.Windows.Forms.Label();
+            this.label136 = new System.Windows.Forms.Label();
+            this.label137 = new System.Windows.Forms.Label();
+            this.cmbBasktScoreboardQuarter = new System.Windows.Forms.ComboBox();
+            this.nudBasketScoreboardGameTimeSecs = new System.Windows.Forms.NumericUpDown();
+            this.nudBasketScoreboardGameTimeMins = new System.Windows.Forms.NumericUpDown();
+            this.btnBasketScoreboardStop = new System.Windows.Forms.Button();
+            this.btnBasketScoreboardStart = new System.Windows.Forms.Button();
+            this.button33 = new System.Windows.Forms.Button();
+            this.button34 = new System.Windows.Forms.Button();
+            this.button35 = new System.Windows.Forms.Button();
+            this.button36 = new System.Windows.Forms.Button();
+            this.button37 = new System.Windows.Forms.Button();
+            this.button38 = new System.Windows.Forms.Button();
+            this.button39 = new System.Windows.Forms.Button();
+            this.button40 = new System.Windows.Forms.Button();
+            this.button42 = new System.Windows.Forms.Button();
+            this.nudBasketScoreboardAwayScore = new System.Windows.Forms.NumericUpDown();
+            this.nudBasketScoreboardHomeScore = new System.Windows.Forms.NumericUpDown();
+            this.txtBasketScoreboardAwayTeam = new System.Windows.Forms.TextBox();
+            this.txtBasketScoreboardHomeTeam = new System.Windows.Forms.TextBox();
+            this.shapeContainer5 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.button43 = new System.Windows.Forms.Button();
+            this.button41 = new System.Windows.Forms.Button();
+            this.button44 = new System.Windows.Forms.Button();
             this.mstMenues.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -883,6 +924,16 @@
             this.tlsGamePlay.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSolidColor)).BeginInit();
+            this.tabBasket.SuspendLayout();
+            this.tabPage35.SuspendLayout();
+            this.groupBox44.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardShootTime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardGameTimeSecs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardGameTimeMins)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardAwayScore)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardHomeScore)).BeginInit();
             this.SuspendLayout();
             // 
             // mstMenues
@@ -1121,10 +1172,11 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.tabVolleyball);
+            this.tabPage2.Controls.Add(this.tabBasket);
             this.tabPage2.Controls.Add(this.lstSports);
             this.tabPage2.Controls.Add(this.label121);
             this.tabPage2.Controls.Add(this.tabSports);
+            this.tabPage2.Controls.Add(this.tabVolleyball);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -1138,7 +1190,7 @@
             this.tabVolleyball.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabVolleyball.Controls.Add(this.tabPage3);
             this.tabVolleyball.Controls.Add(this.tabPage4);
-            this.tabVolleyball.Location = new System.Drawing.Point(82, 0);
+            this.tabVolleyball.Location = new System.Drawing.Point(79, 0);
             this.tabVolleyball.Multiline = true;
             this.tabVolleyball.Name = "tabVolleyball";
             this.tabVolleyball.SelectedIndex = 0;
@@ -8288,13 +8340,42 @@
             this.groupBox31.TabStop = false;
             this.groupBox31.Text = "Pizarra";
             // 
+            // lblGameplayPointerLocation
+            // 
+            this.lblGameplayPointerLocation.AutoSize = true;
+            this.lblGameplayPointerLocation.Location = new System.Drawing.Point(6, 268);
+            this.lblGameplayPointerLocation.Name = "lblGameplayPointerLocation";
+            this.lblGameplayPointerLocation.Size = new System.Drawing.Size(47, 13);
+            this.lblGameplayPointerLocation.TabIndex = 109;
+            this.lblGameplayPointerLocation.Text = "label132";
+            // 
+            // btnGameplayRefresh
+            // 
+            this.btnGameplayRefresh.Location = new System.Drawing.Point(438, 265);
+            this.btnGameplayRefresh.Name = "btnGameplayRefresh";
+            this.btnGameplayRefresh.Size = new System.Drawing.Size(30, 19);
+            this.btnGameplayRefresh.TabIndex = 108;
+            this.btnGameplayRefresh.Text = "R";
+            this.btnGameplayRefresh.UseVisualStyleBackColor = true;
+            this.btnGameplayRefresh.Click += new System.EventHandler(this.btnGameplayRefresh_Click);
+            // 
+            // cmbGameplayImages
+            // 
+            this.cmbGameplayImages.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGameplayImages.FormattingEnabled = true;
+            this.cmbGameplayImages.Location = new System.Drawing.Point(188, 265);
+            this.cmbGameplayImages.Name = "cmbGameplayImages";
+            this.cmbGameplayImages.Size = new System.Drawing.Size(244, 21);
+            this.cmbGameplayImages.TabIndex = 107;
+            this.cmbGameplayImages.SelectedIndexChanged += new System.EventHandler(this.cmbGameplayImages_SelectedIndexChanged);
+            // 
             // toolStripContainer1
             // 
             // 
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.Controls.Add(this.picGameplayWhiteboard);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(464, 225);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(464, 200);
             this.toolStripContainer1.Location = new System.Drawing.Point(6, 11);
             this.toolStripContainer1.Name = "toolStripContainer1";
             // 
@@ -8496,6 +8577,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Servidor CasparCG";
             // 
+            // lblSolidColorHtml
+            // 
+            this.lblSolidColorHtml.AutoSize = true;
+            this.lblSolidColorHtml.Location = new System.Drawing.Point(851, 57);
+            this.lblSolidColorHtml.Name = "lblSolidColorHtml";
+            this.lblSolidColorHtml.Size = new System.Drawing.Size(0, 13);
+            this.lblSolidColorHtml.TabIndex = 9;
+            // 
+            // picSolidColor
+            // 
+            this.picSolidColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.picSolidColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picSolidColor.Location = new System.Drawing.Point(854, 26);
+            this.picSolidColor.Name = "picSolidColor";
+            this.picSolidColor.Size = new System.Drawing.Size(51, 28);
+            this.picSolidColor.TabIndex = 7;
+            this.picSolidColor.TabStop = false;
+            this.picSolidColor.BackColorChanged += new System.EventHandler(this.picSolidColor_BackColorChanged);
+            this.picSolidColor.DoubleClick += new System.EventHandler(this.picSolidColor_DoubleClick);
+            // 
+            // chkWithSolidColor
+            // 
+            this.chkWithSolidColor.AutoSize = true;
+            this.chkWithSolidColor.Location = new System.Drawing.Point(722, 33);
+            this.chkWithSolidColor.Name = "chkWithSolidColor";
+            this.chkWithSolidColor.Size = new System.Drawing.Size(105, 17);
+            this.chkWithSolidColor.TabIndex = 6;
+            this.chkWithSolidColor.Text = "Con fondo solido";
+            this.chkWithSolidColor.UseVisualStyleBackColor = true;
+            // 
             // btnClearChannel
             // 
             this.btnClearChannel.Location = new System.Drawing.Point(578, 20);
@@ -8548,64 +8659,469 @@
             this.txtServerAddress.Size = new System.Drawing.Size(146, 20);
             this.txtServerAddress.TabIndex = 0;
             // 
-            // chkWithSolidColor
+            // tabBasket
             // 
-            this.chkWithSolidColor.AutoSize = true;
-            this.chkWithSolidColor.Location = new System.Drawing.Point(722, 33);
-            this.chkWithSolidColor.Name = "chkWithSolidColor";
-            this.chkWithSolidColor.Size = new System.Drawing.Size(105, 17);
-            this.chkWithSolidColor.TabIndex = 6;
-            this.chkWithSolidColor.Text = "Con fondo solido";
-            this.chkWithSolidColor.UseVisualStyleBackColor = true;
+            this.tabBasket.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tabBasket.Controls.Add(this.tabPage35);
+            this.tabBasket.Location = new System.Drawing.Point(82, 0);
+            this.tabBasket.Multiline = true;
+            this.tabBasket.Name = "tabBasket";
+            this.tabBasket.SelectedIndex = 0;
+            this.tabBasket.Size = new System.Drawing.Size(822, 323);
+            this.tabBasket.TabIndex = 15;
             // 
-            // picSolidColor
+            // tabPage35
             // 
-            this.picSolidColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.picSolidColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picSolidColor.Location = new System.Drawing.Point(854, 26);
-            this.picSolidColor.Name = "picSolidColor";
-            this.picSolidColor.Size = new System.Drawing.Size(51, 28);
-            this.picSolidColor.TabIndex = 7;
-            this.picSolidColor.TabStop = false;
-            this.picSolidColor.BackColorChanged += new System.EventHandler(this.picSolidColor_BackColorChanged);
-            this.picSolidColor.DoubleClick += new System.EventHandler(this.picSolidColor_DoubleClick);
+            this.tabPage35.Controls.Add(this.groupBox44);
+            this.tabPage35.Location = new System.Drawing.Point(23, 4);
+            this.tabPage35.Name = "tabPage35";
+            this.tabPage35.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage35.Size = new System.Drawing.Size(795, 315);
+            this.tabPage35.TabIndex = 0;
+            this.tabPage35.Text = "Scoreboard";
+            this.tabPage35.UseVisualStyleBackColor = true;
             // 
-            // lblSolidColorHtml
+            // groupBox44
             // 
-            this.lblSolidColorHtml.AutoSize = true;
-            this.lblSolidColorHtml.Location = new System.Drawing.Point(851, 57);
-            this.lblSolidColorHtml.Name = "lblSolidColorHtml";
-            this.lblSolidColorHtml.Size = new System.Drawing.Size(0, 13);
-            this.lblSolidColorHtml.TabIndex = 9;
+            this.groupBox44.Controls.Add(this.button41);
+            this.groupBox44.Controls.Add(this.button44);
+            this.groupBox44.Controls.Add(this.button43);
+            this.groupBox44.Controls.Add(this.cmbTemplateBasketScoreboard);
+            this.groupBox44.Controls.Add(this.label133);
+            this.groupBox44.Controls.Add(this.checkBox5);
+            this.groupBox44.Controls.Add(this.checkBox6);
+            this.groupBox44.Controls.Add(this.numericUpDown5);
+            this.groupBox44.Controls.Add(this.numericUpDown6);
+            this.groupBox44.Controls.Add(this.nudBasketScoreboardShootTime);
+            this.groupBox44.Controls.Add(this.btnBasketScoreboardShowHideClocks);
+            this.groupBox44.Controls.Add(this.btnBasketScoreboardStartGameTime);
+            this.groupBox44.Controls.Add(this.btnBasketScoreboardResetGameTime);
+            this.groupBox44.Controls.Add(this.btnBasketScoreboardStopGameTime);
+            this.groupBox44.Controls.Add(this.label134);
+            this.groupBox44.Controls.Add(this.label135);
+            this.groupBox44.Controls.Add(this.label136);
+            this.groupBox44.Controls.Add(this.label137);
+            this.groupBox44.Controls.Add(this.cmbBasktScoreboardQuarter);
+            this.groupBox44.Controls.Add(this.nudBasketScoreboardGameTimeSecs);
+            this.groupBox44.Controls.Add(this.nudBasketScoreboardGameTimeMins);
+            this.groupBox44.Controls.Add(this.btnBasketScoreboardStop);
+            this.groupBox44.Controls.Add(this.btnBasketScoreboardStart);
+            this.groupBox44.Controls.Add(this.button33);
+            this.groupBox44.Controls.Add(this.button34);
+            this.groupBox44.Controls.Add(this.button35);
+            this.groupBox44.Controls.Add(this.button36);
+            this.groupBox44.Controls.Add(this.button37);
+            this.groupBox44.Controls.Add(this.button38);
+            this.groupBox44.Controls.Add(this.button39);
+            this.groupBox44.Controls.Add(this.button40);
+            this.groupBox44.Controls.Add(this.button42);
+            this.groupBox44.Controls.Add(this.nudBasketScoreboardAwayScore);
+            this.groupBox44.Controls.Add(this.nudBasketScoreboardHomeScore);
+            this.groupBox44.Controls.Add(this.txtBasketScoreboardAwayTeam);
+            this.groupBox44.Controls.Add(this.txtBasketScoreboardHomeTeam);
+            this.groupBox44.Controls.Add(this.shapeContainer5);
+            this.groupBox44.Location = new System.Drawing.Point(6, 2);
+            this.groupBox44.Name = "groupBox44";
+            this.groupBox44.Size = new System.Drawing.Size(783, 310);
+            this.groupBox44.TabIndex = 2;
+            this.groupBox44.TabStop = false;
+            this.groupBox44.Text = "Scoreboard";
             // 
-            // lblGameplayPointerLocation
+            // cmbTemplateBasketScoreboard
             // 
-            this.lblGameplayPointerLocation.AutoSize = true;
-            this.lblGameplayPointerLocation.Location = new System.Drawing.Point(6, 268);
-            this.lblGameplayPointerLocation.Name = "lblGameplayPointerLocation";
-            this.lblGameplayPointerLocation.Size = new System.Drawing.Size(47, 13);
-            this.lblGameplayPointerLocation.TabIndex = 109;
-            this.lblGameplayPointerLocation.Text = "label132";
+            this.cmbTemplateBasketScoreboard.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTemplateBasketScoreboard.FormattingEnabled = true;
+            this.cmbTemplateBasketScoreboard.Location = new System.Drawing.Point(80, 17);
+            this.cmbTemplateBasketScoreboard.Name = "cmbTemplateBasketScoreboard";
+            this.cmbTemplateBasketScoreboard.Size = new System.Drawing.Size(272, 21);
+            this.cmbTemplateBasketScoreboard.TabIndex = 64;
             // 
-            // btnGameplayRefresh
+            // label133
             // 
-            this.btnGameplayRefresh.Location = new System.Drawing.Point(438, 265);
-            this.btnGameplayRefresh.Name = "btnGameplayRefresh";
-            this.btnGameplayRefresh.Size = new System.Drawing.Size(30, 19);
-            this.btnGameplayRefresh.TabIndex = 108;
-            this.btnGameplayRefresh.Text = "R";
-            this.btnGameplayRefresh.UseVisualStyleBackColor = true;
-            this.btnGameplayRefresh.Click += new System.EventHandler(this.btnGameplayRefresh_Click);
+            this.label133.AutoSize = true;
+            this.label133.Location = new System.Drawing.Point(9, 20);
+            this.label133.Name = "label133";
+            this.label133.Size = new System.Drawing.Size(54, 13);
+            this.label133.TabIndex = 63;
+            this.label133.Text = "Template:";
             // 
-            // cmbGameplayImages
+            // checkBox5
             // 
-            this.cmbGameplayImages.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbGameplayImages.FormattingEnabled = true;
-            this.cmbGameplayImages.Location = new System.Drawing.Point(188, 265);
-            this.cmbGameplayImages.Name = "cmbGameplayImages";
-            this.cmbGameplayImages.Size = new System.Drawing.Size(244, 21);
-            this.cmbGameplayImages.TabIndex = 107;
-            this.cmbGameplayImages.SelectedIndexChanged += new System.EventHandler(this.cmbGameplayImages_SelectedIndexChanged);
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(249, 177);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(103, 17);
+            this.checkBox5.TabIndex = 62;
+            this.checkBox5.Text = "Mostrar al Iniciar";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(249, 154);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(111, 17);
+            this.checkBox6.TabIndex = 9;
+            this.checkBox6.Text = "Ocultar al terminar";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown5
+            // 
+            this.numericUpDown5.Location = new System.Drawing.Point(161, 210);
+            this.numericUpDown5.Maximum = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(37, 20);
+            this.numericUpDown5.TabIndex = 14;
+            this.numericUpDown5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // numericUpDown6
+            // 
+            this.numericUpDown6.Location = new System.Drawing.Point(115, 210);
+            this.numericUpDown6.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.numericUpDown6.Name = "numericUpDown6";
+            this.numericUpDown6.Size = new System.Drawing.Size(40, 20);
+            this.numericUpDown6.TabIndex = 13;
+            this.numericUpDown6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // nudBasketScoreboardShootTime
+            // 
+            this.nudBasketScoreboardShootTime.Location = new System.Drawing.Point(161, 234);
+            this.nudBasketScoreboardShootTime.Maximum = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
+            this.nudBasketScoreboardShootTime.Name = "nudBasketScoreboardShootTime";
+            this.nudBasketScoreboardShootTime.Size = new System.Drawing.Size(37, 20);
+            this.nudBasketScoreboardShootTime.TabIndex = 16;
+            this.nudBasketScoreboardShootTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // btnBasketScoreboardShowHideClocks
+            // 
+            this.btnBasketScoreboardShowHideClocks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBasketScoreboardShowHideClocks.Location = new System.Drawing.Point(268, 97);
+            this.btnBasketScoreboardShowHideClocks.Name = "btnBasketScoreboardShowHideClocks";
+            this.btnBasketScoreboardShowHideClocks.Size = new System.Drawing.Size(80, 51);
+            this.btnBasketScoreboardShowHideClocks.TabIndex = 8;
+            this.btnBasketScoreboardShowHideClocks.Text = "Mostrar/Ocultar";
+            this.btnBasketScoreboardShowHideClocks.UseVisualStyleBackColor = true;
+            this.btnBasketScoreboardShowHideClocks.Click += new System.EventHandler(this.btnBasketScoreboardShowHideClocks_Click);
+            // 
+            // btnBasketScoreboardStartGameTime
+            // 
+            this.btnBasketScoreboardStartGameTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBasketScoreboardStartGameTime.Location = new System.Drawing.Point(12, 171);
+            this.btnBasketScoreboardStartGameTime.Name = "btnBasketScoreboardStartGameTime";
+            this.btnBasketScoreboardStartGameTime.Size = new System.Drawing.Size(69, 29);
+            this.btnBasketScoreboardStartGameTime.TabIndex = 10;
+            this.btnBasketScoreboardStartGameTime.Text = "Iniciar";
+            this.btnBasketScoreboardStartGameTime.UseVisualStyleBackColor = true;
+            this.btnBasketScoreboardStartGameTime.Click += new System.EventHandler(this.btnBasketScoreboardStartGameTime_Click);
+            // 
+            // btnBasketScoreboardResetGameTime
+            // 
+            this.btnBasketScoreboardResetGameTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBasketScoreboardResetGameTime.Location = new System.Drawing.Point(162, 171);
+            this.btnBasketScoreboardResetGameTime.Name = "btnBasketScoreboardResetGameTime";
+            this.btnBasketScoreboardResetGameTime.Size = new System.Drawing.Size(69, 29);
+            this.btnBasketScoreboardResetGameTime.TabIndex = 12;
+            this.btnBasketScoreboardResetGameTime.Text = "Reiniciar";
+            this.btnBasketScoreboardResetGameTime.UseVisualStyleBackColor = true;
+            this.btnBasketScoreboardResetGameTime.Click += new System.EventHandler(this.btnBasketScoreboardResetGameTime_Click);
+            // 
+            // btnBasketScoreboardStopGameTime
+            // 
+            this.btnBasketScoreboardStopGameTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBasketScoreboardStopGameTime.Location = new System.Drawing.Point(87, 171);
+            this.btnBasketScoreboardStopGameTime.Name = "btnBasketScoreboardStopGameTime";
+            this.btnBasketScoreboardStopGameTime.Size = new System.Drawing.Size(69, 29);
+            this.btnBasketScoreboardStopGameTime.TabIndex = 11;
+            this.btnBasketScoreboardStopGameTime.Text = "Timeout";
+            this.btnBasketScoreboardStopGameTime.UseVisualStyleBackColor = true;
+            this.btnBasketScoreboardStopGameTime.Click += new System.EventHandler(this.btnBasketScoreboardStopGameTime_Click);
+            // 
+            // label134
+            // 
+            this.label134.AutoSize = true;
+            this.label134.Location = new System.Drawing.Point(8, 236);
+            this.label134.Name = "label134";
+            this.label134.Size = new System.Drawing.Size(101, 13);
+            this.label134.TabIndex = 50;
+            this.label134.Text = "Duracion Exclusion:";
+            // 
+            // label135
+            // 
+            this.label135.AutoSize = true;
+            this.label135.Location = new System.Drawing.Point(12, 142);
+            this.label135.Name = "label135";
+            this.label135.Size = new System.Drawing.Size(34, 13);
+            this.label135.TabIndex = 49;
+            this.label135.Text = "Reloj:";
+            // 
+            // label136
+            // 
+            this.label136.AutoSize = true;
+            this.label136.Location = new System.Drawing.Point(8, 212);
+            this.label136.Name = "label136";
+            this.label136.Size = new System.Drawing.Size(91, 13);
+            this.label136.TabIndex = 48;
+            this.label136.Text = "Duracion Tiempo:";
+            // 
+            // label137
+            // 
+            this.label137.AutoSize = true;
+            this.label137.Location = new System.Drawing.Point(12, 116);
+            this.label137.Name = "label137";
+            this.label137.Size = new System.Drawing.Size(45, 13);
+            this.label137.TabIndex = 47;
+            this.label137.Text = "Tiempo:";
+            // 
+            // cmbBasktScoreboardQuarter
+            // 
+            this.cmbBasktScoreboardQuarter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBasktScoreboardQuarter.FormattingEnabled = true;
+            this.cmbBasktScoreboardQuarter.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.cmbBasktScoreboardQuarter.Location = new System.Drawing.Point(63, 113);
+            this.cmbBasktScoreboardQuarter.Name = "cmbBasktScoreboardQuarter";
+            this.cmbBasktScoreboardQuarter.Size = new System.Drawing.Size(37, 21);
+            this.cmbBasktScoreboardQuarter.TabIndex = 5;
+            // 
+            // nudBasketScoreboardGameTimeSecs
+            // 
+            this.nudBasketScoreboardGameTimeSecs.Location = new System.Drawing.Point(109, 140);
+            this.nudBasketScoreboardGameTimeSecs.Maximum = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
+            this.nudBasketScoreboardGameTimeSecs.Name = "nudBasketScoreboardGameTimeSecs";
+            this.nudBasketScoreboardGameTimeSecs.Size = new System.Drawing.Size(37, 20);
+            this.nudBasketScoreboardGameTimeSecs.TabIndex = 7;
+            this.nudBasketScoreboardGameTimeSecs.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // nudBasketScoreboardGameTimeMins
+            // 
+            this.nudBasketScoreboardGameTimeMins.Location = new System.Drawing.Point(63, 140);
+            this.nudBasketScoreboardGameTimeMins.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.nudBasketScoreboardGameTimeMins.Name = "nudBasketScoreboardGameTimeMins";
+            this.nudBasketScoreboardGameTimeMins.Size = new System.Drawing.Size(40, 20);
+            this.nudBasketScoreboardGameTimeMins.TabIndex = 6;
+            this.nudBasketScoreboardGameTimeMins.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // btnBasketScoreboardStop
+            // 
+            this.btnBasketScoreboardStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBasketScoreboardStop.Location = new System.Drawing.Point(127, 56);
+            this.btnBasketScoreboardStop.Name = "btnBasketScoreboardStop";
+            this.btnBasketScoreboardStop.Size = new System.Drawing.Size(104, 40);
+            this.btnBasketScoreboardStop.TabIndex = 4;
+            this.btnBasketScoreboardStop.Text = "Parar Grafico";
+            this.btnBasketScoreboardStop.UseVisualStyleBackColor = true;
+            this.btnBasketScoreboardStop.Click += new System.EventHandler(this.btnBasketScoreboardStop_Click);
+            // 
+            // btnBasketScoreboardStart
+            // 
+            this.btnBasketScoreboardStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBasketScoreboardStart.Location = new System.Drawing.Point(12, 56);
+            this.btnBasketScoreboardStart.Name = "btnBasketScoreboardStart";
+            this.btnBasketScoreboardStart.Size = new System.Drawing.Size(104, 40);
+            this.btnBasketScoreboardStart.TabIndex = 3;
+            this.btnBasketScoreboardStart.Text = "Iniciar Grafico";
+            this.btnBasketScoreboardStart.UseVisualStyleBackColor = true;
+            this.btnBasketScoreboardStart.Click += new System.EventHandler(this.btnBasketScoreboardStart_Click);
+            // 
+            // button33
+            // 
+            this.button33.Location = new System.Drawing.Point(586, 241);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(30, 23);
+            this.button33.TabIndex = 35;
+            this.button33.Text = "C";
+            this.button33.UseVisualStyleBackColor = true;
+            // 
+            // button34
+            // 
+            this.button34.Location = new System.Drawing.Point(586, 212);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(30, 23);
+            this.button34.TabIndex = 34;
+            this.button34.Text = "-";
+            this.button34.UseVisualStyleBackColor = true;
+            // 
+            // button35
+            // 
+            this.button35.Location = new System.Drawing.Point(586, 183);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(30, 23);
+            this.button35.TabIndex = 33;
+            this.button35.Text = "+";
+            this.button35.UseVisualStyleBackColor = true;
+            // 
+            // button36
+            // 
+            this.button36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button36.Location = new System.Drawing.Point(622, 103);
+            this.button36.Name = "button36";
+            this.button36.Size = new System.Drawing.Size(99, 42);
+            this.button36.TabIndex = 27;
+            this.button36.Text = "+2";
+            this.button36.UseVisualStyleBackColor = true;
+            // 
+            // button37
+            // 
+            this.button37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button37.Location = new System.Drawing.Point(622, 57);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(99, 40);
+            this.button37.TabIndex = 25;
+            this.button37.Text = "+1";
+            this.button37.UseVisualStyleBackColor = true;
+            // 
+            // button38
+            // 
+            this.button38.Location = new System.Drawing.Point(502, 241);
+            this.button38.Name = "button38";
+            this.button38.Size = new System.Drawing.Size(30, 23);
+            this.button38.TabIndex = 32;
+            this.button38.Text = "C";
+            this.button38.UseVisualStyleBackColor = true;
+            // 
+            // button39
+            // 
+            this.button39.Location = new System.Drawing.Point(502, 212);
+            this.button39.Name = "button39";
+            this.button39.Size = new System.Drawing.Size(30, 23);
+            this.button39.TabIndex = 30;
+            this.button39.Text = "-";
+            this.button39.UseVisualStyleBackColor = true;
+            // 
+            // button40
+            // 
+            this.button40.Location = new System.Drawing.Point(502, 183);
+            this.button40.Name = "button40";
+            this.button40.Size = new System.Drawing.Size(30, 23);
+            this.button40.TabIndex = 29;
+            this.button40.Text = "+";
+            this.button40.UseVisualStyleBackColor = true;
+            // 
+            // button42
+            // 
+            this.button42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button42.Location = new System.Drawing.Point(397, 57);
+            this.button42.Name = "button42";
+            this.button42.Size = new System.Drawing.Size(99, 40);
+            this.button42.TabIndex = 24;
+            this.button42.Text = "+1";
+            this.button42.UseVisualStyleBackColor = true;
+            // 
+            // nudBasketScoreboardAwayScore
+            // 
+            this.nudBasketScoreboardAwayScore.Location = new System.Drawing.Point(571, 15);
+            this.nudBasketScoreboardAwayScore.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.nudBasketScoreboardAwayScore.Name = "nudBasketScoreboardAwayScore";
+            this.nudBasketScoreboardAwayScore.Size = new System.Drawing.Size(44, 20);
+            this.nudBasketScoreboardAwayScore.TabIndex = 22;
+            this.nudBasketScoreboardAwayScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudBasketScoreboardAwayScore.ValueChanged += new System.EventHandler(this.nudBasketScoreboardAwayScore_ValueChanged);
+            // 
+            // nudBasketScoreboardHomeScore
+            // 
+            this.nudBasketScoreboardHomeScore.Location = new System.Drawing.Point(521, 15);
+            this.nudBasketScoreboardHomeScore.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.nudBasketScoreboardHomeScore.Name = "nudBasketScoreboardHomeScore";
+            this.nudBasketScoreboardHomeScore.Size = new System.Drawing.Size(44, 20);
+            this.nudBasketScoreboardHomeScore.TabIndex = 21;
+            this.nudBasketScoreboardHomeScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudBasketScoreboardHomeScore.ValueChanged += new System.EventHandler(this.nudBasketScoreboardHomeScore_ValueChanged);
+            // 
+            // txtBasketScoreboardAwayTeam
+            // 
+            this.txtBasketScoreboardAwayTeam.Location = new System.Drawing.Point(621, 14);
+            this.txtBasketScoreboardAwayTeam.Name = "txtBasketScoreboardAwayTeam";
+            this.txtBasketScoreboardAwayTeam.Size = new System.Drawing.Size(115, 20);
+            this.txtBasketScoreboardAwayTeam.TabIndex = 23;
+            // 
+            // txtBasketScoreboardHomeTeam
+            // 
+            this.txtBasketScoreboardHomeTeam.Location = new System.Drawing.Point(396, 14);
+            this.txtBasketScoreboardHomeTeam.Name = "txtBasketScoreboardHomeTeam";
+            this.txtBasketScoreboardHomeTeam.Size = new System.Drawing.Size(115, 20);
+            this.txtBasketScoreboardHomeTeam.TabIndex = 20;
+            // 
+            // shapeContainer5
+            // 
+            this.shapeContainer5.Location = new System.Drawing.Point(3, 16);
+            this.shapeContainer5.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer5.Name = "shapeContainer5";
+            this.shapeContainer5.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape5});
+            this.shapeContainer5.Size = new System.Drawing.Size(777, 291);
+            this.shapeContainer5.TabIndex = 61;
+            this.shapeContainer5.TabStop = false;
+            // 
+            // lineShape5
+            // 
+            this.lineShape5.Name = "lineShape3";
+            this.lineShape5.X1 = 360;
+            this.lineShape5.X2 = 360;
+            this.lineShape5.Y1 = 0;
+            this.lineShape5.Y2 = 283;
+            // 
+            // button43
+            // 
+            this.button43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button43.Location = new System.Drawing.Point(622, 151);
+            this.button43.Name = "button43";
+            this.button43.Size = new System.Drawing.Size(99, 42);
+            this.button43.TabIndex = 65;
+            this.button43.Text = "+3";
+            this.button43.UseVisualStyleBackColor = true;
+            // 
+            // button41
+            // 
+            this.button41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button41.Location = new System.Drawing.Point(397, 151);
+            this.button41.Name = "button41";
+            this.button41.Size = new System.Drawing.Size(99, 42);
+            this.button41.TabIndex = 67;
+            this.button41.Text = "+3";
+            this.button41.UseVisualStyleBackColor = true;
+            // 
+            // button44
+            // 
+            this.button44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button44.Location = new System.Drawing.Point(397, 103);
+            this.button44.Name = "button44";
+            this.button44.Size = new System.Drawing.Size(99, 42);
+            this.button44.TabIndex = 66;
+            this.button44.Text = "+2";
+            this.button44.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -8823,6 +9339,17 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSolidColor)).EndInit();
+            this.tabBasket.ResumeLayout(false);
+            this.tabPage35.ResumeLayout(false);
+            this.groupBox44.ResumeLayout(false);
+            this.groupBox44.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardShootTime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardGameTimeSecs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardGameTimeMins)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardAwayScore)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardHomeScore)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -9533,6 +10060,47 @@
         private System.Windows.Forms.Label lblGameplayPointerLocation;
         private System.Windows.Forms.Button btnGameplayRefresh;
         private System.Windows.Forms.ComboBox cmbGameplayImages;
+        private System.Windows.Forms.TabControl tabBasket;
+        private System.Windows.Forms.TabPage tabPage35;
+        private System.Windows.Forms.GroupBox groupBox44;
+        private System.Windows.Forms.ComboBox cmbTemplateBasketScoreboard;
+        private System.Windows.Forms.Label label133;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.NumericUpDown numericUpDown6;
+        private System.Windows.Forms.NumericUpDown nudBasketScoreboardShootTime;
+        private System.Windows.Forms.Button btnBasketScoreboardShowHideClocks;
+        private System.Windows.Forms.Button btnBasketScoreboardStartGameTime;
+        private System.Windows.Forms.Button btnBasketScoreboardResetGameTime;
+        private System.Windows.Forms.Button btnBasketScoreboardStopGameTime;
+        private System.Windows.Forms.Label label134;
+        private System.Windows.Forms.Label label135;
+        private System.Windows.Forms.Label label136;
+        private System.Windows.Forms.Label label137;
+        private System.Windows.Forms.ComboBox cmbBasktScoreboardQuarter;
+        private System.Windows.Forms.NumericUpDown nudBasketScoreboardGameTimeSecs;
+        private System.Windows.Forms.NumericUpDown nudBasketScoreboardGameTimeMins;
+        private System.Windows.Forms.Button btnBasketScoreboardStop;
+        private System.Windows.Forms.Button btnBasketScoreboardStart;
+        private System.Windows.Forms.Button button33;
+        private System.Windows.Forms.Button button34;
+        private System.Windows.Forms.Button button35;
+        private System.Windows.Forms.Button button36;
+        private System.Windows.Forms.Button button37;
+        private System.Windows.Forms.Button button38;
+        private System.Windows.Forms.Button button39;
+        private System.Windows.Forms.Button button40;
+        private System.Windows.Forms.Button button42;
+        private System.Windows.Forms.NumericUpDown nudBasketScoreboardAwayScore;
+        private System.Windows.Forms.NumericUpDown nudBasketScoreboardHomeScore;
+        private System.Windows.Forms.TextBox txtBasketScoreboardAwayTeam;
+        private System.Windows.Forms.TextBox txtBasketScoreboardHomeTeam;
+        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer5;
+        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape5;
+        private System.Windows.Forms.Button button41;
+        private System.Windows.Forms.Button button44;
+        private System.Windows.Forms.Button button43;
     }
 }
 

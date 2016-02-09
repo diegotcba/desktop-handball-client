@@ -275,6 +275,7 @@ namespace HandballCliente
         {
             setTabPosition(tabSports, 161, 0);
             setTabPosition(tabVolleyball, 161, 0);
+            setTabPosition(tabBasket, 161, 0);
             showSportTab(tabSports);
             lstSports.SelectedIndex = -1;
             hideAllSportTabs();
@@ -290,6 +291,9 @@ namespace HandballCliente
                     break;
                 case 1: 
                     showSportTab(tabVolleyball);
+                    break;
+                case 3:
+                    showSportTab(tabBasket);
                     break;
                 default:
                     hideAllSportTabs();
@@ -313,6 +317,7 @@ namespace HandballCliente
         {
             tabSports.Visible = false;
             tabVolleyball.Visible = false;
+            tabBasket.Visible = false;
         }
 
         private void setTopMost(bool stateTopMost)
@@ -393,6 +398,7 @@ namespace HandballCliente
                 fillCombosTemplate(cmbTemplateDynamicNewsTicker, templates);
                 fillCombosTemplate(cmbTemplateGameplay, templates);
                 fillCombosTemplate(cmbTemplateTwitterPoll, templates);
+                fillCombosTemplate(cmbTemplateBasketScoreboard, templates);
             }
         }
 
@@ -2748,6 +2754,122 @@ namespace HandballCliente
             }
         }
 
+        private bool checkDataBasketScoreboard()
+        {
+            bool aux = false;
+
+            aux = (cmbTemplateBasketScoreboard.Text.Length > 0);
+
+            aux = (txtBasketScoreboardHomeTeam.Text.Length > 0);
+
+            aux = (txtBasketScoreboardAwayTeam.Text.Length > 0);
+
+            aux = (cmbBasktScoreboardQuarter.Text.Length > 0);
+
+            return aux;
+        }
+
+        private void startBasketScoreboard()
+        {
+            if (checkDataBasketScoreboard())
+            {
+                if (casparServer.Connected)
+                {
+                    Template templateScoreboard = new Template();
+                    //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+
+                    templateScoreboard.Fields.Add(new TemplateField("team1Name", txtBasketScoreboardHomeTeam.Text));
+                    templateScoreboard.Fields.Add(new TemplateField("team2Name", txtBasketScoreboardAwayTeam.Text));
+                    templateScoreboard.Fields.Add(new TemplateField("team1Score", nudBasketScoreboardHomeScore.Value.ToString()));
+                    templateScoreboard.Fields.Add(new TemplateField("team2Score", nudBasketScoreboardAwayScore.Value.ToString()));
+                    templateScoreboard.Fields.Add(new TemplateField("gameTime", nudBasketScoreboardGameTimeMins.Value.ToString() + ":" + nudBasketScoreboardGameTimeSecs.Value.ToString()));
+                    templateScoreboard.Fields.Add(new TemplateField("shootTime", nudBasketScoreboardShootTime.Value.ToString()));
+                    templateScoreboard.Fields.Add(new TemplateField("quarterNum", cmbBasktScoreboardQuarter.Text));
+                    //templateScoreboard.Fields.Add(new TemplateField("logoScoreboard", logoPath.ToString()));
+
+                    //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
+                    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateScoreboard.TemplateDataText(), cmbTemplateBasketScoreboard.Text, layerScoreboard.ToString()));
+                    System.Diagnostics.Debug.WriteLine(ri.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Faltan definir algunos datos para iniciar (template, local/visitante)", this.Text);
+            }
+        }
+
+        private void stopBasketScoreboard()
+        {
+            casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerScoreboard.ToString()));
+        }
+
+        private void showHideBasketScoreboardClocks()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "clocksShowHide", layerScoreboard.ToString()));
+            }
+        }
+
+        private void startBasketScoreboardClock()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "gameTimeStartStop", layerScoreboard.ToString()));
+                if (chkAutoShowOnClockStart.Checked)
+                {
+                    showHideBasketScoreboardClocks();
+                }
+
+            }
+        }
+
+        private void stopBasketScoreboardClock()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "gameTimeStartStop", layerScoreboard.ToString()));
+            }
+        }
+
+        private void resetBasketScoreboardClock()
+        {
+            Template templateUpdateScore = new Template();
+
+            templateUpdateScore.Fields.Add(new TemplateField("gameTime", nudBasketScoreboardGameTimeMins.Value.ToString() + ":" + nudBasketScoreboardGameTimeSecs.Value.ToString()));
+
+            //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
+            ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateUpdateScore.TemplateDataText(), layerScoreboard.ToString()));
+            System.Diagnostics.Debug.WriteLine(ri.Message);
+        }
+
+        //public void addOneScoreTeam1()
+        //{
+        //    nudHomeTeamScore.UpButton();
+        //}
+
+        //public void addOneScoreTeam2()
+        //{
+        //    nudGuestTeamScore.UpButton();
+        //}
+
+        private void updateBasketScoreboardTeamsScore()
+        {
+            if (casparServer.Connected)
+            {
+                Template templateUpdateScore = new Template();
+
+                templateUpdateScore.Fields.Add(new TemplateField("team1Name", txtBasketScoreboardHomeTeam.Text));
+                templateUpdateScore.Fields.Add(new TemplateField("team2Name", txtBasketScoreboardAwayTeam.Text));
+                templateUpdateScore.Fields.Add(new TemplateField("team1Score", nudBasketScoreboardHomeScore.Value.ToString()));
+                templateUpdateScore.Fields.Add(new TemplateField("team2Score", nudBasketScoreboardAwayScore.Value.ToString()));
+
+                //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
+                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateUpdateScore.TemplateDataText(), layerScoreboard.ToString()));
+                System.Diagnostics.Debug.WriteLine(ri.Message);
+            }
+        }
+
         private void openFile()
         {
             System.Windows.Forms.OpenFileDialog fdlg = new System.Windows.Forms.OpenFileDialog();
@@ -4309,6 +4431,46 @@ namespace HandballCliente
         private void btnGameplayPause_Click(object sender, EventArgs e)
         {
             pauseGameplayMedia();
+        }
+
+        private void btnBasketScoreboardStart_Click(object sender, EventArgs e)
+        {
+            startBasketScoreboard();
+        }
+
+        private void btnBasketScoreboardStop_Click(object sender, EventArgs e)
+        {
+            stopBasketScoreboard();
+        }
+
+        private void btnBasketScoreboardStartGameTime_Click(object sender, EventArgs e)
+        {
+            startBasketScoreboardClock();
+        }
+
+        private void btnBasketScoreboardStopGameTime_Click(object sender, EventArgs e)
+        {
+            stopBasketScoreboardClock();
+        }
+
+        private void btnBasketScoreboardResetGameTime_Click(object sender, EventArgs e)
+        {
+            resetBasketScoreboardClock();
+        }
+
+        private void btnBasketScoreboardShowHideClocks_Click(object sender, EventArgs e)
+        {
+            showHideBasketScoreboardClocks();
+        }
+
+        private void nudBasketScoreboardHomeScore_ValueChanged(object sender, EventArgs e)
+        {
+            updateBasketScoreboardTeamsScore();
+        }
+
+        private void nudBasketScoreboardAwayScore_ValueChanged(object sender, EventArgs e)
+        {
+            updateBasketScoreboardTeamsScore();
         }
     }
 }

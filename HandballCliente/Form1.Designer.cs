@@ -57,65 +57,48 @@
             this.btnLockUnlock = new System.Windows.Forms.Button();
             this.btnUpdateTemplates = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabVolleyball = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.groupBox22 = new System.Windows.Forms.GroupBox();
-            this.cmbTemplateVolleyResult = new System.Windows.Forms.ComboBox();
-            this.label51 = new System.Windows.Forms.Label();
-            this.nudAutoHideVolleyResultSeconds = new System.Windows.Forms.NumericUpDown();
-            this.chkAutoHideVolleyResult = new System.Windows.Forms.CheckBox();
-            this.btnStopVolleyResult = new System.Windows.Forms.Button();
-            this.btnStartVolleyResult = new System.Windows.Forms.Button();
-            this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.label62 = new System.Windows.Forms.Label();
-            this.nudVolleyServicesPerPlayer = new System.Windows.Forms.NumericUpDown();
-            this.label60 = new System.Windows.Forms.Label();
-            this.cmbVolleyScoreboardFontSize = new System.Windows.Forms.ComboBox();
-            this.chkVolleyShowService = new System.Windows.Forms.CheckBox();
-            this.label58 = new System.Windows.Forms.Label();
-            this.txtVolleyWebsite = new System.Windows.Forms.TextBox();
-            this.label57 = new System.Windows.Forms.Label();
-            this.txtVolleyTitle = new System.Windows.Forms.TextBox();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.nudVolleyPointsPerSet = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleySetsPerMatch = new System.Windows.Forms.NumericUpDown();
-            this.cmbTemplateVolleyScoreboard = new System.Windows.Forms.ComboBox();
-            this.label52 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.radVolleyGuestServe = new System.Windows.Forms.RadioButton();
-            this.radVolleyHomeServe = new System.Windows.Forms.RadioButton();
-            this.nudAutoHideVolleyScoreboardSeconds = new System.Windows.Forms.NumericUpDown();
-            this.chkAutoHideVolleyScoreboard = new System.Windows.Forms.CheckBox();
-            this.btnStopVolleyScoreboard = new System.Windows.Forms.Button();
-            this.btnStartVolleyScoreboard = new System.Windows.Forms.Button();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.radVolley2Set = new System.Windows.Forms.RadioButton();
-            this.radVolley3Set = new System.Windows.Forms.RadioButton();
-            this.radVolley4Set = new System.Windows.Forms.RadioButton();
-            this.radVolley5Set = new System.Windows.Forms.RadioButton();
-            this.radVolley1Set = new System.Windows.Forms.RadioButton();
-            this.nudVolleyGuestSets = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleyHomeSets = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleyGuest4SetPoints = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleyHome4SetPoints = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleyGuest3SetPoints = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleyHome3SetPoints = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleyGuest2SetPoints = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleyHome2SetPoints = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleyGuest1SetPoints = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleyHome1SetPoints = new System.Windows.Forms.NumericUpDown();
-            this.btnUpdateVolleyScoreboard = new System.Windows.Forms.Button();
-            this.chkAutoUpdateVolleyScoreboard = new System.Windows.Forms.CheckBox();
-            this.btnVolleyHomeAddPoint = new System.Windows.Forms.Button();
-            this.btnVolleyGuestAddPoint = new System.Windows.Forms.Button();
-            this.nudVolleyGuest5SetPoints = new System.Windows.Forms.NumericUpDown();
-            this.nudVolleyHome5SetPoints = new System.Windows.Forms.NumericUpDown();
-            this.txtVolleyGuestTeam = new System.Windows.Forms.TextBox();
-            this.txtVolleyHomeTeam = new System.Windows.Forms.TextBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabBasket = new System.Windows.Forms.TabControl();
+            this.tabPage35 = new System.Windows.Forms.TabPage();
+            this.groupBox44 = new System.Windows.Forms.GroupBox();
+            this.btnBasketScoreboardShowHideScoreboard = new System.Windows.Forms.Button();
+            this.btnBasketScoreboardHome3PAdd = new System.Windows.Forms.Button();
+            this.btnBasketScoreboardHome2PAdd = new System.Windows.Forms.Button();
+            this.btnBasketScoreboardAway3PAdd = new System.Windows.Forms.Button();
+            this.cmbTemplateBasketScoreboard = new System.Windows.Forms.ComboBox();
+            this.label133 = new System.Windows.Forms.Label();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.nudBasketScoreboardShootTime = new System.Windows.Forms.NumericUpDown();
+            this.btnBasketScoreboardShowHideClocks = new System.Windows.Forms.Button();
+            this.btnBasketScoreboardStartGameTime = new System.Windows.Forms.Button();
+            this.btnBasketScoreboardResetGameTime = new System.Windows.Forms.Button();
+            this.btnBasketScoreboardStopGameTime = new System.Windows.Forms.Button();
+            this.label134 = new System.Windows.Forms.Label();
+            this.label135 = new System.Windows.Forms.Label();
+            this.label136 = new System.Windows.Forms.Label();
+            this.label137 = new System.Windows.Forms.Label();
+            this.cmbBasktScoreboardQuarter = new System.Windows.Forms.ComboBox();
+            this.nudBasketScoreboardGameTimeSecs = new System.Windows.Forms.NumericUpDown();
+            this.nudBasketScoreboardGameTimeMins = new System.Windows.Forms.NumericUpDown();
+            this.btnBasketScoreboardStop = new System.Windows.Forms.Button();
+            this.btnBasketScoreboardStart = new System.Windows.Forms.Button();
+            this.button33 = new System.Windows.Forms.Button();
+            this.button34 = new System.Windows.Forms.Button();
+            this.button35 = new System.Windows.Forms.Button();
+            this.btnBasketScoreboardAway2PAdd = new System.Windows.Forms.Button();
+            this.btnBasketScoreboardAway1PAdd = new System.Windows.Forms.Button();
+            this.button38 = new System.Windows.Forms.Button();
+            this.button39 = new System.Windows.Forms.Button();
+            this.button40 = new System.Windows.Forms.Button();
+            this.btnBasketScoreboardHome1PAdd = new System.Windows.Forms.Button();
+            this.nudBasketScoreboardAwayScore = new System.Windows.Forms.NumericUpDown();
+            this.nudBasketScoreboardHomeScore = new System.Windows.Forms.NumericUpDown();
+            this.txtBasketScoreboardAwayTeam = new System.Windows.Forms.TextBox();
+            this.txtBasketScoreboardHomeTeam = new System.Windows.Forms.TextBox();
+            this.shapeContainer5 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lstSports = new System.Windows.Forms.ListBox();
             this.label121 = new System.Windows.Forms.Label();
             this.tabSports = new System.Windows.Forms.TabControl();
@@ -295,6 +278,65 @@
             this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.shapeContainer4 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.tabVolleyball = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.cmbTemplateVolleyResult = new System.Windows.Forms.ComboBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.nudAutoHideVolleyResultSeconds = new System.Windows.Forms.NumericUpDown();
+            this.chkAutoHideVolleyResult = new System.Windows.Forms.CheckBox();
+            this.btnStopVolleyResult = new System.Windows.Forms.Button();
+            this.btnStartVolleyResult = new System.Windows.Forms.Button();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.nudVolleyServicesPerPlayer = new System.Windows.Forms.NumericUpDown();
+            this.label60 = new System.Windows.Forms.Label();
+            this.cmbVolleyScoreboardFontSize = new System.Windows.Forms.ComboBox();
+            this.chkVolleyShowService = new System.Windows.Forms.CheckBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.txtVolleyWebsite = new System.Windows.Forms.TextBox();
+            this.label57 = new System.Windows.Forms.Label();
+            this.txtVolleyTitle = new System.Windows.Forms.TextBox();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.nudVolleyPointsPerSet = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleySetsPerMatch = new System.Windows.Forms.NumericUpDown();
+            this.cmbTemplateVolleyScoreboard = new System.Windows.Forms.ComboBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.radVolleyGuestServe = new System.Windows.Forms.RadioButton();
+            this.radVolleyHomeServe = new System.Windows.Forms.RadioButton();
+            this.nudAutoHideVolleyScoreboardSeconds = new System.Windows.Forms.NumericUpDown();
+            this.chkAutoHideVolleyScoreboard = new System.Windows.Forms.CheckBox();
+            this.btnStopVolleyScoreboard = new System.Windows.Forms.Button();
+            this.btnStartVolleyScoreboard = new System.Windows.Forms.Button();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.radVolley2Set = new System.Windows.Forms.RadioButton();
+            this.radVolley3Set = new System.Windows.Forms.RadioButton();
+            this.radVolley4Set = new System.Windows.Forms.RadioButton();
+            this.radVolley5Set = new System.Windows.Forms.RadioButton();
+            this.radVolley1Set = new System.Windows.Forms.RadioButton();
+            this.nudVolleyGuestSets = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleyHomeSets = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleyGuest4SetPoints = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleyHome4SetPoints = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleyGuest3SetPoints = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleyHome3SetPoints = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleyGuest2SetPoints = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleyHome2SetPoints = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleyGuest1SetPoints = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleyHome1SetPoints = new System.Windows.Forms.NumericUpDown();
+            this.btnUpdateVolleyScoreboard = new System.Windows.Forms.Button();
+            this.chkAutoUpdateVolleyScoreboard = new System.Windows.Forms.CheckBox();
+            this.btnVolleyHomeAddPoint = new System.Windows.Forms.Button();
+            this.btnVolleyGuestAddPoint = new System.Windows.Forms.Button();
+            this.nudVolleyGuest5SetPoints = new System.Windows.Forms.NumericUpDown();
+            this.nudVolleyHome5SetPoints = new System.Windows.Forms.NumericUpDown();
+            this.txtVolleyGuestTeam = new System.Windows.Forms.TextBox();
+            this.txtVolleyHomeTeam = new System.Windows.Forms.TextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.chkLoopAudioFile = new System.Windows.Forms.CheckBox();
@@ -398,6 +440,57 @@
             this.lvwGameshowQuestions = new System.Windows.Forms.ListView();
             this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabPage36 = new System.Windows.Forms.TabPage();
+            this.groupBox46 = new System.Windows.Forms.GroupBox();
+            this.label144 = new System.Windows.Forms.Label();
+            this.cmbGameShowFindCardRotationSecondsDuration = new System.Windows.Forms.ComboBox();
+            this.chkGameShowFindCardAutoUpdate = new System.Windows.Forms.CheckBox();
+            this.lstGameShowFindCardTries = new System.Windows.Forms.ListBox();
+            this.label141 = new System.Windows.Forms.Label();
+            this.label140 = new System.Windows.Forms.Label();
+            this.cmbGameShowFindCardNumberTries = new System.Windows.Forms.ComboBox();
+            this.btnGameShowFindCardHideAll = new System.Windows.Forms.Button();
+            this.btnGameShowFindCardShowAll = new System.Windows.Forms.Button();
+            this.tlpGameShowFindCardsItems = new System.Windows.Forms.TableLayoutPanel();
+            this.chkGameShowFindCardMatch1 = new System.Windows.Forms.CheckBox();
+            this.chkGameShowFindCardMatch9 = new System.Windows.Forms.CheckBox();
+            this.chkGameShowFindCardMatch7 = new System.Windows.Forms.CheckBox();
+            this.chkGameShowFindCardMatch8 = new System.Windows.Forms.CheckBox();
+            this.chkGameShowFindCardMatch6 = new System.Windows.Forms.CheckBox();
+            this.chkGameShowFindCardMatch5 = new System.Windows.Forms.CheckBox();
+            this.chkGameShowFindCardMatch4 = new System.Windows.Forms.CheckBox();
+            this.chkGameShowFindCardMatch3 = new System.Windows.Forms.CheckBox();
+            this.chkGameShowFindCardMatch2 = new System.Windows.Forms.CheckBox();
+            this.label139 = new System.Windows.Forms.Label();
+            this.cmbGameShowFindCardMatches = new System.Windows.Forms.ComboBox();
+            this.btnGameShowFindCardHide = new System.Windows.Forms.Button();
+            this.btnGameShowFindCardShow = new System.Windows.Forms.Button();
+            this.btnGameShowFindCardStop = new System.Windows.Forms.Button();
+            this.btnGameShowFindCardStart = new System.Windows.Forms.Button();
+            this.cmbTemplateGameshowFindCard = new System.Windows.Forms.ComboBox();
+            this.label138 = new System.Windows.Forms.Label();
+            this.groupBox45 = new System.Windows.Forms.GroupBox();
+            this.btnGameShowFindCardSaveMatch = new System.Windows.Forms.Button();
+            this.label143 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnGameShowFindCardGenerateMatch = new System.Windows.Forms.Button();
+            this.label142 = new System.Windows.Forms.Label();
+            this.cmbGameShowFindCardWins = new System.Windows.Forms.ComboBox();
+            this.button46 = new System.Windows.Forms.Button();
+            this.btnGameShowFindCardMoveDown = new System.Windows.Forms.Button();
+            this.btnGameShowFindCardMoveUp = new System.Windows.Forms.Button();
+            this.lvwGameShowFindCardMatch = new System.Windows.Forms.ListView();
+            this.columnHeader50 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader51 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnGameShowFindCardClearItems = new System.Windows.Forms.Button();
+            this.btnGameShowFindCardLoadItems = new System.Windows.Forms.Button();
+            this.btnGameShowFindCardEditItem = new System.Windows.Forms.Button();
+            this.btnGameShowFindCardRemoveItem = new System.Windows.Forms.Button();
+            this.btnGameShowFindCardAddItem = new System.Windows.Forms.Button();
+            this.lvwGameShowFindCardItems = new System.Windows.Forms.ListView();
+            this.columnHeader36 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader49 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader52 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage12 = new System.Windows.Forms.TabPage();
             this.tabElections = new System.Windows.Forms.TabControl();
             this.tabPage22 = new System.Windows.Forms.TabPage();
@@ -733,75 +826,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtServerAddress = new System.Windows.Forms.TextBox();
-            this.tabBasket = new System.Windows.Forms.TabControl();
-            this.tabPage35 = new System.Windows.Forms.TabPage();
-            this.groupBox44 = new System.Windows.Forms.GroupBox();
-            this.cmbTemplateBasketScoreboard = new System.Windows.Forms.ComboBox();
-            this.label133 = new System.Windows.Forms.Label();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
-            this.nudBasketScoreboardShootTime = new System.Windows.Forms.NumericUpDown();
-            this.btnBasketScoreboardShowHideClocks = new System.Windows.Forms.Button();
-            this.btnBasketScoreboardStartGameTime = new System.Windows.Forms.Button();
-            this.btnBasketScoreboardResetGameTime = new System.Windows.Forms.Button();
-            this.btnBasketScoreboardStopGameTime = new System.Windows.Forms.Button();
-            this.label134 = new System.Windows.Forms.Label();
-            this.label135 = new System.Windows.Forms.Label();
-            this.label136 = new System.Windows.Forms.Label();
-            this.label137 = new System.Windows.Forms.Label();
-            this.cmbBasktScoreboardQuarter = new System.Windows.Forms.ComboBox();
-            this.nudBasketScoreboardGameTimeSecs = new System.Windows.Forms.NumericUpDown();
-            this.nudBasketScoreboardGameTimeMins = new System.Windows.Forms.NumericUpDown();
-            this.btnBasketScoreboardStop = new System.Windows.Forms.Button();
-            this.btnBasketScoreboardStart = new System.Windows.Forms.Button();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
-            this.button37 = new System.Windows.Forms.Button();
-            this.button38 = new System.Windows.Forms.Button();
-            this.button39 = new System.Windows.Forms.Button();
-            this.button40 = new System.Windows.Forms.Button();
-            this.button42 = new System.Windows.Forms.Button();
-            this.nudBasketScoreboardAwayScore = new System.Windows.Forms.NumericUpDown();
-            this.nudBasketScoreboardHomeScore = new System.Windows.Forms.NumericUpDown();
-            this.txtBasketScoreboardAwayTeam = new System.Windows.Forms.TextBox();
-            this.txtBasketScoreboardHomeTeam = new System.Windows.Forms.TextBox();
-            this.shapeContainer5 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.button43 = new System.Windows.Forms.Button();
-            this.button41 = new System.Windows.Forms.Button();
-            this.button44 = new System.Windows.Forms.Button();
             this.mstMenues.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabVolleyball.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.groupBox22.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideVolleyResultSeconds)).BeginInit();
-            this.groupBox21.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyServicesPerPlayer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyPointsPerSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleySetsPerMatch)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideVolleyScoreboardSeconds)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuestSets)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHomeSets)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest4SetPoints)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome4SetPoints)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest3SetPoints)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome3SetPoints)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest2SetPoints)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome2SetPoints)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest1SetPoints)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome1SetPoints)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest5SetPoints)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome5SetPoints)).BeginInit();
+            this.tabBasket.SuspendLayout();
+            this.tabPage35.SuspendLayout();
+            this.groupBox44.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardShootTime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardGameTimeSecs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardGameTimeMins)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardAwayScore)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardHomeScore)).BeginInit();
             this.tabSports.SuspendLayout();
             this.tabPage17.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -836,6 +876,28 @@
             this.tabPage21.SuspendLayout();
             this.groupBox18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAutoHidePositionsSeconds)).BeginInit();
+            this.tabVolleyball.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBox22.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideVolleyResultSeconds)).BeginInit();
+            this.groupBox21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyServicesPerPlayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyPointsPerSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleySetsPerMatch)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideVolleyScoreboardSeconds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuestSets)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHomeSets)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest4SetPoints)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome4SetPoints)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest3SetPoints)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome3SetPoints)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest2SetPoints)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome2SetPoints)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest1SetPoints)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome1SetPoints)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest5SetPoints)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome5SetPoints)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.groupBox16.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -858,6 +920,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudGameshowCounterSeconds)).BeginInit();
             this.tabPage8.SuspendLayout();
             this.groupBox25.SuspendLayout();
+            this.tabPage36.SuspendLayout();
+            this.groupBox46.SuspendLayout();
+            this.tlpGameShowFindCardsItems.SuspendLayout();
+            this.groupBox45.SuspendLayout();
             this.tabPage12.SuspendLayout();
             this.tabElections.SuspendLayout();
             this.tabPage22.SuspendLayout();
@@ -924,16 +990,6 @@
             this.tlsGamePlay.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSolidColor)).BeginInit();
-            this.tabBasket.SuspendLayout();
-            this.tabPage35.SuspendLayout();
-            this.groupBox44.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardShootTime)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardGameTimeSecs)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardGameTimeMins)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardAwayScore)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardHomeScore)).BeginInit();
             this.SuspendLayout();
             // 
             // mstMenues
@@ -1185,741 +1241,487 @@
             this.tabPage2.Text = "Sports  (F3)";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabVolleyball
+            // tabBasket
             // 
-            this.tabVolleyball.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tabVolleyball.Controls.Add(this.tabPage3);
-            this.tabVolleyball.Controls.Add(this.tabPage4);
-            this.tabVolleyball.Location = new System.Drawing.Point(79, 0);
-            this.tabVolleyball.Multiline = true;
-            this.tabVolleyball.Name = "tabVolleyball";
-            this.tabVolleyball.SelectedIndex = 0;
-            this.tabVolleyball.Size = new System.Drawing.Size(822, 323);
-            this.tabVolleyball.TabIndex = 13;
+            this.tabBasket.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tabBasket.Controls.Add(this.tabPage35);
+            this.tabBasket.Location = new System.Drawing.Point(82, 0);
+            this.tabBasket.Multiline = true;
+            this.tabBasket.Name = "tabBasket";
+            this.tabBasket.SelectedIndex = 0;
+            this.tabBasket.Size = new System.Drawing.Size(822, 323);
+            this.tabBasket.TabIndex = 15;
             // 
-            // tabPage3
+            // tabPage35
             // 
-            this.tabPage3.Controls.Add(this.groupBox22);
-            this.tabPage3.Controls.Add(this.groupBox21);
-            this.tabPage3.Location = new System.Drawing.Point(23, 4);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(795, 315);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "Scoreboard";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage35.Controls.Add(this.groupBox44);
+            this.tabPage35.Location = new System.Drawing.Point(23, 4);
+            this.tabPage35.Name = "tabPage35";
+            this.tabPage35.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage35.Size = new System.Drawing.Size(795, 315);
+            this.tabPage35.TabIndex = 0;
+            this.tabPage35.Text = "Scoreboard";
+            this.tabPage35.UseVisualStyleBackColor = true;
             // 
-            // groupBox22
+            // groupBox44
             // 
-            this.groupBox22.Controls.Add(this.cmbTemplateVolleyResult);
-            this.groupBox22.Controls.Add(this.label51);
-            this.groupBox22.Controls.Add(this.nudAutoHideVolleyResultSeconds);
-            this.groupBox22.Controls.Add(this.chkAutoHideVolleyResult);
-            this.groupBox22.Controls.Add(this.btnStopVolleyResult);
-            this.groupBox22.Controls.Add(this.btnStartVolleyResult);
-            this.groupBox22.Location = new System.Drawing.Point(4, 244);
-            this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Size = new System.Drawing.Size(785, 69);
-            this.groupBox22.TabIndex = 3;
-            this.groupBox22.TabStop = false;
-            this.groupBox22.Text = "Resultado";
+            this.groupBox44.Controls.Add(this.btnBasketScoreboardShowHideScoreboard);
+            this.groupBox44.Controls.Add(this.btnBasketScoreboardHome3PAdd);
+            this.groupBox44.Controls.Add(this.btnBasketScoreboardHome2PAdd);
+            this.groupBox44.Controls.Add(this.btnBasketScoreboardAway3PAdd);
+            this.groupBox44.Controls.Add(this.cmbTemplateBasketScoreboard);
+            this.groupBox44.Controls.Add(this.label133);
+            this.groupBox44.Controls.Add(this.checkBox5);
+            this.groupBox44.Controls.Add(this.checkBox6);
+            this.groupBox44.Controls.Add(this.numericUpDown5);
+            this.groupBox44.Controls.Add(this.numericUpDown6);
+            this.groupBox44.Controls.Add(this.nudBasketScoreboardShootTime);
+            this.groupBox44.Controls.Add(this.btnBasketScoreboardShowHideClocks);
+            this.groupBox44.Controls.Add(this.btnBasketScoreboardStartGameTime);
+            this.groupBox44.Controls.Add(this.btnBasketScoreboardResetGameTime);
+            this.groupBox44.Controls.Add(this.btnBasketScoreboardStopGameTime);
+            this.groupBox44.Controls.Add(this.label134);
+            this.groupBox44.Controls.Add(this.label135);
+            this.groupBox44.Controls.Add(this.label136);
+            this.groupBox44.Controls.Add(this.label137);
+            this.groupBox44.Controls.Add(this.cmbBasktScoreboardQuarter);
+            this.groupBox44.Controls.Add(this.nudBasketScoreboardGameTimeSecs);
+            this.groupBox44.Controls.Add(this.nudBasketScoreboardGameTimeMins);
+            this.groupBox44.Controls.Add(this.btnBasketScoreboardStop);
+            this.groupBox44.Controls.Add(this.btnBasketScoreboardStart);
+            this.groupBox44.Controls.Add(this.button33);
+            this.groupBox44.Controls.Add(this.button34);
+            this.groupBox44.Controls.Add(this.button35);
+            this.groupBox44.Controls.Add(this.btnBasketScoreboardAway2PAdd);
+            this.groupBox44.Controls.Add(this.btnBasketScoreboardAway1PAdd);
+            this.groupBox44.Controls.Add(this.button38);
+            this.groupBox44.Controls.Add(this.button39);
+            this.groupBox44.Controls.Add(this.button40);
+            this.groupBox44.Controls.Add(this.btnBasketScoreboardHome1PAdd);
+            this.groupBox44.Controls.Add(this.nudBasketScoreboardAwayScore);
+            this.groupBox44.Controls.Add(this.nudBasketScoreboardHomeScore);
+            this.groupBox44.Controls.Add(this.txtBasketScoreboardAwayTeam);
+            this.groupBox44.Controls.Add(this.txtBasketScoreboardHomeTeam);
+            this.groupBox44.Controls.Add(this.shapeContainer5);
+            this.groupBox44.Location = new System.Drawing.Point(6, 2);
+            this.groupBox44.Name = "groupBox44";
+            this.groupBox44.Size = new System.Drawing.Size(783, 310);
+            this.groupBox44.TabIndex = 2;
+            this.groupBox44.TabStop = false;
+            this.groupBox44.Text = "Scoreboard";
             // 
-            // cmbTemplateVolleyResult
+            // btnBasketScoreboardShowHideScoreboard
             // 
-            this.cmbTemplateVolleyResult.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTemplateVolleyResult.FormattingEnabled = true;
-            this.cmbTemplateVolleyResult.Location = new System.Drawing.Point(71, 26);
-            this.cmbTemplateVolleyResult.Name = "cmbTemplateVolleyResult";
-            this.cmbTemplateVolleyResult.Size = new System.Drawing.Size(215, 21);
-            this.cmbTemplateVolleyResult.TabIndex = 30;
+            this.btnBasketScoreboardShowHideScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBasketScoreboardShowHideScoreboard.Location = new System.Drawing.Point(263, 94);
+            this.btnBasketScoreboardShowHideScoreboard.Name = "btnBasketScoreboardShowHideScoreboard";
+            this.btnBasketScoreboardShowHideScoreboard.Size = new System.Drawing.Size(80, 51);
+            this.btnBasketScoreboardShowHideScoreboard.TabIndex = 68;
+            this.btnBasketScoreboardShowHideScoreboard.Text = "Mostrar/Ocultar";
+            this.btnBasketScoreboardShowHideScoreboard.UseVisualStyleBackColor = true;
+            this.btnBasketScoreboardShowHideScoreboard.Click += new System.EventHandler(this.btnBasketScoreboardShowHideScoreboard_Click);
             // 
-            // label51
+            // btnBasketScoreboardHome3PAdd
             // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(19, 29);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(54, 13);
-            this.label51.TabIndex = 63;
-            this.label51.Text = "Template:";
+            this.btnBasketScoreboardHome3PAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBasketScoreboardHome3PAdd.Location = new System.Drawing.Point(397, 151);
+            this.btnBasketScoreboardHome3PAdd.Name = "btnBasketScoreboardHome3PAdd";
+            this.btnBasketScoreboardHome3PAdd.Size = new System.Drawing.Size(99, 42);
+            this.btnBasketScoreboardHome3PAdd.TabIndex = 67;
+            this.btnBasketScoreboardHome3PAdd.Text = "+3";
+            this.btnBasketScoreboardHome3PAdd.UseVisualStyleBackColor = true;
+            this.btnBasketScoreboardHome3PAdd.Click += new System.EventHandler(this.btnBasketScoreboardHome3PAdd_Click);
             // 
-            // nudAutoHideVolleyResultSeconds
+            // btnBasketScoreboardHome2PAdd
             // 
-            this.nudAutoHideVolleyResultSeconds.Location = new System.Drawing.Point(566, 30);
-            this.nudAutoHideVolleyResultSeconds.Maximum = new decimal(new int[] {
-            60,
+            this.btnBasketScoreboardHome2PAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBasketScoreboardHome2PAdd.Location = new System.Drawing.Point(397, 103);
+            this.btnBasketScoreboardHome2PAdd.Name = "btnBasketScoreboardHome2PAdd";
+            this.btnBasketScoreboardHome2PAdd.Size = new System.Drawing.Size(99, 42);
+            this.btnBasketScoreboardHome2PAdd.TabIndex = 66;
+            this.btnBasketScoreboardHome2PAdd.Text = "+2";
+            this.btnBasketScoreboardHome2PAdd.UseVisualStyleBackColor = true;
+            this.btnBasketScoreboardHome2PAdd.Click += new System.EventHandler(this.btnBasketScoreboardHome2PAdd_Click);
+            // 
+            // btnBasketScoreboardAway3PAdd
+            // 
+            this.btnBasketScoreboardAway3PAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBasketScoreboardAway3PAdd.Location = new System.Drawing.Point(622, 151);
+            this.btnBasketScoreboardAway3PAdd.Name = "btnBasketScoreboardAway3PAdd";
+            this.btnBasketScoreboardAway3PAdd.Size = new System.Drawing.Size(99, 42);
+            this.btnBasketScoreboardAway3PAdd.TabIndex = 65;
+            this.btnBasketScoreboardAway3PAdd.Text = "+3";
+            this.btnBasketScoreboardAway3PAdd.UseVisualStyleBackColor = true;
+            this.btnBasketScoreboardAway3PAdd.Click += new System.EventHandler(this.btnBasketScoreboardAway3PAdd_Click);
+            // 
+            // cmbTemplateBasketScoreboard
+            // 
+            this.cmbTemplateBasketScoreboard.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTemplateBasketScoreboard.FormattingEnabled = true;
+            this.cmbTemplateBasketScoreboard.Location = new System.Drawing.Point(80, 17);
+            this.cmbTemplateBasketScoreboard.Name = "cmbTemplateBasketScoreboard";
+            this.cmbTemplateBasketScoreboard.Size = new System.Drawing.Size(272, 21);
+            this.cmbTemplateBasketScoreboard.TabIndex = 64;
+            // 
+            // label133
+            // 
+            this.label133.AutoSize = true;
+            this.label133.Location = new System.Drawing.Point(9, 20);
+            this.label133.Name = "label133";
+            this.label133.Size = new System.Drawing.Size(54, 13);
+            this.label133.TabIndex = 63;
+            this.label133.Text = "Template:";
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(249, 256);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(103, 17);
+            this.checkBox5.TabIndex = 62;
+            this.checkBox5.Text = "Mostrar al Iniciar";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(249, 233);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(111, 17);
+            this.checkBox6.TabIndex = 9;
+            this.checkBox6.Text = "Ocultar al terminar";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown5
+            // 
+            this.numericUpDown5.Location = new System.Drawing.Point(161, 210);
+            this.numericUpDown5.Maximum = new decimal(new int[] {
+            59,
             0,
             0,
             0});
-            this.nudAutoHideVolleyResultSeconds.Minimum = new decimal(new int[] {
-            1,
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(37, 20);
+            this.numericUpDown5.TabIndex = 14;
+            this.numericUpDown5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // numericUpDown6
+            // 
+            this.numericUpDown6.Location = new System.Drawing.Point(115, 210);
+            this.numericUpDown6.Maximum = new decimal(new int[] {
+            120,
             0,
             0,
             0});
-            this.nudAutoHideVolleyResultSeconds.Name = "nudAutoHideVolleyResultSeconds";
-            this.nudAutoHideVolleyResultSeconds.Size = new System.Drawing.Size(40, 20);
-            this.nudAutoHideVolleyResultSeconds.TabIndex = 33;
-            this.nudAutoHideVolleyResultSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudAutoHideVolleyResultSeconds.Value = new decimal(new int[] {
-            3,
+            this.numericUpDown6.Name = "numericUpDown6";
+            this.numericUpDown6.Size = new System.Drawing.Size(40, 20);
+            this.numericUpDown6.TabIndex = 13;
+            this.numericUpDown6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // nudBasketScoreboardShootTime
+            // 
+            this.nudBasketScoreboardShootTime.Location = new System.Drawing.Point(161, 234);
+            this.nudBasketScoreboardShootTime.Maximum = new decimal(new int[] {
+            59,
             0,
             0,
             0});
+            this.nudBasketScoreboardShootTime.Name = "nudBasketScoreboardShootTime";
+            this.nudBasketScoreboardShootTime.Size = new System.Drawing.Size(37, 20);
+            this.nudBasketScoreboardShootTime.TabIndex = 16;
+            this.nudBasketScoreboardShootTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // chkAutoHideVolleyResult
+            // btnBasketScoreboardShowHideClocks
             // 
-            this.chkAutoHideVolleyResult.AutoSize = true;
-            this.chkAutoHideVolleyResult.Location = new System.Drawing.Point(475, 30);
-            this.chkAutoHideVolleyResult.Name = "chkAutoHideVolleyResult";
-            this.chkAutoHideVolleyResult.Size = new System.Drawing.Size(85, 17);
-            this.chkAutoHideVolleyResult.TabIndex = 32;
-            this.chkAutoHideVolleyResult.Text = "Auto Ocultar";
-            this.chkAutoHideVolleyResult.UseVisualStyleBackColor = true;
+            this.btnBasketScoreboardShowHideClocks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBasketScoreboardShowHideClocks.Location = new System.Drawing.Point(263, 169);
+            this.btnBasketScoreboardShowHideClocks.Name = "btnBasketScoreboardShowHideClocks";
+            this.btnBasketScoreboardShowHideClocks.Size = new System.Drawing.Size(80, 51);
+            this.btnBasketScoreboardShowHideClocks.TabIndex = 8;
+            this.btnBasketScoreboardShowHideClocks.Text = "Mostrar/Ocultar";
+            this.btnBasketScoreboardShowHideClocks.UseVisualStyleBackColor = true;
+            this.btnBasketScoreboardShowHideClocks.Click += new System.EventHandler(this.btnBasketScoreboardShowHideClocks_Click);
             // 
-            // btnStopVolleyResult
+            // btnBasketScoreboardStartGameTime
             // 
-            this.btnStopVolleyResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStopVolleyResult.Location = new System.Drawing.Point(624, 19);
-            this.btnStopVolleyResult.Name = "btnStopVolleyResult";
-            this.btnStopVolleyResult.Size = new System.Drawing.Size(73, 38);
-            this.btnStopVolleyResult.TabIndex = 34;
-            this.btnStopVolleyResult.Text = "Parar";
-            this.btnStopVolleyResult.UseVisualStyleBackColor = true;
-            this.btnStopVolleyResult.Click += new System.EventHandler(this.btnStopVolleyResult_Click);
+            this.btnBasketScoreboardStartGameTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBasketScoreboardStartGameTime.Location = new System.Drawing.Point(12, 171);
+            this.btnBasketScoreboardStartGameTime.Name = "btnBasketScoreboardStartGameTime";
+            this.btnBasketScoreboardStartGameTime.Size = new System.Drawing.Size(69, 29);
+            this.btnBasketScoreboardStartGameTime.TabIndex = 10;
+            this.btnBasketScoreboardStartGameTime.Text = "Iniciar";
+            this.btnBasketScoreboardStartGameTime.UseVisualStyleBackColor = true;
+            this.btnBasketScoreboardStartGameTime.Click += new System.EventHandler(this.btnBasketScoreboardStartGameTime_Click);
             // 
-            // btnStartVolleyResult
+            // btnBasketScoreboardResetGameTime
             // 
-            this.btnStartVolleyResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartVolleyResult.Location = new System.Drawing.Point(393, 19);
-            this.btnStartVolleyResult.Name = "btnStartVolleyResult";
-            this.btnStartVolleyResult.Size = new System.Drawing.Size(73, 38);
-            this.btnStartVolleyResult.TabIndex = 31;
-            this.btnStartVolleyResult.Text = "Iniciar";
-            this.btnStartVolleyResult.UseVisualStyleBackColor = true;
-            this.btnStartVolleyResult.Click += new System.EventHandler(this.btnStartVolleyResult_Click);
+            this.btnBasketScoreboardResetGameTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBasketScoreboardResetGameTime.Location = new System.Drawing.Point(162, 171);
+            this.btnBasketScoreboardResetGameTime.Name = "btnBasketScoreboardResetGameTime";
+            this.btnBasketScoreboardResetGameTime.Size = new System.Drawing.Size(69, 29);
+            this.btnBasketScoreboardResetGameTime.TabIndex = 12;
+            this.btnBasketScoreboardResetGameTime.Text = "Reiniciar";
+            this.btnBasketScoreboardResetGameTime.UseVisualStyleBackColor = true;
+            this.btnBasketScoreboardResetGameTime.Click += new System.EventHandler(this.btnBasketScoreboardResetGameTime_Click);
             // 
-            // groupBox21
+            // btnBasketScoreboardStopGameTime
             // 
-            this.groupBox21.Controls.Add(this.label62);
-            this.groupBox21.Controls.Add(this.nudVolleyServicesPerPlayer);
-            this.groupBox21.Controls.Add(this.label60);
-            this.groupBox21.Controls.Add(this.cmbVolleyScoreboardFontSize);
-            this.groupBox21.Controls.Add(this.chkVolleyShowService);
-            this.groupBox21.Controls.Add(this.label58);
-            this.groupBox21.Controls.Add(this.txtVolleyWebsite);
-            this.groupBox21.Controls.Add(this.label57);
-            this.groupBox21.Controls.Add(this.txtVolleyTitle);
-            this.groupBox21.Controls.Add(this.label56);
-            this.groupBox21.Controls.Add(this.label55);
-            this.groupBox21.Controls.Add(this.nudVolleyPointsPerSet);
-            this.groupBox21.Controls.Add(this.nudVolleySetsPerMatch);
-            this.groupBox21.Controls.Add(this.cmbTemplateVolleyScoreboard);
-            this.groupBox21.Controls.Add(this.label52);
-            this.groupBox21.Controls.Add(this.panel1);
-            this.groupBox21.Controls.Add(this.nudAutoHideVolleyScoreboardSeconds);
-            this.groupBox21.Controls.Add(this.chkAutoHideVolleyScoreboard);
-            this.groupBox21.Controls.Add(this.btnStopVolleyScoreboard);
-            this.groupBox21.Controls.Add(this.btnStartVolleyScoreboard);
-            this.groupBox21.Controls.Add(this.label50);
-            this.groupBox21.Controls.Add(this.label49);
-            this.groupBox21.Controls.Add(this.label48);
-            this.groupBox21.Controls.Add(this.radVolley2Set);
-            this.groupBox21.Controls.Add(this.radVolley3Set);
-            this.groupBox21.Controls.Add(this.radVolley4Set);
-            this.groupBox21.Controls.Add(this.radVolley5Set);
-            this.groupBox21.Controls.Add(this.radVolley1Set);
-            this.groupBox21.Controls.Add(this.nudVolleyGuestSets);
-            this.groupBox21.Controls.Add(this.nudVolleyHomeSets);
-            this.groupBox21.Controls.Add(this.nudVolleyGuest4SetPoints);
-            this.groupBox21.Controls.Add(this.nudVolleyHome4SetPoints);
-            this.groupBox21.Controls.Add(this.nudVolleyGuest3SetPoints);
-            this.groupBox21.Controls.Add(this.nudVolleyHome3SetPoints);
-            this.groupBox21.Controls.Add(this.nudVolleyGuest2SetPoints);
-            this.groupBox21.Controls.Add(this.nudVolleyHome2SetPoints);
-            this.groupBox21.Controls.Add(this.nudVolleyGuest1SetPoints);
-            this.groupBox21.Controls.Add(this.nudVolleyHome1SetPoints);
-            this.groupBox21.Controls.Add(this.btnUpdateVolleyScoreboard);
-            this.groupBox21.Controls.Add(this.chkAutoUpdateVolleyScoreboard);
-            this.groupBox21.Controls.Add(this.btnVolleyHomeAddPoint);
-            this.groupBox21.Controls.Add(this.btnVolleyGuestAddPoint);
-            this.groupBox21.Controls.Add(this.nudVolleyGuest5SetPoints);
-            this.groupBox21.Controls.Add(this.nudVolleyHome5SetPoints);
-            this.groupBox21.Controls.Add(this.txtVolleyGuestTeam);
-            this.groupBox21.Controls.Add(this.txtVolleyHomeTeam);
-            this.groupBox21.Location = new System.Drawing.Point(3, 2);
-            this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Size = new System.Drawing.Size(786, 236);
-            this.groupBox21.TabIndex = 2;
-            this.groupBox21.TabStop = false;
-            this.groupBox21.Text = "Scoreboard";
+            this.btnBasketScoreboardStopGameTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBasketScoreboardStopGameTime.Location = new System.Drawing.Point(87, 171);
+            this.btnBasketScoreboardStopGameTime.Name = "btnBasketScoreboardStopGameTime";
+            this.btnBasketScoreboardStopGameTime.Size = new System.Drawing.Size(69, 29);
+            this.btnBasketScoreboardStopGameTime.TabIndex = 11;
+            this.btnBasketScoreboardStopGameTime.Text = "Timeout";
+            this.btnBasketScoreboardStopGameTime.UseVisualStyleBackColor = true;
+            this.btnBasketScoreboardStopGameTime.Click += new System.EventHandler(this.btnBasketScoreboardStopGameTime_Click);
             // 
-            // label62
+            // label134
             // 
-            this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(593, 195);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(81, 13);
-            this.label62.TabIndex = 78;
-            this.label62.Text = "Cant. Servicios:";
+            this.label134.AutoSize = true;
+            this.label134.Location = new System.Drawing.Point(8, 236);
+            this.label134.Name = "label134";
+            this.label134.Size = new System.Drawing.Size(101, 13);
+            this.label134.TabIndex = 50;
+            this.label134.Text = "Duracion Exclusion:";
             // 
-            // nudVolleyServicesPerPlayer
+            // label135
             // 
-            this.nudVolleyServicesPerPlayer.Location = new System.Drawing.Point(680, 192);
-            this.nudVolleyServicesPerPlayer.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.nudVolleyServicesPerPlayer.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudVolleyServicesPerPlayer.Name = "nudVolleyServicesPerPlayer";
-            this.nudVolleyServicesPerPlayer.Size = new System.Drawing.Size(30, 20);
-            this.nudVolleyServicesPerPlayer.TabIndex = 77;
-            this.nudVolleyServicesPerPlayer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudVolleyServicesPerPlayer.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.label135.AutoSize = true;
+            this.label135.Location = new System.Drawing.Point(12, 142);
+            this.label135.Name = "label135";
+            this.label135.Size = new System.Drawing.Size(34, 13);
+            this.label135.TabIndex = 49;
+            this.label135.Text = "Reloj:";
             // 
-            // label60
+            // label136
             // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(266, 195);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(30, 13);
-            this.label60.TabIndex = 76;
-            this.label60.Text = "Size:";
+            this.label136.AutoSize = true;
+            this.label136.Location = new System.Drawing.Point(8, 212);
+            this.label136.Name = "label136";
+            this.label136.Size = new System.Drawing.Size(91, 13);
+            this.label136.TabIndex = 48;
+            this.label136.Text = "Duracion Tiempo:";
             // 
-            // cmbVolleyScoreboardFontSize
+            // label137
             // 
-            this.cmbVolleyScoreboardFontSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbVolleyScoreboardFontSize.FormattingEnabled = true;
-            this.cmbVolleyScoreboardFontSize.Items.AddRange(new object[] {
+            this.label137.AutoSize = true;
+            this.label137.Location = new System.Drawing.Point(12, 116);
+            this.label137.Name = "label137";
+            this.label137.Size = new System.Drawing.Size(45, 13);
+            this.label137.TabIndex = 47;
+            this.label137.Text = "Tiempo:";
+            // 
+            // cmbBasktScoreboardQuarter
+            // 
+            this.cmbBasktScoreboardQuarter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBasktScoreboardQuarter.FormattingEnabled = true;
+            this.cmbBasktScoreboardQuarter.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4",
             "5",
             "6"});
-            this.cmbVolleyScoreboardFontSize.Location = new System.Drawing.Point(302, 192);
-            this.cmbVolleyScoreboardFontSize.Name = "cmbVolleyScoreboardFontSize";
-            this.cmbVolleyScoreboardFontSize.Size = new System.Drawing.Size(37, 21);
-            this.cmbVolleyScoreboardFontSize.TabIndex = 75;
+            this.cmbBasktScoreboardQuarter.Location = new System.Drawing.Point(63, 113);
+            this.cmbBasktScoreboardQuarter.Name = "cmbBasktScoreboardQuarter";
+            this.cmbBasktScoreboardQuarter.Size = new System.Drawing.Size(37, 21);
+            this.cmbBasktScoreboardQuarter.TabIndex = 5;
             // 
-            // chkVolleyShowService
+            // nudBasketScoreboardGameTimeSecs
             // 
-            this.chkVolleyShowService.AutoSize = true;
-            this.chkVolleyShowService.Location = new System.Drawing.Point(596, 149);
-            this.chkVolleyShowService.Name = "chkVolleyShowService";
-            this.chkVolleyShowService.Size = new System.Drawing.Size(102, 17);
-            this.chkVolleyShowService.TabIndex = 74;
-            this.chkVolleyShowService.Text = "Mostrar Servicio";
-            this.chkVolleyShowService.UseVisualStyleBackColor = true;
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(469, 21);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(49, 13);
-            this.label58.TabIndex = 73;
-            this.label58.Text = "Website:";
-            // 
-            // txtVolleyWebsite
-            // 
-            this.txtVolleyWebsite.Location = new System.Drawing.Point(520, 18);
-            this.txtVolleyWebsite.Name = "txtVolleyWebsite";
-            this.txtVolleyWebsite.Size = new System.Drawing.Size(159, 20);
-            this.txtVolleyWebsite.TabIndex = 72;
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(13, 21);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(53, 13);
-            this.label57.TabIndex = 71;
-            this.label57.Text = "Instancia:";
-            // 
-            // txtVolleyTitle
-            // 
-            this.txtVolleyTitle.Location = new System.Drawing.Point(72, 19);
-            this.txtVolleyTitle.Name = "txtVolleyTitle";
-            this.txtVolleyTitle.Size = new System.Drawing.Size(376, 20);
-            this.txtVolleyTitle.TabIndex = 70;
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(345, 194);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(66, 13);
-            this.label56.TabIndex = 69;
-            this.label56.Text = "Sets/Match:";
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(469, 195);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(69, 13);
-            this.label55.TabIndex = 68;
-            this.label55.Text = "Puntos/Sets:";
-            // 
-            // nudVolleyPointsPerSet
-            // 
-            this.nudVolleyPointsPerSet.Location = new System.Drawing.Point(544, 192);
-            this.nudVolleyPointsPerSet.Maximum = new decimal(new int[] {
-            99,
+            this.nudBasketScoreboardGameTimeSecs.Location = new System.Drawing.Point(109, 140);
+            this.nudBasketScoreboardGameTimeSecs.Maximum = new decimal(new int[] {
+            59,
             0,
             0,
             0});
-            this.nudVolleyPointsPerSet.Minimum = new decimal(new int[] {
-            1,
+            this.nudBasketScoreboardGameTimeSecs.Name = "nudBasketScoreboardGameTimeSecs";
+            this.nudBasketScoreboardGameTimeSecs.Size = new System.Drawing.Size(37, 20);
+            this.nudBasketScoreboardGameTimeSecs.TabIndex = 7;
+            this.nudBasketScoreboardGameTimeSecs.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // nudBasketScoreboardGameTimeMins
+            // 
+            this.nudBasketScoreboardGameTimeMins.Location = new System.Drawing.Point(63, 140);
+            this.nudBasketScoreboardGameTimeMins.Maximum = new decimal(new int[] {
+            120,
             0,
             0,
             0});
-            this.nudVolleyPointsPerSet.Name = "nudVolleyPointsPerSet";
-            this.nudVolleyPointsPerSet.Size = new System.Drawing.Size(36, 20);
-            this.nudVolleyPointsPerSet.TabIndex = 67;
-            this.nudVolleyPointsPerSet.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudVolleyPointsPerSet.Value = new decimal(new int[] {
-            1,
+            this.nudBasketScoreboardGameTimeMins.Name = "nudBasketScoreboardGameTimeMins";
+            this.nudBasketScoreboardGameTimeMins.Size = new System.Drawing.Size(40, 20);
+            this.nudBasketScoreboardGameTimeMins.TabIndex = 6;
+            this.nudBasketScoreboardGameTimeMins.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // btnBasketScoreboardStop
+            // 
+            this.btnBasketScoreboardStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBasketScoreboardStop.Location = new System.Drawing.Point(127, 56);
+            this.btnBasketScoreboardStop.Name = "btnBasketScoreboardStop";
+            this.btnBasketScoreboardStop.Size = new System.Drawing.Size(104, 40);
+            this.btnBasketScoreboardStop.TabIndex = 4;
+            this.btnBasketScoreboardStop.Text = "Parar Grafico";
+            this.btnBasketScoreboardStop.UseVisualStyleBackColor = true;
+            this.btnBasketScoreboardStop.Click += new System.EventHandler(this.btnBasketScoreboardStop_Click);
+            // 
+            // btnBasketScoreboardStart
+            // 
+            this.btnBasketScoreboardStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBasketScoreboardStart.Location = new System.Drawing.Point(12, 56);
+            this.btnBasketScoreboardStart.Name = "btnBasketScoreboardStart";
+            this.btnBasketScoreboardStart.Size = new System.Drawing.Size(104, 40);
+            this.btnBasketScoreboardStart.TabIndex = 3;
+            this.btnBasketScoreboardStart.Text = "Iniciar Grafico";
+            this.btnBasketScoreboardStart.UseVisualStyleBackColor = true;
+            this.btnBasketScoreboardStart.Click += new System.EventHandler(this.btnBasketScoreboardStart_Click);
+            // 
+            // button33
+            // 
+            this.button33.Location = new System.Drawing.Point(586, 241);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(30, 23);
+            this.button33.TabIndex = 35;
+            this.button33.Text = "C";
+            this.button33.UseVisualStyleBackColor = true;
+            // 
+            // button34
+            // 
+            this.button34.Location = new System.Drawing.Point(586, 212);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(30, 23);
+            this.button34.TabIndex = 34;
+            this.button34.Text = "-";
+            this.button34.UseVisualStyleBackColor = true;
+            // 
+            // button35
+            // 
+            this.button35.Location = new System.Drawing.Point(586, 183);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(30, 23);
+            this.button35.TabIndex = 33;
+            this.button35.Text = "+";
+            this.button35.UseVisualStyleBackColor = true;
+            // 
+            // btnBasketScoreboardAway2PAdd
+            // 
+            this.btnBasketScoreboardAway2PAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBasketScoreboardAway2PAdd.Location = new System.Drawing.Point(622, 103);
+            this.btnBasketScoreboardAway2PAdd.Name = "btnBasketScoreboardAway2PAdd";
+            this.btnBasketScoreboardAway2PAdd.Size = new System.Drawing.Size(99, 42);
+            this.btnBasketScoreboardAway2PAdd.TabIndex = 27;
+            this.btnBasketScoreboardAway2PAdd.Text = "+2";
+            this.btnBasketScoreboardAway2PAdd.UseVisualStyleBackColor = true;
+            this.btnBasketScoreboardAway2PAdd.Click += new System.EventHandler(this.btnBasketScoreboardAway2PAdd_Click);
+            // 
+            // btnBasketScoreboardAway1PAdd
+            // 
+            this.btnBasketScoreboardAway1PAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBasketScoreboardAway1PAdd.Location = new System.Drawing.Point(622, 57);
+            this.btnBasketScoreboardAway1PAdd.Name = "btnBasketScoreboardAway1PAdd";
+            this.btnBasketScoreboardAway1PAdd.Size = new System.Drawing.Size(99, 40);
+            this.btnBasketScoreboardAway1PAdd.TabIndex = 25;
+            this.btnBasketScoreboardAway1PAdd.Text = "+1";
+            this.btnBasketScoreboardAway1PAdd.UseVisualStyleBackColor = true;
+            this.btnBasketScoreboardAway1PAdd.Click += new System.EventHandler(this.btnBasketScoreboardAway1PAdd_Click);
+            // 
+            // button38
+            // 
+            this.button38.Location = new System.Drawing.Point(502, 241);
+            this.button38.Name = "button38";
+            this.button38.Size = new System.Drawing.Size(30, 23);
+            this.button38.TabIndex = 32;
+            this.button38.Text = "C";
+            this.button38.UseVisualStyleBackColor = true;
+            // 
+            // button39
+            // 
+            this.button39.Location = new System.Drawing.Point(502, 212);
+            this.button39.Name = "button39";
+            this.button39.Size = new System.Drawing.Size(30, 23);
+            this.button39.TabIndex = 30;
+            this.button39.Text = "-";
+            this.button39.UseVisualStyleBackColor = true;
+            // 
+            // button40
+            // 
+            this.button40.Location = new System.Drawing.Point(502, 183);
+            this.button40.Name = "button40";
+            this.button40.Size = new System.Drawing.Size(30, 23);
+            this.button40.TabIndex = 29;
+            this.button40.Text = "+";
+            this.button40.UseVisualStyleBackColor = true;
+            // 
+            // btnBasketScoreboardHome1PAdd
+            // 
+            this.btnBasketScoreboardHome1PAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBasketScoreboardHome1PAdd.Location = new System.Drawing.Point(397, 57);
+            this.btnBasketScoreboardHome1PAdd.Name = "btnBasketScoreboardHome1PAdd";
+            this.btnBasketScoreboardHome1PAdd.Size = new System.Drawing.Size(99, 40);
+            this.btnBasketScoreboardHome1PAdd.TabIndex = 24;
+            this.btnBasketScoreboardHome1PAdd.Text = "+1";
+            this.btnBasketScoreboardHome1PAdd.UseVisualStyleBackColor = true;
+            this.btnBasketScoreboardHome1PAdd.Click += new System.EventHandler(this.btnBasketScoreboardHome1PAdd_Click);
+            // 
+            // nudBasketScoreboardAwayScore
+            // 
+            this.nudBasketScoreboardAwayScore.Location = new System.Drawing.Point(571, 15);
+            this.nudBasketScoreboardAwayScore.Maximum = new decimal(new int[] {
+            999,
             0,
             0,
             0});
+            this.nudBasketScoreboardAwayScore.Name = "nudBasketScoreboardAwayScore";
+            this.nudBasketScoreboardAwayScore.Size = new System.Drawing.Size(44, 20);
+            this.nudBasketScoreboardAwayScore.TabIndex = 22;
+            this.nudBasketScoreboardAwayScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudBasketScoreboardAwayScore.ValueChanged += new System.EventHandler(this.nudBasketScoreboardAwayScore_ValueChanged);
             // 
-            // nudVolleySetsPerMatch
+            // nudBasketScoreboardHomeScore
             // 
-            this.nudVolleySetsPerMatch.Location = new System.Drawing.Point(416, 192);
-            this.nudVolleySetsPerMatch.Maximum = new decimal(new int[] {
-            5,
+            this.nudBasketScoreboardHomeScore.Location = new System.Drawing.Point(521, 15);
+            this.nudBasketScoreboardHomeScore.Maximum = new decimal(new int[] {
+            999,
             0,
             0,
             0});
-            this.nudVolleySetsPerMatch.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudVolleySetsPerMatch.Name = "nudVolleySetsPerMatch";
-            this.nudVolleySetsPerMatch.Size = new System.Drawing.Size(38, 20);
-            this.nudVolleySetsPerMatch.TabIndex = 66;
-            this.nudVolleySetsPerMatch.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudVolleySetsPerMatch.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // cmbTemplateVolleyScoreboard
-            // 
-            this.cmbTemplateVolleyScoreboard.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTemplateVolleyScoreboard.FormattingEnabled = true;
-            this.cmbTemplateVolleyScoreboard.Location = new System.Drawing.Point(65, 191);
-            this.cmbTemplateVolleyScoreboard.Name = "cmbTemplateVolleyScoreboard";
-            this.cmbTemplateVolleyScoreboard.Size = new System.Drawing.Size(195, 21);
-            this.cmbTemplateVolleyScoreboard.TabIndex = 29;
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(13, 194);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(54, 13);
-            this.label52.TabIndex = 65;
-            this.label52.Text = "Template:";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.radVolleyGuestServe);
-            this.panel1.Controls.Add(this.radVolleyHomeServe);
-            this.panel1.Location = new System.Drawing.Point(533, 75);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(77, 42);
-            this.panel1.TabIndex = 58;
-            // 
-            // radVolleyGuestServe
-            // 
-            this.radVolleyGuestServe.AutoSize = true;
-            this.radVolleyGuestServe.Location = new System.Drawing.Point(3, 25);
-            this.radVolleyGuestServe.Name = "radVolleyGuestServe";
-            this.radVolleyGuestServe.Size = new System.Drawing.Size(63, 17);
-            this.radVolleyGuestServe.TabIndex = 20;
-            this.radVolleyGuestServe.Text = "Servicio";
-            this.radVolleyGuestServe.UseVisualStyleBackColor = true;
-            // 
-            // radVolleyHomeServe
-            // 
-            this.radVolleyHomeServe.AutoSize = true;
-            this.radVolleyHomeServe.Checked = true;
-            this.radVolleyHomeServe.Location = new System.Drawing.Point(3, 0);
-            this.radVolleyHomeServe.Name = "radVolleyHomeServe";
-            this.radVolleyHomeServe.Size = new System.Drawing.Size(63, 17);
-            this.radVolleyHomeServe.TabIndex = 19;
-            this.radVolleyHomeServe.TabStop = true;
-            this.radVolleyHomeServe.Text = "Servicio";
-            this.radVolleyHomeServe.UseVisualStyleBackColor = true;
-            // 
-            // nudAutoHideVolleyScoreboardSeconds
-            // 
-            this.nudAutoHideVolleyScoreboardSeconds.Location = new System.Drawing.Point(444, 148);
-            this.nudAutoHideVolleyScoreboardSeconds.Maximum = new decimal(new int[] {
-            60,
-            0,
-            0,
-            0});
-            this.nudAutoHideVolleyScoreboardSeconds.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudAutoHideVolleyScoreboardSeconds.Name = "nudAutoHideVolleyScoreboardSeconds";
-            this.nudAutoHideVolleyScoreboardSeconds.Size = new System.Drawing.Size(40, 20);
-            this.nudAutoHideVolleyScoreboardSeconds.TabIndex = 27;
-            this.nudAutoHideVolleyScoreboardSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudAutoHideVolleyScoreboardSeconds.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            // 
-            // chkAutoHideVolleyScoreboard
-            // 
-            this.chkAutoHideVolleyScoreboard.AutoSize = true;
-            this.chkAutoHideVolleyScoreboard.Location = new System.Drawing.Point(353, 148);
-            this.chkAutoHideVolleyScoreboard.Name = "chkAutoHideVolleyScoreboard";
-            this.chkAutoHideVolleyScoreboard.Size = new System.Drawing.Size(85, 17);
-            this.chkAutoHideVolleyScoreboard.TabIndex = 26;
-            this.chkAutoHideVolleyScoreboard.Text = "Auto Ocultar";
-            this.chkAutoHideVolleyScoreboard.UseVisualStyleBackColor = true;
-            // 
-            // btnStopVolleyScoreboard
-            // 
-            this.btnStopVolleyScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStopVolleyScoreboard.Location = new System.Drawing.Point(502, 137);
-            this.btnStopVolleyScoreboard.Name = "btnStopVolleyScoreboard";
-            this.btnStopVolleyScoreboard.Size = new System.Drawing.Size(73, 38);
-            this.btnStopVolleyScoreboard.TabIndex = 28;
-            this.btnStopVolleyScoreboard.Text = "Parar";
-            this.btnStopVolleyScoreboard.UseVisualStyleBackColor = true;
-            this.btnStopVolleyScoreboard.Click += new System.EventHandler(this.btnStopVolleyScoreboard_Click);
-            // 
-            // btnStartVolleyScoreboard
-            // 
-            this.btnStartVolleyScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartVolleyScoreboard.Location = new System.Drawing.Point(271, 137);
-            this.btnStartVolleyScoreboard.Name = "btnStartVolleyScoreboard";
-            this.btnStartVolleyScoreboard.Size = new System.Drawing.Size(73, 38);
-            this.btnStartVolleyScoreboard.TabIndex = 25;
-            this.btnStartVolleyScoreboard.Text = "Iniciar";
-            this.btnStartVolleyScoreboard.UseVisualStyleBackColor = true;
-            this.btnStartVolleyScoreboard.Click += new System.EventHandler(this.btnStartVolleyScoreboard_Click);
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(13, 74);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(36, 13);
-            this.label50.TabIndex = 53;
-            this.label50.Text = "Local:";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(13, 101);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(50, 13);
-            this.label49.TabIndex = 52;
-            this.label49.Text = "Visitante:";
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(488, 52);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(28, 13);
-            this.label48.TabIndex = 51;
-            this.label48.Text = "Sets";
-            // 
-            // radVolley2Set
-            // 
-            this.radVolley2Set.AutoSize = true;
-            this.radVolley2Set.Location = new System.Drawing.Point(254, 48);
-            this.radVolley2Set.Name = "radVolley2Set";
-            this.radVolley2Set.Size = new System.Drawing.Size(38, 17);
-            this.radVolley2Set.TabIndex = 5;
-            this.radVolley2Set.Text = "2S";
-            this.radVolley2Set.UseVisualStyleBackColor = true;
-            // 
-            // radVolley3Set
-            // 
-            this.radVolley3Set.AutoSize = true;
-            this.radVolley3Set.Location = new System.Drawing.Point(306, 50);
-            this.radVolley3Set.Name = "radVolley3Set";
-            this.radVolley3Set.Size = new System.Drawing.Size(38, 17);
-            this.radVolley3Set.TabIndex = 8;
-            this.radVolley3Set.Text = "3S";
-            this.radVolley3Set.UseVisualStyleBackColor = true;
-            // 
-            // radVolley4Set
-            // 
-            this.radVolley4Set.AutoSize = true;
-            this.radVolley4Set.Location = new System.Drawing.Point(358, 50);
-            this.radVolley4Set.Name = "radVolley4Set";
-            this.radVolley4Set.Size = new System.Drawing.Size(38, 17);
-            this.radVolley4Set.TabIndex = 11;
-            this.radVolley4Set.Text = "4S";
-            this.radVolley4Set.UseVisualStyleBackColor = true;
-            // 
-            // radVolley5Set
-            // 
-            this.radVolley5Set.AutoSize = true;
-            this.radVolley5Set.Location = new System.Drawing.Point(410, 50);
-            this.radVolley5Set.Name = "radVolley5Set";
-            this.radVolley5Set.Size = new System.Drawing.Size(38, 17);
-            this.radVolley5Set.TabIndex = 14;
-            this.radVolley5Set.Text = "5S";
-            this.radVolley5Set.UseVisualStyleBackColor = true;
-            // 
-            // radVolley1Set
-            // 
-            this.radVolley1Set.AutoSize = true;
-            this.radVolley1Set.Checked = true;
-            this.radVolley1Set.Location = new System.Drawing.Point(202, 48);
-            this.radVolley1Set.Name = "radVolley1Set";
-            this.radVolley1Set.Size = new System.Drawing.Size(38, 17);
-            this.radVolley1Set.TabIndex = 2;
-            this.radVolley1Set.TabStop = true;
-            this.radVolley1Set.Text = "1S";
-            this.radVolley1Set.UseVisualStyleBackColor = true;
-            // 
-            // nudVolleyGuestSets
-            // 
-            this.nudVolleyGuestSets.Location = new System.Drawing.Point(481, 98);
-            this.nudVolleyGuestSets.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.nudVolleyGuestSets.Name = "nudVolleyGuestSets";
-            this.nudVolleyGuestSets.Size = new System.Drawing.Size(46, 20);
-            this.nudVolleyGuestSets.TabIndex = 18;
-            this.nudVolleyGuestSets.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // nudVolleyHomeSets
-            // 
-            this.nudVolleyHomeSets.Location = new System.Drawing.Point(481, 72);
-            this.nudVolleyHomeSets.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.nudVolleyHomeSets.Name = "nudVolleyHomeSets";
-            this.nudVolleyHomeSets.Size = new System.Drawing.Size(46, 20);
-            this.nudVolleyHomeSets.TabIndex = 17;
-            this.nudVolleyHomeSets.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // nudVolleyGuest4SetPoints
-            // 
-            this.nudVolleyGuest4SetPoints.Location = new System.Drawing.Point(350, 98);
-            this.nudVolleyGuest4SetPoints.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.nudVolleyGuest4SetPoints.Name = "nudVolleyGuest4SetPoints";
-            this.nudVolleyGuest4SetPoints.Size = new System.Drawing.Size(46, 20);
-            this.nudVolleyGuest4SetPoints.TabIndex = 13;
-            this.nudVolleyGuest4SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // nudVolleyHome4SetPoints
-            // 
-            this.nudVolleyHome4SetPoints.Location = new System.Drawing.Point(350, 72);
-            this.nudVolleyHome4SetPoints.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.nudVolleyHome4SetPoints.Name = "nudVolleyHome4SetPoints";
-            this.nudVolleyHome4SetPoints.Size = new System.Drawing.Size(46, 20);
-            this.nudVolleyHome4SetPoints.TabIndex = 12;
-            this.nudVolleyHome4SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // nudVolleyGuest3SetPoints
-            // 
-            this.nudVolleyGuest3SetPoints.Location = new System.Drawing.Point(298, 98);
-            this.nudVolleyGuest3SetPoints.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.nudVolleyGuest3SetPoints.Name = "nudVolleyGuest3SetPoints";
-            this.nudVolleyGuest3SetPoints.Size = new System.Drawing.Size(46, 20);
-            this.nudVolleyGuest3SetPoints.TabIndex = 10;
-            this.nudVolleyGuest3SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // nudVolleyHome3SetPoints
-            // 
-            this.nudVolleyHome3SetPoints.Location = new System.Drawing.Point(298, 72);
-            this.nudVolleyHome3SetPoints.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.nudVolleyHome3SetPoints.Name = "nudVolleyHome3SetPoints";
-            this.nudVolleyHome3SetPoints.Size = new System.Drawing.Size(46, 20);
-            this.nudVolleyHome3SetPoints.TabIndex = 9;
-            this.nudVolleyHome3SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // nudVolleyGuest2SetPoints
-            // 
-            this.nudVolleyGuest2SetPoints.Location = new System.Drawing.Point(246, 97);
-            this.nudVolleyGuest2SetPoints.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.nudVolleyGuest2SetPoints.Name = "nudVolleyGuest2SetPoints";
-            this.nudVolleyGuest2SetPoints.Size = new System.Drawing.Size(46, 20);
-            this.nudVolleyGuest2SetPoints.TabIndex = 7;
-            this.nudVolleyGuest2SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // nudVolleyHome2SetPoints
-            // 
-            this.nudVolleyHome2SetPoints.Location = new System.Drawing.Point(246, 71);
-            this.nudVolleyHome2SetPoints.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.nudVolleyHome2SetPoints.Name = "nudVolleyHome2SetPoints";
-            this.nudVolleyHome2SetPoints.Size = new System.Drawing.Size(46, 20);
-            this.nudVolleyHome2SetPoints.TabIndex = 6;
-            this.nudVolleyHome2SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // nudVolleyGuest1SetPoints
-            // 
-            this.nudVolleyGuest1SetPoints.Location = new System.Drawing.Point(194, 97);
-            this.nudVolleyGuest1SetPoints.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.nudVolleyGuest1SetPoints.Name = "nudVolleyGuest1SetPoints";
-            this.nudVolleyGuest1SetPoints.Size = new System.Drawing.Size(46, 20);
-            this.nudVolleyGuest1SetPoints.TabIndex = 4;
-            this.nudVolleyGuest1SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // nudVolleyHome1SetPoints
-            // 
-            this.nudVolleyHome1SetPoints.Location = new System.Drawing.Point(194, 71);
-            this.nudVolleyHome1SetPoints.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.nudVolleyHome1SetPoints.Name = "nudVolleyHome1SetPoints";
-            this.nudVolleyHome1SetPoints.Size = new System.Drawing.Size(46, 20);
-            this.nudVolleyHome1SetPoints.TabIndex = 3;
-            this.nudVolleyHome1SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // btnUpdateVolleyScoreboard
-            // 
-            this.btnUpdateVolleyScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateVolleyScoreboard.Location = new System.Drawing.Point(122, 137);
-            this.btnUpdateVolleyScoreboard.Name = "btnUpdateVolleyScoreboard";
-            this.btnUpdateVolleyScoreboard.Size = new System.Drawing.Size(106, 37);
-            this.btnUpdateVolleyScoreboard.TabIndex = 24;
-            this.btnUpdateVolleyScoreboard.Text = "Actualizar";
-            this.btnUpdateVolleyScoreboard.UseVisualStyleBackColor = true;
-            this.btnUpdateVolleyScoreboard.Click += new System.EventHandler(this.btnUpdateVolleyScoreboard_Click);
-            // 
-            // chkAutoUpdateVolleyScoreboard
-            // 
-            this.chkAutoUpdateVolleyScoreboard.AutoSize = true;
-            this.chkAutoUpdateVolleyScoreboard.Location = new System.Drawing.Point(16, 148);
-            this.chkAutoUpdateVolleyScoreboard.Name = "chkAutoUpdateVolleyScoreboard";
-            this.chkAutoUpdateVolleyScoreboard.Size = new System.Drawing.Size(97, 17);
-            this.chkAutoUpdateVolleyScoreboard.TabIndex = 23;
-            this.chkAutoUpdateVolleyScoreboard.Text = "Auto Actualizar";
-            this.chkAutoUpdateVolleyScoreboard.UseVisualStyleBackColor = true;
-            // 
-            // btnVolleyHomeAddPoint
-            // 
-            this.btnVolleyHomeAddPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolleyHomeAddPoint.Location = new System.Drawing.Point(616, 62);
-            this.btnVolleyHomeAddPoint.Name = "btnVolleyHomeAddPoint";
-            this.btnVolleyHomeAddPoint.Size = new System.Drawing.Size(63, 29);
-            this.btnVolleyHomeAddPoint.TabIndex = 21;
-            this.btnVolleyHomeAddPoint.Text = "+1";
-            this.btnVolleyHomeAddPoint.UseVisualStyleBackColor = true;
-            this.btnVolleyHomeAddPoint.Click += new System.EventHandler(this.btnVolleyHomeAddPoint_Click);
-            // 
-            // btnVolleyGuestAddPoint
-            // 
-            this.btnVolleyGuestAddPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolleyGuestAddPoint.Location = new System.Drawing.Point(616, 98);
-            this.btnVolleyGuestAddPoint.Name = "btnVolleyGuestAddPoint";
-            this.btnVolleyGuestAddPoint.Size = new System.Drawing.Size(63, 29);
-            this.btnVolleyGuestAddPoint.TabIndex = 22;
-            this.btnVolleyGuestAddPoint.Text = "+1";
-            this.btnVolleyGuestAddPoint.UseVisualStyleBackColor = true;
-            this.btnVolleyGuestAddPoint.Click += new System.EventHandler(this.btnVolleyGuestAddPoint_Click);
-            // 
-            // nudVolleyGuest5SetPoints
-            // 
-            this.nudVolleyGuest5SetPoints.Location = new System.Drawing.Point(402, 98);
-            this.nudVolleyGuest5SetPoints.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.nudVolleyGuest5SetPoints.Name = "nudVolleyGuest5SetPoints";
-            this.nudVolleyGuest5SetPoints.Size = new System.Drawing.Size(46, 20);
-            this.nudVolleyGuest5SetPoints.TabIndex = 16;
-            this.nudVolleyGuest5SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // nudVolleyHome5SetPoints
-            // 
-            this.nudVolleyHome5SetPoints.Location = new System.Drawing.Point(402, 72);
-            this.nudVolleyHome5SetPoints.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.nudVolleyHome5SetPoints.Name = "nudVolleyHome5SetPoints";
-            this.nudVolleyHome5SetPoints.Size = new System.Drawing.Size(46, 20);
-            this.nudVolleyHome5SetPoints.TabIndex = 15;
-            this.nudVolleyHome5SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtVolleyGuestTeam
-            // 
-            this.txtVolleyGuestTeam.Location = new System.Drawing.Point(65, 98);
-            this.txtVolleyGuestTeam.Name = "txtVolleyGuestTeam";
-            this.txtVolleyGuestTeam.Size = new System.Drawing.Size(113, 20);
-            this.txtVolleyGuestTeam.TabIndex = 1;
-            // 
-            // txtVolleyHomeTeam
-            // 
-            this.txtVolleyHomeTeam.Location = new System.Drawing.Point(65, 72);
-            this.txtVolleyHomeTeam.Name = "txtVolleyHomeTeam";
-            this.txtVolleyHomeTeam.Size = new System.Drawing.Size(113, 20);
-            this.txtVolleyHomeTeam.TabIndex = 0;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(23, 4);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(795, 315);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "Result";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.nudBasketScoreboardHomeScore.Name = "nudBasketScoreboardHomeScore";
+            this.nudBasketScoreboardHomeScore.Size = new System.Drawing.Size(44, 20);
+            this.nudBasketScoreboardHomeScore.TabIndex = 21;
+            this.nudBasketScoreboardHomeScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudBasketScoreboardHomeScore.ValueChanged += new System.EventHandler(this.nudBasketScoreboardHomeScore_ValueChanged);
+            // 
+            // txtBasketScoreboardAwayTeam
+            // 
+            this.txtBasketScoreboardAwayTeam.Location = new System.Drawing.Point(621, 14);
+            this.txtBasketScoreboardAwayTeam.Name = "txtBasketScoreboardAwayTeam";
+            this.txtBasketScoreboardAwayTeam.Size = new System.Drawing.Size(115, 20);
+            this.txtBasketScoreboardAwayTeam.TabIndex = 23;
+            // 
+            // txtBasketScoreboardHomeTeam
+            // 
+            this.txtBasketScoreboardHomeTeam.Location = new System.Drawing.Point(396, 14);
+            this.txtBasketScoreboardHomeTeam.Name = "txtBasketScoreboardHomeTeam";
+            this.txtBasketScoreboardHomeTeam.Size = new System.Drawing.Size(115, 20);
+            this.txtBasketScoreboardHomeTeam.TabIndex = 20;
+            // 
+            // shapeContainer5
+            // 
+            this.shapeContainer5.Location = new System.Drawing.Point(3, 16);
+            this.shapeContainer5.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer5.Name = "shapeContainer5";
+            this.shapeContainer5.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape5});
+            this.shapeContainer5.Size = new System.Drawing.Size(777, 291);
+            this.shapeContainer5.TabIndex = 61;
+            this.shapeContainer5.TabStop = false;
+            // 
+            // lineShape5
+            // 
+            this.lineShape5.Name = "lineShape3";
+            this.lineShape5.X1 = 360;
+            this.lineShape5.X2 = 360;
+            this.lineShape5.Y1 = 0;
+            this.lineShape5.Y2 = 283;
             // 
             // lstSports
             // 
@@ -3861,6 +3663,742 @@
             this.lineShape4.Y1 = 6;
             this.lineShape4.Y2 = 283;
             // 
+            // tabVolleyball
+            // 
+            this.tabVolleyball.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tabVolleyball.Controls.Add(this.tabPage3);
+            this.tabVolleyball.Controls.Add(this.tabPage4);
+            this.tabVolleyball.Location = new System.Drawing.Point(79, 0);
+            this.tabVolleyball.Multiline = true;
+            this.tabVolleyball.Name = "tabVolleyball";
+            this.tabVolleyball.SelectedIndex = 0;
+            this.tabVolleyball.Size = new System.Drawing.Size(822, 323);
+            this.tabVolleyball.TabIndex = 13;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox22);
+            this.tabPage3.Controls.Add(this.groupBox21);
+            this.tabPage3.Location = new System.Drawing.Point(23, 4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(795, 315);
+            this.tabPage3.TabIndex = 0;
+            this.tabPage3.Text = "Scoreboard";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox22
+            // 
+            this.groupBox22.Controls.Add(this.cmbTemplateVolleyResult);
+            this.groupBox22.Controls.Add(this.label51);
+            this.groupBox22.Controls.Add(this.nudAutoHideVolleyResultSeconds);
+            this.groupBox22.Controls.Add(this.chkAutoHideVolleyResult);
+            this.groupBox22.Controls.Add(this.btnStopVolleyResult);
+            this.groupBox22.Controls.Add(this.btnStartVolleyResult);
+            this.groupBox22.Location = new System.Drawing.Point(4, 244);
+            this.groupBox22.Name = "groupBox22";
+            this.groupBox22.Size = new System.Drawing.Size(785, 69);
+            this.groupBox22.TabIndex = 3;
+            this.groupBox22.TabStop = false;
+            this.groupBox22.Text = "Resultado";
+            // 
+            // cmbTemplateVolleyResult
+            // 
+            this.cmbTemplateVolleyResult.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTemplateVolleyResult.FormattingEnabled = true;
+            this.cmbTemplateVolleyResult.Location = new System.Drawing.Point(71, 26);
+            this.cmbTemplateVolleyResult.Name = "cmbTemplateVolleyResult";
+            this.cmbTemplateVolleyResult.Size = new System.Drawing.Size(215, 21);
+            this.cmbTemplateVolleyResult.TabIndex = 30;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(19, 29);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(54, 13);
+            this.label51.TabIndex = 63;
+            this.label51.Text = "Template:";
+            // 
+            // nudAutoHideVolleyResultSeconds
+            // 
+            this.nudAutoHideVolleyResultSeconds.Location = new System.Drawing.Point(566, 30);
+            this.nudAutoHideVolleyResultSeconds.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.nudAutoHideVolleyResultSeconds.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudAutoHideVolleyResultSeconds.Name = "nudAutoHideVolleyResultSeconds";
+            this.nudAutoHideVolleyResultSeconds.Size = new System.Drawing.Size(40, 20);
+            this.nudAutoHideVolleyResultSeconds.TabIndex = 33;
+            this.nudAutoHideVolleyResultSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudAutoHideVolleyResultSeconds.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // chkAutoHideVolleyResult
+            // 
+            this.chkAutoHideVolleyResult.AutoSize = true;
+            this.chkAutoHideVolleyResult.Location = new System.Drawing.Point(475, 30);
+            this.chkAutoHideVolleyResult.Name = "chkAutoHideVolleyResult";
+            this.chkAutoHideVolleyResult.Size = new System.Drawing.Size(85, 17);
+            this.chkAutoHideVolleyResult.TabIndex = 32;
+            this.chkAutoHideVolleyResult.Text = "Auto Ocultar";
+            this.chkAutoHideVolleyResult.UseVisualStyleBackColor = true;
+            // 
+            // btnStopVolleyResult
+            // 
+            this.btnStopVolleyResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopVolleyResult.Location = new System.Drawing.Point(624, 19);
+            this.btnStopVolleyResult.Name = "btnStopVolleyResult";
+            this.btnStopVolleyResult.Size = new System.Drawing.Size(73, 38);
+            this.btnStopVolleyResult.TabIndex = 34;
+            this.btnStopVolleyResult.Text = "Parar";
+            this.btnStopVolleyResult.UseVisualStyleBackColor = true;
+            this.btnStopVolleyResult.Click += new System.EventHandler(this.btnStopVolleyResult_Click);
+            // 
+            // btnStartVolleyResult
+            // 
+            this.btnStartVolleyResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartVolleyResult.Location = new System.Drawing.Point(393, 19);
+            this.btnStartVolleyResult.Name = "btnStartVolleyResult";
+            this.btnStartVolleyResult.Size = new System.Drawing.Size(73, 38);
+            this.btnStartVolleyResult.TabIndex = 31;
+            this.btnStartVolleyResult.Text = "Iniciar";
+            this.btnStartVolleyResult.UseVisualStyleBackColor = true;
+            this.btnStartVolleyResult.Click += new System.EventHandler(this.btnStartVolleyResult_Click);
+            // 
+            // groupBox21
+            // 
+            this.groupBox21.Controls.Add(this.label62);
+            this.groupBox21.Controls.Add(this.nudVolleyServicesPerPlayer);
+            this.groupBox21.Controls.Add(this.label60);
+            this.groupBox21.Controls.Add(this.cmbVolleyScoreboardFontSize);
+            this.groupBox21.Controls.Add(this.chkVolleyShowService);
+            this.groupBox21.Controls.Add(this.label58);
+            this.groupBox21.Controls.Add(this.txtVolleyWebsite);
+            this.groupBox21.Controls.Add(this.label57);
+            this.groupBox21.Controls.Add(this.txtVolleyTitle);
+            this.groupBox21.Controls.Add(this.label56);
+            this.groupBox21.Controls.Add(this.label55);
+            this.groupBox21.Controls.Add(this.nudVolleyPointsPerSet);
+            this.groupBox21.Controls.Add(this.nudVolleySetsPerMatch);
+            this.groupBox21.Controls.Add(this.cmbTemplateVolleyScoreboard);
+            this.groupBox21.Controls.Add(this.label52);
+            this.groupBox21.Controls.Add(this.panel1);
+            this.groupBox21.Controls.Add(this.nudAutoHideVolleyScoreboardSeconds);
+            this.groupBox21.Controls.Add(this.chkAutoHideVolleyScoreboard);
+            this.groupBox21.Controls.Add(this.btnStopVolleyScoreboard);
+            this.groupBox21.Controls.Add(this.btnStartVolleyScoreboard);
+            this.groupBox21.Controls.Add(this.label50);
+            this.groupBox21.Controls.Add(this.label49);
+            this.groupBox21.Controls.Add(this.label48);
+            this.groupBox21.Controls.Add(this.radVolley2Set);
+            this.groupBox21.Controls.Add(this.radVolley3Set);
+            this.groupBox21.Controls.Add(this.radVolley4Set);
+            this.groupBox21.Controls.Add(this.radVolley5Set);
+            this.groupBox21.Controls.Add(this.radVolley1Set);
+            this.groupBox21.Controls.Add(this.nudVolleyGuestSets);
+            this.groupBox21.Controls.Add(this.nudVolleyHomeSets);
+            this.groupBox21.Controls.Add(this.nudVolleyGuest4SetPoints);
+            this.groupBox21.Controls.Add(this.nudVolleyHome4SetPoints);
+            this.groupBox21.Controls.Add(this.nudVolleyGuest3SetPoints);
+            this.groupBox21.Controls.Add(this.nudVolleyHome3SetPoints);
+            this.groupBox21.Controls.Add(this.nudVolleyGuest2SetPoints);
+            this.groupBox21.Controls.Add(this.nudVolleyHome2SetPoints);
+            this.groupBox21.Controls.Add(this.nudVolleyGuest1SetPoints);
+            this.groupBox21.Controls.Add(this.nudVolleyHome1SetPoints);
+            this.groupBox21.Controls.Add(this.btnUpdateVolleyScoreboard);
+            this.groupBox21.Controls.Add(this.chkAutoUpdateVolleyScoreboard);
+            this.groupBox21.Controls.Add(this.btnVolleyHomeAddPoint);
+            this.groupBox21.Controls.Add(this.btnVolleyGuestAddPoint);
+            this.groupBox21.Controls.Add(this.nudVolleyGuest5SetPoints);
+            this.groupBox21.Controls.Add(this.nudVolleyHome5SetPoints);
+            this.groupBox21.Controls.Add(this.txtVolleyGuestTeam);
+            this.groupBox21.Controls.Add(this.txtVolleyHomeTeam);
+            this.groupBox21.Location = new System.Drawing.Point(3, 2);
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.Size = new System.Drawing.Size(786, 236);
+            this.groupBox21.TabIndex = 2;
+            this.groupBox21.TabStop = false;
+            this.groupBox21.Text = "Scoreboard";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(593, 195);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(81, 13);
+            this.label62.TabIndex = 78;
+            this.label62.Text = "Cant. Servicios:";
+            // 
+            // nudVolleyServicesPerPlayer
+            // 
+            this.nudVolleyServicesPerPlayer.Location = new System.Drawing.Point(680, 192);
+            this.nudVolleyServicesPerPlayer.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.nudVolleyServicesPerPlayer.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudVolleyServicesPerPlayer.Name = "nudVolleyServicesPerPlayer";
+            this.nudVolleyServicesPerPlayer.Size = new System.Drawing.Size(30, 20);
+            this.nudVolleyServicesPerPlayer.TabIndex = 77;
+            this.nudVolleyServicesPerPlayer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudVolleyServicesPerPlayer.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(266, 195);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(30, 13);
+            this.label60.TabIndex = 76;
+            this.label60.Text = "Size:";
+            // 
+            // cmbVolleyScoreboardFontSize
+            // 
+            this.cmbVolleyScoreboardFontSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVolleyScoreboardFontSize.FormattingEnabled = true;
+            this.cmbVolleyScoreboardFontSize.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.cmbVolleyScoreboardFontSize.Location = new System.Drawing.Point(302, 192);
+            this.cmbVolleyScoreboardFontSize.Name = "cmbVolleyScoreboardFontSize";
+            this.cmbVolleyScoreboardFontSize.Size = new System.Drawing.Size(37, 21);
+            this.cmbVolleyScoreboardFontSize.TabIndex = 75;
+            // 
+            // chkVolleyShowService
+            // 
+            this.chkVolleyShowService.AutoSize = true;
+            this.chkVolleyShowService.Location = new System.Drawing.Point(596, 149);
+            this.chkVolleyShowService.Name = "chkVolleyShowService";
+            this.chkVolleyShowService.Size = new System.Drawing.Size(102, 17);
+            this.chkVolleyShowService.TabIndex = 74;
+            this.chkVolleyShowService.Text = "Mostrar Servicio";
+            this.chkVolleyShowService.UseVisualStyleBackColor = true;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(469, 21);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(49, 13);
+            this.label58.TabIndex = 73;
+            this.label58.Text = "Website:";
+            // 
+            // txtVolleyWebsite
+            // 
+            this.txtVolleyWebsite.Location = new System.Drawing.Point(520, 18);
+            this.txtVolleyWebsite.Name = "txtVolleyWebsite";
+            this.txtVolleyWebsite.Size = new System.Drawing.Size(159, 20);
+            this.txtVolleyWebsite.TabIndex = 72;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(13, 21);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(53, 13);
+            this.label57.TabIndex = 71;
+            this.label57.Text = "Instancia:";
+            // 
+            // txtVolleyTitle
+            // 
+            this.txtVolleyTitle.Location = new System.Drawing.Point(72, 19);
+            this.txtVolleyTitle.Name = "txtVolleyTitle";
+            this.txtVolleyTitle.Size = new System.Drawing.Size(376, 20);
+            this.txtVolleyTitle.TabIndex = 70;
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(345, 194);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(66, 13);
+            this.label56.TabIndex = 69;
+            this.label56.Text = "Sets/Match:";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(469, 195);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(69, 13);
+            this.label55.TabIndex = 68;
+            this.label55.Text = "Puntos/Sets:";
+            // 
+            // nudVolleyPointsPerSet
+            // 
+            this.nudVolleyPointsPerSet.Location = new System.Drawing.Point(544, 192);
+            this.nudVolleyPointsPerSet.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.nudVolleyPointsPerSet.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudVolleyPointsPerSet.Name = "nudVolleyPointsPerSet";
+            this.nudVolleyPointsPerSet.Size = new System.Drawing.Size(36, 20);
+            this.nudVolleyPointsPerSet.TabIndex = 67;
+            this.nudVolleyPointsPerSet.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudVolleyPointsPerSet.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // nudVolleySetsPerMatch
+            // 
+            this.nudVolleySetsPerMatch.Location = new System.Drawing.Point(416, 192);
+            this.nudVolleySetsPerMatch.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nudVolleySetsPerMatch.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudVolleySetsPerMatch.Name = "nudVolleySetsPerMatch";
+            this.nudVolleySetsPerMatch.Size = new System.Drawing.Size(38, 20);
+            this.nudVolleySetsPerMatch.TabIndex = 66;
+            this.nudVolleySetsPerMatch.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudVolleySetsPerMatch.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // cmbTemplateVolleyScoreboard
+            // 
+            this.cmbTemplateVolleyScoreboard.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTemplateVolleyScoreboard.FormattingEnabled = true;
+            this.cmbTemplateVolleyScoreboard.Location = new System.Drawing.Point(65, 191);
+            this.cmbTemplateVolleyScoreboard.Name = "cmbTemplateVolleyScoreboard";
+            this.cmbTemplateVolleyScoreboard.Size = new System.Drawing.Size(195, 21);
+            this.cmbTemplateVolleyScoreboard.TabIndex = 29;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(13, 194);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(54, 13);
+            this.label52.TabIndex = 65;
+            this.label52.Text = "Template:";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.radVolleyGuestServe);
+            this.panel1.Controls.Add(this.radVolleyHomeServe);
+            this.panel1.Location = new System.Drawing.Point(533, 75);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(77, 42);
+            this.panel1.TabIndex = 58;
+            // 
+            // radVolleyGuestServe
+            // 
+            this.radVolleyGuestServe.AutoSize = true;
+            this.radVolleyGuestServe.Location = new System.Drawing.Point(3, 25);
+            this.radVolleyGuestServe.Name = "radVolleyGuestServe";
+            this.radVolleyGuestServe.Size = new System.Drawing.Size(63, 17);
+            this.radVolleyGuestServe.TabIndex = 20;
+            this.radVolleyGuestServe.Text = "Servicio";
+            this.radVolleyGuestServe.UseVisualStyleBackColor = true;
+            // 
+            // radVolleyHomeServe
+            // 
+            this.radVolleyHomeServe.AutoSize = true;
+            this.radVolleyHomeServe.Checked = true;
+            this.radVolleyHomeServe.Location = new System.Drawing.Point(3, 0);
+            this.radVolleyHomeServe.Name = "radVolleyHomeServe";
+            this.radVolleyHomeServe.Size = new System.Drawing.Size(63, 17);
+            this.radVolleyHomeServe.TabIndex = 19;
+            this.radVolleyHomeServe.TabStop = true;
+            this.radVolleyHomeServe.Text = "Servicio";
+            this.radVolleyHomeServe.UseVisualStyleBackColor = true;
+            // 
+            // nudAutoHideVolleyScoreboardSeconds
+            // 
+            this.nudAutoHideVolleyScoreboardSeconds.Location = new System.Drawing.Point(444, 148);
+            this.nudAutoHideVolleyScoreboardSeconds.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.nudAutoHideVolleyScoreboardSeconds.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudAutoHideVolleyScoreboardSeconds.Name = "nudAutoHideVolleyScoreboardSeconds";
+            this.nudAutoHideVolleyScoreboardSeconds.Size = new System.Drawing.Size(40, 20);
+            this.nudAutoHideVolleyScoreboardSeconds.TabIndex = 27;
+            this.nudAutoHideVolleyScoreboardSeconds.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudAutoHideVolleyScoreboardSeconds.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // chkAutoHideVolleyScoreboard
+            // 
+            this.chkAutoHideVolleyScoreboard.AutoSize = true;
+            this.chkAutoHideVolleyScoreboard.Location = new System.Drawing.Point(353, 148);
+            this.chkAutoHideVolleyScoreboard.Name = "chkAutoHideVolleyScoreboard";
+            this.chkAutoHideVolleyScoreboard.Size = new System.Drawing.Size(85, 17);
+            this.chkAutoHideVolleyScoreboard.TabIndex = 26;
+            this.chkAutoHideVolleyScoreboard.Text = "Auto Ocultar";
+            this.chkAutoHideVolleyScoreboard.UseVisualStyleBackColor = true;
+            // 
+            // btnStopVolleyScoreboard
+            // 
+            this.btnStopVolleyScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopVolleyScoreboard.Location = new System.Drawing.Point(502, 137);
+            this.btnStopVolleyScoreboard.Name = "btnStopVolleyScoreboard";
+            this.btnStopVolleyScoreboard.Size = new System.Drawing.Size(73, 38);
+            this.btnStopVolleyScoreboard.TabIndex = 28;
+            this.btnStopVolleyScoreboard.Text = "Parar";
+            this.btnStopVolleyScoreboard.UseVisualStyleBackColor = true;
+            this.btnStopVolleyScoreboard.Click += new System.EventHandler(this.btnStopVolleyScoreboard_Click);
+            // 
+            // btnStartVolleyScoreboard
+            // 
+            this.btnStartVolleyScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartVolleyScoreboard.Location = new System.Drawing.Point(271, 137);
+            this.btnStartVolleyScoreboard.Name = "btnStartVolleyScoreboard";
+            this.btnStartVolleyScoreboard.Size = new System.Drawing.Size(73, 38);
+            this.btnStartVolleyScoreboard.TabIndex = 25;
+            this.btnStartVolleyScoreboard.Text = "Iniciar";
+            this.btnStartVolleyScoreboard.UseVisualStyleBackColor = true;
+            this.btnStartVolleyScoreboard.Click += new System.EventHandler(this.btnStartVolleyScoreboard_Click);
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(13, 74);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(36, 13);
+            this.label50.TabIndex = 53;
+            this.label50.Text = "Local:";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(13, 101);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(50, 13);
+            this.label49.TabIndex = 52;
+            this.label49.Text = "Visitante:";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(488, 52);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(28, 13);
+            this.label48.TabIndex = 51;
+            this.label48.Text = "Sets";
+            // 
+            // radVolley2Set
+            // 
+            this.radVolley2Set.AutoSize = true;
+            this.radVolley2Set.Location = new System.Drawing.Point(254, 48);
+            this.radVolley2Set.Name = "radVolley2Set";
+            this.radVolley2Set.Size = new System.Drawing.Size(38, 17);
+            this.radVolley2Set.TabIndex = 5;
+            this.radVolley2Set.Text = "2S";
+            this.radVolley2Set.UseVisualStyleBackColor = true;
+            // 
+            // radVolley3Set
+            // 
+            this.radVolley3Set.AutoSize = true;
+            this.radVolley3Set.Location = new System.Drawing.Point(306, 50);
+            this.radVolley3Set.Name = "radVolley3Set";
+            this.radVolley3Set.Size = new System.Drawing.Size(38, 17);
+            this.radVolley3Set.TabIndex = 8;
+            this.radVolley3Set.Text = "3S";
+            this.radVolley3Set.UseVisualStyleBackColor = true;
+            // 
+            // radVolley4Set
+            // 
+            this.radVolley4Set.AutoSize = true;
+            this.radVolley4Set.Location = new System.Drawing.Point(358, 50);
+            this.radVolley4Set.Name = "radVolley4Set";
+            this.radVolley4Set.Size = new System.Drawing.Size(38, 17);
+            this.radVolley4Set.TabIndex = 11;
+            this.radVolley4Set.Text = "4S";
+            this.radVolley4Set.UseVisualStyleBackColor = true;
+            // 
+            // radVolley5Set
+            // 
+            this.radVolley5Set.AutoSize = true;
+            this.radVolley5Set.Location = new System.Drawing.Point(410, 50);
+            this.radVolley5Set.Name = "radVolley5Set";
+            this.radVolley5Set.Size = new System.Drawing.Size(38, 17);
+            this.radVolley5Set.TabIndex = 14;
+            this.radVolley5Set.Text = "5S";
+            this.radVolley5Set.UseVisualStyleBackColor = true;
+            // 
+            // radVolley1Set
+            // 
+            this.radVolley1Set.AutoSize = true;
+            this.radVolley1Set.Checked = true;
+            this.radVolley1Set.Location = new System.Drawing.Point(202, 48);
+            this.radVolley1Set.Name = "radVolley1Set";
+            this.radVolley1Set.Size = new System.Drawing.Size(38, 17);
+            this.radVolley1Set.TabIndex = 2;
+            this.radVolley1Set.TabStop = true;
+            this.radVolley1Set.Text = "1S";
+            this.radVolley1Set.UseVisualStyleBackColor = true;
+            // 
+            // nudVolleyGuestSets
+            // 
+            this.nudVolleyGuestSets.Location = new System.Drawing.Point(481, 98);
+            this.nudVolleyGuestSets.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.nudVolleyGuestSets.Name = "nudVolleyGuestSets";
+            this.nudVolleyGuestSets.Size = new System.Drawing.Size(46, 20);
+            this.nudVolleyGuestSets.TabIndex = 18;
+            this.nudVolleyGuestSets.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // nudVolleyHomeSets
+            // 
+            this.nudVolleyHomeSets.Location = new System.Drawing.Point(481, 72);
+            this.nudVolleyHomeSets.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.nudVolleyHomeSets.Name = "nudVolleyHomeSets";
+            this.nudVolleyHomeSets.Size = new System.Drawing.Size(46, 20);
+            this.nudVolleyHomeSets.TabIndex = 17;
+            this.nudVolleyHomeSets.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // nudVolleyGuest4SetPoints
+            // 
+            this.nudVolleyGuest4SetPoints.Location = new System.Drawing.Point(350, 98);
+            this.nudVolleyGuest4SetPoints.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.nudVolleyGuest4SetPoints.Name = "nudVolleyGuest4SetPoints";
+            this.nudVolleyGuest4SetPoints.Size = new System.Drawing.Size(46, 20);
+            this.nudVolleyGuest4SetPoints.TabIndex = 13;
+            this.nudVolleyGuest4SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // nudVolleyHome4SetPoints
+            // 
+            this.nudVolleyHome4SetPoints.Location = new System.Drawing.Point(350, 72);
+            this.nudVolleyHome4SetPoints.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.nudVolleyHome4SetPoints.Name = "nudVolleyHome4SetPoints";
+            this.nudVolleyHome4SetPoints.Size = new System.Drawing.Size(46, 20);
+            this.nudVolleyHome4SetPoints.TabIndex = 12;
+            this.nudVolleyHome4SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // nudVolleyGuest3SetPoints
+            // 
+            this.nudVolleyGuest3SetPoints.Location = new System.Drawing.Point(298, 98);
+            this.nudVolleyGuest3SetPoints.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.nudVolleyGuest3SetPoints.Name = "nudVolleyGuest3SetPoints";
+            this.nudVolleyGuest3SetPoints.Size = new System.Drawing.Size(46, 20);
+            this.nudVolleyGuest3SetPoints.TabIndex = 10;
+            this.nudVolleyGuest3SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // nudVolleyHome3SetPoints
+            // 
+            this.nudVolleyHome3SetPoints.Location = new System.Drawing.Point(298, 72);
+            this.nudVolleyHome3SetPoints.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.nudVolleyHome3SetPoints.Name = "nudVolleyHome3SetPoints";
+            this.nudVolleyHome3SetPoints.Size = new System.Drawing.Size(46, 20);
+            this.nudVolleyHome3SetPoints.TabIndex = 9;
+            this.nudVolleyHome3SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // nudVolleyGuest2SetPoints
+            // 
+            this.nudVolleyGuest2SetPoints.Location = new System.Drawing.Point(246, 97);
+            this.nudVolleyGuest2SetPoints.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.nudVolleyGuest2SetPoints.Name = "nudVolleyGuest2SetPoints";
+            this.nudVolleyGuest2SetPoints.Size = new System.Drawing.Size(46, 20);
+            this.nudVolleyGuest2SetPoints.TabIndex = 7;
+            this.nudVolleyGuest2SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // nudVolleyHome2SetPoints
+            // 
+            this.nudVolleyHome2SetPoints.Location = new System.Drawing.Point(246, 71);
+            this.nudVolleyHome2SetPoints.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.nudVolleyHome2SetPoints.Name = "nudVolleyHome2SetPoints";
+            this.nudVolleyHome2SetPoints.Size = new System.Drawing.Size(46, 20);
+            this.nudVolleyHome2SetPoints.TabIndex = 6;
+            this.nudVolleyHome2SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // nudVolleyGuest1SetPoints
+            // 
+            this.nudVolleyGuest1SetPoints.Location = new System.Drawing.Point(194, 97);
+            this.nudVolleyGuest1SetPoints.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.nudVolleyGuest1SetPoints.Name = "nudVolleyGuest1SetPoints";
+            this.nudVolleyGuest1SetPoints.Size = new System.Drawing.Size(46, 20);
+            this.nudVolleyGuest1SetPoints.TabIndex = 4;
+            this.nudVolleyGuest1SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // nudVolleyHome1SetPoints
+            // 
+            this.nudVolleyHome1SetPoints.Location = new System.Drawing.Point(194, 71);
+            this.nudVolleyHome1SetPoints.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.nudVolleyHome1SetPoints.Name = "nudVolleyHome1SetPoints";
+            this.nudVolleyHome1SetPoints.Size = new System.Drawing.Size(46, 20);
+            this.nudVolleyHome1SetPoints.TabIndex = 3;
+            this.nudVolleyHome1SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // btnUpdateVolleyScoreboard
+            // 
+            this.btnUpdateVolleyScoreboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateVolleyScoreboard.Location = new System.Drawing.Point(122, 137);
+            this.btnUpdateVolleyScoreboard.Name = "btnUpdateVolleyScoreboard";
+            this.btnUpdateVolleyScoreboard.Size = new System.Drawing.Size(106, 37);
+            this.btnUpdateVolleyScoreboard.TabIndex = 24;
+            this.btnUpdateVolleyScoreboard.Text = "Actualizar";
+            this.btnUpdateVolleyScoreboard.UseVisualStyleBackColor = true;
+            this.btnUpdateVolleyScoreboard.Click += new System.EventHandler(this.btnUpdateVolleyScoreboard_Click);
+            // 
+            // chkAutoUpdateVolleyScoreboard
+            // 
+            this.chkAutoUpdateVolleyScoreboard.AutoSize = true;
+            this.chkAutoUpdateVolleyScoreboard.Location = new System.Drawing.Point(16, 148);
+            this.chkAutoUpdateVolleyScoreboard.Name = "chkAutoUpdateVolleyScoreboard";
+            this.chkAutoUpdateVolleyScoreboard.Size = new System.Drawing.Size(97, 17);
+            this.chkAutoUpdateVolleyScoreboard.TabIndex = 23;
+            this.chkAutoUpdateVolleyScoreboard.Text = "Auto Actualizar";
+            this.chkAutoUpdateVolleyScoreboard.UseVisualStyleBackColor = true;
+            // 
+            // btnVolleyHomeAddPoint
+            // 
+            this.btnVolleyHomeAddPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolleyHomeAddPoint.Location = new System.Drawing.Point(616, 62);
+            this.btnVolleyHomeAddPoint.Name = "btnVolleyHomeAddPoint";
+            this.btnVolleyHomeAddPoint.Size = new System.Drawing.Size(63, 29);
+            this.btnVolleyHomeAddPoint.TabIndex = 21;
+            this.btnVolleyHomeAddPoint.Text = "+1";
+            this.btnVolleyHomeAddPoint.UseVisualStyleBackColor = true;
+            this.btnVolleyHomeAddPoint.Click += new System.EventHandler(this.btnVolleyHomeAddPoint_Click);
+            // 
+            // btnVolleyGuestAddPoint
+            // 
+            this.btnVolleyGuestAddPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolleyGuestAddPoint.Location = new System.Drawing.Point(616, 98);
+            this.btnVolleyGuestAddPoint.Name = "btnVolleyGuestAddPoint";
+            this.btnVolleyGuestAddPoint.Size = new System.Drawing.Size(63, 29);
+            this.btnVolleyGuestAddPoint.TabIndex = 22;
+            this.btnVolleyGuestAddPoint.Text = "+1";
+            this.btnVolleyGuestAddPoint.UseVisualStyleBackColor = true;
+            this.btnVolleyGuestAddPoint.Click += new System.EventHandler(this.btnVolleyGuestAddPoint_Click);
+            // 
+            // nudVolleyGuest5SetPoints
+            // 
+            this.nudVolleyGuest5SetPoints.Location = new System.Drawing.Point(402, 98);
+            this.nudVolleyGuest5SetPoints.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.nudVolleyGuest5SetPoints.Name = "nudVolleyGuest5SetPoints";
+            this.nudVolleyGuest5SetPoints.Size = new System.Drawing.Size(46, 20);
+            this.nudVolleyGuest5SetPoints.TabIndex = 16;
+            this.nudVolleyGuest5SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // nudVolleyHome5SetPoints
+            // 
+            this.nudVolleyHome5SetPoints.Location = new System.Drawing.Point(402, 72);
+            this.nudVolleyHome5SetPoints.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.nudVolleyHome5SetPoints.Name = "nudVolleyHome5SetPoints";
+            this.nudVolleyHome5SetPoints.Size = new System.Drawing.Size(46, 20);
+            this.nudVolleyHome5SetPoints.TabIndex = 15;
+            this.nudVolleyHome5SetPoints.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtVolleyGuestTeam
+            // 
+            this.txtVolleyGuestTeam.Location = new System.Drawing.Point(65, 98);
+            this.txtVolleyGuestTeam.Name = "txtVolleyGuestTeam";
+            this.txtVolleyGuestTeam.Size = new System.Drawing.Size(113, 20);
+            this.txtVolleyGuestTeam.TabIndex = 1;
+            // 
+            // txtVolleyHomeTeam
+            // 
+            this.txtVolleyHomeTeam.Location = new System.Drawing.Point(65, 72);
+            this.txtVolleyHomeTeam.Name = "txtVolleyHomeTeam";
+            this.txtVolleyHomeTeam.Size = new System.Drawing.Size(113, 20);
+            this.txtVolleyHomeTeam.TabIndex = 0;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(23, 4);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(795, 315);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "Result";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.groupBox16);
@@ -4507,11 +5045,12 @@
             this.tabGameshow.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabGameshow.Controls.Add(this.tabPage6);
             this.tabGameshow.Controls.Add(this.tabPage8);
+            this.tabGameshow.Controls.Add(this.tabPage36);
             this.tabGameshow.Location = new System.Drawing.Point(0, 0);
             this.tabGameshow.Multiline = true;
             this.tabGameshow.Name = "tabGameshow";
             this.tabGameshow.SelectedIndex = 0;
-            this.tabGameshow.Size = new System.Drawing.Size(822, 323);
+            this.tabGameshow.Size = new System.Drawing.Size(983, 323);
             this.tabGameshow.TabIndex = 7;
             // 
             // tabPage6
@@ -4520,7 +5059,7 @@
             this.tabPage6.Location = new System.Drawing.Point(23, 4);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(795, 315);
+            this.tabPage6.Size = new System.Drawing.Size(956, 315);
             this.tabPage6.TabIndex = 0;
             this.tabPage6.Text = "Countdown";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -4540,7 +5079,7 @@
             this.groupBox27.Controls.Add(this.btnShowCountdown);
             this.groupBox27.Location = new System.Drawing.Point(6, 3);
             this.groupBox27.Name = "groupBox27";
-            this.groupBox27.Size = new System.Drawing.Size(484, 306);
+            this.groupBox27.Size = new System.Drawing.Size(627, 306);
             this.groupBox27.TabIndex = 7;
             this.groupBox27.TabStop = false;
             this.groupBox27.Text = "Countdown";
@@ -4687,7 +5226,7 @@
             this.tabPage8.Location = new System.Drawing.Point(23, 4);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(795, 315);
+            this.tabPage8.Size = new System.Drawing.Size(956, 315);
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "Questions";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -4719,7 +5258,7 @@
             this.groupBox25.Controls.Add(this.lvwGameshowQuestions);
             this.groupBox25.Location = new System.Drawing.Point(6, 6);
             this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Size = new System.Drawing.Size(734, 303);
+            this.groupBox25.Size = new System.Drawing.Size(944, 303);
             this.groupBox25.TabIndex = 9;
             this.groupBox25.TabStop = false;
             this.groupBox25.Text = "Questions";
@@ -4993,6 +5532,571 @@
             // 
             this.columnHeader23.Text = "Nombre";
             this.columnHeader23.Width = 208;
+            // 
+            // tabPage36
+            // 
+            this.tabPage36.Controls.Add(this.groupBox46);
+            this.tabPage36.Controls.Add(this.groupBox45);
+            this.tabPage36.Location = new System.Drawing.Point(23, 4);
+            this.tabPage36.Name = "tabPage36";
+            this.tabPage36.Size = new System.Drawing.Size(956, 315);
+            this.tabPage36.TabIndex = 2;
+            this.tabPage36.Text = "FindTheCard";
+            this.tabPage36.UseVisualStyleBackColor = true;
+            // 
+            // groupBox46
+            // 
+            this.groupBox46.Controls.Add(this.label144);
+            this.groupBox46.Controls.Add(this.cmbGameShowFindCardRotationSecondsDuration);
+            this.groupBox46.Controls.Add(this.chkGameShowFindCardAutoUpdate);
+            this.groupBox46.Controls.Add(this.lstGameShowFindCardTries);
+            this.groupBox46.Controls.Add(this.label141);
+            this.groupBox46.Controls.Add(this.label140);
+            this.groupBox46.Controls.Add(this.cmbGameShowFindCardNumberTries);
+            this.groupBox46.Controls.Add(this.btnGameShowFindCardHideAll);
+            this.groupBox46.Controls.Add(this.btnGameShowFindCardShowAll);
+            this.groupBox46.Controls.Add(this.tlpGameShowFindCardsItems);
+            this.groupBox46.Controls.Add(this.label139);
+            this.groupBox46.Controls.Add(this.cmbGameShowFindCardMatches);
+            this.groupBox46.Controls.Add(this.btnGameShowFindCardHide);
+            this.groupBox46.Controls.Add(this.btnGameShowFindCardShow);
+            this.groupBox46.Controls.Add(this.btnGameShowFindCardStop);
+            this.groupBox46.Controls.Add(this.btnGameShowFindCardStart);
+            this.groupBox46.Controls.Add(this.cmbTemplateGameshowFindCard);
+            this.groupBox46.Controls.Add(this.label138);
+            this.groupBox46.Location = new System.Drawing.Point(496, 4);
+            this.groupBox46.Name = "groupBox46";
+            this.groupBox46.Size = new System.Drawing.Size(457, 308);
+            this.groupBox46.TabIndex = 2;
+            this.groupBox46.TabStop = false;
+            this.groupBox46.Text = "Find the Card";
+            // 
+            // label144
+            // 
+            this.label144.AutoSize = true;
+            this.label144.Location = new System.Drawing.Point(294, 128);
+            this.label144.Name = "label144";
+            this.label144.Size = new System.Drawing.Size(76, 13);
+            this.label144.TabIndex = 103;
+            this.label144.Text = "Duracion Rot.:";
+            // 
+            // cmbGameShowFindCardRotationSecondsDuration
+            // 
+            this.cmbGameShowFindCardRotationSecondsDuration.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGameShowFindCardRotationSecondsDuration.FormattingEnabled = true;
+            this.cmbGameShowFindCardRotationSecondsDuration.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.cmbGameShowFindCardRotationSecondsDuration.Location = new System.Drawing.Point(375, 125);
+            this.cmbGameShowFindCardRotationSecondsDuration.Name = "cmbGameShowFindCardRotationSecondsDuration";
+            this.cmbGameShowFindCardRotationSecondsDuration.Size = new System.Drawing.Size(37, 21);
+            this.cmbGameShowFindCardRotationSecondsDuration.TabIndex = 102;
+            // 
+            // chkGameShowFindCardAutoUpdate
+            // 
+            this.chkGameShowFindCardAutoUpdate.AutoSize = true;
+            this.chkGameShowFindCardAutoUpdate.Location = new System.Drawing.Point(175, 130);
+            this.chkGameShowFindCardAutoUpdate.Name = "chkGameShowFindCardAutoUpdate";
+            this.chkGameShowFindCardAutoUpdate.Size = new System.Drawing.Size(86, 17);
+            this.chkGameShowFindCardAutoUpdate.TabIndex = 101;
+            this.chkGameShowFindCardAutoUpdate.Text = "Auto Update";
+            this.chkGameShowFindCardAutoUpdate.UseVisualStyleBackColor = true;
+            // 
+            // lstGameShowFindCardTries
+            // 
+            this.lstGameShowFindCardTries.FormattingEnabled = true;
+            this.lstGameShowFindCardTries.Location = new System.Drawing.Point(297, 227);
+            this.lstGameShowFindCardTries.Name = "lstGameShowFindCardTries";
+            this.lstGameShowFindCardTries.Size = new System.Drawing.Size(120, 69);
+            this.lstGameShowFindCardTries.TabIndex = 100;
+            // 
+            // label141
+            // 
+            this.label141.AutoSize = true;
+            this.label141.Location = new System.Drawing.Point(293, 210);
+            this.label141.Name = "label141";
+            this.label141.Size = new System.Drawing.Size(48, 13);
+            this.label141.TabIndex = 99;
+            this.label141.Text = "Intentos:";
+            // 
+            // label140
+            // 
+            this.label140.AutoSize = true;
+            this.label140.Location = new System.Drawing.Point(294, 183);
+            this.label140.Name = "label140";
+            this.label140.Size = new System.Drawing.Size(75, 13);
+            this.label140.TabIndex = 97;
+            this.label140.Text = "Cant. intentos:";
+            // 
+            // cmbGameShowFindCardNumberTries
+            // 
+            this.cmbGameShowFindCardNumberTries.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGameShowFindCardNumberTries.FormattingEnabled = true;
+            this.cmbGameShowFindCardNumberTries.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.cmbGameShowFindCardNumberTries.Location = new System.Drawing.Point(375, 180);
+            this.cmbGameShowFindCardNumberTries.Name = "cmbGameShowFindCardNumberTries";
+            this.cmbGameShowFindCardNumberTries.Size = new System.Drawing.Size(37, 21);
+            this.cmbGameShowFindCardNumberTries.TabIndex = 96;
+            // 
+            // btnGameShowFindCardHideAll
+            // 
+            this.btnGameShowFindCardHideAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGameShowFindCardHideAll.Location = new System.Drawing.Point(136, 264);
+            this.btnGameShowFindCardHideAll.Name = "btnGameShowFindCardHideAll";
+            this.btnGameShowFindCardHideAll.Size = new System.Drawing.Size(105, 30);
+            this.btnGameShowFindCardHideAll.TabIndex = 95;
+            this.btnGameShowFindCardHideAll.Text = "Ocultar todos";
+            this.btnGameShowFindCardHideAll.UseVisualStyleBackColor = true;
+            this.btnGameShowFindCardHideAll.Click += new System.EventHandler(this.btnGameShowFindCardHideAll_Click);
+            // 
+            // btnGameShowFindCardShowAll
+            // 
+            this.btnGameShowFindCardShowAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGameShowFindCardShowAll.Location = new System.Drawing.Point(18, 264);
+            this.btnGameShowFindCardShowAll.Name = "btnGameShowFindCardShowAll";
+            this.btnGameShowFindCardShowAll.Size = new System.Drawing.Size(112, 30);
+            this.btnGameShowFindCardShowAll.TabIndex = 94;
+            this.btnGameShowFindCardShowAll.Text = "Mostrar todos";
+            this.btnGameShowFindCardShowAll.UseVisualStyleBackColor = true;
+            this.btnGameShowFindCardShowAll.Click += new System.EventHandler(this.btnGameShowFindCardShowAll_Click);
+            // 
+            // tlpGameShowFindCardsItems
+            // 
+            this.tlpGameShowFindCardsItems.AutoSize = true;
+            this.tlpGameShowFindCardsItems.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tlpGameShowFindCardsItems.ColumnCount = 3;
+            this.tlpGameShowFindCardsItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpGameShowFindCardsItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpGameShowFindCardsItems.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tlpGameShowFindCardsItems.Controls.Add(this.chkGameShowFindCardMatch1, 0, 0);
+            this.tlpGameShowFindCardsItems.Controls.Add(this.chkGameShowFindCardMatch9, 0, 2);
+            this.tlpGameShowFindCardsItems.Controls.Add(this.chkGameShowFindCardMatch7, 0, 2);
+            this.tlpGameShowFindCardsItems.Controls.Add(this.chkGameShowFindCardMatch8, 0, 2);
+            this.tlpGameShowFindCardsItems.Controls.Add(this.chkGameShowFindCardMatch6, 2, 1);
+            this.tlpGameShowFindCardsItems.Controls.Add(this.chkGameShowFindCardMatch5, 1, 1);
+            this.tlpGameShowFindCardsItems.Controls.Add(this.chkGameShowFindCardMatch4, 0, 1);
+            this.tlpGameShowFindCardsItems.Controls.Add(this.chkGameShowFindCardMatch3, 2, 0);
+            this.tlpGameShowFindCardsItems.Controls.Add(this.chkGameShowFindCardMatch2, 1, 0);
+            this.tlpGameShowFindCardsItems.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
+            this.tlpGameShowFindCardsItems.Location = new System.Drawing.Point(18, 167);
+            this.tlpGameShowFindCardsItems.Name = "tlpGameShowFindCardsItems";
+            this.tlpGameShowFindCardsItems.RowCount = 3;
+            this.tlpGameShowFindCardsItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34F));
+            this.tlpGameShowFindCardsItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            this.tlpGameShowFindCardsItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            this.tlpGameShowFindCardsItems.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpGameShowFindCardsItems.Size = new System.Drawing.Size(223, 91);
+            this.tlpGameShowFindCardsItems.TabIndex = 93;
+            this.tlpGameShowFindCardsItems.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // chkGameShowFindCardMatch1
+            // 
+            this.chkGameShowFindCardMatch1.AutoSize = true;
+            this.chkGameShowFindCardMatch1.Location = new System.Drawing.Point(4, 4);
+            this.chkGameShowFindCardMatch1.Name = "chkGameShowFindCardMatch1";
+            this.chkGameShowFindCardMatch1.Size = new System.Drawing.Size(67, 17);
+            this.chkGameShowFindCardMatch1.TabIndex = 103;
+            this.chkGameShowFindCardMatch1.Tag = "1";
+            this.chkGameShowFindCardMatch1.Text = "Ganador";
+            this.chkGameShowFindCardMatch1.UseVisualStyleBackColor = true;
+            this.chkGameShowFindCardMatch1.CheckedChanged += new System.EventHandler(this.chkGameShowFindCardMatch1_CheckedChanged);
+            // 
+            // chkGameShowFindCardMatch9
+            // 
+            this.chkGameShowFindCardMatch9.AutoSize = true;
+            this.chkGameShowFindCardMatch9.Location = new System.Drawing.Point(152, 63);
+            this.chkGameShowFindCardMatch9.Name = "chkGameShowFindCardMatch9";
+            this.chkGameShowFindCardMatch9.Size = new System.Drawing.Size(67, 17);
+            this.chkGameShowFindCardMatch9.TabIndex = 102;
+            this.chkGameShowFindCardMatch9.Tag = "9";
+            this.chkGameShowFindCardMatch9.Text = "Ganador";
+            this.chkGameShowFindCardMatch9.UseVisualStyleBackColor = true;
+            this.chkGameShowFindCardMatch9.CheckedChanged += new System.EventHandler(this.chkGameShowFindCardMatch9_CheckedChanged);
+            // 
+            // chkGameShowFindCardMatch7
+            // 
+            this.chkGameShowFindCardMatch7.AutoSize = true;
+            this.chkGameShowFindCardMatch7.Location = new System.Drawing.Point(4, 63);
+            this.chkGameShowFindCardMatch7.Name = "chkGameShowFindCardMatch7";
+            this.chkGameShowFindCardMatch7.Size = new System.Drawing.Size(67, 17);
+            this.chkGameShowFindCardMatch7.TabIndex = 101;
+            this.chkGameShowFindCardMatch7.Tag = "7";
+            this.chkGameShowFindCardMatch7.Text = "Ganador";
+            this.chkGameShowFindCardMatch7.UseVisualStyleBackColor = true;
+            this.chkGameShowFindCardMatch7.CheckedChanged += new System.EventHandler(this.chkGameShowFindCardMatch7_CheckedChanged);
+            // 
+            // chkGameShowFindCardMatch8
+            // 
+            this.chkGameShowFindCardMatch8.AutoSize = true;
+            this.chkGameShowFindCardMatch8.Location = new System.Drawing.Point(78, 63);
+            this.chkGameShowFindCardMatch8.Name = "chkGameShowFindCardMatch8";
+            this.chkGameShowFindCardMatch8.Size = new System.Drawing.Size(67, 17);
+            this.chkGameShowFindCardMatch8.TabIndex = 31;
+            this.chkGameShowFindCardMatch8.Tag = "8";
+            this.chkGameShowFindCardMatch8.Text = "Ganador";
+            this.chkGameShowFindCardMatch8.UseVisualStyleBackColor = true;
+            this.chkGameShowFindCardMatch8.CheckedChanged += new System.EventHandler(this.chkGameShowFindCardMatch8_CheckedChanged);
+            // 
+            // chkGameShowFindCardMatch6
+            // 
+            this.chkGameShowFindCardMatch6.AutoSize = true;
+            this.chkGameShowFindCardMatch6.Location = new System.Drawing.Point(152, 34);
+            this.chkGameShowFindCardMatch6.Name = "chkGameShowFindCardMatch6";
+            this.chkGameShowFindCardMatch6.Size = new System.Drawing.Size(67, 17);
+            this.chkGameShowFindCardMatch6.TabIndex = 30;
+            this.chkGameShowFindCardMatch6.Tag = "6";
+            this.chkGameShowFindCardMatch6.Text = "Ganador";
+            this.chkGameShowFindCardMatch6.UseVisualStyleBackColor = true;
+            this.chkGameShowFindCardMatch6.CheckedChanged += new System.EventHandler(this.chkGameShowFindCardMatch6_CheckedChanged);
+            // 
+            // chkGameShowFindCardMatch5
+            // 
+            this.chkGameShowFindCardMatch5.AutoSize = true;
+            this.chkGameShowFindCardMatch5.Location = new System.Drawing.Point(78, 34);
+            this.chkGameShowFindCardMatch5.Name = "chkGameShowFindCardMatch5";
+            this.chkGameShowFindCardMatch5.Size = new System.Drawing.Size(67, 17);
+            this.chkGameShowFindCardMatch5.TabIndex = 29;
+            this.chkGameShowFindCardMatch5.Tag = "5";
+            this.chkGameShowFindCardMatch5.Text = "Ganador";
+            this.chkGameShowFindCardMatch5.UseVisualStyleBackColor = true;
+            this.chkGameShowFindCardMatch5.CheckedChanged += new System.EventHandler(this.chkGameShowFindCardMatch5_CheckedChanged);
+            // 
+            // chkGameShowFindCardMatch4
+            // 
+            this.chkGameShowFindCardMatch4.AutoSize = true;
+            this.chkGameShowFindCardMatch4.Location = new System.Drawing.Point(4, 34);
+            this.chkGameShowFindCardMatch4.Name = "chkGameShowFindCardMatch4";
+            this.chkGameShowFindCardMatch4.Size = new System.Drawing.Size(67, 17);
+            this.chkGameShowFindCardMatch4.TabIndex = 28;
+            this.chkGameShowFindCardMatch4.Tag = "4";
+            this.chkGameShowFindCardMatch4.Text = "Ganador";
+            this.chkGameShowFindCardMatch4.UseVisualStyleBackColor = true;
+            this.chkGameShowFindCardMatch4.CheckedChanged += new System.EventHandler(this.chkGameShowFindCardMatch4_CheckedChanged);
+            // 
+            // chkGameShowFindCardMatch3
+            // 
+            this.chkGameShowFindCardMatch3.AutoSize = true;
+            this.chkGameShowFindCardMatch3.Location = new System.Drawing.Point(152, 4);
+            this.chkGameShowFindCardMatch3.Name = "chkGameShowFindCardMatch3";
+            this.chkGameShowFindCardMatch3.Size = new System.Drawing.Size(67, 17);
+            this.chkGameShowFindCardMatch3.TabIndex = 27;
+            this.chkGameShowFindCardMatch3.Tag = "3";
+            this.chkGameShowFindCardMatch3.Text = "Ganador";
+            this.chkGameShowFindCardMatch3.UseVisualStyleBackColor = true;
+            this.chkGameShowFindCardMatch3.CheckedChanged += new System.EventHandler(this.chkGameShowFindCardMatch3_CheckedChanged);
+            // 
+            // chkGameShowFindCardMatch2
+            // 
+            this.chkGameShowFindCardMatch2.AutoSize = true;
+            this.chkGameShowFindCardMatch2.Location = new System.Drawing.Point(78, 4);
+            this.chkGameShowFindCardMatch2.Name = "chkGameShowFindCardMatch2";
+            this.chkGameShowFindCardMatch2.Size = new System.Drawing.Size(67, 17);
+            this.chkGameShowFindCardMatch2.TabIndex = 26;
+            this.chkGameShowFindCardMatch2.Tag = "2";
+            this.chkGameShowFindCardMatch2.Text = "Ganador";
+            this.chkGameShowFindCardMatch2.UseVisualStyleBackColor = true;
+            this.chkGameShowFindCardMatch2.CheckedChanged += new System.EventHandler(this.chkGameShowFindCardMatch2_CheckedChanged);
+            // 
+            // label139
+            // 
+            this.label139.AutoSize = true;
+            this.label139.Location = new System.Drawing.Point(15, 89);
+            this.label139.Name = "label139";
+            this.label139.Size = new System.Drawing.Size(51, 13);
+            this.label139.TabIndex = 91;
+            this.label139.Text = "Matches:";
+            // 
+            // cmbGameShowFindCardMatches
+            // 
+            this.cmbGameShowFindCardMatches.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGameShowFindCardMatches.FormattingEnabled = true;
+            this.cmbGameShowFindCardMatches.Location = new System.Drawing.Point(72, 86);
+            this.cmbGameShowFindCardMatches.Name = "cmbGameShowFindCardMatches";
+            this.cmbGameShowFindCardMatches.Size = new System.Drawing.Size(345, 21);
+            this.cmbGameShowFindCardMatches.TabIndex = 90;
+            this.cmbGameShowFindCardMatches.Click += new System.EventHandler(this.cmbGameShowFindCardMatches_Click);
+            // 
+            // btnGameShowFindCardHide
+            // 
+            this.btnGameShowFindCardHide.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGameShowFindCardHide.Location = new System.Drawing.Point(96, 122);
+            this.btnGameShowFindCardHide.Name = "btnGameShowFindCardHide";
+            this.btnGameShowFindCardHide.Size = new System.Drawing.Size(73, 30);
+            this.btnGameShowFindCardHide.TabIndex = 89;
+            this.btnGameShowFindCardHide.Text = "Parar";
+            this.btnGameShowFindCardHide.UseVisualStyleBackColor = true;
+            this.btnGameShowFindCardHide.Click += new System.EventHandler(this.btnGameShowFindCardHide_Click);
+            // 
+            // btnGameShowFindCardShow
+            // 
+            this.btnGameShowFindCardShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGameShowFindCardShow.Location = new System.Drawing.Point(17, 122);
+            this.btnGameShowFindCardShow.Name = "btnGameShowFindCardShow";
+            this.btnGameShowFindCardShow.Size = new System.Drawing.Size(73, 30);
+            this.btnGameShowFindCardShow.TabIndex = 88;
+            this.btnGameShowFindCardShow.Text = "Iniciar";
+            this.btnGameShowFindCardShow.UseVisualStyleBackColor = true;
+            this.btnGameShowFindCardShow.Click += new System.EventHandler(this.btnGameShowFindCardShow_Click);
+            // 
+            // btnGameShowFindCardStop
+            // 
+            this.btnGameShowFindCardStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGameShowFindCardStop.Location = new System.Drawing.Point(97, 49);
+            this.btnGameShowFindCardStop.Name = "btnGameShowFindCardStop";
+            this.btnGameShowFindCardStop.Size = new System.Drawing.Size(73, 31);
+            this.btnGameShowFindCardStop.TabIndex = 87;
+            this.btnGameShowFindCardStop.Text = "Ocultar";
+            this.btnGameShowFindCardStop.UseVisualStyleBackColor = true;
+            // 
+            // btnGameShowFindCardStart
+            // 
+            this.btnGameShowFindCardStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGameShowFindCardStart.Location = new System.Drawing.Point(18, 49);
+            this.btnGameShowFindCardStart.Name = "btnGameShowFindCardStart";
+            this.btnGameShowFindCardStart.Size = new System.Drawing.Size(73, 31);
+            this.btnGameShowFindCardStart.TabIndex = 86;
+            this.btnGameShowFindCardStart.Text = "Mostrar";
+            this.btnGameShowFindCardStart.UseVisualStyleBackColor = true;
+            // 
+            // cmbTemplateGameshowFindCard
+            // 
+            this.cmbTemplateGameshowFindCard.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTemplateGameshowFindCard.FormattingEnabled = true;
+            this.cmbTemplateGameshowFindCard.Location = new System.Drawing.Point(85, 16);
+            this.cmbTemplateGameshowFindCard.Name = "cmbTemplateGameshowFindCard";
+            this.cmbTemplateGameshowFindCard.Size = new System.Drawing.Size(332, 21);
+            this.cmbTemplateGameshowFindCard.TabIndex = 84;
+            // 
+            // label138
+            // 
+            this.label138.AutoSize = true;
+            this.label138.Location = new System.Drawing.Point(15, 19);
+            this.label138.Name = "label138";
+            this.label138.Size = new System.Drawing.Size(54, 13);
+            this.label138.TabIndex = 85;
+            this.label138.Text = "Template:";
+            // 
+            // groupBox45
+            // 
+            this.groupBox45.Controls.Add(this.btnGameShowFindCardSaveMatch);
+            this.groupBox45.Controls.Add(this.label143);
+            this.groupBox45.Controls.Add(this.textBox1);
+            this.groupBox45.Controls.Add(this.btnGameShowFindCardGenerateMatch);
+            this.groupBox45.Controls.Add(this.label142);
+            this.groupBox45.Controls.Add(this.cmbGameShowFindCardWins);
+            this.groupBox45.Controls.Add(this.button46);
+            this.groupBox45.Controls.Add(this.btnGameShowFindCardMoveDown);
+            this.groupBox45.Controls.Add(this.btnGameShowFindCardMoveUp);
+            this.groupBox45.Controls.Add(this.lvwGameShowFindCardMatch);
+            this.groupBox45.Controls.Add(this.btnGameShowFindCardClearItems);
+            this.groupBox45.Controls.Add(this.btnGameShowFindCardLoadItems);
+            this.groupBox45.Controls.Add(this.btnGameShowFindCardEditItem);
+            this.groupBox45.Controls.Add(this.btnGameShowFindCardRemoveItem);
+            this.groupBox45.Controls.Add(this.btnGameShowFindCardAddItem);
+            this.groupBox45.Controls.Add(this.lvwGameShowFindCardItems);
+            this.groupBox45.Location = new System.Drawing.Point(4, 4);
+            this.groupBox45.Name = "groupBox45";
+            this.groupBox45.Size = new System.Drawing.Size(486, 308);
+            this.groupBox45.TabIndex = 0;
+            this.groupBox45.TabStop = false;
+            this.groupBox45.Text = "Items";
+            // 
+            // btnGameShowFindCardSaveMatch
+            // 
+            this.btnGameShowFindCardSaveMatch.Location = new System.Drawing.Point(374, 264);
+            this.btnGameShowFindCardSaveMatch.Name = "btnGameShowFindCardSaveMatch";
+            this.btnGameShowFindCardSaveMatch.Size = new System.Drawing.Size(74, 27);
+            this.btnGameShowFindCardSaveMatch.TabIndex = 104;
+            this.btnGameShowFindCardSaveMatch.Text = "Grabar";
+            this.btnGameShowFindCardSaveMatch.UseVisualStyleBackColor = true;
+            this.btnGameShowFindCardSaveMatch.Click += new System.EventHandler(this.btnGameShowFindCardSaveMatch_Click);
+            // 
+            // label143
+            // 
+            this.label143.AutoSize = true;
+            this.label143.Location = new System.Drawing.Point(4, 153);
+            this.label143.Name = "label143";
+            this.label143.Size = new System.Drawing.Size(29, 13);
+            this.label143.TabIndex = 103;
+            this.label143.Text = "UID:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(46, 152);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(225, 20);
+            this.textBox1.TabIndex = 102;
+            // 
+            // btnGameShowFindCardGenerateMatch
+            // 
+            this.btnGameShowFindCardGenerateMatch.Location = new System.Drawing.Point(376, 212);
+            this.btnGameShowFindCardGenerateMatch.Name = "btnGameShowFindCardGenerateMatch";
+            this.btnGameShowFindCardGenerateMatch.Size = new System.Drawing.Size(74, 27);
+            this.btnGameShowFindCardGenerateMatch.TabIndex = 101;
+            this.btnGameShowFindCardGenerateMatch.Text = "Generar";
+            this.btnGameShowFindCardGenerateMatch.UseVisualStyleBackColor = true;
+            // 
+            // label142
+            // 
+            this.label142.AutoSize = true;
+            this.label142.Location = new System.Drawing.Point(371, 188);
+            this.label142.Name = "label142";
+            this.label142.Size = new System.Drawing.Size(34, 13);
+            this.label142.TabIndex = 99;
+            this.label142.Text = "Wins:";
+            // 
+            // cmbGameShowFindCardWins
+            // 
+            this.cmbGameShowFindCardWins.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGameShowFindCardWins.FormattingEnabled = true;
+            this.cmbGameShowFindCardWins.Location = new System.Drawing.Point(421, 185);
+            this.cmbGameShowFindCardWins.Name = "cmbGameShowFindCardWins";
+            this.cmbGameShowFindCardWins.Size = new System.Drawing.Size(37, 21);
+            this.cmbGameShowFindCardWins.TabIndex = 98;
+            // 
+            // button46
+            // 
+            this.button46.Location = new System.Drawing.Point(308, 224);
+            this.button46.Name = "button46";
+            this.button46.Size = new System.Drawing.Size(30, 19);
+            this.button46.TabIndex = 33;
+            this.button46.Text = "M";
+            this.button46.UseVisualStyleBackColor = true;
+            // 
+            // btnGameShowFindCardMoveDown
+            // 
+            this.btnGameShowFindCardMoveDown.Location = new System.Drawing.Point(308, 203);
+            this.btnGameShowFindCardMoveDown.Name = "btnGameShowFindCardMoveDown";
+            this.btnGameShowFindCardMoveDown.Size = new System.Drawing.Size(30, 19);
+            this.btnGameShowFindCardMoveDown.TabIndex = 32;
+            this.btnGameShowFindCardMoveDown.Text = "-";
+            this.btnGameShowFindCardMoveDown.UseVisualStyleBackColor = true;
+            // 
+            // btnGameShowFindCardMoveUp
+            // 
+            this.btnGameShowFindCardMoveUp.Location = new System.Drawing.Point(308, 182);
+            this.btnGameShowFindCardMoveUp.Name = "btnGameShowFindCardMoveUp";
+            this.btnGameShowFindCardMoveUp.Size = new System.Drawing.Size(30, 19);
+            this.btnGameShowFindCardMoveUp.TabIndex = 31;
+            this.btnGameShowFindCardMoveUp.Text = "+";
+            this.btnGameShowFindCardMoveUp.UseVisualStyleBackColor = true;
+            // 
+            // lvwGameShowFindCardMatch
+            // 
+            this.lvwGameShowFindCardMatch.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader50,
+            this.columnHeader51});
+            this.lvwGameShowFindCardMatch.FullRowSelect = true;
+            this.lvwGameShowFindCardMatch.GridLines = true;
+            this.lvwGameShowFindCardMatch.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvwGameShowFindCardMatch.HideSelection = false;
+            this.lvwGameShowFindCardMatch.Location = new System.Drawing.Point(6, 182);
+            this.lvwGameShowFindCardMatch.MultiSelect = false;
+            this.lvwGameShowFindCardMatch.Name = "lvwGameShowFindCardMatch";
+            this.lvwGameShowFindCardMatch.Size = new System.Drawing.Size(296, 120);
+            this.lvwGameShowFindCardMatch.TabIndex = 30;
+            this.lvwGameShowFindCardMatch.UseCompatibleStateImageBehavior = false;
+            this.lvwGameShowFindCardMatch.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader50
+            // 
+            this.columnHeader50.Text = "#";
+            this.columnHeader50.Width = 40;
+            // 
+            // columnHeader51
+            // 
+            this.columnHeader51.Text = "Tipo";
+            this.columnHeader51.Width = 160;
+            // 
+            // btnGameShowFindCardClearItems
+            // 
+            this.btnGameShowFindCardClearItems.Location = new System.Drawing.Point(333, 103);
+            this.btnGameShowFindCardClearItems.Name = "btnGameShowFindCardClearItems";
+            this.btnGameShowFindCardClearItems.Size = new System.Drawing.Size(30, 19);
+            this.btnGameShowFindCardClearItems.TabIndex = 29;
+            this.btnGameShowFindCardClearItems.Text = "C";
+            this.btnGameShowFindCardClearItems.UseVisualStyleBackColor = true;
+            // 
+            // btnGameShowFindCardLoadItems
+            // 
+            this.btnGameShowFindCardLoadItems.Location = new System.Drawing.Point(333, 82);
+            this.btnGameShowFindCardLoadItems.Name = "btnGameShowFindCardLoadItems";
+            this.btnGameShowFindCardLoadItems.Size = new System.Drawing.Size(30, 19);
+            this.btnGameShowFindCardLoadItems.TabIndex = 28;
+            this.btnGameShowFindCardLoadItems.Text = "L";
+            this.btnGameShowFindCardLoadItems.UseVisualStyleBackColor = true;
+            // 
+            // btnGameShowFindCardEditItem
+            // 
+            this.btnGameShowFindCardEditItem.Location = new System.Drawing.Point(333, 61);
+            this.btnGameShowFindCardEditItem.Name = "btnGameShowFindCardEditItem";
+            this.btnGameShowFindCardEditItem.Size = new System.Drawing.Size(30, 19);
+            this.btnGameShowFindCardEditItem.TabIndex = 27;
+            this.btnGameShowFindCardEditItem.Text = "M";
+            this.btnGameShowFindCardEditItem.UseVisualStyleBackColor = true;
+            this.btnGameShowFindCardEditItem.Click += new System.EventHandler(this.btnGameShowFindCardEditItem_Click);
+            // 
+            // btnGameShowFindCardRemoveItem
+            // 
+            this.btnGameShowFindCardRemoveItem.Location = new System.Drawing.Point(333, 40);
+            this.btnGameShowFindCardRemoveItem.Name = "btnGameShowFindCardRemoveItem";
+            this.btnGameShowFindCardRemoveItem.Size = new System.Drawing.Size(30, 19);
+            this.btnGameShowFindCardRemoveItem.TabIndex = 26;
+            this.btnGameShowFindCardRemoveItem.Text = "-";
+            this.btnGameShowFindCardRemoveItem.UseVisualStyleBackColor = true;
+            this.btnGameShowFindCardRemoveItem.Click += new System.EventHandler(this.btnGameShowFindCardRemoveItem_Click);
+            // 
+            // btnGameShowFindCardAddItem
+            // 
+            this.btnGameShowFindCardAddItem.Location = new System.Drawing.Point(333, 19);
+            this.btnGameShowFindCardAddItem.Name = "btnGameShowFindCardAddItem";
+            this.btnGameShowFindCardAddItem.Size = new System.Drawing.Size(30, 19);
+            this.btnGameShowFindCardAddItem.TabIndex = 25;
+            this.btnGameShowFindCardAddItem.Text = "+";
+            this.btnGameShowFindCardAddItem.UseVisualStyleBackColor = true;
+            this.btnGameShowFindCardAddItem.Click += new System.EventHandler(this.btnGameShowFindCardAddItem_Click);
+            // 
+            // lvwGameShowFindCardItems
+            // 
+            this.lvwGameShowFindCardItems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader36,
+            this.columnHeader49,
+            this.columnHeader52});
+            this.lvwGameShowFindCardItems.FullRowSelect = true;
+            this.lvwGameShowFindCardItems.GridLines = true;
+            this.lvwGameShowFindCardItems.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvwGameShowFindCardItems.HideSelection = false;
+            this.lvwGameShowFindCardItems.Location = new System.Drawing.Point(6, 19);
+            this.lvwGameShowFindCardItems.MultiSelect = false;
+            this.lvwGameShowFindCardItems.Name = "lvwGameShowFindCardItems";
+            this.lvwGameShowFindCardItems.Size = new System.Drawing.Size(321, 103);
+            this.lvwGameShowFindCardItems.TabIndex = 24;
+            this.lvwGameShowFindCardItems.UseCompatibleStateImageBehavior = false;
+            this.lvwGameShowFindCardItems.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader36
+            // 
+            this.columnHeader36.Text = "#";
+            this.columnHeader36.Width = 20;
+            // 
+            // columnHeader49
+            // 
+            this.columnHeader49.Text = "Type";
+            this.columnHeader49.Width = 80;
+            // 
+            // columnHeader52
+            // 
+            this.columnHeader52.Text = "Picture";
+            this.columnHeader52.Width = 200;
             // 
             // tabPage12
             // 
@@ -8659,470 +9763,6 @@
             this.txtServerAddress.Size = new System.Drawing.Size(146, 20);
             this.txtServerAddress.TabIndex = 0;
             // 
-            // tabBasket
-            // 
-            this.tabBasket.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tabBasket.Controls.Add(this.tabPage35);
-            this.tabBasket.Location = new System.Drawing.Point(82, 0);
-            this.tabBasket.Multiline = true;
-            this.tabBasket.Name = "tabBasket";
-            this.tabBasket.SelectedIndex = 0;
-            this.tabBasket.Size = new System.Drawing.Size(822, 323);
-            this.tabBasket.TabIndex = 15;
-            // 
-            // tabPage35
-            // 
-            this.tabPage35.Controls.Add(this.groupBox44);
-            this.tabPage35.Location = new System.Drawing.Point(23, 4);
-            this.tabPage35.Name = "tabPage35";
-            this.tabPage35.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage35.Size = new System.Drawing.Size(795, 315);
-            this.tabPage35.TabIndex = 0;
-            this.tabPage35.Text = "Scoreboard";
-            this.tabPage35.UseVisualStyleBackColor = true;
-            // 
-            // groupBox44
-            // 
-            this.groupBox44.Controls.Add(this.button41);
-            this.groupBox44.Controls.Add(this.button44);
-            this.groupBox44.Controls.Add(this.button43);
-            this.groupBox44.Controls.Add(this.cmbTemplateBasketScoreboard);
-            this.groupBox44.Controls.Add(this.label133);
-            this.groupBox44.Controls.Add(this.checkBox5);
-            this.groupBox44.Controls.Add(this.checkBox6);
-            this.groupBox44.Controls.Add(this.numericUpDown5);
-            this.groupBox44.Controls.Add(this.numericUpDown6);
-            this.groupBox44.Controls.Add(this.nudBasketScoreboardShootTime);
-            this.groupBox44.Controls.Add(this.btnBasketScoreboardShowHideClocks);
-            this.groupBox44.Controls.Add(this.btnBasketScoreboardStartGameTime);
-            this.groupBox44.Controls.Add(this.btnBasketScoreboardResetGameTime);
-            this.groupBox44.Controls.Add(this.btnBasketScoreboardStopGameTime);
-            this.groupBox44.Controls.Add(this.label134);
-            this.groupBox44.Controls.Add(this.label135);
-            this.groupBox44.Controls.Add(this.label136);
-            this.groupBox44.Controls.Add(this.label137);
-            this.groupBox44.Controls.Add(this.cmbBasktScoreboardQuarter);
-            this.groupBox44.Controls.Add(this.nudBasketScoreboardGameTimeSecs);
-            this.groupBox44.Controls.Add(this.nudBasketScoreboardGameTimeMins);
-            this.groupBox44.Controls.Add(this.btnBasketScoreboardStop);
-            this.groupBox44.Controls.Add(this.btnBasketScoreboardStart);
-            this.groupBox44.Controls.Add(this.button33);
-            this.groupBox44.Controls.Add(this.button34);
-            this.groupBox44.Controls.Add(this.button35);
-            this.groupBox44.Controls.Add(this.button36);
-            this.groupBox44.Controls.Add(this.button37);
-            this.groupBox44.Controls.Add(this.button38);
-            this.groupBox44.Controls.Add(this.button39);
-            this.groupBox44.Controls.Add(this.button40);
-            this.groupBox44.Controls.Add(this.button42);
-            this.groupBox44.Controls.Add(this.nudBasketScoreboardAwayScore);
-            this.groupBox44.Controls.Add(this.nudBasketScoreboardHomeScore);
-            this.groupBox44.Controls.Add(this.txtBasketScoreboardAwayTeam);
-            this.groupBox44.Controls.Add(this.txtBasketScoreboardHomeTeam);
-            this.groupBox44.Controls.Add(this.shapeContainer5);
-            this.groupBox44.Location = new System.Drawing.Point(6, 2);
-            this.groupBox44.Name = "groupBox44";
-            this.groupBox44.Size = new System.Drawing.Size(783, 310);
-            this.groupBox44.TabIndex = 2;
-            this.groupBox44.TabStop = false;
-            this.groupBox44.Text = "Scoreboard";
-            // 
-            // cmbTemplateBasketScoreboard
-            // 
-            this.cmbTemplateBasketScoreboard.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTemplateBasketScoreboard.FormattingEnabled = true;
-            this.cmbTemplateBasketScoreboard.Location = new System.Drawing.Point(80, 17);
-            this.cmbTemplateBasketScoreboard.Name = "cmbTemplateBasketScoreboard";
-            this.cmbTemplateBasketScoreboard.Size = new System.Drawing.Size(272, 21);
-            this.cmbTemplateBasketScoreboard.TabIndex = 64;
-            // 
-            // label133
-            // 
-            this.label133.AutoSize = true;
-            this.label133.Location = new System.Drawing.Point(9, 20);
-            this.label133.Name = "label133";
-            this.label133.Size = new System.Drawing.Size(54, 13);
-            this.label133.TabIndex = 63;
-            this.label133.Text = "Template:";
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(249, 177);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(103, 17);
-            this.checkBox5.TabIndex = 62;
-            this.checkBox5.Text = "Mostrar al Iniciar";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(249, 154);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(111, 17);
-            this.checkBox6.TabIndex = 9;
-            this.checkBox6.Text = "Ocultar al terminar";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDown5
-            // 
-            this.numericUpDown5.Location = new System.Drawing.Point(161, 210);
-            this.numericUpDown5.Maximum = new decimal(new int[] {
-            59,
-            0,
-            0,
-            0});
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(37, 20);
-            this.numericUpDown5.TabIndex = 14;
-            this.numericUpDown5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // numericUpDown6
-            // 
-            this.numericUpDown6.Location = new System.Drawing.Point(115, 210);
-            this.numericUpDown6.Maximum = new decimal(new int[] {
-            120,
-            0,
-            0,
-            0});
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(40, 20);
-            this.numericUpDown6.TabIndex = 13;
-            this.numericUpDown6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // nudBasketScoreboardShootTime
-            // 
-            this.nudBasketScoreboardShootTime.Location = new System.Drawing.Point(161, 234);
-            this.nudBasketScoreboardShootTime.Maximum = new decimal(new int[] {
-            59,
-            0,
-            0,
-            0});
-            this.nudBasketScoreboardShootTime.Name = "nudBasketScoreboardShootTime";
-            this.nudBasketScoreboardShootTime.Size = new System.Drawing.Size(37, 20);
-            this.nudBasketScoreboardShootTime.TabIndex = 16;
-            this.nudBasketScoreboardShootTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // btnBasketScoreboardShowHideClocks
-            // 
-            this.btnBasketScoreboardShowHideClocks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBasketScoreboardShowHideClocks.Location = new System.Drawing.Point(268, 97);
-            this.btnBasketScoreboardShowHideClocks.Name = "btnBasketScoreboardShowHideClocks";
-            this.btnBasketScoreboardShowHideClocks.Size = new System.Drawing.Size(80, 51);
-            this.btnBasketScoreboardShowHideClocks.TabIndex = 8;
-            this.btnBasketScoreboardShowHideClocks.Text = "Mostrar/Ocultar";
-            this.btnBasketScoreboardShowHideClocks.UseVisualStyleBackColor = true;
-            this.btnBasketScoreboardShowHideClocks.Click += new System.EventHandler(this.btnBasketScoreboardShowHideClocks_Click);
-            // 
-            // btnBasketScoreboardStartGameTime
-            // 
-            this.btnBasketScoreboardStartGameTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBasketScoreboardStartGameTime.Location = new System.Drawing.Point(12, 171);
-            this.btnBasketScoreboardStartGameTime.Name = "btnBasketScoreboardStartGameTime";
-            this.btnBasketScoreboardStartGameTime.Size = new System.Drawing.Size(69, 29);
-            this.btnBasketScoreboardStartGameTime.TabIndex = 10;
-            this.btnBasketScoreboardStartGameTime.Text = "Iniciar";
-            this.btnBasketScoreboardStartGameTime.UseVisualStyleBackColor = true;
-            this.btnBasketScoreboardStartGameTime.Click += new System.EventHandler(this.btnBasketScoreboardStartGameTime_Click);
-            // 
-            // btnBasketScoreboardResetGameTime
-            // 
-            this.btnBasketScoreboardResetGameTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBasketScoreboardResetGameTime.Location = new System.Drawing.Point(162, 171);
-            this.btnBasketScoreboardResetGameTime.Name = "btnBasketScoreboardResetGameTime";
-            this.btnBasketScoreboardResetGameTime.Size = new System.Drawing.Size(69, 29);
-            this.btnBasketScoreboardResetGameTime.TabIndex = 12;
-            this.btnBasketScoreboardResetGameTime.Text = "Reiniciar";
-            this.btnBasketScoreboardResetGameTime.UseVisualStyleBackColor = true;
-            this.btnBasketScoreboardResetGameTime.Click += new System.EventHandler(this.btnBasketScoreboardResetGameTime_Click);
-            // 
-            // btnBasketScoreboardStopGameTime
-            // 
-            this.btnBasketScoreboardStopGameTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBasketScoreboardStopGameTime.Location = new System.Drawing.Point(87, 171);
-            this.btnBasketScoreboardStopGameTime.Name = "btnBasketScoreboardStopGameTime";
-            this.btnBasketScoreboardStopGameTime.Size = new System.Drawing.Size(69, 29);
-            this.btnBasketScoreboardStopGameTime.TabIndex = 11;
-            this.btnBasketScoreboardStopGameTime.Text = "Timeout";
-            this.btnBasketScoreboardStopGameTime.UseVisualStyleBackColor = true;
-            this.btnBasketScoreboardStopGameTime.Click += new System.EventHandler(this.btnBasketScoreboardStopGameTime_Click);
-            // 
-            // label134
-            // 
-            this.label134.AutoSize = true;
-            this.label134.Location = new System.Drawing.Point(8, 236);
-            this.label134.Name = "label134";
-            this.label134.Size = new System.Drawing.Size(101, 13);
-            this.label134.TabIndex = 50;
-            this.label134.Text = "Duracion Exclusion:";
-            // 
-            // label135
-            // 
-            this.label135.AutoSize = true;
-            this.label135.Location = new System.Drawing.Point(12, 142);
-            this.label135.Name = "label135";
-            this.label135.Size = new System.Drawing.Size(34, 13);
-            this.label135.TabIndex = 49;
-            this.label135.Text = "Reloj:";
-            // 
-            // label136
-            // 
-            this.label136.AutoSize = true;
-            this.label136.Location = new System.Drawing.Point(8, 212);
-            this.label136.Name = "label136";
-            this.label136.Size = new System.Drawing.Size(91, 13);
-            this.label136.TabIndex = 48;
-            this.label136.Text = "Duracion Tiempo:";
-            // 
-            // label137
-            // 
-            this.label137.AutoSize = true;
-            this.label137.Location = new System.Drawing.Point(12, 116);
-            this.label137.Name = "label137";
-            this.label137.Size = new System.Drawing.Size(45, 13);
-            this.label137.TabIndex = 47;
-            this.label137.Text = "Tiempo:";
-            // 
-            // cmbBasktScoreboardQuarter
-            // 
-            this.cmbBasktScoreboardQuarter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBasktScoreboardQuarter.FormattingEnabled = true;
-            this.cmbBasktScoreboardQuarter.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
-            this.cmbBasktScoreboardQuarter.Location = new System.Drawing.Point(63, 113);
-            this.cmbBasktScoreboardQuarter.Name = "cmbBasktScoreboardQuarter";
-            this.cmbBasktScoreboardQuarter.Size = new System.Drawing.Size(37, 21);
-            this.cmbBasktScoreboardQuarter.TabIndex = 5;
-            // 
-            // nudBasketScoreboardGameTimeSecs
-            // 
-            this.nudBasketScoreboardGameTimeSecs.Location = new System.Drawing.Point(109, 140);
-            this.nudBasketScoreboardGameTimeSecs.Maximum = new decimal(new int[] {
-            59,
-            0,
-            0,
-            0});
-            this.nudBasketScoreboardGameTimeSecs.Name = "nudBasketScoreboardGameTimeSecs";
-            this.nudBasketScoreboardGameTimeSecs.Size = new System.Drawing.Size(37, 20);
-            this.nudBasketScoreboardGameTimeSecs.TabIndex = 7;
-            this.nudBasketScoreboardGameTimeSecs.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // nudBasketScoreboardGameTimeMins
-            // 
-            this.nudBasketScoreboardGameTimeMins.Location = new System.Drawing.Point(63, 140);
-            this.nudBasketScoreboardGameTimeMins.Maximum = new decimal(new int[] {
-            120,
-            0,
-            0,
-            0});
-            this.nudBasketScoreboardGameTimeMins.Name = "nudBasketScoreboardGameTimeMins";
-            this.nudBasketScoreboardGameTimeMins.Size = new System.Drawing.Size(40, 20);
-            this.nudBasketScoreboardGameTimeMins.TabIndex = 6;
-            this.nudBasketScoreboardGameTimeMins.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // btnBasketScoreboardStop
-            // 
-            this.btnBasketScoreboardStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBasketScoreboardStop.Location = new System.Drawing.Point(127, 56);
-            this.btnBasketScoreboardStop.Name = "btnBasketScoreboardStop";
-            this.btnBasketScoreboardStop.Size = new System.Drawing.Size(104, 40);
-            this.btnBasketScoreboardStop.TabIndex = 4;
-            this.btnBasketScoreboardStop.Text = "Parar Grafico";
-            this.btnBasketScoreboardStop.UseVisualStyleBackColor = true;
-            this.btnBasketScoreboardStop.Click += new System.EventHandler(this.btnBasketScoreboardStop_Click);
-            // 
-            // btnBasketScoreboardStart
-            // 
-            this.btnBasketScoreboardStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBasketScoreboardStart.Location = new System.Drawing.Point(12, 56);
-            this.btnBasketScoreboardStart.Name = "btnBasketScoreboardStart";
-            this.btnBasketScoreboardStart.Size = new System.Drawing.Size(104, 40);
-            this.btnBasketScoreboardStart.TabIndex = 3;
-            this.btnBasketScoreboardStart.Text = "Iniciar Grafico";
-            this.btnBasketScoreboardStart.UseVisualStyleBackColor = true;
-            this.btnBasketScoreboardStart.Click += new System.EventHandler(this.btnBasketScoreboardStart_Click);
-            // 
-            // button33
-            // 
-            this.button33.Location = new System.Drawing.Point(586, 241);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(30, 23);
-            this.button33.TabIndex = 35;
-            this.button33.Text = "C";
-            this.button33.UseVisualStyleBackColor = true;
-            // 
-            // button34
-            // 
-            this.button34.Location = new System.Drawing.Point(586, 212);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(30, 23);
-            this.button34.TabIndex = 34;
-            this.button34.Text = "-";
-            this.button34.UseVisualStyleBackColor = true;
-            // 
-            // button35
-            // 
-            this.button35.Location = new System.Drawing.Point(586, 183);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(30, 23);
-            this.button35.TabIndex = 33;
-            this.button35.Text = "+";
-            this.button35.UseVisualStyleBackColor = true;
-            // 
-            // button36
-            // 
-            this.button36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button36.Location = new System.Drawing.Point(622, 103);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(99, 42);
-            this.button36.TabIndex = 27;
-            this.button36.Text = "+2";
-            this.button36.UseVisualStyleBackColor = true;
-            // 
-            // button37
-            // 
-            this.button37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button37.Location = new System.Drawing.Point(622, 57);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(99, 40);
-            this.button37.TabIndex = 25;
-            this.button37.Text = "+1";
-            this.button37.UseVisualStyleBackColor = true;
-            // 
-            // button38
-            // 
-            this.button38.Location = new System.Drawing.Point(502, 241);
-            this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(30, 23);
-            this.button38.TabIndex = 32;
-            this.button38.Text = "C";
-            this.button38.UseVisualStyleBackColor = true;
-            // 
-            // button39
-            // 
-            this.button39.Location = new System.Drawing.Point(502, 212);
-            this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(30, 23);
-            this.button39.TabIndex = 30;
-            this.button39.Text = "-";
-            this.button39.UseVisualStyleBackColor = true;
-            // 
-            // button40
-            // 
-            this.button40.Location = new System.Drawing.Point(502, 183);
-            this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(30, 23);
-            this.button40.TabIndex = 29;
-            this.button40.Text = "+";
-            this.button40.UseVisualStyleBackColor = true;
-            // 
-            // button42
-            // 
-            this.button42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button42.Location = new System.Drawing.Point(397, 57);
-            this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(99, 40);
-            this.button42.TabIndex = 24;
-            this.button42.Text = "+1";
-            this.button42.UseVisualStyleBackColor = true;
-            // 
-            // nudBasketScoreboardAwayScore
-            // 
-            this.nudBasketScoreboardAwayScore.Location = new System.Drawing.Point(571, 15);
-            this.nudBasketScoreboardAwayScore.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.nudBasketScoreboardAwayScore.Name = "nudBasketScoreboardAwayScore";
-            this.nudBasketScoreboardAwayScore.Size = new System.Drawing.Size(44, 20);
-            this.nudBasketScoreboardAwayScore.TabIndex = 22;
-            this.nudBasketScoreboardAwayScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudBasketScoreboardAwayScore.ValueChanged += new System.EventHandler(this.nudBasketScoreboardAwayScore_ValueChanged);
-            // 
-            // nudBasketScoreboardHomeScore
-            // 
-            this.nudBasketScoreboardHomeScore.Location = new System.Drawing.Point(521, 15);
-            this.nudBasketScoreboardHomeScore.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.nudBasketScoreboardHomeScore.Name = "nudBasketScoreboardHomeScore";
-            this.nudBasketScoreboardHomeScore.Size = new System.Drawing.Size(44, 20);
-            this.nudBasketScoreboardHomeScore.TabIndex = 21;
-            this.nudBasketScoreboardHomeScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudBasketScoreboardHomeScore.ValueChanged += new System.EventHandler(this.nudBasketScoreboardHomeScore_ValueChanged);
-            // 
-            // txtBasketScoreboardAwayTeam
-            // 
-            this.txtBasketScoreboardAwayTeam.Location = new System.Drawing.Point(621, 14);
-            this.txtBasketScoreboardAwayTeam.Name = "txtBasketScoreboardAwayTeam";
-            this.txtBasketScoreboardAwayTeam.Size = new System.Drawing.Size(115, 20);
-            this.txtBasketScoreboardAwayTeam.TabIndex = 23;
-            // 
-            // txtBasketScoreboardHomeTeam
-            // 
-            this.txtBasketScoreboardHomeTeam.Location = new System.Drawing.Point(396, 14);
-            this.txtBasketScoreboardHomeTeam.Name = "txtBasketScoreboardHomeTeam";
-            this.txtBasketScoreboardHomeTeam.Size = new System.Drawing.Size(115, 20);
-            this.txtBasketScoreboardHomeTeam.TabIndex = 20;
-            // 
-            // shapeContainer5
-            // 
-            this.shapeContainer5.Location = new System.Drawing.Point(3, 16);
-            this.shapeContainer5.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer5.Name = "shapeContainer5";
-            this.shapeContainer5.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape5});
-            this.shapeContainer5.Size = new System.Drawing.Size(777, 291);
-            this.shapeContainer5.TabIndex = 61;
-            this.shapeContainer5.TabStop = false;
-            // 
-            // lineShape5
-            // 
-            this.lineShape5.Name = "lineShape3";
-            this.lineShape5.X1 = 360;
-            this.lineShape5.X2 = 360;
-            this.lineShape5.Y1 = 0;
-            this.lineShape5.Y2 = 283;
-            // 
-            // button43
-            // 
-            this.button43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button43.Location = new System.Drawing.Point(622, 151);
-            this.button43.Name = "button43";
-            this.button43.Size = new System.Drawing.Size(99, 42);
-            this.button43.TabIndex = 65;
-            this.button43.Text = "+3";
-            this.button43.UseVisualStyleBackColor = true;
-            // 
-            // button41
-            // 
-            this.button41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button41.Location = new System.Drawing.Point(397, 151);
-            this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(99, 42);
-            this.button41.TabIndex = 67;
-            this.button41.Text = "+3";
-            this.button41.UseVisualStyleBackColor = true;
-            // 
-            // button44
-            // 
-            this.button44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button44.Location = new System.Drawing.Point(397, 103);
-            this.button44.Name = "button44";
-            this.button44.Size = new System.Drawing.Size(99, 42);
-            this.button44.TabIndex = 66;
-            this.button44.Text = "+2";
-            this.button44.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -9150,31 +9790,17 @@
             this.groupBox3.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.tabVolleyball.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.groupBox22.ResumeLayout(false);
-            this.groupBox22.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideVolleyResultSeconds)).EndInit();
-            this.groupBox21.ResumeLayout(false);
-            this.groupBox21.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyServicesPerPlayer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyPointsPerSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleySetsPerMatch)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideVolleyScoreboardSeconds)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuestSets)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHomeSets)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest4SetPoints)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome4SetPoints)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest3SetPoints)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome3SetPoints)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest2SetPoints)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome2SetPoints)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest1SetPoints)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome1SetPoints)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest5SetPoints)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome5SetPoints)).EndInit();
+            this.tabBasket.ResumeLayout(false);
+            this.tabPage35.ResumeLayout(false);
+            this.groupBox44.ResumeLayout(false);
+            this.groupBox44.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardShootTime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardGameTimeSecs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardGameTimeMins)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardAwayScore)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardHomeScore)).EndInit();
             this.tabSports.ResumeLayout(false);
             this.tabPage17.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
@@ -9220,6 +9846,31 @@
             this.groupBox18.ResumeLayout(false);
             this.groupBox18.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAutoHidePositionsSeconds)).EndInit();
+            this.tabVolleyball.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox22.ResumeLayout(false);
+            this.groupBox22.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideVolleyResultSeconds)).EndInit();
+            this.groupBox21.ResumeLayout(false);
+            this.groupBox21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyServicesPerPlayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyPointsPerSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleySetsPerMatch)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAutoHideVolleyScoreboardSeconds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuestSets)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHomeSets)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest4SetPoints)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome4SetPoints)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest3SetPoints)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome3SetPoints)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest2SetPoints)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome2SetPoints)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest1SetPoints)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome1SetPoints)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyGuest5SetPoints)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudVolleyHome5SetPoints)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.groupBox16.ResumeLayout(false);
             this.groupBox16.PerformLayout();
@@ -9252,6 +9903,13 @@
             this.tabPage8.ResumeLayout(false);
             this.groupBox25.ResumeLayout(false);
             this.groupBox25.PerformLayout();
+            this.tabPage36.ResumeLayout(false);
+            this.groupBox46.ResumeLayout(false);
+            this.groupBox46.PerformLayout();
+            this.tlpGameShowFindCardsItems.ResumeLayout(false);
+            this.tlpGameShowFindCardsItems.PerformLayout();
+            this.groupBox45.ResumeLayout(false);
+            this.groupBox45.PerformLayout();
             this.tabPage12.ResumeLayout(false);
             this.tabElections.ResumeLayout(false);
             this.tabPage22.ResumeLayout(false);
@@ -9339,17 +9997,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSolidColor)).EndInit();
-            this.tabBasket.ResumeLayout(false);
-            this.tabPage35.ResumeLayout(false);
-            this.groupBox44.ResumeLayout(false);
-            this.groupBox44.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardShootTime)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardGameTimeSecs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardGameTimeMins)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardAwayScore)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBasketScoreboardHomeScore)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -10086,21 +10733,73 @@
         private System.Windows.Forms.Button button33;
         private System.Windows.Forms.Button button34;
         private System.Windows.Forms.Button button35;
-        private System.Windows.Forms.Button button36;
-        private System.Windows.Forms.Button button37;
+        private System.Windows.Forms.Button btnBasketScoreboardAway2PAdd;
+        private System.Windows.Forms.Button btnBasketScoreboardAway1PAdd;
         private System.Windows.Forms.Button button38;
         private System.Windows.Forms.Button button39;
         private System.Windows.Forms.Button button40;
-        private System.Windows.Forms.Button button42;
+        private System.Windows.Forms.Button btnBasketScoreboardHome1PAdd;
         private System.Windows.Forms.NumericUpDown nudBasketScoreboardAwayScore;
         private System.Windows.Forms.NumericUpDown nudBasketScoreboardHomeScore;
         private System.Windows.Forms.TextBox txtBasketScoreboardAwayTeam;
         private System.Windows.Forms.TextBox txtBasketScoreboardHomeTeam;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer5;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape5;
-        private System.Windows.Forms.Button button41;
-        private System.Windows.Forms.Button button44;
-        private System.Windows.Forms.Button button43;
+        private System.Windows.Forms.Button btnBasketScoreboardHome3PAdd;
+        private System.Windows.Forms.Button btnBasketScoreboardHome2PAdd;
+        private System.Windows.Forms.Button btnBasketScoreboardAway3PAdd;
+        private System.Windows.Forms.TabPage tabPage36;
+        private System.Windows.Forms.GroupBox groupBox46;
+        private System.Windows.Forms.GroupBox groupBox45;
+        private System.Windows.Forms.Button button46;
+        private System.Windows.Forms.Button btnGameShowFindCardMoveDown;
+        private System.Windows.Forms.Button btnGameShowFindCardMoveUp;
+        private System.Windows.Forms.ListView lvwGameShowFindCardMatch;
+        private System.Windows.Forms.ColumnHeader columnHeader50;
+        private System.Windows.Forms.ColumnHeader columnHeader51;
+        private System.Windows.Forms.Button btnGameShowFindCardClearItems;
+        private System.Windows.Forms.Button btnGameShowFindCardLoadItems;
+        private System.Windows.Forms.Button btnGameShowFindCardEditItem;
+        private System.Windows.Forms.Button btnGameShowFindCardRemoveItem;
+        private System.Windows.Forms.Button btnGameShowFindCardAddItem;
+        private System.Windows.Forms.ListView lvwGameShowFindCardItems;
+        private System.Windows.Forms.ColumnHeader columnHeader36;
+        private System.Windows.Forms.ColumnHeader columnHeader49;
+        private System.Windows.Forms.ComboBox cmbTemplateGameshowFindCard;
+        private System.Windows.Forms.Label label138;
+        private System.Windows.Forms.Button btnGameShowFindCardHide;
+        private System.Windows.Forms.Button btnGameShowFindCardShow;
+        private System.Windows.Forms.Button btnGameShowFindCardStop;
+        private System.Windows.Forms.Button btnGameShowFindCardStart;
+        private System.Windows.Forms.Label label139;
+        private System.Windows.Forms.ComboBox cmbGameShowFindCardMatches;
+        private System.Windows.Forms.TableLayoutPanel tlpGameShowFindCardsItems;
+        private System.Windows.Forms.CheckBox chkGameShowFindCardMatch1;
+        private System.Windows.Forms.CheckBox chkGameShowFindCardMatch9;
+        private System.Windows.Forms.CheckBox chkGameShowFindCardMatch7;
+        private System.Windows.Forms.CheckBox chkGameShowFindCardMatch8;
+        private System.Windows.Forms.CheckBox chkGameShowFindCardMatch6;
+        private System.Windows.Forms.CheckBox chkGameShowFindCardMatch5;
+        private System.Windows.Forms.CheckBox chkGameShowFindCardMatch4;
+        private System.Windows.Forms.CheckBox chkGameShowFindCardMatch3;
+        private System.Windows.Forms.CheckBox chkGameShowFindCardMatch2;
+        private System.Windows.Forms.Button btnGameShowFindCardHideAll;
+        private System.Windows.Forms.Button btnGameShowFindCardShowAll;
+        private System.Windows.Forms.ListBox lstGameShowFindCardTries;
+        private System.Windows.Forms.Label label141;
+        private System.Windows.Forms.Label label140;
+        private System.Windows.Forms.ComboBox cmbGameShowFindCardNumberTries;
+        private System.Windows.Forms.CheckBox chkGameShowFindCardAutoUpdate;
+        private System.Windows.Forms.Button btnGameShowFindCardGenerateMatch;
+        private System.Windows.Forms.Label label142;
+        private System.Windows.Forms.ComboBox cmbGameShowFindCardWins;
+        private System.Windows.Forms.Button btnGameShowFindCardSaveMatch;
+        private System.Windows.Forms.Label label143;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnBasketScoreboardShowHideScoreboard;
+        private System.Windows.Forms.ColumnHeader columnHeader52;
+        private System.Windows.Forms.Label label144;
+        private System.Windows.Forms.ComboBox cmbGameShowFindCardRotationSecondsDuration;
     }
 }
 

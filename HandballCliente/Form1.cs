@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using RestSharp;
 using HandballCliente.Models;
+using HandballCliente.Controllers;
 using RestSharp.Deserializers;
 using System.Net;
 
@@ -220,6 +221,8 @@ namespace HandballCliente
             cmbGameshowPlayerAnswer.Items.Add("2");
             cmbGameshowPlayerAnswer.Items.Add("3");
             cmbGameshowPlayerAnswer.Items.Add("4");
+
+            UtilHelper.populateComboboxNumberRange(cmbGameShowFindCardNumberTries, 1, 3);
         }
 
         private void fillListQuestions()
@@ -377,28 +380,9 @@ namespace HandballCliente
         {
             if (casparServer.Connected)
             {
-                List<String> templates = casparServer.GetTemplateNames();
-                fillCombosTemplate(cmbTemplateTeam, templates);
-                fillCombosTemplate(cmbTemplateIntro, templates);
-                fillCombosTemplate(cmbTemplateResult, templates);
-                fillCombosTemplate(cmbTemplateScoreboard, templates);
-                fillCombosTemplate(cmbTemplateLowerThird, templates);
-                fillCombosTemplate(cmbTemplatePositions, templates);
-                fillCombosTemplate(cmbTemplateTwitter, templates);
-                fillCombosTemplate(cmbTemplateVolleyScoreboard, templates);
-                fillCombosTemplate(cmbTemplateVolleyResult,templates);
-                fillCombosTemplate(cmbTemplateGameshowCountdown, templates);
-                fillCombosTemplate(cmbTemplateDynamicLogo, templates);
-                fillCombosTemplate(cmbTemplateGameshowQuestions, templates);
-                fillCombosTemplate(cmbTemplateElectionsTop3, templates);
-                fillCombosTemplate(cmbTemplateWeatherForecast, templates);
-                fillCombosTemplate(cmbTemplateTwitterCounter, templates);
-                fillCombosTemplate(cmbTemplateDynamicInfo, templates);
-                fillCombosTemplate(cmbTemplateAnimatedLogo, templates);
-                fillCombosTemplate(cmbTemplateDynamicNewsTicker, templates);
-                fillCombosTemplate(cmbTemplateGameplay, templates);
-                fillCombosTemplate(cmbTemplateTwitterPoll, templates);
-                fillCombosTemplate(cmbTemplateBasketScoreboard, templates);
+                AppController.getInstance().getServerTemplates(casparServer);
+                setCombosTemplates();
+                AppController.getInstance().fillCombosTemplates();
             }
         }
 
@@ -450,6 +434,32 @@ namespace HandballCliente
                 lvwGameplayPlaylist.Items.Clear();
                 playlist.ForEach(i => lvwGameplayPlaylist.Items.Add(i));
             }
+        }
+
+        private void setCombosTemplates()
+        {
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateTeam);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateIntro);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateResult);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateScoreboard);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateLowerThird);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplatePositions);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateTwitter);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateVolleyScoreboard);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateVolleyResult);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateGameshowCountdown);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateDynamicLogo);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateGameshowQuestions);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateElectionsTop3);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateWeatherForecast);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateTwitterCounter);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateDynamicInfo);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateAnimatedLogo);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateDynamicNewsTicker);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateGameplay);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateTwitterPoll);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateBasketScoreboard);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateGameshowFindCard);
         }
 
         private void fillCombosTemplate(ComboBox cbo, List<String> templates)
@@ -838,6 +848,89 @@ namespace HandballCliente
             {
                 casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "showCorrectAnswer", layerPresentation.ToString()));
             }
+        }
+
+        private void startGameshowFindCard()
+        {
+            if (cmbTemplateGameshowFindCard.SelectedIndex == -1) return;
+            if (cmbGameShowFindCardMatches.SelectedIndex != -1)
+            {
+                if (casparServer.Connected)
+                {
+                    Template templateFindCard = new Template();
+                    String basePath = casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath;
+                    Uri frontPicPath = new Uri(basePath + GameShowController.getFindCardItemPictureByType(CGClientConstants.FindCardItemType.FRONT_CARD) + ".png");
+                    Uri backPicPath = new Uri(basePath + GameShowController.getFindCardItemPictureByType(CGClientConstants.FindCardItemType.LOOSER_CARD) + ".png");
+                    Uri winPicPath = new Uri(basePath + GameShowController.getFindCardItemPictureByType(CGClientConstants.FindCardItemType.WINNER_CARD) + ".png");
+                    long winPos = GameShowController.getFindCardWinnerPositionById(long.Parse(cmbGameShowFindCardMatches.Text));
+
+                    templateFindCard.Fields.Add(new TemplateField("frontPicture", frontPicPath.ToString()));
+                    templateFindCard.Fields.Add(new TemplateField("backPicture", backPicPath.ToString()));
+                    templateFindCard.Fields.Add(new TemplateField("winnerPicture", winPicPath.ToString()));
+                    templateFindCard.Fields.Add(new TemplateField("winnerCardPosition", winPos.ToString()));
+                    templateFindCard.Fields.Add(new TemplateField("rotationSecondsDuration", cmbGameShowFindCardRotationSecondsDuration.Text));
+
+                    //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
+                    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateFindCard.TemplateDataText(), cmbTemplateGameshowFindCard.Text, layerPresentation.ToString()));
+                    txtLogMessages.Text += "\n" + ri.Message;
+                    //System.Diagnostics.Debug.WriteLine(ri.Message);
+                }
+            }
+        }
+
+        private void updateGameshowFindCard(int position)
+        {
+            if (cmbTemplateGameshowFindCard.SelectedIndex == -1) return;
+            if (cmbGameShowFindCardMatches.SelectedIndex == -1) return;
+            if (!chkGameShowFindCardAutoUpdate.Checked) return;
+            if (casparServer.Connected)
+            {
+                Template templateFindCard = new Template();
+
+                templateFindCard.Fields.Add(new TemplateField("rotateCardPosition", position.ToString()));
+
+                //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
+                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateFindCard.TemplateDataText(), layerPresentation.ToString()));
+                System.Diagnostics.Debug.WriteLine(ri.Message);
+            }
+        }
+
+        private void stopGameshowFindCard()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerPresentation.ToString()));
+            }
+        }
+
+        private void showGameshowFindCardShowAllCards()
+        {
+            if (casparServer.Connected)
+            {
+                chkGameShowFindCardAutoUpdate.Checked = false;
+                settingFindCardsCheck(true);
+                chkGameShowFindCardAutoUpdate.Checked = true;
+                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "showAllCards", layerPresentation.ToString()));
+            }
+        }
+
+        private void showGameshowFindCardHideAllCards()
+        {
+            if (casparServer.Connected)
+            {
+                chkGameShowFindCardAutoUpdate.Checked = false;
+                settingFindCardsCheck(false);
+                chkGameShowFindCardAutoUpdate.Checked = true;
+                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "hideAllCards", layerPresentation.ToString()));
+            }
+        }
+
+        private void settingFindCardsCheck(Boolean state)
+        {
+            foreach (CheckBox item in tlpGameShowFindCardsItems.Controls)
+	        {
+                item.Checked = state;
+	        } 
         }
 
         private void startWeatherForecast()
@@ -2754,6 +2847,53 @@ namespace HandballCliente
             }
         }
 
+        private void generateGameShowFindCardsMatches()
+        {
+            GameShowController.simulateFindCardMatches();
+            GameShowController.simulateFindCardItems();
+            fillFindCardsMatches();
+            fillFindCardItems();
+        }
+
+        private void fillFindCardItems()
+        {
+            lvwGameShowFindCardItems.Items.Clear();
+            lvwGameShowFindCardItems.Items.AddRange(GameShowController.fillListviewGameshowFindCardItems());
+        }
+
+        private void fillFindCardsMatches()
+        {
+            cmbGameShowFindCardMatches.Items.Clear();
+            cmbGameShowFindCardMatches.Items.AddRange(GameShowController.fillComboboxGameshowFindCardMatches());
+            //foreach (FindCardMatch item in HandballMatch.getInstance().gameshowFindCardMatches)
+            //{
+            //    //cmbGameShowFindCardMatches.Items.Add(item.uid.ToString() + " [" + item.dateTime.ToShortDateString() + "]");
+            //    cmbGameShowFindCardMatches.Items.Add(item.uid.ToString());
+            //}
+        }
+
+        private void fillSelectedFindCardMatch()
+        {
+            if (cmbGameShowFindCardMatches.SelectedIndex != -1)
+            {
+                FindCardMatch aux = GameShowController.getFindCardMatchById(long.Parse(cmbGameShowFindCardMatches.Text));
+                fillSelectedFindCardMatchCards(aux.Cards);
+            }
+        }
+
+        private void fillSelectedFindCardMatchCards(List<Card> cards)
+        {
+            chkGameShowFindCardMatch1.Text = cards[0].Win ? "Ganador" : "";
+            chkGameShowFindCardMatch2.Text = cards[1].Win ? "Ganador" : "";
+            chkGameShowFindCardMatch3.Text = cards[2].Win ? "Ganador" : "";
+            chkGameShowFindCardMatch4.Text = cards[3].Win ? "Ganador" : "";
+            chkGameShowFindCardMatch5.Text = cards[4].Win ? "Ganador" : "";
+            chkGameShowFindCardMatch6.Text = cards[5].Win ? "Ganador" : "";
+            chkGameShowFindCardMatch7.Text = cards[6].Win ? "Ganador" : "";
+            chkGameShowFindCardMatch8.Text = cards[7].Win ? "Ganador" : "";
+            chkGameShowFindCardMatch9.Text = cards[8].Win ? "Ganador" : "";
+        }
+
         private bool checkDataBasketScoreboard()
         {
             bool aux = false;
@@ -2807,7 +2947,15 @@ namespace HandballCliente
         {
             if (casparServer.Connected)
             {
-                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "clocksShowHide", layerScoreboard.ToString()));
+                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "clockShowHide", layerScoreboard.ToString()));
+            }
+        }
+
+        private void showHideBasketScoreboard()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "scoreboardShowHide", layerScoreboard.ToString()));
             }
         }
 
@@ -2820,7 +2968,6 @@ namespace HandballCliente
                 {
                     showHideBasketScoreboardClocks();
                 }
-
             }
         }
 
@@ -2852,6 +2999,11 @@ namespace HandballCliente
         //{
         //    nudGuestTeamScore.UpButton();
         //}
+
+        private void addBasketScoreboardPoints(NumericUpDown control, int pointsToAdd)
+        {
+            control.Value += pointsToAdd;
+        }
 
         private void updateBasketScoreboardTeamsScore()
         {
@@ -3220,6 +3372,50 @@ namespace HandballCliente
             q.correctAnswer = 3;
 
             addQuestion(q);
+        }
+
+        private void newGameshowFindCardItem()
+        {
+            frmFindCardItem q1 = new frmFindCardItem(this, 1, (HandballMatch.getInstance().gameshowFindCardItems.Count + 1).ToString());
+            q1.ShowDialog(this);
+        }
+
+        private void editGameshowFindCardItem()
+        {
+            if (lvwGameShowFindCardItems.SelectedItems != null)
+            {
+                frmFindCardItem f1 = new frmFindCardItem(this, 2, lvwGameShowFindCardItems.SelectedItems[0].Text);
+                f1.ShowDialog(this);
+            }
+        }
+
+        private void deleteGameshowFindCardItem()
+        {
+            if (lvwGameShowFindCardItems.SelectedItems != null)
+            {
+                GameShowController.deleteGameshowFindCardItem(lvwGameShowFindCardItems.SelectedItems[0].Text);
+                updateGameShowFindCardItems();
+            }
+        }
+
+        public void updateGameShowFindCardItems()
+        {
+            fillGameShowFindCardItems();
+        }
+
+        private void fillGameShowFindCardItems()
+        {
+            SortPositionsTable();
+            string[] arr;
+            lvwGameShowFindCardItems.Items.Clear();
+            foreach (FindCardItem item in HandballMatch.getInstance().gameshowFindCardItems)
+            {
+                arr = new string[3];
+                arr[0] = item.id.ToString();
+                arr[1] = item.type.ToString();
+                arr[2] = item.picture.ToString();
+                lvwGameShowFindCardItems.Items.Add(new ListViewItem(arr));
+            }
         }
 
         private void addPlayerTeam2()
@@ -3885,7 +4081,6 @@ namespace HandballCliente
         {
             deleteGameshowQuestion();
         }
-        # endregion
 
         private void btnWeatherForecastCallWS_Click(object sender, EventArgs e)
         {
@@ -4472,5 +4667,137 @@ namespace HandballCliente
         {
             updateBasketScoreboardTeamsScore();
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnGameShowFindCardSaveMatch_Click(object sender, EventArgs e)
+        {
+            generateGameShowFindCardsMatches();
+        }
+
+        private void cmbGameShowFindCardMatches_Click(object sender, EventArgs e)
+        {
+            fillSelectedFindCardMatch();
+        }
+
+        private void btnBasketScoreboardShowHideScoreboard_Click(object sender, EventArgs e)
+        {
+            showHideBasketScoreboard();
+        }
+
+        private void btnBasketScoreboardHome1PAdd_Click(object sender, EventArgs e)
+        {
+            addBasketScoreboardPoints(nudBasketScoreboardHomeScore, 1);
+        }
+
+        private void btnBasketScoreboardAway1PAdd_Click(object sender, EventArgs e)
+        {
+            addBasketScoreboardPoints(nudBasketScoreboardAwayScore, 1);
+        }
+
+        private void btnBasketScoreboardHome2PAdd_Click(object sender, EventArgs e)
+        {
+            addBasketScoreboardPoints(nudBasketScoreboardHomeScore, 2);
+        }
+
+        private void btnBasketScoreboardAway2PAdd_Click(object sender, EventArgs e)
+        {
+            addBasketScoreboardPoints(nudBasketScoreboardAwayScore, 2);
+        }
+
+        private void btnBasketScoreboardHome3PAdd_Click(object sender, EventArgs e)
+        {
+            addBasketScoreboardPoints(nudBasketScoreboardHomeScore, 3);
+        }
+
+        private void btnBasketScoreboardAway3PAdd_Click(object sender, EventArgs e)
+        {
+            addBasketScoreboardPoints(nudBasketScoreboardAwayScore, 3);
+        }
+
+        private void btnGameShowFindCardAddItem_Click(object sender, EventArgs e)
+        {
+            newGameshowFindCardItem();
+        }
+
+        private void btnGameShowFindCardRemoveItem_Click(object sender, EventArgs e)
+        {
+            deleteGameshowFindCardItem();
+        }
+
+        private void btnGameShowFindCardEditItem_Click(object sender, EventArgs e)
+        {
+            editGameshowFindCardItem();
+        }
+
+        private void btnGameShowFindCardShow_Click(object sender, EventArgs e)
+        {
+            startGameshowFindCard();
+        }
+# endregion
+
+        private void btnGameShowFindCardHide_Click(object sender, EventArgs e)
+        {
+            stopGameshowFindCard();
+        }
+
+        private void chkGameShowFindCardMatch1_CheckedChanged(object sender, EventArgs e)
+        {
+            updateGameshowFindCard(1);
+        }
+
+        private void chkGameShowFindCardMatch2_CheckedChanged(object sender, EventArgs e)
+        {
+            updateGameshowFindCard(2);
+        }
+
+        private void chkGameShowFindCardMatch3_CheckedChanged(object sender, EventArgs e)
+        {
+            updateGameshowFindCard(3);
+        }
+
+        private void chkGameShowFindCardMatch4_CheckedChanged(object sender, EventArgs e)
+        {
+            updateGameshowFindCard(4);
+        }
+
+        private void chkGameShowFindCardMatch5_CheckedChanged(object sender, EventArgs e)
+        {
+            updateGameshowFindCard(5);
+        }
+
+        private void chkGameShowFindCardMatch6_CheckedChanged(object sender, EventArgs e)
+        {
+            updateGameshowFindCard(6);
+        }
+
+        private void chkGameShowFindCardMatch7_CheckedChanged(object sender, EventArgs e)
+        {
+            updateGameshowFindCard(7);
+        }
+
+        private void chkGameShowFindCardMatch8_CheckedChanged(object sender, EventArgs e)
+        {
+            updateGameshowFindCard(8);
+        }
+
+        private void chkGameShowFindCardMatch9_CheckedChanged(object sender, EventArgs e)
+        {
+            updateGameshowFindCard(9);
+        }
+
+        private void btnGameShowFindCardShowAll_Click(object sender, EventArgs e)
+        {
+            showGameshowFindCardShowAllCards();
+        }
+
+        private void btnGameShowFindCardHideAll_Click(object sender, EventArgs e)
+        {
+            showGameshowFindCardHideAllCards();
+        }
+
     }
 }

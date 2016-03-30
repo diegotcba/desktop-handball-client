@@ -114,6 +114,8 @@ namespace HandballCliente
 
         //GAMESHOW
         public List<Question> gameshowQuestions { get; set; }
+        public List<FindCardItem> gameshowFindCardItems { get; set; }
+        public List<FindCardMatch> gameshowFindCardMatches { get; set; }
 
         //ELECTIONS
         public List<Election> electionResults { get; set; }
@@ -126,6 +128,7 @@ namespace HandballCliente
 
         //DYNAMIC INFO
         public List<DynamicInfo> dynamicInfo { get; set; }
+
 
         private HandballMatch()
         {
@@ -141,6 +144,8 @@ namespace HandballCliente
             team2Players = new List<Player>();
             positions = new List<Position>();
             gameshowQuestions = new List<Question>();
+            gameshowFindCardItems = new List<FindCardItem>();
+            gameshowFindCardMatches = new List<FindCardMatch>();
             weatherForecast = new List<PronosticoCiudad>();
 
             autoHideIntro = false;

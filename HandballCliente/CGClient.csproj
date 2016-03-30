@@ -22,7 +22,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -57,13 +57,36 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>HandballCliente.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>handball.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
@@ -84,10 +107,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AppController.cs" />
+    <Compile Include="Controllers\GameShowController.cs" />
+    <Compile Include="Controllers\LogController.cs" />
     <Compile Include="Controllers\MultimediaController.cs" />
+    <Compile Include="Controllers\UtilHelper.cs" />
     <Compile Include="Models\Answer.cs" />
     <Compile Include="CasparCG\CasparCG.cs" />
+    <Compile Include="Models\Card.cs" />
+    <Compile Include="Models\CGClientConstants.cs" />
     <Compile Include="Models\DynamicInfo.cs" />
+    <Compile Include="Models\FindCardItem.cs" />
+    <Compile Include="Models\FindCardMatch.cs" />
     <Compile Include="Views\ConfigLayers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +138,12 @@
     <Compile Include="Models\Provincia.cs" />
     <Compile Include="Models\Tweets.cs" />
     <Compile Include="Models\Utils.cs" />
+    <Compile Include="Views\frmFindCardItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmFindCardItem.Designer.cs">
+      <DependentUpon>frmFindCardItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pregunta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ConfigRecording.resx">
       <DependentUpon>ConfigRecording.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmFindCardItem.resx">
+      <DependentUpon>frmFindCardItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Pregunta.resx">
       <DependentUpon>Pregunta.cs</DependentUpon>
@@ -204,7 +243,18 @@
   <ItemGroup>
     <Content Include="handball.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <PublishFile Include="Microsoft.VisualBasic.PowerPacks.Vs">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

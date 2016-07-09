@@ -652,6 +652,70 @@
             this.txtTwitterPollWS = new System.Windows.Forms.TextBox();
             this.label123 = new System.Windows.Forms.Label();
             this.tabPage28 = new System.Windows.Forms.TabPage();
+            this.groupBox47 = new System.Windows.Forms.GroupBox();
+            this.chkTwitterSearchMockCall = new System.Windows.Forms.CheckBox();
+            this.TwitterSearchRemoveFromPlaylist = new System.Windows.Forms.Button();
+            this.btnTwitterSearchAddToPlaylist = new System.Windows.Forms.Button();
+            this.label157 = new System.Windows.Forms.Label();
+            this.txtTwitterSearchPlaylistWS = new System.Windows.Forms.TextBox();
+            this.label156 = new System.Windows.Forms.Label();
+            this.txtTwitterSearchWS = new System.Windows.Forms.TextBox();
+            this.btnTwitterSearchClearPlaylist = new System.Windows.Forms.Button();
+            this.button36 = new System.Windows.Forms.Button();
+            this.btnTwitterSearchSavePlaylist = new System.Windows.Forms.Button();
+            this.label149 = new System.Windows.Forms.Label();
+            this.txtTwitterSearchPlaylistTitle = new System.Windows.Forms.TextBox();
+            this.dtpTwitterSearchPlaylistDate = new System.Windows.Forms.DateTimePicker();
+            this.label148 = new System.Windows.Forms.Label();
+            this.btnTwitterSearchWSCall = new System.Windows.Forms.Button();
+            this.txtTwitterSearchTimeRange = new System.Windows.Forms.ComboBox();
+            this.label147 = new System.Windows.Forms.Label();
+            this.label146 = new System.Windows.Forms.Label();
+            this.txtTwitterSearchPlaylistDescription = new System.Windows.Forms.TextBox();
+            this.label145 = new System.Windows.Forms.Label();
+            this.txtTwitterSearchHashtag = new System.Windows.Forms.TextBox();
+            this.lvwTwitterSearchPlaylistTweets = new System.Windows.Forms.ListView();
+            this.columnHeader56 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader57 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader58 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lvwTwitterSearchListResult = new System.Windows.Forms.ListView();
+            this.columnHeader53 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader54 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader55 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader66 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader67 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabPage37 = new System.Windows.Forms.TabPage();
+            this.groupBox49 = new System.Windows.Forms.GroupBox();
+            this.cmbTwitterPlaylistBGVideo = new System.Windows.Forms.ComboBox();
+            this.label158 = new System.Windows.Forms.Label();
+            this.lblTwitterPlaylistDescription = new System.Windows.Forms.Label();
+            this.lblTwitterPlaylistDate = new System.Windows.Forms.Label();
+            this.lblTwitterPlaylistTitle = new System.Windows.Forms.Label();
+            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox14 = new System.Windows.Forms.CheckBox();
+            this.cmbTemplateTwitterPlaylist = new System.Windows.Forms.ComboBox();
+            this.label155 = new System.Windows.Forms.Label();
+            this.btnTwitterPlaylistUpdate = new System.Windows.Forms.Button();
+            this.btnTwitterPlaylistStop = new System.Windows.Forms.Button();
+            this.btnTwitterPlaylistStart = new System.Windows.Forms.Button();
+            this.label150 = new System.Windows.Forms.Label();
+            this.label151 = new System.Windows.Forms.Label();
+            this.label152 = new System.Windows.Forms.Label();
+            this.lvwTwitterPlaylistDetailList = new System.Windows.Forms.ListView();
+            this.columnHeader59 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader60 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader61 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.groupBox48 = new System.Windows.Forms.GroupBox();
+            this.chkTwitterPlaylistMockWSCall = new System.Windows.Forms.CheckBox();
+            this.lvwTwitterPlaylistResult = new System.Windows.Forms.ListView();
+            this.columnHeader62 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader63 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader64 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader65 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnTwitterPlaylistWSCall = new System.Windows.Forms.Button();
+            this.label153 = new System.Windows.Forms.Label();
+            this.txtTwitterPlaylistWS = new System.Windows.Forms.TextBox();
+            this.label154 = new System.Windows.Forms.Label();
             this.tabPage16 = new System.Windows.Forms.TabPage();
             this.tabBranding = new System.Windows.Forms.TabControl();
             this.tabPage26 = new System.Windows.Forms.TabPage();
@@ -826,6 +890,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtServerAddress = new System.Windows.Forms.TextBox();
+            this.chkTwitterSearchPlaylistMockCall = new System.Windows.Forms.CheckBox();
+            this.lblTwitterPlaylistId = new System.Windows.Forms.Label();
+            this.label160 = new System.Windows.Forms.Label();
             this.mstMenues.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -951,6 +1018,12 @@
             this.groupBox39.SuspendLayout();
             this.groupBox42.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTwitterPollWSAutoCallSeg)).BeginInit();
+            this.tabPage28.SuspendLayout();
+            this.groupBox47.SuspendLayout();
+            this.tabPage37.SuspendLayout();
+            this.groupBox49.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
+            this.groupBox48.SuspendLayout();
             this.tabPage16.SuspendLayout();
             this.tabBranding.SuspendLayout();
             this.tabPage26.SuspendLayout();
@@ -6731,11 +6804,12 @@
             this.tabTwitter.Controls.Add(this.tabPage25);
             this.tabTwitter.Controls.Add(this.tabPage34);
             this.tabTwitter.Controls.Add(this.tabPage28);
+            this.tabTwitter.Controls.Add(this.tabPage37);
             this.tabTwitter.Location = new System.Drawing.Point(0, 0);
             this.tabTwitter.Multiline = true;
             this.tabTwitter.Name = "tabTwitter";
             this.tabTwitter.SelectedIndex = 0;
-            this.tabTwitter.Size = new System.Drawing.Size(822, 327);
+            this.tabTwitter.Size = new System.Drawing.Size(986, 327);
             this.tabTwitter.TabIndex = 12;
             // 
             // tabPage24
@@ -6745,7 +6819,7 @@
             this.tabPage24.Location = new System.Drawing.Point(23, 4);
             this.tabPage24.Name = "tabPage24";
             this.tabPage24.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage24.Size = new System.Drawing.Size(795, 319);
+            this.tabPage24.Size = new System.Drawing.Size(959, 319);
             this.tabPage24.TabIndex = 0;
             this.tabPage24.Text = "Status";
             this.tabPage24.UseVisualStyleBackColor = true;
@@ -6766,9 +6840,9 @@
             this.groupBox20.Controls.Add(this.chkAutoHideTwitter);
             this.groupBox20.Controls.Add(this.btnStopTwitter);
             this.groupBox20.Controls.Add(this.btnStartTwitter);
-            this.groupBox20.Location = new System.Drawing.Point(376, 0);
+            this.groupBox20.Location = new System.Drawing.Point(587, 0);
             this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Size = new System.Drawing.Size(359, 316);
+            this.groupBox20.Size = new System.Drawing.Size(366, 316);
             this.groupBox20.TabIndex = 13;
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "Tweet";
@@ -6931,7 +7005,7 @@
             this.groupBox32.Controls.Add(this.lvwTwitterList);
             this.groupBox32.Location = new System.Drawing.Point(6, 0);
             this.groupBox32.Name = "groupBox32";
-            this.groupBox32.Size = new System.Drawing.Size(364, 316);
+            this.groupBox32.Size = new System.Drawing.Size(384, 316);
             this.groupBox32.TabIndex = 8;
             this.groupBox32.TabStop = false;
             this.groupBox32.Text = "Twitter";
@@ -7082,7 +7156,7 @@
             this.tabPage25.Location = new System.Drawing.Point(23, 4);
             this.tabPage25.Name = "tabPage25";
             this.tabPage25.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage25.Size = new System.Drawing.Size(795, 319);
+            this.tabPage25.Size = new System.Drawing.Size(959, 319);
             this.tabPage25.TabIndex = 1;
             this.tabPage25.Text = "Counter";
             this.tabPage25.UseVisualStyleBackColor = true;
@@ -7463,7 +7537,7 @@
             this.tabPage34.Controls.Add(this.groupBox42);
             this.tabPage34.Location = new System.Drawing.Point(23, 4);
             this.tabPage34.Name = "tabPage34";
-            this.tabPage34.Size = new System.Drawing.Size(795, 319);
+            this.tabPage34.Size = new System.Drawing.Size(959, 319);
             this.tabPage34.TabIndex = 3;
             this.tabPage34.Text = "Poll";
             this.tabPage34.UseVisualStyleBackColor = true;
@@ -7837,12 +7911,635 @@
             // 
             // tabPage28
             // 
+            this.tabPage28.Controls.Add(this.groupBox47);
             this.tabPage28.Location = new System.Drawing.Point(23, 4);
             this.tabPage28.Name = "tabPage28";
-            this.tabPage28.Size = new System.Drawing.Size(795, 319);
+            this.tabPage28.Size = new System.Drawing.Size(959, 319);
             this.tabPage28.TabIndex = 2;
-            this.tabPage28.Text = "Moderation";
+            this.tabPage28.Text = "Search";
             this.tabPage28.UseVisualStyleBackColor = true;
+            // 
+            // groupBox47
+            // 
+            this.groupBox47.Controls.Add(this.chkTwitterSearchPlaylistMockCall);
+            this.groupBox47.Controls.Add(this.chkTwitterSearchMockCall);
+            this.groupBox47.Controls.Add(this.TwitterSearchRemoveFromPlaylist);
+            this.groupBox47.Controls.Add(this.btnTwitterSearchAddToPlaylist);
+            this.groupBox47.Controls.Add(this.label157);
+            this.groupBox47.Controls.Add(this.txtTwitterSearchPlaylistWS);
+            this.groupBox47.Controls.Add(this.label156);
+            this.groupBox47.Controls.Add(this.txtTwitterSearchWS);
+            this.groupBox47.Controls.Add(this.btnTwitterSearchClearPlaylist);
+            this.groupBox47.Controls.Add(this.button36);
+            this.groupBox47.Controls.Add(this.btnTwitterSearchSavePlaylist);
+            this.groupBox47.Controls.Add(this.label149);
+            this.groupBox47.Controls.Add(this.txtTwitterSearchPlaylistTitle);
+            this.groupBox47.Controls.Add(this.dtpTwitterSearchPlaylistDate);
+            this.groupBox47.Controls.Add(this.label148);
+            this.groupBox47.Controls.Add(this.btnTwitterSearchWSCall);
+            this.groupBox47.Controls.Add(this.txtTwitterSearchTimeRange);
+            this.groupBox47.Controls.Add(this.label147);
+            this.groupBox47.Controls.Add(this.label146);
+            this.groupBox47.Controls.Add(this.txtTwitterSearchPlaylistDescription);
+            this.groupBox47.Controls.Add(this.label145);
+            this.groupBox47.Controls.Add(this.txtTwitterSearchHashtag);
+            this.groupBox47.Controls.Add(this.lvwTwitterSearchPlaylistTweets);
+            this.groupBox47.Controls.Add(this.lvwTwitterSearchListResult);
+            this.groupBox47.Location = new System.Drawing.Point(4, 4);
+            this.groupBox47.Name = "groupBox47";
+            this.groupBox47.Size = new System.Drawing.Size(952, 312);
+            this.groupBox47.TabIndex = 0;
+            this.groupBox47.TabStop = false;
+            this.groupBox47.Text = "Busqueda Tweets";
+            // 
+            // chkTwitterSearchMockCall
+            // 
+            this.chkTwitterSearchMockCall.AutoSize = true;
+            this.chkTwitterSearchMockCall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTwitterSearchMockCall.ForeColor = System.Drawing.Color.Navy;
+            this.chkTwitterSearchMockCall.Location = new System.Drawing.Point(374, 14);
+            this.chkTwitterSearchMockCall.Name = "chkTwitterSearchMockCall";
+            this.chkTwitterSearchMockCall.Size = new System.Drawing.Size(91, 17);
+            this.chkTwitterSearchMockCall.TabIndex = 141;
+            this.chkTwitterSearchMockCall.Text = "Simular WS";
+            this.chkTwitterSearchMockCall.UseVisualStyleBackColor = true;
+            // 
+            // TwitterSearchRemoveFromPlaylist
+            // 
+            this.TwitterSearchRemoveFromPlaylist.Location = new System.Drawing.Point(484, 225);
+            this.TwitterSearchRemoveFromPlaylist.Name = "TwitterSearchRemoveFromPlaylist";
+            this.TwitterSearchRemoveFromPlaylist.Size = new System.Drawing.Size(38, 19);
+            this.TwitterSearchRemoveFromPlaylist.TabIndex = 140;
+            this.TwitterSearchRemoveFromPlaylist.Text = "<<<";
+            this.TwitterSearchRemoveFromPlaylist.UseVisualStyleBackColor = true;
+            this.TwitterSearchRemoveFromPlaylist.Click += new System.EventHandler(this.TwitterSearchRemoveFromPlaylist_Click);
+            // 
+            // btnTwitterSearchAddToPlaylist
+            // 
+            this.btnTwitterSearchAddToPlaylist.Location = new System.Drawing.Point(484, 204);
+            this.btnTwitterSearchAddToPlaylist.Name = "btnTwitterSearchAddToPlaylist";
+            this.btnTwitterSearchAddToPlaylist.Size = new System.Drawing.Size(38, 19);
+            this.btnTwitterSearchAddToPlaylist.TabIndex = 139;
+            this.btnTwitterSearchAddToPlaylist.Text = ">>>";
+            this.btnTwitterSearchAddToPlaylist.UseVisualStyleBackColor = true;
+            this.btnTwitterSearchAddToPlaylist.Click += new System.EventHandler(this.btnTwitterSearchAddToPlaylist_Click);
+            // 
+            // label157
+            // 
+            this.label157.AutoSize = true;
+            this.label157.Location = new System.Drawing.Point(548, 18);
+            this.label157.Name = "label157";
+            this.label157.Size = new System.Drawing.Size(28, 13);
+            this.label157.TabIndex = 138;
+            this.label157.Text = "WS:";
+            // 
+            // txtTwitterSearchPlaylistWS
+            // 
+            this.txtTwitterSearchPlaylistWS.Location = new System.Drawing.Point(618, 15);
+            this.txtTwitterSearchPlaylistWS.Name = "txtTwitterSearchPlaylistWS";
+            this.txtTwitterSearchPlaylistWS.Size = new System.Drawing.Size(328, 20);
+            this.txtTwitterSearchPlaylistWS.TabIndex = 137;
+            // 
+            // label156
+            // 
+            this.label156.AutoSize = true;
+            this.label156.Location = new System.Drawing.Point(16, 18);
+            this.label156.Name = "label156";
+            this.label156.Size = new System.Drawing.Size(28, 13);
+            this.label156.TabIndex = 136;
+            this.label156.Text = "WS:";
+            // 
+            // txtTwitterSearchWS
+            // 
+            this.txtTwitterSearchWS.Location = new System.Drawing.Point(86, 15);
+            this.txtTwitterSearchWS.Name = "txtTwitterSearchWS";
+            this.txtTwitterSearchWS.Size = new System.Drawing.Size(269, 20);
+            this.txtTwitterSearchWS.TabIndex = 135;
+            // 
+            // btnTwitterSearchClearPlaylist
+            // 
+            this.btnTwitterSearchClearPlaylist.Location = new System.Drawing.Point(916, 204);
+            this.btnTwitterSearchClearPlaylist.Name = "btnTwitterSearchClearPlaylist";
+            this.btnTwitterSearchClearPlaylist.Size = new System.Drawing.Size(30, 19);
+            this.btnTwitterSearchClearPlaylist.TabIndex = 134;
+            this.btnTwitterSearchClearPlaylist.Text = "C";
+            this.btnTwitterSearchClearPlaylist.UseVisualStyleBackColor = true;
+            this.btnTwitterSearchClearPlaylist.Click += new System.EventHandler(this.btnTwitterSearchClearPlaylist_Click);
+            // 
+            // button36
+            // 
+            this.button36.Location = new System.Drawing.Point(916, 183);
+            this.button36.Name = "button36";
+            this.button36.Size = new System.Drawing.Size(30, 19);
+            this.button36.TabIndex = 133;
+            this.button36.Text = "-";
+            this.button36.UseVisualStyleBackColor = true;
+            // 
+            // btnTwitterSearchSavePlaylist
+            // 
+            this.btnTwitterSearchSavePlaylist.Location = new System.Drawing.Point(916, 162);
+            this.btnTwitterSearchSavePlaylist.Name = "btnTwitterSearchSavePlaylist";
+            this.btnTwitterSearchSavePlaylist.Size = new System.Drawing.Size(30, 19);
+            this.btnTwitterSearchSavePlaylist.TabIndex = 132;
+            this.btnTwitterSearchSavePlaylist.Text = "+";
+            this.btnTwitterSearchSavePlaylist.UseVisualStyleBackColor = true;
+            this.btnTwitterSearchSavePlaylist.Click += new System.EventHandler(this.btnTwitterSearchSavePlaylist_Click);
+            // 
+            // label149
+            // 
+            this.label149.AutoSize = true;
+            this.label149.Location = new System.Drawing.Point(548, 67);
+            this.label149.Name = "label149";
+            this.label149.Size = new System.Drawing.Size(36, 13);
+            this.label149.TabIndex = 124;
+            this.label149.Text = "Titulo:";
+            // 
+            // txtTwitterSearchPlaylistTitle
+            // 
+            this.txtTwitterSearchPlaylistTitle.Location = new System.Drawing.Point(618, 64);
+            this.txtTwitterSearchPlaylistTitle.Name = "txtTwitterSearchPlaylistTitle";
+            this.txtTwitterSearchPlaylistTitle.Size = new System.Drawing.Size(144, 20);
+            this.txtTwitterSearchPlaylistTitle.TabIndex = 123;
+            // 
+            // dtpTwitterSearchPlaylistDate
+            // 
+            this.dtpTwitterSearchPlaylistDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTwitterSearchPlaylistDate.Location = new System.Drawing.Point(841, 63);
+            this.dtpTwitterSearchPlaylistDate.Name = "dtpTwitterSearchPlaylistDate";
+            this.dtpTwitterSearchPlaylistDate.Size = new System.Drawing.Size(105, 20);
+            this.dtpTwitterSearchPlaylistDate.TabIndex = 121;
+            // 
+            // label148
+            // 
+            this.label148.AutoSize = true;
+            this.label148.Location = new System.Drawing.Point(795, 67);
+            this.label148.Name = "label148";
+            this.label148.Size = new System.Drawing.Size(40, 13);
+            this.label148.TabIndex = 122;
+            this.label148.Text = "Fecha:";
+            // 
+            // btnTwitterSearchWSCall
+            // 
+            this.btnTwitterSearchWSCall.Location = new System.Drawing.Point(374, 37);
+            this.btnTwitterSearchWSCall.Name = "btnTwitterSearchWSCall";
+            this.btnTwitterSearchWSCall.Size = new System.Drawing.Size(74, 27);
+            this.btnTwitterSearchWSCall.TabIndex = 120;
+            this.btnTwitterSearchWSCall.Text = "Buscar";
+            this.btnTwitterSearchWSCall.UseVisualStyleBackColor = true;
+            this.btnTwitterSearchWSCall.Click += new System.EventHandler(this.btnTwitterSearchWSCall_Click);
+            // 
+            // txtTwitterSearchTimeRange
+            // 
+            this.txtTwitterSearchTimeRange.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtTwitterSearchTimeRange.FormattingEnabled = true;
+            this.txtTwitterSearchTimeRange.Location = new System.Drawing.Point(86, 67);
+            this.txtTwitterSearchTimeRange.Name = "txtTwitterSearchTimeRange";
+            this.txtTwitterSearchTimeRange.Size = new System.Drawing.Size(269, 21);
+            this.txtTwitterSearchTimeRange.TabIndex = 118;
+            // 
+            // label147
+            // 
+            this.label147.AutoSize = true;
+            this.label147.Location = new System.Drawing.Point(16, 70);
+            this.label147.Name = "label147";
+            this.label147.Size = new System.Drawing.Size(44, 13);
+            this.label147.TabIndex = 119;
+            this.label147.Text = "Ultimos:";
+            // 
+            // label146
+            // 
+            this.label146.AutoSize = true;
+            this.label146.Location = new System.Drawing.Point(548, 93);
+            this.label146.Name = "label146";
+            this.label146.Size = new System.Drawing.Size(66, 13);
+            this.label146.TabIndex = 117;
+            this.label146.Text = "Descripcion:";
+            // 
+            // txtTwitterSearchPlaylistDescription
+            // 
+            this.txtTwitterSearchPlaylistDescription.Location = new System.Drawing.Point(618, 90);
+            this.txtTwitterSearchPlaylistDescription.Multiline = true;
+            this.txtTwitterSearchPlaylistDescription.Name = "txtTwitterSearchPlaylistDescription";
+            this.txtTwitterSearchPlaylistDescription.Size = new System.Drawing.Size(328, 46);
+            this.txtTwitterSearchPlaylistDescription.TabIndex = 116;
+            // 
+            // label145
+            // 
+            this.label145.AutoSize = true;
+            this.label145.Location = new System.Drawing.Point(16, 44);
+            this.label145.Name = "label145";
+            this.label145.Size = new System.Drawing.Size(50, 13);
+            this.label145.TabIndex = 115;
+            this.label145.Text = "Hashtag:";
+            // 
+            // txtTwitterSearchHashtag
+            // 
+            this.txtTwitterSearchHashtag.Location = new System.Drawing.Point(86, 41);
+            this.txtTwitterSearchHashtag.Name = "txtTwitterSearchHashtag";
+            this.txtTwitterSearchHashtag.Size = new System.Drawing.Size(269, 20);
+            this.txtTwitterSearchHashtag.TabIndex = 114;
+            // 
+            // lvwTwitterSearchPlaylistTweets
+            // 
+            this.lvwTwitterSearchPlaylistTweets.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader56,
+            this.columnHeader57,
+            this.columnHeader58});
+            this.lvwTwitterSearchPlaylistTweets.FullRowSelect = true;
+            this.lvwTwitterSearchPlaylistTweets.GridLines = true;
+            this.lvwTwitterSearchPlaylistTweets.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvwTwitterSearchPlaylistTweets.Location = new System.Drawing.Point(547, 150);
+            this.lvwTwitterSearchPlaylistTweets.MultiSelect = false;
+            this.lvwTwitterSearchPlaylistTweets.Name = "lvwTwitterSearchPlaylistTweets";
+            this.lvwTwitterSearchPlaylistTweets.Size = new System.Drawing.Size(365, 156);
+            this.lvwTwitterSearchPlaylistTweets.TabIndex = 106;
+            this.lvwTwitterSearchPlaylistTweets.UseCompatibleStateImageBehavior = false;
+            this.lvwTwitterSearchPlaylistTweets.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader56
+            // 
+            this.columnHeader56.Text = "#";
+            this.columnHeader56.Width = 21;
+            // 
+            // columnHeader57
+            // 
+            this.columnHeader57.Text = "Hashtag";
+            this.columnHeader57.Width = 120;
+            // 
+            // columnHeader58
+            // 
+            this.columnHeader58.Text = "User";
+            this.columnHeader58.Width = 120;
+            // 
+            // lvwTwitterSearchListResult
+            // 
+            this.lvwTwitterSearchListResult.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader53,
+            this.columnHeader54,
+            this.columnHeader55,
+            this.columnHeader66,
+            this.columnHeader67});
+            this.lvwTwitterSearchListResult.FullRowSelect = true;
+            this.lvwTwitterSearchListResult.GridLines = true;
+            this.lvwTwitterSearchListResult.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvwTwitterSearchListResult.HideSelection = false;
+            this.lvwTwitterSearchListResult.Location = new System.Drawing.Point(16, 104);
+            this.lvwTwitterSearchListResult.MultiSelect = false;
+            this.lvwTwitterSearchListResult.Name = "lvwTwitterSearchListResult";
+            this.lvwTwitterSearchListResult.Size = new System.Drawing.Size(450, 202);
+            this.lvwTwitterSearchListResult.TabIndex = 105;
+            this.lvwTwitterSearchListResult.UseCompatibleStateImageBehavior = false;
+            this.lvwTwitterSearchListResult.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader53
+            // 
+            this.columnHeader53.Text = "#";
+            this.columnHeader53.Width = 21;
+            // 
+            // columnHeader54
+            // 
+            this.columnHeader54.Text = "Message";
+            this.columnHeader54.Width = 200;
+            // 
+            // columnHeader55
+            // 
+            this.columnHeader55.Text = "Username";
+            this.columnHeader55.Width = 80;
+            // 
+            // columnHeader66
+            // 
+            this.columnHeader66.Text = "Fullname";
+            // 
+            // columnHeader67
+            // 
+            this.columnHeader67.Text = "Retweet";
+            this.columnHeader67.Width = 55;
+            // 
+            // tabPage37
+            // 
+            this.tabPage37.Controls.Add(this.groupBox49);
+            this.tabPage37.Controls.Add(this.groupBox48);
+            this.tabPage37.Location = new System.Drawing.Point(23, 4);
+            this.tabPage37.Name = "tabPage37";
+            this.tabPage37.Size = new System.Drawing.Size(959, 319);
+            this.tabPage37.TabIndex = 4;
+            this.tabPage37.Text = "Playlist";
+            this.tabPage37.UseVisualStyleBackColor = true;
+            // 
+            // groupBox49
+            // 
+            this.groupBox49.Controls.Add(this.lblTwitterPlaylistId);
+            this.groupBox49.Controls.Add(this.label160);
+            this.groupBox49.Controls.Add(this.cmbTwitterPlaylistBGVideo);
+            this.groupBox49.Controls.Add(this.label158);
+            this.groupBox49.Controls.Add(this.lblTwitterPlaylistDescription);
+            this.groupBox49.Controls.Add(this.lblTwitterPlaylistDate);
+            this.groupBox49.Controls.Add(this.lblTwitterPlaylistTitle);
+            this.groupBox49.Controls.Add(this.numericUpDown7);
+            this.groupBox49.Controls.Add(this.checkBox14);
+            this.groupBox49.Controls.Add(this.cmbTemplateTwitterPlaylist);
+            this.groupBox49.Controls.Add(this.label155);
+            this.groupBox49.Controls.Add(this.btnTwitterPlaylistUpdate);
+            this.groupBox49.Controls.Add(this.btnTwitterPlaylistStop);
+            this.groupBox49.Controls.Add(this.btnTwitterPlaylistStart);
+            this.groupBox49.Controls.Add(this.label150);
+            this.groupBox49.Controls.Add(this.label151);
+            this.groupBox49.Controls.Add(this.label152);
+            this.groupBox49.Controls.Add(this.lvwTwitterPlaylistDetailList);
+            this.groupBox49.Location = new System.Drawing.Point(349, 3);
+            this.groupBox49.Name = "groupBox49";
+            this.groupBox49.Size = new System.Drawing.Size(607, 312);
+            this.groupBox49.TabIndex = 1;
+            this.groupBox49.TabStop = false;
+            this.groupBox49.Text = "Playlist";
+            // 
+            // cmbTwitterPlaylistBGVideo
+            // 
+            this.cmbTwitterPlaylistBGVideo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTwitterPlaylistBGVideo.FormattingEnabled = true;
+            this.cmbTwitterPlaylistBGVideo.Location = new System.Drawing.Point(393, 90);
+            this.cmbTwitterPlaylistBGVideo.Name = "cmbTwitterPlaylistBGVideo";
+            this.cmbTwitterPlaylistBGVideo.Size = new System.Drawing.Size(189, 21);
+            this.cmbTwitterPlaylistBGVideo.TabIndex = 142;
+            // 
+            // label158
+            // 
+            this.label158.AutoSize = true;
+            this.label158.Location = new System.Drawing.Point(333, 93);
+            this.label158.Name = "label158";
+            this.label158.Size = new System.Drawing.Size(55, 13);
+            this.label158.TabIndex = 143;
+            this.label158.Text = "BG Video:";
+            // 
+            // lblTwitterPlaylistDescription
+            // 
+            this.lblTwitterPlaylistDescription.AutoSize = true;
+            this.lblTwitterPlaylistDescription.Location = new System.Drawing.Point(86, 68);
+            this.lblTwitterPlaylistDescription.Name = "lblTwitterPlaylistDescription";
+            this.lblTwitterPlaylistDescription.Size = new System.Drawing.Size(47, 13);
+            this.lblTwitterPlaylistDescription.TabIndex = 141;
+            this.lblTwitterPlaylistDescription.Text = "label158";
+            // 
+            // lblTwitterPlaylistDate
+            // 
+            this.lblTwitterPlaylistDate.AutoSize = true;
+            this.lblTwitterPlaylistDate.Location = new System.Drawing.Point(239, 44);
+            this.lblTwitterPlaylistDate.Name = "lblTwitterPlaylistDate";
+            this.lblTwitterPlaylistDate.Size = new System.Drawing.Size(47, 13);
+            this.lblTwitterPlaylistDate.TabIndex = 140;
+            this.lblTwitterPlaylistDate.Text = "label158";
+            // 
+            // lblTwitterPlaylistTitle
+            // 
+            this.lblTwitterPlaylistTitle.AutoSize = true;
+            this.lblTwitterPlaylistTitle.Location = new System.Drawing.Point(56, 43);
+            this.lblTwitterPlaylistTitle.Name = "lblTwitterPlaylistTitle";
+            this.lblTwitterPlaylistTitle.Size = new System.Drawing.Size(47, 13);
+            this.lblTwitterPlaylistTitle.TabIndex = 139;
+            this.lblTwitterPlaylistTitle.Text = "label158";
+            // 
+            // numericUpDown7
+            // 
+            this.numericUpDown7.Location = new System.Drawing.Point(508, 153);
+            this.numericUpDown7.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.numericUpDown7.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown7.Name = "numericUpDown7";
+            this.numericUpDown7.Size = new System.Drawing.Size(40, 20);
+            this.numericUpDown7.TabIndex = 138;
+            this.numericUpDown7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown7.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // checkBox14
+            // 
+            this.checkBox14.AutoSize = true;
+            this.checkBox14.Location = new System.Drawing.Point(417, 153);
+            this.checkBox14.Name = "checkBox14";
+            this.checkBox14.Size = new System.Drawing.Size(85, 17);
+            this.checkBox14.TabIndex = 137;
+            this.checkBox14.Text = "Auto Ocultar";
+            this.checkBox14.UseVisualStyleBackColor = true;
+            // 
+            // cmbTemplateTwitterPlaylist
+            // 
+            this.cmbTemplateTwitterPlaylist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTemplateTwitterPlaylist.FormattingEnabled = true;
+            this.cmbTemplateTwitterPlaylist.Location = new System.Drawing.Point(393, 53);
+            this.cmbTemplateTwitterPlaylist.Name = "cmbTemplateTwitterPlaylist";
+            this.cmbTemplateTwitterPlaylist.Size = new System.Drawing.Size(189, 21);
+            this.cmbTemplateTwitterPlaylist.TabIndex = 135;
+            // 
+            // label155
+            // 
+            this.label155.AutoSize = true;
+            this.label155.Location = new System.Drawing.Point(333, 56);
+            this.label155.Name = "label155";
+            this.label155.Size = new System.Drawing.Size(54, 13);
+            this.label155.TabIndex = 136;
+            this.label155.Text = "Template:";
+            // 
+            // btnTwitterPlaylistUpdate
+            // 
+            this.btnTwitterPlaylistUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTwitterPlaylistUpdate.Location = new System.Drawing.Point(438, 244);
+            this.btnTwitterPlaylistUpdate.Name = "btnTwitterPlaylistUpdate";
+            this.btnTwitterPlaylistUpdate.Size = new System.Drawing.Size(98, 31);
+            this.btnTwitterPlaylistUpdate.TabIndex = 134;
+            this.btnTwitterPlaylistUpdate.Text = "Actualizar";
+            this.btnTwitterPlaylistUpdate.UseVisualStyleBackColor = true;
+            // 
+            // btnTwitterPlaylistStop
+            // 
+            this.btnTwitterPlaylistStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTwitterPlaylistStop.Location = new System.Drawing.Point(496, 195);
+            this.btnTwitterPlaylistStop.Name = "btnTwitterPlaylistStop";
+            this.btnTwitterPlaylistStop.Size = new System.Drawing.Size(76, 31);
+            this.btnTwitterPlaylistStop.TabIndex = 133;
+            this.btnTwitterPlaylistStop.Text = "Parar";
+            this.btnTwitterPlaylistStop.UseVisualStyleBackColor = true;
+            this.btnTwitterPlaylistStop.Click += new System.EventHandler(this.btnTwitterPlaylistStop_Click);
+            // 
+            // btnTwitterPlaylistStart
+            // 
+            this.btnTwitterPlaylistStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTwitterPlaylistStart.Location = new System.Drawing.Point(404, 195);
+            this.btnTwitterPlaylistStart.Name = "btnTwitterPlaylistStart";
+            this.btnTwitterPlaylistStart.Size = new System.Drawing.Size(76, 31);
+            this.btnTwitterPlaylistStart.TabIndex = 132;
+            this.btnTwitterPlaylistStart.Text = "Iniciar";
+            this.btnTwitterPlaylistStart.UseVisualStyleBackColor = true;
+            this.btnTwitterPlaylistStart.Click += new System.EventHandler(this.btnTwitterPlaylistStart_Click);
+            // 
+            // label150
+            // 
+            this.label150.AutoSize = true;
+            this.label150.Location = new System.Drawing.Point(13, 43);
+            this.label150.Name = "label150";
+            this.label150.Size = new System.Drawing.Size(36, 13);
+            this.label150.TabIndex = 131;
+            this.label150.Text = "Titulo:";
+            // 
+            // label151
+            // 
+            this.label151.AutoSize = true;
+            this.label151.Location = new System.Drawing.Point(192, 44);
+            this.label151.Name = "label151";
+            this.label151.Size = new System.Drawing.Size(40, 13);
+            this.label151.TabIndex = 129;
+            this.label151.Text = "Fecha:";
+            // 
+            // label152
+            // 
+            this.label152.AutoSize = true;
+            this.label152.Location = new System.Drawing.Point(13, 69);
+            this.label152.Name = "label152";
+            this.label152.Size = new System.Drawing.Size(66, 13);
+            this.label152.TabIndex = 127;
+            this.label152.Text = "Descripcion:";
+            // 
+            // lvwTwitterPlaylistDetailList
+            // 
+            this.lvwTwitterPlaylistDetailList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader59,
+            this.columnHeader60,
+            this.columnHeader61});
+            this.lvwTwitterPlaylistDetailList.FullRowSelect = true;
+            this.lvwTwitterPlaylistDetailList.GridLines = true;
+            this.lvwTwitterPlaylistDetailList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvwTwitterPlaylistDetailList.Location = new System.Drawing.Point(16, 90);
+            this.lvwTwitterPlaylistDetailList.MultiSelect = false;
+            this.lvwTwitterPlaylistDetailList.Name = "lvwTwitterPlaylistDetailList";
+            this.lvwTwitterPlaylistDetailList.Size = new System.Drawing.Size(289, 212);
+            this.lvwTwitterPlaylistDetailList.TabIndex = 125;
+            this.lvwTwitterPlaylistDetailList.UseCompatibleStateImageBehavior = false;
+            this.lvwTwitterPlaylistDetailList.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader59
+            // 
+            this.columnHeader59.Text = "#";
+            this.columnHeader59.Width = 21;
+            // 
+            // columnHeader60
+            // 
+            this.columnHeader60.Text = "Hashtag";
+            this.columnHeader60.Width = 120;
+            // 
+            // columnHeader61
+            // 
+            this.columnHeader61.Text = "User";
+            this.columnHeader61.Width = 120;
+            // 
+            // groupBox48
+            // 
+            this.groupBox48.Controls.Add(this.chkTwitterPlaylistMockWSCall);
+            this.groupBox48.Controls.Add(this.lvwTwitterPlaylistResult);
+            this.groupBox48.Controls.Add(this.btnTwitterPlaylistWSCall);
+            this.groupBox48.Controls.Add(this.label153);
+            this.groupBox48.Controls.Add(this.txtTwitterPlaylistWS);
+            this.groupBox48.Controls.Add(this.label154);
+            this.groupBox48.Location = new System.Drawing.Point(4, 4);
+            this.groupBox48.Name = "groupBox48";
+            this.groupBox48.Size = new System.Drawing.Size(339, 312);
+            this.groupBox48.TabIndex = 0;
+            this.groupBox48.TabStop = false;
+            this.groupBox48.Text = "Playlists guardados";
+            // 
+            // chkTwitterPlaylistMockWSCall
+            // 
+            this.chkTwitterPlaylistMockWSCall.AutoSize = true;
+            this.chkTwitterPlaylistMockWSCall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTwitterPlaylistMockWSCall.ForeColor = System.Drawing.Color.Navy;
+            this.chkTwitterPlaylistMockWSCall.Location = new System.Drawing.Point(153, 45);
+            this.chkTwitterPlaylistMockWSCall.Name = "chkTwitterPlaylistMockWSCall";
+            this.chkTwitterPlaylistMockWSCall.Size = new System.Drawing.Size(122, 17);
+            this.chkTwitterPlaylistMockWSCall.TabIndex = 142;
+            this.chkTwitterPlaylistMockWSCall.Text = "Simular Contador";
+            this.chkTwitterPlaylistMockWSCall.UseVisualStyleBackColor = true;
+            // 
+            // lvwTwitterPlaylistResult
+            // 
+            this.lvwTwitterPlaylistResult.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader62,
+            this.columnHeader63,
+            this.columnHeader64,
+            this.columnHeader65});
+            this.lvwTwitterPlaylistResult.FullRowSelect = true;
+            this.lvwTwitterPlaylistResult.GridLines = true;
+            this.lvwTwitterPlaylistResult.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvwTwitterPlaylistResult.Location = new System.Drawing.Point(9, 68);
+            this.lvwTwitterPlaylistResult.MultiSelect = false;
+            this.lvwTwitterPlaylistResult.Name = "lvwTwitterPlaylistResult";
+            this.lvwTwitterPlaylistResult.Size = new System.Drawing.Size(324, 233);
+            this.lvwTwitterPlaylistResult.TabIndex = 126;
+            this.lvwTwitterPlaylistResult.UseCompatibleStateImageBehavior = false;
+            this.lvwTwitterPlaylistResult.View = System.Windows.Forms.View.Details;
+            this.lvwTwitterPlaylistResult.DoubleClick += new System.EventHandler(this.lvwTwitterPlaylistResult_DoubleClick);
+            // 
+            // columnHeader62
+            // 
+            this.columnHeader62.Text = "#";
+            this.columnHeader62.Width = 20;
+            // 
+            // columnHeader63
+            // 
+            this.columnHeader63.Text = "Titulo";
+            this.columnHeader63.Width = 140;
+            // 
+            // columnHeader64
+            // 
+            this.columnHeader64.Text = "Descripcion";
+            this.columnHeader64.Width = 100;
+            // 
+            // columnHeader65
+            // 
+            this.columnHeader65.Text = "Cant.";
+            this.columnHeader65.Width = 40;
+            // 
+            // btnTwitterPlaylistWSCall
+            // 
+            this.btnTwitterPlaylistWSCall.Location = new System.Drawing.Point(235, 15);
+            this.btnTwitterPlaylistWSCall.Name = "btnTwitterPlaylistWSCall";
+            this.btnTwitterPlaylistWSCall.Size = new System.Drawing.Size(74, 27);
+            this.btnTwitterPlaylistWSCall.TabIndex = 113;
+            this.btnTwitterPlaylistWSCall.Text = "Ejecutar";
+            this.btnTwitterPlaylistWSCall.UseVisualStyleBackColor = true;
+            this.btnTwitterPlaylistWSCall.Click += new System.EventHandler(this.btnTwitterPlaylistWSCall_Click);
+            // 
+            // label153
+            // 
+            this.label153.AutoSize = true;
+            this.label153.Location = new System.Drawing.Point(6, 19);
+            this.label153.Name = "label153";
+            this.label153.Size = new System.Drawing.Size(28, 13);
+            this.label153.TabIndex = 112;
+            this.label153.Text = "WS:";
+            // 
+            // txtTwitterPlaylistWS
+            // 
+            this.txtTwitterPlaylistWS.Location = new System.Drawing.Point(40, 19);
+            this.txtTwitterPlaylistWS.Name = "txtTwitterPlaylistWS";
+            this.txtTwitterPlaylistWS.Size = new System.Drawing.Size(189, 20);
+            this.txtTwitterPlaylistWS.TabIndex = 111;
+            // 
+            // label154
+            // 
+            this.label154.AutoSize = true;
+            this.label154.Location = new System.Drawing.Point(6, 52);
+            this.label154.Name = "label154";
+            this.label154.Size = new System.Drawing.Size(89, 13);
+            this.label154.TabIndex = 110;
+            this.label154.Text = "Playlist cargados:";
             // 
             // tabPage16
             // 
@@ -9763,6 +10460,36 @@
             this.txtServerAddress.Size = new System.Drawing.Size(146, 20);
             this.txtServerAddress.TabIndex = 0;
             // 
+            // chkTwitterSearchPlaylistMockCall
+            // 
+            this.chkTwitterSearchPlaylistMockCall.AutoSize = true;
+            this.chkTwitterSearchPlaylistMockCall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTwitterSearchPlaylistMockCall.ForeColor = System.Drawing.Color.Navy;
+            this.chkTwitterSearchPlaylistMockCall.Location = new System.Drawing.Point(618, 41);
+            this.chkTwitterSearchPlaylistMockCall.Name = "chkTwitterSearchPlaylistMockCall";
+            this.chkTwitterSearchPlaylistMockCall.Size = new System.Drawing.Size(91, 17);
+            this.chkTwitterSearchPlaylistMockCall.TabIndex = 142;
+            this.chkTwitterSearchPlaylistMockCall.Text = "Simular WS";
+            this.chkTwitterSearchPlaylistMockCall.UseVisualStyleBackColor = true;
+            // 
+            // lblTwitterPlaylistId
+            // 
+            this.lblTwitterPlaylistId.AutoSize = true;
+            this.lblTwitterPlaylistId.Location = new System.Drawing.Point(56, 20);
+            this.lblTwitterPlaylistId.Name = "lblTwitterPlaylistId";
+            this.lblTwitterPlaylistId.Size = new System.Drawing.Size(47, 13);
+            this.lblTwitterPlaylistId.TabIndex = 145;
+            this.lblTwitterPlaylistId.Text = "label158";
+            // 
+            // label160
+            // 
+            this.label160.AutoSize = true;
+            this.label160.Location = new System.Drawing.Point(13, 20);
+            this.label160.Name = "label160";
+            this.label160.Size = new System.Drawing.Size(19, 13);
+            this.label160.TabIndex = 144;
+            this.label160.Text = "Id:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -9945,6 +10672,15 @@
             this.groupBox42.ResumeLayout(false);
             this.groupBox42.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTwitterPollWSAutoCallSeg)).EndInit();
+            this.tabPage28.ResumeLayout(false);
+            this.groupBox47.ResumeLayout(false);
+            this.groupBox47.PerformLayout();
+            this.tabPage37.ResumeLayout(false);
+            this.groupBox49.ResumeLayout(false);
+            this.groupBox49.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
+            this.groupBox48.ResumeLayout(false);
+            this.groupBox48.PerformLayout();
             this.tabPage16.ResumeLayout(false);
             this.tabBranding.ResumeLayout(false);
             this.tabPage26.ResumeLayout(false);
@@ -10800,6 +11536,73 @@
         private System.Windows.Forms.ColumnHeader columnHeader52;
         private System.Windows.Forms.Label label144;
         private System.Windows.Forms.ComboBox cmbGameShowFindCardRotationSecondsDuration;
+        private System.Windows.Forms.GroupBox groupBox47;
+        private System.Windows.Forms.Label label149;
+        private System.Windows.Forms.TextBox txtTwitterSearchPlaylistTitle;
+        private System.Windows.Forms.DateTimePicker dtpTwitterSearchPlaylistDate;
+        private System.Windows.Forms.Label label148;
+        private System.Windows.Forms.Button btnTwitterSearchWSCall;
+        private System.Windows.Forms.ComboBox txtTwitterSearchTimeRange;
+        private System.Windows.Forms.Label label147;
+        private System.Windows.Forms.Label label146;
+        private System.Windows.Forms.TextBox txtTwitterSearchPlaylistDescription;
+        private System.Windows.Forms.Label label145;
+        private System.Windows.Forms.TextBox txtTwitterSearchHashtag;
+        private System.Windows.Forms.ListView lvwTwitterSearchPlaylistTweets;
+        private System.Windows.Forms.ColumnHeader columnHeader56;
+        private System.Windows.Forms.ColumnHeader columnHeader57;
+        private System.Windows.Forms.ColumnHeader columnHeader58;
+        private System.Windows.Forms.ListView lvwTwitterSearchListResult;
+        private System.Windows.Forms.ColumnHeader columnHeader53;
+        private System.Windows.Forms.ColumnHeader columnHeader54;
+        private System.Windows.Forms.ColumnHeader columnHeader55;
+        private System.Windows.Forms.TabPage tabPage37;
+        private System.Windows.Forms.GroupBox groupBox49;
+        private System.Windows.Forms.GroupBox groupBox48;
+        private System.Windows.Forms.Button btnTwitterPlaylistUpdate;
+        private System.Windows.Forms.Button btnTwitterPlaylistStop;
+        private System.Windows.Forms.Button btnTwitterPlaylistStart;
+        private System.Windows.Forms.Label label150;
+        private System.Windows.Forms.Label label151;
+        private System.Windows.Forms.Label label152;
+        private System.Windows.Forms.ListView lvwTwitterPlaylistDetailList;
+        private System.Windows.Forms.ColumnHeader columnHeader59;
+        private System.Windows.Forms.ColumnHeader columnHeader60;
+        private System.Windows.Forms.ColumnHeader columnHeader61;
+        private System.Windows.Forms.ListView lvwTwitterPlaylistResult;
+        private System.Windows.Forms.ColumnHeader columnHeader62;
+        private System.Windows.Forms.ColumnHeader columnHeader63;
+        private System.Windows.Forms.ColumnHeader columnHeader64;
+        private System.Windows.Forms.Button btnTwitterPlaylistWSCall;
+        private System.Windows.Forms.Label label153;
+        private System.Windows.Forms.TextBox txtTwitterPlaylistWS;
+        private System.Windows.Forms.Label label154;
+        private System.Windows.Forms.ComboBox cmbTemplateTwitterPlaylist;
+        private System.Windows.Forms.Label label155;
+        private System.Windows.Forms.NumericUpDown numericUpDown7;
+        private System.Windows.Forms.CheckBox checkBox14;
+        private System.Windows.Forms.ColumnHeader columnHeader65;
+        private System.Windows.Forms.ColumnHeader columnHeader66;
+        private System.Windows.Forms.ColumnHeader columnHeader67;
+        private System.Windows.Forms.Button btnTwitterSearchClearPlaylist;
+        private System.Windows.Forms.Button button36;
+        private System.Windows.Forms.Button btnTwitterSearchSavePlaylist;
+        private System.Windows.Forms.Label label156;
+        private System.Windows.Forms.TextBox txtTwitterSearchWS;
+        private System.Windows.Forms.Label label157;
+        private System.Windows.Forms.TextBox txtTwitterSearchPlaylistWS;
+        private System.Windows.Forms.Button TwitterSearchRemoveFromPlaylist;
+        private System.Windows.Forms.Button btnTwitterSearchAddToPlaylist;
+        private System.Windows.Forms.Label lblTwitterPlaylistDescription;
+        private System.Windows.Forms.Label lblTwitterPlaylistDate;
+        private System.Windows.Forms.Label lblTwitterPlaylistTitle;
+        private System.Windows.Forms.ComboBox cmbTwitterPlaylistBGVideo;
+        private System.Windows.Forms.Label label158;
+        private System.Windows.Forms.CheckBox chkTwitterSearchMockCall;
+        private System.Windows.Forms.CheckBox chkTwitterPlaylistMockWSCall;
+        private System.Windows.Forms.CheckBox chkTwitterSearchPlaylistMockCall;
+        private System.Windows.Forms.Label lblTwitterPlaylistId;
+        private System.Windows.Forms.Label label160;
     }
 }
 

@@ -12,6 +12,7 @@ namespace HandballCliente.Controllers
         public static AppController instance = null;
 
         private List<String> templates;
+        private List<String> videos;
         private List<ComboBox> comboTemplates;
 
         public static AppController getInstance()

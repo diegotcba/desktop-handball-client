@@ -125,6 +125,7 @@ namespace HandballCliente
 
         //TWITTER
         public List<Tweets> tweets { get; set; }
+        public List<Playlist> playlists { get; set; }
 
         //DYNAMIC INFO
         public List<DynamicInfo> dynamicInfo { get; set; }
@@ -147,6 +148,8 @@ namespace HandballCliente
             gameshowFindCardItems = new List<FindCardItem>();
             gameshowFindCardMatches = new List<FindCardMatch>();
             weatherForecast = new List<PronosticoCiudad>();
+            tweets = new List<Tweets>();
+            playlists = new List<Playlist>();
 
             autoHideIntro = false;
             autoHideIntroSeconds = 1;

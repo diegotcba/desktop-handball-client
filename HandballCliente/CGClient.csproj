@@ -89,6 +89,9 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="RestSharp">
@@ -110,6 +113,7 @@
     <Compile Include="Controllers\GameShowController.cs" />
     <Compile Include="Controllers\LogController.cs" />
     <Compile Include="Controllers\MultimediaController.cs" />
+    <Compile Include="Controllers\TwitterController.cs" />
     <Compile Include="Controllers\UtilHelper.cs" />
     <Compile Include="Models\Answer.cs" />
     <Compile Include="CasparCG\CasparCG.cs" />
@@ -118,6 +122,9 @@
     <Compile Include="Models\DynamicInfo.cs" />
     <Compile Include="Models\FindCardItem.cs" />
     <Compile Include="Models\FindCardMatch.cs" />
+    <Compile Include="Models\Playlist.cs" />
+    <Compile Include="Models\TweetProfileImage.cs" />
+    <Compile Include="Models\TwitterQuery.cs" />
     <Compile Include="Views\ConfigLayers.cs">
       <SubType>Form</SubType>
     </Compile>

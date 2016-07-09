@@ -163,6 +163,7 @@ namespace HandballCliente.Controllers
             int i = 0;
             foreach (FindCardMatch item in HandballMatch.getInstance().gameshowFindCardMatches)
             {
+                //    arr = item.uid.ToString() + " [" + item.dateTime.ToShortDateString() + "]";
                 arr = item.uid.ToString();
                 list[i] = arr;
                 i++;

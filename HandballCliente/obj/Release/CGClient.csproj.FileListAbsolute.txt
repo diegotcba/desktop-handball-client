@@ -18,4 +18,6 @@ C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Release\HandballCli
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Release\HandballCliente.application
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Release\HandballCliente.exe
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Release\HandballCliente.pdb
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\bin\Release\log4net.dll
+C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\bin\Release\log4net.xml
 C:\IDTeam\nViVo\Handball\HandballCliente\HandballCliente\obj\Release\CGClient.csprojResolveAssemblyReference.cache

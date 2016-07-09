@@ -334,6 +334,7 @@ namespace HandballCliente
             {
                 if (!casparServer.Connected)
                 {
+                    casparServer = new CasparCG();
                     casparServer.ServerAdress = txtServerAddress.Text;
                     casparServer.Port = Convert.ToInt32(txtServerPort.Text);
                     casparServer.Connect();
@@ -413,6 +414,7 @@ namespace HandballCliente
                 {
                     lvwVideoFiles.Items.Add(item);
                 }
+                fillCombosTemplate(cmbTwitterPlaylistBGVideo, medias);
             }
         }
 
@@ -460,6 +462,7 @@ namespace HandballCliente
             AppController.getInstance().addComboBoxTemplate(cmbTemplateTwitterPoll);
             AppController.getInstance().addComboBoxTemplate(cmbTemplateBasketScoreboard);
             AppController.getInstance().addComboBoxTemplate(cmbTemplateGameshowFindCard);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateTwitterPlaylist);
         }
 
         private void fillCombosTemplate(ComboBox cbo, List<String> templates)
@@ -1559,6 +1562,81 @@ namespace HandballCliente
             }
         }
 
+        private void startTwitterPlaylist()
+        {
+            if (casparServer.Connected)
+            {
+                //if (lvwTwitterPlaylistDetailList.SelectedItems[0] == null) return;
+
+                Playlist aux = HandballMatch.getInstance().playlists.Find(element => element.id == int.Parse(lblTwitterPlaylistId.Text));
+                Tweets tweet = aux.tweets.Find(element => element.id == long.Parse(lvwTwitterPlaylistDetailList.SelectedItems[0].Text));
+
+                Template templateTwitter = new Template();
+                //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+
+                templateTwitter.Fields.Add(new TemplateField("datetime", tweet.dateTime));
+                templateTwitter.Fields.Add(new TemplateField("fullname", tweet.fullName));
+                templateTwitter.Fields.Add(new TemplateField("username", tweet.userName));
+                templateTwitter.Fields.Add(new TemplateField("message", tweet.message));
+                templateTwitter.Fields.Add(new TemplateField("picAvatar", tweet.profileImages.Find(pi => pi.profileImageType == "profile").profileImageUrl));
+
+                casparServer.Execute(String.Format("PLAY 1-{3} {0}{1}{0} {2}", (char)0x22, cmbTwitterPlaylistBGVideo.Text, "LOOP", layerVideo.ToString()));
+
+                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateTwitter.TemplateDataText(), cmbTemplateTwitterPlaylist.Text, layerTwitter.ToString()));
+                txtLogMessages.Text += "\n" + ri.Message;
+
+                //if (chkAutoHideTwitter.Checked)
+                //{
+                //    tmrTwitter.Interval = ((int)nudAutoHideTwitterSeconds.Value) * 1000;
+                //    tmrTwitter.Enabled = true;
+                //    tmrTwitter.Start();
+                //}
+            }
+        }
+
+        private void updateTwitterPlaylist()
+        {
+            //if (casparServer.Connected)
+            //{
+            //    Template templateTwitter = new Template();
+            //    //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+
+            //    templateTwitter.Fields.Add(new TemplateField("pollTitle", txtTwitterPollTitle.Text));
+            //    templateTwitter.Fields.Add(new TemplateField("pollText", txtTwitterPollText.Text));
+            //    int index = 0;
+            //    foreach (ListViewItem item in lvwTwitterPollHashtags.Items)
+            //    {
+            //        index++;
+            //        templateTwitter.Fields.Add(new TemplateField("hashtag" + index.ToString(), item.SubItems[1].Text));
+            //        templateTwitter.Fields.Add(new TemplateField("percentage" + index.ToString(), item.SubItems[3].Text.Replace(",", ".")));
+
+            //    }
+            //    templateTwitter.Fields.Add(new TemplateField("counterAnimated", (chkTwitterPollIsCounterAnimated.Checked ? "true" : "false")));
+            //    templateTwitter.Fields.Add(new TemplateField("percentageAnimated", (chkTwitterPollIsPercentageAnimated.Checked ? "true" : "false")));
+            //    //templateDynamicLogo.Fields.Add(new TemplateField("logoFile", logoPath.ToString()));
+
+            //    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateTwitter.TemplateDataText(), layerTwitterCounter.ToString()));
+            //    txtLogMessages.Text += "\n" + ri.Message;
+            //    //System.Diagnostics.Debug.WriteLine(ri.Message);
+            //}
+        }
+
+        private void stopTwitterPlaylist()
+        {
+            if (casparServer.Connected)
+            {
+                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerTwitter.ToString()));
+                casparServer.Execute(String.Format("STOP 1-{0}", layerVideo.ToString()));
+
+                //if (chkAutoHideTwitter.Checked)
+                //{
+                //    tmrTwitter.Stop();
+                //    tmrTwitter.Enabled = false;
+                //}
+            }
+        }
+
+
         private void startGameplay()
         {
             if (casparServer.Connected)
@@ -2363,32 +2441,7 @@ namespace HandballCliente
 
         private void loadTwitterList()
         {
-            mockingTwitterList();
-        }
-
-        private void mockingTwitterList()
-        {
-            List<Tweets> list = new List<Tweets>();
-            Tweets t = new Tweets();
-
-            t.id = 1;
-            t.hashtag = "#LoQueSea";
-            t.fullName = "Juan Perez";
-            t.userName = "JPerez87";
-            t.message = "Gracias por lo que nos dan todos los dias!!! Vamoooooooosss";
-
-            list.Add(t);
-
-            t = new Tweets();
-            t.id = 2;
-            t.hashtag = "#LoQueSea";
-            t.fullName = "Maria Lopez";
-            t.userName = "marylop006";
-            t.message = "Son lo mas. Desde Jujuy damos nuestro apoyo y fuerzas.";
-
-            list.Add(t);
-
-            HandballMatch.getInstance().tweets = list;
+            TwitterController.mockingTwitterList();
             fillTwitterList();
         }
 
@@ -2399,21 +2452,36 @@ namespace HandballCliente
             this.Cursor = Cursors.Default;
         }
 
+        private void loadTwitterSearchList()
+        {
+            if (chkTwitterSearchMockCall.Checked)
+            {
+                TwitterController.mockingTwitterList();
+            }
+            else
+            {
+                retrieveTwitterSearchFromWS();
+            }
+            fillTwitterSearchList();
+        }
+
+        private void retrieveTwitterSearchFromWS()
+        {
+            this.Cursor = Cursors.WaitCursor;
+            getTwitterQuery();
+            this.Cursor = Cursors.Default;
+        }
+
+        private void fillTwitterSearchList()
+        {
+            lvwTwitterSearchListResult.Items.Clear();
+            lvwTwitterSearchListResult.Items.AddRange(TwitterController.fillTwitterSearchList());
+        }
+
         private void fillTwitterList()
         {
             lvwTwitterList.Items.Clear();
-            List<Tweets> results = HandballMatch.getInstance().tweets;
-            int i = 0;
-
-            foreach (Tweets item in results)
-            {
-                i++;
-                string[] arr = new string[3];
-                arr[0] = item.id.ToString();
-                arr[1] = item.hashtag;
-                arr[2] = item.userName;
-                lvwTwitterList.Items.Add(new ListViewItem(arr));
-            }
+            lvwTwitterList.Items.AddRange(TwitterController.fillTwitterList());
         }
 
         private void getTweets()
@@ -2439,6 +2507,135 @@ namespace HandballCliente
             }
 
             HandballMatch.getInstance().tweets = tweetsSorted;
+        }
+
+        private void loadTwitterPlaylistList()
+        {
+            if (chkTwitterPlaylistMockWSCall.Checked)
+            {
+                mockingTwitterPlaylist();
+            }
+            else
+            {
+                retrieveTwitterPlaylistFromWS();
+            }
+            fillPlaylistList();
+        }
+
+        private void retrieveTwitterPlaylistFromWS()
+        {
+            this.Cursor = Cursors.WaitCursor;
+            getTwitterPlaylistList();
+            this.Cursor = Cursors.Default;
+        }
+
+        private void getTwitterPlaylistList()
+        {
+            TwitterController.getTwitterPlaylistList(txtTwitterPlaylistWS.Text);
+        }
+
+        private void mockingTwitterPlaylist()
+        {
+            TwitterController.mockingTwitterPlaylist();
+        }
+
+        private void fillPlaylistList()
+        {
+            lvwTwitterPlaylistResult.Items.Clear();
+            TwitterController.fillPlaylistList();
+        }
+
+        private void selectPlaylist()
+        {
+            if (lvwTwitterPlaylistResult.SelectedItems != null)
+            {
+                Playlist aux = TwitterController.selectPlaylist(long.Parse(lvwTwitterPlaylistResult.SelectedItems[0].Text));
+                lblTwitterPlaylistId.Text = aux.id.ToString();
+                lblTwitterPlaylistTitle.Text = aux.title;
+                lblTwitterPlaylistDescription.Text = aux.description;
+                //txtTwitterFullName.Text = aux.fullName;
+
+                lvwTwitterPlaylistDetailList.Items.Clear();
+                lvwTwitterPlaylistDetailList.Items.AddRange(TwitterController.fillSelectedPlaylistTweets(aux.id));
+            }
+        }
+
+        private void getTwitterQuery()
+        {
+            TwitterController.getTwitterQuery(txtTwitterSearchWS.Text, txtTwitterSearchHashtag.Text);
+        }
+
+        private void removeTwitterSearchFromPlaylist()
+        {
+            if (lvwTwitterSearchPlaylistTweets.SelectedItems != null)
+            {
+                TwitterController.removeFromPlaylist(long.Parse(lvwTwitterSearchListResult.SelectedItems[0].Text));
+                fillTwitterSearchPlaylist();
+            }
+        }
+
+        private void addTwitterSearchToPlaylist()
+        {
+            if (lvwTwitterSearchListResult.SelectedItems != null)
+            {
+                Tweets tweet = HandballMatch.getInstance().tweets.Find(t => t.id == long.Parse(lvwTwitterSearchListResult.SelectedItems[0].Text));
+                TwitterController.addToPlaylist(tweet);
+                fillTwitterSearchPlaylist();
+            }
+        }
+
+        private void fillTwitterSearchPlaylist()
+        {
+            Playlist aux = TwitterController.getPlaylist();
+            txtTwitterSearchPlaylistTitle.Text = aux.title;
+            txtTwitterSearchPlaylistDescription.Text = aux.description;
+            dtpTwitterSearchPlaylistDate.Value = (aux.dateTime == null ? DateTime.Now : DateTime.Parse(aux.dateTime));
+
+            lvwTwitterSearchPlaylistTweets.Items.Clear();
+            lvwTwitterSearchPlaylistTweets.Items.AddRange(TwitterController.fillTwitterSearchPlaylist());
+        }
+
+        private void clearTwitterSearchPlaylist()
+        {
+            TwitterController.newPlaylist();
+            fillTwitterSearchPlaylist();
+        }
+
+        private void saveTwitterSearchPlaylist()
+        {
+            if (txtTwitterSearchPlaylistWS.Text == "")
+            {
+                MessageBox.Show("Falta definir la url del WS!!");
+                return;
+            }
+
+            if (txtTwitterSearchPlaylistTitle.Text == "" || lvwTwitterSearchPlaylistTweets.Items.Count == 0)
+            {
+                MessageBox.Show("Faltan datos para guardar el playlist");
+                return;
+            }
+
+            TwitterController.setPlaylist(txtTwitterSearchPlaylistTitle.Text, dtpTwitterSearchPlaylistDate.Value, txtTwitterSearchPlaylistDescription.Text);
+
+            if (chkTwitterSearchPlaylistMockCall.Checked)
+            {
+                mockSavePlaylist();
+            }
+            else
+            {
+                callSaveTwitterPlaylist();
+            }
+            clearTwitterSearchPlaylist();
+        }
+
+        private void mockSavePlaylist()
+        {
+            TwitterController.mockSavePlaylist();
+        }
+
+        private void callSaveTwitterPlaylist()
+        {
+            TwitterController.callSaveTwitterPlaylist(txtTwitterSearchPlaylistWS.Text);
         }
 
         private void selectTweet()
@@ -2549,6 +2746,7 @@ namespace HandballCliente
         private void loadDynamicInfoList()
         {
             mockingDynamicInfoList();
+            fillDynamicInfoList();
         }
 
         private void mockingDynamicInfoList()
@@ -2572,7 +2770,6 @@ namespace HandballCliente
 
 
             HandballMatch.getInstance().dynamicInfo = list;
-            fillDynamicInfoList();
         }
 
         private void retrieveDynamicInfoFromWS()
@@ -2865,11 +3062,6 @@ namespace HandballCliente
         {
             cmbGameShowFindCardMatches.Items.Clear();
             cmbGameShowFindCardMatches.Items.AddRange(GameShowController.fillComboboxGameshowFindCardMatches());
-            //foreach (FindCardMatch item in HandballMatch.getInstance().gameshowFindCardMatches)
-            //{
-            //    //cmbGameShowFindCardMatches.Items.Add(item.uid.ToString() + " [" + item.dateTime.ToShortDateString() + "]");
-            //    cmbGameShowFindCardMatches.Items.Add(item.uid.ToString());
-            //}
         }
 
         private void fillSelectedFindCardMatch()
@@ -4797,6 +4989,51 @@ namespace HandballCliente
         private void btnGameShowFindCardHideAll_Click(object sender, EventArgs e)
         {
             showGameshowFindCardHideAllCards();
+        }
+
+        private void btnTwitterSearchWSCall_Click(object sender, EventArgs e)
+        {
+            loadTwitterSearchList();
+        }
+
+        private void btnTwitterPlaylistWSCall_Click(object sender, EventArgs e)
+        {
+            loadTwitterPlaylistList();
+        }
+
+        private void lvwTwitterPlaylistResult_DoubleClick(object sender, EventArgs e)
+        {
+            selectPlaylist();
+        }
+
+        private void btnTwitterPlaylistStart_Click(object sender, EventArgs e)
+        {
+            startTwitterPlaylist();
+        }
+
+        private void btnTwitterPlaylistStop_Click(object sender, EventArgs e)
+        {
+            stopTwitterPlaylist();
+        }
+
+        private void btnTwitterSearchAddToPlaylist_Click(object sender, EventArgs e)
+        {
+            addTwitterSearchToPlaylist();
+        }
+
+        private void TwitterSearchRemoveFromPlaylist_Click(object sender, EventArgs e)
+        {
+            removeTwitterSearchFromPlaylist();
+        }
+
+        private void btnTwitterSearchClearPlaylist_Click(object sender, EventArgs e)
+        {
+            clearTwitterSearchPlaylist();
+        }
+
+        private void btnTwitterSearchSavePlaylist_Click(object sender, EventArgs e)
+        {
+            saveTwitterSearchPlaylist();
         }
 
     }

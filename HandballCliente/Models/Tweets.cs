@@ -14,6 +14,10 @@ namespace HandballCliente.Models
         public string fullName { get; set; }
         public string message { get; set; }
         public string urlAvatar { get; set; }
+        public string localUrlAvatar { get; set; }
+        public string dateTime { get; set; }
+        public string htmlMessage { get; set; }
         public bool reTweet { get; set; }
+        public List<TweetProfileImage> profileImages { get; set; }
     }
 }

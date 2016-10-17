@@ -4929,7 +4929,6 @@ namespace HandballCliente
         {
             startGameshowFindCard();
         }
-# endregion
 
         private void btnGameShowFindCardHide_Click(object sender, EventArgs e)
         {
@@ -5035,6 +5034,7 @@ namespace HandballCliente
         {
             saveTwitterSearchPlaylist();
         }
+# endregion
 
     }
 }

@@ -653,6 +653,7 @@
             this.label123 = new System.Windows.Forms.Label();
             this.tabPage28 = new System.Windows.Forms.TabPage();
             this.groupBox47 = new System.Windows.Forms.GroupBox();
+            this.chkTwitterSearchPlaylistMockCall = new System.Windows.Forms.CheckBox();
             this.chkTwitterSearchMockCall = new System.Windows.Forms.CheckBox();
             this.TwitterSearchRemoveFromPlaylist = new System.Windows.Forms.Button();
             this.btnTwitterSearchAddToPlaylist = new System.Windows.Forms.Button();
@@ -686,6 +687,8 @@
             this.columnHeader67 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage37 = new System.Windows.Forms.TabPage();
             this.groupBox49 = new System.Windows.Forms.GroupBox();
+            this.lblTwitterPlaylistId = new System.Windows.Forms.Label();
+            this.label160 = new System.Windows.Forms.Label();
             this.cmbTwitterPlaylistBGVideo = new System.Windows.Forms.ComboBox();
             this.label158 = new System.Windows.Forms.Label();
             this.lblTwitterPlaylistDescription = new System.Windows.Forms.Label();
@@ -890,9 +893,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtServerAddress = new System.Windows.Forms.TextBox();
-            this.chkTwitterSearchPlaylistMockCall = new System.Windows.Forms.CheckBox();
-            this.lblTwitterPlaylistId = new System.Windows.Forms.Label();
-            this.label160 = new System.Windows.Forms.Label();
+            this.chkWeatherForecastMockCall = new System.Windows.Forms.CheckBox();
             this.mstMenues.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -6435,6 +6436,7 @@
             // 
             // groupBox30
             // 
+            this.groupBox30.Controls.Add(this.chkWeatherForecastMockCall);
             this.groupBox30.Controls.Add(this.cmbWeatherForecastLogo);
             this.groupBox30.Controls.Add(this.label132);
             this.groupBox30.Controls.Add(this.label87);
@@ -7952,6 +7954,18 @@
             this.groupBox47.TabStop = false;
             this.groupBox47.Text = "Busqueda Tweets";
             // 
+            // chkTwitterSearchPlaylistMockCall
+            // 
+            this.chkTwitterSearchPlaylistMockCall.AutoSize = true;
+            this.chkTwitterSearchPlaylistMockCall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTwitterSearchPlaylistMockCall.ForeColor = System.Drawing.Color.Navy;
+            this.chkTwitterSearchPlaylistMockCall.Location = new System.Drawing.Point(618, 41);
+            this.chkTwitterSearchPlaylistMockCall.Name = "chkTwitterSearchPlaylistMockCall";
+            this.chkTwitterSearchPlaylistMockCall.Size = new System.Drawing.Size(91, 17);
+            this.chkTwitterSearchPlaylistMockCall.TabIndex = 142;
+            this.chkTwitterSearchPlaylistMockCall.Text = "Simular WS";
+            this.chkTwitterSearchPlaylistMockCall.UseVisualStyleBackColor = true;
+            // 
             // chkTwitterSearchMockCall
             // 
             this.chkTwitterSearchMockCall.AutoSize = true;
@@ -8252,6 +8266,24 @@
             this.groupBox49.TabIndex = 1;
             this.groupBox49.TabStop = false;
             this.groupBox49.Text = "Playlist";
+            // 
+            // lblTwitterPlaylistId
+            // 
+            this.lblTwitterPlaylistId.AutoSize = true;
+            this.lblTwitterPlaylistId.Location = new System.Drawing.Point(56, 20);
+            this.lblTwitterPlaylistId.Name = "lblTwitterPlaylistId";
+            this.lblTwitterPlaylistId.Size = new System.Drawing.Size(47, 13);
+            this.lblTwitterPlaylistId.TabIndex = 145;
+            this.lblTwitterPlaylistId.Text = "label158";
+            // 
+            // label160
+            // 
+            this.label160.AutoSize = true;
+            this.label160.Location = new System.Drawing.Point(13, 20);
+            this.label160.Name = "label160";
+            this.label160.Size = new System.Drawing.Size(19, 13);
+            this.label160.TabIndex = 144;
+            this.label160.Text = "Id:";
             // 
             // cmbTwitterPlaylistBGVideo
             // 
@@ -10460,35 +10492,17 @@
             this.txtServerAddress.Size = new System.Drawing.Size(146, 20);
             this.txtServerAddress.TabIndex = 0;
             // 
-            // chkTwitterSearchPlaylistMockCall
+            // chkWeatherForecastMockCall
             // 
-            this.chkTwitterSearchPlaylistMockCall.AutoSize = true;
-            this.chkTwitterSearchPlaylistMockCall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkTwitterSearchPlaylistMockCall.ForeColor = System.Drawing.Color.Navy;
-            this.chkTwitterSearchPlaylistMockCall.Location = new System.Drawing.Point(618, 41);
-            this.chkTwitterSearchPlaylistMockCall.Name = "chkTwitterSearchPlaylistMockCall";
-            this.chkTwitterSearchPlaylistMockCall.Size = new System.Drawing.Size(91, 17);
-            this.chkTwitterSearchPlaylistMockCall.TabIndex = 142;
-            this.chkTwitterSearchPlaylistMockCall.Text = "Simular WS";
-            this.chkTwitterSearchPlaylistMockCall.UseVisualStyleBackColor = true;
-            // 
-            // lblTwitterPlaylistId
-            // 
-            this.lblTwitterPlaylistId.AutoSize = true;
-            this.lblTwitterPlaylistId.Location = new System.Drawing.Point(56, 20);
-            this.lblTwitterPlaylistId.Name = "lblTwitterPlaylistId";
-            this.lblTwitterPlaylistId.Size = new System.Drawing.Size(47, 13);
-            this.lblTwitterPlaylistId.TabIndex = 145;
-            this.lblTwitterPlaylistId.Text = "label158";
-            // 
-            // label160
-            // 
-            this.label160.AutoSize = true;
-            this.label160.Location = new System.Drawing.Point(13, 20);
-            this.label160.Name = "label160";
-            this.label160.Size = new System.Drawing.Size(19, 13);
-            this.label160.TabIndex = 144;
-            this.label160.Text = "Id:";
+            this.chkWeatherForecastMockCall.AutoSize = true;
+            this.chkWeatherForecastMockCall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkWeatherForecastMockCall.ForeColor = System.Drawing.Color.Navy;
+            this.chkWeatherForecastMockCall.Location = new System.Drawing.Point(314, 19);
+            this.chkWeatherForecastMockCall.Name = "chkWeatherForecastMockCall";
+            this.chkWeatherForecastMockCall.Size = new System.Drawing.Size(91, 17);
+            this.chkWeatherForecastMockCall.TabIndex = 142;
+            this.chkWeatherForecastMockCall.Text = "Simular WS";
+            this.chkWeatherForecastMockCall.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -11603,6 +11617,7 @@
         private System.Windows.Forms.CheckBox chkTwitterSearchPlaylistMockCall;
         private System.Windows.Forms.Label lblTwitterPlaylistId;
         private System.Windows.Forms.Label label160;
+        private System.Windows.Forms.CheckBox chkWeatherForecastMockCall;
     }
 }
 

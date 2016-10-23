@@ -17,11 +17,6 @@ namespace HandballCliente.Controllers
         private static List<City> cities = new List<City>();
         private static List<PronosticoCiudad> forecasts = new List<PronosticoCiudad>();
 
-        public static List<Provincia> mockProvinciaList()
-        {
-            return null;
-        }
-
         public static void getForecastStates(String endpoint)
         {
             var client = new RestClient(endpoint);
@@ -156,6 +151,7 @@ namespace HandballCliente.Controllers
             forecastCity.fechaHoraPronosticoOficial = "18:00hs";
             List<PronosticoSemana> weeksForecast = new List<PronosticoSemana>();
 
+            //---DIA 1------------------------------------------------------------------
             PronosticoSemana forecastWeek = new PronosticoSemana();
             forecastWeek.diaSemana = "Hoy Miercoles";
             forecastWeek.diaMes = "23 Sep";
@@ -175,19 +171,192 @@ namespace HandballCliente.Controllers
 
             forecastDay = new PronosticoDiario();
 
+            forecastDay.parteDia = "Tarde/Noche";
+            forecastDay.icono = "nublado";
+            forecastDay.tipoTemperatura = "Max";
+            forecastDay.temperatura = 18;
+            forecastDay.simboloTiempo = "°C";
+            forecastDay.horaPronostico = "18hs";
+            forecastDay.textoPronostico = "Nublado parcialmente ....";
+
             weekForecast.Add(forecastDay);
+
 
             forecastWeek.pronostico = weekForecast;
 
-            weeksForecast.Add(forecastWeek);
+            weeksForecast.Add(forecastWeek); //Adding day 1
+            //-FIN DIA 1--------------------------------------------
+
+            //---DIA 2------------------------------------------------------------------
+            forecastWeek = new PronosticoSemana();
+            forecastWeek.diaSemana = "Jueves";
+            forecastWeek.diaMes = "24 Sep";
+            weekForecast = new List<PronosticoDiario>();
+
+            forecastDay = new PronosticoDiario();
+
+            forecastDay.parteDia = "Mañana";
+            forecastDay.icono = "inestable";
+            forecastDay.tipoTemperatura = "Min";
+            forecastDay.temperatura = 11;
+            forecastDay.simboloTiempo = "°C";
+            forecastDay.horaPronostico = "6hs";
+            forecastDay.textoPronostico = "Cielo nublado...";
+
+            weekForecast.Add(forecastDay);
+
+            forecastDay = new PronosticoDiario();
+
+            forecastDay.parteDia = "Tarde/Noche";
+            forecastDay.icono = "nublado";
+            forecastDay.tipoTemperatura = "Max";
+            forecastDay.temperatura = 24;
+            forecastDay.simboloTiempo = "°C";
+            forecastDay.horaPronostico = "18hs";
+            forecastDay.textoPronostico = "Nublado parcialmente ....";
+
+            weekForecast.Add(forecastDay);
+
+
+            forecastWeek.pronostico = weekForecast;
+
+            weeksForecast.Add(forecastWeek); //Adding day 2
+            //-FIN DIA 2--------------------------------------------
+
+            //---DIA 3------------------------------------------------------------------
+            forecastWeek = new PronosticoSemana();
+            forecastWeek.diaSemana = "Viernes";
+            forecastWeek.diaMes = "25 Sept";
+            weekForecast = new List<PronosticoDiario>();
+
+            forecastDay = new PronosticoDiario();
+
+            forecastDay.parteDia = "Mañana";
+            forecastDay.icono = "inestable";
+            forecastDay.tipoTemperatura = "Min";
+            forecastDay.temperatura = 15;
+            forecastDay.simboloTiempo = "°C";
+            forecastDay.horaPronostico = "6hs";
+            forecastDay.textoPronostico = "Cielo nublado...";
+
+            weekForecast.Add(forecastDay);
+
+            forecastDay = new PronosticoDiario();
+
+            forecastDay.parteDia = "Tarde/Noche";
+            forecastDay.icono = "nublado";
+            forecastDay.tipoTemperatura = "Max";
+            forecastDay.temperatura = 28;
+            forecastDay.simboloTiempo = "°C";
+            forecastDay.horaPronostico = "18hs";
+            forecastDay.textoPronostico = "Nublado parcialmente ....";
+
+            weekForecast.Add(forecastDay);
+
+
+            forecastWeek.pronostico = weekForecast;
+
+            weeksForecast.Add(forecastWeek); //Adding day 3
+            //-FIN DIA 3--------------------------------------------
+
+            //---DIA 4------------------------------------------------------------------
+            forecastWeek = new PronosticoSemana();
+            forecastWeek.diaSemana = "Sabado";
+            forecastWeek.diaMes = "26 Sept";
+            weekForecast = new List<PronosticoDiario>();
+
+            forecastDay = new PronosticoDiario();
+
+            forecastDay.parteDia = "Mañana";
+            forecastDay.icono = "inestable";
+            forecastDay.tipoTemperatura = "Min";
+            forecastDay.temperatura = 16;
+            forecastDay.simboloTiempo = "°C";
+            forecastDay.horaPronostico = "6hs";
+            forecastDay.textoPronostico = "Cielo nublado...";
+
+            weekForecast.Add(forecastDay);
+
+            forecastDay = new PronosticoDiario();
+
+            forecastDay.parteDia = "Tarde/Noche";
+            forecastDay.icono = "nublado";
+            forecastDay.tipoTemperatura = "Max";
+            forecastDay.temperatura = 25;
+            forecastDay.simboloTiempo = "°C";
+            forecastDay.horaPronostico = "18hs";
+            forecastDay.textoPronostico = "Nublado parcialmente ....";
+
+            weekForecast.Add(forecastDay);
+
+
+            forecastWeek.pronostico = weekForecast;
+
+            weeksForecast.Add(forecastWeek); //Adding day 4
+            //-FIN DIA 4--------------------------------------------
+
+            //---DIA 5------------------------------------------------------------------
+            forecastWeek = new PronosticoSemana();
+            forecastWeek.diaSemana = "Domingo";
+            forecastWeek.diaMes = "27 Sept";
+            weekForecast = new List<PronosticoDiario>();
+
+            forecastDay = new PronosticoDiario();
+
+            forecastDay.parteDia = "Mañana";
+            forecastDay.icono = "inestable";
+            forecastDay.tipoTemperatura = "Min";
+            forecastDay.temperatura = 17;
+            forecastDay.simboloTiempo = "°C";
+            forecastDay.horaPronostico = "6hs";
+            forecastDay.textoPronostico = "Cielo nublado...";
+
+            weekForecast.Add(forecastDay);
+
+            forecastDay = new PronosticoDiario();
+
+            forecastDay.parteDia = "Tarde/Noche";
+            forecastDay.icono = "nublado";
+            forecastDay.tipoTemperatura = "Max";
+            forecastDay.temperatura = 29;
+            forecastDay.simboloTiempo = "°C";
+            forecastDay.horaPronostico = "18hs";
+            forecastDay.textoPronostico = "Nublado parcialmente ....";
+
+            weekForecast.Add(forecastDay);
+
+
+            forecastWeek.pronostico = weekForecast;
+
+            weeksForecast.Add(forecastWeek); //Adding day 5
+            //-FIN DIA 5--------------------------------------------
 
             forecastCity.pronosticoSemana = weeksForecast;
+
+            forecasts.Add(forecastCity);
+
+            forecastCity = new PronosticoCiudad();
+            forecastCity.id = 2;
+            forecastCity.ciudad = "Alta Gracia";
+            forecastCity.fechaHoraPronosticoOficial = "18:00hs";
+            forecastCity.pronosticoSemana = weeksForecast;
+
+            forecasts.Add(forecastCity);
+
+
+            forecastCity = new PronosticoCiudad();
+            forecastCity.id = 3;
+            forecastCity.ciudad = "Bell Ville";
+            forecastCity.fechaHoraPronosticoOficial = "18:00hs";
+            forecastCity.pronosticoSemana = weeksForecast;
+
+            forecasts.Add(forecastCity);
 
         }
 
         public static ListViewItem[] fillForecast(long id)
         {
-            ListViewItem[] result = new ListViewItem[cities.Count];
+            ListViewItem[] result = new ListViewItem[forecasts.Count];
             int i = 0;
             string[] arr;
             foreach (PronosticoCiudad item in forecasts)
@@ -202,6 +371,9 @@ namespace HandballCliente.Controllers
             return result;
         }
 
-
+        public static List<PronosticoCiudad> getWeatherForecasts()
+        {
+            return forecasts;
+        }
     }
 }

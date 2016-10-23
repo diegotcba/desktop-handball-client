@@ -945,11 +945,11 @@ namespace HandballCliente
                     Template templateCountdown = new Template();
                     //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
 
-                    if (HandballMatch.getInstance().weatherForecast.Count >= 1)
+                    if (WeatherController.getWeatherForecasts().Count >= 1)
                     {
-                        String xmlCity1 = Utils.Base64Encode(Utils.ConvertXML(HandballMatch.getInstance().weatherForecast[0]));
-                        String xmlCity2 = Utils.Base64Encode(Utils.ConvertXML(HandballMatch.getInstance().weatherForecast[1]));
-                        String xmlCity3 = Utils.Base64Encode(Utils.ConvertXML(HandballMatch.getInstance().weatherForecast[2]));
+                        String xmlCity1 = Utils.Base64Encode(Utils.ConvertXML(WeatherController.getWeatherForecasts()[0]));
+                        String xmlCity2 = Utils.Base64Encode(Utils.ConvertXML(WeatherController.getWeatherForecasts()[1]));
+                        String xmlCity3 = Utils.Base64Encode(Utils.ConvertXML(WeatherController.getWeatherForecasts()[2]));
 
                         //templateCountdown.Fields.Add(new TemplateField("questionText", txtGameshowQuestion.Text));
                         templateCountdown.Fields.Add(new TemplateField("city1", xmlCity1));
@@ -2359,24 +2359,16 @@ namespace HandballCliente
             String endpoint;
             endpoint = txtWeatherForecastWS.Text;
 
-            var client = new RestClient(endpoint);
-
-            var request = new RestRequest("/provincias/", Method.GET);
-
-            var response = client.Execute(request);
-
-            if (response.StatusCode == HttpStatusCode.OK)
+            if (chkWeatherForecastMockCall.Checked)
             {
-                JsonDeserializer deserial = new JsonDeserializer();
-
-                List<Provincia> prov = deserial.Deserialize<List<Provincia>>(response);
-
-                cmbWeatherStates.Items.Clear();
-
-                cmbWeatherStates.DisplayMember = "nombre";
-                cmbWeatherStates.ValueMember = "id";
-                cmbWeatherStates.DataSource = prov;
+                WeatherController.mockForecastStates();
             }
+            else
+            {
+                WeatherController.getForecastStates(endpoint);
+            }
+
+            WeatherController.fillForecatStates(cmbWeatherStates);
         }
 
         private void getWeatherForecastStateCities()
@@ -2384,59 +2376,32 @@ namespace HandballCliente
             String endpoint;
             endpoint = txtWeatherForecastWS.Text;
 
-            var client = new RestClient(endpoint);
-
-            var request = new RestRequest("/provincias/{id}/ciudades", Method.GET);
-            request.AddUrlSegment("id", ((Provincia)cmbWeatherStates.SelectedItem).id.ToString());
-
-            var response = client.Execute(request);
-
-            if (response.StatusCode == HttpStatusCode.OK)
+            if (chkWeatherForecastMockCall.Checked)
             {
-                JsonDeserializer deserial = new JsonDeserializer();
-
-                List<City> cities = deserial.Deserialize<List<City>>(response);
-
-                lvwCities.Items.Clear();
-                foreach (var c in cities)
-                {
-                    string[] arr = new string[2];
-                    arr[0] = c.id.ToString();
-                    arr[1] = c.nombre;
-                    lvwCities.Items.Add(new ListViewItem(arr));
-                }
+                WeatherController.mockForecastStateCities();
             }
+            else
+            {
+                WeatherController.getForecastStateCities(endpoint, ((Provincia)cmbWeatherStates.SelectedItem).id.ToString());
+            }
+            lvwCities.Items.Clear();
+            lvwCities.Items.AddRange(WeatherController.fillSelectedStateCities(((Provincia)cmbWeatherStates.SelectedItem).id));
+
         }
 
         private void getWeatherForecastCityForecast()
         {
-            String endpoint;
-            endpoint = txtWeatherForecastWS.Text;
-
-            var client = new RestClient(endpoint);
-
-            var request = new RestRequest("/pronosticos/", Method.GET);
-            //request.AddUrlSegment("id", ((Provincia)cmbWeatherStates.SelectedItem).id.ToString());
-
-            var response = client.Execute(request);
-
-            if (response.StatusCode == HttpStatusCode.OK)
+            if(chkWeatherForecastMockCall.Checked) 
             {
-                JsonDeserializer deserial = new JsonDeserializer();
-
-                List<PronosticoCiudad> forecast = deserial.Deserialize<List<PronosticoCiudad>>(response);
-
-                HandballMatch.getInstance().weatherForecast = forecast;
-
-                lvwForecastPlaylist.Items.Clear();
-                foreach (PronosticoCiudad c in HandballMatch.getInstance().weatherForecast)
-                {
-                    string[] arr = new string[2];
-                    arr[0] = c.id.ToString();
-                    arr[1] = c.ciudad;
-                    lvwForecastPlaylist.Items.Add(new ListViewItem(arr));
-                }
+                WeatherController.mockForecastCityForecast();
+            } 
+            else 
+            {
+                WeatherController.getForecastCityForecast(txtWeatherForecastWS.Text, lvwForecastPlaylist.SelectedItems[0].Text);
             }
+
+            lvwForecastPlaylist.Items.Clear();
+            lvwForecastPlaylist.Items.AddRange(WeatherController.fillForecast(long.Parse(lvwCities.SelectedItems[0].Text)));
         }
 
         private void loadTwitterList()

@@ -3565,14 +3565,15 @@ namespace HandballCliente
             SortPositionsTable();
             string[] arr;
             lvwGameShowFindCardItems.Items.Clear();
-            foreach (FindCardItem item in HandballMatch.getInstance().gameshowFindCardItems)
-            {
-                arr = new string[3];
-                arr[0] = item.id.ToString();
-                arr[1] = item.type.ToString();
-                arr[2] = item.picture.ToString();
-                lvwGameShowFindCardItems.Items.Add(new ListViewItem(arr));
-            }
+            lvwGameShowFindCardItems.Items.AddRange(GameShowController.fillListviewGameshowFindCardItems());
+            //foreach (FindCardItem item in HandballMatch.getInstance().gameshowFindCardItems)
+            //{
+            //    arr = new string[3];
+            //    arr[0] = item.id.ToString();
+            //    arr[1] = item.type.ToString();
+            //    arr[2] = item.picture.ToString();
+            //    lvwGameShowFindCardItems.Items.Add(new ListViewItem(arr));
+            //}
         }
 
         private void addPlayerTeam2()
@@ -4731,7 +4732,6 @@ namespace HandballCliente
 
         private void lstSports_Click(object sender, EventArgs e)
         {
-
             selectSportTab();
         }
 
@@ -5000,6 +5000,16 @@ namespace HandballCliente
             saveTwitterSearchPlaylist();
         }
 # endregion
+
+        private void nudGuestTeamScore_ValueChanged(object sender, EventArgs e)
+        {
+            updateTeamsScore();
+        }
+
+        private void nudHomeTeamScore_ValueChanged(object sender, EventArgs e)
+        {
+            updateTeamsScore();
+        }
 
     }
 }

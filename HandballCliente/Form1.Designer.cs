@@ -465,8 +465,6 @@
             this.cmbGameShowFindCardMatches = new System.Windows.Forms.ComboBox();
             this.btnGameShowFindCardHide = new System.Windows.Forms.Button();
             this.btnGameShowFindCardShow = new System.Windows.Forms.Button();
-            this.btnGameShowFindCardStop = new System.Windows.Forms.Button();
-            this.btnGameShowFindCardStart = new System.Windows.Forms.Button();
             this.cmbTemplateGameshowFindCard = new System.Windows.Forms.ComboBox();
             this.label138 = new System.Windows.Forms.Label();
             this.groupBox45 = new System.Windows.Forms.GroupBox();
@@ -518,6 +516,7 @@
             this.tabWeather = new System.Windows.Forms.TabControl();
             this.tabPage30 = new System.Windows.Forms.TabPage();
             this.groupBox30 = new System.Windows.Forms.GroupBox();
+            this.chkWeatherForecastMockCall = new System.Windows.Forms.CheckBox();
             this.cmbWeatherForecastLogo = new System.Windows.Forms.ComboBox();
             this.label132 = new System.Windows.Forms.Label();
             this.label87 = new System.Windows.Forms.Label();
@@ -893,7 +892,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtServerAddress = new System.Windows.Forms.TextBox();
-            this.chkWeatherForecastMockCall = new System.Windows.Forms.CheckBox();
             this.mstMenues.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1302,11 +1300,11 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.tabVolleyball);
+            this.tabPage2.Controls.Add(this.tabSports);
             this.tabPage2.Controls.Add(this.tabBasket);
             this.tabPage2.Controls.Add(this.lstSports);
             this.tabPage2.Controls.Add(this.label121);
-            this.tabPage2.Controls.Add(this.tabSports);
-            this.tabPage2.Controls.Add(this.tabVolleyball);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -1318,6 +1316,7 @@
             // tabBasket
             // 
             this.tabBasket.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tabBasket.Controls.Add(this.tabPage17);
             this.tabBasket.Controls.Add(this.tabPage35);
             this.tabBasket.Location = new System.Drawing.Point(82, 0);
             this.tabBasket.Multiline = true;
@@ -1818,7 +1817,6 @@
             // tabSports
             // 
             this.tabSports.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tabSports.Controls.Add(this.tabPage17);
             this.tabSports.Controls.Add(this.tabPage18);
             this.tabSports.Controls.Add(this.tabPage19);
             this.tabSports.Controls.Add(this.tabPage9);
@@ -1839,7 +1837,7 @@
             this.tabPage17.Location = new System.Drawing.Point(23, 4);
             this.tabPage17.Name = "tabPage17";
             this.tabPage17.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage17.Size = new System.Drawing.Size(795, 314);
+            this.tabPage17.Size = new System.Drawing.Size(795, 315);
             this.tabPage17.TabIndex = 0;
             this.tabPage17.Text = "Event";
             this.tabPage17.UseVisualStyleBackColor = true;
@@ -3125,6 +3123,7 @@
             this.nudGuestTeamScore.Size = new System.Drawing.Size(44, 20);
             this.nudGuestTeamScore.TabIndex = 22;
             this.nudGuestTeamScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudGuestTeamScore.ValueChanged += new System.EventHandler(this.nudGuestTeamScore_ValueChanged);
             // 
             // nudHomeTeamScore
             // 
@@ -3138,6 +3137,7 @@
             this.nudHomeTeamScore.Size = new System.Drawing.Size(44, 20);
             this.nudHomeTeamScore.TabIndex = 21;
             this.nudHomeTeamScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudHomeTeamScore.ValueChanged += new System.EventHandler(this.nudHomeTeamScore_ValueChanged);
             // 
             // txtNombreScoreVisitante
             // 
@@ -5634,8 +5634,6 @@
             this.groupBox46.Controls.Add(this.cmbGameShowFindCardMatches);
             this.groupBox46.Controls.Add(this.btnGameShowFindCardHide);
             this.groupBox46.Controls.Add(this.btnGameShowFindCardShow);
-            this.groupBox46.Controls.Add(this.btnGameShowFindCardStop);
-            this.groupBox46.Controls.Add(this.btnGameShowFindCardStart);
             this.groupBox46.Controls.Add(this.cmbTemplateGameshowFindCard);
             this.groupBox46.Controls.Add(this.label138);
             this.groupBox46.Location = new System.Drawing.Point(496, 4);
@@ -5648,7 +5646,7 @@
             // label144
             // 
             this.label144.AutoSize = true;
-            this.label144.Location = new System.Drawing.Point(294, 128);
+            this.label144.Location = new System.Drawing.Point(15, 88);
             this.label144.Name = "label144";
             this.label144.Size = new System.Drawing.Size(76, 13);
             this.label144.TabIndex = 103;
@@ -5664,7 +5662,7 @@
             "3",
             "4",
             "5"});
-            this.cmbGameShowFindCardRotationSecondsDuration.Location = new System.Drawing.Point(375, 125);
+            this.cmbGameShowFindCardRotationSecondsDuration.Location = new System.Drawing.Point(96, 85);
             this.cmbGameShowFindCardRotationSecondsDuration.Name = "cmbGameShowFindCardRotationSecondsDuration";
             this.cmbGameShowFindCardRotationSecondsDuration.Size = new System.Drawing.Size(37, 21);
             this.cmbGameShowFindCardRotationSecondsDuration.TabIndex = 102;
@@ -5682,7 +5680,7 @@
             // lstGameShowFindCardTries
             // 
             this.lstGameShowFindCardTries.FormattingEnabled = true;
-            this.lstGameShowFindCardTries.Location = new System.Drawing.Point(297, 227);
+            this.lstGameShowFindCardTries.Location = new System.Drawing.Point(297, 188);
             this.lstGameShowFindCardTries.Name = "lstGameShowFindCardTries";
             this.lstGameShowFindCardTries.Size = new System.Drawing.Size(120, 69);
             this.lstGameShowFindCardTries.TabIndex = 100;
@@ -5690,7 +5688,7 @@
             // label141
             // 
             this.label141.AutoSize = true;
-            this.label141.Location = new System.Drawing.Point(293, 210);
+            this.label141.Location = new System.Drawing.Point(293, 171);
             this.label141.Name = "label141";
             this.label141.Size = new System.Drawing.Size(48, 13);
             this.label141.TabIndex = 99;
@@ -5699,7 +5697,7 @@
             // label140
             // 
             this.label140.AutoSize = true;
-            this.label140.Location = new System.Drawing.Point(294, 183);
+            this.label140.Location = new System.Drawing.Point(166, 88);
             this.label140.Name = "label140";
             this.label140.Size = new System.Drawing.Size(75, 13);
             this.label140.TabIndex = 97;
@@ -5716,7 +5714,7 @@
             "4",
             "5",
             "6"});
-            this.cmbGameShowFindCardNumberTries.Location = new System.Drawing.Point(375, 180);
+            this.cmbGameShowFindCardNumberTries.Location = new System.Drawing.Point(247, 85);
             this.cmbGameShowFindCardNumberTries.Name = "cmbGameShowFindCardNumberTries";
             this.cmbGameShowFindCardNumberTries.Size = new System.Drawing.Size(37, 21);
             this.cmbGameShowFindCardNumberTries.TabIndex = 96;
@@ -5883,7 +5881,7 @@
             // label139
             // 
             this.label139.AutoSize = true;
-            this.label139.Location = new System.Drawing.Point(15, 89);
+            this.label139.Location = new System.Drawing.Point(15, 53);
             this.label139.Name = "label139";
             this.label139.Size = new System.Drawing.Size(51, 13);
             this.label139.TabIndex = 91;
@@ -5893,7 +5891,7 @@
             // 
             this.cmbGameShowFindCardMatches.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGameShowFindCardMatches.FormattingEnabled = true;
-            this.cmbGameShowFindCardMatches.Location = new System.Drawing.Point(72, 86);
+            this.cmbGameShowFindCardMatches.Location = new System.Drawing.Point(72, 50);
             this.cmbGameShowFindCardMatches.Name = "cmbGameShowFindCardMatches";
             this.cmbGameShowFindCardMatches.Size = new System.Drawing.Size(345, 21);
             this.cmbGameShowFindCardMatches.TabIndex = 90;
@@ -5920,26 +5918,6 @@
             this.btnGameShowFindCardShow.Text = "Iniciar";
             this.btnGameShowFindCardShow.UseVisualStyleBackColor = true;
             this.btnGameShowFindCardShow.Click += new System.EventHandler(this.btnGameShowFindCardShow_Click);
-            // 
-            // btnGameShowFindCardStop
-            // 
-            this.btnGameShowFindCardStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGameShowFindCardStop.Location = new System.Drawing.Point(97, 49);
-            this.btnGameShowFindCardStop.Name = "btnGameShowFindCardStop";
-            this.btnGameShowFindCardStop.Size = new System.Drawing.Size(73, 31);
-            this.btnGameShowFindCardStop.TabIndex = 87;
-            this.btnGameShowFindCardStop.Text = "Ocultar";
-            this.btnGameShowFindCardStop.UseVisualStyleBackColor = true;
-            // 
-            // btnGameShowFindCardStart
-            // 
-            this.btnGameShowFindCardStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGameShowFindCardStart.Location = new System.Drawing.Point(18, 49);
-            this.btnGameShowFindCardStart.Name = "btnGameShowFindCardStart";
-            this.btnGameShowFindCardStart.Size = new System.Drawing.Size(73, 31);
-            this.btnGameShowFindCardStart.TabIndex = 86;
-            this.btnGameShowFindCardStart.Text = "Mostrar";
-            this.btnGameShowFindCardStart.UseVisualStyleBackColor = true;
             // 
             // cmbTemplateGameshowFindCard
             // 
@@ -6469,6 +6447,18 @@
             this.groupBox30.TabIndex = 1;
             this.groupBox30.TabStop = false;
             this.groupBox30.Text = "Pronostico extendido";
+            // 
+            // chkWeatherForecastMockCall
+            // 
+            this.chkWeatherForecastMockCall.AutoSize = true;
+            this.chkWeatherForecastMockCall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkWeatherForecastMockCall.ForeColor = System.Drawing.Color.Navy;
+            this.chkWeatherForecastMockCall.Location = new System.Drawing.Point(314, 19);
+            this.chkWeatherForecastMockCall.Name = "chkWeatherForecastMockCall";
+            this.chkWeatherForecastMockCall.Size = new System.Drawing.Size(91, 17);
+            this.chkWeatherForecastMockCall.TabIndex = 142;
+            this.chkWeatherForecastMockCall.Text = "Simular WS";
+            this.chkWeatherForecastMockCall.UseVisualStyleBackColor = true;
             // 
             // cmbWeatherForecastLogo
             // 
@@ -10492,18 +10482,6 @@
             this.txtServerAddress.Size = new System.Drawing.Size(146, 20);
             this.txtServerAddress.TabIndex = 0;
             // 
-            // chkWeatherForecastMockCall
-            // 
-            this.chkWeatherForecastMockCall.AutoSize = true;
-            this.chkWeatherForecastMockCall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkWeatherForecastMockCall.ForeColor = System.Drawing.Color.Navy;
-            this.chkWeatherForecastMockCall.Location = new System.Drawing.Point(314, 19);
-            this.chkWeatherForecastMockCall.Name = "chkWeatherForecastMockCall";
-            this.chkWeatherForecastMockCall.Size = new System.Drawing.Size(91, 17);
-            this.chkWeatherForecastMockCall.TabIndex = 142;
-            this.chkWeatherForecastMockCall.Text = "Simular WS";
-            this.chkWeatherForecastMockCall.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -11519,8 +11497,6 @@
         private System.Windows.Forms.Label label138;
         private System.Windows.Forms.Button btnGameShowFindCardHide;
         private System.Windows.Forms.Button btnGameShowFindCardShow;
-        private System.Windows.Forms.Button btnGameShowFindCardStop;
-        private System.Windows.Forms.Button btnGameShowFindCardStart;
         private System.Windows.Forms.Label label139;
         private System.Windows.Forms.ComboBox cmbGameShowFindCardMatches;
         private System.Windows.Forms.TableLayoutPanel tlpGameShowFindCardsItems;

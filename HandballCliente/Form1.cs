@@ -33,7 +33,7 @@ namespace HandballCliente
         public static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int X, int Y, int cx, int cy, uint uFlags);
         //------------------------------------------------------------------------------------------------------------------------
 
-        private CasparCG casparServer = new CasparCG();
+        //private CasparCG casparServer = new CasparCG();
         private Color ColorFondo;
         private String fileName = "";
         private Color ColorRecording;
@@ -137,10 +137,10 @@ namespace HandballCliente
 
         private void setDefaults()
         {
-            txtServerAddress.Text = casparServer.ServerAdress;
-            txtServerPort.Text = casparServer.Port.ToString();
-            btnConnectDisconnect.Text = casparServer.Connected ? "Desconectar" : "Conectar";
-            btnClearChannel.Enabled = casparServer.Connected;
+            txtServerAddress.Text = AppController.getInstance().getCasparCgServerAddress();
+            txtServerPort.Text = AppController.getInstance().getCasparCgServerPort().ToString();
+            btnConnectDisconnect.Text = AppController.getInstance().isConnectedToCasparCgServer() ? "Desconectar" : "Conectar";
+            btnClearChannel.Enabled = AppController.getInstance().isConnectedToCasparCgServer();
             btnShowHideIntro.Tag = "0";
             btnShowHideHomeTeam.Tag = "0";
             btnShowHideGuestTeam.Tag = "0";
@@ -268,21 +268,19 @@ namespace HandballCliente
         private void fillListSports()
         {
             lstSports.Items.Clear();
-            lstSports.Items.Add("General");
-            lstSports.Items.Add("Volleyball");
-            lstSports.Items.Add("Boxeo");
-            lstSports.Items.Add("Basket");
+            lstSports.Items.AddRange(SportsController.getSportList());
         }
 
         private void setSportsTabPositions()
         {
-            setTabPosition(tabSports, 161, 0);
-            setTabPosition(tabVolleyball, 161, 0);
-            setTabPosition(tabBasket, 161, 0);
+            setTabPosition(tabSports);
+            setTabPosition(tabVolleyball);
+            setTabPosition(tabBasket);
+            setTabPosition(tabRugby);
+
             showSportTab(tabSports);
             lstSports.SelectedIndex = -1;
             hideAllSportTabs();
-
         }
 
         private void selectSportTab()
@@ -298,10 +296,18 @@ namespace HandballCliente
                 case 3:
                     showSportTab(tabBasket);
                     break;
+                case 4:
+                    showSportTab(tabRugby);
+                    break;
                 default:
                     hideAllSportTabs();
                     break;
             }
+        }
+
+        private void setTabPosition(TabControl tab)
+        {
+            setTabPosition(tab, 161, 0);
         }
 
         private void setTabPosition(TabControl tab, int left, int top)
@@ -321,6 +327,7 @@ namespace HandballCliente
             tabSports.Visible = false;
             tabVolleyball.Visible = false;
             tabBasket.Visible = false;
+            tabRugby.Visible = false;
         }
 
         private void setTopMost(bool stateTopMost)
@@ -332,12 +339,10 @@ namespace HandballCliente
         {
             try
             {
-                if (!casparServer.Connected)
+                if (!AppController.getInstance().isConnectedToCasparCgServer())
                 {
-                    casparServer = new CasparCG();
-                    casparServer.ServerAdress = txtServerAddress.Text;
-                    casparServer.Port = Convert.ToInt32(txtServerPort.Text);
-                    casparServer.Connect();
+                    AppController.getInstance().setCasparCgServer(txtServerAddress.Text, Convert.ToInt32(txtServerPort.Text));
+                    AppController.getInstance().connectCasparCgServer();
                     getServerTemplates();
                     getServerImageFiles();
                     getServerVideoFiles();
@@ -346,7 +351,7 @@ namespace HandballCliente
                 }
                 else
                 {
-                    casparServer.Disconnect();
+                    AppController.getInstance().disconnectCasparCgServer();
                 }
             }
             catch (Exception e)
@@ -355,33 +360,33 @@ namespace HandballCliente
             }
             finally
             {
-                btnConnectDisconnect.Text = casparServer.Connected ? "Desconectar" : "Conectar";
-                btnClearChannel.Enabled = casparServer.Connected;
+                btnConnectDisconnect.Text = AppController.getInstance().isConnectedToCasparCgServer() ? "Desconectar" : "Conectar";
+                btnClearChannel.Enabled = AppController.getInstance().isConnectedToCasparCgServer();
                 lockUnlockTemplates();
-                //this.BackColor = casparServer.Connected ? Color.ForestGreen : ColorFondo;
-                stsStatus.BackColor = casparServer.Connected ? Color.ForestGreen : ColorFondo;
+                //this.BackColor = AppController.getInstance().isConnectedToCasparCgServer() ? Color.ForestGreen : ColorFondo;
+                stsStatus.BackColor = AppController.getInstance().isConnectedToCasparCgServer() ? Color.ForestGreen : ColorFondo;
             }
         }
 
         public void clearChannel()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute("CLEAR 1");
+                AppController.getInstance().executeCasparCgServer("CLEAR 1");
                 if (chkWithSolidColor.Checked && !picSolidColor.BackColor.IsEmpty)
                 {
                     Color color = picSolidColor.BackColor;
                     String htmlColor = String.Format("#{0:x2}{1:x2}{2:x2}", color.R, color.G, color.B);
-                    casparServer.Execute(String.Format("PLAY 1-{2} {0}{1}{0}", (char)0x22, htmlColor, layerBackground.ToString()));
+                    AppController.getInstance().executeCasparCgServer(String.Format("PLAY 1-{2} {0}{1}{0}", (char)0x22, htmlColor, layerBackground.ToString()));
                 }
             }
         }
 
         private void getServerTemplates()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                AppController.getInstance().getServerTemplates(casparServer);
+                AppController.getInstance().getServerTemplates();
                 setCombosTemplates();
                 AppController.getInstance().fillCombosTemplates();
             }
@@ -389,9 +394,10 @@ namespace HandballCliente
 
         private void getServerImageFiles()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                List<String> medias = casparServer.GetMediaClipsNames(CasparCG.MediaTypes.Still);
+                AppController.getInstance().getServerImages();
+                List<String> medias = AppController.getInstance().getImages();
                 fillCombosTemplate(cmbHomeTeamLogo, medias);
                 fillCombosTemplate(cmbGuestTeamLogo, medias);
                 fillCombosTemplate(cmbFederationLogo, medias);
@@ -406,9 +412,10 @@ namespace HandballCliente
 
         private void getServerVideoFiles()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                List<String> medias = casparServer.GetMediaClipsNames(CasparCG.MediaTypes.Movie);
+                AppController.getInstance().getServerVideos();
+                List<String> medias = AppController.getInstance().getVideos();
                 lvwVideoFiles.Items.Clear();
                 foreach (String item in medias)
                 {
@@ -420,18 +427,19 @@ namespace HandballCliente
 
         private void getServerAudioFiles()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                List<String> medias = casparServer.GetMediaClipsNames(CasparCG.MediaTypes.Audio);
+                List<String> medias = AppController.getInstance().getAudios();
                 fillCombosTemplate(cmbAudioFiles, medias);
             }
         }
 
         private void getGameplayVideoFiles()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                List<String> medias = casparServer.GetMediaClipsNames(CasparCG.MediaTypes.Movie);
+                AppController.getInstance().getServerVideos();
+                List<String> medias = AppController.getInstance().getVideos();
                 List<String> playlist = medias.FindAll(m => m.StartsWith("GAMEPLAY/"));
                 lvwGameplayPlaylist.Items.Clear();
                 playlist.ForEach(i => lvwGameplayPlaylist.Items.Add(i));
@@ -504,10 +512,10 @@ namespace HandballCliente
         {
             if (checkDataScoreboard())
             {
-                if (casparServer.Connected)
+                if (AppController.getInstance().isConnectedToCasparCgServer())
                 {
                     Template templateScoreboard = new Template();
-                    Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                    Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
 
                     templateScoreboard.Fields.Add(new TemplateField("team1Name", txtNombreScoreLocal.Text));
                     templateScoreboard.Fields.Add(new TemplateField("team2Name", txtNombreScoreVisitante.Text));
@@ -518,7 +526,7 @@ namespace HandballCliente
                     templateScoreboard.Fields.Add(new TemplateField("logoScoreboard", logoPath.ToString()));
 
                     //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
-                    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateScoreboard.TemplateDataText(), cmbTemplateScoreboard.Text, layerScoreboard.ToString()));
+                    ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateScoreboard.TemplateDataText(), cmbTemplateScoreboard.Text, layerScoreboard.ToString()));
                     System.Diagnostics.Debug.WriteLine(ri.Message);
                     btnShowHideIntro.Tag = "1";
                 }
@@ -531,22 +539,22 @@ namespace HandballCliente
 
         private void stopScoreboard()
         {
-            casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerScoreboard.ToString()));
+            AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerScoreboard.ToString()));
         }
 
         private void showHideScoreboard()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "clockShowHide", layerScoreboard.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "clockShowHide", layerScoreboard.ToString()));
             }
         }
 
         private void startScoreboardClock()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "gameTimeStartStop", layerScoreboard.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "gameTimeStartStop", layerScoreboard.ToString()));
                 if (chkAutoShowOnClockStart.Checked)
                 {
                     showHideScoreboard();
@@ -557,9 +565,9 @@ namespace HandballCliente
 
         private void stopScoreboardClock()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "gameTimeStartStop", layerScoreboard.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "gameTimeStartStop", layerScoreboard.ToString()));
             }
         }
 
@@ -570,7 +578,7 @@ namespace HandballCliente
             templateUpdateScore.Fields.Add(new TemplateField("gameTime", nudClockMinutes.Value.ToString() + ":" + nudClockSeconds.Value.ToString()));
 
             //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
-            ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateUpdateScore.TemplateDataText(), layerScoreboard.ToString()));
+            ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateUpdateScore.TemplateDataText(), layerScoreboard.ToString()));
             System.Diagnostics.Debug.WriteLine(ri.Message);
         }
 
@@ -586,7 +594,7 @@ namespace HandballCliente
 
         private void updateTeamsScore()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateUpdateScore = new Template();
 
@@ -594,17 +602,17 @@ namespace HandballCliente
                 templateUpdateScore.Fields.Add(new TemplateField("team2Score", nudGuestTeamScore.Value.ToString()));
 
                 //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
-                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateUpdateScore.TemplateDataText(), layerScoreboard.ToString()));
+                ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateUpdateScore.TemplateDataText(), layerScoreboard.ToString()));
                 System.Diagnostics.Debug.WriteLine(ri.Message);
             }
         }
 
         private void startDynamicLogo()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateDynamicLogo = new Template();
-                Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+                Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogoFile.Text.ToLower() + ".png");
 
                 templateDynamicLogo.Fields.Add(new TemplateField("positionX", nudDynamicLogoPosX.Value.ToString()));
                 templateDynamicLogo.Fields.Add(new TemplateField("positionY", nudDynamicLogoPosY.Value.ToString()));
@@ -612,7 +620,7 @@ namespace HandballCliente
                 templateDynamicLogo.Fields.Add(new TemplateField("logoHeight", nudDynamicLogoHeight.Value.ToString()));
                 templateDynamicLogo.Fields.Add(new TemplateField("logoFile", logoPath.ToString()));
 
-                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateDynamicLogo.TemplateDataText(), cmbTemplateDynamicLogo.Text, layerLogo.ToString()));
+                ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateDynamicLogo.TemplateDataText(), cmbTemplateDynamicLogo.Text, layerLogo.ToString()));
                 txtLogMessages.Text += "\n" + ri.Message;
                 //System.Diagnostics.Debug.WriteLine(ri.Message);
             }
@@ -620,18 +628,18 @@ namespace HandballCliente
 
         private void stopDynamicLogo()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerLogo.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerLogo.ToString()));
             }
         }
 
         private void startDynamicInfo()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateDynamicInfo = new Template();
-                //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogoFile.Text.ToLower() + ".png");
 
                 if (chkDynamicInfoPosition.Checked)
                 {
@@ -647,7 +655,7 @@ namespace HandballCliente
                 templateDynamicInfo.Fields.Add(new TemplateField("title", txtDynamicInfoTitle.Text));
                 templateDynamicInfo.Fields.Add(new TemplateField("info", txtDynamicInfoText.Text));
 
-                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateDynamicInfo.TemplateDataText(), cmbTemplateDynamicInfo.Text, layerDynamicInfo.ToString()));
+                ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateDynamicInfo.TemplateDataText(), cmbTemplateDynamicInfo.Text, layerDynamicInfo.ToString()));
                 txtLogMessages.Text += "\n" + ri.Message;
                 //System.Diagnostics.Debug.WriteLine(ri.Message);
             }
@@ -655,19 +663,19 @@ namespace HandballCliente
 
         private void stopDynamicInfo()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerDynamicInfo.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerDynamicInfo.ToString()));
             }
         }
 
         private void startTop3()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateDynamicLogo = new Template();
-                //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbElectionsC1Picture.Text.ToLower() + ".png");
-                Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbElectionsC1Picture.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbElectionsC1Picture.Text.ToLower() + ".png");
+                Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbElectionsC1Picture.Text.ToLower() + ".png");
 
                 templateDynamicLogo.Fields.Add(new TemplateField("info", "TOTAL DE MESAS ESCRUTADAS:"));
                 templateDynamicLogo.Fields.Add(new TemplateField("total", "66"));
@@ -706,7 +714,7 @@ namespace HandballCliente
                 //templateDynamicLogo.Fields.Add(new TemplateField("c3Picture", logoPath.ToString()));
 
 
-                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateDynamicLogo.TemplateDataText(), cmbTemplateElectionsTop3.Text, layerLogo.ToString()));
+                ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateDynamicLogo.TemplateDataText(), cmbTemplateElectionsTop3.Text, layerLogo.ToString()));
                 txtLogMessages.Text += "\n" + ri.Message;
                 //System.Diagnostics.Debug.WriteLine(ri.Message);
             }
@@ -714,25 +722,25 @@ namespace HandballCliente
 
         private void stopTop3()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerLogo.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerLogo.ToString()));
             }
         }
 
         private void showCountdown()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateCountdown = new Template();
-                //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
 
                 templateCountdown.Fields.Add(new TemplateField("countdownNumber", nudGameshowCounterSeconds.Value.ToString()));
                 templateCountdown.Fields.Add(new TemplateField("countdownMilisecondsRefresh", nudGameshowRefreshMiliseconds.Value.ToString()));
                 //templateCountdown.Fields.Add(new TemplateField("logoScoreboard", logoPath.ToString()));
 
                 //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
-                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateCountdown.TemplateDataText(), cmbTemplateGameshowCountdown.Text, layerScoreboard.ToString()));
+                ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateCountdown.TemplateDataText(), cmbTemplateGameshowCountdown.Text, layerScoreboard.ToString()));
                 txtLogMessages.Text += "\n" + ri.Message;
                 //System.Diagnostics.Debug.WriteLine(ri.Message);
             }
@@ -740,41 +748,41 @@ namespace HandballCliente
 
         private void hideCountdown()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerScoreboard.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerScoreboard.ToString()));
             }
         }
 
         private void startCountdown()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "countdownStartStop", layerScoreboard.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "countdownStartStop", layerScoreboard.ToString()));
             }
         }
 
         private void stopCountdown()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "countdownStartStop", layerScoreboard.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "countdownStartStop", layerScoreboard.ToString()));
             }
         }
 
         private void showAnimatedLogo()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateCountdown = new Template();
-                //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
 
                 templateCountdown.Fields.Add(new TemplateField("countdownNumber", nudGameshowCounterSeconds.Value.ToString()));
                 //templateCountdown.Fields.Add(new TemplateField("countdownMilisecondsRefresh", nudGameshowRefreshMiliseconds.Value.ToString()));
                 //templateCountdown.Fields.Add(new TemplateField("logoScoreboard", logoPath.ToString()));
 
                 //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
-                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateCountdown.TemplateDataText(), cmbTemplateAnimatedLogo.Text, layerLogo.ToString()));
+                ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateCountdown.TemplateDataText(), cmbTemplateAnimatedLogo.Text, layerLogo.ToString()));
                 txtLogMessages.Text += "\n" + ri.Message;
                 //System.Diagnostics.Debug.WriteLine(ri.Message);
             }
@@ -782,36 +790,36 @@ namespace HandballCliente
 
         private void hideAnimatedLogo()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerLogo.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerLogo.ToString()));
             }
         }
 
         private void startAnimatedLogoOut()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "animationOut", layerLogo.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "animationOut", layerLogo.ToString()));
             }
         }
 
         private void startAnimatedLogoIn()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "animationIn", layerLogo.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "animationIn", layerLogo.ToString()));
             }
         }
         
         private void startGameshowQuestions()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                if (casparServer.Connected)
+                if (AppController.getInstance().isConnectedToCasparCgServer())
                 {
                     Template templateCountdown = new Template();
-                    //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                    //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
 
                     templateCountdown.Fields.Add(new TemplateField("questionText", txtGameshowQuestion.Text));
                     templateCountdown.Fields.Add(new TemplateField("answer1Text", lvwGameshowQuestionAnswers.Items[0].SubItems[1].Text));
@@ -822,7 +830,7 @@ namespace HandballCliente
                     templateCountdown.Fields.Add(new TemplateField("playerAnswer", cmbGameshowPlayerAnswer.Text));
 
                     //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
-                    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateCountdown.TemplateDataText(), cmbTemplateGameshowQuestions.Text, layerPresentation.ToString()));
+                    ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateCountdown.TemplateDataText(), cmbTemplateGameshowQuestions.Text, layerPresentation.ToString()));
                     txtLogMessages.Text += "\n" + ri.Message;
                     //System.Diagnostics.Debug.WriteLine(ri.Message);
                 }
@@ -831,25 +839,25 @@ namespace HandballCliente
 
         private void stopGameshowQuestions()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerPresentation.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerPresentation.ToString()));
             }
         }
 
         private void showGameshowPlayerAnswer()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "showPlayerAnswer", layerPresentation.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "showPlayerAnswer", layerPresentation.ToString()));
             }
         }
 
         private void showGameshowCorrectAnswer()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "showCorrectAnswer", layerPresentation.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "showCorrectAnswer", layerPresentation.ToString()));
             }
         }
 
@@ -858,10 +866,10 @@ namespace HandballCliente
             if (cmbTemplateGameshowFindCard.SelectedIndex == -1) return;
             if (cmbGameShowFindCardMatches.SelectedIndex != -1)
             {
-                if (casparServer.Connected)
+                if (AppController.getInstance().isConnectedToCasparCgServer())
                 {
                     Template templateFindCard = new Template();
-                    String basePath = casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath;
+                    String basePath = AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath;
                     Uri frontPicPath = new Uri(basePath + GameShowController.getFindCardItemPictureByType(CGClientConstants.FindCardItemType.FRONT_CARD) + ".png");
                     Uri backPicPath = new Uri(basePath + GameShowController.getFindCardItemPictureByType(CGClientConstants.FindCardItemType.LOOSER_CARD) + ".png");
                     Uri winPicPath = new Uri(basePath + GameShowController.getFindCardItemPictureByType(CGClientConstants.FindCardItemType.WINNER_CARD) + ".png");
@@ -874,7 +882,7 @@ namespace HandballCliente
                     templateFindCard.Fields.Add(new TemplateField("rotationSecondsDuration", cmbGameShowFindCardRotationSecondsDuration.Text));
 
                     //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
-                    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateFindCard.TemplateDataText(), cmbTemplateGameshowFindCard.Text, layerPresentation.ToString()));
+                    ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateFindCard.TemplateDataText(), cmbTemplateGameshowFindCard.Text, layerPresentation.ToString()));
                     txtLogMessages.Text += "\n" + ri.Message;
                     //System.Diagnostics.Debug.WriteLine(ri.Message);
                 }
@@ -886,45 +894,45 @@ namespace HandballCliente
             if (cmbTemplateGameshowFindCard.SelectedIndex == -1) return;
             if (cmbGameShowFindCardMatches.SelectedIndex == -1) return;
             if (!chkGameShowFindCardAutoUpdate.Checked) return;
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateFindCard = new Template();
 
                 templateFindCard.Fields.Add(new TemplateField("rotateCardPosition", position.ToString()));
 
                 //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
-                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateFindCard.TemplateDataText(), layerPresentation.ToString()));
+                ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateFindCard.TemplateDataText(), layerPresentation.ToString()));
                 System.Diagnostics.Debug.WriteLine(ri.Message);
             }
         }
 
         private void stopGameshowFindCard()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerPresentation.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerPresentation.ToString()));
             }
         }
 
         private void showGameshowFindCardShowAllCards()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 chkGameShowFindCardAutoUpdate.Checked = false;
                 settingFindCardsCheck(true);
                 chkGameShowFindCardAutoUpdate.Checked = true;
-                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "showAllCards", layerPresentation.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "showAllCards", layerPresentation.ToString()));
             }
         }
 
         private void showGameshowFindCardHideAllCards()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 chkGameShowFindCardAutoUpdate.Checked = false;
                 settingFindCardsCheck(false);
                 chkGameShowFindCardAutoUpdate.Checked = true;
-                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "hideAllCards", layerPresentation.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "hideAllCards", layerPresentation.ToString()));
             }
         }
 
@@ -938,12 +946,12 @@ namespace HandballCliente
 
         private void startWeatherForecast()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                if (casparServer.Connected)
+                if (AppController.getInstance().isConnectedToCasparCgServer())
                 {
                     Template templateCountdown = new Template();
-                    //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                    //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
 
                     if (WeatherController.getWeatherForecasts().Count >= 1)
                     {
@@ -960,7 +968,7 @@ namespace HandballCliente
                     }
 
                     //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
-                    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateCountdown.TemplateDataText(), cmbTemplateWeatherForecast.Text, layerPresentation.ToString()));
+                    ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateCountdown.TemplateDataText(), cmbTemplateWeatherForecast.Text, layerPresentation.ToString()));
                     txtLogMessages.Text += "\n" + ri.Message;
                     //System.Diagnostics.Debug.WriteLine(ri.Message);
                 }
@@ -969,22 +977,22 @@ namespace HandballCliente
 
         private void stopWeatherForecast()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerPresentation.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerPresentation.ToString()));
             }
         }
 
         private void showHideIntro()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 if (!btnShowHideIntro.Tag.ToString().Equals("1"))
                 {
                     Template templateIntro = new Template();
 
-                    Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
-                    Uri logo2Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
+                    Uri logo1Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
+                    Uri logo2Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
 
                     string t1 = (txtHomeTeamName.Text.Contains(",") ? txtHomeTeamName.Text.Split(',')[0].ToUpper() + "\n" + txtHomeTeamName.Text.Split(',')[1] : txtHomeTeamName.Text);
                     string t2 = (txtGuestTeamName.Text.Contains(",") ? txtGuestTeamName.Text.Split(',')[0].ToUpper() + "\n" + txtGuestTeamName.Text.Split(',')[1] : txtGuestTeamName.Text);
@@ -1000,7 +1008,7 @@ namespace HandballCliente
 
 
                     //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
-                    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateIntro.TemplateDataText(), cmbTemplateIntro.Text, layerPresentation.ToString()));
+                    ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateIntro.TemplateDataText(), cmbTemplateIntro.Text, layerPresentation.ToString()));
                     System.Diagnostics.Debug.WriteLine(ri.Message);
                     btnShowHideIntro.Tag = "1";
                     if (chkAutoHideIntro.Checked)
@@ -1012,7 +1020,7 @@ namespace HandballCliente
                 }
                 else
                 {
-                    casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerPresentation.ToString()));
+                    AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerPresentation.ToString()));
                     btnShowHideIntro.Tag = "0";
                     if (chkAutoHideIntro.Checked)
                     {
@@ -1037,7 +1045,7 @@ namespace HandballCliente
 
         private void showHideTeamsheet(Button btnSource, TextBox txtTeam, ListView lvwPlayers, TextBox txtCoach, ComboBox cmbLogo, CheckBox chkAutoHide, NumericUpDown nudSeconds, Timer timer)
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 if (!btnSource.Tag.ToString().Equals("1"))
                 {
@@ -1046,7 +1054,7 @@ namespace HandballCliente
 
                     Template templateIntro = new Template();
 
-                    Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogo.Text.ToLower() + ".png");
+                    Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogo.Text.ToLower() + ".png");
 
                     templateIntro.Fields.Add(new TemplateField("teamName", txtTeam.Text));
                     templateIntro.Fields.Add(new TemplateField("teamPlayers", players));
@@ -1056,7 +1064,7 @@ namespace HandballCliente
                     templateIntro.Fields.Add(new TemplateField("fontLineSpacingPlayers", cmbPlayersFontLineSpacing.Text));
                     templateIntro.Fields.Add(new TemplateField("fontLetterSpacingPlayers", cmbPlayersFontLetterSpacing.Text));
 
-                    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateIntro.TemplateDataText(), cmbTemplateTeam.Text, layerTeams.ToString()));
+                    ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateIntro.TemplateDataText(), cmbTemplateTeam.Text, layerTeams.ToString()));
                     System.Diagnostics.Debug.WriteLine(ri.Message);
                     btnSource.Tag = "1";
                     if (chkAutoHide.Checked)
@@ -1068,7 +1076,7 @@ namespace HandballCliente
                 }
                 else
                 {
-                    casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerTeams.ToString()));
+                    AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerTeams.ToString()));
                     btnSource.Tag = "0";
                     if (chkAutoHide.Checked)
                     {
@@ -1081,7 +1089,7 @@ namespace HandballCliente
 
         private void autoShowHideTeams()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 switch (btnShowHomeAndGuestTeam.Tag.ToString())
                 {
@@ -1092,14 +1100,14 @@ namespace HandballCliente
 
                         Template templateIntro = new Template();
 
-                        Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
+                        Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
 
                         templateIntro.Fields.Add(new TemplateField("teamName", txtHomeTeamName.Text));
                         templateIntro.Fields.Add(new TemplateField("teamPlayers", players));
                         templateIntro.Fields.Add(new TemplateField("teamCoach", "Entrenador: " + txtHomeTeamCoach.Text));
                         templateIntro.Fields.Add(new TemplateField("teamLogo", logoPath.ToString()));
 
-                        ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateIntro.TemplateDataText(), cmbTemplateTeam.Text, layerTeams.ToString()));
+                        ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateIntro.TemplateDataText(), cmbTemplateTeam.Text, layerTeams.ToString()));
 
                         tmrTeams.Interval = ((int)nudTeamsShowSeconds.Value) * 1000;
                         tmrTeams.Enabled = true;
@@ -1107,7 +1115,7 @@ namespace HandballCliente
                         break;
                     case "1":
                         btnShowHomeAndGuestTeam.Tag = "2";
-                        casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerTeams.ToString()));
+                        AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerTeams.ToString()));
 
                         tmrTeams.Stop();
                         tmrTeams.Enabled = false;
@@ -1122,14 +1130,14 @@ namespace HandballCliente
 
                         templateIntro = new Template();
 
-                        logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
+                        logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
 
                         templateIntro.Fields.Add(new TemplateField("teamName", txtGuestTeamName.Text));
                         templateIntro.Fields.Add(new TemplateField("teamPlayers", players));
                         templateIntro.Fields.Add(new TemplateField("teamCoach", "Entrenador: " + txtGuestTeamPlayers.Text));
                         templateIntro.Fields.Add(new TemplateField("teamLogo", logoPath.ToString()));
 
-                        ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateIntro.TemplateDataText(), cmbTemplateTeam.Text, layerTeams.ToString()));
+                        ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateIntro.TemplateDataText(), cmbTemplateTeam.Text, layerTeams.ToString()));
 
                         tmrInBetweenTeams.Stop();
                         tmrInBetweenTeams.Enabled = false;
@@ -1140,7 +1148,7 @@ namespace HandballCliente
                         break;
                     case "3":
                         btnShowHomeAndGuestTeam.Tag = "0";
-                        casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerTeams.ToString()));
+                        AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerTeams.ToString()));
 
                         tmrTeams.Stop();
                         tmrTeams.Enabled = false;
@@ -1153,14 +1161,14 @@ namespace HandballCliente
 
         private void showHideResult()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 if (!btnShowHideResult.Tag.ToString().Equals("1"))
                 {
                     Template templateResult = new Template();
 
-                    Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
-                    Uri logo2Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
+                    Uri logo1Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
+                    Uri logo2Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
 
                     templateResult.Fields.Add(new TemplateField("team1Name", txtHomeTeamName.Text));
                     templateResult.Fields.Add(new TemplateField("team2Name", txtGuestTeamName.Text));
@@ -1170,7 +1178,7 @@ namespace HandballCliente
                     templateResult.Fields.Add(new TemplateField("team2Logo", logo2Path.ToString()));
                     templateResult.Fields.Add(new TemplateField("timeResult", ""));
 
-                    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateResult.TemplateDataText(), cmbTemplateResult.Text, layerResult.ToString()));
+                    ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateResult.TemplateDataText(), cmbTemplateResult.Text, layerResult.ToString()));
                     System.Diagnostics.Debug.WriteLine(ri.Message);
                     btnShowHideResult.Tag = "1";
                     if (chkAutoHideResult.Checked)
@@ -1182,7 +1190,7 @@ namespace HandballCliente
                 }
                 else
                 {
-                    casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerResult.ToString()));
+                    AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerResult.ToString()));
                     btnShowHideResult.Tag = "0";
                     if (chkAutoHideResult.Checked)
                     {
@@ -1197,17 +1205,17 @@ namespace HandballCliente
         {
             if (cmbTemplateLowerThird.Text != "")
             {
-                if (casparServer.Connected)
+                if (AppController.getInstance().isConnectedToCasparCgServer())
                 {
                     Template templateLowerThird = new Template();
 
-                    Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + ((radHomeTeamPlayers.Checked) ? cmbHomeTeamLogo.Text.ToLower() : cmbGuestTeamLogo.Text.ToLower()) + ".png");
+                    Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + ((radHomeTeamPlayers.Checked) ? cmbHomeTeamLogo.Text.ToLower() : cmbGuestTeamLogo.Text.ToLower()) + ".png");
 
                     templateLowerThird.Fields.Add(new TemplateField("teamPlayer", txtLTTitle.Text));
                     templateLowerThird.Fields.Add(new TemplateField("teamName", txtLTSubtitle.Text));
                     templateLowerThird.Fields.Add(new TemplateField("teamLogo", logoPath.AbsoluteUri));
 
-                    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateLowerThird.TemplateDataText(), cmbTemplateLowerThird.Text, layerLowerThird.ToString()));
+                    ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateLowerThird.TemplateDataText(), cmbTemplateLowerThird.Text, layerLowerThird.ToString()));
                     System.Diagnostics.Debug.WriteLine(ri.Message);
                     btnShowHideIntro.Tag = "1";
 
@@ -1227,9 +1235,9 @@ namespace HandballCliente
 
         private void stopLowerThird()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerLowerThird.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerLowerThird.ToString()));
                 if (chkAutoHideLT.Checked)
                 {
                     tmrLT.Stop();
@@ -1276,11 +1284,11 @@ namespace HandballCliente
         {
             if (cmbTemplatePositions.Text != "")
             {
-                if (casparServer.Connected)
+                if (AppController.getInstance().isConnectedToCasparCgServer())
                 {
                     Template templatePositions = new Template();
 
-                    Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                    Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
 
                     templatePositions.Fields.Add(new TemplateField("logo", logoPath.AbsoluteUri));
                     templatePositions.Fields.Add(new TemplateField("title", txtPositionsTitle.Text));
@@ -1296,7 +1304,7 @@ namespace HandballCliente
                     templatePositions.Fields.Add(new TemplateField("line09", getPositionCVS(8)));
                     templatePositions.Fields.Add(new TemplateField("line10", getPositionCVS(9)));
 
-                    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templatePositions.TemplateDataText(), cmbTemplatePositions.Text, layerPositions.ToString()));
+                    ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templatePositions.TemplateDataText(), cmbTemplatePositions.Text, layerPositions.ToString()));
 
                     if (chkAutoHidePositions.Checked)
                     {
@@ -1324,9 +1332,9 @@ namespace HandballCliente
 
         private void stopPositions()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerPositions.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerPositions.ToString()));
                 if (chkAutoHidePositions.Checked)
                 {
                     tmrPositions.Stop();
@@ -1339,7 +1347,7 @@ namespace HandballCliente
         {
             if (cmbTemplateTwitter.Text != "")
             {
-                if (casparServer.Connected)
+                if (AppController.getInstance().isConnectedToCasparCgServer())
                 {
                     Template templateTwitter = new Template();
 
@@ -1348,7 +1356,7 @@ namespace HandballCliente
                     templateTwitter.Fields.Add(new TemplateField("username", txtTwitterUserName.Text));
                     templateTwitter.Fields.Add(new TemplateField("message", txtTwitterMessage.Text));
 
-                    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateTwitter.TemplateDataText(), cmbTemplateTwitter.Text, layerTwitter.ToString()));
+                    ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateTwitter.TemplateDataText(), cmbTemplateTwitter.Text, layerTwitter.ToString()));
 
                     if (chkAutoHideTwitter.Checked)
                     {
@@ -1366,9 +1374,9 @@ namespace HandballCliente
 
         private void stopTwitter()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerTwitter.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerTwitter.ToString()));
                 if (chkAutoHideTwitter.Checked)
                 {
                     tmrTwitter.Stop();
@@ -1379,10 +1387,10 @@ namespace HandballCliente
 
         private void startTwitterCounter()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateTwitter = new Template();
-                //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogoFile.Text.ToLower() + ".png");
 
                 if (chkTwitterCounterPosition.Checked)
                 {
@@ -1395,7 +1403,7 @@ namespace HandballCliente
                 templateTwitter.Fields.Add(new TemplateField("counterAnimated", (chkTwitterCounterIsAnimated.Checked ? "true" : "false")));
                 //templateDynamicLogo.Fields.Add(new TemplateField("logoFile", logoPath.ToString()));
 
-                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateTwitter.TemplateDataText(), cmbTemplateTwitterCounter.Text, layerTwitterCounter.ToString()));
+                ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateTwitter.TemplateDataText(), cmbTemplateTwitterCounter.Text, layerTwitterCounter.ToString()));
                 txtLogMessages.Text += "\n" + ri.Message;
                 //System.Diagnostics.Debug.WriteLine(ri.Message);
             }
@@ -1403,10 +1411,10 @@ namespace HandballCliente
 
         private void updateTwitterCounter()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateTwitter = new Template();
-                //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogoFile.Text.ToLower() + ".png");
 
                 if (chkTwitterCounterPosition.Checked)
                 {
@@ -1419,7 +1427,7 @@ namespace HandballCliente
                 templateTwitter.Fields.Add(new TemplateField("counterAnimated", (chkTwitterCounterIsAnimated.Checked?"true":"false")));
                 //templateDynamicLogo.Fields.Add(new TemplateField("logoFile", logoPath.ToString()));
 
-                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateTwitter.TemplateDataText(), layerTwitterCounter.ToString()));
+                ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateTwitter.TemplateDataText(), layerTwitterCounter.ToString()));
                 txtLogMessages.Text += "\n" + ri.Message;
                 //System.Diagnostics.Debug.WriteLine(ri.Message);
             }
@@ -1427,9 +1435,9 @@ namespace HandballCliente
 
         private void stopTwitterCounter()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerTwitterCounter.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerTwitterCounter.ToString()));
             }
         }
 
@@ -1441,7 +1449,7 @@ namespace HandballCliente
 
         private void showDynamicNewsTicker()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
         		string af = "\\" + Microsoft.VisualBasic.Strings.ChrW(0x22);
 
@@ -1462,15 +1470,15 @@ namespace HandballCliente
                 xml += "</templateData>";
 
                 Template templateCountdown = new Template();
-                //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
 
                 templateCountdown.Fields.Add(new TemplateField("sideTitle", nudGameshowCounterSeconds.Value.ToString()));
                 templateCountdown.Fields.Add(new TemplateField("crawl", nudGameshowRefreshMiliseconds.Value.ToString()));
                 //templateCountdown.Fields.Add(new TemplateField("logoScoreboard", logoPath.ToString()));
 
                 //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
-                //ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateCountdown.TemplateDataText(), cmbTemplateDynamicNewsTicker.Text, layerScoreboard.ToString()));
-                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, xml, cmbTemplateDynamicNewsTicker.Text, layerScoreboard.ToString()));
+                //ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateCountdown.TemplateDataText(), cmbTemplateDynamicNewsTicker.Text, layerScoreboard.ToString()));
+                ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, xml, cmbTemplateDynamicNewsTicker.Text, layerScoreboard.ToString()));
                 txtLogMessages.Text += "\n" + ri.Message;
                 //System.Diagnostics.Debug.WriteLine(ri.Message);
             }
@@ -1478,34 +1486,34 @@ namespace HandballCliente
 
         private void hideDynamicNewsTicker()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerScoreboard.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerScoreboard.ToString()));
             }
         }
 
         private void startDynamicNewsTicker()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "countdownStartStop", layerScoreboard.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "countdownStartStop", layerScoreboard.ToString()));
             }
         }
 
         private void stopDynamicNewsTicker()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "countdownStartStop", layerScoreboard.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "countdownStartStop", layerScoreboard.ToString()));
             }
         }
 
         private void startTwitterPoll()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateTwitter = new Template();
-                //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogoFile.Text.ToLower() + ".png");
 
                 templateTwitter.Fields.Add(new TemplateField("pollTitle", txtTwitterPollTitle.Text));
                 templateTwitter.Fields.Add(new TemplateField("pollText", txtTwitterPollText.Text));
@@ -1521,7 +1529,7 @@ namespace HandballCliente
                 templateTwitter.Fields.Add(new TemplateField("percentageAnimated", (chkTwitterPollIsPercentageAnimated.Checked ? "true" : "false")));
                 //templateDynamicLogo.Fields.Add(new TemplateField("logoFile", logoPath.ToString()));
 
-                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateTwitter.TemplateDataText(), cmbTemplateTwitterPoll.Text, layerTwitterCounter.ToString()));
+                ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateTwitter.TemplateDataText(), cmbTemplateTwitterPoll.Text, layerTwitterCounter.ToString()));
                 txtLogMessages.Text += "\n" + ri.Message;
                 //System.Diagnostics.Debug.WriteLine(ri.Message);
             }
@@ -1529,10 +1537,10 @@ namespace HandballCliente
 
         private void updateTwitterPoll()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateTwitter = new Template();
-                //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogoFile.Text.ToLower() + ".png");
 
                 templateTwitter.Fields.Add(new TemplateField("pollTitle", txtTwitterPollTitle.Text));
                 templateTwitter.Fields.Add(new TemplateField("pollText", txtTwitterPollText.Text));
@@ -1548,7 +1556,7 @@ namespace HandballCliente
                 templateTwitter.Fields.Add(new TemplateField("percentageAnimated", (chkTwitterPollIsPercentageAnimated.Checked ? "true" : "false")));
                 //templateDynamicLogo.Fields.Add(new TemplateField("logoFile", logoPath.ToString()));
 
-                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateTwitter.TemplateDataText(), layerTwitterCounter.ToString()));
+                ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateTwitter.TemplateDataText(), layerTwitterCounter.ToString()));
                 txtLogMessages.Text += "\n" + ri.Message;
                 //System.Diagnostics.Debug.WriteLine(ri.Message);
             }
@@ -1556,15 +1564,15 @@ namespace HandballCliente
 
         private void stopTwitterPoll()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerTwitterCounter.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerTwitterCounter.ToString()));
             }
         }
 
         private void startTwitterPlaylist()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 //if (lvwTwitterPlaylistDetailList.SelectedItems[0] == null) return;
 
@@ -1572,7 +1580,7 @@ namespace HandballCliente
                 Tweets tweet = aux.tweets.Find(element => element.id == long.Parse(lvwTwitterPlaylistDetailList.SelectedItems[0].Text));
 
                 Template templateTwitter = new Template();
-                //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogoFile.Text.ToLower() + ".png");
 
                 templateTwitter.Fields.Add(new TemplateField("datetime", tweet.dateTime));
                 templateTwitter.Fields.Add(new TemplateField("fullname", tweet.fullName));
@@ -1580,9 +1588,9 @@ namespace HandballCliente
                 templateTwitter.Fields.Add(new TemplateField("message", tweet.message));
                 templateTwitter.Fields.Add(new TemplateField("picAvatar", tweet.profileImages.Find(pi => pi.profileImageType == "profile").profileImageUrl));
 
-                casparServer.Execute(String.Format("PLAY 1-{3} {0}{1}{0} {2}", (char)0x22, cmbTwitterPlaylistBGVideo.Text, "LOOP", layerVideo.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("PLAY 1-{3} {0}{1}{0} {2}", (char)0x22, cmbTwitterPlaylistBGVideo.Text, "LOOP", layerVideo.ToString()));
 
-                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateTwitter.TemplateDataText(), cmbTemplateTwitterPlaylist.Text, layerTwitter.ToString()));
+                ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateTwitter.TemplateDataText(), cmbTemplateTwitterPlaylist.Text, layerTwitter.ToString()));
                 txtLogMessages.Text += "\n" + ri.Message;
 
                 //if (chkAutoHideTwitter.Checked)
@@ -1596,10 +1604,10 @@ namespace HandballCliente
 
         private void updateTwitterPlaylist()
         {
-            //if (casparServer.Connected)
+            //if (AppController.getInstance().isConnectedToCasparCgServer())
             //{
             //    Template templateTwitter = new Template();
-            //    //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+            //    //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogoFile.Text.ToLower() + ".png");
 
             //    templateTwitter.Fields.Add(new TemplateField("pollTitle", txtTwitterPollTitle.Text));
             //    templateTwitter.Fields.Add(new TemplateField("pollText", txtTwitterPollText.Text));
@@ -1615,7 +1623,7 @@ namespace HandballCliente
             //    templateTwitter.Fields.Add(new TemplateField("percentageAnimated", (chkTwitterPollIsPercentageAnimated.Checked ? "true" : "false")));
             //    //templateDynamicLogo.Fields.Add(new TemplateField("logoFile", logoPath.ToString()));
 
-            //    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateTwitter.TemplateDataText(), layerTwitterCounter.ToString()));
+            //    ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateTwitter.TemplateDataText(), layerTwitterCounter.ToString()));
             //    txtLogMessages.Text += "\n" + ri.Message;
             //    //System.Diagnostics.Debug.WriteLine(ri.Message);
             //}
@@ -1623,10 +1631,10 @@ namespace HandballCliente
 
         private void stopTwitterPlaylist()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerTwitter.ToString()));
-                casparServer.Execute(String.Format("STOP 1-{0}", layerVideo.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerTwitter.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("STOP 1-{0}", layerVideo.ToString()));
 
                 //if (chkAutoHideTwitter.Checked)
                 //{
@@ -1639,12 +1647,12 @@ namespace HandballCliente
 
         private void startGameplay()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 getImageCanvas();
 
                 Template templateGameplay = new Template();
-                //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogoFile.Text.ToLower() + ".png");
 
                 templateGameplay.Fields.Add(new TemplateField("positionX", "0.5"));
                 templateGameplay.Fields.Add(new TemplateField("positionY", "0.5"));
@@ -1653,9 +1661,9 @@ namespace HandballCliente
                 templateGameplay.Fields.Add(new TemplateField("pointHeight", "10"));
                 //templateDynamicLogo.Fields.Add(new TemplateField("logoFile", logoPath.ToString()));
 
-                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateGameplay.TemplateDataText(), cmbTemplateGameplay.Text, layerTwitterCounter.ToString()));
+                ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateGameplay.TemplateDataText(), cmbTemplateGameplay.Text, layerTwitterCounter.ToString()));
                 txtLogMessages.Text += "\n" + ri.Message;
-                casparServer.Execute(String.Format("MIXER 1-{0} CHROMA BLUE 0.10 0.24", layerTwitterCounter.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("MIXER 1-{0} CHROMA BLUE 0.10 0.24", layerTwitterCounter.ToString()));
                 //System.Diagnostics.Debug.WriteLine(ri.Message);
 
                 fillImagesCombo();
@@ -1664,9 +1672,9 @@ namespace HandballCliente
 
         private void getImageCanvas()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                ReturnInfo ri = casparServer.Execute(String.Format("PRINT {0}", layerVideo.ToString()));
+                ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("PRINT {0}", layerVideo.ToString()));
                 txtLogMessages.Text += "\n" + ri.Message;
                 //System.Diagnostics.Debug.WriteLine(ri.Message);
             }
@@ -1674,7 +1682,8 @@ namespace HandballCliente
 
         private void fillImagesCombo()
         {
-            List<String> medias = casparServer.GetMediaClipsNames(CasparCG.MediaTypes.Still);
+            AppController.getInstance().getServerImages();
+            List<String> medias = AppController.getInstance().getImages();
             List<String> images = medias.FindAll(m => m.StartsWith("2016"));
             fillCombosTemplate(cmbGameplayImages, images);
             cmbGameplayImages.SelectedIndex = cmbGameplayImages.Items.Count - 1;
@@ -1682,7 +1691,7 @@ namespace HandballCliente
 
         private void setImageAsCanvas()
         {
-            Uri file = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbGameplayImages.Text.ToLower() + ".png");
+            Uri file = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbGameplayImages.Text.ToLower() + ".png");
 
             picGameplayWhiteboard.SizeMode = PictureBoxSizeMode.StretchImage;
             picGameplayWhiteboard.Image = Image.FromFile(file.LocalPath);
@@ -1690,10 +1699,10 @@ namespace HandballCliente
 
         private void updateGameplay(String mouseEvent,double porcX, double porcY)
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateGameplay = new Template();
-                //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogoFile.Text.ToLower() + ".png");
 
                     templateGameplay.Fields.Add(new TemplateField("mouseEvent", mouseEvent));
                     templateGameplay.Fields.Add(new TemplateField("positionX", porcX.ToString().Replace(",", ".")));
@@ -1703,7 +1712,7 @@ namespace HandballCliente
                 //templateGameplay.Fields.Add(new TemplateField("pointHeight", "10"));
                 //templateDynamicLogo.Fields.Add(new TemplateField("logoFile", logoPath.ToString()));
 
-                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateGameplay.TemplateDataText(), layerTwitterCounter.ToString()));
+                ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateGameplay.TemplateDataText(), layerTwitterCounter.ToString()));
                 txtLogMessages.Text += "\n" + mouseEvent + ": " + ri.Message;
                 //System.Diagnostics.Debug.WriteLine(ri.Message);
             }
@@ -1712,7 +1721,7 @@ namespace HandballCliente
         private void callGameplayTool(String toolName)
         {
             String command = ""; ;
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 switch (toolName)
                 {
@@ -1726,17 +1735,17 @@ namespace HandballCliente
                         break;
                 }
 
-                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", command, layerTwitterCounter.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", command, layerTwitterCounter.ToString()));
             }
         }
 
 
         private void stopGameplay()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerTwitterCounter.ToString()));
-                casparServer.Execute(String.Format("MIXER 1-{0} CHROMA NONE", layerTwitterCounter.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerTwitterCounter.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("MIXER 1-{0} CHROMA NONE", layerTwitterCounter.ToString()));
                 cleanImageCanvas();
             }
         }
@@ -1748,56 +1757,56 @@ namespace HandballCliente
 
         //private void playGameplayVideo()
         //{
-        //    if (casparServer.Connected)
+        //    if (AppController.getInstance().isConnectedToCasparCgServer())
         //    {
-        //        casparServer.Execute(String.Format("PLAY 1-{0} AMB LENGTH 150", layerVideo.ToString()));
-        //        casparServer.Execute(String.Format("VERSION", layerVideo.ToString()));
-        //        casparServer.Execute(String.Format("LOADBG 1-{0} AMB LOOP SEEK 150 LENGTH 1", layerVideo.ToString()));
+        //        AppController.getInstance().executeCasparCgServer(String.Format("PLAY 1-{0} AMB LENGTH 150", layerVideo.ToString()));
+        //        AppController.getInstance().executeCasparCgServer(String.Format("VERSION", layerVideo.ToString()));
+        //        AppController.getInstance().executeCasparCgServer(String.Format("LOADBG 1-{0} AMB LOOP SEEK 150 LENGTH 1", layerVideo.ToString()));
         //    }
         //}
 
         //private void stopGameplayVideo()
         //{
-        //    if (casparServer.Connected)
+        //    if (AppController.getInstance().isConnectedToCasparCgServer())
         //    {
-        //        casparServer.Execute(String.Format("PLAY 1-{0} AMB SEEK 151", layerVideo.ToString()));
-        //        //casparServer.Execute(String.Format("PLAY 1-{0}", layerVideo.ToString()));
+        //        AppController.getInstance().executeCasparCgServer(String.Format("PLAY 1-{0} AMB SEEK 151", layerVideo.ToString()));
+        //        //AppController.getInstance().executeCasparCgServer(String.Format("PLAY 1-{0}", layerVideo.ToString()));
         //    }
         //}
         
         private void playGameplayMedia()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 if (lvwGameplayPlaylist.SelectedItems.Count != 0)
                 {
                     muteGameplayVolume();
-                    casparServer.Execute(String.Format("PLAY 1-{3} {0}{1}{0} {2}", (char)0x22, lvwGameplayPlaylist.SelectedItems[0].SubItems[0].Text, (false ? "LOOP" : ""), layerVideo.ToString()));
+                    AppController.getInstance().executeCasparCgServer(String.Format("PLAY 1-{3} {0}{1}{0} {2}", (char)0x22, lvwGameplayPlaylist.SelectedItems[0].SubItems[0].Text, (false ? "LOOP" : ""), layerVideo.ToString()));
                 }
             }
         }
 
         private void stopGameplayMedia()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("STOP 1-{0}", layerVideo.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("STOP 1-{0}", layerVideo.ToString()));
             }
         }
 
         private void pauseGameplayMedia()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("PAUSE 1-{0}", layerVideo.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("PAUSE 1-{0}", layerVideo.ToString()));
             }
         }
 
         private void muteGameplayVolume()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("MIXER 1 MASTERVOLUME {0}", 0));
+                AppController.getInstance().executeCasparCgServer(String.Format("MIXER 1 MASTERVOLUME {0}", 0));
             }
         }
 
@@ -1805,12 +1814,12 @@ namespace HandballCliente
         {
             if (cmbTemplateVolleyScoreboard.Text != "")
             {
-                if (casparServer.Connected)
+                if (AppController.getInstance().isConnectedToCasparCgServer())
                 {
                     Template templateVolleyScoreboard = new Template();
-                    //Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
-                    //Uri logo2Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
-                    Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                    //Uri logo1Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
+                    //Uri logo2Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
+                    Uri logo1Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
 
                     templateVolleyScoreboard.Fields.Add(new TemplateField("team1", txtVolleyHomeTeam.Text));
                     templateVolleyScoreboard.Fields.Add(new TemplateField("team2", txtVolleyGuestTeam.Text));
@@ -1832,7 +1841,7 @@ namespace HandballCliente
                     //templateVolleyScoreboard.Fields.Add(new TemplateField("flag2", logo2Path.ToString()));
                     templateVolleyScoreboard.Fields.Add(new TemplateField("fontsize", cmbVolleyScoreboardFontSize.Text));
 
-                    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateVolleyScoreboard.TemplateDataText(), cmbTemplateVolleyScoreboard.Text, layerVolleyScoreboard.ToString()));
+                    ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateVolleyScoreboard.TemplateDataText(), cmbTemplateVolleyScoreboard.Text, layerVolleyScoreboard.ToString()));
                 }
             }
             else
@@ -1843,20 +1852,20 @@ namespace HandballCliente
 
         private void stopVolleyScoreboard()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerVolleyScoreboard.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerVolleyScoreboard.ToString()));
             }
         }
 
         private void updateVolleyScoreboard()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateVolleyScoreboard = new Template();
-                //Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
-                //Uri logo2Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
-                Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                //Uri logo1Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
+                //Uri logo2Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
+                Uri logo1Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
 
 
                 templateVolleyScoreboard.Fields.Add(new TemplateField("team1", txtVolleyHomeTeam.Text));
@@ -1880,7 +1889,7 @@ namespace HandballCliente
                 templateVolleyScoreboard.Fields.Add(new TemplateField("fontsize", cmbVolleyScoreboardFontSize.Text));
 
                 //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
-                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateVolleyScoreboard.TemplateDataText(), layerVolleyScoreboard.ToString()));
+                ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateVolleyScoreboard.TemplateDataText(), layerVolleyScoreboard.ToString()));
                 System.Diagnostics.Debug.WriteLine(ri.Message);
             }
         }
@@ -2007,12 +2016,12 @@ namespace HandballCliente
         {
             if (cmbTemplateVolleyResult.Text != "")
             {
-                if (casparServer.Connected)
+                if (AppController.getInstance().isConnectedToCasparCgServer())
                 {
                     Template templateVolleyResult = new Template();
-                    //Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
-                    //Uri logo2Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
-                    Uri logo1Path = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                    //Uri logo1Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
+                    //Uri logo2Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
+                    Uri logo1Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
 
                     templateVolleyResult.Fields.Add(new TemplateField("f0", txtVolleyHomeTeam.Text));
                     templateVolleyResult.Fields.Add(new TemplateField("f1", txtVolleyGuestTeam.Text));
@@ -2033,7 +2042,7 @@ namespace HandballCliente
                     templateVolleyResult.Fields.Add(new TemplateField("flag1", logo1Path.ToString()));
                     //templateVolleyResult.Fields.Add(new TemplateField("flag2", logo2Path.ToString()));
 
-                    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateVolleyResult.TemplateDataText(), cmbTemplateVolleyResult.Text, layerVolleyResult.ToString()));
+                    ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateVolleyResult.TemplateDataText(), cmbTemplateVolleyResult.Text, layerVolleyResult.ToString()));
 
                     if (chkAutoHideVolleyResult.Checked)
                     {
@@ -2051,9 +2060,9 @@ namespace HandballCliente
 
         private void stopVolleyResult()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerVolleyResult.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerVolleyResult.ToString()));
                 if (chkAutoHideVolleyResult.Checked)
                 {
                     tmrVolleyResult.Stop();
@@ -2064,13 +2073,13 @@ namespace HandballCliente
 
         private void startRecording()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 if (!txtRecordingFileName.Text.Equals(""))
                 {
                     //String aux=String.Format("ADD 1 FILE {0}-{1}-{2}.mov -vcodec libx264 [-preset ultrafast -tune fastdecode -crf 5]","REC",txtArchivoGrabacion.Text,DateTime.Now.ToString("ddMM-HHmm"));
                     String aux = String.Format("ADD 1 FILE {0}-{1}-{2}.mp4 -vcodec libx264 -preset ultrafast -tune fastdecode -crf {3}", "REC", txtRecordingFileName.Text, DateTime.Now.ToString("ddMMHHmm"), HandballMatch.getInstance().recordingCRF);
-                    casparServer.Execute(aux);
+                    AppController.getInstance().executeCasparCgServer(aux);
                     ColorRecording = btnStartRecording.BackColor;
                     btnStartRecording.BackColor = Color.Red;
                 }
@@ -2079,70 +2088,70 @@ namespace HandballCliente
 
         private void stopRecording()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute("REMOVE 1 FILE");
+                AppController.getInstance().executeCasparCgServer("REMOVE 1 FILE");
                 btnStartRecording.BackColor = ColorRecording;
             }
         }
 
         private void showLogo()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 if (!cmbBroadcastLogo.Text.Equals(""))
                 {
-                    casparServer.Execute(String.Format("PLAY 1-{2} {0}{1}{0} MIX 15", (char)0x22, cmbBroadcastLogo.Text, layerLogo.ToString()));
+                    AppController.getInstance().executeCasparCgServer(String.Format("PLAY 1-{2} {0}{1}{0} MIX 15", (char)0x22, cmbBroadcastLogo.Text, layerLogo.ToString()));
                 }
             }
         }
 
         private void hideLogo()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("STOP 1-{0}", layerLogo.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("STOP 1-{0}", layerLogo.ToString()));
             }
         }
 
         private void playMedia()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 if (lvwVideoFiles.SelectedItems.Count != 0)
                 {
-                    casparServer.Execute(String.Format("PLAY 1-{3} {0}{1}{0} {2}", (char)0x22, lvwVideoFiles.SelectedItems[0].SubItems[0].Text, (chkLoopVideoFile.Checked ? "LOOP" : ""), layerVideo.ToString()));
+                    AppController.getInstance().executeCasparCgServer(String.Format("PLAY 1-{3} {0}{1}{0} {2}", (char)0x22, lvwVideoFiles.SelectedItems[0].SubItems[0].Text, (chkLoopVideoFile.Checked ? "LOOP" : ""), layerVideo.ToString()));
                 }
             }
         }
 
         private void stopMedia()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("STOP 1-{0}", layerVideo.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("STOP 1-{0}", layerVideo.ToString()));
             }
         }
 
         private void pauseMedia()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("PAUSE 1-{0}", layerVideo.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("PAUSE 1-{0}", layerVideo.ToString()));
             }
         }
 
         private void setVolume()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("MIXER 1 MASTERVOLUME {0}", (trkVolume.Value * 10)));
+                AppController.getInstance().executeCasparCgServer(String.Format("MIXER 1 MASTERVOLUME {0}", (trkVolume.Value * 10)));
             }
         }
 
         private void muteVolume()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 trkVolume.Value = 0;
                 setVolume();
@@ -2151,68 +2160,68 @@ namespace HandballCliente
 
         private void startAudio()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 if (cmbAudioFiles.Text != "")
                 {
-                    //casparServer.Execute(String.Format("PLAY 1 {0}{1}{0} CHANNEL_LAYOUT STEREO", (char)0x22, cmbAudioFiles.Text, (chkLoopAudioFile.Checked ? "LOOP" : "")));
-                    casparServer.Execute(String.Format("PLAY 1 {0}{1}{0} {2}", (char)0x22, cmbAudioFiles.Text, (chkLoopAudioFile.Checked ? "LOOP" : "")));
+                    //AppController.getInstance().executeCasparCgServer(String.Format("PLAY 1 {0}{1}{0} CHANNEL_LAYOUT STEREO", (char)0x22, cmbAudioFiles.Text, (chkLoopAudioFile.Checked ? "LOOP" : "")));
+                    AppController.getInstance().executeCasparCgServer(String.Format("PLAY 1 {0}{1}{0} {2}", (char)0x22, cmbAudioFiles.Text, (chkLoopAudioFile.Checked ? "LOOP" : "")));
                 }
             }
         }
 
         private void stopAudio()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("STOP 1"));
+                AppController.getInstance().executeCasparCgServer(String.Format("STOP 1"));
             }
         }
 
         private void pauseAudio()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("PAUSE 1"));
+                AppController.getInstance().executeCasparCgServer(String.Format("PAUSE 1"));
             }
         }
 
         private void startWebcam()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 if (cmbWebcam.Text != "" && cmbWebcamResolution.Text != "")
                 {
-                    //casparServer.Execute(String.Format("PLAY 1-{2} {0}dshow://video={1}{0} {0}-video_size {3} -framerate 30{0}", (char)0x22, cmbWebcam.Text, layerVideo.ToString(),cmbWebcamResolution.Text));
-                    casparServer.Execute(String.Format("PLAY 1-{2} {0}dshow://video={1}{0} {0}-video_size {3} -framerate 30{0}", (char)0x22, cmbWebcam.Text, layerVideo.ToString(), cmbWebcamResolution.Text));
+                    //AppController.getInstance().executeCasparCgServer(String.Format("PLAY 1-{2} {0}dshow://video={1}{0} {0}-video_size {3} -framerate 30{0}", (char)0x22, cmbWebcam.Text, layerVideo.ToString(),cmbWebcamResolution.Text));
+                    AppController.getInstance().executeCasparCgServer(String.Format("PLAY 1-{2} {0}dshow://video={1}{0} {0}-video_size {3} -framerate 30{0}", (char)0x22, cmbWebcam.Text, layerVideo.ToString(), cmbWebcamResolution.Text));
                 }
             }
         }
 
         private void stopWebcam()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("STOP 1-{0}", layerVideo.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("STOP 1-{0}", layerVideo.ToString()));
             }
         }
 
         private void startImageScrolling()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 if (!cmbImageScrolling.Text.Equals(""))
                 {
-                    casparServer.Execute(String.Format("PLAY 1-{2} {0}{1}{0} BLUR 0 SPEED {3}", (char)0x22, cmbImageScrolling.Text, layerImageScrolling.ToString(), trkImageScrollingSpeed.Value));
+                    AppController.getInstance().executeCasparCgServer(String.Format("PLAY 1-{2} {0}{1}{0} BLUR 0 SPEED {3}", (char)0x22, cmbImageScrolling.Text, layerImageScrolling.ToString(), trkImageScrollingSpeed.Value));
                 }
             }
         }
 
         private void stopImageScrolling()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("STOP 1-{0}", layerImageScrolling.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("STOP 1-{0}", layerImageScrolling.ToString()));
             }
         }
 
@@ -3070,10 +3079,10 @@ namespace HandballCliente
         {
             if (checkDataBasketScoreboard())
             {
-                if (casparServer.Connected)
+                if (AppController.getInstance().isConnectedToCasparCgServer())
                 {
                     Template templateScoreboard = new Template();
-                    //Uri logoPath = new Uri(casparServer.ServerPaths.InitialPath + casparServer.ServerPaths.MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                    //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
 
                     templateScoreboard.Fields.Add(new TemplateField("team1Name", txtBasketScoreboardHomeTeam.Text));
                     templateScoreboard.Fields.Add(new TemplateField("team2Name", txtBasketScoreboardAwayTeam.Text));
@@ -3085,7 +3094,7 @@ namespace HandballCliente
                     //templateScoreboard.Fields.Add(new TemplateField("logoScoreboard", logoPath.ToString()));
 
                     //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
-                    ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateScoreboard.TemplateDataText(), cmbTemplateBasketScoreboard.Text, layerScoreboard.ToString()));
+                    ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateScoreboard.TemplateDataText(), cmbTemplateBasketScoreboard.Text, layerScoreboard.ToString()));
                     System.Diagnostics.Debug.WriteLine(ri.Message);
                 }
             }
@@ -3097,30 +3106,30 @@ namespace HandballCliente
 
         private void stopBasketScoreboard()
         {
-            casparServer.Execute(String.Format("CG 1-{0} STOP 0", layerScoreboard.ToString()));
+            AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerScoreboard.ToString()));
         }
 
         private void showHideBasketScoreboardClocks()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "clockShowHide", layerScoreboard.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "clockShowHide", layerScoreboard.ToString()));
             }
         }
 
         private void showHideBasketScoreboard()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "scoreboardShowHide", layerScoreboard.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "scoreboardShowHide", layerScoreboard.ToString()));
             }
         }
 
         private void startBasketScoreboardClock()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "gameTimeStartStop", layerScoreboard.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "gameTimeStartStop", layerScoreboard.ToString()));
                 if (chkAutoShowOnClockStart.Checked)
                 {
                     showHideBasketScoreboardClocks();
@@ -3130,9 +3139,9 @@ namespace HandballCliente
 
         private void stopBasketScoreboardClock()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                casparServer.Execute(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "gameTimeStartStop", layerScoreboard.ToString()));
+                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "gameTimeStartStop", layerScoreboard.ToString()));
             }
         }
 
@@ -3143,7 +3152,7 @@ namespace HandballCliente
             templateUpdateScore.Fields.Add(new TemplateField("gameTime", nudBasketScoreboardGameTimeMins.Value.ToString() + ":" + nudBasketScoreboardGameTimeSecs.Value.ToString()));
 
             //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
-            ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateUpdateScore.TemplateDataText(), layerScoreboard.ToString()));
+            ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateUpdateScore.TemplateDataText(), layerScoreboard.ToString()));
             System.Diagnostics.Debug.WriteLine(ri.Message);
         }
 
@@ -3164,7 +3173,7 @@ namespace HandballCliente
 
         private void updateBasketScoreboardTeamsScore()
         {
-            if (casparServer.Connected)
+            if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateUpdateScore = new Template();
 
@@ -3174,7 +3183,7 @@ namespace HandballCliente
                 templateUpdateScore.Fields.Add(new TemplateField("team2Score", nudBasketScoreboardAwayScore.Value.ToString()));
 
                 //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
-                ReturnInfo ri = casparServer.Execute(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateUpdateScore.TemplateDataText(), layerScoreboard.ToString()));
+                ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateUpdateScore.TemplateDataText(), layerScoreboard.ToString()));
                 System.Diagnostics.Debug.WriteLine(ri.Message);
             }
         }

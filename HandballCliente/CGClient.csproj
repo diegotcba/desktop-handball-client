@@ -110,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AppController.cs" />
+    <Compile Include="Controllers\SportsController.cs" />
     <Compile Include="Controllers\GameShowController.cs" />
     <Compile Include="Controllers\LogController.cs" />
     <Compile Include="Controllers\MultimediaController.cs" />

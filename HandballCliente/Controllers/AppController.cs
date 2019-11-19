@@ -13,7 +13,10 @@ namespace HandballCliente.Controllers
 
         private List<String> templates;
         private List<String> videos;
+        private List<String> images;
+        private List<String> audios;
         private List<ComboBox> comboTemplates;
+        private CasparCG casparCgServer;
 
         public static AppController getInstance()
         {
@@ -27,7 +30,11 @@ namespace HandballCliente.Controllers
         private AppController()
         {
             templates = new List<string>();
+            videos = new List<string>();
+            images = new List<string>();
+            audios = new List<string>();
             comboTemplates = new List<ComboBox>();
+            casparCgServer = new CasparCG();
         }
 
         public void addComboBoxTemplate(ComboBox combo)
@@ -35,12 +42,51 @@ namespace HandballCliente.Controllers
             comboTemplates.Add(combo);
         }
 
-        public void getServerTemplates(CasparCG casparServer)
+        public void getServerTemplates()
         {
-            if (casparServer.Connected)
+            if (casparCgServer.Connected)
             {
-                templates = casparServer.GetTemplateNames();
+                templates = casparCgServer.GetTemplateNames();
             }
+        }
+
+        public void getServerImages()
+        {
+            if (casparCgServer.Connected)
+            {
+                images = casparCgServer.GetMediaClipsNames(CasparCG.MediaTypes.Still);
+            }
+        }
+
+        public void getServerVideos()
+        {
+            if (casparCgServer.Connected)
+            {
+                videos = casparCgServer.GetMediaClipsNames(CasparCG.MediaTypes.Movie);
+            }
+        }
+
+        public void getServerAudios()
+        {
+            if (casparCgServer.Connected)
+            {
+                audios = casparCgServer.GetMediaClipsNames(CasparCG.MediaTypes.Audio);
+            }
+        }
+
+        public List<String> getVideos()
+        {
+            return videos;
+        }
+
+        public List<String> getImages()
+        {
+            return images;
+        }
+
+        public List<String> getAudios()
+        {
+            return audios;
         }
 
         public void fillCombosTemplates()
@@ -69,5 +115,46 @@ namespace HandballCliente.Controllers
             }
         }
 
+        public bool isConnectedToCasparCgServer()
+        {
+            return casparCgServer.Connected;
+        }
+
+        public void setCasparCgServer(String address, int port)
+        {
+            casparCgServer = new CasparCG();
+            casparCgServer.ServerAdress = address;
+            casparCgServer.Port = port;
+        }
+
+        public void connectCasparCgServer()
+        {
+            casparCgServer.Connect();
+        }
+
+        public void disconnectCasparCgServer()
+        {
+            casparCgServer.Disconnect();
+        }
+
+        public String getCasparCgServerAddress()
+        {
+            return casparCgServer.ServerAdress;
+        }
+
+        public int getCasparCgServerPort()
+        {
+            return casparCgServer.Port;
+        }
+
+        public CasparCG.Paths getCasparCgServerPaths()
+        {
+            return casparCgServer.ServerPaths;
+        }
+
+        public ReturnInfo executeCasparCgServer(String command)
+        {
+            return casparCgServer.Execute(command);
+        }
     }
 }

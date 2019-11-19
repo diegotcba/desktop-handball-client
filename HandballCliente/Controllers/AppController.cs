@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -155,6 +156,21 @@ namespace HandballCliente.Controllers
         public ReturnInfo executeCasparCgServer(String command)
         {
             return casparCgServer.Execute(command);
+        }
+
+        public void clearChannel()
+        {
+            if (isConnectedToCasparCgServer())
+            {
+                this.executeCasparCgServer("CLEAR 1");
+            }
+        }
+
+        public void setBackgroundColor(Color bgColor, int layer)
+        {
+            String htmlColor = String.Format("#{0:x2}{1:x2}{2:x2}", bgColor.R, bgColor.G, bgColor.B);
+            AppController.getInstance().executeCasparCgServer(String.Format("PLAY 1-{2} {0}{1}{0}", (char)0x22, htmlColor, layer.ToString()));
+
         }
     }
 }

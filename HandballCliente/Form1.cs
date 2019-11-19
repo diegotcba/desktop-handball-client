@@ -210,17 +210,12 @@ namespace HandballCliente
             cmbVolleyScoreboardFontSize.Items.Add("22");
             cmbVolleyScoreboardFontSize.Items.Add("24");
 
+
             cmbGameshowCorrectAnswer.Items.Clear();
-            cmbGameshowCorrectAnswer.Items.Add("1");
-            cmbGameshowCorrectAnswer.Items.Add("2");
-            cmbGameshowCorrectAnswer.Items.Add("3");
-            cmbGameshowCorrectAnswer.Items.Add("4");
+            UtilHelper.populateComboboxNumberRange(cmbGameshowCorrectAnswer, 1, 4);
 
             cmbGameshowPlayerAnswer.Items.Clear();
-            cmbGameshowPlayerAnswer.Items.Add("1");
-            cmbGameshowPlayerAnswer.Items.Add("2");
-            cmbGameshowPlayerAnswer.Items.Add("3");
-            cmbGameshowPlayerAnswer.Items.Add("4");
+            UtilHelper.populateComboboxNumberRange(cmbGameshowPlayerAnswer, 1, 4);
 
             UtilHelper.populateComboboxNumberRange(cmbGameShowFindCardNumberTries, 1, 3);
         }
@@ -370,16 +365,11 @@ namespace HandballCliente
 
         public void clearChannel()
         {
-            if (AppController.getInstance().isConnectedToCasparCgServer())
-            {
-                AppController.getInstance().executeCasparCgServer("CLEAR 1");
+                AppController.getInstance().clearChannel();
                 if (chkWithSolidColor.Checked && !picSolidColor.BackColor.IsEmpty)
                 {
-                    Color color = picSolidColor.BackColor;
-                    String htmlColor = String.Format("#{0:x2}{1:x2}{2:x2}", color.R, color.G, color.B);
-                    AppController.getInstance().executeCasparCgServer(String.Format("PLAY 1-{2} {0}{1}{0}", (char)0x22, htmlColor, layerBackground.ToString()));
+                    AppController.getInstance().setBackgroundColor(picSolidColor.BackColor, layerBackground);
                 }
-            }
         }
 
         private void getServerTemplates()
@@ -5008,7 +4998,6 @@ namespace HandballCliente
         {
             saveTwitterSearchPlaylist();
         }
-# endregion
 
         private void nudGuestTeamScore_ValueChanged(object sender, EventArgs e)
         {
@@ -5019,6 +5008,7 @@ namespace HandballCliente
         {
             updateTeamsScore();
         }
+        # endregion
 
     }
 }

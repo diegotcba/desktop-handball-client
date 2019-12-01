@@ -158,9 +158,16 @@ namespace HandballCliente.Controllers
             return casparCgServer.ServerPaths.InitialPath + casparCgServer.ServerPaths.MediaPath;
         }
 
+        public String getFullTemplatePath()
+        {
+            return casparCgServer.ServerPaths.InitialPath + casparCgServer.ServerPaths.TemplatePath;
+        }
+
+        
         public ReturnInfo executeCasparCgServer(String command)
         {
             ReturnInfo ri = casparCgServer.Execute(command);
+
             System.Diagnostics.Debug.WriteLine(ri.Message);
 
             return ri;
@@ -183,11 +190,20 @@ namespace HandballCliente.Controllers
             }
         }
 
-        public void cgAdd()
+        public void cgAdd(string templateName, int layer, Template templateData)
         {
             if (isConnectedToCasparCgServer())
             {
-                
+                executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateData.TemplateDataText(), templateName, layer.ToString()));                
+            }
+
+        }
+
+        public void cgAdd(string templateName, int layer, String templateDataXml)
+        {
+            if (isConnectedToCasparCgServer())
+            {
+                executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateDataXml, templateName, layer.ToString()));
             }
 
         }

@@ -111,6 +111,7 @@ namespace HandballCliente
             cmbTemplateElectionsTop3.Items.Clear();
             cmbLogoFile.Items.Clear();
             cmbTemplateWeatherForecast.Items.Clear();
+            cmbRugbyIntroTemplate.Items.Clear();
         }
 
         private void clearPresentation()
@@ -146,6 +147,7 @@ namespace HandballCliente
             btnShowHideGuestTeam.Tag = "0";
             btnShowHomeAndGuestTeam.Tag = "0";
             btnShowHideResult.Tag = "0";
+            btnStartStopRugbyIntro.Tag = "0";
             lockUnlockTemplates();
             radHomeTeamPlayers.Checked = true;
 
@@ -461,6 +463,7 @@ namespace HandballCliente
             AppController.getInstance().addComboBoxTemplate(cmbTemplateBasketScoreboard);
             AppController.getInstance().addComboBoxTemplate(cmbTemplateGameshowFindCard);
             AppController.getInstance().addComboBoxTemplate(cmbTemplateTwitterPlaylist);
+            AppController.getInstance().addComboBoxTemplate(cmbRugbyIntroTemplate);
         }
 
         private void fillCombosTemplate(ComboBox cbo, List<String> templates)
@@ -652,21 +655,6 @@ namespace HandballCliente
 
                 templateDynamicLogo.Fields.Add(new TemplateField("info", "TOTAL DE MESAS ESCRUTADAS:"));
                 templateDynamicLogo.Fields.Add(new TemplateField("total", "66"));
-
-                //templateDynamicLogo.Fields.Add(new TemplateField("c1Position", "1"));
-                //templateDynamicLogo.Fields.Add(new TemplateField("c1Name", "SCIOLI"));
-                //templateDynamicLogo.Fields.Add(new TemplateField("c1Percentage", "34"));
-                //templateDynamicLogo.Fields.Add(new TemplateField("c1Picture", logoPath.ToString()));
-
-                //templateDynamicLogo.Fields.Add(new TemplateField("c2Position", "2"));
-                //templateDynamicLogo.Fields.Add(new TemplateField("c2Name", "MACRI"));
-                //templateDynamicLogo.Fields.Add(new TemplateField("c2Percentage", "30"));
-                //templateDynamicLogo.Fields.Add(new TemplateField("c2Picture", logoPath.ToString()));
-
-                //templateDynamicLogo.Fields.Add(new TemplateField("c3Position", "3"));
-                //templateDynamicLogo.Fields.Add(new TemplateField("c3Name", "MASSA"));
-                //templateDynamicLogo.Fields.Add(new TemplateField("c3Percentage", "12.5"));
-                //templateDynamicLogo.Fields.Add(new TemplateField("c3Picture", logoPath.ToString()));
 
                 templateDynamicLogo.Fields.Add(new TemplateField("c1Position", "1"));
                 templateDynamicLogo.Fields.Add(new TemplateField("c1Name", HandballMatch.getInstance().electionResults[0].name));
@@ -1303,6 +1291,56 @@ namespace HandballCliente
                 tmrPositions.Enabled = false;
             }
         }
+
+        private void showHideRugbyIntro()
+        {
+            if (!btnStartStopRugbyIntro.Tag.ToString().Equals("1"))
+            {
+                //Template templateIntro = new Template();
+
+                //Uri logo1Path = new Uri(AppController.getInstance().getFullMediaPath() + cmbHomeTeamLogo.Text.ToLower() + ".png");
+                //Uri logo2Path = new Uri(AppController.getInstance().getFullMediaPath() + cmbGuestTeamLogo.Text.ToLower() + ".png");
+
+                //string t1 = (txtHomeTeamName.Text.Contains(",") ? txtHomeTeamName.Text.Split(',')[0].ToUpper() + "\n" + txtHomeTeamName.Text.Split(',')[1] : txtHomeTeamName.Text);
+                //string t2 = (txtGuestTeamName.Text.Contains(",") ? txtGuestTeamName.Text.Split(',')[0].ToUpper() + "\n" + txtGuestTeamName.Text.Split(',')[1] : txtGuestTeamName.Text);
+
+                //templateIntro.Fields.Add(new TemplateField("team1Name", t1));
+                //templateIntro.Fields.Add(new TemplateField("team2Name", t2));
+                //templateIntro.Fields.Add(new TemplateField("infoLeague", txtEventLeague.Text));
+                //templateIntro.Fields.Add(new TemplateField("infoDate", txtIntroTitle.Text));
+                //templateIntro.Fields.Add(new TemplateField("infoLocation", txtEventLocation.Text));
+                //templateIntro.Fields.Add(new TemplateField("team1Logo", logo1Path.ToString()));
+                //templateIntro.Fields.Add(new TemplateField("team2Logo", logo2Path.ToString()));
+                //templateIntro.Fields.Add(new TemplateField("website", txtVolleyWebsite.Text));
+
+
+                //ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateIntro.TemplateDataText(), cmbTemplateIntro.Text, layerPresentation.ToString()));
+                SportsController.startRugbyScoreboard(cmbRugbyIntroTemplate.Text, layerPresentation, new Dictionary<string, string>());
+
+
+
+
+                btnStartStopRugbyIntro.Tag = "1";
+                if (chkRugbyIntroAutoHide.Checked)
+                {
+                    tmrIntro.Interval = ((int)nudRugbyIntroAutoHideSeconds.Value) * 1000;
+                    tmrIntro.Enabled = true;
+                    tmrIntro.Start();
+                }
+            }
+            else
+            {
+                SportsController.stopRugbyScoreboard(layerPresentation);
+
+                btnStartStopRugbyIntro.Tag = "0";
+                if (chkRugbyIntroAutoHide.Checked)
+                {
+                    tmrIntro.Stop();
+                    tmrIntro.Enabled = false;
+                }
+            }
+        }
+
 
         private void startTwitter()
         {
@@ -4979,7 +5017,12 @@ namespace HandballCliente
         {
             updateTeamsScore();
         }
-        # endregion
 
+        private void btnStartStopRugbyIntro_Click(object sender, EventArgs e)
+        {
+            showHideRugbyIntro();
+        }
+
+        # endregion
     }
 }

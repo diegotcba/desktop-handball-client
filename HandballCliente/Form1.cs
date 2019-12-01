@@ -112,6 +112,10 @@ namespace HandballCliente
             cmbLogoFile.Items.Clear();
             cmbTemplateWeatherForecast.Items.Clear();
             cmbRugbyIntroTemplate.Items.Clear();
+            cmbTemplateRugbyLineup.Items.Clear();
+            cmbTemplateRugbyResult.Items.Clear();
+            cmbTemplateRugbyScoreboard.Items.Clear();
+            cmbTemplateRugbyOfficials.Items.Clear();
         }
 
         private void clearPresentation()
@@ -142,12 +146,18 @@ namespace HandballCliente
             txtServerPort.Text = AppController.getInstance().getCasparCgServerPort().ToString();
             btnConnectDisconnect.Text = AppController.getInstance().isConnectedToCasparCgServer() ? "Desconectar" : "Conectar";
             btnClearChannel.Enabled = AppController.getInstance().isConnectedToCasparCgServer();
+
             btnShowHideIntro.Tag = "0";
             btnShowHideHomeTeam.Tag = "0";
             btnShowHideGuestTeam.Tag = "0";
             btnShowHomeAndGuestTeam.Tag = "0";
             btnShowHideResult.Tag = "0";
             btnStartStopRugbyIntro.Tag = "0";
+            btnStartStopRugbyLineup.Tag = "0";
+            btnStartStopRugbyResult.Tag = "0";
+            btnStartStopRugbyOfficials.Tag = "0";
+
+
             lockUnlockTemplates();
             radHomeTeamPlayers.Checked = true;
 
@@ -1315,10 +1325,7 @@ namespace HandballCliente
 
 
                 //ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateIntro.TemplateDataText(), cmbTemplateIntro.Text, layerPresentation.ToString()));
-                SportsController.startRugbyScoreboard(cmbRugbyIntroTemplate.Text, layerPresentation, new Dictionary<string, string>());
-
-
-
+                SportsController.startRugbyIntro(cmbRugbyIntroTemplate.Text, layerPresentation, new Dictionary<string, string>());
 
                 btnStartStopRugbyIntro.Tag = "1";
                 if (chkRugbyIntroAutoHide.Checked)
@@ -1330,7 +1337,7 @@ namespace HandballCliente
             }
             else
             {
-                SportsController.stopRugbyScoreboard(layerPresentation);
+                SportsController.stopRugbyIntro(layerPresentation);
 
                 btnStartStopRugbyIntro.Tag = "0";
                 if (chkRugbyIntroAutoHide.Checked)
@@ -1341,6 +1348,109 @@ namespace HandballCliente
             }
         }
 
+
+        private void showHideRugbyLineup()
+        {
+            if (!btnStartStopRugbyLineup.Tag.ToString().Equals("1"))
+            {
+                //Template templateIntro = new Template();
+
+                //Uri logo1Path = new Uri(AppController.getInstance().getFullMediaPath() + cmbHomeTeamLogo.Text.ToLower() + ".png");
+                //Uri logo2Path = new Uri(AppController.getInstance().getFullMediaPath() + cmbGuestTeamLogo.Text.ToLower() + ".png");
+
+                //string t1 = (txtHomeTeamName.Text.Contains(",") ? txtHomeTeamName.Text.Split(',')[0].ToUpper() + "\n" + txtHomeTeamName.Text.Split(',')[1] : txtHomeTeamName.Text);
+                //string t2 = (txtGuestTeamName.Text.Contains(",") ? txtGuestTeamName.Text.Split(',')[0].ToUpper() + "\n" + txtGuestTeamName.Text.Split(',')[1] : txtGuestTeamName.Text);
+
+                //templateIntro.Fields.Add(new TemplateField("team1Name", t1));
+                //templateIntro.Fields.Add(new TemplateField("team2Name", t2));
+
+                SportsController.startRugbyLineup(cmbTemplateRugbyLineup.Text, layerPresentation, new Dictionary<string, string>());
+
+                btnStartStopRugbyLineup.Tag = "1";
+                if (chkRugbyLineupAutoHide.Checked)
+                {
+                    tmrIntro.Interval = ((int)nudRugbyLineupAutoHideSeconds.Value) * 1000;
+                    tmrIntro.Enabled = true;
+                    tmrIntro.Start();
+                }
+            }
+            else
+            {
+                SportsController.stopRugbyLineup(layerPresentation);
+
+                btnStartStopRugbyLineup.Tag = "0";
+                if (chkRugbyLineupAutoHide.Checked)
+                {
+                    tmrIntro.Stop();
+                    tmrIntro.Enabled = false;
+                }
+            }
+        }
+
+        private void showHideRugbyResult()
+        {
+            if (!btnStartStopRugbyResult.Tag.ToString().Equals("1"))
+            {
+                //Template templateIntro = new Template();
+
+                //Uri logo1Path = new Uri(AppController.getInstance().getFullMediaPath() + cmbHomeTeamLogo.Text.ToLower() + ".png");
+                //Uri logo2Path = new Uri(AppController.getInstance().getFullMediaPath() + cmbGuestTeamLogo.Text.ToLower() + ".png");
+
+                //string t1 = (txtHomeTeamName.Text.Contains(",") ? txtHomeTeamName.Text.Split(',')[0].ToUpper() + "\n" + txtHomeTeamName.Text.Split(',')[1] : txtHomeTeamName.Text);
+                //string t2 = (txtGuestTeamName.Text.Contains(",") ? txtGuestTeamName.Text.Split(',')[0].ToUpper() + "\n" + txtGuestTeamName.Text.Split(',')[1] : txtGuestTeamName.Text);
+
+                //templateIntro.Fields.Add(new TemplateField("team1Name", t1));
+                //templateIntro.Fields.Add(new TemplateField("team2Name", t2));
+
+                SportsController.startRugbyResult(cmbTemplateRugbyResult.Text, layerPresentation, new Dictionary<string, string>());
+
+                btnStartStopRugbyResult.Tag = "1";
+                if (chkRugbyResultAutoHide.Checked)
+                {
+                    tmrIntro.Interval = ((int)nudRugbyResultAutoHideSeconds.Value) * 1000;
+                    tmrIntro.Enabled = true;
+                    tmrIntro.Start();
+                }
+            }
+            else
+            {
+                SportsController.stopRugbyResult(layerPresentation);
+
+                btnStartStopRugbyResult.Tag = "0";
+                if (chkRugbyResultAutoHide.Checked)
+                {
+                    tmrIntro.Stop();
+                    tmrIntro.Enabled = false;
+                }
+            }
+        }
+
+        private void showHideRugbyOfficials()
+        {
+            if (!btnStartStopRugbyOfficials.Tag.ToString().Equals("1"))
+            {
+                SportsController.startRugbyOfficials(cmbTemplateRugbyOfficials.Text, layerPresentation, new Dictionary<string, string>());
+
+                btnStartStopRugbyOfficials.Tag = "1";
+                if (chkRugbyOfficialsAutoHide.Checked)
+                {
+                    tmrIntro.Interval = ((int)nudRugbyResultAutoHideSeconds.Value) * 1000;
+                    tmrIntro.Enabled = true;
+                    tmrIntro.Start();
+                }
+            }
+            else
+            {
+                SportsController.stopRugbyOfficials(layerPresentation);
+
+                btnStartStopRugbyOfficials.Tag = "0";
+                if (chkRugbyOfficialsAutoHide.Checked)
+                {
+                    tmrIntro.Stop();
+                    tmrIntro.Enabled = false;
+                }
+            }
+        }
 
         private void startTwitter()
         {
@@ -5024,5 +5134,20 @@ namespace HandballCliente
         }
 
         # endregion
+
+        private void btnStartStopRugbyLineup_Click(object sender, EventArgs e)
+        {
+            showHideRugbyLineup();
+        }
+
+        private void btnStartStopRugbyResult_Click(object sender, EventArgs e)
+        {
+            showHideRugbyResult();
+        }
+
+        private void btnStartStopRugbyOfficials_Click(object sender, EventArgs e)
+        {
+            showHideRugbyOfficials();
+        }
     }
 }

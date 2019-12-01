@@ -67,17 +67,17 @@ namespace HandballCliente.Controllers
 
         public static void showHideScoreboard(int layer)
         {
-            AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "clockShowHide", layer.ToString()));
+            AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \\\"{0}\\\"", "clockShowHide", layer.ToString()));
         }
 
         public static void startScoreboardClock(int layer)
         {
-            AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "gameTimeStartStop", layer.ToString()));
+            AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \\\"{0}\\\"", "gameTimeStartStop", layer.ToString()));
         }
 
         public static void stopScoreboardClock(int layer)
         {
-            AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "gameTimeStartStop", layer.ToString()));
+            AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \\\"{0}\\\"", "gameTimeStartStop", layer.ToString()));
         }
 
         public static void resetScoreboardClock(int layer, Dictionary<string, string> fieldsToUpdate)
@@ -130,9 +130,9 @@ namespace HandballCliente.Controllers
         }
 
 
-        public static void startRugbyLineup()
+        public static void startRugbyLineup(string templateName, int layer, Dictionary<string, string> fieldsAndValues)
         {
-            //string af = "\\" + Microsoft.VisualBasic.Strings.ChrW(0x22);
+            //string af = "\\\\" + Microsoft.VisualBasic.Strings.ChrW(0x22);
 
             //String xml = "<templateData>";
             //xml += "<componentData id=" + af + "sideTitle" + af + ">";
@@ -150,6 +150,15 @@ namespace HandballCliente.Controllers
             //xml += "</componentData>";
             //xml += "</templateData>";
 
+            String xml = "<templateData><componentData id=\\\"teamName\\\"><data id=\\\"text\\\" value=\\\"Tala Rugby Club\\\"/></componentData><componentData id=\\\"headCoachName\\\"><data id=\\\"text\\\" value=\\\"Julio Garcia\\\"/></componentData><componentData id=\\\"leagueLogo\\\"><data id=\\\"text\\\" value=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/logo-rojo-blanco.png\\\"/></componentData><componentData id=\\\"teamLogo\\\"><data id=\\\"text\\\" value=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/logo-rojo-blanco.png\\\"/></componentData><componentData id=\\\"player-1\\\"><data id=\\\"text\\\" value=\\\"Brada\\\" number=\\\"1\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P01.png\\\" /></componentData><componentData id=\\\"player-2\\\"><data id=\\\"text\\\" value=\\\"Escuti\\\" number=\\\"2\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P02.png\\\" /></componentData><componentData id=\\\"player-3\\\"><data id=\\\"text\\\" value=\\\"Brada\\\" number=\\\"1\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P01.png\\\" /></componentData><componentData id=\\\"player-4\\\"><data id=\\\"text\\\" value=\\\"Escuti\\\" number=\\\"2\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P02.png\\\" /></componentData><componentData id=\\\"player-5\\\"><data id=\\\"text\\\" value=\\\"Brada\\\" number=\\\"1\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P01.png\\\" /></componentData><componentData id=\\\"player-6\\\"><data id=\\\"text\\\" value=\\\"Escuti\\\" number=\\\"2\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P02.png\\\" /></componentData><componentData id=\\\"player-7\\\"><data id=\\\"text\\\" value=\\\"Brada\\\" number=\\\"1\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P01.png\\\" /></componentData><componentData id=\\\"player-8\\\"><data id=\\\"text\\\" value=\\\"Escuti\\\" number=\\\"2\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P02.png\\\" /></componentData><componentData id=\\\"player-9\\\"><data id=\\\"text\\\" value=\\\"Brada\\\" number=\\\"1\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P01.png\\\" /></componentData><componentData id=\\\"player-10\\\"><data id=\\\"text\\\" value=\\\"Escuti\\\" number=\\\"2\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P02.png\\\" /></componentData><componentData id=\\\"player-11\\\"><data id=\\\"text\\\" value=\\\"Brada\\\" number=\\\"1\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P01.png\\\" /></componentData><componentData id=\\\"player-12\\\"><data id=\\\"text\\\" value=\\\"Escuti\\\" number=\\\"2\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P02.png\\\" /></componentData><componentData id=\\\"player-13\\\"><data id=\\\"text\\\" value=\\\"Brada\\\" number=\\\"1\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P01.png\\\" /></componentData><componentData id=\\\"player-14\\\"><data id=\\\"text\\\" value=\\\"Brada\\\" number=\\\"1\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P02.png\\\" /></componentData><componentData id=\\\"player-15\\\"><data id=\\\"text\\\" value=\\\"Brada\\\" number=\\\"1\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P01.png\\\" /></componentData></templateData>"
+            + "<componentData id=\\\"player-1\\\"><data id=\\\"text\\\" value=\\\"Brada\\\" number=\\\"1\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P01.png\\\" /></componentData><componentData id=\\\"player-2\\\"><data id=\\\"text\\\" value=\\\"Escuti\\\" number=\\\"2\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P02.png\\\" /></componentData><componentData id=\\\"player-3\\\"><data id=\\\"text\\\" value=\\\"Brada\\\" number=\\\"1\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P01.png\\\" /></componentData><componentData id=\\\"player-4\\\"><data id=\\\"text\\\" value=\\\"Escuti\\\" number=\\\"2\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P02.png\\\" /></componentData><componentData id=\\\"player-5\\\"><data id=\\\"text\\\" value=\\\"Brada\\\" number=\\\"1\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P01.png\\\" /></componentData><componentData id=\\\"player-6\\\"><data id=\\\"text\\\" value=\\\"Escuti\\\" number=\\\"2\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P02.png\\\" /></componentData><componentData id=\\\"player-7\\\"><data id=\\\"text\\\" value=\\\"Brada\\\" number=\\\"1\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P01.png\\\" /></componentData><componentData id=\\\"player-8\\\"><data id=\\\"text\\\" value=\\\"Escuti\\\" number=\\\"2\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P02.png\\\" /></componentData><componentData id=\\\"player-9\\\"><data id=\\\"text\\\" value=\\\"Brada\\\" number=\\\"1\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P01.png\\\" /></componentData><componentData id=\\\"player-10\\\"><data id=\\\"text\\\" value=\\\"Escuti\\\" number=\\\"2\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P02.png\\\" /></componentData><componentData id=\\\"player-11\\\"><data id=\\\"text\\\" value=\\\"Brada\\\" number=\\\"1\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P01.png\\\" /></componentData><componentData id=\\\"player-12\\\"><data id=\\\"text\\\" value=\\\"Escuti\\\" number=\\\"2\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P02.png\\\" /></componentData><componentData id=\\\"player-13\\\"><data id=\\\"text\\\" value=\\\"Brada\\\" number=\\\"1\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P01.png\\\" /></componentData><componentData id=\\\"player-14\\\"><data id=\\\"text\\\" value=\\\"Brada\\\" number=\\\"1\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P02.png\\\" /></componentData><componentData id=\\\"player-15\\\"><data id=\\\"text\\\" value=\\\"Brada\\\" number=\\\"1\\\" photoPath=\\\"file:///C:/CasparCG Server 2.0.6/Server/templates/Rugby/P01.png\\\" /></componentData>"
+            + "</templateData>";
+
+            //xml = xml.Replace("\\\\\"", "\\\\" + Microsoft.VisualBasic.Strings.ChrW(0x22));
+
+            System.Diagnostics.Debug.WriteLine(xml);
+
+            AppController.getInstance().cgAdd(templateName, layer, xml);
         }
 
         public static void stopRugbyLineup(int layer)
@@ -249,12 +258,12 @@ namespace HandballCliente.Controllers
 
         public static void startRugbyScoreboardClock(int layer)
         {
-            AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "gameTimeStartStop", layer.ToString()));
+            AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \\\"{0}\\\"", "gameTimeStartStop", layer.ToString()));
         }
 
         public static void stopRugbyScoreboardClock(int layer)
         {
-            AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "gameTimeStartStop", layer.ToString()));
+            AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \\\"{0}\\\"", "gameTimeStartStop", layer.ToString()));
         }
 
         public static void updateRugbyScoreboardScores(int layer, Dictionary<string, string> fieldsToUpdate)

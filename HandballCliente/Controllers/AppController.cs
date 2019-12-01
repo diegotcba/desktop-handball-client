@@ -153,9 +153,17 @@ namespace HandballCliente.Controllers
             return casparCgServer.ServerPaths;
         }
 
+        public String getFullMediaPath()
+        {
+            return casparCgServer.ServerPaths.InitialPath + casparCgServer.ServerPaths.MediaPath;
+        }
+
         public ReturnInfo executeCasparCgServer(String command)
         {
-            return casparCgServer.Execute(command);
+            ReturnInfo ri = casparCgServer.Execute(command);
+            System.Diagnostics.Debug.WriteLine(ri.Message);
+
+            return ri;
         }
 
         public void clearChannel()
@@ -168,8 +176,37 @@ namespace HandballCliente.Controllers
 
         public void setBackgroundColor(Color bgColor, int layer)
         {
-            String htmlColor = String.Format("#{0:x2}{1:x2}{2:x2}", bgColor.R, bgColor.G, bgColor.B);
-            AppController.getInstance().executeCasparCgServer(String.Format("PLAY 1-{2} {0}{1}{0}", (char)0x22, htmlColor, layer.ToString()));
+            if (isConnectedToCasparCgServer())
+            {
+                String htmlColor = String.Format("#{0:x2}{1:x2}{2:x2}", bgColor.R, bgColor.G, bgColor.B);
+                executeCasparCgServer(String.Format("PLAY 1-{2} {0}{1}{0}", (char)0x22, htmlColor, layer.ToString()));
+            }
+        }
+
+        public void cgAdd()
+        {
+            if (isConnectedToCasparCgServer())
+            {
+                
+            }
+
+        }
+
+        public void cgStop(int layer)
+        {
+            if (isConnectedToCasparCgServer())
+            {
+                executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layer.ToString()));
+            }
+        }
+
+        public void cgUpdate()
+        {
+
+        }
+
+        public void cgInvoke(int layer)
+        {
 
         }
     }

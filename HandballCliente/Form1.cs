@@ -502,24 +502,19 @@ namespace HandballCliente
         {
             if (checkDataScoreboard())
             {
-                if (AppController.getInstance().isConnectedToCasparCgServer())
+                Template templateScoreboard = new Template();
+                Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbFederationLogo.Text.ToLower() + ".png");
+
+                Dictionary<string, string> fieldsValues = new Dictionary<string, string>()
                 {
-                    Template templateScoreboard = new Template();
-                    Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                    {"team1Name", txtNombreScoreLocal.Text},{"team2Name", txtNombreScoreVisitante.Text},
+                    {"team1Score", nudHomeTeamScore.Value.ToString()},{"team2Score", nudGuestTeamScore.Value.ToString()},
+                    {"gameTime", nudClockMinutes.Value.ToString() + ":" + nudClockSeconds.Value.ToString()},
+                    {"halfNum", cmbHalf.Text},{"logoScoreboard", logoPath.ToString()}
+                };
 
-                    templateScoreboard.Fields.Add(new TemplateField("team1Name", txtNombreScoreLocal.Text));
-                    templateScoreboard.Fields.Add(new TemplateField("team2Name", txtNombreScoreVisitante.Text));
-                    templateScoreboard.Fields.Add(new TemplateField("team1Score", nudHomeTeamScore.Value.ToString()));
-                    templateScoreboard.Fields.Add(new TemplateField("team2Score", nudGuestTeamScore.Value.ToString()));
-                    templateScoreboard.Fields.Add(new TemplateField("gameTime", nudClockMinutes.Value.ToString() + ":" + nudClockSeconds.Value.ToString()));
-                    templateScoreboard.Fields.Add(new TemplateField("halfNum", cmbHalf.Text));
-                    templateScoreboard.Fields.Add(new TemplateField("logoScoreboard", logoPath.ToString()));
-
-                    //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
-                    ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateScoreboard.TemplateDataText(), cmbTemplateScoreboard.Text, layerScoreboard.ToString()));
-                    System.Diagnostics.Debug.WriteLine(ri.Message);
-                    btnShowHideIntro.Tag = "1";
-                }
+                SportsController.startScoreboard(cmbTemplateScoreboard.Text, layerScoreboard, fieldsValues);
+                btnShowHideIntro.Tag = "1";
             }
             else
             {
@@ -529,47 +524,50 @@ namespace HandballCliente
 
         private void stopScoreboard()
         {
-            AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerScoreboard.ToString()));
+            SportsController.stopScoreboard(layerScoreboard);
         }
 
         private void showHideScoreboard()
         {
             if (AppController.getInstance().isConnectedToCasparCgServer())
             {
-                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "clockShowHide", layerScoreboard.ToString()));
+                SportsController.showHideScoreboard(layerScoreboard);
             }
         }
 
         private void startScoreboardClock()
         {
-            if (AppController.getInstance().isConnectedToCasparCgServer())
+            SportsController.startScoreboardClock(layerScoreboard);
+            if (chkAutoShowOnClockStart.Checked)
             {
-                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "gameTimeStartStop", layerScoreboard.ToString()));
-                if (chkAutoShowOnClockStart.Checked)
-                {
-                    showHideScoreboard();
-                }
-
+                showHideScoreboard();
             }
         }
 
         private void stopScoreboardClock()
         {
-            if (AppController.getInstance().isConnectedToCasparCgServer())
-            {
-                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{1} INVOKE 0 \"{0}\"", "gameTimeStartStop", layerScoreboard.ToString()));
-            }
+            SportsController.stopScoreboardClock(layerScoreboard);
         }
 
         private void resetScoreboardClock()
         {
-            Template templateUpdateScore = new Template();
+            Dictionary<string, string> fieldsValues = new Dictionary<string, string>()
+            {
+                {"gameTime", nudClockMinutes.Value.ToString() + ":" + nudClockSeconds.Value.ToString()}
+            };
 
-            templateUpdateScore.Fields.Add(new TemplateField("gameTime", nudClockMinutes.Value.ToString() + ":" + nudClockSeconds.Value.ToString()));
+            SportsController.resetScoreboardClock(layerScoreboard, fieldsValues);
+        }
 
-            //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
-            ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateUpdateScore.TemplateDataText(), layerScoreboard.ToString()));
-            System.Diagnostics.Debug.WriteLine(ri.Message);
+        private void updateTeamsScore()
+        {
+            Dictionary<string, string> fieldsValues = new Dictionary<string, string>()
+            {
+                {"team1Score", nudHomeTeamScore.Value.ToString()},{"team2Score", nudGuestTeamScore.Value.ToString()}
+            };
+
+            SportsController.updateScoreboardScores(layerScoreboard, fieldsValues);
+
         }
 
         public void addOneScoreTeam1()
@@ -582,27 +580,12 @@ namespace HandballCliente
             nudGuestTeamScore.UpButton();
         }
 
-        private void updateTeamsScore()
-        {
-            if (AppController.getInstance().isConnectedToCasparCgServer())
-            {
-                Template templateUpdateScore = new Template();
-
-                templateUpdateScore.Fields.Add(new TemplateField("team1Score", nudHomeTeamScore.Value.ToString()));
-                templateUpdateScore.Fields.Add(new TemplateField("team2Score", nudGuestTeamScore.Value.ToString()));
-
-                //string command = String.Format("CG 1 ADD 0 {0}{2}{0} 1 {0}{1}{0}", "\"", templateIntro.TemplateDataText(), cmbTemplatePresentacion.Text.ToString());
-                ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{2} UPDATE 0 {0}{1}{0}", (char)0x22, templateUpdateScore.TemplateDataText(), layerScoreboard.ToString()));
-                System.Diagnostics.Debug.WriteLine(ri.Message);
-            }
-        }
-
         private void startDynamicLogo()
         {
             if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateDynamicLogo = new Template();
-                Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+                Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbLogoFile.Text.ToLower() + ".png");
 
                 templateDynamicLogo.Fields.Add(new TemplateField("positionX", nudDynamicLogoPosX.Value.ToString()));
                 templateDynamicLogo.Fields.Add(new TemplateField("positionY", nudDynamicLogoPosY.Value.ToString()));
@@ -629,7 +612,7 @@ namespace HandballCliente
             if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateDynamicInfo = new Template();
-                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbLogoFile.Text.ToLower() + ".png");
 
                 if (chkDynamicInfoPosition.Checked)
                 {
@@ -664,8 +647,8 @@ namespace HandballCliente
             if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateDynamicLogo = new Template();
-                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbElectionsC1Picture.Text.ToLower() + ".png");
-                Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbElectionsC1Picture.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbElectionsC1Picture.Text.ToLower() + ".png");
+                Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbElectionsC1Picture.Text.ToLower() + ".png");
 
                 templateDynamicLogo.Fields.Add(new TemplateField("info", "TOTAL DE MESAS ESCRUTADAS:"));
                 templateDynamicLogo.Fields.Add(new TemplateField("total", "66"));
@@ -723,7 +706,7 @@ namespace HandballCliente
             if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateCountdown = new Template();
-                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbFederationLogo.Text.ToLower() + ".png");
 
                 templateCountdown.Fields.Add(new TemplateField("countdownNumber", nudGameshowCounterSeconds.Value.ToString()));
                 templateCountdown.Fields.Add(new TemplateField("countdownMilisecondsRefresh", nudGameshowRefreshMiliseconds.Value.ToString()));
@@ -765,7 +748,7 @@ namespace HandballCliente
             if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateCountdown = new Template();
-                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbFederationLogo.Text.ToLower() + ".png");
 
                 templateCountdown.Fields.Add(new TemplateField("countdownNumber", nudGameshowCounterSeconds.Value.ToString()));
                 //templateCountdown.Fields.Add(new TemplateField("countdownMilisecondsRefresh", nudGameshowRefreshMiliseconds.Value.ToString()));
@@ -809,7 +792,7 @@ namespace HandballCliente
                 if (AppController.getInstance().isConnectedToCasparCgServer())
                 {
                     Template templateCountdown = new Template();
-                    //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                    //Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbFederationLogo.Text.ToLower() + ".png");
 
                     templateCountdown.Fields.Add(new TemplateField("questionText", txtGameshowQuestion.Text));
                     templateCountdown.Fields.Add(new TemplateField("answer1Text", lvwGameshowQuestionAnswers.Items[0].SubItems[1].Text));
@@ -859,7 +842,7 @@ namespace HandballCliente
                 if (AppController.getInstance().isConnectedToCasparCgServer())
                 {
                     Template templateFindCard = new Template();
-                    String basePath = AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath;
+                    String basePath = AppController.getInstance().getFullMediaPath();
                     Uri frontPicPath = new Uri(basePath + GameShowController.getFindCardItemPictureByType(CGClientConstants.FindCardItemType.FRONT_CARD) + ".png");
                     Uri backPicPath = new Uri(basePath + GameShowController.getFindCardItemPictureByType(CGClientConstants.FindCardItemType.LOOSER_CARD) + ".png");
                     Uri winPicPath = new Uri(basePath + GameShowController.getFindCardItemPictureByType(CGClientConstants.FindCardItemType.WINNER_CARD) + ".png");
@@ -941,7 +924,7 @@ namespace HandballCliente
                 if (AppController.getInstance().isConnectedToCasparCgServer())
                 {
                     Template templateCountdown = new Template();
-                    //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                    //Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbFederationLogo.Text.ToLower() + ".png");
 
                     if (WeatherController.getWeatherForecasts().Count >= 1)
                     {
@@ -981,8 +964,8 @@ namespace HandballCliente
                 {
                     Template templateIntro = new Template();
 
-                    Uri logo1Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
-                    Uri logo2Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
+                    Uri logo1Path = new Uri(AppController.getInstance().getFullMediaPath() + cmbHomeTeamLogo.Text.ToLower() + ".png");
+                    Uri logo2Path = new Uri(AppController.getInstance().getFullMediaPath() + cmbGuestTeamLogo.Text.ToLower() + ".png");
 
                     string t1 = (txtHomeTeamName.Text.Contains(",") ? txtHomeTeamName.Text.Split(',')[0].ToUpper() + "\n" + txtHomeTeamName.Text.Split(',')[1] : txtHomeTeamName.Text);
                     string t2 = (txtGuestTeamName.Text.Contains(",") ? txtGuestTeamName.Text.Split(',')[0].ToUpper() + "\n" + txtGuestTeamName.Text.Split(',')[1] : txtGuestTeamName.Text);
@@ -1035,44 +1018,37 @@ namespace HandballCliente
 
         private void showHideTeamsheet(Button btnSource, TextBox txtTeam, ListView lvwPlayers, TextBox txtCoach, ComboBox cmbLogo, CheckBox chkAutoHide, NumericUpDown nudSeconds, Timer timer)
         {
-            if (AppController.getInstance().isConnectedToCasparCgServer())
+            if (!btnSource.Tag.ToString().Equals("1"))
             {
-                if (!btnSource.Tag.ToString().Equals("1"))
+                String players;
+                players = getPlayerList(lvwPlayers);
+
+                Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbLogo.Text.ToLower() + ".png");
+
+                Dictionary<string, string> teamValues = new Dictionary<string, string>()
                 {
-                    String players;
-                    players = getPlayerList(lvwPlayers);
+                    {"teamName", txtTeam.Text},{"teamPlayers", players},{"teamCoach", "Entrenador: " + txtCoach.Text},{"teamLogo", logoPath.ToString()},
+                    {"fontSizePlayers", cmbPlayersFontSize.Text},{"fontLineSpacingPlayers", cmbPlayersFontLineSpacing.Text},{"fontLetterSpacingPlayers", cmbPlayersFontLetterSpacing.Text}
+                };
 
-                    Template templateIntro = new Template();
 
-                    Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogo.Text.ToLower() + ".png");
-
-                    templateIntro.Fields.Add(new TemplateField("teamName", txtTeam.Text));
-                    templateIntro.Fields.Add(new TemplateField("teamPlayers", players));
-                    templateIntro.Fields.Add(new TemplateField("teamCoach", "Entrenador: " + txtCoach.Text));
-                    templateIntro.Fields.Add(new TemplateField("teamLogo", logoPath.ToString()));
-                    templateIntro.Fields.Add(new TemplateField("fontSizePlayers", cmbPlayersFontSize.Text));
-                    templateIntro.Fields.Add(new TemplateField("fontLineSpacingPlayers", cmbPlayersFontLineSpacing.Text));
-                    templateIntro.Fields.Add(new TemplateField("fontLetterSpacingPlayers", cmbPlayersFontLetterSpacing.Text));
-
-                    ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateIntro.TemplateDataText(), cmbTemplateTeam.Text, layerTeams.ToString()));
-                    System.Diagnostics.Debug.WriteLine(ri.Message);
-                    btnSource.Tag = "1";
-                    if (chkAutoHide.Checked)
-                    {
-                        timer.Interval = ((int)nudSeconds.Value) * 1000;
-                        timer.Enabled = true;
-                        timer.Start();
-                    }
+                SportsController.startTeamsheet(cmbTemplateTeam.Text, layerTeams, teamValues);
+                btnSource.Tag = "1";
+                if (chkAutoHide.Checked)
+                {
+                    timer.Interval = ((int)nudSeconds.Value) * 1000;
+                    timer.Enabled = true;
+                    timer.Start();
                 }
-                else
+            }
+            else
+            {
+                SportsController.stopTeamsheet(layerTeams);
+                btnSource.Tag = "0";
+                if (chkAutoHide.Checked)
                 {
-                    AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerTeams.ToString()));
-                    btnSource.Tag = "0";
-                    if (chkAutoHide.Checked)
-                    {
-                        timer.Stop();
-                        timer.Enabled = false;
-                    }
+                    timer.Stop();
+                    timer.Enabled = false;
                 }
             }
         }
@@ -1090,7 +1066,7 @@ namespace HandballCliente
 
                         Template templateIntro = new Template();
 
-                        Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
+                        Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbHomeTeamLogo.Text.ToLower() + ".png");
 
                         templateIntro.Fields.Add(new TemplateField("teamName", txtHomeTeamName.Text));
                         templateIntro.Fields.Add(new TemplateField("teamPlayers", players));
@@ -1120,7 +1096,7 @@ namespace HandballCliente
 
                         templateIntro = new Template();
 
-                        logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
+                        logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbGuestTeamLogo.Text.ToLower() + ".png");
 
                         templateIntro.Fields.Add(new TemplateField("teamName", txtGuestTeamName.Text));
                         templateIntro.Fields.Add(new TemplateField("teamPlayers", players));
@@ -1151,44 +1127,51 @@ namespace HandballCliente
 
         private void showHideResult()
         {
-            if (AppController.getInstance().isConnectedToCasparCgServer())
+            if (!btnShowHideResult.Tag.ToString().Equals("1"))
             {
-                if (!btnShowHideResult.Tag.ToString().Equals("1"))
+                startTmplResult();
+
+                btnShowHideResult.Tag = "1";
+                if (chkAutoHideResult.Checked)
                 {
-                    Template templateResult = new Template();
-
-                    Uri logo1Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
-                    Uri logo2Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
-
-                    templateResult.Fields.Add(new TemplateField("team1Name", txtHomeTeamName.Text));
-                    templateResult.Fields.Add(new TemplateField("team2Name", txtGuestTeamName.Text));
-                    templateResult.Fields.Add(new TemplateField("team1Score", nudHomeTeamScore.Value.ToString()));
-                    templateResult.Fields.Add(new TemplateField("team2Score", nudGuestTeamScore.Value.ToString()));
-                    templateResult.Fields.Add(new TemplateField("team1Logo", logo1Path.ToString()));
-                    templateResult.Fields.Add(new TemplateField("team2Logo", logo2Path.ToString()));
-                    templateResult.Fields.Add(new TemplateField("timeResult", ""));
-
-                    ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templateResult.TemplateDataText(), cmbTemplateResult.Text, layerResult.ToString()));
-                    System.Diagnostics.Debug.WriteLine(ri.Message);
-                    btnShowHideResult.Tag = "1";
-                    if (chkAutoHideResult.Checked)
-                    {
-                        tmrResult.Interval = ((int)nudAutoHideResultSeconds.Value) * 1000;
-                        tmrResult.Enabled = true;
-                        tmrResult.Start();
-                    }
-                }
-                else
-                {
-                    AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerResult.ToString()));
-                    btnShowHideResult.Tag = "0";
-                    if (chkAutoHideResult.Checked)
-                    {
-                        tmrResult.Stop();
-                        tmrResult.Enabled = false;
-                    }
+                    tmrResult.Interval = ((int)nudAutoHideResultSeconds.Value) * 1000;
+                    tmrResult.Enabled = true;
+                    tmrResult.Start();
                 }
             }
+            else
+            {
+                stopTmplResult();
+
+                btnShowHideResult.Tag = "0";
+                if (chkAutoHideResult.Checked)
+                {
+                    tmrResult.Stop();
+                    tmrResult.Enabled = false;
+                }
+            }
+        }
+
+        private void startTmplResult()
+        {
+            Uri logo1Path = new Uri(AppController.getInstance().getFullMediaPath() + cmbHomeTeamLogo.Text.ToLower() + ".png");
+            Uri logo2Path = new Uri(AppController.getInstance().getFullMediaPath() + cmbGuestTeamLogo.Text.ToLower() + ".png");
+
+            Dictionary<string, string> templateResultValues = new Dictionary<string, string>();
+
+            templateResultValues = new Dictionary<string, string>(){
+                {"team1Name", txtHomeTeamName.Text},{"team2Name", txtGuestTeamName.Text},
+                {"team1Score", nudHomeTeamScore.Value.ToString()},{"team2Score", nudGuestTeamScore.Value.ToString()},
+                {"team1Logo", logo1Path.ToString()},{"team2Logo", logo2Path.ToString()},
+                {"timeResult", String.Empty}
+            };
+
+            SportsController.startResult(cmbTemplateResult.Text, layerResult, templateResultValues);
+        }
+
+        private void stopTmplResult()
+        {
+            SportsController.stopResult(layerResult);
         }
 
         private void startLowerThird()
@@ -1199,7 +1182,7 @@ namespace HandballCliente
                 {
                     Template templateLowerThird = new Template();
 
-                    Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + ((radHomeTeamPlayers.Checked) ? cmbHomeTeamLogo.Text.ToLower() : cmbGuestTeamLogo.Text.ToLower()) + ".png");
+                    Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + ((radHomeTeamPlayers.Checked) ? cmbHomeTeamLogo.Text.ToLower() : cmbGuestTeamLogo.Text.ToLower()) + ".png");
 
                     templateLowerThird.Fields.Add(new TemplateField("teamPlayer", txtLTTitle.Text));
                     templateLowerThird.Fields.Add(new TemplateField("teamName", txtLTSubtitle.Text));
@@ -1274,35 +1257,26 @@ namespace HandballCliente
         {
             if (cmbTemplatePositions.Text != "")
             {
-                if (AppController.getInstance().isConnectedToCasparCgServer())
-                {
-                    Template templatePositions = new Template();
+                    Dictionary<string, string> positionsValues;
 
-                    Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                    Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbFederationLogo.Text.ToLower() + ".png");
 
-                    templatePositions.Fields.Add(new TemplateField("logo", logoPath.AbsoluteUri));
-                    templatePositions.Fields.Add(new TemplateField("title", txtPositionsTitle.Text));
-                    templatePositions.Fields.Add(new TemplateField("subtitle", txtPositionsSubtitle.Text));
-                    templatePositions.Fields.Add(new TemplateField("line01", "#;Equipo;Pts;PJ;PG;PE;PP;GF;GC;Dif"));
-                    templatePositions.Fields.Add(new TemplateField("line02", getPositionCVS(1)));
-                    templatePositions.Fields.Add(new TemplateField("line03", getPositionCVS(2)));
-                    templatePositions.Fields.Add(new TemplateField("line04", getPositionCVS(3)));
-                    templatePositions.Fields.Add(new TemplateField("line05", getPositionCVS(4)));
-                    templatePositions.Fields.Add(new TemplateField("line06", getPositionCVS(5)));
-                    templatePositions.Fields.Add(new TemplateField("line07", getPositionCVS(6)));
-                    templatePositions.Fields.Add(new TemplateField("line08", getPositionCVS(7)));
-                    templatePositions.Fields.Add(new TemplateField("line09", getPositionCVS(8)));
-                    templatePositions.Fields.Add(new TemplateField("line10", getPositionCVS(9)));
+                    positionsValues = new Dictionary<string, string>() 
+                    {
+                        {"logo", logoPath.AbsoluteUri},{"title", txtPositionsTitle.Text},{"subtitle", txtPositionsSubtitle.Text},
+                        {"line01", "#;Equipo;Pts;PJ;PG;PE;PP;GF;GC;Dif"},{"line02", getPositionCVS(1)},{"line03", getPositionCVS(2)},
+                        {"line04", getPositionCVS(3)},{"line05", getPositionCVS(4)},{"line06", getPositionCVS(5)},
+                        {"line07", getPositionCVS(6)},{"line08", getPositionCVS(7)},{"line09", getPositionCVS(8)},
+                        {"line10", getPositionCVS(9)}
+                    };
 
-                    ReturnInfo ri = AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{3} ADD 0 {0}{2}{0} 1 {0}{1}{0}", (char)0x22, templatePositions.TemplateDataText(), cmbTemplatePositions.Text, layerPositions.ToString()));
-
+                    SportsController.startTemplatePositions(cmbTemplatePositions.Text, layerPositions, positionsValues);
                     if (chkAutoHidePositions.Checked)
                     {
                         tmrPositions.Interval = ((int)nudAutoHidePositionsSeconds.Value) * 1000;
                         tmrPositions.Enabled = true;
                         tmrPositions.Start();
                     }
-                }
             }
             else
             {
@@ -1322,14 +1296,11 @@ namespace HandballCliente
 
         private void stopPositions()
         {
-            if (AppController.getInstance().isConnectedToCasparCgServer())
+            SportsController.stopTemplatePositions(layerPositions);
+            if (chkAutoHidePositions.Checked)
             {
-                AppController.getInstance().executeCasparCgServer(String.Format("CG 1-{0} STOP 0", layerPositions.ToString()));
-                if (chkAutoHidePositions.Checked)
-                {
-                    tmrPositions.Stop();
-                    tmrPositions.Enabled = false;
-                }
+                tmrPositions.Stop();
+                tmrPositions.Enabled = false;
             }
         }
 
@@ -1380,7 +1351,7 @@ namespace HandballCliente
             if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateTwitter = new Template();
-                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbLogoFile.Text.ToLower() + ".png");
 
                 if (chkTwitterCounterPosition.Checked)
                 {
@@ -1404,7 +1375,7 @@ namespace HandballCliente
             if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateTwitter = new Template();
-                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbLogoFile.Text.ToLower() + ".png");
 
                 if (chkTwitterCounterPosition.Checked)
                 {
@@ -1460,7 +1431,7 @@ namespace HandballCliente
                 xml += "</templateData>";
 
                 Template templateCountdown = new Template();
-                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbFederationLogo.Text.ToLower() + ".png");
 
                 templateCountdown.Fields.Add(new TemplateField("sideTitle", nudGameshowCounterSeconds.Value.ToString()));
                 templateCountdown.Fields.Add(new TemplateField("crawl", nudGameshowRefreshMiliseconds.Value.ToString()));
@@ -1503,7 +1474,7 @@ namespace HandballCliente
             if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateTwitter = new Template();
-                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbLogoFile.Text.ToLower() + ".png");
 
                 templateTwitter.Fields.Add(new TemplateField("pollTitle", txtTwitterPollTitle.Text));
                 templateTwitter.Fields.Add(new TemplateField("pollText", txtTwitterPollText.Text));
@@ -1530,7 +1501,7 @@ namespace HandballCliente
             if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateTwitter = new Template();
-                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbLogoFile.Text.ToLower() + ".png");
 
                 templateTwitter.Fields.Add(new TemplateField("pollTitle", txtTwitterPollTitle.Text));
                 templateTwitter.Fields.Add(new TemplateField("pollText", txtTwitterPollText.Text));
@@ -1570,7 +1541,7 @@ namespace HandballCliente
                 Tweets tweet = aux.tweets.Find(element => element.id == long.Parse(lvwTwitterPlaylistDetailList.SelectedItems[0].Text));
 
                 Template templateTwitter = new Template();
-                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbLogoFile.Text.ToLower() + ".png");
 
                 templateTwitter.Fields.Add(new TemplateField("datetime", tweet.dateTime));
                 templateTwitter.Fields.Add(new TemplateField("fullname", tweet.fullName));
@@ -1597,7 +1568,7 @@ namespace HandballCliente
             //if (AppController.getInstance().isConnectedToCasparCgServer())
             //{
             //    Template templateTwitter = new Template();
-            //    //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+            //    //Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbLogoFile.Text.ToLower() + ".png");
 
             //    templateTwitter.Fields.Add(new TemplateField("pollTitle", txtTwitterPollTitle.Text));
             //    templateTwitter.Fields.Add(new TemplateField("pollText", txtTwitterPollText.Text));
@@ -1642,7 +1613,7 @@ namespace HandballCliente
                 getImageCanvas();
 
                 Template templateGameplay = new Template();
-                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbLogoFile.Text.ToLower() + ".png");
 
                 templateGameplay.Fields.Add(new TemplateField("positionX", "0.5"));
                 templateGameplay.Fields.Add(new TemplateField("positionY", "0.5"));
@@ -1681,7 +1652,7 @@ namespace HandballCliente
 
         private void setImageAsCanvas()
         {
-            Uri file = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbGameplayImages.Text.ToLower() + ".png");
+            Uri file = new Uri(AppController.getInstance().getFullMediaPath() + cmbGameplayImages.Text.ToLower() + ".png");
 
             picGameplayWhiteboard.SizeMode = PictureBoxSizeMode.StretchImage;
             picGameplayWhiteboard.Image = Image.FromFile(file.LocalPath);
@@ -1692,7 +1663,7 @@ namespace HandballCliente
             if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateGameplay = new Template();
-                //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbLogoFile.Text.ToLower() + ".png");
+                //Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbLogoFile.Text.ToLower() + ".png");
 
                     templateGameplay.Fields.Add(new TemplateField("mouseEvent", mouseEvent));
                     templateGameplay.Fields.Add(new TemplateField("positionX", porcX.ToString().Replace(",", ".")));
@@ -1807,9 +1778,9 @@ namespace HandballCliente
                 if (AppController.getInstance().isConnectedToCasparCgServer())
                 {
                     Template templateVolleyScoreboard = new Template();
-                    //Uri logo1Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
-                    //Uri logo2Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
-                    Uri logo1Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                    //Uri logo1Path = new Uri(AppController.getInstance().getFullMediaPath() + cmbHomeTeamLogo.Text.ToLower() + ".png");
+                    //Uri logo2Path = new Uri(AppController.getInstance().getFullMediaPath() + cmbGuestTeamLogo.Text.ToLower() + ".png");
+                    Uri logo1Path = new Uri(AppController.getInstance().getFullMediaPath() + cmbFederationLogo.Text.ToLower() + ".png");
 
                     templateVolleyScoreboard.Fields.Add(new TemplateField("team1", txtVolleyHomeTeam.Text));
                     templateVolleyScoreboard.Fields.Add(new TemplateField("team2", txtVolleyGuestTeam.Text));
@@ -1853,9 +1824,9 @@ namespace HandballCliente
             if (AppController.getInstance().isConnectedToCasparCgServer())
             {
                 Template templateVolleyScoreboard = new Template();
-                //Uri logo1Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
-                //Uri logo2Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
-                Uri logo1Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                //Uri logo1Path = new Uri(AppController.getInstance().getFullMediaPath() + cmbHomeTeamLogo.Text.ToLower() + ".png");
+                //Uri logo2Path = new Uri(AppController.getInstance().getFullMediaPath() + cmbGuestTeamLogo.Text.ToLower() + ".png");
+                Uri logo1Path = new Uri(AppController.getInstance().getFullMediaPath() + cmbFederationLogo.Text.ToLower() + ".png");
 
 
                 templateVolleyScoreboard.Fields.Add(new TemplateField("team1", txtVolleyHomeTeam.Text));
@@ -2009,9 +1980,9 @@ namespace HandballCliente
                 if (AppController.getInstance().isConnectedToCasparCgServer())
                 {
                     Template templateVolleyResult = new Template();
-                    //Uri logo1Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbHomeTeamLogo.Text.ToLower() + ".png");
-                    //Uri logo2Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbGuestTeamLogo.Text.ToLower() + ".png");
-                    Uri logo1Path = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                    //Uri logo1Path = new Uri(AppController.getInstance().getFullMediaPath() + cmbHomeTeamLogo.Text.ToLower() + ".png");
+                    //Uri logo2Path = new Uri(AppController.getInstance().getFullMediaPath() + cmbGuestTeamLogo.Text.ToLower() + ".png");
+                    Uri logo1Path = new Uri(AppController.getInstance().getFullMediaPath() + cmbFederationLogo.Text.ToLower() + ".png");
 
                     templateVolleyResult.Fields.Add(new TemplateField("f0", txtVolleyHomeTeam.Text));
                     templateVolleyResult.Fields.Add(new TemplateField("f1", txtVolleyGuestTeam.Text));
@@ -3072,7 +3043,7 @@ namespace HandballCliente
                 if (AppController.getInstance().isConnectedToCasparCgServer())
                 {
                     Template templateScoreboard = new Template();
-                    //Uri logoPath = new Uri(AppController.getInstance().getCasparCgServerPaths().InitialPath + AppController.getInstance().getCasparCgServerPaths().MediaPath + cmbFederationLogo.Text.ToLower() + ".png");
+                    //Uri logoPath = new Uri(AppController.getInstance().getFullMediaPath() + cmbFederationLogo.Text.ToLower() + ".png");
 
                     templateScoreboard.Fields.Add(new TemplateField("team1Name", txtBasketScoreboardHomeTeam.Text));
                     templateScoreboard.Fields.Add(new TemplateField("team2Name", txtBasketScoreboardAwayTeam.Text));

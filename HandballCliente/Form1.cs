@@ -474,6 +474,10 @@ namespace HandballCliente
             AppController.getInstance().addComboBoxTemplate(cmbTemplateGameshowFindCard);
             AppController.getInstance().addComboBoxTemplate(cmbTemplateTwitterPlaylist);
             AppController.getInstance().addComboBoxTemplate(cmbRugbyIntroTemplate);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateRugbyLineup);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateRugbyOfficials);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateRugbyResult);
+            AppController.getInstance().addComboBoxTemplate(cmbTemplateRugbyScoreboard);
         }
 
         private void fillCombosTemplate(ComboBox cbo, List<String> templates)
